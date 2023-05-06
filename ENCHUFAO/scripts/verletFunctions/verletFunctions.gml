@@ -219,10 +219,13 @@ function verletGroup() constructor {
 		} else if (index == last) {
 			index = ds_list_size(vertexList) - 1;
 		}
-		if (xoff == undefined) xoff = 0;
-		if (yoff == undefined) yoff = 0;
-		
-		ds_list_delete(attachmentList, last);
+		if (ds_list_size(attachmentList) > 0)
+		{
+			ds_list_delete(attachmentList,2);
+			//ds_list_delete(attachmentList,3);
+			//ds_list_delete(attachmentList,4);
+			//ds_list_delete(attachmentList,5);
+		 }
 	};
 	
 	/// @function				stickAdd(v1, v2, length);

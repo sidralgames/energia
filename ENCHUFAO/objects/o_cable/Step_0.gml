@@ -26,7 +26,7 @@ if (global.unPlugging)
 	enchufe = instance_nearest(x,y,o_enchufe_Father);
 	if instance_exists(enchufe)
 	{
-	rope1.vertexDeAttachTo(last,enchufe,0,0)
+	rope1.vertexDeAttachTo(last)
 	}
 	
 }
