@@ -21,7 +21,9 @@ function PlayerState_Free()
 		
 		if (key_x)
 		{
+			audio_play_sound(choose(snd_unPlugged, snd_unPlugged_2, snd_unPlugged_3),50,false)
 			plugged = false;
+			o_cable.plugged = false;
 			global.unPlugging = true;
 			global.chargingAmmo = false;
 			global.chargingHp = false;

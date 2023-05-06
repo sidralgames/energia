@@ -32,6 +32,7 @@ function verletSystem(inFrict, inGrav) constructor {
 		}
 	};
 	
+	
 	/// @function					addForceField(inX1, inY1, inX2, inY2, inDir, inStr, inUseNoise);
 	/// @param {float} inX1			The force fields left position.
 	/// @param {float} inY1			The force fields top position.
@@ -204,6 +205,24 @@ function verletGroup() constructor {
 		if (yoff == undefined) yoff = 0;
 		
 		ds_list_add(attachmentList, new attachment(index, object, 0, 1, xoff, yoff));
+	};
+	
+		/// @function				vertexDeAttachTo(index, object, xoff, yoff);
+	/// @param {float} index	The index of the vertex to attach.
+	/// @param {float} object	The object.
+	/// @param {float} [xoff]	The x offset.
+	/// @param {float} [yoff]	The y offset.
+	/// @description			Attaches a vertex to an object.
+	vertexDeAttachTo = function(index,object, xoff, yoff) {
+	if (index == first) {
+			index = 0;
+		} else if (index == last) {
+			index = ds_list_size(vertexList) - 1;
+		}
+		if (xoff == undefined) xoff = 0;
+		if (yoff == undefined) yoff = 0;
+		
+		ds_list_delete(attachmentList, last);
 	};
 	
 	/// @function				stickAdd(v1, v2, length);

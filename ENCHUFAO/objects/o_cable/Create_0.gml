@@ -17,21 +17,12 @@ inst = instance_nearest(x,y,o_playerShip)
 rope1.vertexAttachTo(first, inst);
 
 
+plugged = false;
 
-
-if (o_playerShip.createdFromUnplugged)
-{
-	rope1.vertexChangeData(last, global.xToPlug, global.yToPlug);
-	//// Attach an object to its last vertex
-	instTope = instance_create(global.xToPlug, global.yToPlug, o_charger);
-	rope1.vertexAttachObject(last, instTope, vertexAttachmentType.both);
-}
-else
-{
 		//// Attach an object to its last vertex
 	instTope = instance_create(x, y, o_charger);
 	rope1.vertexAttachObject(last, instTope, vertexAttachmentType.both);
-}
+
 
 alarm[0] = random_range(10,95);
 

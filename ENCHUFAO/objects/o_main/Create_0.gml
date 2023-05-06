@@ -20,3 +20,5 @@ global.chargingHp = false;
 global.chargingShield = false;
 
 
+
+

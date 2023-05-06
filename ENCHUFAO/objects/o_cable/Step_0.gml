@@ -21,11 +21,14 @@ if (global.plugging)
 
 if (global.unPlugging)
 {
+
 	global.unPlugging = false;
-	instance_destroy();
-	instance_destroy(o_charger)
-	cable = instance_create_layer(o_playerShip.x, o_playerShip.y, "Cable", o_cable)
-	o_playerShip.createdFromUnplugged = true;
+	enchufe = instance_nearest(x,y,o_enchufe_Father);
+	if instance_exists(enchufe)
+	{
+	rope1.vertexDeAttachTo(last,enchufe,0,0)
+	}
+	
 }
 
 if (verletSystemExists(verletSystem1))
