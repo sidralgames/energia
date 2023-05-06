@@ -7,7 +7,10 @@ function PlayerState_Free()
 	{
 		if (point_distance(x,y,global.xToPlug,global.yToPlug) <= 200)
 		{
-			MoveShip()
+			if (global.energy > 0)
+			{
+				MoveShip()
+			}
 		}
 		else
 		{
@@ -23,6 +26,7 @@ function PlayerState_Free()
 			global.chargingAmmo = false;
 			global.chargingHp = false;
 			global.chargingShield = false;
+			global.hp = round(global.hp)
 			
 		}
 		
@@ -30,7 +34,10 @@ function PlayerState_Free()
 	}
 	else
 	{
-		MoveShip()		
+		if (global.energy > 0)
+			{
+				MoveShip()	
+			}
 	}
 	
 	var axisrh = gamepad_axis_value(0, gp_axisrh);

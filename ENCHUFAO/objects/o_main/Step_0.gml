@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if instance_exists(o_playerShip)
+if instance_exists(o_playerShip) && (room != Sala_Inicio)
 {
 	if (o_playerShip.plugged)
 	{
@@ -14,7 +14,7 @@ if instance_exists(o_playerShip)
 		{
 			if (global.hp <= global.hpMax)
 			{
-				global.hp +=0.05;
+				global.hp +=0.0005;
 			}
 		}
 		
@@ -30,7 +30,7 @@ if instance_exists(o_playerShip)
 		{
 			if (global.ammo <= global.ammoMax)
 			{
-				global.ammo +=0.05;
+				global.ammo +=0.1;
 			}
 		}
 			
@@ -51,5 +51,9 @@ if instance_exists(o_playerShip)
 	}
 }
 
+if keyboard_check_pressed(ord("R"))
+{
+	game_restart()
+}
 
 

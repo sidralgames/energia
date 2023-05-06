@@ -17,7 +17,14 @@ if instance_exists(o_crosshair)
 	}
 }
 
-
+if (global.hp <= 0)
+{
+	instance_destroy();	
+	instance_destroy(o_enemy)
+	instance_destroy(o_cable)
+	instance_destroy(o_charger)
+	instance_create(x, y, o_gameOver)
+}
 
 
 
