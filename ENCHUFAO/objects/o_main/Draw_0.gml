@@ -10,7 +10,8 @@ draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+80,"SHIEL
 draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+100,"AMMO: " + string(round(global.ammo)) + " / " + string(round(global.ammoMax)))
 
 
-
+draw_sprite_ext(s_energyBar_out,0,__view_get( e__VW.XView, 0 )+620,__view_get( e__VW.YView, 0 )+320,1,1,0,image_blend, image_alpha)
+draw_sprite_ext(s_energyBar_in,0,__view_get( e__VW.XView, 0 )+620,__view_get( e__VW.YView, 0 )+320,1,(global.energy/global.energyTotal),0,image_blend, image_alpha)
 
 
 

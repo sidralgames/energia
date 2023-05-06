@@ -26,7 +26,9 @@ if instance_exists(o_playerShip)
 	
 	var a = point_direction(xprevious, yprevious, o_playerShip.x, o_playerShip.y);
 	direction += sign(dsin(a - direction)) * precision;
-	image_angle =  direction;
+	image_angle = direction;
+
+
 }
 
 

@@ -29,6 +29,7 @@ function PlayerState_Free()
 			global.chargingHp = false;
 			global.chargingShield = false;
 			global.hp = round(global.hp)
+			global.shields = round(global.shields)
 			
 		}
 		

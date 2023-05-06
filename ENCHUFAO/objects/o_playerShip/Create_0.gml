@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+soundEnergy = false
 _hpush = 0;
 _vpush = 0;
 bnc = 0.6;
@@ -16,7 +16,7 @@ offRange = 5;
 recoil = 0.1;
 fireRate = 15;
 tocado = false;
-
+shieldCreated = false
 hSpeedFraction = 0.0;
 vSpeedFraction = 0.0;
 createdFromUnplugged = false;

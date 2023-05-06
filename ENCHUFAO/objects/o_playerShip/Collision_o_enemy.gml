@@ -1,11 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (tocado = false)
+if (global.shields <= 0)
 {
-	alarm[1] = 30
-	tocado = true;
-	global.hp -=1;
+	if (tocado = false)
+	{
+		alarm[1] = 30
+		tocado = true;
+		global.hp -=1;
+	}
 }
+
 
 
 

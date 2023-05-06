@@ -41,7 +41,7 @@ if instance_exists(o_playerShip)
 		else
 		{
 			path_end()
-		Move()	
+			Move()	
 		}
 	
 
@@ -49,14 +49,12 @@ if instance_exists(o_playerShip)
 }
 if (_hp <= 0)
 {
-	
 	instance_destroy();
-	
 }
 
 
 
 var a = point_direction(xprevious, yprevious, o_playerShip.x, o_playerShip.y);
 direction += sign(dsin(a - direction)) * precision;
-image_angle =  direction;
+image_angle =  lerp(point_direction(x,y,o_playerShip.x, o_playerShip.y), direction,0.005);
 
