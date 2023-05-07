@@ -19,6 +19,7 @@ if instance_exists(o_crosshair)
 
 if (global.hp <= 0)
 {
+	instance_create(x,y,o_explo1)
 	audio_play_sound(snd_death, 50, false)
 	audio_stop_sound(snd_song)
 	audio_stop_sound(snd_battery)

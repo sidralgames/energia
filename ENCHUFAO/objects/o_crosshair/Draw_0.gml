@@ -59,17 +59,20 @@ if gamepad_is_connected(0)
 }
 else
 {
-	x=mouse_x;
-	y=mouse_y;
-	
-	if (point_distance(x,y,o_playerShip.x, o_playerShip.y)) > 30
+	if instance_exists(o_playerShip)
 	{
-		alphaP = 1;
-	}
-	else
-	{
-		alphaP = 0;
-	}
+		x=mouse_x;
+		y=mouse_y;
 	
-	draw_sprite_ext(s_crosshair,image_index,x,y,1,1,image_angle,image_blend,alphaP);
+		if (point_distance(x,y,o_playerShip.x, o_playerShip.y)) > 30
+		{
+			alphaP = 1;
+		}
+		else
+		{
+			alphaP = 0;
+		}
+	
+		draw_sprite_ext(s_crosshair,image_index,x,y,1,1,image_angle,image_blend,alphaP);
+	}
 }

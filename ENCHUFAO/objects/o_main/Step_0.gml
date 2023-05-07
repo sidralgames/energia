@@ -7,7 +7,7 @@ if instance_exists(o_playerShip) && (room != Sala_Inicio)
 	{
 		if (global.energy <= global.energyTotal)
 		{
-			global.energy+=0.5;
+			global.energy+=0.75;
 		}
 		
 		if (global.chargingHp = true)
@@ -30,7 +30,7 @@ if instance_exists(o_playerShip) && (room != Sala_Inicio)
 		{
 			if (global.ammo <= global.ammoMax)
 			{
-				global.ammo +=0.07;
+				global.ammo +=0.1;
 			}
 		}
 			

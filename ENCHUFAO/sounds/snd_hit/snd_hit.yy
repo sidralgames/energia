@@ -15,7 +15,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_hit.wav",
-  "duration": 1.524036,
+  "duration": 2.764422,
   "parent": {
     "name": "Sonidos",
     "path": "folders/Sonidos.yy",

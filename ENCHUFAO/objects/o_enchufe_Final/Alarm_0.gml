@@ -3,6 +3,7 @@
 
 if (cont = true)
 {
+	global.level+=1;
 	room_goto(Sala_0)
 }
 
