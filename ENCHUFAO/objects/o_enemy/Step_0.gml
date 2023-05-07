@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+part_particles_create(global.naveEnemy1_sys, x, y, global.naveEnemy1 , 3)
+
 if instance_exists(o_playerShip)
 {
 	myPath = path_add();

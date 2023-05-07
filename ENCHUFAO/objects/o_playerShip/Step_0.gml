@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 Controls_Input();
-
+part_particles_create(global.naveP_sys, x, y, global.naveP , 5)
 PlayerState_Free();
 Move();
 
@@ -19,6 +19,9 @@ if instance_exists(o_crosshair)
 
 if (global.hp <= 0)
 {
+	audio_play_sound(snd_death, 50, false)
+	audio_stop_sound(snd_song)
+	audio_stop_sound(snd_battery)
 	instance_destroy();	
 	instance_destroy(o_enemy)
 	instance_destroy(o_cable)
@@ -43,14 +46,21 @@ if (global.shields >= 1)
 
 if (global.energy <=80 && soundEnergy = false)
 {
+	sounded = false
 	soundEnergy = true
 	audio_play_sound(snd_battery, 90, true)
 }
 
 if (global.energy > 80)
 {
+	sounded = false
 	soundEnergy = false
 	audio_stop_sound(snd_battery)
+}
+if (global.energy = 0 && sounded = false)
+{
+	sounded = true;
+	audio_play_sound(snd_noBattery, 50, false)
 }
 
 

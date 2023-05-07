@@ -4,6 +4,7 @@ if (global.shields <= 0)
 {
 	if (tocado = false)
 	{
+		audio_play_sound(snd_hit, 50, false)
 		alarm[1] = 30
 		tocado = true;
 		global.hp -=1;

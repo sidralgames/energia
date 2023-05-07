@@ -6,13 +6,14 @@ enchufe0 = false;
 enchufeHP = false;
 enchufeShield = false;
 enchufeAmmo = false;
+enchufeFinal = false;
 
 __background_set( e__BG.X, 0, irandom(2000) );
 __background_set( e__BG.Y, 0, irandom(1000) );
 
 
-room_width = (CELL_WIDTH/32) *(320*3); //
-room_height = (CELL_HEIGHT/32) *(320*2);
+room_width = (CELL_WIDTH/32) *(320*4); //
+room_height = (CELL_HEIGHT/32) *(320*3);
 
 
 __view_set( e__VW.HView, 0, __view_get( e__VW.HPort, 0 ) );
@@ -24,136 +25,256 @@ __view_set( e__VW.WView, 0, 640 );
 
 //Set de grid height and width
 
-var width = room_width div CELL_WIDTH;
-var height = room_height div CELL_HEIGHT;
+var _wall_map_id = layer_tilemap_get_id("Tiles");
 
-//Create the grid
+//set up grid
+width_ = room_width div CELL_WIDTH;
+height_ = room_height div CELL_HEIGHT;
+grid_ = ds_grid_create(width_,height_);
+ds_grid_set_region(grid_, 0, 0, width_-1, height_-1, VOID);
 
-grid = ds_grid_create(width, height);
 
-// create `path grip
-
-
-//Fill the grid with void
-
-ds_grid_set_region(grid, -32, -32, width+1, height+1, VOID);
-
-//rrrr
-
-randomize();
+grid_path = mp_grid_create(0, 0, width_, height_, CELL_WIDTH, CELL_HEIGHT);
+grid_pathM = mp_grid_create(0, 0, width_, height_, CELL_WIDTH, CELL_HEIGHT);
 
 //Create the controller in the center of the grid
 
-var cx = 1*(irandom(20)+1)//width div 2;
-var cy = 1*(irandom(10)+1);//height div 2;
+var cx = 1*width_ div 2;
+var cy = 1*height_ div 2;
 
+//Create the player
+
+
+instance_create(cx*CELL_WIDTH+CELL_WIDTH/2, (cy*CELL_HEIGHT+CELL_HEIGHT/2)-6, o_playerShip);
+//Create the controller
+var _controller_x = width_ div 2
+var _controller_y = height_ div 2
+var _controller_direction = irandom(3);
+var _steps = 3000;
+
+var _direction_change_odds = 1;
+
+repeat (_steps) {
+	grid_[# _controller_x, _controller_y] = FLOOR;
+	
+	//Randomize the direction
+	if (irandom(_direction_change_odds) == _direction_change_odds){
+		_controller_direction = irandom(3);
+	}
+	
+	//Move the controller
+	var _x_direction = lengthdir_x(1,_controller_direction*90);
+	var _y_direction = lengthdir_y(1,_controller_direction*90);
+	_controller_x += _x_direction;
+	_controller_y += _y_direction;
+	
+	//Make sure we don't go outside the grid
+	if (_controller_x < 2 || _controller_x >= width_ - 2) {
+		_controller_x += -_x_direction * 2;
+	}
+	if (_controller_y < 2 || _controller_y >= height_ - 2) {
+		_controller_y += -_y_direction * 2;
+	}
+}
+
+
+for (var _y = 0; _y < height_; _y++){
+	for (var _x = 0; _x < width_; _x++){
+		if (grid_[# _x, _y] != FLOOR) {
+	var w_up = grid_[# _x, _y-1] == VOID;
+	var w_left = grid_[# _x-1, _y] == VOID;
+	var w_right = grid_[# _x+1, _y] == VOID;
+	var w_down = grid_[# _x, _y+1] == VOID;
+	var w_upright = grid_[# _x+1, _y-1] == VOID;
+	var w_upleft = grid_[# _x-1, _y-1] == VOID;
+	var w_downright = grid_[# _x+1, _y+1] == VOID;
+	var w_downleft = grid_[# _x-1, _y+1] == VOID;
+			
+
+	tile=44
+if(w_up)
+{
+ tile=47
+ if(w_right)
+ {
+  tile=4
+  if(w_down)
+  {
+   tile=12
+   if(w_left)
+   {
+    tile=28
+    if(w_upright)
+    {
+     tile=29
+     if(w_downright)
+     {
+      tile=33
+      if(w_downleft)
+      {
+       tile=39
+       if(w_upleft)tile=43
+      }
+      else if(w_upleft)tile=40
+     }
+     else if(w_downleft)
+     {
+      tile=37
+      if(w_upleft)tile=41
+     }
+     else if(w_upleft)tile=36
+    }
+    else if(w_downright)
+    {
+     tile=30
+     if(w_downleft)
+     {
+      tile=34
+      if(w_upleft)tile=42
+     }
+     else if(w_upleft)tile=38
+    }
+    else if(w_downleft)
+    {
+     tile=31
+     if(w_upleft)tile=35
+    }
+    else if(w_upleft)tile=32
+   }
+   else if(w_upright)
+   {
+    tile=16
+    if(w_downright)tile=18
+   }
+   else if(w_downright)tile=17
+  }
+  else if(w_left)
+  {
+   tile=15
+   if(w_upright)
+   {
+    tile=25
+    if(w_upleft)tile=27
+   }
+   else if(w_upleft)tile=26
+  }
+  else if(w_upright)tile=8
+ }
+ else if(w_down)
+ {
+  tile=45
+  if(w_left)
+  {
+   tile=14
+   if(w_downleft)
+   {
+    tile=22
+    if(w_upleft)tile=24
+   }
+   else if(w_upleft)tile=23
+  }
+ }
+ else if(w_left)
+ {
+  tile=7
+  if(w_upleft)tile=11
+ }
+}
+else if(w_right)
+{
+ tile=1
+ if(w_down)
+ {
+  tile=5
+  if(w_left)
+  {
+   tile=13
+   if(w_downright)
+   {
+   tile=19
+    if(w_downleft)tile=21
+   }
+   else if(w_downleft)tile=20
+  }
+  else if(w_downright)tile=9
+ }
+ else if(w_left)
+ {
+  tile=46
+ }
+}
+else if(w_down)
+{
+ tile=2
+ if(w_left)
+ {
+  tile=6
+  if(w_downleft)tile=10
+ }
+}
+else if(w_left)
+{
+ tile=3
+}
+
+
+			
+	tilemap_set(_wall_map_id, tile, _x, _y)
+
+		}
+	}
+}
+
+
+
+for ( var yyW = 0; yyW < height_; yyW++) {
+    for (var xxW = 0; xxW < width_; xxW++) {
+    
+var oddsW = 0
+     var exW = xxW * CELL_WIDTH+CELL_WIDTH/2;
+     var eyW = yyW * CELL_HEIGHT+CELL_HEIGHT/2;
+     
+     if (irandom(oddsW) == oddsW){
+     if (grid_[# xxW, yyW] == WALL) {
+     instance_create(exW,eyW,o_wall);
+     }
+     if (grid_[# xxW, yyW] == VOID) {
+		 
+     instance_create(exW,eyW,o_wall);
+     }
  
-instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Player", o_playerShip);
-
-  
-//instance_create(cx*CELL_WIDTH+CELL_WIDTH/2, (cy*CELL_HEIGHT+CELL_HEIGHT/2)+32, o_wall);
-//ds_grid_set(grid, cx*CELL_WIDTH+CELL_WIDTH/2, (cy*CELL_HEIGHT+CELL_HEIGHT/2)+32, WALL)
-
-// Give controller random direction
-
-var cdir = irandom(3);
+     }
+     
+     }
+     }
 
 
-//The odds variable for changing direction 
-
-var odds = 1;
-
-//Create level using 1000 steps
-
-repeat(3000) {
-
-    //place a floor tile at the controller position
-    
-    grid[# cx, cy] = FLOOR;
-    //Lo mismo que ds_grid_set(grid, cx, cy, FLOOR)
-    
-    //Randomize direction of the controller 
-    
-    if (irandom(odds) == odds) {
-        cdir = irandom(3);
-    }
-  
-    
-    //Move controler
-    
-    var xdir = lengthdir_x(1, cdir*90);
-    var ydir = lengthdir_y(1, cdir*90);  
-    cx += xdir;
-    cy += ydir;
-    
-  
 
 
-    
-    //Make sure we dont move out the grid 
-    
-    cx = clamp(cx, 1, width-2);
-    cy = clamp(cy, 1, height-2);
-    
-   
-}
 
-
-//Add the walls
-for ( var yy = 1; yy < height-1; yy++) {
-    for (var xx = 1; xx < width-1; xx++) {
-        if (grid[# xx, yy] == FLOOR) {
-        //Check for walls
-            if (grid[# xx+1, yy] != FLOOR) 
-            {
-            grid[# xx+1, yy] = WALL; 
-            
-            }
-            
-            if (grid[# xx-1, yy] != FLOOR)
-            { 
-            grid[# xx-1, yy] = WALL; 
-            
-            }
-            if (grid[# xx, yy+1] != FLOOR)
-            {
-             grid[# xx, yy+1] = WALL; 
-             
-             }
-            if (grid[# xx, yy-1] != FLOOR)
-            { 
-            grid[# xx, yy-1] = WALL; 
-            
-            }
-            
-            
-        }
-        
-    }
-
-}
 
 
 
 
 //Draw the level using grid
-for ( var yy = 0; yy < height; yy++) 
+for ( var yy = 0; yy < height_; yy++) 
 {
-    for (var xx = 0; xx < width; xx++) 
+    for (var xx = 0; xx < width_; xx++) 
 	{
-	    if (grid[# xx, yy] == FLOOR) 
+	    if (grid_[# xx, yy] == FLOOR) 
 		{
 		    var oddsE0 = 100;
 			var oddsEHP = 100;
 			var oddsEA = 100;
 			var oddsESH = 100;
+			var oddsEF = 100;
 			
 		    var exM = xx * CELL_WIDTH+CELL_WIDTH/2;
 		    var eyM = yy * CELL_HEIGHT+CELL_HEIGHT/2;
 			
 			if (irandom(oddsE0) == oddsE0) && (enchufe0 = false)
 			{
-				instance_create(exM,eyM,o_enchufe); 
+				instance_create_layer(exM,eyM,"Enchufes",o_enchufe); 
 				enchufe0 = true;
 			}
 			if instance_exists(o_enchufe_Father)
@@ -162,9 +283,9 @@ for ( var yy = 0; yy < height; yy++)
 				{
 					nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 
-					if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 300)
+					if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 150)
 					{
-						instance_create(exM,eyM,o_enchufe_Hp); 
+						instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Hp); 
 						enchufeHP = true;
 					}
 				}
@@ -173,9 +294,9 @@ for ( var yy = 0; yy < height; yy++)
 				{
 					nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 					
-					if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 300)
+					if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 150)
 					{
-						instance_create(exM,eyM,o_enchufe_Shield); 
+						instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Shield); 
 						enchufeShield = true;
 					}
 				}
@@ -184,10 +305,25 @@ for ( var yy = 0; yy < height; yy++)
 				{
 					nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 					
-					if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 300)
+					if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 150)
 					{
-						instance_create(exM,eyM,o_enchufe_Ammo); 
+						instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Ammo); 
 						enchufeAmmo = true;
+					}
+				}
+				
+				if (irandom(oddsEF) == oddsEF) && (enchufeFinal = false)
+				{
+					nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
+					nextwall = instance_nearest(exM, eyM, o_wall)
+					
+					if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 100)
+					{
+						if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 80)
+						{
+							instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Final); 
+							enchufeFinal = true;
+						}
 					}
 				}
 			}
@@ -196,31 +332,11 @@ for ( var yy = 0; yy < height; yy++)
 }
 
 
-for ( var yyW = 0; yyW < height; yyW++) {
-    for (var xxW = 0; xxW < width; xxW++) {
-    
-var oddsW = 0
-     var exW = xxW * CELL_WIDTH+CELL_WIDTH/2;
-     var eyW = yyW * CELL_HEIGHT+CELL_HEIGHT/2;
-     
-     if (irandom(oddsW) == oddsW){
-     if (grid[# xxW, yyW] == WALL) {
-     instance_create(exW,eyW,o_wall);
-     }
-     if (grid[# xxW, yyW] == VOID) {
-     instance_create(exW,eyW,o_wall);
-     }
- 
-     }
-     
-     }
-     }
-     
 alarm[0]=60;
 
 
 
-if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo) || (!enchufeShield)
+if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo) || (!enchufeShield) || (!enchufeFinal) 
 {
 	room_restart();
 }

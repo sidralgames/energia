@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_bulletPlayer",
   "spriteId": {
-    "name": "s_charger",
-    "path": "sprites/s_charger/s_charger.yy",
+    "name": "s_bulletPlayer",
+    "path": "sprites/s_bulletPlayer/s_bulletPlayer.yy",
   },
   "solid": false,
   "visible": true,

@@ -1,5 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
+global.pluggedInEnergy = false;
+global.pluggedInHp= false;
+global.pluggedInAmmo= false;
+global.pluggedInShield= false;
+
+sounded = false;
+pluggedFinal = false;
+
 soundEnergy = false
 _hpush = 0;
 _vpush = 0;
@@ -12,7 +20,7 @@ walkAcceleration = 0.1;
 airAcceleration = 0.2;
 hFrictionGround = 1;
 hFrictionAir = 0.05;
-offRange = 5;
+offRange = 2;
 recoil = 0.1;
 fireRate = 15;
 tocado = false;
