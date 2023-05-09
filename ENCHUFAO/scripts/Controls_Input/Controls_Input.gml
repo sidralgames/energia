@@ -8,4 +8,12 @@ function Controls_Input()
 	key_down = keyboard_check(vk_down) || keyboard_check(ord("S")) || gamepad_button_check(0, gp_padd) || gamepad_axis_value(0, gp_axislv) > 0.5;
 	key_x = keyboard_check_pressed(ord("X")) || gamepad_button_check_pressed(0, gp_face1) || mouse_check_button_pressed(mb_right)
 	key_shoot = mouse_check_button(mb_left) || gamepad_button_check(0, gp_shoulderr)
+	
+	key_r1Down =  gamepad_button_check(0, gp_shoulderr)
+	key_l1Down =  gamepad_button_check(0, gp_shoulderl)
+	key_r2Down =  gamepad_button_check(0, gp_shoulderrb)
+	key_l2Down =  gamepad_button_check(0, gp_shoulderlb)
+	
+	key_r3Dowm = gamepad_button_check(0, gp_stickr)
+	key_l3Dowm = gamepad_button_check(0, gp_stickl)
 }

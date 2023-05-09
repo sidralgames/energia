@@ -1,10 +1,19 @@
 /// @description Insert description here
 // You can write your code in this editor
+if (room != Sala_Inicio)
+{
+	instance_create_layer(x,y,"Main",o_camera)
+}
+canSuperShot = true;
 global.pluggedInEnergy = false;
 global.pluggedInHp= false;
 global.pluggedInAmmo= false;
 global.pluggedInShield= false;
 
+
+crosshairSuper = false;
+contSuperShot = 0;
+		
 sounded = false;
 pluggedFinal = false;
 

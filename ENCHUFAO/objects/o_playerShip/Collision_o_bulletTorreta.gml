@@ -9,6 +9,7 @@ if (global.shields <= 0)
 		alarm[1] = 30
 		tocado = true;
 		global.hp -=1;
+		screenShake(4,30)
 	}
 }
 

@@ -32,7 +32,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemigos",
-    "path": "folders/Objects/Enemigos.yy",
+    "name": "PLAYER",
+    "path": "folders/Objetos/PLAYER.yy",
   },
 }

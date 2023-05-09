@@ -30,7 +30,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Main",
-    "path": "folders/Objetos/Lagarto/Main.yy",
+    "name": "Objetos",
+    "path": "folders/Objetos.yy",
   },
 }

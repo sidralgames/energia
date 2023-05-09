@@ -2,6 +2,29 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PlayerState_Free()
 {
+	
+	superShot = (key_r1Down && key_r2Down && key_l1Down && key_l2Down)
+	
+	if (superShot) && (canSuperShot)
+	{
+		if (contSuperShot <=40)
+		{
+			contSuperShot +=1;
+		}
+		screenShake(contSuperShot/30, 30)
+		if (contSuperShot = 20) && (crosshairSuper = false)
+		{
+			crosshairSuper = true;
+		}
+			
+	}
+	else
+	{
+		crosshairSuper = false;
+		contSuperShot = 0;
+	}
+		
+	
 	mask_index = splayer;
 	if (plugged == true)
 	{
@@ -21,7 +44,7 @@ function PlayerState_Free()
 			_vpush = lengthdir_y(2,dir)
 		}
 		
-		if (key_x)
+		if (key_x) 
 		{
 			audio_play_sound(choose(snd_unPlugged, snd_unPlugged_2, snd_unPlugged_3),50,false)
 			plugged = false;
@@ -65,10 +88,11 @@ function PlayerState_Free()
 		dire = direIm;
 	}
 	
-	if (key_shoot)
+	if (key_shoot) && (!superShot)
 	{
 		if (alarm[0] <= 0) && (global.ammo >1 )
 		{
+			screenShake(2,5)
 			audio_play_sound(snd_shoot1, 50, false)
 			var bullet = instance_create_layer(x + lengthdir_x(25, dire), y + lengthdir_y(25, dire),
 			"Bullets", o_bulletPlayer);

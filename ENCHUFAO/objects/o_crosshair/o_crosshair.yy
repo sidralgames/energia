@@ -31,7 +31,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objetos",
-    "path": "folders/Objetos.yy",
+    "name": "PLAYER",
+    "path": "folders/Objetos/PLAYER.yy",
   },
 }

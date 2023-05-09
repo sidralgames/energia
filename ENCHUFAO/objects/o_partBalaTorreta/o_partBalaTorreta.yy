@@ -29,6 +29,6 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Particulas",
-    "path": "folders/Objects/Particulas.yy",
+    "path": "folders/Objetos/Particulas.yy",
   },
 }

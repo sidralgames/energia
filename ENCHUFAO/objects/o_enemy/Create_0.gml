@@ -1,7 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
+crosshairSuper = false
+cross = -1;
 _hpush = 0;
 _vpush = 0;
 hsp_f =0;
