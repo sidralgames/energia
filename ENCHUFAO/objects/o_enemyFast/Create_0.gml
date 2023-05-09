@@ -9,12 +9,12 @@ hsp_f =0;
 vsp_f =0;
 bnc = 0.5
 shocked = false;
-_hp = 2;
+_hp = 1;
 cont = 500;
 image_speed = 0.5;
 
 precision= choose(3.75,3);
-speed=random(1)+1;
+speed=random(1)+2;
 
 tocado = false;
 

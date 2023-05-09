@@ -18,7 +18,7 @@ global.energyTotal = 300;
 global.energy = global.energyTotal;
 
 global.hpMax = 8;
-global.hp = 3;
+global.hp = 6;
 
 global.shieldsMax = 2;
 global.shields = 0;
