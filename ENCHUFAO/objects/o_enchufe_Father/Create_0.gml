@@ -7,5 +7,7 @@ shield = false;
 abierto = true;
 final = false;
 
+charge = 0;
+maxCharge = 200;
 
 

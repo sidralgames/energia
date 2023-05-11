@@ -13,8 +13,10 @@ if (global.plugging)
 {
 	global.plugging = false;
 	enchufe = instance_nearest(x,y,o_enchufe_Father);
+	
 	if instance_exists(enchufe)
 	{
+
 		rope1.vertexAttachTo(last, enchufe);
 	}
 }
@@ -35,5 +37,3 @@ if (verletSystemExists(verletSystem1))
 {
 	verletSystem1.simulate();
 }
-
-

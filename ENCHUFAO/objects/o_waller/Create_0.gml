@@ -2,6 +2,7 @@
 // You can write your code in this editor
 alarm[0] = 120;
 alarm[1] = 140;
+
 enchufe0 = false;
 enchufeHP = false;
 enchufeShield = false;
@@ -13,7 +14,7 @@ __background_set( e__BG.Y, 0, irandom(1000) );
 
 
 room_width = (CELL_WIDTH/32) *(320*4); //
-room_height = (CELL_HEIGHT/32) *(320*3);
+room_height = (CELL_HEIGHT/32) *(320*4);
 
 
 __view_set( e__VW.HView, 0, __view_get( e__VW.HPort, 0 ) );
@@ -30,12 +31,8 @@ var _wall_map_id = layer_tilemap_get_id("Tiles");
 //set up grid
 width_ = room_width div CELL_WIDTH;
 height_ = room_height div CELL_HEIGHT;
-grid_ = ds_grid_create(width_,height_);
-ds_grid_set_region(grid_, 0, 0, width_-1, height_-1, VOID);
-
-
-grid_path = mp_grid_create(0, 0, width_, height_, CELL_WIDTH, CELL_HEIGHT);
-grid_pathM = mp_grid_create(0, 0, width_, height_, CELL_WIDTH, CELL_HEIGHT);
+global.wallgrid_ = ds_grid_create(width_,height_);
+ds_grid_set_region(global.wallgrid_, 0, 0, width_-1, height_-1, VOID);
 
 //Create the controller in the center of the grid
 
@@ -55,7 +52,7 @@ var _steps = 3000;
 var _direction_change_odds = 1;
 
 repeat (_steps) {
-	grid_[# _controller_x, _controller_y] = FLOOR;
+	global.wallgrid_[# _controller_x, _controller_y] = FLOOR;
 	
 	//Randomize the direction
 	if (irandom(_direction_change_odds) == _direction_change_odds){
@@ -80,15 +77,15 @@ repeat (_steps) {
 
 for (var _y = 0; _y < height_; _y++){
 	for (var _x = 0; _x < width_; _x++){
-		if (grid_[# _x, _y] != FLOOR) {
-	var w_up = grid_[# _x, _y-1] == VOID;
-	var w_left = grid_[# _x-1, _y] == VOID;
-	var w_right = grid_[# _x+1, _y] == VOID;
-	var w_down = grid_[# _x, _y+1] == VOID;
-	var w_upright = grid_[# _x+1, _y-1] == VOID;
-	var w_upleft = grid_[# _x-1, _y-1] == VOID;
-	var w_downright = grid_[# _x+1, _y+1] == VOID;
-	var w_downleft = grid_[# _x-1, _y+1] == VOID;
+		if (global.wallgrid_[# _x, _y] != FLOOR) {
+	var w_up = global.wallgrid_[# _x, _y-1] == VOID;
+	var w_left = global.wallgrid_[# _x-1, _y] == VOID;
+	var w_right = global.wallgrid_[# _x+1, _y] == VOID;
+	var w_down = global.wallgrid_[# _x, _y+1] == VOID;
+	var w_upright = global.wallgrid_[# _x+1, _y-1] == VOID;
+	var w_upleft = global.wallgrid_[# _x-1, _y-1] == VOID;
+	var w_downright = global.wallgrid_[# _x+1, _y+1] == VOID;
+	var w_downleft = global.wallgrid_[# _x-1, _y+1] == VOID;
 			
 
 	tile=44
@@ -235,10 +232,10 @@ var oddsW = 0
      var eyW = yyW * CELL_HEIGHT+CELL_HEIGHT/2;
      
      if (irandom(oddsW) == oddsW){
-     if (grid_[# xxW, yyW] == WALL) {
+     if (global.wallgrid_[# xxW, yyW] == WALL) {
      instance_create(exW,eyW,o_wall);
      }
-     if (grid_[# xxW, yyW] == VOID) {
+     if (global.wallgrid_[# xxW, yyW] == VOID) {
 		 
      instance_create(exW,eyW,o_wall);
      }
@@ -261,7 +258,7 @@ for ( var yy = 0; yy < height_; yy++)
 {
     for (var xx = 0; xx < width_; xx++) 
 	{
-	    if (grid_[# xx, yy] == FLOOR) 
+	    if (global.wallgrid_[# xx, yy] == FLOOR) 
 		{
 		    var oddsE0 = 100;
 			var oddsEHP = 100;

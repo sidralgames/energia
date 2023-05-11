@@ -15,22 +15,19 @@ if (other.abierto = true)
 		
 			if (other.hp = true)
 			{
-				global.pluggedInHp = true;
 				global.chargingHp = true;	
 			}
 			else if (other.shield = true)
 			{
-				global.pluggedInShield = true;
 				global.chargingShield= true;	
 			}
 			else if (other.ammo = true)
 			{
-				global.pluggedInAmmo = true;
 				global.chargingAmmo = true;	
 			}
 			else if (other.energy = true)
 			{
-				global.pluggedInEnergy = true;
+				global.chargingEnergy = true;
 			}
 			else if (other.final = true)
 			{

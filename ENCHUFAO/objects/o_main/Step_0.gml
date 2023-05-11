@@ -58,3 +58,20 @@ if keyboard_check_pressed(ord("R"))
 
 
 
+if (global.chargingHp)
+{
+	global.cableColor = green
+}
+else if (global.chargingAmmo)
+{
+	global.cableColor = yellow
+}
+else if (global.chargingShield)
+{
+	global.cableColor = blue
+}
+else
+{
+	global.cableColor = white
+}
+

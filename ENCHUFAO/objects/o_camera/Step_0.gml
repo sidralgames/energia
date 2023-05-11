@@ -15,14 +15,14 @@ Controls_Input()
 			x_point_to_move_camera_to= mean(follow.x,follow.x,follow.x,follow.x,follow.x+axisrh*160);
 			y_point_to_move_camera_to= mean(follow.y,follow.y,follow.y,follow.y,follow.y+axisrv*160);
 			x=lerp(x,x_point_to_move_camera_to,0.05);
-			y=lerp(y,y_point_to_move_camera_to-50,0.05);
+			y=lerp(y,y_point_to_move_camera_to,0.05);
 		}
 		else
 		{
 			x_point_to_move_camera_to= follow.x;
 			y_point_to_move_camera_to= follow.y;
 			x=lerp(x,x_point_to_move_camera_to,0.05);
-			y=lerp(y,y_point_to_move_camera_to-50,0.05);
+			y=lerp(y,y_point_to_move_camera_to,0.05);
 		}
 		
 	}

@@ -61,10 +61,19 @@ if instance_exists(o_playerShip)
 	
 	mp_grid_path(gridRoom1, myPath, x, y, o_playerShip.x ,o_playerShip.y, true);
 	
-	_speed = random_range(1.5,2.5)
+	
 		
 	if alarm[2] <=0
 	{
+		if (point_distance(x,y,o_playerShip.x, o_playerShip.y) <= 800)
+		{
+			_speed = random_range(1.5,2.5)
+		}
+		else
+		{
+			_speed = 0;
+		}
+	
 		path_start(myPath,_speed ,path_action_stop, false)
 	}
 	else

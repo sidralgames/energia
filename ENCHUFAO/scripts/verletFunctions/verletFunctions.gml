@@ -52,6 +52,7 @@ function verletSystem(inFrict, inGrav) constructor {
 		if (visible) {
 			var verletGroupAmount = ds_list_size(verletGroups);
 			var currentGroup;
+			
 		
 			for (var i = 0; i < verletGroupAmount; i++) {
 				currentGroup = verletGroups[| i];
@@ -505,10 +506,8 @@ function verletGroupCreateRope(system, xx, yy, color, width, segmentLength, segm
 		draw = function() {
 			var stickAmount = ds_list_size(stickList);
 			var currentStick, stickDir;
-			
 			var wHalf = width * 0.5;
-			
-			draw_set_color(color);
+			draw_set_color(global.cableColor);
 			draw_primitive_begin(pr_trianglestrip);
 			for (var i = 0; i < stickAmount; i++) {
 				currentStick = stickList[| i];

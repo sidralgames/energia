@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 Controls_Input();
+
 part_particles_create(global.naveP_sys, x, y, global.naveP , 5)
 PlayerState_Free();
 Move();
@@ -64,6 +65,16 @@ if (global.energy = 0 && sounded = false)
 	sounded = true;
 	audio_play_sound(snd_noBattery, 50, false)
 }
+
+	//-----------------NORMAL SHOOT-----------------//
+	if (key_shoot) && (!superShot)
+	{
+		if (alarm[0] <= 0) && (global.ammo >1 )
+		{
+			PlayerShipShoot()
+			ChargerShoot()
+		}
+	}
 
 
 

@@ -5,6 +5,9 @@ function PlayerState_Free()
 	
 	superShot = (key_r1Down && key_r2Down && key_l1Down && key_l2Down)
 	
+	
+	
+	//----------------SUPER SHOOT---------------//
 	if (superShot) && (canSuperShot)
 	{
 		if (contSuperShot <=40)
@@ -53,6 +56,7 @@ function PlayerState_Free()
 			global.chargingAmmo = false;
 			global.chargingHp = false;
 			global.chargingShield = false;
+			global.chargingEnergy = false;
 			global.hp = round(global.hp)
 			global.shields = round(global.shields)
 			pluggedFinal = false;
@@ -87,28 +91,4 @@ function PlayerState_Free()
 		direIm = image_angle;
 		dire = direIm;
 	}
-	
-	if (key_shoot) && (!superShot)
-	{
-		if (alarm[0] <= 0) && (global.ammo >1 )
-		{
-			screenShake(2,5)
-			audio_play_sound(snd_shoot1, 50, false)
-			var bullet = instance_create_layer(x + lengthdir_x(25, dire), y + lengthdir_y(25, dire),
-			"Bullets", o_bulletPlayer);
-			global.ammo-=1;
-				off =  random_range(offRange,-offRange)
-				bullet._hpush = lengthdir_x(7, dire + off);
-				bullet._vpush = lengthdir_y(7, dire + off);
-				bullet.image_angle = dire+off;
-				bullet.direction = dire+off;
-				
-				//recoil
-				//_hpush = -lengthdir_x(recoil, dire+off);
-				//_vpush = -lengthdir_y(recoil, dire+off);
-				image_angle +=off
-				alarm[0]=fireRate;
-		}
-	}
-	
 }
