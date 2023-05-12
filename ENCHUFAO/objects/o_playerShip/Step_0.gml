@@ -1,20 +1,20 @@
 /// @description Insert description here
 // You can write your code in this editor
 Controls_Input();
-
+Move();
 part_particles_create(global.naveP_sys, x, y, global.naveP , 5)
 PlayerState_Free();
-Move();
+
 
 if instance_exists(o_crosshair) 
 {
 	if (o_crosshair.alphaP > 0)
 	{
-		image_angle = point_direction(x,y,o_crosshair.x, o_crosshair.y)
+		_angle = point_direction(x,y,o_crosshair.x, o_crosshair.y)
 	}
 	else
 	{
-		image_angle = point_direction(o_crosshair.x, o_crosshair.y,x,y)
+		_angle = point_direction(o_crosshair.x, o_crosshair.y,x,y)
 	}
 }
 
@@ -54,7 +54,7 @@ if (global.energy <=80 && soundEnergy = false)
 	audio_play_sound(snd_battery, 90, true)
 }
 
-if (global.energy > 80)
+if (global.energy > 80) || (plugged == true)
 {
 	sounded = false
 	soundEnergy = false

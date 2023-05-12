@@ -260,11 +260,11 @@ for ( var yy = 0; yy < height_; yy++)
 	{
 	    if (global.wallgrid_[# xx, yy] == FLOOR) 
 		{
-		    var oddsE0 = 100;
-			var oddsEHP = 100;
-			var oddsEA = 100;
-			var oddsESH = 100;
-			var oddsEF = 100;
+		    var oddsE0 = 300;
+			var oddsEHP = 300;
+			var oddsEA = 300;
+			var oddsESH = 300;
+			var oddsEF = 300;
 			
 		    var exM = xx * CELL_WIDTH+CELL_WIDTH/2;
 		    var eyM = yy * CELL_HEIGHT+CELL_HEIGHT/2;
@@ -280,7 +280,7 @@ for ( var yy = 0; yy < height_; yy++)
 				{
 					nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 
-					if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 150)
+					if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 250)
 					{
 						instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Hp); 
 						enchufeHP = true;
@@ -291,7 +291,7 @@ for ( var yy = 0; yy < height_; yy++)
 				{
 					nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 					
-					if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 150)
+					if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 250)
 					{
 						instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Shield); 
 						enchufeShield = true;
@@ -302,7 +302,7 @@ for ( var yy = 0; yy < height_; yy++)
 				{
 					nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 					
-					if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 150)
+					if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 250)
 					{
 						instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Ammo); 
 						enchufeAmmo = true;
@@ -314,7 +314,7 @@ for ( var yy = 0; yy < height_; yy++)
 					nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 					nextwall = instance_nearest(exM, eyM, o_wall)
 					
-					if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 100)
+					if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 200)
 					{
 						if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 80)
 						{

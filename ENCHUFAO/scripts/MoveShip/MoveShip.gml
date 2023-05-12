@@ -4,17 +4,18 @@ function MoveShip()
 {
 	dirH = key_right - key_left;
 	dirV = key_down - key_up;
+	
 	if (dirH == 0) && (dirV == 0)
 	{
 		_hpush = lerp(_hpush, 0, 0.05);
 		_vpush = lerp(_vpush, 0, 0.05);
 	}
-
+	if (alarm[3] <= 0)
+	{
+		_hpush += dirH * walkAcceleration;
+		_hpush = clamp(_hpush, -walkSpeed, walkSpeed);
 	
-	
-	_hpush += dirH * walkAcceleration;
-	_hpush = clamp(_hpush, -walkSpeed, walkSpeed);
-	
-	_vpush += dirV * walkAcceleration;
-	_vpush = clamp(_vpush, -walkSpeed, walkSpeed);
+		_vpush += dirV * walkAcceleration;
+		_vpush = clamp(_vpush, -walkSpeed, walkSpeed);
+	}
 }

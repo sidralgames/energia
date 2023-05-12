@@ -79,7 +79,7 @@ if (point_distance(x,y,o_playerShip.x, o_playerShip.y) <= 300)
 		if (alarm[0] <= 0)
 		{
 			instance_create_layer(x , y, "Bullets", o_misil);
-			alarm[0] = random_range(60,120)
+			alarm[0] = random_range(120,200)
 		}
 	}
 

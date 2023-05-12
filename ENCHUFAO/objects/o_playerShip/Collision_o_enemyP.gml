@@ -1,7 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (global.shields <= 0)
-{
 	if (tocado = false)
 	{
 		audio_play_sound(snd_hit, 50, false)
@@ -11,7 +9,7 @@ if (global.shields <= 0)
 		screenShake(4,30)
 		other._hp = 0;
 	}
-}
+
 
 
 

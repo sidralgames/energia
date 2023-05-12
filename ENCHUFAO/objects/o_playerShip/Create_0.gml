@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+global.energy = global.energyTotal;
+
 if (room != Sala_Inicio)
 {
 	instance_create_layer(x,y,"Main",o_camera)
