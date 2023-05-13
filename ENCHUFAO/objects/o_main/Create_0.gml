@@ -23,18 +23,9 @@ global.flashSuperShot = false;
 global.plugging = false;
 global.unPlugging = false;
 
-global.energyTotal = 300;
-global.energy = global.energyTotal;
-
-global.hpMax = 8;
-global.hp = 6;
-
-global.shieldsMax = 2;
-global.shields = 0;
-
-global.ammo = 100;
-global.ammoMax = 150;
-
+PlayerStats_Green()
+global.Go = false;
+global.resetingShip = false;
 global.chargingAmmo = false;
 global.chargingHp = false;
 global.chargingShield = false;

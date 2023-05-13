@@ -42,11 +42,15 @@ var cy = 1*height_ div 2;
 //Create the player
 
 
-instance_create(cx*CELL_WIDTH+CELL_WIDTH/2, (cy*CELL_HEIGHT+CELL_HEIGHT/2)-6, o_playerShip);
+instance_create(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, o_playerShip);
 //Create the controller
 var _controller_x = width_ div 2
 var _controller_y = height_ div 2
 var _controller_direction = irandom(3);
+
+
+
+
 var _steps = 3000;
 
 var _direction_change_odds = 1;

@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 global.energy = global.energyTotal;
-
+upgraded = false;
 if (room != Sala_Inicio)
 {
 	instance_create_layer(x,y,"Main",o_camera)
@@ -23,23 +23,21 @@ soundEnergy = false
 _hpush = 0;
 _vpush = 0;
 bnc = 0.6;
-_speed = 3;
-walkSpeed = _speed;
-diagSpeed = round(_speed * ((sqrt(2)) / 2));
+
+walkSpeed = global._speed;
+
 plugged = false
-walkAcceleration = 0.1;
-airAcceleration = 0.2;
-hFrictionGround = 1;
-hFrictionAir = 0.05;
+diagSpeed = round(global._speed * ((sqrt(2)) / 2));
+
 offRange = 2;
-recoil = 0.5;
+
 recoil_standard = 0.8;
 fireRate = 15;
 tocado = false;
 shieldCreated = false
-hSpeedFraction = 0.0;
-vSpeedFraction = 0.0;
+
 createdFromUnplugged = false;
 instance_create_layer(x,y,"Cable", o_cable)
 instance_create_layer(x,y,"Player", o_crosshair)
+_angle = point_direction(x,y,o_crosshair.x, o_crosshair.y)
 

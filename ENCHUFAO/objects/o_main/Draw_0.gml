@@ -12,19 +12,22 @@ rojo = make_color_rgb(228,59, 68)
 
 //draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+100,"AMMO: " + string(round(global.ammo)) + " / " + string(round(global.ammoMax)))
 
+if (room != Sala_Inicio)
+{
+	draw_sprite_ext(s_energyBar_out,0,__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+355,1,1,0,image_blend, image_alpha)
+	draw_sprite_ext(s_energyBar_in,0,__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+355,1,(global.energy/global.energyTotal),0,image_blend, image_alpha)
 
-draw_sprite_ext(s_energyBar_out,0,__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+355,1,1,0,image_blend, image_alpha)
-draw_sprite_ext(s_energyBar_in,0,__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+355,1,(global.energy/global.energyTotal),0,image_blend, image_alpha)
+	draw_sprite_ext(s_hpBar_out,0,__view_get( e__VW.XView, 0 )+40,__view_get( e__VW.YView, 0 )+355,1,1,0,image_blend, image_alpha)
+	draw_sprite_ext(s_hpBar_in,0,__view_get( e__VW.XView, 0 )+40,__view_get( e__VW.YView, 0 )+355,1,(global.hp/global.hpMax),0,image_blend, image_alpha)
 
-draw_sprite_ext(s_hpBar_out,0,__view_get( e__VW.XView, 0 )+40,__view_get( e__VW.YView, 0 )+355,1,1,0,image_blend, image_alpha)
-draw_sprite_ext(s_hpBar_in,0,__view_get( e__VW.XView, 0 )+40,__view_get( e__VW.YView, 0 )+355,1,(global.hp/global.hpMax),0,image_blend, image_alpha)
-
-draw_sprite_ext(s_ammoBar_out30,0,__view_get( e__VW.XView, 0 )+600,__view_get( e__VW.YView, 0 )+355,1,1,0,image_blend, image_alpha)
-draw_sprite_ext(s_ammoBar_in,0,__view_get( e__VW.XView, 0 )+600,__view_get( e__VW.YView, 0 )+355,1,(global.ammo/global.ammoMax),0,image_blend, image_alpha)
+	draw_sprite_ext(s_ammoBar_out30,0,__view_get( e__VW.XView, 0 )+600,__view_get( e__VW.YView, 0 )+355,1,1,0,image_blend, image_alpha)
+	draw_sprite_ext(s_ammoBar_in,0,__view_get( e__VW.XView, 0 )+600,__view_get( e__VW.YView, 0 )+355,1,(global.ammo/global.ammoMax),0,image_blend, image_alpha)
 
 
-draw_sprite_ext(s_shieldBar_out,0,__view_get( e__VW.XView, 0 )+620,__view_get( e__VW.YView, 0 )+355,1,1,0,image_blend, image_alpha)
-draw_sprite_ext(s_shieldBar_in,0,__view_get( e__VW.XView, 0 )+620,__view_get( e__VW.YView, 0 )+355,1,(global.shields/global.shieldsMax),0,image_blend, image_alpha)
+	draw_sprite_ext(s_shieldBar_out,0,__view_get( e__VW.XView, 0 )+620,__view_get( e__VW.YView, 0 )+355,1,1,0,image_blend, image_alpha)
+	draw_sprite_ext(s_shieldBar_in,0,__view_get( e__VW.XView, 0 )+620,__view_get( e__VW.YView, 0 )+355,1,(global.shields/global.shieldsMax),0,image_blend, image_alpha)
+}
+
 if (room = Sala_0)
 {
 draw_set_font(Font2)

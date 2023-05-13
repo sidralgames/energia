@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_enchufeInicio",
   "spriteId": {
-    "name": "Sprite9",
-    "path": "sprites/Sprite9/Sprite9.yy",
+    "name": "s_enchufeGO",
+    "path": "sprites/s_enchufeGO/s_enchufeGO.yy",
   },
   "solid": false,
   "visible": true,
@@ -31,6 +31,7 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],

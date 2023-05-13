@@ -13,6 +13,15 @@ if (other.abierto = true)
 			global.xToPlug = enchufe.x;
 			global.yToPlug = enchufe.y;
 		
+			if (other.reset = true)
+			{
+				global.resetingShip = true;	
+			}
+				if (other.go = true)
+			{
+				global.Go = true;	
+			}
+			
 			if (other.hp = true)
 			{
 				global.chargingHp = true;	
@@ -32,6 +41,31 @@ if (other.abierto = true)
 			else if (other.final = true)
 			{
 				pluggedFinal = true;
+			}
+			
+			if (room = Sala_Upgade)
+			{
+				if (other.upgradeAmmo = true) && (upgraded = false)
+				{
+					other.charging = true;
+					upgraded = true;
+					global.ammoMax += 50;
+					global.ammo = global.ammoMax;
+				}
+				else if (other.upgradeEnergy = true) && (upgraded = false)
+				{
+					other.charging = true;
+					upgraded = true;
+					global.energyTotal += 50;
+					global.energy = global.energyTotal;
+				}
+				else if (other.upgradeHP = true) && (upgraded = false)
+				{
+					other.charging = true;
+					upgraded = true;
+					global.hp += 1;
+					global.hp = global.hpMax;
+				}
 			}
 		}
 	}

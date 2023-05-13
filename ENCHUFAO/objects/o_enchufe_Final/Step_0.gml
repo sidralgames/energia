@@ -10,10 +10,13 @@ else
 	image_index = 0;	
 }
 
-if (global.pluggedInEnergy) && (global.pluggedInHp) &&
-(global.pluggedInAmmo) && (global.pluggedInShield)
+if (room = Sala_0)
 {
-	abierto = true;	
+	if (global.pluggedInEnergy) && (global.pluggedInHp) &&
+	(global.pluggedInAmmo) && (global.pluggedInShield)
+	{
+		abierto = true;	
+	}
 }
 
 

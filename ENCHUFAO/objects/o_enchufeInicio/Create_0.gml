@@ -9,3 +9,5 @@
 // Inherit the parent event
 event_inherited();
 cont = false
+go = true;
+_visible = true;

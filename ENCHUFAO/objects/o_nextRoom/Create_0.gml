@@ -3,5 +3,5 @@
 global.level = 1;
 global.XPpoints = 0;
 
-
+shipSelected = false
 

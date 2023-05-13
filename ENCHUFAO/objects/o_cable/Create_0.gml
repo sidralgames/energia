@@ -2,12 +2,12 @@
 
 // Create a new verlet system
 // You can create multiple systems with different physic properties
-fric = random_range(0.85,0.9)
+fric = 0.85;
 verletSystem1 = new verletSystem(fric, 0.0);
 off = 0;
 cableColor = c_white;
 // Create verlet groups
-_segments = 20
+_segments = 5 * global.cableStat
 // Create a new rope
 rope1 = verletGroupCreateRope(verletSystem1, x, y, cableColor, 2, 3, _segments, 3, 100);
 //rope1 = verletGroupCreateRopeTextured(verletSystem1, x, y, s_tentacle, _segments, 1, 10);

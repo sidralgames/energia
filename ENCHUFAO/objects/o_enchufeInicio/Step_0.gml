@@ -6,7 +6,7 @@
 
 if instance_exists(o_playerShip)
 {
-	if o_playerShip.plugged = true
+	if o_playerShip.plugged = true  && (global.Go)
 	{
 		if cont = false
 		{

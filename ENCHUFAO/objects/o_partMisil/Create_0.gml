@@ -8,7 +8,7 @@ part_system_depth(global.misil_sys,201);
 
 //Particle
 global.misil = part_type_create();
-part_type_scale(global.misil,1.5,1.5);
+part_type_scale(global.misil,1,1);
 part_type_orientation(global.misil,0,359,0,0,0)
 part_type_size(global.misil, 1,1.75,-0.05,0);
 part_type_alpha2(global.misil, 1,0.2);
