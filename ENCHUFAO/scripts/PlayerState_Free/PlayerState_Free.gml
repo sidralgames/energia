@@ -31,6 +31,9 @@ function PlayerState_Free()
 	mask_index = splayer;
 	if (plugged == true)
 	{
+		global.xToPlug = enchufe.x;
+		global.yToPlug = enchufe.y;
+		
 		part_particles_create(global.enchufe_sys, global.xToPlug+random_range(-18,18), global.yToPlug+random_range(-18,18), global.enchufePart , 10)
 	
 		if (point_distance(x,y,global.xToPlug,global.yToPlug) <= global.cableStat*40)

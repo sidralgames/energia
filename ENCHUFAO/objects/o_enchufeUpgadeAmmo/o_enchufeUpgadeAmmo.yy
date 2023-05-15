@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_enchufeUpgadeAmmo",
   "spriteId": {
-    "name": "s_enchufe_Ammo",
-    "path": "sprites/s_enchufe_Ammo/s_enchufe_Ammo.yy",
+    "name": "s_enchufe_AmmoUp",
+    "path": "sprites/s_enchufe_AmmoUp/s_enchufe_AmmoUp.yy",
   },
   "solid": false,
   "visible": true,
@@ -30,6 +30,7 @@
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],

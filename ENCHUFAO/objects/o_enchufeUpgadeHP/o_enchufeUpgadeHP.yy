@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_enchufeUpgadeHP",
   "spriteId": {
-    "name": "s_enchufe_HP",
-    "path": "sprites/s_enchufe_HP/s_enchufe_HP.yy",
+    "name": "s_enchufe_HPUp",
+    "path": "sprites/s_enchufe_HPUp/s_enchufe_HPUp.yy",
   },
   "solid": false,
   "visible": true,
@@ -30,6 +30,7 @@
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],

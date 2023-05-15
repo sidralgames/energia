@@ -63,7 +63,7 @@ if (other.abierto = true)
 				{
 					other.charging = true;
 					upgraded = true;
-					global.hp += 1;
+					global.hpMax += 1;
 					global.hp = global.hpMax;
 				}
 			}
