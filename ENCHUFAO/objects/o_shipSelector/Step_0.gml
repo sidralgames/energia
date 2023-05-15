@@ -14,9 +14,9 @@ if (key_left_p)
 
 if (selected < 0)
 {
-	selected = 2;
+	selected = 3;
 }
-else if (selected > 2)
+else if (selected > 3)
 {
 	selected  = 0;
 }
@@ -36,6 +36,11 @@ switch(selected)
 	case 2:
 	{
 		PlayerStats_Red()
+	}break;
+	
+	case 3:
+	{
+		PlayerStats_Dark()
 	}break;
 	
 }

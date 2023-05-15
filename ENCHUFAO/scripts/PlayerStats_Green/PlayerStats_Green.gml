@@ -19,10 +19,10 @@ function PlayerStats_Green()
 	global._speed = 3;
 	global.walkAcceleration = 0.1;
 	
-	global.energyStat = 5;
+	global.energyStat = global.energyTotal/50;
 	global.speedStat = 4;
 	global.hpStat = 5;
-	global.ammoStat = 3;
+	global.ammoStat = global.ammoMax / 50;
 	global.shieldStat = 2;
 	global.cableStat = 4;
 	

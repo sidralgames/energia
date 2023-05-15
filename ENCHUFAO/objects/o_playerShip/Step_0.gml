@@ -21,7 +21,7 @@ if instance_exists(o_crosshair)
 	}
 }
 
-if (global.hp <= 0)
+if (global.hp < 1)
 {
 	screenShake(3,60)
 	instance_create(x,y,o_explo1)
@@ -39,7 +39,7 @@ if (global.shields >= 1)
 	if (shieldCreated = false)
 	{
 		shieldCreated = true;
-		instance_create(x,y,o_shield);
+		instance_create_layer(x,y,"Shield",o_shield);
 	}
 	
 	if instance_exists(o_shield)
