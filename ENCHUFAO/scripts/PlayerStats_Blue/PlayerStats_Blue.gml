@@ -3,6 +3,8 @@
 function PlayerStats_Blue()
 {
 	global.spriteShip = splayer_Blue;
+	global.spritePart = s_nave_part;
+	global.bulletPart_sprite = s_nave_part;
 		
 	global.energyTotal = 350;
 	global.energy = global.energyTotal;

@@ -6,6 +6,8 @@ if (other.abierto = true)
 	{
 		if (plugged = false)
 		{
+			gamepad_set_vibration(0,0.2,0.2);
+			alarm[4] = 10;
 			audio_play_sound(choose(snd_plugged, snd_plugged_2, snd_plugged_3),50,false)
 			plugged = true;
 			enchufe = instance_nearest(x,y,o_enchufe_Father)

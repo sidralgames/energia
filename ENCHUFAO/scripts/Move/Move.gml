@@ -2,20 +2,23 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Move()
 {
-	if (place_meeting(x+(_hpush*1.5),y,o_wall))
-	{
-	    _hpush = -_hpush*bnc;
-		alarm[3] = 5;
-	}
-	// V collision
-	if (place_meeting(x,y+(_vpush*1.5),o_wall))
-	{
-	    _vpush = -_vpush*bnc;
-		alarm[3] = 5;
-    
-	}
 	
-	x=x+_hpush;
-	y =y + _vpush;
+	
+if (tile_meeting(x+_hpush,y,"Tiles"))
+{
+    _hpush = -_hpush*bnc;
+	alarm[3] = 5;
 }
+x+=_hpush;
+ 
+if (tile_meeting(x,y+_vpush,"Tiles"))
+{
+    _vpush = -_vpush*bnc;
+	alarm[3] = 5;
+}
+y+=_vpush;
+
+}
+	
+
 

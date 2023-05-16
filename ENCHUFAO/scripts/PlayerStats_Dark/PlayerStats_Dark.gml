@@ -3,6 +3,8 @@
 function PlayerStats_Dark()
 {
 	global.spriteShip = splayer_Dark;
+	global.spritePart = s_misil_part;
+	global.bulletPart_sprite = s_nave_part;
 		
 	global.energyTotal = 200;
 	global.energy = global.energyTotal;

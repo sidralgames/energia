@@ -31,6 +31,25 @@ function PlayerState_Free()
 	mask_index = splayer;
 	if (plugged == true)
 	{
+		if alarm[4]>48
+		{
+			gamepad_set_vibration(0,0.05,0.05);
+		}
+		else if (tocado = false)
+		{
+			gamepad_set_vibration(0,0,0);
+		}
+		if alarm[4] <= 0
+		{
+		alarm[4] = 50;
+		}
+		pluggedTimer+=0.5;
+		
+		if (pluggedTimer >= 200)
+		{	
+			Unplug();
+		}
+		
 		global.xToPlug = enchufe.x;
 		global.yToPlug = enchufe.y;
 		
@@ -52,21 +71,9 @@ function PlayerState_Free()
 		
 		if (key_x) 
 		{
-			audio_play_sound(choose(snd_unPlugged, snd_unPlugged_2, snd_unPlugged_3),50,false)
-			plugged = false;
-			o_cable.plugged = false;
-			global.unPlugging = true;
-			global.chargingAmmo = false;
-			global.chargingHp = false;
-			global.chargingShield = false;
-			global.chargingEnergy = false;
-			global.hp = round(global.hp)
-			global.shields = round(global.shields)
-			pluggedFinal = false;
-			
+			Unplug();
 		}
-		
-		
+
 	}
 	else
 	{

@@ -1,5 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
+hsp_final = 0
+hsp_f = 0
+vsp_final = 0
+vsp_f = 0
+
 mask_index = -1;
 alarm[0] = 60;
 energy = false;

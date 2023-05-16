@@ -14,8 +14,8 @@ part_type_size(global.naveP, 1,1.5,-0.075,0);
 part_type_alpha2(global.naveP, 1,1);
 part_type_speed(global.naveP,0,0,0,0);
 part_type_direction(global.naveP,140,160,0,1);
-part_type_life(global.naveP, 10,15);
-part_type_sprite(global.naveP,s_nave_part,true,1,false)
+part_type_life(global.naveP, 15,20);
+
 
 
 

@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+hsp_final = 0
+hsp_f = 0
+vsp_final = 0
+vsp_f = 0
 crosshairSuper = false
 cross = -1;
 _hpush = 0;

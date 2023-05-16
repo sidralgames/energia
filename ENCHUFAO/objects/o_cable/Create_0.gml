@@ -20,7 +20,8 @@ rope1.vertexAttachTo(first, inst);
 plugged = false;
 
 		//// Attach an object to its last vertex
-instTope = instance_create(x, y, o_charger);
+instTope = instance_create_layer(x,y,"Player", o_charger);
+instTope.depth = depth-1;
 rope1.vertexAttachObject(last, instTope, vertexAttachmentType.both);
 
 //instTope = instance_create(x, y, o_coco);

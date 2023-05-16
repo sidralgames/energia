@@ -1,5 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
+hsp_final = 0
+hsp_f = 0
+vsp_final = 0
+vsp_f = 0
+
+pluggedTimer = 0;
+
 global.energy = global.energyTotal;
 upgraded = false;
 if (room != Sala_Inicio)
