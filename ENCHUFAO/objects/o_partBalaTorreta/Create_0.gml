@@ -3,7 +3,7 @@
 
 global.balaPTorreta_sys = part_system_create();
 
-part_system_depth(global.balaPTorreta_sys,201);	
+part_system_depth(global.balaPTorreta_sys,layer_get_depth("Part"));	
 
 
 //Particle

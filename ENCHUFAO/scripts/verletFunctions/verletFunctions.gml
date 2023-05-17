@@ -499,15 +499,17 @@ function verletGroupCreateRope(system, xx, yy, color, width, segmentLength, segm
 		for (var i = 1; i < segments + 1; i++) {
 			stickAdd(vertexList[| i - 1], vertexList[| i], segmentLength);
 		}
-		
+	
 		// Override the drawing function
 		/// @function		draw();
 		/// @description	Draws a textured rope
-		draw = function() {
+			draw = function() {
 			var stickAmount = ds_list_size(stickList);
 			var currentStick, stickDir;
+			
 			var wHalf = width * 0.5;
-			draw_set_color(global.cableColor);
+			
+			draw_set_color(color);
 			draw_primitive_begin(pr_trianglestrip);
 			for (var i = 0; i < stickAmount; i++) {
 				currentStick = stickList[| i];
@@ -520,6 +522,7 @@ function verletGroupCreateRope(system, xx, yy, color, width, segmentLength, segm
 			draw_primitive_end();
 			draw_set_color(c_white);
 		};
+		
 	}
 	
 	// Fix the first point of the rope

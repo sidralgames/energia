@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+global.chargeTime = 1;
+global.DischargeTime = 1;
+global.superShot = 1;
 global.spritePart = s_nave_part;
 global.bulletPart_sprite = s_bullet_part;
 

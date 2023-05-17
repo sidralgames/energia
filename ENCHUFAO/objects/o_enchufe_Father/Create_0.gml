@@ -4,7 +4,7 @@ hsp_final = 0
 hsp_f = 0
 vsp_final = 0
 vsp_f = 0
-
+oddsEnemy = 1;
 mask_index = -1;
 alarm[0] = 60;
 energy = false;
@@ -18,6 +18,9 @@ reset = false;
 upgradeAmmo = false;
 upgradeEnergy = false;
 upgradeHP = false;
+upgradeCharge = false;
+upgradeDischarge = false;
+upgradeSuperShot = false;
 
 charge = 0;
 maxCharge = 200;

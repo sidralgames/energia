@@ -68,6 +68,26 @@ if (other.abierto = true)
 					global.hpMax += 1;
 					global.hp = global.hpMax;
 				}
+				else if (other.upgradeCharge = true) && (upgraded = false)
+				{
+					other.charging = true;
+					upgraded = true;
+					global.chargeTime += 1;
+				}
+				else if (other.upgradeDischarge = true) && (upgraded = false)
+				{
+					other.charging = true;
+					upgraded = true;
+					global.DischargeTime += 2;
+				}
+				else if (other.upgradeSuperShot = true) && (upgraded = false)
+				{
+					other.charging = true;
+					upgraded = true;
+					global.superShot += 0.5;
+					instance_destroy(o_partBalaP)
+					instance_create(-100,-100,o_partBalaP)
+				}
 			}
 		}
 	}

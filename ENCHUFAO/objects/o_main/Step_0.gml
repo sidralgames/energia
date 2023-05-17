@@ -7,14 +7,14 @@ if instance_exists(o_playerShip) && (room != Sala_Inicio)
 	{
 		if (global.energy <= global.energyTotal)
 		{
-			global.energy+=0.75;
+			global.energy+=0.75*global.chargeTime;
 		}
 		
 		if (global.chargingHp = true)
 		{
 			if (global.hp <= global.hpMax)
 			{
-				global.hp +=0.005;
+				global.hp +=0.005*global.chargeTime;
 			}
 		}
 		
@@ -22,7 +22,7 @@ if instance_exists(o_playerShip) && (room != Sala_Inicio)
 		{
 			if (global.shields <= global.shieldsMax)
 			{
-				global.shields +=0.005;
+				global.shields +=0.005*global.chargeTime;
 			}
 		}
 		
@@ -30,7 +30,7 @@ if instance_exists(o_playerShip) && (room != Sala_Inicio)
 		{
 			if (global.ammo <= global.ammoMax)
 			{
-				global.ammo +=0.2;
+				global.ammo +=0.2*global.chargeTime;
 			}
 		}
 			
@@ -41,11 +41,11 @@ if instance_exists(o_playerShip) && (room != Sala_Inicio)
 		{
 			if (abs(o_playerShip._hpush >= 0.1)) || (abs(o_playerShip._vpush >= 0.1))
 			{
-				global.energy-=0.1 * (abs(o_playerShip._hpush)+abs(o_playerShip._vpush));
+				global.energy-=( 0.1 * (abs(o_playerShip._hpush)+abs(o_playerShip._vpush))) / global.DischargeTime;
 			}
 			else
 			{
-				global.energy-=0.1
+				global.energy-= (0.1) / global.DischargeTime
 			}
 		}
 	}

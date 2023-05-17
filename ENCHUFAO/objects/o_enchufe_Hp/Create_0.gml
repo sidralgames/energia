@@ -10,3 +10,7 @@
 event_inherited();
 hp = true;
 
+if (irandom(oddsEnemy) = oddsEnemy)
+{
+	instance_create_layer(x,y, "Enemies",o_enemyEnchufeMisil);
+}

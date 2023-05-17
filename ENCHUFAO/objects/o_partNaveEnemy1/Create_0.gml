@@ -3,7 +3,7 @@
 
 global.naveEnemy1_sys = part_system_create();
 
-part_system_depth(global.naveEnemy1_sys,500);	
+part_system_depth(global.naveEnemy1_sys,layer_get_depth("Part"));	
 
 
 //Particle
