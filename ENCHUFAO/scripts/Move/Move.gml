@@ -9,13 +9,13 @@ if (tile_meeting(x+_hpush,y,"Tiles"))
     _hpush = -_hpush*bnc;
 	alarm[3] = 5;
 }
-x+=_hpush;
- 
 if (tile_meeting(x,y+_vpush,"Tiles"))
 {
     _vpush = -_vpush*bnc;
 	alarm[3] = 5;
 }
+
+x+=_hpush;
 y+=_vpush;
 
 }

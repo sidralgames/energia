@@ -2,8 +2,6 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SetupLevelCorridor()
 {
-	alarm[0] = 120;
-	alarm[1] = 140;
 
 	enchufe0 = false;
 	enchufeHP = false;
@@ -331,7 +329,7 @@ function SetupLevelCorridor()
 	}
 
 
-	alarm[0]=60;
+
 
 
 

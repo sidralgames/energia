@@ -2,8 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SetupLevelBig()
 {
-	alarm[0] = 120;
-	alarm[1] = 140;
+	
 
 	enchufe0 = false;
 	enchufeHP = false;
@@ -338,7 +337,7 @@ function SetupLevelBig()
 	}
 
 
-	alarm[0]=60;
+
 
 
 

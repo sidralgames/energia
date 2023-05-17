@@ -12,10 +12,12 @@ function EnemyEnchufePlugged()
 	
 	if (_hp <= 10)
 	{	
+		sprite_index = s_enemyEnchufe;
 		image_speed = 0.6
 		_hpush = choose(1,-1);
 		_vpush = choose(1,-1);
-		global.cableColor = c_red;
+		enchufe._vpush = -_vpush/3;
+		enchufe._hpush = -_hpush/3;
 		cable = instance_create_layer(x,y,"Cable", o_cableEnemy)
 		state = ENEMYSTATE.FREE;	
 	}

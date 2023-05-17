@@ -63,24 +63,49 @@ if (global.energy > 80) || (plugged == true)
 	soundEnergy = false
 	audio_stop_sound(snd_battery)
 }
+
 if (global.energy = 0 && sounded = false)
 {
 	sounded = true;
 	audio_play_sound(snd_noBattery, 50, false)
 }
 
-	//-----------------NORMAL SHOOT-----------------//
-	if (key_shoot) && (!superShot)
+//-----------------NORMAL SHOOT-----------------//
+if (key_shoot) && (!superShot)
+{
+	if (alarm[0] <= 0) && (global.ammo >1 )
 	{
-		if (alarm[0] <= 0) && (global.ammo >1 )
+		PlayerShipShoot()
+		if (!plugged)
 		{
-			PlayerShipShoot()
 			ChargerShoot()
 		}
 	}
+}
 
 
+inEnchufe = collision_circle(x,y,20,o_enchufe_Father,false,true)
 
+if (inEnchufe)
+{	
+	if (inEnchufe.abierto = true)
+	{
+		if (key_x)
+		{
+			if (plugged = false)
+			{
+				Plug();
+		
+				CheckEnchufe();
+			
+				if (room = Sala_Upgade)
+				{
+					CheckEnchufeUpgrade()
+				}
+			}
+		}
+	}
+}
 
 ////------DEACTIVATE NO VISIBLE WALLS & MORE------////
 //var _vx = camera_get_view_x(view_camera[0]);

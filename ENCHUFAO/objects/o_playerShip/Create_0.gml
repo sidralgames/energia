@@ -40,6 +40,7 @@ offRange = 2;
 
 recoil_standard = 0.8;
 fireRate = 15;
+fireRate = max(5,fireRate-global.fireRate);
 tocado = false;
 shieldCreated = false
 

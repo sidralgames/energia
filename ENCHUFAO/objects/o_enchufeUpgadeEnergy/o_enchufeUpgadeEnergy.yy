@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_enchufeUpgadeEnergy",
   "spriteId": {
-    "name": "Sprite67",
-    "path": "sprites/Sprite67/Sprite67.yy",
+    "name": "s_enchufeUpgradeEnergy",
+    "path": "sprites/s_enchufeUpgradeEnergy/s_enchufeUpgradeEnergy.yy",
   },
   "solid": false,
   "visible": true,

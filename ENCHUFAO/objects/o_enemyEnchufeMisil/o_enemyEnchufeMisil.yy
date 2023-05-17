@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_enemyEnchufeMisil",
   "spriteId": {
-    "name": "s_enemyEnchufe",
-    "path": "sprites/s_enemyEnchufe/s_enemyEnchufe.yy",
+    "name": "s_enemyEnchufePlugged",
+    "path": "sprites/s_enemyEnchufePlugged/s_enemyEnchufePlugged.yy",
   },
   "solid": false,
   "visible": true,

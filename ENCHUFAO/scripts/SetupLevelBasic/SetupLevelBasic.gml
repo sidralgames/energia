@@ -2,8 +2,6 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SetupLevelBasic()
 {
-	alarm[0] = 120;
-	alarm[1] = 140;
 
 	enchufe0 = false;
 	enchufeHP = false;
@@ -335,8 +333,6 @@ function SetupLevelBasic()
 	    }
 	}
 
-
-	alarm[0]=60;
 
 
 

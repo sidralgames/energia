@@ -1,8 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
+
 randomize();
 
-levelType = choose(0,1,2,3);
+levelType = choose(0,0,0,1,1,2,3);
 
 if (levelType = 0)
 {
@@ -11,18 +12,19 @@ if (levelType = 0)
 }
 else if (levelType = 1)
 {
-	SetupLevelBig()
-	levelType="Big"
+	SetupLevelBasicWide()
+	levelType="Basic Wide"
 }
 else if (levelType = 2)
 {
-	SetupLevelBasicWide()
-	levelType="Basic Wide"
+	SetupLevelBig()
+	levelType="Big"
 }
 else if (levelType = 3)
 {
 	SetupLevelCorridor()
 	levelType="Corridor"
 }
-
+alarm[0] = 20;
+alarm[1] = 220;
 

@@ -8,7 +8,10 @@
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "o_bulletFather",
+    "path": "objects/o_bulletFather/o_bulletFather.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,

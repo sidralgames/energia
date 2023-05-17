@@ -8,7 +8,7 @@ enum ENEMYSTATE
 enchufe = instance_nearest(x,y,o_enchufe_Father)
 
 state = ENEMYSTATE.PLUGGED;
-
+cable =-1;
 hsp_final = 0
 hsp_f = 0
 vsp_final = 0
@@ -23,8 +23,7 @@ bnc = 1
 shocked = false;
 _hp = 25;
 cont = 500;
-image_speed = 0;
-image_index = 0;
+image_speed = 0.5;
 precision= choose(3.75,3);
 
 _speedMin = 1;

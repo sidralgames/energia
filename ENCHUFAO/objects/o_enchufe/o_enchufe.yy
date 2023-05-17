@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_enchufe",
   "spriteId": {
-    "name": "Sprite9",
-    "path": "sprites/Sprite9/Sprite9.yy",
+    "name": "s_EnchufeEnergy",
+    "path": "sprites/s_EnchufeEnergy/s_EnchufeEnergy.yy",
   },
   "solid": false,
   "visible": true,
