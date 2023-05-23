@@ -63,24 +63,24 @@ if instance_exists(o_playerShip)
 	
 	
 		
-	if alarm[2] <=0
-	{
-		if (point_distance(x,y,o_playerShip.x, o_playerShip.y) <= 800)
+	myPath = path_add();
+	mp_grid_path(gridRoom1, myPath, x, y, o_playerShip.x ,o_playerShip.y, true);
+	
+		if !tile_meeting(x, y, "Tiles")
 		{
-			_speed = random_range(1.5,2.5)
+			path_end()
+			var a = point_direction(x, y, o_playerShip.x,  o_playerShip.y);
+			direction += sign(dsin(a - direction)) * precision;
+			image_angle = direction;
+			speed = enemySpeed;	
+		
 		}
 		else
 		{
-			_speed = 0;
+			_speed = enemySpeed
+			path_start(myPath,_speed ,path_action_stop, false)
+			image_angle = direction
 		}
-	
-		path_start(myPath,_speed ,path_action_stop, false)
-	}
-	else
-	{
-		path_end()
-		Move()	
-	}	
 
 
 	if (_hp <= 0)

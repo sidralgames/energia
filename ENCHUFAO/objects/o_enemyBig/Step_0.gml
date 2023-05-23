@@ -65,15 +65,23 @@ if instance_exists(o_playerShip)
 		
 	if (alarm[2] <=0) 
 	{
-		if (point_distance(x,y,o_playerShip.x, o_playerShip.y) <= 1000)
+		if !tile_meeting(x, y, "Tiles")
 		{
-			_speed = random_range(1.5,1.5)
+			var a = point_direction(x, y, o_playerShip.x,  o_playerShip.y);
+			direction += sign(dsin(a - direction)) * precision;
+			image_angle = direction;
+			speed = 1.25;	
+		
 		}
 		else
 		{
-			_speed = 0;
+			speed = 0;
+			_speed = 1.25
+			path_start(myPath,_speed ,path_action_stop, false)
+			image_angle = direction
 		}
-		path_start(myPath,_speed ,path_action_stop, false)
+		
+	
 	}
 	else
 	{
@@ -97,9 +105,9 @@ if instance_exists(o_playerShip)
 		instance_destroy();
 	}
 	
-	var a = point_direction(xprevious, yprevious, o_playerShip.x, o_playerShip.y);
-	direction += sign(dsin(a - direction)) * precision;
-	image_angle = direction;
+
+	
+
 
 
 }

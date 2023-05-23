@@ -52,7 +52,7 @@ function SetupLevelBig()
 
 
 
-	var _steps = 3500;
+	var _steps = 4500;
 
 	var _direction_change_odds = 1;
 

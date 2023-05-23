@@ -16,11 +16,11 @@ _hp = 2;
 cont = 500;
 image_speed = 0.5;
 
-precision= choose(3.75,3);
+precision= random_range(2,2.5);
 speed=random(1)+1;
 
 tocado = false;
-
+enemySpeed = 1.5;
 
 direction_ =direction;
 

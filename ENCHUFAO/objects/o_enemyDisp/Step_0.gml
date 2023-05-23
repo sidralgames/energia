@@ -57,29 +57,24 @@ if instance_exists(o_playerShip)
 	}
 	
 	
-	myPath = path_add();
-	
+myPath = path_add();
 	mp_grid_path(gridRoom1, myPath, x, y, o_playerShip.x ,o_playerShip.y, true);
-		
-	if alarm[2] <=0
-	{
-		if (point_distance(x,y,o_playerShip.x, o_playerShip.y) <= 800)
+	
+		if !tile_meeting(x, y, "Tiles")
 		{
-			_speed = random_range(0.5,1.5)
+			path_end()
+			var a = point_direction(x, y, o_playerShip.x,  o_playerShip.y);
+			direction += sign(dsin(a - direction)) * precision;
+			image_angle = direction;
+			speed = enemySpeed;	
+		
 		}
 		else
 		{
-			_speed = 0;
+			_speed = enemySpeed
+			path_start(myPath,_speed ,path_action_stop, false)
+			image_angle = direction
 		}
-	
-		path_start(myPath,_speed ,path_action_stop, false)
-	
-	}
-	else
-	{
-		path_end()
-		Move()	
-	}	
 
 
 	if (point_distance(x,y,o_playerShip.x, o_playerShip.y) <= 300)
@@ -112,10 +107,6 @@ if instance_exists(o_playerShip)
 		explo.image_yscale = 0.5;
 		instance_destroy();
 	}
-	
-	var a = point_direction(xprevious, yprevious, o_playerShip.x, o_playerShip.y);
-	direction += sign(dsin(a - direction)) * precision;
-	image_angle = direction;
 
 
 }

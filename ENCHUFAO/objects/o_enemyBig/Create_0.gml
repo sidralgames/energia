@@ -17,7 +17,7 @@ _hp = 2;
 cont = 500;
 image_speed = 0.5;
 directiont = image_angle
-precision= 2
+precision= 4
 dire = direction;
 
 
