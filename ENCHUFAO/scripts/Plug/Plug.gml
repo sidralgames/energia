@@ -10,7 +10,7 @@ function Plug()
 	plugged = true;
 	enchufe = instance_nearest(x,y,o_enchufe_Father)
 	global.plugging = true;
-	
+	enchufe.enchufeActive = true;
 	global.xToPlug = enchufe.x;
 	global.yToPlug = enchufe.y;
 }

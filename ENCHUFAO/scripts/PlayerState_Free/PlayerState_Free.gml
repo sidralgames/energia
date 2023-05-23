@@ -45,9 +45,11 @@ function PlayerState_Free()
 		}
 		pluggedTimer+=0.5;
 		
-		if (pluggedTimer >= 200)
+		if (pluggedTimer >= 300)
 		{	
 			Unplug();
+			o_charger.overcharged = true;
+			o_charger.alarm[0] = 400;
 		}
 		
 		global.xToPlug = enchufe.x;
@@ -77,10 +79,20 @@ function PlayerState_Free()
 	}
 	else
 	{
+		if (pluggedTimer >= 0)
+		{
+			pluggedTimer-=0.5;
+		};
+		
 		if (global.energy > 0)
-			{
+		{
 				MoveShip()	
-			}
+		}
+		else
+		{
+			_hpush = clamp(_hpush, -spaceSpeed, spaceSpeed);
+			_vpush = clamp(_vpush, -spaceSpeed, spaceSpeed);	
+		}
 	}
 	
 	var axisrh = gamepad_axis_value(0, gp_axisrh);

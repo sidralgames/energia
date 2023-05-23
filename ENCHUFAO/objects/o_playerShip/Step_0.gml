@@ -71,12 +71,13 @@ if (global.energy = 0 && sounded = false)
 }
 
 //-----------------NORMAL SHOOT-----------------//
-if (key_shoot) && (!superShot)
+
+if (key_shoot) && (!superShot) 
 {
 	if (alarm[0] <= 0) && (global.ammo >1 )
 	{
 		PlayerShipShoot()
-		if (!plugged)
+		if (!plugged) && (!o_charger.overcharged)
 		{
 			ChargerShoot()
 		}
@@ -86,13 +87,13 @@ if (key_shoot) && (!superShot)
 
 inEnchufe = collision_circle(x,y,20,o_enchufe_Father,false,true)
 
-if (inEnchufe)
+if (inEnchufe) 
 {	
-	if (inEnchufe.abierto = true)
+	if (inEnchufe.abierto = true) && (inEnchufe.contOvercharged <=0)
 	{
 		if (key_x)
 		{
-			if (plugged = false)
+			if (plugged = false) && (o_charger.overcharged = false)
 			{
 				Plug();
 		

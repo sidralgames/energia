@@ -2,6 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function EnemyEnchufePlugged()
 {
+	part_particles_create(global.overCharged_sys, x+random_range(-18,18), y+random_range(-18,18), global.overChargedPart , 1)	
 	x = enchufe.x;
 	y = enchufe.y;
 	
@@ -12,6 +13,9 @@ function EnemyEnchufePlugged()
 	
 	if (_hp <= 10)
 	{	
+		enchufe.enchufeOvercharged = true;
+		enchufe.contOvercharged = 250;
+		alarm[0] = 120;
 		sprite_index = s_enemyEnchufe;
 		image_speed = 0.6
 		_hpush = choose(1,-1);

@@ -25,6 +25,6 @@ function PlayerStats_Dark()
 	global.speedStat = 6;
 	global.hpStat = global.hpMax;
 	global.ammoStat = global.ammoMax / 50;
-	global.shieldStat = 2;
+	global.shieldStat = global.shieldsMax;
 	global.cableStat = 3;
 }

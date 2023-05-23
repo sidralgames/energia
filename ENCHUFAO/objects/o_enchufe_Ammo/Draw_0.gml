@@ -9,7 +9,7 @@
 // Inherit the parent event
 event_inherited();
 
-if (global.chargingAmmo)
+if (global.chargingAmmo) && (!global.pluggedInAmmo)
 {
 	if (charge <= 200)
 	{

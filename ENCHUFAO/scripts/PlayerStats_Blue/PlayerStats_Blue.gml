@@ -23,9 +23,9 @@ function PlayerStats_Blue()
 	
 	global.energyStat = global.energyTotal/50;
 	global.speedStat = 7;
-	global.hpStat = 2;
+	global.hpStat = global.hpMax;
 	global.ammoStat = global.ammoMax / 50;
-	global.shieldStat = 3;
+	global.shieldStat = global.shieldsMax;
 	global.cableStat = 2;
 	
 }

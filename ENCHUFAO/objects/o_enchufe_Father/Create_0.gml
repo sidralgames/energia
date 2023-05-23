@@ -29,4 +29,7 @@ _hpush = random_range(0.05, 0.1)
 _vpush = random_range(0.05, 0.1)
 bnc = 1;
 _angle = 0;
+enchufeActive = false;
+enchufeOvercharged = false;
+contOvercharged = 0;
 

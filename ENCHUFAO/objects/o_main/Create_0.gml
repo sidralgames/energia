@@ -13,6 +13,7 @@ instance_create(-100,-100,o_partNaveEnemy1)
 instance_create(-100,-100,o_partEnchufe)
 instance_create(-100,-100,o_partBalaTorreta)
 instance_create(-100,-100,o_partMisil)
+instance_create(-100,-100,o_partOverCharged)
 global.enemies = 0;
 speaking = false;
 contSuperShotMain = 0;

@@ -37,7 +37,7 @@ plugged = false
 diagSpeed = round(global._speed * ((sqrt(2)) / 2));
 
 offRange = 2;
-
+spaceSpeed = 4;
 recoil_standard = 0.8;
 fireRate = 15;
 fireRate = max(5,fireRate-global.fireRate);

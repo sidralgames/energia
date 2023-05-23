@@ -2,6 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Unplug()
 {
+	o_enchufe_Father.enchufeActive = false;
 	gamepad_set_vibration(0,0.15,0.15);
 	alarm[4] = 5;
 	audio_play_sound(choose(snd_unPlugged, snd_unPlugged_2, snd_unPlugged_3),50,false)
@@ -15,5 +16,5 @@ function Unplug()
 	global.hp = round(global.hp)
 	global.shields = round(global.shields)
 	pluggedFinal = false;
-	pluggedTimer = 0;
+	
 }
