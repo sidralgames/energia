@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (global.enemies <= 1 + (global.level * 5))
+if (global.enemies <= 1 + (global.level * 3))
 {
 	if instance_exists(o_playerShip)
 	{

@@ -40,7 +40,7 @@
         {"type":0,"name":"g_Distort2Scale","value":"3.3",},
         {"type":0,"name":"g_Distort1Amount","value":"2",},
         {"type":0,"name":"g_Distort2Amount","value":"4",},
-        {"type":0,"name":"g_ChromaSpreadAmount","value":"0.25",},
+        {"type":0,"name":"g_ChromaSpreadAmount","value":"0",},
         {"type":0,"name":"g_CamOffsetScale","value":"1",},
         {"type":2,"name":"g_DistortTexture","value":"_filter_heathaze_noise_sprite",},
       ],},

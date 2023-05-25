@@ -15,7 +15,7 @@ shocked = false;
 _hp = 2;
 cont = 500;
 image_speed = 0.5;
-enemySpeed = 1.5;
+enemySpeed = 1.25;
 precision= random_range(1,2);
 speed=random(1)+1;
 

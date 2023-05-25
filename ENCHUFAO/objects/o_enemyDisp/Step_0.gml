@@ -62,15 +62,19 @@ myPath = path_add();
 	
 		if !tile_meeting(x, y, "Tiles")
 		{
+			if (alarm[5] <= 0)
+			{
 			path_end()
 			var a = point_direction(x, y, o_playerShip.x,  o_playerShip.y);
 			direction += sign(dsin(a - direction)) * precision;
 			image_angle = direction;
 			speed = enemySpeed;	
+			}
 		
 		}
 		else
 		{
+			alarm[5] = 20;
 			_speed = enemySpeed
 			path_start(myPath,_speed ,path_action_stop, false)
 			image_angle = direction

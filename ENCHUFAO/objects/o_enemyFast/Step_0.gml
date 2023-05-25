@@ -66,20 +66,25 @@ if instance_exists(o_playerShip)
 	myPath = path_add();
 	mp_grid_path(gridRoom1, myPath, x, y, o_playerShip.x ,o_playerShip.y, true);
 	
-		if !tile_meeting(x, y, "Tiles")
+		if !tile_meeting(x, y, "Tiles") 
 		{
+			if (alarm[5] <= 0)
+			{
 			path_end()
 			var a = point_direction(x, y, o_playerShip.x,  o_playerShip.y);
 			direction += sign(dsin(a - direction)) * precision;
 			image_angle = direction;
 			speed = enemySpeed;	
+			}
 		
 		}
 		else
 		{
-			_speed = enemySpeed
-			path_start(myPath,_speed ,path_action_stop, false)
-			image_angle = direction
+			alarm[5] = 20;
+			_speed = enemySpeed;
+			path_start(myPath,_speed ,path_action_stop, false);
+			image_angle = direction;
+			
 		}
 
 

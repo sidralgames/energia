@@ -9,8 +9,8 @@ function PlayerStats_Dark()
 	global.energyTotal = 200;
 	global.energy = global.energyTotal;
 	
-	global.hpMax = 1;
-	global.hp = 1;
+	global.hpMax = 3;
+	global.hp = 3;
 	
 	global.shieldsMax = 2;
 	global.shields = 0;

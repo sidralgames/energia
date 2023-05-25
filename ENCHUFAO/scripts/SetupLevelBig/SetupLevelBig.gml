@@ -14,8 +14,8 @@ function SetupLevelBig()
 	__background_set( e__BG.Y, 0, irandom(1000) );
 
 
-	room_width = (CELL_WIDTH/32) *(320*7); //
-	room_height = (CELL_HEIGHT/32) *(320*7);
+	room_width = (CELL_WIDTH/32) *(320*6); //
+	room_height = (CELL_HEIGHT/32) *(320*6);
 
 
 	__view_set( e__VW.HView, 0, __view_get( e__VW.HPort, 0 ) );
@@ -52,7 +52,7 @@ function SetupLevelBig()
 
 
 
-	var _steps = 4500;
+	var _steps = 5500;
 
 	var _direction_change_odds = 1;
 

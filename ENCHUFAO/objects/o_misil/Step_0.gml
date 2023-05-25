@@ -22,7 +22,7 @@ else
 {
 	instance_destroy();
 }
-
+vida--;
 if (vida<=0)
 {
 	instance_destroy();	

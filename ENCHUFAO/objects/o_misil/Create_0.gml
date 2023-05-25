@@ -22,7 +22,7 @@ precision= choose(0.75,1,1.25,1.5,1.75,2);
 
 alarm[0]=50;
 
-vida=10;
+vida=200;
 
 
 
