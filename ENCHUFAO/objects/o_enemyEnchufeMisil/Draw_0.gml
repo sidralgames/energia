@@ -7,7 +7,7 @@ if state = ENEMYSTATE.PLUGGED
 }
 else
 {
-draw_self();
+	draw_sprite_ext(sprite_index, image_index,x,y,1,1,_angle,image_blend,image_alpha)
 }
 
 

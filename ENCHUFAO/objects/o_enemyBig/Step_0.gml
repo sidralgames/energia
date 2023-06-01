@@ -56,39 +56,57 @@ if instance_exists(o_playerShip)
 		}
 	}
 	
-	
 	myPath = path_add();
-	
 	mp_grid_path(gridRoom1, myPath, x, y, o_playerShip.x ,o_playerShip.y, true);
 	
-	
-		
-	if (alarm[2] <=0) 
-	{
 		if !tile_meeting(x, y, "Tiles")
 		{
+			if (alarm[5] <= 0)
+			{
+			path_end()
 			var a = point_direction(x, y, o_playerShip.x,  o_playerShip.y);
 			direction += sign(dsin(a - direction)) * precision;
 			image_angle = direction;
-			speed = 1.25;	
+			speed = enemySpeed;	
+			}
 		
 		}
 		else
 		{
-			speed = 0;
-			_speed = 1.25
+			alarm[5] = 10;
+			_speed = enemySpeed
 			path_start(myPath,_speed ,path_action_stop, false)
 			image_angle = direction
 		}
 		
-	
-	}
-	else
-	{
-		path_end()
-		//Move()	
-	}	
-
+		
+		if (point_distance(x,y,o_playerShip.x, o_playerShip.y) <= 300)
+		{
+			dire = direction;
+			if (alarm[0] <= 0)
+			{
+				var bullet = instance_create_layer(x + lengthdir_x(20, dire), y + lengthdir_y(20, dire),
+				"Bullets", o_bulletEnemy);
+				
+				var bullet2 = instance_create_layer(x + lengthdir_x(20, dire), y + lengthdir_y(20, dire),
+				"Bullets", o_bulletEnemy);
+				
+				
+				off =  -5
+				bullet._hpush = lengthdir_x(3, dire + off);
+				bullet._vpush = lengthdir_y(3, dire + off);
+				bullet.image_angle = dire+off;
+				bullet.direction = dire+off;
+				
+				off2 =  5
+				bullet2._hpush = lengthdir_x(3, dire + off2);
+				bullet2._vpush = lengthdir_y(3, dire + off2);
+				bullet2.image_angle = dire+off;
+				bullet2.direction = dire+off;
+			
+				alarm[0] = random_range(60,120)
+			}
+		}
 
 	if (_hp <= 0)
 	{

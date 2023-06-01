@@ -6,17 +6,20 @@ part_particles_create(global.naveP_sys, x, y, global.naveP , 5)
 PlayerState_Free();
 Move();
 
-if instance_exists(o_crosshair) 
+if (alarm[5] <= 0)
 {
-	if (o_crosshair.alphaP > 0)
+	if instance_exists(o_crosshair) 
 	{
-		_angle = point_direction(x,y,o_crosshair.x, o_crosshair.y)
-	}
-	else
-	{	
-		if (dirH != 0) || (dirV != 0)
+		if (o_crosshair.alphaP > 0)
 		{
-		_angle = point_direction(o_crosshair.x, o_crosshair.y,x,y)
+			_angle = point_direction(x,y,o_crosshair.x, o_crosshair.y)
+		}
+		else
+		{	
+			if (dirH != 0) || (dirV != 0)
+			{
+			_angle = point_direction(o_crosshair.x, o_crosshair.y,x,y)
+			}
 		}
 	}
 }

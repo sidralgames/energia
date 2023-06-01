@@ -69,6 +69,9 @@ function PlayerState_Free()
 			dir = point_direction(x,y,global.xToPlug,global.yToPlug)
 			_hpush = lengthdir_x(2,dir)
 			_vpush = lengthdir_y(2,dir)
+			alarm[5] = 20;
+			enchufe._hpush -= lengthdir_x(0.1,dir)
+			enchufe._vpush -= lengthdir_y(0.1,dir)
 		}
 		
 		if (key_x) 

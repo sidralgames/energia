@@ -9,6 +9,11 @@ if tile_meeting(x,y,"Tiles")
 part_particles_create(global.balaPTorreta_sys, x, y, global.balaPTorreta , 5)
 image_angle = direction-90;
 
+hp--;
 
+if (hp <= 0)
+{
+	instance_destroy()
+}
 
 

@@ -5,11 +5,11 @@ if (cont = true)
 {
 	global.level+=1;
 	
-	if (global.level = 3) || (global.level = 6) || (global.level = 9) || (global.level = 12)
+	if (global.level = 3) || (global.level = 6) || (global.level = 9)
 	{
 		room_goto(Sala_Upgade)
 	}
-	else
+	else 
 	{
 		room_goto(Sala_0)
 	}

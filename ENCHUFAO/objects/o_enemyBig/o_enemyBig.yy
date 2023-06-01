@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_enemyBig",
   "spriteId": {
-    "name": "s_enemyBig",
-    "path": "sprites/s_enemyBig/s_enemyBig.yy",
+    "name": "s_enemyBig_2",
+    "path": "sprites/s_enemyBig_2/s_enemyBig_2.yy",
   },
   "solid": false,
   "visible": true,
@@ -37,6 +37,7 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":3,"eventType":2,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":4,"eventType":2,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":5,"eventType":2,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],

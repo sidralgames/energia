@@ -9,8 +9,9 @@
 // Inherit the parent event
 event_inherited();
 shield = true;
+sprite_enchufePluged = s_enchufe_SHIELDS_Charged;
 
 if (irandom(oddsEnemy) = oddsEnemy)
 {
-	instance_create_layer(x,y, "Enemies",o_enemyEnchufeMisil);
+		instance_create_layer(x,y, "Enemies",choose(o_enemyEnchufeMisil, o_enemyEnchufeMisil_v2));
 }

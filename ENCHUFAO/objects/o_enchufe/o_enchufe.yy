@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "o_enchufe_Father",
-    "path": "objects/o_enchufe_Father/o_enchufe_Father.yy",
+    "name": "o_enchufeStandard_Father",
+    "path": "objects/o_enchufeStandard_Father/o_enchufeStandard_Father.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

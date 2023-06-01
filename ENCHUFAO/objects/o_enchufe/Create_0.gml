@@ -10,8 +10,9 @@
 event_inherited();
 
 energy = true;
+sprite_enchufePluged = s_EnchufeEnergy_charged
 
 if (irandom(oddsEnemy) = oddsEnemy)
 {
-	instance_create_layer(x,y, "Enemies",o_enemyEnchufeMisil);
+		instance_create_layer(x,y, "Enemies",choose(o_enemyEnchufeMisil, o_enemyEnchufeMisil_v2));
 }
