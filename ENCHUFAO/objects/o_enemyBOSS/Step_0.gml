@@ -59,25 +59,35 @@ if instance_exists(o_playerShip)
 	myPath = path_add();
 	mp_grid_path(gridRoom1, myPath, x, y, o_playerShip.x ,o_playerShip.y, true);
 	
-		if !tile_meeting(x, y, "TilesCollision") 
+	switch(stateBoss)
+	{
+		case 0: 
 		{
-			if (alarm[5] <= 0)
+			if tile_meeting(x, y, "Tiles")
 			{
-			path_end()
-			var a = point_direction(x, y, o_playerShip.x,  o_playerShip.y);
-			direction += sign(dsin(a - direction)) * precision;
-			image_angle = direction;
-			speed = enemySpeed;	
-			}
+				alarm[5] = 30;
+				image_angle = direction;
 		
-		}
-		else
-		{
-			alarm[5] = 10;
-			_speed = enemySpeed
-			path_start(myPath,_speed ,path_action_stop, false)
-			image_angle = direction
-		}
+				hspeed = sign(hspeed)*-hspeed;
+				vspeed = sign(vspeed)*-vspeed;
+		
+				
+			}
+			
+			if alarm[5]<=0
+			{
+				var a = point_direction(x, y, o_playerShip.x,  o_playerShip.y);
+				direction += sign(dsin(a - direction)) * precision;
+				image_angle = direction;
+				speed = enemySpeed;	
+			}
+
+			
+			
+		}break;
+		
+	}
+	
 		
 		
 		if (point_distance(x,y,o_playerShip.x, o_playerShip.y) <= 300)

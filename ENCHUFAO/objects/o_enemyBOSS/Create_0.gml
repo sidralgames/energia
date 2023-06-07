@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 instance_create(x,y,o_gridRoom)
-
+stateBoss = 0;
 cable = instance_create_layer(x,y,"Cable", o_cableEnemyBoss)
 hsp_final = 0
 hsp_f = 0
@@ -20,7 +20,8 @@ cont = 500;
 image_speed = 0.5;
 
 enemySpeed = 2.5;
-precision= 0.75;
+precision= 1.5;
+_long = 50
 speed=random(1)+1;
 dire = direction;
 
