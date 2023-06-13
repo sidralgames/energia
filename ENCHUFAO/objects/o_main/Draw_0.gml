@@ -46,21 +46,21 @@ draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+60, "LEVE
 
 }
 draw_set_color(c_white)
-if (room = Sala_0)
-{
-	if (speaking = false)
-	{
-		speaking = true;
-		instance_create(__view_get( e__VW.XView, 0 )+240,__view_get( e__VW.YView, 0 )+300,o_sezar)
-		ActivateSEZAR()
+//if (room = Sala_0)
+//{
+//	if (speaking = false)
+//	{
+//		speaking = true;
+//		instance_create(__view_get( e__VW.XView, 0 )+240,__view_get( e__VW.YView, 0 )+300,o_sezar)
+//		ActivateSEZAR()
 		
-	}
-	if instance_exists(oTextAlone)
-	{
-		draw_sprite_ext(s_sezar, image_index,__view_get( e__VW.XView, 0 )+110,__view_get( e__VW.YView, 0 )+310,1,1,0,image_blend,image_alpha)
-	}
+//	}
+//	if instance_exists(oTextAlone)
+//	{
+//		draw_sprite_ext(s_sezar, image_index,__view_get( e__VW.XView, 0 )+110,__view_get( e__VW.YView, 0 )+310,1,1,0,image_blend,image_alpha)
+//	}
 	
-}
+//}
 draw_set_font(Font1)
 if (global.energy <=80)
 {
