@@ -10,6 +10,7 @@ global.fireRate = 0;
 instance_create(-100,-100,o_partBalaP)
 instance_create(-100,-100,o_partNaveP)
 instance_create(-100,-100,o_partNaveEnemy1)
+instance_create(-100,-100,o_partNaveEnemy_Waiting)
 instance_create(-100,-100,o_partEnchufe)
 instance_create(-100,-100,o_partBalaTorreta)
 instance_create(-100,-100,o_partMisil)

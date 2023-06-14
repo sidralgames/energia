@@ -15,9 +15,10 @@ shocked = false;
 _hp = 2;
 cont = 500;
 image_speed = 0.5;
-enemySpeed = 1.25;
-precision= random_range(1,2);
-speed=random(1)+1;
+enemySpeed = 1.75;
+
+precision= random_range(3,3.5);
+speed=random(1)+2;
 
 tocado = false;
 waiting = false;

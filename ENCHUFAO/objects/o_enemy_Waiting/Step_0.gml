@@ -39,9 +39,9 @@ if (waiting)
 		image_angle = direction;
 	}
 	
-	if tile_meeting(x+lengthdir_x(10,direction), y+lengthdir_y(10,direction), "Tiles")
+	if tile_meeting(x+lengthdir_x(20,direction), y+lengthdir_y(20,direction), "Tiles")
 	{
-		direction = (direction + random_range(140,220)) mod 360
+		direction = (direction + 180) mod 360
 		image_angle = direction
 		alarm[0] = random_range(50,60);
 	}
