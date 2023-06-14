@@ -20,7 +20,7 @@ precision= random_range(1,2);
 speed=random(1)+1;
 
 tocado = false;
-
+waiting = false;
 
 direction_ =direction;
 
@@ -34,4 +34,7 @@ _speed=0;
 off = 90;
 len = 0;
 
+xStart = x;
+yStart = y;
+waitingSpeed = random_range(0.2,0.4)
 

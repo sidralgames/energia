@@ -27,4 +27,7 @@ else if (levelType = 1)
 //}
 alarm[0] = 20;
 alarm[1] = 220;
+alarm[2] = 50;
+times = 5;
 
+timesTotal = 100;

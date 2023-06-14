@@ -1,5 +1,46 @@
 /// @description Insert description here
 // You can write your code in this editor
+if instance_exists(o_playerShip)
+{
+if (point_distance(x,y,o_playerShip.x, o_playerShip.y) <  100) && (waiting)
+{
+	waiting = false;
+	speed=random(1)+1;
+	_speed = speed;
+}
+
+if (waiting)
+{
+	speed = waitingSpeed	
+	if alarm[0] <=0
+	{
+		alarm[0] = random_range(20,60);
+		direction = irandom(360)
+		image_angle = direction
+	
+	}
+
+	if (point_distance(xStart, yStart,x, y) > 60)
+	{
+		direction = (direction + 180) mod 360
+		image_angle = direction
+		alarm[0] = random_range(50,60);
+	}
+	
+	if tile_meeting(x+lengthdir_x(20,direction), y+lengthdir_y(20,direction), "Tiles")
+	{
+		direction = (direction + 180) mod 360
+		image_angle = direction
+		alarm[0] = random_range(50,60);
+	}
+
+}
+
+}
+
+if !waiting
+{
+
 Controls_Input()
 
 superShotPressed = (key_r3Dowm && key_l3Dowm)
@@ -80,6 +121,11 @@ if instance_exists(o_playerShip)
 			image_angle = direction
 		}
 
+}
+
+}
+
+
 	if (_hp <= 0)
 	{
 		screenShake(1,10)
@@ -93,9 +139,3 @@ if instance_exists(o_playerShip)
 		explo.image_yscale = 0.5;
 		instance_destroy();
 	}
-	
-
-
-}
-
-
