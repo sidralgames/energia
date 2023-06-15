@@ -3,3 +3,8 @@
 
 
 draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+80, "SPAWNERS: " + string(spawners))
+draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+100, "TIMES: " + string(times))
+draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+120, "TIMESTOTAL: " + string(timesTotal))
+draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+140, "BREACH: " + string(spawningBreach))
+
+

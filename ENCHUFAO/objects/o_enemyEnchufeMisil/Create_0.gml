@@ -5,6 +5,7 @@ enum ENEMYSTATE
 	PLUGGED,
 	FREE
 }
+waiting = false;
 enchufe = instance_nearest(x,y,o_enchufe_Father)
 version2 = false;
 state = ENEMYSTATE.PLUGGED;

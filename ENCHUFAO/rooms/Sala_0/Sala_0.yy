@@ -28,7 +28,19 @@
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Cable","instances":[],"visible":true,"depth":700,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Part","instances":[],"visible":true,"depth":800,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Enchufes","instances":[],"visible":true,"depth":900,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
-    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Walls","instances":[],"visible":true,"depth":1000,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
+    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Walls","instances":[],"visible":true,"depth":1000,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":"_filter_heathaze","properties":[
+        {"type":0,"name":"g_Distort1Speed","value":"0.01",},
+        {"type":0,"name":"g_Distort2Speed","value":"0.025",},
+        {"type":0,"name":"g_Distort1Scale","value":"13.3",},
+        {"type":0,"name":"g_Distort1Scale","value":"1.3",},
+        {"type":0,"name":"g_Distort2Scale","value":"33.3",},
+        {"type":0,"name":"g_Distort2Scale","value":"3.3",},
+        {"type":0,"name":"g_Distort1Amount","value":"2",},
+        {"type":0,"name":"g_Distort2Amount","value":"4",},
+        {"type":0,"name":"g_ChromaSpreadAmount","value":"0.5",},
+        {"type":0,"name":"g_CamOffsetScale","value":"1",},
+        {"type":2,"name":"g_DistortTexture","value":"_filter_heathaze_noise_sprite",},
+      ],},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles","tilesetId":{"name":"tileset2","path":"tilesets/tileset2/tileset2.yy",},"x":0,"y":0,"tiles":{"TileDataFormat":1,"SerialiseWidth":427,"SerialiseHeight":240,"TileCompressedData":[
 -102480,-2147483648,],},"visible":true,"depth":1100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMREffectLayer","resourceVersion":"1.0","name":"Effect_1","visible":false,"depth":1200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":"_filter_heathaze","properties":[

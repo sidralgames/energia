@@ -37,7 +37,8 @@ len = 0;
 
 xStart = x;
 yStart = y;
-waitingSpeed = random_range(0.4,0.7)
+maxDistance = 100;
+waitingSpeed = random_range(0.7,1)
 breakDistance = random_range(0.005, 0.05)
 accelDistance = random_range(0.005, 0.05);
 

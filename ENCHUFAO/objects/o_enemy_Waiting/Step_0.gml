@@ -33,15 +33,15 @@ if (waiting)
 		speed = lerp(speed, 0, breakDistance);
 	}
 
-	if (point_distance(xStart, yStart,x, y) > 60)
+	if (point_distance(xStart, yStart,x, y) > maxDistance)
 	{
 		direction = (direction + 180) mod 360;
 		image_angle = direction;
 	}
 	
-	if tile_meeting(x+lengthdir_x(20,direction), y+lengthdir_y(20,direction), "Tiles")
+	if tile_meeting(x+lengthdir_x(5,direction), y+lengthdir_y(5,direction), "Tiles")
 	{
-		direction = (direction + 180) mod 360
+		direction = (direction + random_range(140,220)) mod 360
 		image_angle = direction
 		alarm[0] = random_range(50,60);
 	}

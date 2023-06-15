@@ -34,6 +34,6 @@ speed=_speed;
 off = 90;
 len = 0;
 
-
+waiting = false;
 
 

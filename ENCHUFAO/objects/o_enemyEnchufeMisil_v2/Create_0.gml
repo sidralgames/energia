@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+waiting = false;
 version2 = true;
 enchufe = instance_nearest(x,y,o_enchufe_Father)
 offset = 0;
