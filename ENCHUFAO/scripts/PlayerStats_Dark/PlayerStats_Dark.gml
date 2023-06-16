@@ -6,7 +6,7 @@ function PlayerStats_Dark()
 	global.spritePart = s_misil_part;
 	global.bulletPart_sprite = s_nave_part;
 		
-	global.energyTotal = 200;
+	global.energyTotal = 300;
 	global.energy = global.energyTotal;
 	
 	global.hpMax = 3;

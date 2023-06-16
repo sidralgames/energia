@@ -30,7 +30,7 @@ if instance_exists(o_playerShip) && (room != Sala_Inicio)
 		{
 			if (global.ammo <= global.ammoMax)
 			{
-				global.ammo +=0.2*global.chargeTime;
+				global.ammo +=0.4*global.chargeTime;
 			}
 		}
 			

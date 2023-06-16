@@ -4,7 +4,9 @@ hsp_final = 0
 hsp_f = 0
 vsp_final = 0
 vsp_f = 0
-
+fx = 0;
+fx_color = 0;
+layer_set_visible("EffectBreach", false);
 pluggedTimer = 0;
 
 global.energy = global.energyTotal;

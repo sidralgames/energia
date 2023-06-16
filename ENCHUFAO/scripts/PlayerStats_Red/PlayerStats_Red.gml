@@ -6,7 +6,7 @@ function PlayerStats_Red()
 	global.spritePart = s_bullet_partTorreta;
 	global.bulletPart_sprite = s_bullet_part;
 		
-	global.energyTotal = 250;
+	global.energyTotal = 350;
 	global.energy = global.energyTotal;
 	
 	global.hpMax = 6;

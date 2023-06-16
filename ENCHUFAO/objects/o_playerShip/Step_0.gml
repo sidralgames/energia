@@ -123,4 +123,57 @@ if (inEnchufe)
 //instance_activate_region(_vx - 164, _vy - 164, _vw + 228, _vh + 228, true);
 	
 
+//------------EFFECTS----------------//
 
+if (room = Sala_0)
+{
+	distort_fx = layer_get_fx("EffectBreach");
+	distort_fx_params = fx_get_parameters(distort_fx);
+	
+	color_fx = layer_get_fx("EffectColor");
+	color_fx_params = fx_get_parameters(color_fx);
+	
+	if instance_exists(o_breach)
+	{
+
+		layer_set_visible("EffectBreach", true);
+		layer_set_visible("EffectColor", true);
+		
+		fx = lerp(fx,2.75,0.03); 
+		fx_color = lerp(fx_color,0.5,0.03); 
+		
+		
+		color_fx_params.g_Intensity = fx_color;
+		
+		distort_fx_params.g_ChromaSpreadAmount = fx*1.5
+		distort_fx_params.g_Distort1Amount = fx;
+		distort_fx_params.g_Distort2Amount = fx;
+
+		fx_set_parameters(distort_fx, distort_fx_params);
+		fx_set_parameters(color_fx, color_fx_params);
+	}
+	else
+	{
+			//layer_set_visible("LOCO_1", false);
+		fx = lerp(fx,0,0.03);
+		fx_color = lerp(fx_color,0,0.03); 
+		
+		color_fx_params.g_Intensity = fx_color;
+		
+		distort_fx_params.g_ChromaSpreadAmount = fx*1.5
+		distort_fx_params.g_Distort1Amount = fx;
+		distort_fx_params.g_Distort2Amount = fx;
+
+		fx_set_parameters(distort_fx, distort_fx_params);
+		fx_set_parameters(color_fx, color_fx_params);
+
+		if (fx <=0.1)
+		{
+			layer_set_visible("EffectBreach", false);
+		}
+		if (fx_color <=0.1)
+		{
+			layer_set_visible("EffectColor", false);
+		}
+	}
+}

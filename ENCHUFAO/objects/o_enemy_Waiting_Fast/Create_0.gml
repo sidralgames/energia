@@ -42,3 +42,7 @@ waitingSpeed = random_range(0.7,1)
 breakDistance = random_range(0.005, 0.05)
 accelDistance = random_range(0.005, 0.05);
 
+if tile_meeting(x,y,"Tiles")
+{
+	instance_destroy()
+}
