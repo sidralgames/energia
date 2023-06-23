@@ -34,7 +34,7 @@ alarm[3] = 100;
 times = min(6, choose(0,1,2,3,4,5)+global.level)
 
 timesTotal = 500;
-timesBreach = global.level*3;
-breachRetryTime = 20;
+timesBreach = global.level-1;
+breachRetryTime = 40;
 breachDuration = 3000;
 spawningBreach = false;

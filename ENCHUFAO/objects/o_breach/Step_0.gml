@@ -5,12 +5,42 @@ if (image_index >= 53)
 {
 	image_speed = 0;
 }
-
-if (alarm[0] <= 0) && (image_index > 50)
+switch (spawn)
 {
-	SpawnEnemyFastBreach();
-	alarm[0] = random_range(minRate,maxRate)
+	case 0:
+	{
+		if (alarm[0] <= 0) && (image_index > 50)
+		{
+			SpawnEnemyFastBreach();
+			alarm[0] = random_range(minRate,maxRate)
+		}
+	}
+	break;
+	
+	case 1:
+	{
+		if (alarm[0] <= 0) && (image_index > 50)
+		{
+			SpawnEnemyBasicBreach();
+			alarm[0] = random_range(minRate,maxRate)
+		}
+	}
+	break;
+	
+	case 2:
+	{
+		if (alarm[0] <= 0) && (image_index > 50)
+		{
+			SpawnEnemyBasicBreach();
+			SpawnEnemyFastBreach();
+			alarm[0] = random_range(minRate,maxRate)
+		}
+	}
+	break;
+	
+	
 }
+
 
 if (global.breachBanner) 
 {
@@ -25,7 +55,7 @@ if (contBanner >= 100)
 
 if (alarm[1] <= 0)
 {
-	o_waller.breachRetryTime = 30;
+	o_waller.breachRetryTime = 40;
 	image_speed = -1;
 	
 	if (image_index <=10)

@@ -179,13 +179,13 @@ if (room = Sala_0)
 		inBlackHoleArea =  point_distance(x,y,nearestHole.x, nearestHole.y) < 300
 	}
 	
-	if instance_exists(o_blackHole) && !instance_exists(o_breach)
+	if instance_exists(o_blackHole) 
 	{
 		if (inBlackHoleArea)
 		{
 						
 			distanceToBlackHole = point_distance(x,y,o_blackHole.x, o_blackHole.y)
-			fxDistance = (300 - distanceToBlackHole)/3;
+			fxDistance = (300 - distanceToBlackHole)/1.3;
 			fx_blackHole = lerp(fx_blackHole,fxDistance,0.05);
 	
 			
@@ -193,7 +193,7 @@ if (room = Sala_0)
 			
 			fx_blackHole = fxDistance*0.01;
 			
-			distort_fx_params.g_ChromaSpreadAmount = fx_blackHole*1.5
+			distort_fx_params.g_ChromaSpreadAmount = fx_blackHole*1.75
 			distort_fx_params.g_Distort1Amount = fx_blackHole;
 			distort_fx_params.g_Distort2Amount = fx_blackHole;	
 			

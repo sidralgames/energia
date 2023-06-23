@@ -12,3 +12,5 @@ instance_create_layer(x,y,"Banners",o_breachBanner)
 
 global.breachBanner = true;
 contBanner = 0;
+
+spawn = choose (0,1,2)

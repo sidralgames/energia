@@ -38,11 +38,11 @@ draw_set_color(azul)
 draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+20, "NIVEL: " + string(global.level))
 draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+40, "PUNTOS: " + string(global.XPpoints))
 
-if instance_exists(o_waller)
-{
-draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+60, "LEVEL TYPE: " + string(o_waller.levelType))
+//if instance_exists(o_waller)
+//{
+//draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+60, "LEVEL TYPE: " + string(o_waller.levelType))
 
-}
+//}
 
 }
 draw_set_color(c_white)
