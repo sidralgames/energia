@@ -139,6 +139,18 @@ if instance_exists(o_playerShip)
 
 }
 
+if place_meeting(x,y,o_enemyP) && bounced = false
+{
+	bounced = true;
+	alarm[6] = 10;
+    direction = direction+choose(random_range(50,70),random_range(-50,-70))
+} 
+	
+if (alarm[6] <= 0)
+{
+	bounced = false;	
+}
+
 
 	if (_hp <= 0)
 	{

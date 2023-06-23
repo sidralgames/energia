@@ -133,47 +133,109 @@ if (room = Sala_0)
 	color_fx = layer_get_fx("EffectColor");
 	color_fx_params = fx_get_parameters(color_fx);
 	
+
+	//---------BREACH----------//
+	
+	//------TURN RED----------//
 	if instance_exists(o_breach)
 	{
-
-		layer_set_visible("EffectBreach", true);
 		layer_set_visible("EffectColor", true);
-		
-		fx = lerp(fx,2.75,0.03); 
-		fx_color = lerp(fx_color,0.5,0.03); 
-		
-		
-		color_fx_params.g_Intensity = fx_color;
-		
-		distort_fx_params.g_ChromaSpreadAmount = fx*1.5
-		distort_fx_params.g_Distort1Amount = fx;
-		distort_fx_params.g_Distort2Amount = fx;
-
-		fx_set_parameters(distort_fx, distort_fx_params);
+		fx_color = lerp(fx_color,0.5,0.01); 
+		color_fx_params.g_Intensity = fx_color;	
 		fx_set_parameters(color_fx, color_fx_params);
 	}
 	else
 	{
-			//layer_set_visible("LOCO_1", false);
-		fx = lerp(fx,0,0.03);
 		fx_color = lerp(fx_color,0,0.03); 
-		
 		color_fx_params.g_Intensity = fx_color;
-		
-		distort_fx_params.g_ChromaSpreadAmount = fx*1.5
-		distort_fx_params.g_Distort1Amount = fx;
-		distort_fx_params.g_Distort2Amount = fx;
-
-		fx_set_parameters(distort_fx, distort_fx_params);
 		fx_set_parameters(color_fx, color_fx_params);
 
-		if (fx <=0.1)
-		{
-			layer_set_visible("EffectBreach", false);
-		}
 		if (fx_color <=0.1)
 		{
 			layer_set_visible("EffectColor", false);
 		}
 	}
+	
+	if instance_exists(o_breach) //&& (!inBlackHoleArea)
+	{
+
+		layer_set_visible("EffectBreach", true);
+		
+		fx = lerp(fx,2.75,0.005); 
+		
+		distort_fx_params.g_ChromaSpreadAmount = fx*1.5
+		distort_fx_params.g_Distort1Amount = fx-0.5;
+		distort_fx_params.g_Distort2Amount = fx-0.5;
+
+		fx_set_parameters(distort_fx, distort_fx_params);
+		
+	}
+	
+	
+	if instance_exists(o_blackHole)
+	{
+		nearestHole = instance_nearest(x,y,o_blackHole);
+		
+		inBlackHoleArea =  point_distance(x,y,nearestHole.x, nearestHole.y) < 300
+	}
+	
+	if instance_exists(o_blackHole) && !instance_exists(o_breach)
+	{
+		if (inBlackHoleArea)
+		{
+						
+			distanceToBlackHole = point_distance(x,y,o_blackHole.x, o_blackHole.y)
+			fxDistance = (300 - distanceToBlackHole)/3;
+			fx_blackHole = lerp(fx_blackHole,fxDistance,0.05);
+	
+			
+			layer_set_visible("EffectBreach", true);
+			
+			fx_blackHole = fxDistance*0.01;
+			
+			distort_fx_params.g_ChromaSpreadAmount = fx_blackHole*1.5
+			distort_fx_params.g_Distort1Amount = fx_blackHole;
+			distort_fx_params.g_Distort2Amount = fx_blackHole;	
+			
+			fx_set_parameters(distort_fx, distort_fx_params);
+			
+		}
+		else
+		{
+			inBlackHoleArea = false;
+		}
+	}
+	
+	if (inBlackHoleArea)
+	{
+		dir = point_direction(x,y,nearestHole.x, nearestHole.y)
+		if !tile_meeting(x+lengthdir_x(5,dir) ,y+lengthdir_y(5,dir),"Tiles")
+		{
+			if point_distance(x,y,nearestHole.x, nearestHole.y) < 300 &&
+			point_distance(x,y,nearestHole.x, nearestHole.y) > 5
+			 {
+				_hpush += lengthdir_x(0.15,dir)
+				_vpush += lengthdir_y(0.15,dir)
+			 }
+		}
+	}
+	
+	if (!inBlackHoleArea) && !instance_exists(o_breach)
+	{
+		//layer_set_visible("LOCO_1", false);
+		fx = lerp(fx,0,0.03);
+
+		distort_fx_params.g_ChromaSpreadAmount = fx*1.5
+		distort_fx_params.g_Distort1Amount = fx;
+		distort_fx_params.g_Distort2Amount = fx;
+		
+		fx_set_parameters(distort_fx, distort_fx_params);
+
+			if (fx <=0.1)
+		{
+			layer_set_visible("EffectBreach", false);
+		}
+
+	}
+	
 }

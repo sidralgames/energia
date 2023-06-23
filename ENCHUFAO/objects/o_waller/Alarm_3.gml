@@ -20,6 +20,7 @@ if timesBreach >0
 			{
 				spawningBreach = true;
 				breachObj = instance_create_layer(breachX, breachY, "Breach", o_breach)
+				//breachObj = instance_create_layer(breachX, breachY, "Breach", o_blackHole)
 				alarm[4] = breachDuration; 
 				breachRetryTime = 600;
 				timesBreach-=1;

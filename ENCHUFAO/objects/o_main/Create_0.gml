@@ -6,6 +6,7 @@ global.superShot = 1;
 global.spritePart = s_nave_part;
 global.bulletPart_sprite = s_bullet_part;
 global.fireRate = 0;
+global.breachBanner = false;
 
 instance_create(-100,-100,o_partBalaP)
 instance_create(-100,-100,o_partNaveP)

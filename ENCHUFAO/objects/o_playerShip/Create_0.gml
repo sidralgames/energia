@@ -5,6 +5,9 @@ hsp_f = 0
 vsp_final = 0
 vsp_f = 0
 fx = 0;
+fxDistance = 0;
+fx_blackHole = 0;
+inBlackHoleArea = false
 fx_color = 0;
 layer_set_visible("EffectBreach", false);
 pluggedTimer = 0;

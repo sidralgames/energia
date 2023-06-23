@@ -84,4 +84,3 @@ if (global.flashSuperShot)
 	}
 }
 draw_set_alpha(1)
-

@@ -28,13 +28,14 @@ if (timesTotal > 0)
 						padreNear = instance_nearest(exM, eyM,o_enemySpawnerIndicator_F)
 						if point_distance(exM,eyM,padreNear.x, padreNear.y) > 400
 						{
-							enemyToSpawn = choose(0,1)
+							enemyToSpawn = choose(2)
 							instance_create(exM,eyM,o_enemySpawnerIndicator);
 							spawners+=1;
 							switch (enemyToSpawn)
 							{
-								case 0: SpawnEnemyFast(); break;
-								case 1: SpawnEnemyBasic(); break;
+								//case 0: SpawnEnemyFast(); break;
+							//	case 1: SpawnEnemyBasic(); break;
+								case 2: SpawnBlackHole(); break;
 							}
 							
 							times-=1;
