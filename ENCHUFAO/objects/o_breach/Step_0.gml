@@ -31,13 +31,11 @@ switch (spawn)
 	{
 		if (alarm[0] <= 0) && (image_index > 50)
 		{
-			SpawnEnemyBasicBreach();
-			SpawnEnemyFastBreach();
+			SpawnEnemyBasicAndFastBreach();
 			alarm[0] = random_range(minRate,maxRate)
 		}
 	}
 	break;
-	
 	
 }
 

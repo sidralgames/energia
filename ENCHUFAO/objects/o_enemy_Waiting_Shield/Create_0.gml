@@ -18,7 +18,7 @@ image_speed = 0.5;
 enemySpeed = 1.15;
 precision= 2
 speed=random(1)+1;
-
+isCounted = false;
 tocado = false;
 waiting = false;
 
@@ -45,4 +45,5 @@ if tile_meeting(x,y,"Tiles")
 {
 	instance_destroy()
 }
+shield = -1;
 

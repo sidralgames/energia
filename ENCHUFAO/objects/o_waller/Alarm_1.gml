@@ -2,10 +2,7 @@
 // You can write your code in this editor
 
 
-
-	
-
-if (global.enemies <= 1 + (global.level * 3))
+if (global.enemies < global.enemiesMax)
 {
 	if instance_exists(o_playerShip)
 	{
@@ -16,21 +13,12 @@ if (global.enemies <= 1 + (global.level * 3))
 		{
 			if (point_distance(cx, cy, o_playerShip.x, o_playerShip.y) > 200)
 			{
-				enemies = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Player", o_EnemyIncoming)
-				
-				if global.level <= 3
-				{
-					enemies.enemy = choose(o_enemy, o_enemyFast)
-				}
-				else
-				{
-					enemies.enemy = choose(o_enemy, o_enemyFast, o_enemyDisp, o_enemyMisil)
-				}
+				enemies = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Player", o_EnemyIncoming)	
 				global.enemies +=1;
+				
 			}
 		}
 	}
-
-	alarm[1] = max(60, random_range(140,200) - (10*global.level));
+	
 }
 

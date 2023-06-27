@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited();
-
+isCounted=false;
 bnc = 0.5;
 _hp = 2;
 cont = 500;

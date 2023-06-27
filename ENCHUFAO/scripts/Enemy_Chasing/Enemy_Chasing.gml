@@ -31,7 +31,17 @@ function Enemy_Chasing()
 
 	if (takeCover)
 	{
-		
+		if (enemyShield)
+		{
+			if (point_distance(x,y,o_playerShip.x, o_playerShip.y)) < (point_distance(enemyShield.x,enemyShield.y,o_playerShip.x, o_playerShip.y))
+			{
+				enemySpeed = global.coverSpeed-0.5;
+			}
+			else
+			{
+				enemySpeed = global.coverSpeed;
+			}
+		}
 		if (alarm[6] <= 0)
 		{
 			leaveCover = choose(0,0,1);

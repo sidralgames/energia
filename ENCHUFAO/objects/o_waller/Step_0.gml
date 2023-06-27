@@ -26,3 +26,7 @@ if (spawningBreach) && (alarm[4] <= 0)
 	spawningBreach = false;
 }
 
+if (alarm[1] <= 0)
+{
+	alarm[1] = max(60, random_range(140,200) - (10*global.level));
+}

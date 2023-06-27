@@ -6,10 +6,15 @@ function SpawnEnemyBasicBreach()
 	{
 		for (var i=0; i<1; i++)
 		{
-			enemies = instance_create_layer(x+random_range(-3,3), yprevious+random_range(-2,20), "Enemies", o_enemy_Waiting)
-			enemies.waiting = false;
-			enemies.image_angle = point_direction(x, y, o_playerShip.x, o_playerShip.y)+random_range(-30,30)
-			enemies.direction = enemies.image_angle;
+			enemies = instance_create_layer(x+random_range(-3,3), yprevious+random_range(-2,20), "Enemies", o_enemy);
+			
+			if instance_exists(enemies)
+			{
+				enemies.isCounted = false;
+				enemies.state = ENEMYSTATE.CHASING;
+				enemies.image_angle = point_direction(x, y, o_playerShip.x, o_playerShip.y)+random_range(-30,30)
+				enemies.direction = enemies.image_angle;
+			}
 		}
 	}
 }
