@@ -4,11 +4,11 @@ function SpawnEnemyFast()
 {
 	for (var i=0; i<random_range(enemiesMin,enemiesMax); i++)
 	{
-		enemies = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2+random_range(-28,28), cy*CELL_HEIGHT+CELL_HEIGHT/2+random_range(-10,10), "Enemies", o_enemy_Waiting_Fast)
+		enemies = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2+random_range(-28,28), cy*CELL_HEIGHT+CELL_HEIGHT/2+random_range(-10,10), "Enemies", o_enemyFast)
 		
 		if instance_exists(enemies)
 		{
-			enemies.waiting = true;
+			enemies.state = ENEMYSTATE.WAITING;
 			enemies.speed = 0;
 			enemies.image_angle = irandom(360)
 			enemies.direction = enemies.image_angle;

@@ -18,6 +18,8 @@ function PlayerStats_Blue()
 	global.ammo = 100;
 	global.ammoMax = 100;
 	
+	
+	
 	global._speed = 3.5;
 	global.walkAcceleration = 0.2;
 	

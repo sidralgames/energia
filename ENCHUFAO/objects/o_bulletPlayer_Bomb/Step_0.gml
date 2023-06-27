@@ -1,23 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
+_hpush = lerp(_hpush, 0, 0.02);
+_vpush = lerp(_vpush, 0, 0.02);
 
-placeMeeting_TileBounceBullet();
+_angle += max(0.5*sign(_hpush), 5*(abs(_hpush)),0.5*sign(_vpush), 5*(abs(_vpush)));
 
-if instance_exists(lightBullet)
+MoveZeroGrv();
+
+
+if (alarm[0] <=0) && (abs(_hpush) <= 0.05 && abs(_vpush) <= 0.05)
 {
-	lightBullet.light [| eLight.X] = x
-	lightBullet.light [| eLight.Y] = y
-	lightBullet.light [| eLight.Direction] = direction-90
-}
-
-
-_hpush = lerp(_hpush, 0, 0.05);
-_vpush = lerp(_vpush, 0, 0.05);
-
-image_angle += 5*(_hpush);
-
-
-if (alarm[0] <=0) && (abs(_hpush) <= 0.005 && abs(_vpush) <= 0.005)
-{
-instance_destroy();	
+	instance_destroy();	
 }

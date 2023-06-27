@@ -1,5 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
+enum ENEMYSTATE
+{
+	PLUGGED,
+	FREE,
+	WAITING,
+	CHASING,
+	SHOCKED
+}
+
+
 global.chargeTime = 1;
 global.DischargeTime = 1;
 global.superShot = 1;
@@ -7,6 +17,9 @@ global.spritePart = s_nave_part;
 global.bulletPart_sprite = s_bullet_part;
 global.fireRate = 0;
 global.breachBanner = false;
+
+
+global.coverSpeed = 1.05;
 
 instance_create(-100,-100,o_partBalaP)
 instance_create(-100,-100,o_partNaveP)
@@ -32,7 +45,7 @@ global.flashSuperShot = false;
 
 global.plugging = false;
 global.unPlugging = false;
-
+global.bombAmmo = 30;
 PlayerStats_Green()
 global.Go = false;
 global.resetingShip = false;

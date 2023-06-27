@@ -16,12 +16,13 @@ shocked = false;
 _hp = 2;
 cont = 500;
 image_speed = 0.5;
-
+takeCover = false;
 precision= random_range(2,2.5);
 speed=random(1)+1;
 
 tocado = false;
-enemySpeed = 1.5;
+enemySpeedInitial = 1.5
+enemySpeed = enemySpeedInitial;
 
 direction_ =direction;
 

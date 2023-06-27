@@ -98,6 +98,41 @@ myPath = path_add();
 		}
 	}
 
+if (!waiting)
+{
+	if collision_circle(x,y,100,o_enemy_Waiting_Shield,false,true) && (alarm[7] <= 0)
+	{
+		takeCover = true;
+		enemySpeed = global.coverSpeed;	
+		
+	}
+	else
+	{
+		enemySpeed = enemySpeedInitial;
+	}
+}
+
+if (takeCover)
+{
+	if (alarm[6] <= 0)
+	{
+		leaveCover = choose(0,1);
+		
+		if (leaveCover == 1)
+		{
+			enemySpeed = enemySpeedInitial;
+			alarm[7] = random_range(300,600) //leave cover time
+			takeCover = false;
+		}
+		else
+		{
+			alarm[6] = random_range(200,300) //retry leave cover time
+		}
+	}
+	
+}
+
+
 	if (_hp <= 0)
 	{
 		screenShake(1,10)

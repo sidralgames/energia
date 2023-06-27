@@ -79,13 +79,27 @@ if (key_shoot) && (!superShot)
 {
 	if (alarm[0] <= 0) && (global.ammo >1 )
 	{
-		PlayerShipShoot()
+		PlayerShipShoot();
+		
 		if (!plugged) && (!o_charger.overcharged)
 		{
 			ChargerShoot()
 		}
 	}
 }
+
+
+//-----------------BOMB-----------------//
+
+if (key_bomb)
+{
+	if (alarm[6] <= 0) && (global.bombAmmo >1 )
+	{
+		PlayerShipBomb();
+	}
+}
+
+
 
 
 inEnchufe = collision_circle(x,y,20,o_enchufe_Father,false,true)
@@ -214,8 +228,8 @@ if (room = Sala_0)
 			if point_distance(x,y,nearestHole.x, nearestHole.y) < 300 &&
 			point_distance(x,y,nearestHole.x, nearestHole.y) > 5
 			 {
-				_hpush += lengthdir_x(0.15,dir)
-				_vpush += lengthdir_y(0.15,dir)
+				_hpush += lengthdir_x(0.1,dir)
+				_vpush += lengthdir_y(0.1,dir)
 			 }
 		}
 	}
