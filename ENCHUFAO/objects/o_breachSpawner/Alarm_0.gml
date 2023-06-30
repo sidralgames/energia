@@ -24,12 +24,12 @@ if (global.BossBreach_HP > 0) && (global.totalEnemiesOnScreen < 50)
 			}
 			else
 			{
-				breachRetryTime = random_range(10,20);
+				breachRetryTime = random_range(20,30);
 			}
 		}
 		else
 		{
-			breachRetryTime = random_range(10,20);
+			breachRetryTime = random_range(20,30);
 		}
 	}
 }

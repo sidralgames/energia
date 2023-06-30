@@ -5,7 +5,7 @@ imageSpeed = 0.5;
 tocado = false;
 image_speed = imageSpeed;
 
-alarm[0] = random_range(500, 600); //inScreenTime
+alarm[0] = random_range(200, 600); //inScreenTime
 
 
 

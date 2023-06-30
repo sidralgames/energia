@@ -13,9 +13,9 @@ if (alarm[0] <= 0)
 }
 else
 {
-	if (image_index >= 23)
+	if (image_index >= 40)
 	{
-		image_index =19;
+		image_index =24;
 	}
 }
 

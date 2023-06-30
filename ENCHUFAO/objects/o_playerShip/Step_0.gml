@@ -127,7 +127,7 @@ if (inEnchufe)
 
 //------------EFFECTS----------------//
 
-if (room = Sala_0)
+if (room = Sala_0) || (room = Sala_FirstBoss)
 {
 	distort_fx = layer_get_fx("EffectBreach");
 	distort_fx_params = fx_get_parameters(distort_fx);
@@ -139,7 +139,7 @@ if (room = Sala_0)
 	//---------BREACH----------//
 	
 	//------TURN RED----------//
-	if instance_exists(o_breach)
+	if instance_exists(o_breach) || instance_exists(o_breachBoss)
 	{
 		layer_set_visible("EffectColor", true);
 		fx_color = lerp(fx_color,0.5,0.01); 
@@ -158,7 +158,7 @@ if (room = Sala_0)
 		}
 	}
 	
-	if instance_exists(o_breach) //&& (!inBlackHoleArea)
+	if instance_exists(o_breach)  || instance_exists(o_breachBoss) //&& (!inBlackHoleArea)
 	{
 
 		layer_set_visible("EffectBreach", true);
