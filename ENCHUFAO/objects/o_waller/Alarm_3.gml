@@ -10,7 +10,8 @@ if timesBreach >0
 		 breachX = breachcx * CELL_WIDTH+CELL_WIDTH/2;
 		 breachY = breachcy * CELL_HEIGHT+CELL_HEIGHT/2;
 		
-		if (point_distance(breachX, breachY, o_playerShip.x, o_playerShip.y) < 200)
+		if (point_distance(breachX, breachY, o_playerShip.x, o_playerShip.y) < 200) &&
+		(point_distance(breachX, breachY, o_playerShip.x, o_playerShip.y) > 50)
 		{
 			if (global.wallgrid_[# breachcx, breachcy] == FLOOR) &&
 			//(global.wallgrid_[# breachcx+1, breachcy] == FLOOR) &&

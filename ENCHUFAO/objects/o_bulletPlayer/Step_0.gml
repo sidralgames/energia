@@ -6,6 +6,13 @@ part_particles_create(global.balaP_sys, x, y, global.balaP , 5)
 x+=_hpush;
 y+=_vpush;
 
+//if instance_exists(lightBullet)
+//{
+//	lightBullet.light [| eLight.X] = x
+//	lightBullet.light [| eLight.Y] = y
+//	lightBullet.light [| eLight.Direction] = direction-90
+//}
+
 
 
 

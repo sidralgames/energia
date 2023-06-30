@@ -1,5 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
+//if room != Sala_Inicio
+//{
+//	lightEnchufe= instance_create_layer(x,y,"LightPlayer",o_Light_Enchufe);
+
+//}
 hsp_final = 0
 hsp_f = 0
 vsp_final = 0

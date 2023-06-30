@@ -19,6 +19,9 @@ global.fireRate = 0;
 global.breachBanner = false;
 
 
+global.totalEnemiesOnScreen = 0;
+
+
 global.coverSpeed = 1.05;
 
 instance_create(-100,-100,o_partBalaP)

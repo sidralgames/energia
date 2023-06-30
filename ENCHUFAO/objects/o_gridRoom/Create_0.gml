@@ -3,17 +3,12 @@
 globalvar gridRoom1;
 gridRoom1 = mp_grid_create(0, 0, room_width/CELL_WIDTH, room_height/CELL_HEIGHT, 32, 32)
 
-
-
-
-_wall = o_wall;
-
 //set up grid
 width_ = room_width div CELL_WIDTH;
 height_ = room_height div CELL_HEIGHT;
 
 
-if (room = Sala_0)
+if (room = Sala_0)  
 {
 	for ( var yyW = 0; yyW < height_; yyW++) 
 	{
@@ -28,11 +23,10 @@ if (room = Sala_0)
 				mp_grid_add_rectangle(gridRoom1, exW-16,eyW-16,exW,eyW)	
 			}
 		
-		  
 		}
 	}
 }
-else if (room = Sala_Boss)
+else if (room = Sala_Boss) ||  (room = Sala_FirstBoss)
 {
 	var _wall_map_id = layer_tilemap_get_id("Tiles");
 		for ( var yyW = 0; yyW < height_; yyW++) 

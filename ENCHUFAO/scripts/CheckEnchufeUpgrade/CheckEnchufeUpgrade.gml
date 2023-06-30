@@ -57,7 +57,7 @@ function CheckEnchufeUpgrade()
 	{
 		inEnchufe.charging = true;
 		upgraded = true;
-		global.fireRate+=1;
+		global.fireRate+=6;
 		o_playerShip.fireRate = max(5,o_playerShip.fireRate-global.fireRate)
 	}
 }

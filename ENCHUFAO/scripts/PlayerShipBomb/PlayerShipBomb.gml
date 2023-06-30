@@ -21,8 +21,8 @@ function PlayerShipBomb()
 		global.bombAmmo-=1;
 		
 		off =  random_range(offRange,-offRange)
-		bullet._hpush = lengthdir_x(6, _angle + off);
-		bullet._vpush = lengthdir_y(6, _angle + off);
+		bullet._hpush = lengthdir_x(5, _angle + off);
+		bullet._vpush = lengthdir_y(5, _angle + off);
 		bullet._angle = dire+off;
 		bullet.direction = dire+off;
 		_hpush += -lengthdir_x(recoil_bomb, _angle+off);

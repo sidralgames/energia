@@ -2,6 +2,7 @@
 // You can write your code in this editor
 global.enemies = 0;
 global.enemiesMax = 1 + (global.level * 3);
+global.totalEnemiesOnScreen = 0;
 spawners=0;
 randomize();
 enemiesMin = min(3,global.level+1);
@@ -33,17 +34,11 @@ alarm[1] = 220;
 alarm[2] = 50;
 alarm[3] = 100;
 
-if global.level > 2
-{
-	times = min(4, choose(0,1,2,3,4)+global.level-2)
-}
-else
-{
-	times = 0;
-}
+times = min(4, choose(0,1,2,3,4)+global.level-1)
+
 
 timesTotal = 500;
-timesBreach = global.level-1;
+timesBreach = global.level;
 breachRetryTime = 40;
 breachDuration = 3000;
 spawningBreach = false;

@@ -9,7 +9,11 @@ switch(state)
 	case ENEMYSTATE.SHOCKED: Enemy_Shocked(); break;
 }
 
-
+//if instance_exists(lightEnemy)
+//	{
+//		lightEnemy.light [| eLight.X] = x
+//		lightEnemy.light [| eLight.Y] = y
+//	}
 
 if (_hp <= 0)
 {

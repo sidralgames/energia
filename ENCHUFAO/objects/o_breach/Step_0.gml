@@ -53,7 +53,10 @@ if (contBanner >= 100)
 
 if (alarm[1] <= 0)
 {
-	o_waller.breachRetryTime = 40;
+	if (room = Sala_0)
+	{
+		o_waller.breachRetryTime = 40;
+	}
 	image_speed = -1;
 	
 	if (image_index <=10)

@@ -1,5 +1,5 @@
 parado=false
-depth=-15;
+
 direction= point_direction(x, y, o_playerShip.x, o_playerShip.y)+choose(-90,-60,60,90);
 length = 28;
 current_recoil=0;

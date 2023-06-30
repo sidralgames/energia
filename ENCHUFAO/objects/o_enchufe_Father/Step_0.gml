@@ -20,6 +20,11 @@ if (charge >= 200)
 {
 	sprite_index = sprite_enchufePluged;
 	image_speed = 0.2;
+	
+	//if room != Sala_Inicio
+	//{
+	//	lightEnchufe.full = true;
+	//}
 }
 
 if (enchufeOvercharged)
@@ -36,3 +41,11 @@ if (enchufeOvercharged)
 _hpush = clamp(_hpush, -1.5, 1.5)
 _vpush = clamp(_vpush, -1.5, 1.5)
 
+//if room != Sala_Inicio
+//{
+//	if instance_exists(lightEnchufe)
+//	{
+//		lightEnchufe.light [| eLight.X] = x
+//		lightEnchufe.light [| eLight.Y] = y
+//	}
+//}

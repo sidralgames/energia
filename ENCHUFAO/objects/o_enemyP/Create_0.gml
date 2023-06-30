@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
 isCounted = false;
 hsp_final = 0
 hsp_f = 0
@@ -22,5 +23,5 @@ tocado = false;
 waiting = false;
 
 
-
+global.totalEnemiesOnScreen+=1;
 

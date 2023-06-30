@@ -58,3 +58,15 @@ instance_create_layer(x,y,"Cable", o_cable)
 instance_create_layer(x,y,"Player", o_crosshair)
 _angle = point_direction(x,y,o_crosshair.x, o_crosshair.y)
 
+
+
+//---Light-----//??
+//if (room != Sala_Inicio)
+//{
+//	lightPlayer= instance_create_layer(x,y,"LightPlayer",o_Light_Player);
+//}
+//else
+//{
+//	lightPlayer=-1;
+//}
+

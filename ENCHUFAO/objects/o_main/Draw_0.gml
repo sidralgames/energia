@@ -67,7 +67,7 @@ draw_set_font(Font1)
 if (global.energy <=80)
 {
 	draw_set_color(rojo)
-	draw_set_alpha(random_range(0.18,0.2))
+	draw_set_alpha(0.05)
 	draw_rectangle(__view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0,__view_get( e__VW.XView, 0 )+640,__view_get( e__VW.YView, 0 )+360,false)
 	draw_set_color(c_white)
 }

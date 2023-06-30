@@ -24,19 +24,7 @@ if (alarm[5] <= 0)
 	}
 }
 
-if (global.hp < 1)
-{
-	screenShake(3,60)
-	instance_create(x,y,o_explo1)
-	audio_play_sound(snd_death, 50, false)
-	audio_stop_sound(snd_song)
-	audio_stop_sound(snd_battery)
-	instance_destroy();	
-	instance_destroy(o_enemy)
-	instance_destroy(o_cable)
-	instance_destroy(o_charger)
-	instance_create(x, y, o_gameOver)
-}
+
 if (global.shields >= 1)
 {
 	if (shieldCreated = false)
@@ -252,4 +240,33 @@ if (room = Sala_0)
 
 	}
 	
+}
+
+if (room != Sala_Inicio)
+{
+	//if instance_exists(lightPlayer)
+	//{
+	//	lightPlayer.light [| eLight.X] = x
+	//	lightPlayer.light [| eLight.Y] = y
+	//}
+}
+
+
+//---------DIE---------//
+if (global.hp < 1)
+{
+	//if instance_exists(lightPlayer)
+	//{
+	//	instance_destroy(lightPlayer)
+	//}
+	screenShake(3,60)
+	instance_create(x,y,o_explo1)
+	audio_play_sound(snd_death, 50, false)
+	audio_stop_sound(snd_song)
+	audio_stop_sound(snd_battery)
+	instance_destroy();	
+	instance_destroy(o_enemy)
+	instance_destroy(o_cable)
+	instance_destroy(o_charger)
+	instance_create(x, y, o_gameOver)
 }
