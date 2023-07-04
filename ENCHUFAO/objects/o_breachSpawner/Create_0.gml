@@ -13,6 +13,10 @@ alarm[2] = 30;
 
 
 
+if !audio_is_playing(snd_song)
+{
+	audio_play_sound(snd_song, 50, true)
+}
 
 
 

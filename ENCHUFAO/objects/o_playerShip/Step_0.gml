@@ -163,7 +163,7 @@ if (room = Sala_0) || (room = Sala_FirstBoss)
 
 		layer_set_visible("EffectBreach", true);
 		
-		fx = lerp(fx,2.75,0.005); 
+		fx = lerp(fx,2.5,0.005); 
 		
 		distort_fx_params.g_ChromaSpreadAmount = fx*1.5
 		distort_fx_params.g_Distort1Amount = fx-0.5;
