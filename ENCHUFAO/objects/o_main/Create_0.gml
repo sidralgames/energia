@@ -9,6 +9,7 @@ enum ENEMYSTATE
 	SHOCKED
 }
 
+global.BossBreach_awaken = false;
 
 global.chargeTime = 1;
 global.DischargeTime = 1;

@@ -8,5 +8,22 @@ image_speed = imageSpeed;
 alarm[0] = random_range(200, 600); //inScreenTime
 
 
+enum BOSSBREACHSTATE
+{
+	START,
+	IDLE,
+	ATTACKONE,
+	ATTACKTWO
+}
 
+if (global.BossBreach_awaken = false)
+{
+	initialHp = 25;
+}
+else
+{
+	initialHp = 0;
+}
+offset = 0;
 
+maxHPLost = 25;

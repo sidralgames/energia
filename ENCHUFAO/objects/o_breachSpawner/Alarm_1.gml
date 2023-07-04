@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (global.BossBreach_HP > 0) && (global.totalEnemiesOnScreen < 50) && !instance_exists(o_breachBoss)
+if (breachesCount >= 2) && (global.BossBreach_HP > 0) && (global.totalEnemiesOnScreen < 50) && !instance_exists(o_breachBoss)
 {
 	if instance_exists(o_playerShip)
 	{
@@ -18,7 +18,22 @@ if (global.BossBreach_HP > 0) && (global.totalEnemiesOnScreen < 50) && !instance
 			&& (global.wallgrid_[# breachcx+1, breachcy] == FLOOR) 
 			{
 				spawningBreach = true;
-				breachObj = instance_create_layer(breachX, breachY, "Breach", o_breachBoss)
+				
+				if (breachesCount = 2) 
+				{
+					if !instance_exists(o_breach)
+					{
+						breachObj = instance_create_layer(breachX, breachY, "Breach", o_breachBoss)
+						breachObj.state = BOSSBREACHSTATE.START
+					}
+				}
+				else
+				{
+					breachObj = instance_create_layer(breachX, breachY, "Breach", o_breachBoss)
+				}
+
+				breachObj.state = BOSSBREACHSTATE.START
+			
 				//breachObj = instance_create_layer(breachX, breachY, "Breach", o_blackHole)
 				breachBossRetryTime = random_range(1000,1200);
 			}

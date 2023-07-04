@@ -22,8 +22,8 @@ function SetupLevelBoss()
 
 	//Set de grid height and width
 	
-	room_width = (CELL_WIDTH/32) *832; //
-	room_height = (CELL_HEIGHT/32) *608;
+	room_width = (CELL_WIDTH/32) *960; //
+	room_height = (CELL_HEIGHT/32) *736;
 	
 	var _wall_map_id = layer_tilemap_get_id("Tiles");
 
@@ -47,7 +47,7 @@ function SetupLevelBoss()
 	var _controller_y = height_ div 2
 	var _controller_direction = irandom(3);
 
-	var _steps = 1500;
+	var _steps = 2500;
 
 	var _direction_change_odds = 1;
 
@@ -222,6 +222,86 @@ function SetupLevelBoss()
 		}
 	}
 
+
+
+for ( var yy = 0; yy < height_; yy++) 
+	{
+	    for (var xx = 0; xx < width_; xx++) 
+		{
+		    if (global.wallgrid_[# xx, yy] == FLOOR) 
+			{
+			    var oddsE0 = 300;
+				var oddsEHP = 300;
+				var oddsEA = 300;
+				var oddsESH = 300;
+				var oddsEF = 300;
+			
+			    var exM = xx * CELL_WIDTH+CELL_WIDTH/2;
+			    var eyM = yy * CELL_HEIGHT+CELL_HEIGHT/2;
+			
+				if (irandom(oddsE0) == oddsE0) && (enchufe0 = false)
+				{
+					instance_create_layer(exM,eyM,"Enchufes",o_enchufe); 
+					enchufe0 = true;
+				}
+				if instance_exists(o_enchufe_Father)
+				{
+					//if (irandom(oddsEHP) == oddsEHP) && (enchufeHP = false)
+					//{
+					//	nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
+
+					//	if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 250)
+					//	{
+					//		instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Hp); 
+					//		enchufeHP = true;
+					//	}
+					//}
+			
+					//if (irandom(oddsESH) == oddsESH) && (enchufeShield = false)
+					//{
+					//	nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
+					
+					//	if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 250)
+					//	{
+					//		instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Shield); 
+					//		enchufeShield = true;
+					//	}
+					//}
+			
+					if (irandom(oddsEA) == oddsEA) && (enchufeAmmo = false)
+					{
+						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
+					
+						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 250)
+						{
+							instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Ammo); 
+							enchufeAmmo = true;
+						}
+					}
+				
+					//if (irandom(oddsEF) == oddsEF) && (enchufeFinal = false)
+					//{
+					//	nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
+					//	nextwall = instance_nearest(exM, eyM, o_wall)
+					
+					//	if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 200)
+					//	{
+					//		if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 80)
+					//		{
+					//			instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Final); 
+					//			enchufeFinal = true;
+					//		}
+					//	}
+					//}
+				}
+		    } 
+	    }
+	}
+
+if (!enchufe0) || (!enchufeAmmo) 
+	{
+		room_restart();
+	}
 
 
 	for ( var yyW = 0; yyW < height_; yyW++) {
