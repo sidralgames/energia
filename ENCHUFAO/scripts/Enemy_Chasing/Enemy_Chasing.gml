@@ -33,13 +33,16 @@ function Enemy_Chasing()
 	{
 		if (enemyShield)
 		{
-			if (point_distance(x,y,o_playerShip.x, o_playerShip.y)) < (point_distance(enemyShield.x,enemyShield.y,o_playerShip.x, o_playerShip.y))
+			if instance_exists(o_playerShip)
 			{
-				enemySpeed = global.coverSpeed-0.5;
-			}
-			else
-			{
-				enemySpeed = global.coverSpeed;
+				if (point_distance(x,y,o_playerShip.x, o_playerShip.y)) < (point_distance(enemyShield.x,enemyShield.y,o_playerShip.x, o_playerShip.y))
+				{
+					enemySpeed = global.coverSpeed-0.5;
+				}
+				else
+				{
+					enemySpeed = global.coverSpeed;
+				}
 			}
 		}
 		if (alarm[6] <= 0)

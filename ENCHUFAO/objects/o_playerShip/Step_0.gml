@@ -163,7 +163,7 @@ if (room = Sala_0) || (room = Sala_FirstBoss)
 
 		layer_set_visible("EffectBreach", true);
 		
-		fx = lerp(fx,2.5,0.005); 
+		fx = lerp(fx,2,0.005); 
 		
 		distort_fx_params.g_ChromaSpreadAmount = fx*1.5
 		distort_fx_params.g_Distort1Amount = fx-0.5;
@@ -216,8 +216,8 @@ if (room = Sala_0) || (room = Sala_FirstBoss)
 			if point_distance(x,y,nearestHole.x, nearestHole.y) < 300 &&
 			point_distance(x,y,nearestHole.x, nearestHole.y) > 5
 			 {
-				_hpush += lengthdir_x(0.1,dir)
-				_vpush += lengthdir_y(0.1,dir)
+				_hpush += lengthdir_x(0.08,dir)
+				_vpush += lengthdir_y(0.08,dir)
 			 }
 		}
 	}

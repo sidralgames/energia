@@ -7,23 +7,26 @@ _hp = global.BossBreach_HP;
 	{
 		if (state != BOSSBREACHSTATE.START)
 		{
-			image_speed = -imageSpeed;
+			if (imageChanged = false)
+			{
+				sprite_index = spriteStart;
+				image_index = 27;
+				imageChanged = true;
+			}
+			
+			if (sprite_index = spriteStart)
+			{
+				image_speed = -imageSpeed;
 	
 				if (image_index <=1)
 				{
+					o_breachSpawner.canBreach = true;
 					instance_destroy();
 				}
+			}
 		}
 	}
-	else
-	{
-		if (image_index >= 40)
-		{
-			image_index =24;
-		}
-	}
-
-
+	
 switch (state)
 {
 	case BOSSBREACHSTATE.START: BossBreachStart(); break;

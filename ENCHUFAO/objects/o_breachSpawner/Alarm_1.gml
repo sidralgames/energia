@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (breachesCount >= 2) && (global.BossBreach_HP > 0) && (global.totalEnemiesOnScreen < 50) && !instance_exists(o_breachBoss)
+if (breachesCount >= 2) && (global.BossBreach_HP > 0) && (global.totalEnemiesOnScreen < 40) && !instance_exists(o_breachBoss)
 {
 	if instance_exists(o_playerShip)
 	{
@@ -24,7 +24,7 @@ if (breachesCount >= 2) && (global.BossBreach_HP > 0) && (global.totalEnemiesOnS
 					if !instance_exists(o_breach)
 					{
 						breachObj = instance_create_layer(breachX, breachY, "Breach", o_breachBoss)
-						breachObj.state = BOSSBREACHSTATE.START
+						
 					}
 				}
 				else
@@ -32,7 +32,7 @@ if (breachesCount >= 2) && (global.BossBreach_HP > 0) && (global.totalEnemiesOnS
 					breachObj = instance_create_layer(breachX, breachY, "Breach", o_breachBoss)
 				}
 
-				breachObj.state = BOSSBREACHSTATE.START
+				
 			
 				//breachObj = instance_create_layer(breachX, breachY, "Breach", o_blackHole)
 				breachBossRetryTime = random_range(1000,1200);

@@ -2,18 +2,17 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function BossBreachStart()
 {
-	if (global.BossBreach_awaken)
+	if (image_index >= 27)
 	{
-		state = BOSSBREACHSTATE.IDLE;
+		image_index = 22;
 	}
-	else
-	{
-		if (initialHp <= 0) 
+	
+		if (alarm[3] <= 0)
 		{
-			global.BossBreach_awaken = true;
-			o_breachSpawner.canBreach = true;
-			instance_destroy();
-			
+			sprite_index = spriteIdle;
+			alarm[4] = idleTime;
+			state = BOSSBREACHSTATE.IDLE;
+		
 		}
-	}
+	
 }

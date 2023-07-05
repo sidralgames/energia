@@ -33,7 +33,9 @@ instance_create(-100,-100,o_partEnchufe)
 instance_create(-100,-100,o_partBalaTorreta)
 instance_create(-100,-100,o_partMisil)
 instance_create(-100,-100,o_partOverCharged)
-instance_create(-100,-100,o_partBalaTorretaBig)
+instance_create(-100,-100,o_partBalaTorretaBig);
+
+
 global.enemies = 0;
 speaking = false;
 contSuperShotMain = 0;

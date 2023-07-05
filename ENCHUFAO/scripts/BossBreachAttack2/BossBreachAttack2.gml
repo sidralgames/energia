@@ -2,24 +2,32 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function BossBreachAttack2()
 {
-	if instance_exists(o_playerShip)
+	if (alarm[5] > 0)
 	{
-		if (alarm[2] <= 0)
+		if instance_exists(o_playerShip)
 		{
-			bullets = irandom_range(4,8)
-			for( i = 0; i < bullets; i++ )
+			if (alarm[2] <= 0)
 			{
-			    inst = instance_create( x, y, o_bulletBossEnemy);
-				if instance_exists(inst)
+				bullets = irandom_range(4,8)
+				for( i = 0; i < bullets; i++ )
 				{
-				    inst.direction = i * (360 / bullets ) + offset;
-				    inst.speed=1.5;
+				    inst = instance_create( x, y, o_bulletBossEnemy);
+					if instance_exists(inst)
+					{
+					    inst.direction = i * (360 / bullets ) + offset;
+					    inst.speed=1.5;
 				
+					}
 				}
-			}
 	
-			offset=offset+12.25;
-			alarm[2] = 120
+				offset=offset+12.25;
+				alarm[2] = 120
+			}
 		}
+	}
+	else
+	{
+		state = BOSSBREACHSTATE.IDLE;
+		alarm[4]=idleTime;
 	}
 }

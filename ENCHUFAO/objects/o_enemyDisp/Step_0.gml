@@ -26,6 +26,8 @@ if (_hp <= 0)
 	}
 }
 
+if instance_exists(o_playerShip)
+{
 	if (point_distance(x,y,o_playerShip.x, o_playerShip.y) <= 300)
 	{
 		dire = direction;
@@ -42,6 +44,6 @@ if (_hp <= 0)
 			alarm[0] = random_range(60,120)
 		}
 	}
-
+}
 
 

@@ -13,15 +13,5 @@ else
 }
 instance_destroy(other);
 
-if (state != BOSSBREACHSTATE.START)
-{
-	if (global.BossBreach_HP > 50)
-	{
-		state = BOSSBREACHSTATE.ATTACKONE;	
-	}
-	else
-	{
-		state = BOSSBREACHSTATE.ATTACKTWO;
-}
-}
+
 

@@ -20,11 +20,12 @@ if timesBreach >0
 			(global.wallgrid_[# breachcx, breachcy+1] == FLOOR) 
 			{
 				spawningBreach = true;
-				breachObj = instance_create_layer(breachX, breachY, "Breach", o_breach)
+				breachObj = instance_create_layer(breachX, breachY, "Breach", o_breach);
+				timesBreach-=1;
 				//breachObj = instance_create_layer(breachX, breachY, "Breach", o_blackHole)
 				alarm[4] = breachDuration; 
 				breachRetryTime = 600;
-				timesBreach-=1;
+				
 			}
 		}
 	}
