@@ -14,4 +14,4 @@ if (room = Sala_0)
 global.breachBanner = true;
 contBanner = 0;
 
-spawn = choose (0,1,2)
+spawn = choose (3,3)

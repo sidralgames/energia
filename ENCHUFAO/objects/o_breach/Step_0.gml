@@ -37,6 +37,17 @@ switch (spawn)
 	}
 	break;
 	
+	case 3:
+	{
+		if (alarm[0] <= 0) && (image_index > 50)
+		{
+			SpawnBulletEyeAndPeta();
+			alarm[0] = random_range(minRate,maxRate)
+		}
+		
+	}
+	break;
+	
 }
 
 
