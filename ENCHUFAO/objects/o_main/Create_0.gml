@@ -52,7 +52,12 @@ global.flashSuperShot = false;
 
 global.plugging = false;
 global.unPlugging = false;
+
 global.bombAmmo = 30;
+
+global.PETAsMax = 3;
+global.PETAAmmo = global.PETAsMax;
+
 PlayerStats_Green()
 global.Go = false;
 global.resetingShip = false;

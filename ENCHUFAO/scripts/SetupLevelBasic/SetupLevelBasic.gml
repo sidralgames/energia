@@ -251,13 +251,6 @@ function SetupLevelBasic()
 	     }
 
 
-
-
-
-
-
-
-
 	//Draw the level using grid
 	for ( var yy = 0; yy < height_; yy++) 
 	{
@@ -270,10 +263,18 @@ function SetupLevelBasic()
 				var oddsEA = 300;
 				var oddsESH = 300;
 				var oddsEF = 300;
+				
+				var oddsPETA = 300;
 			
 			    var exM = xx * CELL_WIDTH+CELL_WIDTH/2;
 			    var eyM = yy * CELL_HEIGHT+CELL_HEIGHT/2;
 			
+				if (irandom(oddsPETA) == oddsPETA) && (PetasInLevel < PetasInLevelMax)
+				{
+					instance_create_layer(exM,eyM,"Enchufes",o_PETApickUp); 
+					PetasInLevel +=1;
+				}
+				
 				if (irandom(oddsE0) == oddsE0) && (enchufe0 = false)
 				{
 					instance_create_layer(exM,eyM,"Enchufes",o_enchufe); 

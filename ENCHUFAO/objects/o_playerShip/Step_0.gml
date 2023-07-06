@@ -81,14 +81,22 @@ if (key_shoot) && (!superShot)
 
 if (key_bomb)
 {
-	if (alarm[6] <= 0) && (global.bombAmmo >1 )
+	if (alarm[6] <= 0) && (global.bombAmmo > 0 )
 	{
 		PlayerShipBomb();
 	}
 }
 
 
+//---------P.E.T.A--------//
 
+if (key_l3Dowm) && (key_r3Dowm)
+{
+	if (alarm[6] <= 0) && (global.PETAAmmo > 0 )
+	{
+		PlayerShipPETA();
+	}
+}
 
 inEnchufe = collision_circle(x,y,20,o_enchufe_Father,false,true)
 
