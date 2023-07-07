@@ -6,7 +6,9 @@ function SpawnEnemyBasicBreach()
 	{
 		for (var i=0; i<1; i++)
 		{
-			enemies = instance_create_layer(x+random_range(-3,3), yprevious+random_range(-2,20), "Enemies", o_enemy);
+			peta =  choose(o_enchufePETA,o_enchufePETAAll,o_enchufePETAShield,o_enchufePETAAmmo,o_enchufePETAHP)
+			enemy = choose(o_enemy,o_enemy,o_enemy,o_enemy,o_enemy,o_enemy,o_enemy,o_enemy,o_enemy,peta)
+			enemies = instance_create_layer(x+random_range(-3,3), yprevious+random_range(-2,20), "Enemies", enemy);
 			
 			if instance_exists(enemies)
 			{

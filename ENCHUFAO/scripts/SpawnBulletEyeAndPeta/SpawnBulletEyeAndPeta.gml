@@ -6,15 +6,24 @@ function SpawnBulletEyeAndPeta()
 	{
 		for (var i=0; i<1; i++)
 		{
-			if !instance_exists(o_enchufePETA)
+			peta =  choose(o_enchufePETA,o_enchufePETAAll,o_enchufePETAShield,o_enchufePETAAmmo,o_enchufePETAHP)
+			if !instance_exists(peta)
 			{
-				enemy = choose(o_bulletEye,o_bulletEye,o_bulletEye,o_bulletEye,o_bulletEye,o_enchufePETA)
+				enemy = choose(o_bulletEye,o_bulletEye,o_bulletEye,o_bulletEye,o_bulletEye,peta)
 			}
 			else
 			{
 				enemy = o_bulletEye;
 			}
-			enemies = instance_create_layer(x+random_range(-3,3), yprevious+random_range(-2,20), "Enemies", enemy)
+			if (enemy != o_bulletEye)
+			{
+				layerID = "Enchufes";
+			}
+			else
+			{
+				layerID = "Enemies";
+			}
+			enemies = instance_create_layer(x+random_range(-3,3), yprevious+random_range(-2,20), layerID, enemy)
 			dire = point_direction(x, y, o_playerShip.x, o_playerShip.y);
 			if instance_exists(enemies)
 			{

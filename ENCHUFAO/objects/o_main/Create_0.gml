@@ -65,7 +65,7 @@ global.chargingAmmo = false;
 global.chargingHp = false;
 global.chargingShield = false;
 global.chargingEnergy = false;
-
+global.chargingPETA = false;
 
 
 

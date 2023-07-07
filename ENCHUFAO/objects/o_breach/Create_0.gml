@@ -13,5 +13,11 @@ if (room = Sala_0)
 }
 global.breachBanner = true;
 contBanner = 0;
-
-spawn = choose (3,3)
+if (room = Sala_FirstBoss)
+{
+	spawn = choose(0,1,2,3)
+}
+else
+{
+	spawn = choose(0,1,2)
+}

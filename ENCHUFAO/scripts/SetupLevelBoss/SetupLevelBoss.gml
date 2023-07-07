@@ -241,7 +241,7 @@ for ( var yy = 0; yy < height_; yy++)
 			
 				if (irandom(oddsE0) == oddsE0) && (enchufe0 = false)
 				{
-					instance_create_layer(exM,eyM,"Enchufes",o_enchufe); 
+					instance_create_layer(exM,eyM,"Enchufes",o_enchufePETA); 
 					enchufe0 = true;
 				}
 				if instance_exists(o_enchufe_Father)
@@ -250,9 +250,9 @@ for ( var yy = 0; yy < height_; yy++)
 					//{
 					//	nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 
-					//	if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 250)
+					//	if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 150)
 					//	{
-					//		instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Hp); 
+					//		instance_create_layer(exM,eyM,"Enchufes",o_enchufePETAHP); 
 					//		enchufeHP = true;
 					//	}
 					//}
@@ -261,9 +261,9 @@ for ( var yy = 0; yy < height_; yy++)
 					//{
 					//	nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 					
-					//	if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 250)
+					//	if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 150)
 					//	{
-					//		instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Shield); 
+					//		instance_create_layer(exM,eyM,"Enchufes",o_enchufePETAShield); 
 					//		enchufeShield = true;
 					//	}
 					//}
@@ -272,9 +272,9 @@ for ( var yy = 0; yy < height_; yy++)
 					{
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 					
-						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 250)
+						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 150)
 						{
-							instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Ammo); 
+							instance_create_layer(exM,eyM,"Enchufes",o_enchufePETAAmmo); 
 							enchufeAmmo = true;
 						}
 					}
@@ -298,7 +298,7 @@ for ( var yy = 0; yy < height_; yy++)
 	    }
 	}
 
-if (!enchufe0) || (!enchufeAmmo) 
+if (!enchufe0) || (!enchufeAmmo) //|| (!enchufeShield) || (!enchufeHP)
 	{
 		room_restart();
 	}

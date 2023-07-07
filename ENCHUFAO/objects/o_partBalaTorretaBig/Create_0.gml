@@ -9,7 +9,7 @@ part_system_depth(global.balaPTorretaBig_sys,layer_get_depth("Part"));
 //Particle
 global.balaPTorretaBig = part_type_create();
 part_type_scale(global.balaPTorretaBig,1,1);
-part_type_orientation(global.balaPTorretaBig,140,160,0,0,0)
+part_type_orientation(global.balaPTorretaBig,0,359,0,0,0)
 part_type_size(global.balaPTorretaBig, 1.5,1.95,-0.075,0);
 part_type_alpha2(global.balaPTorretaBig, 1,1);
 part_type_speed(global.balaPTorretaBig,0,0,0,0);

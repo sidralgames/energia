@@ -2,13 +2,12 @@
 // You can write your code in this editor
 
 // Inherit the parent event
-event_inherited();
+//
 
-//part_particles_create(global.balaPTorreta_sys, x, y, global.balaPTorreta , 2)
+part_particles_create(global.balaPTorretaBig_sys, x, y, global.balaPTorretaBig , 1)
 
-x+=_hpush;
-y+=_vpush;
 
+MoveZeroGrv()
 image_angle += _hpush*2;
 
 hp--;

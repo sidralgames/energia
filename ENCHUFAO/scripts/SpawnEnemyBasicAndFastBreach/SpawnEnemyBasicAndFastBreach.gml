@@ -5,8 +5,10 @@ function SpawnEnemyBasicAndFastBreach()
 	if instance_exists(o_playerShip)
 	{
 		for (var i=0; i<1; i++)
-		{
-			enemy = choose(o_enemy,o_enemyFast)
+		{	
+			peta =  choose(o_enchufePETA,o_enchufePETAAll,o_enchufePETAShield,o_enchufePETAAmmo,o_enchufePETAHP)
+			
+			enemy = choose(o_enemy,o_enemyFast,o_enemy,o_enemyFast,o_enemy,o_enemyFast,o_enemy,o_enemyFast,peta)
 			enemies = instance_create_layer(x+random_range(-3,3), yprevious+random_range(-2,20), "Enemies", enemy)
 			
 			if instance_exists(enemies)

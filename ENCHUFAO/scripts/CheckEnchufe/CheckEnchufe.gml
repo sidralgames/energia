@@ -17,19 +17,51 @@ function CheckEnchufe()
 	{
 		global.chargingHp = true;	
 	}
-	else if (inEnchufe.shield = true)
+	if (inEnchufe.shield = true)
 	{
 		global.chargingShield= true;	
 	}
-	else if (inEnchufe.ammo = true)
+	if (inEnchufe.ammo = true)
 	{
 		global.chargingAmmo = true;	
 	}
-	else if (inEnchufe.energy = true)
+	if (inEnchufe.energy = true)
 	{
 		global.chargingEnergy = true;
 	}
-	else if (inEnchufe.final = true)
+	
+	if (inEnchufe.isPETA_F)
+	{
+		inEnchufe.petaActive = true;
+		
+		if (inEnchufe.isPETA = true)
+		{
+			global.chargingEnergy = true;
+		}
+		if (inEnchufe.isPETAAmmo = true)
+		{
+			global.chargingEnergy = true;
+			global.chargingAmmo = true;	
+		}
+		if (inEnchufe.isPETAHP = true)
+		{
+			global.chargingEnergy = true;
+			global.chargingHp = true;	
+		}
+		if (inEnchufe.isPETAShield = true)
+		{
+			global.chargingEnergy = true;
+			global.chargingShield = true;	
+		}
+		if (inEnchufe.isPETAAll= true)
+		{
+			global.chargingEnergy = true;
+			global.chargingShield = true;	
+			global.chargingHp = true;	
+			global.chargingAmmo = true;	
+		}
+	}
+	if (inEnchufe.final = true)
 	{
 		pluggedFinal = true;
 	}

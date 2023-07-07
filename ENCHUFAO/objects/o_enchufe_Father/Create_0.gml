@@ -3,7 +3,15 @@
 //if room != Sala_Inicio
 //{
 //	lightEnchufe= instance_create_layer(x,y,"LightPlayer",o_Light_Enchufe);
-
+randomize();
+isPETA = false;
+isPETAHP = false;
+isPETAAmmo = false;
+isPETAShield = false;
+isPETAAll = false;
+isPETA_F = false;
+petaActive = false;
+dying = false;
 //}
 hsp_final = 0
 hsp_f = 0
