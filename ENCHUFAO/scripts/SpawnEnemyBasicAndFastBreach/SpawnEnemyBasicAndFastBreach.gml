@@ -18,6 +18,12 @@ function SpawnEnemyBasicAndFastBreach()
 				enemies.image_angle = point_direction(x, y, o_playerShip.x, o_playerShip.y)+random_range(-30,30)
 				enemies.direction = enemies.image_angle;
 			}
+			if (enemy = peta)
+			{
+				dire = point_direction(x,y,o_playerShip.x, o_playerShip.y)+random_range(-5,5)
+				enemies._hpush = lengthdir_x(3,dire)
+				enemies._vpush = lengthdir_y(3,dire)
+			}
 		}
 	}
 }

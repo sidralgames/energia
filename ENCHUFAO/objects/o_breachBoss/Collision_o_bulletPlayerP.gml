@@ -3,7 +3,7 @@
 tocado = true;
 alarm[1] = 10;
 maxHPLost -= 1;
-if (initialHp <= 0)
+if (initialHp <= 0) && (global.BossBreach_awaken)
 {
 	global.BossBreach_HP -=1;
 }

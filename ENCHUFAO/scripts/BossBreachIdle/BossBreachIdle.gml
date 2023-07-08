@@ -9,6 +9,7 @@ function BossBreachIdle()
 		{
 			if (imageChanged = false)
 			{
+				
 				sprite_index = spriteStart;
 				image_index = 27;
 				imageChanged = true;
@@ -20,9 +21,11 @@ function BossBreachIdle()
 	
 				if (image_index <=1)
 				{
-					instance_destroy();
+			
+					instance_create(x,y,o_BreachBossBanner);
 					global.BossBreach_awaken = true;
 					o_breachSpawner.canBreach = true;
+					instance_destroy();
 				}
 			}
 		}

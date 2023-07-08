@@ -5,9 +5,9 @@ global.BossBreach_HPMax = 100;
 global.BossBreach_HP = global.BossBreach_HPMax ;
 SetupLevelBoss();
 
-breachBossRetryTime = 180;
+breachBossRetryTime = 50;
 breachRetryTime = 60;
-breachRetryTimeInitial = random_range(30,50)
+breachRetryTimeInitial = random_range(20,30)
 
 alarm[0] = breachRetryTime;
 alarm[2] = 30;
@@ -21,5 +21,5 @@ if !audio_is_playing(snd_song)
 
 breachesCount = 0;
 bossCount = 0;
-canBreach = true;
+canBreach = false;
 

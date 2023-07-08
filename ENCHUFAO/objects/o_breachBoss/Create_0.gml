@@ -10,11 +10,11 @@ spriteStart = s_breachBoss;
 spriteIdle = s_breachBoss_Idle;
 spriteAttack = s_breachBoss_Attack;
 
-startTime = 100;
+startTime = 60;
 
 imageChanged = false;
 
-idleTime = 200;
+idleTime = 120;
 
 inScreenTime = random_range(700, 800);
 

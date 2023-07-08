@@ -88,7 +88,7 @@ if (global.flashSuperShot)
 draw_set_alpha(1)
 
 
-if (room = Sala_FirstBoss)
+if (room = Sala_FirstBoss) && (global.BossBreach_awaken = true) && !instance_exists(o_BreachBossBanner)
 {
 	draw_sprite_ext(s_bossName_Breacher, 0,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+20, 1,1,image_angle, image_blend, image_alpha)
 	draw_sprite_ext(s_bossHealthBar_Out, 0,__view_get( e__VW.XView, 0 )+230,__view_get( e__VW.YView, 0 )+35, 1,1,image_angle, image_blend, image_alpha)
