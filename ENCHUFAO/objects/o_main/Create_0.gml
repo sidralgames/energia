@@ -9,6 +9,7 @@ enum ENEMYSTATE
 	SHOCKED
 }
 
+global.PETAsActive = 0;
 global.BossBreach_awaken = false;
 
 global.chargeTime = 1;
@@ -53,10 +54,11 @@ global.flashSuperShot = false;
 global.plugging = false;
 global.unPlugging = false;
 
-global.bombAmmo = 30;
+global.bombAmmoMax = 5
+global.bombAmmo = 2;
 
 global.PETAsMax = 3;
-global.PETAAmmo = global.PETAsMax;
+global.PETAAmmo = 1;
 
 PlayerStats_Green()
 global.Go = false;

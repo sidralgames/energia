@@ -7,7 +7,7 @@ SetupLevelBoss();
 
 breachBossRetryTime = 50;
 breachRetryTime = 60;
-breachRetryTimeInitial = random_range(20,30)
+breachRetryTimeInitial = random_range(30,40)
 
 alarm[0] = breachRetryTime;
 alarm[2] = 30;

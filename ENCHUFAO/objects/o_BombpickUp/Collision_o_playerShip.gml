@@ -1,9 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (cont = true)
+if (global.bombAmmo < global.bombAmmoMax)
 {
-	room_goto(Sala_0)
+	global.bombAmmo +=1;
 }
+instance_destroy();
+
 
 
 

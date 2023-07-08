@@ -12,6 +12,7 @@ isPETAAll = false;
 isPETA_F = false;
 petaActive = false;
 dying = false;
+bornFromBreach = false;
 //}
 hsp_final = 0
 hsp_f = 0

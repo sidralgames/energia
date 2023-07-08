@@ -13,6 +13,7 @@ if (cont = true)
 	//if (global.level = 3) || (global.level = 6) || (global.level = 9)
 	if (global.level mod 2 == 0)
 	{
+		global.XPpoints += global.level*100;
 		room_goto(Sala_Upgade)
 	}
 	else 

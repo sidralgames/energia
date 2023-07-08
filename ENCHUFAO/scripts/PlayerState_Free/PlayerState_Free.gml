@@ -49,7 +49,7 @@ function PlayerState_Free()
 		{	
 			Unplug();
 			o_charger.overcharged = true;
-			o_charger.alarm[0] = 400;
+			o_charger.alarm[0] = 300;
 		}
 		
 		global.xToPlug = enchufe.x;

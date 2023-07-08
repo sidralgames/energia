@@ -5,8 +5,6 @@ _hp = global.BossBreach_HP;
 
 	if (alarm[0] <= 0) || (maxHPLost <= 0)
 	{
-		if (state != BOSSBREACHSTATE.START)
-		{
 			if (imageChanged = false)
 			{
 				sprite_index = spriteStart;
@@ -24,7 +22,7 @@ _hp = global.BossBreach_HP;
 					instance_destroy();
 				}
 			}
-		}
+		
 	}
 	
 switch (state)

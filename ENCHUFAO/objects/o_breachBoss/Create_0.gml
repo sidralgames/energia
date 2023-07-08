@@ -39,7 +39,7 @@ state = BOSSBREACHSTATE.START;
 
 if (global.BossBreach_awaken = false)
 {
-	initialHp = 25;
+	initialHp = 10;
 }
 else
 {

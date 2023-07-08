@@ -102,7 +102,7 @@ inEnchufe = collision_circle(x,y,20,o_enchufe_Father,false,true)
 
 if (inEnchufe) 
 {	
-	if (inEnchufe.abierto = true) && (inEnchufe.contOvercharged <=0)
+	if (inEnchufe.abierto = true) && (inEnchufe.contOvercharged <=0) && (inEnchufe.dying == false)
 	{
 		if (key_x)
 		{
@@ -150,7 +150,7 @@ if (room = Sala_0) || (room = Sala_FirstBoss)
 	if instance_exists(o_breach) || instance_exists(o_breachBoss)
 	{
 		layer_set_visible("EffectColor", true);
-		fx_color = lerp(fx_color,0.5,0.01); 
+		fx_color = lerp(fx_color,0.2,0.01); 
 		color_fx_params.g_Intensity = fx_color;	
 		fx_set_parameters(color_fx, color_fx_params);
 	}

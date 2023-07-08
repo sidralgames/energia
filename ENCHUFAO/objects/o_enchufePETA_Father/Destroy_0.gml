@@ -1,7 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
-overcharged = false;
-rateAnterior = o_playerShip.fireRate;
 
 
 
+
+// Inherit the parent event
+event_inherited();
+
+global.PETAsActive-=1;

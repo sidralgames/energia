@@ -10,8 +10,8 @@ if (global.BossBreach_HP > 0) && (global.totalEnemiesOnScreen < 40) && !instance
 		 breachX = breachcx * CELL_WIDTH+CELL_WIDTH/2;
 		 breachY = breachcy * CELL_HEIGHT+CELL_HEIGHT/2;
 		
-		if (point_distance(breachX, breachY, o_playerShip.x, o_playerShip.y) < 300) &&
-		(point_distance(breachX, breachY, o_playerShip.x, o_playerShip.y) > 50)
+		if (point_distance(breachX, breachY, o_playerShip.x, o_playerShip.y) < 350) &&
+		(point_distance(breachX, breachY, o_playerShip.x, o_playerShip.y) > 80)
 		{
 			if (global.wallgrid_[# breachcx, breachcy] == FLOOR)
 			&& (global.wallgrid_[# breachcx-1, breachcy] == FLOOR)

@@ -30,15 +30,16 @@ if (room != Sala_Inicio)
 
 if (room = Sala_0)
 {
+draw_set_halign(fa_right)
 draw_set_font(Font2)
-draw_set_color(azul)
-draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+21, "NIVEL: " + string(global.level))
-draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+41, "PUNTOS: " + string(global.XPpoints))
+draw_set_color(c_white)
+draw_text(__view_get( e__VW.XView, 0 )+630,__view_get( e__VW.YView, 0 )+21, "Level " + string(global.level))
+draw_text(__view_get( e__VW.XView, 0 )+630,__view_get( e__VW.YView, 0 )+41, "Score: " + string(global.XPpoints))
 //draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+61, "Enemies: " + string(global.enemies))
 //draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+81, "Enemies max: " + string(global.enemiesMax))
 draw_set_color(azul)
-draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+20, "NIVEL: " + string(global.level))
-draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+40, "PUNTOS: " + string(global.XPpoints))
+draw_text(__view_get( e__VW.XView, 0 )+630,__view_get( e__VW.YView, 0 )+20, "Level " + string(global.level))
+draw_text(__view_get( e__VW.XView, 0 )+630,__view_get( e__VW.YView, 0 )+40, "Score: " + string(global.XPpoints))
 
 //if instance_exists(o_waller)
 //{
@@ -46,6 +47,17 @@ draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+40, "PUNT
 
 //}
 
+}
+if instance_exists(o_playerShip) && (room != Sala_Inicio)
+{
+	for (var i=0; i< global.bombAmmo; i++)
+	{
+		draw_sprite_ext(s_bomb, 0, __view_get( e__VW.XView, 0 )+25+ (i*19),__view_get( e__VW.YView, 0 )+45, 1,1,0,image_blend, image_alpha)
+	}
+	for (var t=0; t< global.PETAAmmo; t++)
+	{
+		draw_sprite_ext(s_PETApickUp, 0, __view_get( e__VW.XView, 0 )+25+ (t*16),__view_get( e__VW.YView, 0 )+65, 0.8,0.8,0,image_blend, image_alpha)
+	}
 }
 draw_set_color(c_white)
 //if (room = Sala_0)
@@ -66,6 +78,26 @@ draw_set_color(c_white)
 draw_set_font(Font1)
 if (global.energy <=80)
 {
+	if global.PETAAmmo > 0
+	{
+		if (alarm[0] <30)
+		{
+			draw_set_halign(fa_center)
+			draw_set_font(Font2)
+			draw_set_color(c_white)
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+301, "L3 + R3" )
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+326, "TRHOW P.E.T.A")
+
+			draw_set_color(azul)
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+300, "L3 + R3" )
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+325, "TRHOW P.E.T.A")
+		}
+	
+		if (alarm[0] <= 0)
+		{
+			alarm[0] = 40;	
+		}
+	}
 	draw_set_color(rojo)
 	draw_set_alpha(0.05)
 	draw_rectangle(__view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0,__view_get( e__VW.XView, 0 )+640,__view_get( e__VW.YView, 0 )+360,false)

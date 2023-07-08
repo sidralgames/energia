@@ -265,14 +265,21 @@ function SetupLevelBasic()
 				var oddsEF = 300;
 				
 				var oddsPETA = 300;
+				var oddsBomb = 300;
 			
 			    var exM = xx * CELL_WIDTH+CELL_WIDTH/2;
 			    var eyM = yy * CELL_HEIGHT+CELL_HEIGHT/2;
 			
-				if (irandom(oddsPETA) == oddsPETA) && (PetasInLevel < PetasInLevelMax)
+				if (irandom(oddsPETA) == oddsPETA) && (PetasInLevel < PetasInLevelMax) && global.level > 2
 				{
 					instance_create_layer(exM,eyM,"Enchufes",o_PETApickUp); 
 					PetasInLevel +=1;
+				}
+				
+				if (irandom(oddsBomb) == oddsBomb) && (BombsInLevel < BombsInLevelMax) 
+				{
+					instance_create_layer(exM,eyM,"Enchufes",o_BombpickUp); 
+					BombsInLevel +=1;
 				}
 				
 				if (irandom(oddsE0) == oddsE0) && (enchufe0 = false)
