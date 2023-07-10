@@ -9,7 +9,7 @@
 // Inherit the parent event
 event_inherited();
 
-if (global.chargingShield) && (!global.pluggedInShield)
+if (global.chargingShield) && (!global.pluggedInShield) && (charging)
 {
 	if (charge <= 200)
 	{

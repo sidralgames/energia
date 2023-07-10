@@ -2,7 +2,6 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function BossBreachIdle()
 {
-	
 	if (!global.BossBreach_awaken)
 	{
 		if (initialHp <= 0) 
@@ -47,5 +46,7 @@ function BossBreachIdle()
 			}
 		}
 	}
+	
+	CheckBossFading();
 	
 }

@@ -3,32 +3,11 @@
 _hp = global.BossBreach_HP;
 
 
-	if (alarm[0] <= 0) || (maxHPLost <= 0)
-	{
-			if (imageChanged = false)
-			{
-				sprite_index = spriteStart;
-				image_index = 27;
-				imageChanged = true;
-			}
-			
-			if (sprite_index = spriteStart)
-			{
-				image_speed = -imageSpeed;
-	
-				if (image_index <=1)
-				{
-					o_breachSpawner.canBreach = true;
-					instance_destroy();
-				}
-			}
-		
-	}
-	
 switch (state)
 {
 	case BOSSBREACHSTATE.START: BossBreachStart(); break;
 	case BOSSBREACHSTATE.IDLE: BossBreachIdle(); break;
+	case BOSSBREACHSTATE.FADING : BossBreachFading(); break;
 	case BOSSBREACHSTATE.ATTACKONE: BossBreachAttack1(); break;
 	case BOSSBREACHSTATE.ATTACKTWO: BossBreachAttack2(); break;
 }
@@ -36,8 +15,8 @@ switch (state)
 
 if (_hp <= 0)
 {
-	instance_create(x,y,o_exploBomb)
-	enchufe = instance_create(x,y,o_enchufe_Final);
+	instance_create(x,y,o_exploBomb);
+	enchufe = instance_create_layer(x,y,"Enchufes", o_enchufe_Final);
 	enchufe.abierto = true;
 	instance_destroy();	
 }

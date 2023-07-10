@@ -9,7 +9,7 @@
 // Inherit the parent event
 event_inherited();
 
-if (global.chargingHp) && (!global.pluggedInHp)
+if (global.chargingHp) && (!global.pluggedInHp) && (charging)
 {
 	if (charge <= 200)
 	{

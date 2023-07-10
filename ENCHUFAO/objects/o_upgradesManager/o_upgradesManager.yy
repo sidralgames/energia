@@ -1,11 +1,8 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_BombpickUp",
-  "spriteId": {
-    "name": "s_bomb",
-    "path": "sprites/s_bomb/s_bomb.yy",
-  },
+  "name": "o_upgradesManager",
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,
@@ -24,11 +21,7 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"o_playerShip","path":"objects/o_playerShip/o_playerShip.yy",},},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {

@@ -2,6 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function CheckEnchufe()
 {
+	
 	//-----------INICIO-----------//
 	if (inEnchufe.reset = true)
 	{
@@ -61,6 +62,9 @@ function CheckEnchufe()
 			global.chargingAmmo = true;	
 		}
 	}
+	
+	inEnchufe.charging = true;
+	
 	if (inEnchufe.final = true)
 	{
 		pluggedFinal = true;

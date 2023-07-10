@@ -70,4 +70,5 @@ global.chargingEnergy = false;
 global.chargingPETA = false;
 
 
-
+global.upgradesList = ds_map_create();
+addUpgradeAmmo();

@@ -4,6 +4,7 @@
 //{
 //	lightEnchufe= instance_create_layer(x,y,"LightPlayer",o_Light_Enchufe);
 randomize();
+charging = false;
 isPETA = false;
 isPETAHP = false;
 isPETAAmmo = false;

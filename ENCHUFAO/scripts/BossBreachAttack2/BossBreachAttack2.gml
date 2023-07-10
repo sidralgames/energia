@@ -30,4 +30,6 @@ function BossBreachAttack2()
 		state = BOSSBREACHSTATE.IDLE;
 		alarm[4]=idleTime;
 	}
+	
+	CheckBossFading();
 }
