@@ -75,4 +75,10 @@ function CheckEnchufeUpgrade()
 		global.ammo = global.ammoMax;
 		global.shields = global.shieldsMax;
 	}
+	else if (inEnchufe.upgradeSpeed = true) && (upgraded = false)
+	{
+		inEnchufe.charging = true;
+		upgraded = true;
+		global._speed += 0.5;
+	}
 }

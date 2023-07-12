@@ -83,6 +83,7 @@ AddUpgradeFireRate();
 AddUpgradeSuperShot();
 AddUpgradeShields();
 AddUpgradeReReRe();
+AddUpgradeSpeedUp();
 
 
 for (var i = 0; i < global.numberOfUpgrades; i++)
