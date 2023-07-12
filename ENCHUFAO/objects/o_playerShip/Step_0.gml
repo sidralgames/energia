@@ -6,6 +6,16 @@ part_particles_create(global.naveP_sys, x, y, global.naveP , 5)
 PlayerState_Free();
 Move();
 
+if (o_charger.overcharged)
+{
+	fireRate = 30;
+}
+else
+{
+	fireRate = max(5,global.fireRate);
+}
+
+
 if (alarm[5] <= 0)
 {
 	if instance_exists(o_crosshair) 
@@ -60,6 +70,7 @@ if (global.energy = 0 && sounded = false)
 	sounded = true;
 	audio_play_sound(snd_noBattery, 50, false)
 }
+
 
 //-----------------NORMAL SHOOT-----------------//
 

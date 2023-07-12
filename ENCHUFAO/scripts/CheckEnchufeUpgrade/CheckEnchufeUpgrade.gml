@@ -57,7 +57,22 @@ function CheckEnchufeUpgrade()
 	{
 		inEnchufe.charging = true;
 		upgraded = true;
-		global.fireRate+=6;
-		o_playerShip.fireRate = max(5,o_playerShip.fireRate-global.fireRate)
+		global.fireRate-=4;
+	}
+	else if (inEnchufe.upgradeShield = true) && (upgraded = false)
+	{
+		inEnchufe.charging = true;
+		upgraded = true;
+		global.shieldsMax += 1;
+		global.shields = global.shieldsMax;
+	}
+	else if (inEnchufe.upgradeReReRe = true) && (upgraded = false)
+	{
+		inEnchufe.charging = true;
+		upgraded = true;
+		global.hp = global.hpMax;
+		global.energy = global.energyTotal;
+		global.ammo = global.ammoMax;
+		global.shields = global.shieldsMax;
 	}
 }

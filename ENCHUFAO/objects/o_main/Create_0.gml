@@ -17,7 +17,7 @@ global.DischargeTime = 1;
 global.superShot = 1;
 global.spritePart = s_nave_part;
 global.bulletPart_sprite = s_bullet_part;
-global.fireRate = 0;
+global.fireRate = 15;
 global.breachBanner = false;
 global.BossBreach_Banner = false;
 
@@ -69,6 +69,25 @@ global.chargingShield = false;
 global.chargingEnergy = false;
 global.chargingPETA = false;
 
+global.numberOfUpgrades = 0;
 
 global.upgradesList = ds_map_create();
+
 AddUpgradeAmmo();
+AddUpgradeEnergy();
+AddUpgradeHP();
+AddUpgradeFasterCharge();
+AddUpgradeSlowerDischarge();
+AddUpgradeLongerCable();
+AddUpgradeFireRate();
+AddUpgradeSuperShot();
+AddUpgradeShields();
+AddUpgradeReReRe();
+
+
+for (var i = 0; i < global.numberOfUpgrades; i++)
+{
+	upgrades = ds_map_find_value(global.upgradesList,i);
+	upgrades.isPicked = false;
+	
+}

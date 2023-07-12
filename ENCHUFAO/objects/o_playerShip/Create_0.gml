@@ -45,8 +45,8 @@ offRange = 2;
 spaceSpeed = 4;
 recoil_standard = 0.8;
 recoil_bomb = 1.8;
-fireRate = 5;
-fireRate = max(5,fireRate-global.fireRate);
+
+fireRate = max(5,global.fireRate);
 
 bombFireRate = 120;
 

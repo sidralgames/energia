@@ -18,6 +18,11 @@ if (cont = true)
 	}
 	else 
 	{
+		if instance_exists(o_upgradesManager)
+		{
+			instance_destroy(o_upgradesManager);
+		}
+		
 		room_goto(Sala_0)
 	}
 	}
