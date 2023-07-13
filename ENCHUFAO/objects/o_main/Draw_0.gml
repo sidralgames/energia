@@ -50,6 +50,10 @@ draw_text(__view_get( e__VW.XView, 0 )+630,__view_get( e__VW.YView, 0 )+40, "Sco
 }
 if instance_exists(o_playerShip) && (room != Sala_Inicio)
 {
+	//if (o_playerShip.key_BulletTime)
+	//{
+	//	draw_sprite_ext(s_bulletTimeIndicator,0,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+320,(global.slowMoTime/global.slowMoTimeMax),1,0,image_blend, image_alpha)
+	//}
 	for (var i=0; i< global.bombAmmo; i++)
 	{
 		draw_sprite_ext(s_bomb, 0, __view_get( e__VW.XView, 0 )+25+ (i*19),__view_get( e__VW.YView, 0 )+45, 1,1,0,image_blend, image_alpha)

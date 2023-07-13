@@ -24,6 +24,9 @@ global.fireRate = 15;
 global.breachBanner = false;
 global.BossBreach_Banner = false;
 
+global.slowMoTimeMax = 200;
+global.slowMoTime = global.slowMoTimeMax;
+
 global.totalEnemiesOnScreen = 0;
 
 

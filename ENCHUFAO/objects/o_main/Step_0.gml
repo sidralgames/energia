@@ -1,8 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
+
+
+
 if instance_exists(o_playerShip) && (room != Sala_Inicio)
 {
+
 	if (o_playerShip.plugged)
 	{
 		if (global.energy <= global.energyTotal)
