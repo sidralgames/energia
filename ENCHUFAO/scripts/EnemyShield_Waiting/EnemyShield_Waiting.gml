@@ -8,7 +8,7 @@ function EnemyShield_Waiting()
 		shield = instance_create_layer(x,y,"ShieldEnemy",o_shieldEnemy)	
 		existsShield = true;
 	
-		speed=random(1)+1;
+		speed=(random(1)+1) * global.relativeSpeed;
 		_speed = speed;
 	
 		if instance_exists(shield)
@@ -34,11 +34,11 @@ function EnemyShield_Waiting()
 	
 	if alarm[0] >= 200 
 	{
-		speed = lerp(speed, waitingSpeed, accelDistance);
+		speed = lerp(speed, waitingSpeed, accelDistance) * global.relativeSpeed;;
 	}
 	else
 	{
-		speed = lerp(speed, 0, breakDistance);
+		speed = lerp(speed, 0, breakDistance) * global.relativeSpeed;;
 	}
 	
 	if (point_distance(xStart, yStart,x, y) > maxDistance)

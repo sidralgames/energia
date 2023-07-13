@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+speed = _speed * global.relativeSpeed;
+
 if tile_meeting(x,y,"Tiles")
 {
 	instance_destroy()	
@@ -13,7 +15,7 @@ if instance_exists(o_playerShip)
 		{
 			part_particles_create(global.misil_sys, x, y, global.misil , 2)
 			var a = point_direction(x, y, o_playerShip.x, o_playerShip.y);
-			direction += sign(dsin(a - direction)) * precision;
+			direction += sign(dsin(a - direction)) * (precision * global.relativeSpeed);
 			image_angle = direction-90;
 		}
 	}

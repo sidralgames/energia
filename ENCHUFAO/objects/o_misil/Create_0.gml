@@ -7,7 +7,8 @@ muertoCount=100;
 randomize();
 direction= point_direction(x, y, o_playerShip.x, o_playerShip.y)+choose(random_range(-90,90));
 
-speed=random(1)+1;
+_speed=random(1)+1;
+speed = _speed;
 
 
 depth=-y;

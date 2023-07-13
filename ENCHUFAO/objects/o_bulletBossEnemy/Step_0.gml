@@ -6,8 +6,8 @@ event_inherited();
 
 part_particles_create(global.balaPTorretaBig_sys, x, y, global.balaPTorretaBig , 2)
 
-x+=_hpush;
-y+=_vpush;
+x+=_hpush * global.relativeSpeed;
+y+=_vpush * global.relativeSpeed;
 
 
 hp--;

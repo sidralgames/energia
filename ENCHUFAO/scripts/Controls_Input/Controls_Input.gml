@@ -18,6 +18,7 @@ function Controls_Input()
 	key_r3Dowm = gamepad_button_check(0, gp_stickr)
 	key_l3Dowm = gamepad_button_check(0, gp_stickl)
 	
+	key_BulletTime = gamepad_button_check(0, gp_shoulderlb);
 	key_left_p = keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A")) || gamepad_button_check_pressed(0, gp_padl);
 	key_right_p = keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D")) || gamepad_button_check_pressed(0, gp_padr);
 	

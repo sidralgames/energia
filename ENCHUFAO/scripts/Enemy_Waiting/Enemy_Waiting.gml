@@ -8,7 +8,7 @@ function Enemy_Waiting()
 		{
 			alert = instance_create(x,y,o_invisibleAlert);
 			
-			speed=random(1)+1;
+			speed=(random(1)+1) * global.relativeSpeed;
 			_speed = speed;
 			
 			if instance_exists(alert)
@@ -34,11 +34,11 @@ function Enemy_Waiting()
 	
 	if alarm[0] >= 200 
 	{
-		speed = lerp(speed, waitingSpeed, accelDistance);
+		speed = lerp(speed, waitingSpeed, accelDistance) * global.relativeSpeed;
 	}
 	else
 	{
-		speed = lerp(speed, 0, breakDistance);
+		speed = lerp(speed, 0, breakDistance) * global.relativeSpeed;
 	}
 
 	if (point_distance(xStart, yStart,x, y) > maxDistance)

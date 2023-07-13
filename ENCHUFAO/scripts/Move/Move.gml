@@ -15,8 +15,8 @@ if (tile_meeting(x,y+_vpush*1.25,"Tiles"))
 	alarm[3] = 5;
 }
 
-x+=_hpush;
-y+=_vpush;
+x+=_hpush * global.relativeSpeed;
+y+=_vpush * global.relativeSpeed;
 
 }
 	

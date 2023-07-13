@@ -9,6 +9,9 @@ enum ENEMYSTATE
 	SHOCKED
 }
 
+
+global.relativeSpeed = 1.0;
+
 global.PETAsActive = 0;
 global.BossBreach_awaken = false;
 

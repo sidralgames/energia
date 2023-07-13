@@ -16,7 +16,7 @@ if alarm[0] <= 0{
 current_recoil=7;
 var bala = instance_create (x+lengthdir_x(length,direction),y+lengthdir_y(length,direction),o_bulletTorreta);
 bala.direction = direction;
-bala.speed=2.5;
+
 alarm[0]=random_range(160,280);
 
 }

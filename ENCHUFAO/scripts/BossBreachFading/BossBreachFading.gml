@@ -6,7 +6,7 @@ function BossBreachFading()
 	
 	if (sprite_index = spriteStart)
 	{
-		image_speed = -(imageSpeed+0.2);
+		image_speed = -(imageSpeed+0.2) * global.relativeSpeed;
 		if (image_index <=1)
 		{
 			o_breachSpawner.canBreach = true;

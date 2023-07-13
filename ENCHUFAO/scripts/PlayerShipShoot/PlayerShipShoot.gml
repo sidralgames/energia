@@ -4,7 +4,7 @@ function PlayerShipShoot()
 {
 	gamepad_set_vibration(0,0.001*global.ammo,0.001*global.ammo);
 	alarm[4] = 2 ;
-	explo = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
+	explo = instance_create_layer(x + ((_hpush*3) * global.relativeSpeed) + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
 	"Bullets", o_explo3)
 	explo.image_xscale = 0.15;
 	explo.image_yscale = 0.15;
@@ -15,7 +15,7 @@ function PlayerShipShoot()
 		
 	if (global.ammo > 0) && (global.ammo <= 50)
 	{
-		var bullet = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
+		var bullet = instance_create_layer(x + ((_hpush*3) * global.relativeSpeed) + lengthdir_x(15, _angle), y +((_vpush*5) * global.relativeSpeed) + lengthdir_y(15, _angle),
 		"Bullets", o_bulletPlayer);
 		
 		global.ammo-=1;
@@ -32,9 +32,9 @@ function PlayerShipShoot()
 	}
 	else if (global.ammo > 50) && (global.ammo <= 100)
 	{
-		var bullet1 = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
+		var bullet1 = instance_create_layer(x +((_hpush*3) * global.relativeSpeed) + lengthdir_x(15, _angle), y +((_vpush*5) * global.relativeSpeed)+ lengthdir_y(15, _angle),
 		"Bullets", o_bulletPlayer);
-		var bullet2 = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
+		var bullet2 = instance_create_layer(x + ((_hpush*3) * global.relativeSpeed) + lengthdir_x(15, _angle), y +((_vpush*5) * global.relativeSpeed) + lengthdir_y(15, _angle),
 		"Bullets", o_bulletPlayer);
 		
 		global.ammo-=2;
@@ -62,11 +62,11 @@ function PlayerShipShoot()
 	}
 	else if (global.ammo > 100) && (global.ammo <= 150)
 	{
-		var bullet = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
+		var bullet = instance_create_layer(x +((_hpush*3) * global.relativeSpeed) + lengthdir_x(15, _angle), y +((_vpush*5) * global.relativeSpeed) + lengthdir_y(15, _angle),
 		"Bullets", o_bulletPlayer);
-		var bullet1 = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
+		var bullet1 = instance_create_layer(x + ((_hpush*3) * global.relativeSpeed) + lengthdir_x(15, _angle), y +((_vpush*5) * global.relativeSpeed) + lengthdir_y(15, _angle),
 		"Bullets", o_bulletPlayer);
-		var bullet2 = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
+		var bullet2 = instance_create_layer(x + ((_hpush*3) * global.relativeSpeed) + lengthdir_x(15, _angle), y +((_vpush*5) * global.relativeSpeed) + lengthdir_y(15, _angle),
 		"Bullets", o_bulletPlayer);
 		
 		global.ammo-=3;
@@ -98,13 +98,13 @@ function PlayerShipShoot()
 	}
 	else if (global.ammo > 150)
 	{
-		var bullet = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
+		var bullet = instance_create_layer(x + ((_hpush*3) * global.relativeSpeed) + lengthdir_x(15, _angle), y +((_vpush*5) * global.relativeSpeed) + lengthdir_y(15, _angle),
 		"Bullets", o_bulletPlayer);
-		var bullet1 = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
+		var bullet1 = instance_create_layer(x + ((_hpush*3) * global.relativeSpeed) + lengthdir_x(15, _angle), y +((_vpush*5) * global.relativeSpeed) + lengthdir_y(15, _angle),
 		"Bullets", o_bulletPlayer);
-		var bullet2 = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
+		var bullet2 = instance_create_layer(x + ((_hpush*3) * global.relativeSpeed) + lengthdir_x(15, _angle), y +((_vpush*5) * global.relativeSpeed) + lengthdir_y(15, _angle),
 		"Bullets", o_bulletPlayer);
-		var bullet3 = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
+		var bullet3 = instance_create_layer(x + ((_hpush*3) * global.relativeSpeed) + lengthdir_x(15, _angle), y +((_vpush*5) * global.relativeSpeed) + lengthdir_y(15, _angle),
 		"Bullets", o_bulletPlayer);
 		
 		global.ammo-=4;

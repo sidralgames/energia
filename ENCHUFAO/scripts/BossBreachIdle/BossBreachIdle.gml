@@ -16,7 +16,7 @@ function BossBreachIdle()
 			
 			if (sprite_index = spriteStart)
 			{
-				image_speed = -imageSpeed;
+				image_speed = -imageSpeed * global.relativeSpeed;
 	
 				if (image_index <=1)
 				{
@@ -31,6 +31,7 @@ function BossBreachIdle()
 	}
 	else
 	{
+		image_speed = imageSpeed * global.relativeSpeed;
 		if (alarm[4] <= 0)
 		{
 			alarm[5] = attackTime;

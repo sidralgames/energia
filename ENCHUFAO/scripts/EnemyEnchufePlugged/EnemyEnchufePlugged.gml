@@ -22,7 +22,6 @@ if (version2)
 			if instance_exists(inst)
 			{
 			    inst.direction = i * (360 / bullets ) + offset;
-			    inst.speed=1.5;
 				inst.direBullet = direBullet;
 			}
 		}

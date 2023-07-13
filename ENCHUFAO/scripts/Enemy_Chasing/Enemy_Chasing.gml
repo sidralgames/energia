@@ -3,11 +3,11 @@
 function Enemy_Chasing()
 {
 //--------BOUNCE WITH EACH OTHER---------//
-	if place_meeting(x,y,o_enemyP) && (!bounced)
+	if collision_circle(x,y,5,o_enemyP,false,true) && (!bounced)
 	{
 		bounced = true;
-		alarm[8] = 10;
-	    direction = direction+choose(random_range(50,70),random_range(-50,-70))
+		alarm[8] = 30;
+	    direction = direction+choose(random_range(30,50),random_range(-30,-50))
 		image_angle = direction;
 	} 
 	
@@ -22,11 +22,11 @@ function Enemy_Chasing()
 	if (enemyShield) && (enemyShield.existsShield) && (alarm[7] <= 0)
 	{
 		takeCover = true;
-		enemySpeed = global.coverSpeed;	
+		enemySpeed = global.coverSpeed * global.relativeSpeed;	
 	}
 	else
 	{
-		enemySpeed = enemySpeedInitial;
+		enemySpeed = enemySpeedInitial * global.relativeSpeed;
 	}
 
 	if (takeCover)
@@ -37,11 +37,11 @@ function Enemy_Chasing()
 			{
 				if (point_distance(x,y,o_playerShip.x, o_playerShip.y)) < (point_distance(enemyShield.x,enemyShield.y,o_playerShip.x, o_playerShip.y))
 				{
-					enemySpeed = global.coverSpeed-0.5;
+					enemySpeed = (global.coverSpeed-0.5) * global.relativeSpeed;
 				}
 				else
 				{
-					enemySpeed = global.coverSpeed;
+					enemySpeed = global.coverSpeed * global.relativeSpeed;
 				}
 			}
 		}
@@ -51,7 +51,7 @@ function Enemy_Chasing()
 		
 		if (leaveCover == 1)
 			{
-				enemySpeed = enemySpeedInitial;
+				enemySpeed = enemySpeedInitial * global.relativeSpeed;
 				alarm[7] = random_range(300,600) //leave cover time
 				takeCover = false;
 			}
@@ -76,15 +76,15 @@ function Enemy_Chasing()
 			{
 			path_end()
 			var a = point_direction(x, y, o_playerShip.x,  o_playerShip.y);
-			direction += sign(dsin(a - direction)) * precision;
+			direction += sign(dsin(a - direction)) * (precision * global.relativeSpeed);
 			image_angle = direction;
-			speed = enemySpeed;	
+			speed = enemySpeed * global.relativeSpeed;	
 			}
 		}
 		else
 		{
 			alarm[5] = 10;
-			_speed = enemySpeed
+			_speed = enemySpeed * global.relativeSpeed;
 			path_start(myPath,_speed ,path_action_stop, false)
 			image_angle = direction
 		}

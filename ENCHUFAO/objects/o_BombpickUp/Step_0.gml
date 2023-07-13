@@ -8,6 +8,14 @@ shift = amplitude * dsin(t);
 
 //apply the shift
 
-x = xx + lengthdir_x(shift, direction +dir1);
-y = yy + lengthdir_y(shift, direction + dir1);
 
+if (point_distance(x,y, o_playerShip.x, o_playerShip.y) < 30)
+{
+	direction = point_direction(x,y, o_playerShip.x, o_playerShip.y)
+	speed = 3;
+}
+else
+{
+	x = xx + lengthdir_x(shift, direction +dir1);
+	y = yy + lengthdir_y(shift, direction + dir1);	
+}

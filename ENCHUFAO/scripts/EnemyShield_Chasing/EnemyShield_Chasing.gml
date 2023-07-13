@@ -17,13 +17,13 @@ function EnemyShield_Chasing()
 			var a = point_direction(x, y, o_playerShip.x,  o_playerShip.y);
 			direction += sign(dsin(a - direction)) * precision;
 			image_angle = direction;
-			speed = enemySpeed;	
+			speed = enemySpeed * global.relativeSpeed;;	
 			}
 		}
 		else
 		{
 			alarm[5] = 5;
-			_speed = enemySpeed
+			_speed = enemySpeed * global.relativeSpeed;
 			path_start(myPath,_speed ,path_action_stop, false)
 			image_angle = direction
 		}

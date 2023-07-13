@@ -2,6 +2,8 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function BossBreachAttack1()
 {
+	image_speed = imageSpeed * global.relativeSpeed;
+	
 	if (alarm[5] > 0)
 	{
 		if instance_exists(o_playerShip)

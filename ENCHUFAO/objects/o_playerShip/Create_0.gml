@@ -9,6 +9,7 @@ fxDistance = 0;
 fx_blackHole = 0;
 inBlackHoleArea = false
 fx_color = 0;
+fx_colorBT = 0;
 layer_set_visible("EffectBreach", false);
 pluggedTimer = 0;
 

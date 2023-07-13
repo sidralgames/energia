@@ -12,8 +12,8 @@ function MoveZeroGrv()
 	    _vpush = -_vpush*bnc;
 	}
 	
-	x+=_hpush;
-	y+=_vpush;
+	x+=_hpush * global.relativeSpeed;
+	y+=_vpush * global.relativeSpeed;
 }
 	
 

@@ -2,6 +2,39 @@
 // You can write your code in this editor
 Controls_Input();
 
+colorBT_fx = layer_get_fx("EffectColorBulletTime");
+colorBT_fx_params = fx_get_parameters(colorBT_fx);
+
+if (key_BulletTime)
+{
+	global.relativeSpeed = lerp(global.relativeSpeed,0.3, 0.05);
+	
+		layer_set_visible("EffectColorBulletTime", true);
+		fx_colorBT = lerp(fx_colorBT,0.6,0.01); 
+		colorBT_fx_params.g_Intensity = fx_colorBT;	
+		fx_set_parameters(colorBT_fx, colorBT_fx_params);
+}
+else
+{
+	fx_colorBT = lerp(fx_colorBT,0,0.03); 
+	colorBT_fx_params.g_Intensity = fx_colorBT;
+	fx_set_parameters(colorBT_fx, colorBT_fx_params);
+
+	if (fx_colorBT <=0.1)
+	{
+		layer_set_visible("EffectColorBulletTime", false);
+	}
+		
+	if (global.relativeSpeed > 0.8)
+	{
+		global.relativeSpeed = 1.0;	
+	}
+	else
+	{
+		global.relativeSpeed = lerp(global.relativeSpeed,1.0, 0.05);
+	}
+}
+
 part_particles_create(global.naveP_sys, x, y, global.naveP , 5)
 PlayerState_Free();
 Move();

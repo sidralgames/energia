@@ -387,6 +387,7 @@
     {"id":{"name":"snd_plugged","path":"sounds/snd_plugged/snd_plugged.yy",},"order":0,},
     {"id":{"name":"o_enemyP","path":"objects/o_enemyP/o_enemyP.yy",},"order":2,},
     {"id":{"name":"o_enchufePETA","path":"objects/o_enchufePETA/o_enchufePETA.yy",},"order":22,},
+    {"id":{"name":"o_bulletTime_Controller","path":"objects/o_bulletTime_Controller/o_bulletTime_Controller.yy",},"order":35,},
     {"id":{"name":"AddUpgradeFireRate","path":"scripts/AddUpgradeFireRate/AddUpgradeFireRate.yy",},"order":23,},
     {"id":{"name":"light_acknowledge_shadow_caster","path":"scripts/light_acknowledge_shadow_caster/light_acknowledge_shadow_caster.yy",},"order":0,},
     {"id":{"name":"o_cableSelection","path":"objects/o_cableSelection/o_cableSelection.yy",},"order":8,},

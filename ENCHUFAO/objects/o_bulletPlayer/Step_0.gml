@@ -3,8 +3,8 @@
 event_inherited();
 part_particles_create(global.balaP_sys, x, y, global.balaP , 5)
 
-x+=_hpush;
-y+=_vpush;
+x+=_hpush * global.relativeSpeed;
+y+=_vpush * global.relativeSpeed;
 
 //if instance_exists(lightBullet)
 //{
