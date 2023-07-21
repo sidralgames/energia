@@ -12,7 +12,7 @@ function PlayerShipPETA()
 	
 	screenShake(2,5)
 	
-	audio_play_sound(snd_shoot1, 50, false)
+	audio_play_sound_on(global.audioEmitter,snd_shoot1, false, 50)
 		
 	
 		var bullet = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
@@ -25,8 +25,8 @@ function PlayerShipPETA()
 		bullet._vpush = lengthdir_y(3, _angle + off);
 		bullet._angle = dire+off;
 		bullet.direction = dire+off;
-		_hpush += -lengthdir_x(recoil_bomb, _angle+off);
-		_vpush += -lengthdir_y(recoil_bomb, _angle+off);
+		_hpush += -lengthdir_x(recoil_standard, _angle+off);
+		_vpush += -lengthdir_y(recoil_standard, _angle+off);
 		_angle +=off
 		alarm[6]=bombFireRate;
 	

@@ -5,54 +5,40 @@ Controls_Input();
 colorBT_fx = layer_get_fx("EffectColorBulletTime");
 colorBT_fx_params = fx_get_parameters(colorBT_fx);
 
-//ripple_fx = layer_get_fx("EffectRippleBulletTime");
-//ripple_fx_params = fx_get_parameters(ripple_fx);
-
-if (key_BulletTime)
+if (global.slowMoTime <= 1) && (canSlowMotion)
 {
-	if (global.slowMoTime >0)
-	{
-		global.slowMoTime -=1;
-	}
-	//if (!ripple)
-	//{
-	//	contRipple = 60;
-	//	ripple = true;
-	//}
+	canSlowMotion = false;
+	alarm[7] = 120;
 	
-	//contRipple-=1;
-	
-	//if (contRipple > 0) && (ripple == true)
-	//{
-	//	layer_set_visible("EffectRippleBulletTime", true);
-	//	fx_colorBT = lerp(fx_colorBT,0.6,0.01); 
-	//	ripple_fx_params.g_RipplesPosition = [o_playerShip.x, o_playerShip.y];	
-	//	ripple_fx_params.g_RipplesWidth   = 300;
-	//	fx_set_parameters(ripple_fx, ripple_fx_params);
-	//}
-	//else
-	//{
-	//	layer_set_visible("EffectRippleBulletTime", false);
-	//}
-	global.relativeSpeed = lerp(global.relativeSpeed,0.3, 0.05);
-	pitch = min(1,global.relativeSpeed+0.6);
-	audio_sound_pitch(snd_song, pitch)
+}
 
+if (alarm[7] <= 0) && (!key_BulletTime) && (global.slowMoTime > 100)
+{
+	canSlowMotion = true;
+}
+
+if (key_BulletTime) && (canSlowMotion = true)
+{
+	if (global.slowMoTime >=0)
+	{
+		global.slowMoTime -=1.1;
+	}
+
+	global.relativeSpeed = lerp(global.relativeSpeed,0.3, 0.05);
+	pitch = min(1,global.relativeSpeed+0.5);
+	//audio_sound_pitch(snd_song, pitch)
+	audio_emitter_pitch(global.audioEmitter, pitch);
 	layer_set_visible("EffectColorBulletTime", true);
 	fx_colorBT = lerp(fx_colorBT,0.6,0.01); 
 	colorBT_fx_params.g_Intensity = fx_colorBT;	
 	fx_set_parameters(colorBT_fx, colorBT_fx_params);
 	
-	
-	
-	
 }
-else
+else 
 {
-	ripple = false;
-	if (global.slowMoTime <=200)
+	if (global.slowMoTime <= global.slowMoTimeMax)
 	{
-		global.slowMoTime +=0.5;
+		global.slowMoTime +=0.4;
 	}
 	
 	fx_colorBT = lerp(fx_colorBT,0,0.03); 
@@ -67,7 +53,8 @@ else
 	if (global.relativeSpeed > 0.8)
 	{
 		pitch = 1;
-		audio_sound_pitch(snd_song,pitch)
+		audio_emitter_pitch(global.audioEmitter, pitch);
+		//audio_sound_pitch(snd_song,pitch)
 		global.relativeSpeed = 1.0;	
 	}
 	else
@@ -130,7 +117,7 @@ if (global.energy <=80 && soundEnergy = false)
 {
 	sounded = false
 	soundEnergy = true
-	audio_play_sound(snd_battery, 90, true)
+	audio_play_sound_on(global.audioEmitter, snd_battery, true, 90)
 }
 
 if (global.energy > 80) || (plugged == true)
@@ -140,10 +127,11 @@ if (global.energy > 80) || (plugged == true)
 	audio_stop_sound(snd_battery)
 }
 
-if (global.energy = 0 && sounded = false)
+if (global.energy <= 0 && sounded = false)
 {
+	audio_stop_sound(snd_battery)
 	sounded = true;
-	audio_play_sound(snd_noBattery, 50, false)
+	audio_play_sound_on(global.audioEmitter, snd_noBattery, false, 50)
 }
 
 

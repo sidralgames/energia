@@ -13,9 +13,10 @@ fx_colorBT = 0;
 ripple_fx = 0;
 contRipple = 0;
 ripple = false;
+canSlowMotion = true;
 layer_set_visible("EffectBreach", false);
 pluggedTimer = 0;
-pitch = 1;
+global.pitch = 1;
 global.energy = global.energyTotal;
 upgraded = false;
 if (room != Sala_Inicio)

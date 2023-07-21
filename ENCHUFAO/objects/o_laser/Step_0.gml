@@ -34,7 +34,7 @@ if (canShot)
 			{
 				gamepad_set_vibration(0,0.3,0.3);
 				o_playerShip.alarm[4] = 10;
-				audio_play_sound(snd_hit, 50, false)
+				audio_play_sound_on(global.audioEmitter, snd_hit, false, 50)
 				o_playerShip.alarm[1] = 30
 				o_playerShip.tocado = true;
 				global.hp -=1;

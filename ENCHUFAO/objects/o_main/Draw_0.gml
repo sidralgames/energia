@@ -50,10 +50,16 @@ draw_text(__view_get( e__VW.XView, 0 )+630,__view_get( e__VW.YView, 0 )+40, "Sco
 }
 if instance_exists(o_playerShip) && (room != Sala_Inicio)
 {
-	//if (o_playerShip.key_BulletTime)
-	//{
-	//	draw_sprite_ext(s_bulletTimeIndicator,0,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+320,(global.slowMoTime/global.slowMoTimeMax),1,0,image_blend, image_alpha)
-	//}
+	if (o_playerShip.key_BulletTime) && (o_playerShip.canSlowMotion)
+	{
+		draw_sprite_ext(s_bulletTimeIndicator,1,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+345,1,1,0,image_blend, image_alpha)
+		draw_sprite_ext(s_bulletTimeIndicator,0,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+345,(global.slowMoTime/global.slowMoTimeMax),1,0,image_blend, image_alpha)
+	}
+	else if (!o_playerShip.canSlowMotion) || ((!o_playerShip.key_BulletTime) && (global.slowMoTime < global.slowMoTimeMax))
+	{
+		draw_sprite_ext(s_bulletTimeIndicator,1,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+345,1,1,0,image_blend, 0.6)
+		draw_sprite_ext(s_bulletTimeIndicator,0,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+345,(global.slowMoTime/global.slowMoTimeMax),1,0,image_blend, 0.6)
+	}
 	for (var i=0; i< global.bombAmmo; i++)
 	{
 		draw_sprite_ext(s_bomb, 0, __view_get( e__VW.XView, 0 )+25+ (i*19),__view_get( e__VW.YView, 0 )+45, 1,1,0,image_blend, image_alpha)
@@ -89,12 +95,12 @@ if (global.energy <=80)
 			draw_set_halign(fa_center)
 			draw_set_font(Font2)
 			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+301, "L3 + R3" )
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+326, "TRHOW P.E.T.A")
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+281, "L3 + R3" )
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+306, "TRHOW P.E.T.A")
 
 			draw_set_color(azul)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+300, "L3 + R3" )
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+325, "TRHOW P.E.T.A")
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+280, "L3 + R3" )
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+305, "TRHOW P.E.T.A")
 		}
 	
 		if (alarm[0] <= 0)

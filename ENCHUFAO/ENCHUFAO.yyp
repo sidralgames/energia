@@ -197,6 +197,7 @@
     {"id":{"name":"o_PETApickUp","path":"objects/o_PETApickUp/o_PETApickUp.yy",},"order":23,},
     {"id":{"name":"s_enemyDisp","path":"sprites/s_enemyDisp/s_enemyDisp.yy",},"order":6,},
     {"id":{"name":"light_create_spot","path":"scripts/light_create_spot/light_create_spot.yy",},"order":10,},
+    {"id":{"name":"scr_sound","path":"scripts/scr_sound/scr_sound.yy",},"order":13,},
     {"id":{"name":"SpawnEnemyFastBreach","path":"scripts/SpawnEnemyFastBreach/SpawnEnemyFastBreach.yy",},"order":11,},
     {"id":{"name":"s_indivStat","path":"sprites/s_indivStat/s_indivStat.yy",},"order":51,},
     {"id":{"name":"o_enchufeUpgrades","path":"objects/o_enchufeUpgrades/o_enchufeUpgrades.yy",},"order":10,},

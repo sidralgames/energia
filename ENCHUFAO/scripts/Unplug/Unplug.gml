@@ -12,7 +12,7 @@ function Unplug()
 	thisEnchufe.charging = false;
 	gamepad_set_vibration(0,0.15,0.15);
 	alarm[4] = 5;
-	audio_play_sound(choose(snd_unPlugged, snd_unPlugged_2, snd_unPlugged_3),50,false)
+	audio_play_sound_on(global.audioEmitter,choose(snd_unPlugged, snd_unPlugged_2, snd_unPlugged_3),false,50)
 	plugged = false;
 	o_cable.plugged = false;
 	global.unPlugging = true;

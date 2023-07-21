@@ -9,6 +9,7 @@ enum ENEMYSTATE
 	SHOCKED
 }
 
+global.audioEmitter = audio_emitter_create();
 
 global.relativeSpeed = 1.0;
 
@@ -24,7 +25,7 @@ global.fireRate = 15;
 global.breachBanner = false;
 global.BossBreach_Banner = false;
 
-global.slowMoTimeMax = 200;
+global.slowMoTimeMax = 300;
 global.slowMoTime = global.slowMoTimeMax;
 
 global.totalEnemiesOnScreen = 0;

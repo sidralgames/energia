@@ -22,11 +22,11 @@ function Enemy_Chasing()
 	if (enemyShield) && (enemyShield.existsShield) && (alarm[7] <= 0)
 	{
 		takeCover = true;
-		enemySpeed = global.coverSpeed * global.relativeSpeed;	
+		enemySpeed = global.coverSpeed * min(1, global.relativeSpeed+0.2);	
 	}
 	else
 	{
-		enemySpeed = enemySpeedInitial * global.relativeSpeed;
+		enemySpeed = enemySpeedInitial * min(1, global.relativeSpeed+0.2);
 	}
 
 	if (takeCover)
@@ -37,11 +37,11 @@ function Enemy_Chasing()
 			{
 				if (point_distance(x,y,o_playerShip.x, o_playerShip.y)) < (point_distance(enemyShield.x,enemyShield.y,o_playerShip.x, o_playerShip.y))
 				{
-					enemySpeed = (global.coverSpeed-0.5) * global.relativeSpeed;
+					enemySpeed = (global.coverSpeed-0.5) * min(1, global.relativeSpeed+0.2);
 				}
 				else
 				{
-					enemySpeed = global.coverSpeed * global.relativeSpeed;
+					enemySpeed = global.coverSpeed * min(1, global.relativeSpeed+0.2);
 				}
 			}
 		}
@@ -51,7 +51,7 @@ function Enemy_Chasing()
 		
 		if (leaveCover == 1)
 			{
-				enemySpeed = enemySpeedInitial * global.relativeSpeed;
+				enemySpeed = enemySpeedInitial * min(1, global.relativeSpeed+0.2);
 				alarm[7] = random_range(300,600) //leave cover time
 				takeCover = false;
 			}
@@ -74,17 +74,31 @@ function Enemy_Chasing()
 		{
 			if (alarm[5] <= 0)
 			{
-			path_end()
-			var a = point_direction(x, y, o_playerShip.x,  o_playerShip.y);
-			direction += sign(dsin(a - direction)) * (precision * global.relativeSpeed);
-			image_angle = direction;
-			speed = enemySpeed * global.relativeSpeed;	
+				path_end()
+				var a = point_direction(x, y, o_playerShip.x,  o_playerShip.y);
+				direction += sign(dsin(a - direction)) * (precision * global.relativeSpeed);
+				image_angle = direction;
+				if (alarm[10] <= 0)
+				{
+					speed = enemySpeed * min(1, global.relativeSpeed+0.2);
+				}
+				else
+				{
+					speed = enemySpeed
+				}
 			}
 		}
 		else
 		{
 			alarm[5] = 10;
-			_speed = enemySpeed * global.relativeSpeed;
+			if (alarm[10] <= 0)
+			{
+				_speed = enemySpeed * min(1, global.relativeSpeed+0.2);
+			}
+			else
+			{
+				_speed = enemySpeed;
+			}
 			path_start(myPath,_speed ,path_action_stop, false)
 			image_angle = direction
 		}

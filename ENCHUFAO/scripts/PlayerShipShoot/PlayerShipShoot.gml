@@ -11,7 +11,7 @@ function PlayerShipShoot()
 	explo.image_speed = 3;
 	
 	screenShake(1,5)
-	audio_play_sound(snd_shoot1, 50, false)
+	audio_play_sound_on(global.audioEmitter,snd_shoot1, false, 50)
 		
 	if (global.ammo > 0) && (global.ammo <= 50)
 	{
