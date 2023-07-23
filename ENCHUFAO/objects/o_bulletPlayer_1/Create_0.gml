@@ -10,5 +10,5 @@ bounces = 0;
 hsp_f = 0;
 vsp_f = 0;
 
-audio_play_sound(snd_shoot1,50,false)
+audio_play_sound_on(global.audioEmitter,snd_shoot1,false, 50)
 lightBullet= instance_create_layer(x,y,"Light",o_TestLight_Bullet);
