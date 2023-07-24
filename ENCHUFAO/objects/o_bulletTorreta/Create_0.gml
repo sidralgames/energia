@@ -3,7 +3,7 @@
 
 
 
-
+createdFromEnemy = false;
 hp = 200;
 
 // Inherit the parent event

@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_enemyTurret",
   "spriteId": {
-    "name": "s_enemyTurret_2",
-    "path": "sprites/s_enemyTurret_2/s_enemyTurret_2.yy",
+    "name": "s_enemyTurret",
+    "path": "sprites/s_enemyTurret/s_enemyTurret.yy",
   },
   "solid": false,
   "visible": true,
@@ -44,6 +44,7 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":8,"eventType":2,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":10,"eventType":2,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":11,"eventType":2,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],

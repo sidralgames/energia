@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+slowMoPickUps = choose(6,7);
+
 alarm[10] = 30;
 hsp_final = 0
 hsp_f = 0

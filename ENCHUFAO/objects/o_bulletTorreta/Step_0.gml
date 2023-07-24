@@ -1,7 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
 // Inherit the parent event
-speed = 2.5 * global.relativeSpeed;
+if (createdFromEnemy = false)
+{
+	speed = 2.5 * min(1,global.relativeSpeed+0.2);
+}
+else
+{
+	speed = 1.5 * min(1,global.relativeSpeed+0.2);
+}
 
 if tile_meeting(x,y,"Tiles")
 {

@@ -38,7 +38,9 @@ if instance_exists(o_playerShip)
 	{
 		if (contTurret <= 0)
 		{
-			instance_create_layer(x,y,"Enemies", o_turretFromEnemy)
+			turret = instance_create_layer(x,y,"Enemies", o_turretFromEnemy)
+			turret._hpush = lengthdir_x(random_range(2,3), direction+180)
+			turret._vpush = lengthdir_y(random_range(2,3), direction+180)
 			contTurret = contTurretInitial;
 			
 		}

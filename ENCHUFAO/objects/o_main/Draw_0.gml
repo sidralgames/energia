@@ -55,7 +55,7 @@ if instance_exists(o_playerShip) && (room != Sala_Inicio)
 		draw_sprite_ext(s_bulletTimeIndicator,1,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+345,1,1,0,image_blend, image_alpha)
 		draw_sprite_ext(s_bulletTimeIndicator,0,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+345,(global.slowMoTime/global.slowMoTimeMax),1,0,image_blend, image_alpha)
 	}
-	else if (!o_playerShip.canSlowMotion) || ((!o_playerShip.key_BulletTime) && (global.slowMoTime < global.slowMoTimeMax))
+	if (alarm[1] >0)
 	{
 		draw_sprite_ext(s_bulletTimeIndicator,1,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+345,1,1,0,image_blend, 0.6)
 		draw_sprite_ext(s_bulletTimeIndicator,0,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+345,(global.slowMoTime/global.slowMoTimeMax),1,0,image_blend, 0.6)

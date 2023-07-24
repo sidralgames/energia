@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited();
+slowMoPickUps = 8;
 alarm[10] = 30;
 //lightEnemy= instance_create_layer(x,y,"LightEnemy",o_Light_Enemy);
 isCounted=false;
@@ -8,10 +9,10 @@ bnc = 0.5;
 _hp = 8;
 cont = 500;
 image_speed = 0.5;
-contTurretInitial = 200;
+contTurretInitial = 300;
 contTurret = contTurretInitial;
 
-enemySpeedInitial = 1
+enemySpeedInitial = 1.2
 enemySpeed = enemySpeedInitial;
 
 precision= 2;

@@ -4,13 +4,11 @@ canCreate = false;
 
 if (global.level =1)
 {
-	enemy = choose(o_enemy, o_enemyFast, o_enemy, o_enemyFast,
-	o_enemy, o_enemyFast, o_enemy, o_enemyFast, o_enemyTurret)
+	enemy = choose(o_enemy, o_enemyFast)
 }
 else if (global.level =3)
 {
-	enemy = choose(o_enemy, o_enemyFast, o_enemyDisp,
-	o_enemy, o_enemyFast, o_enemyDisp, o_enemyTurret)
+	enemy = choose(o_enemy, o_enemyFast, o_enemyDisp, o_enemy_Waiting_Shield)
 }
 else if (global.level =5)
 {

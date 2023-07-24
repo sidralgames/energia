@@ -12,13 +12,19 @@ if (global.slowMoTime <= 1) && (canSlowMotion)
 	
 }
 
-if (alarm[7] <= 0) && (!key_BulletTime) && (global.slowMoTime > 100)
+if global.slowMoTime <105 && !key_BulletTime
+{
+	canSlowMotion = false;
+}
+if (alarm[7] <= 0) && (!key_BulletTime) && (global.slowMoTime > 105)
 {
 	canSlowMotion = true;
 }
 
 if (key_BulletTime) && (canSlowMotion = true)
 {
+	o_main.alarm[1] = 90;
+	
 	if (global.slowMoTime >=0)
 	{
 		global.slowMoTime -=1.1;
@@ -36,10 +42,10 @@ if (key_BulletTime) && (canSlowMotion = true)
 }
 else 
 {
-	if (global.slowMoTime <= global.slowMoTimeMax)
-	{
-		global.slowMoTime +=0.4;
-	}
+	//if (global.slowMoTime <= global.slowMoTimeMax)
+	//{
+	//	global.slowMoTime +=0.4;
+	//}
 	
 	fx_colorBT = lerp(fx_colorBT,0,0.03); 
 	colorBT_fx_params.g_Intensity = fx_colorBT;

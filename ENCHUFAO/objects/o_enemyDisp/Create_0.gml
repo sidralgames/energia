@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited();
+
+slowMoPickUps = choose(4,5)
+
 alarm[10] = 30;
 isCounted = false;
 bnc = 0.5;
