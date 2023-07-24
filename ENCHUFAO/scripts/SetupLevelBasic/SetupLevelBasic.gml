@@ -263,6 +263,7 @@ function SetupLevelBasic()
 				var oddsEA = 300;
 				var oddsESH = 300;
 				var oddsEF = 300;
+				var oddsStrandedShip = 300;
 				
 				var oddsPETA = 300;
 				var oddsBomb = 300;
@@ -270,6 +271,13 @@ function SetupLevelBasic()
 			    var exM = xx * CELL_WIDTH+CELL_WIDTH/2;
 			    var eyM = yy * CELL_HEIGHT+CELL_HEIGHT/2;
 			
+				if (irandom(oddsStrandedShip) == oddsStrandedShip) && (StrandedShipsInLevel < StrandedShipsInLevelMax) 
+				{
+					instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Player",o_strandedShip); 
+					StrandedShipsInLevel +=1;
+					strandedShipOK = true;
+				}
+				
 				if (irandom(oddsPETA) == oddsPETA) && (PetasInLevel < PetasInLevelMax) && global.level > 2
 				{
 					instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_PETApickUp); 
@@ -344,7 +352,8 @@ function SetupLevelBasic()
 
 
 
-	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo) || (!enchufeShield) || (!enchufeFinal) 
+	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo) || 
+	(!enchufeShield) || (!enchufeFinal) || (!strandedShipOK)
 	{
 		room_restart();
 	}

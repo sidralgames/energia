@@ -5,7 +5,7 @@ _vpush = lerp(_vpush, 0, 0.05);
 
 _angle += max(0.5*sign(_hpush), 5*(abs(_hpush)),0.5*sign(_vpush), 5*(abs(_vpush)));
 
-MoveZeroGrv();
+MoveZeroGrv_Bomb();
 
 
 if (alarm[0] <=0) && (abs(_hpush) <= 0.05 && abs(_vpush) <= 0.05)

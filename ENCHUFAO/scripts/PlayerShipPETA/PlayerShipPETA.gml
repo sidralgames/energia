@@ -27,8 +27,8 @@ function PlayerShipPETA()
 			peta._vpush = lengthdir_y(3, _angle + off);
 			peta._angle = dire+off;
 			peta.direction = dire+off;
-			_hpush += -lengthdir_x(recoil_standard, _angle+off);
-			_vpush += -lengthdir_y(recoil_standard, _angle+off);
+			//_hpush += -lengthdir_x(recoil_standard, _angle+off);
+			//_vpush += -lengthdir_y(recoil_standard, _angle+off);
 			_angle +=off
 			alarm[6]=bombFireRate;
 		}

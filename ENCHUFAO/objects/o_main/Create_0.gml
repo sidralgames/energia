@@ -26,7 +26,7 @@ global.breachBanner = false;
 global.BossBreach_Banner = false;
 
 global.slowMoTimeMax = 300;
-global.slowMoTime = 0;
+global.slowMoTime = 300;
 
 global.totalEnemiesOnScreen = 0;
 
