@@ -201,6 +201,20 @@ if (inEnchufe)
 	}
 }
 
+connectedToShip = collision_circle(x,y,20,o_chargerStrandedShipFather,false,true);
+
+if (connectedToShip)
+{
+	if (key_x)
+	{
+		if (pluggedShip = false) && (o_charger.overcharged = false)
+		{
+			PlugToShip();
+		}
+	}
+}
+
+
 ////------DEACTIVATE NO VISIBLE WALLS & MORE------////
 //var _vx = camera_get_view_x(view_camera[0]);
 //var _vy = camera_get_view_y(view_camera[0]);

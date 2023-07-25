@@ -25,6 +25,8 @@ global.fireRate = 15;
 global.breachBanner = false;
 global.BossBreach_Banner = false;
 
+
+
 global.slowMoTimeMax = 300;
 global.slowMoTime = 300;
 
@@ -57,6 +59,9 @@ yellow = make_color_rgb(254,174,52)
 global.cableColor = white;
 
 global.flashSuperShot = false;
+
+global.pluggingShip = false;
+global.unPluggingShip = false;
 
 global.plugging = false;
 global.unPlugging = false;

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_chargerStrandedShip",
+  "name": "o_chargerStrandedShipFake",
   "spriteId": {
     "name": "s_charger",
     "path": "sprites/s_charger/s_charger.yy",

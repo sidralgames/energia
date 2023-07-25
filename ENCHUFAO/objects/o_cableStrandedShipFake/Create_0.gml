@@ -7,21 +7,20 @@ verletSystem1 = new verletSystem(fric, 0.0);
 off = 0;
 cableColor = c_white;
 // Create verlet groups
-_segments = 5 * global.cableStat
+_segments = 5 * global.strandedShipCableStat;
 // Create a new rope
 rope1 = verletGroupCreateRope(verletSystem1, x, y, cableColor, 2, 3, _segments, 2, 100);
 //rope1 = verletGroupCreateRopeTextured(verletSystem1, x, y, s_tentacle, _segments, 1, 10);
 
  //Attach its first vertex to an object
-inst = instance_nearest(x,y,o_playerShip)
+inst = instance_nearest(x,y, o_chargerStrandedShip);
 rope1.vertexAttachTo(first, inst);
 
 
 plugged = false;
-pluggedShip = false;
 
 		//// Attach an object to its last vertex
-instTope = instance_create_layer(x,y,"Player", o_charger);
+instTope = instance_nearest(x,y,o_strandedShip)
 instTope.depth = depth-1;
 rope1.vertexAttachObject(last, instTope, vertexAttachmentType.both);
 
