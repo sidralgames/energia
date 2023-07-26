@@ -8,7 +8,7 @@ function Plug()
 	audio_play_sound_on(global.audioEmitter,choose(snd_plugged, snd_plugged_2, snd_plugged_3),false, 50);
 	
 	plugged = true;
-	enchufe = instance_nearest(x,y,o_enchufe_Father)
+	enchufe = inEnchufe;
 	global.plugging = true;
 	enchufe.enchufeActive = true;
 	global.xToPlug = enchufe.x;

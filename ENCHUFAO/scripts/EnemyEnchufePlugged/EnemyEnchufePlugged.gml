@@ -6,11 +6,6 @@ function EnemyEnchufePlugged()
 	x = enchufe.x;
 	y = enchufe.y;
 	
-	if _hp <= 0
-	{
-		state = ENEMYSTATE.FREE
-	}
-
 if (version2)
 {
 	if (alarm[4] <= 0)

@@ -22,9 +22,12 @@ function PluggedToEnchufe()
 		o_charger.overcharged = true;
 		o_charger.alarm[0] = 300;
 	}
-		
-	global.xToPlug = enchufe.x;
-	global.yToPlug = enchufe.y;
+	
+	if instance_exists(enchufe)
+	{
+		global.xToPlug = enchufe.x;
+		global.yToPlug = enchufe.y;
+	}
 		
 	part_particles_create(global.enchufe_sys, global.xToPlug+random_range(-18,18), global.yToPlug+random_range(-18,18), global.enchufePart , 10)
 	

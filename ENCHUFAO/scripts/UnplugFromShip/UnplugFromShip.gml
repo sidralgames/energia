@@ -10,6 +10,9 @@ function UnplugFromShip()
 	plugged = false;
 	o_cable.plugged = false;
 	instance_destroy(o_cableStrandedShipFake);
+	global.newChargerX = ship.x;
+	global.newChargerY = ship.y;
+	
 	instance_destroy(ship);
 	o_cable.pluggedShip = false;
 	global.unPluggingShip = true;

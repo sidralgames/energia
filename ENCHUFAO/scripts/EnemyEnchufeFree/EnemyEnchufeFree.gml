@@ -34,23 +34,7 @@ function EnemyEnchufeFree()
 	//	}
 	//}
 	
-	if (_hp <= 0)
-	{
-		if (state = ENEMYSTATE.FREE)
-		{
-			instance_destroy(cable)
-		}
-		screenShake(1,10)
-		if instance_exists(cross)
-		{
-			instance_destroy(cross)
-		}
-		global.XPpoints +=30;
-		explo = instance_create(x,y,o_explo2)
-		explo.image_xscale = 0.5;
-		explo.image_yscale = 0.5;
-		instance_destroy();
-	}
+	
 	
 	_angle += _hpush*5;
 	

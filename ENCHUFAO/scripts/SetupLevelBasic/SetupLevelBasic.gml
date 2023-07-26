@@ -2,7 +2,9 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SetupLevelBasic()
 {
-
+	global.newChargerX = 0;
+	global.newChargerY = 0;
+	
 	enchufe0 = false;
 	enchufeHP = false;
 	enchufeShield = false;
@@ -271,12 +273,12 @@ function SetupLevelBasic()
 			    var exM = xx * CELL_WIDTH+CELL_WIDTH/2;
 			    var eyM = yy * CELL_HEIGHT+CELL_HEIGHT/2;
 			
-				if (irandom(oddsStrandedShip) == oddsStrandedShip) && (StrandedShipsInLevel < StrandedShipsInLevelMax) 
-				{
-					instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Player",o_strandedShip); 
-					StrandedShipsInLevel +=1;
-					strandedShipOK = true;
-				}
+				//if (irandom(oddsStrandedShip) == oddsStrandedShip) && (StrandedShipsInLevel < StrandedShipsInLevelMax) 
+				//{
+				//	instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Player",o_strandedShip); 
+				//	StrandedShipsInLevel +=1;
+				//	strandedShipOK = true;
+				//}
 				
 				if (irandom(oddsPETA) == oddsPETA) && (PetasInLevel < PetasInLevelMax) && global.level > 2
 				{
@@ -353,7 +355,7 @@ function SetupLevelBasic()
 
 
 	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo) || 
-	(!enchufeShield) || (!enchufeFinal) || (!strandedShipOK)
+	(!enchufeShield) || (!enchufeFinal)// || (!strandedShipOK)
 	{
 		room_restart();
 	}

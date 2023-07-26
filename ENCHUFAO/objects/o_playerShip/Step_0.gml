@@ -186,7 +186,7 @@ if (inEnchufe)
 	{
 		if (key_x)
 		{
-			if (plugged = false) && (o_charger.overcharged = false)
+			if (plugged = false) && (o_charger.overcharged = false) && (inEnchufe.dying == false)
 			{
 				Plug();
 		

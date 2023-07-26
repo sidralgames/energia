@@ -20,9 +20,21 @@ rope1.vertexAttachTo(first, inst);
 plugged = false;
 
 		//// Attach an object to its last vertex
-instTope = instance_create_layer(x,y,"Player", o_chargerStrandedShip);
-instTope.depth = depth-1;
-rope1.vertexAttachObject(last, instTope, vertexAttachmentType.both);
+
+if (global.newChargerX !=0 && global.newChargerY != 0)
+{
+	creandoCharger = true
+
+	
+}
+else
+{
+	creandoCharger = false
+	instTope = instance_create_layer(x,y,"Player", o_chargerStrandedShip);
+	instTope.depth = depth-1;
+	rope1.vertexAttachObject(last, instTope, vertexAttachmentType.both);
+}
+
 
 //instTope = instance_create(x, y, o_coco);
 //rope1.vertexAttachObject(last, instTope, vertexAttachmentType.positionOnly);

@@ -6,7 +6,8 @@ function SpawnEnemyFastBreach()
 	{
 		for (var i=0; i<1; i++)
 		{
-			peta =  choose(o_enchufePETA,o_enchufePETAAll,o_enchufePETAShield,o_enchufePETAAmmo,o_enchufePETAHP);
+			peta =  choose(o_enchufePETA,o_enchufePETAAll,o_enchufePETAShield,
+			o_enchufePETAAmmo,o_enchufePETAAmmo,o_enchufePETAAmmo,o_enchufePETAHP);
 			if (petaCreated = false)
 			{
 				enemy = choose(o_enemyFast,o_enemyFast,o_enemyFast,o_enemyFast,o_enemyFast,o_enemyFast,o_enemyFast,o_enemyFast,o_enemyFast, peta)
