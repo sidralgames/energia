@@ -11,9 +11,13 @@ function PlugToShip()
 	pluggedShip = true;
 	instance_destroy(o_cableStrandedShip);
 	instance_create_layer(x,y, "Enemies", o_cableStrandedShipFake);
+	
 	ship = instance_nearest(x,y,o_chargerStrandedShip);
+	ship._hpush = o_strandedShip._hpush;
+	ship._vpush = o_strandedShip._vpush;
 	global.pluggingShip = true;
-
+	o_strandedShip.connected = true;
+	o_chargerStrandedShip.connected = true;
 	global.xToPlug = ship.x;
 	global.yToPlug = ship.y;
 }

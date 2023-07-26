@@ -207,7 +207,7 @@ if (connectedToShip)
 {
 	if (key_x)
 	{
-		if (pluggedShip = false) && (o_charger.overcharged = false)
+		if (pluggedShip = false) && (o_charger.overcharged = false) && alarm[4] <=0
 		{
 			PlugToShip();
 		}

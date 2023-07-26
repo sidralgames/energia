@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+connected = false;
+
 sprite = choose(splayer, splayer_Blue, splayer_Dark, splayer_Red, splayer_Purple)
 
 while (sprite = global.spriteShip)

@@ -14,5 +14,6 @@ function UnplugFromShip()
 	o_cable.pluggedShip = false;
 	global.unPluggingShip = true;
 	global.unPlugging = true;
+	o_strandedShip.connected = false;
 	instance_create_layer(o_strandedShip.x, o_strandedShip.y, "Enemies", o_cableStrandedShip);
 }

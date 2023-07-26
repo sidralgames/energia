@@ -31,8 +31,8 @@ function PluggedToShip()
 	else
 	{
 		dir = point_direction(x,y,global.xToPlug,global.yToPlug)
-		_hpush = lengthdir_x(2,dir)
-		_vpush = lengthdir_y(2,dir)
+		_hpush = lengthdir_x(1,dir)
+		_vpush = lengthdir_y(1,dir)
 		alarm[5] = 20;
 		ship._hpush -= lengthdir_x(0.5*o_strandedShip.weight,dir)
 		ship._vpush -= lengthdir_y(0.5*o_strandedShip.weight,dir)

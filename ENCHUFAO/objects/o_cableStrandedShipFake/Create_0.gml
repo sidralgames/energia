@@ -22,7 +22,7 @@ plugged = false;
 		//// Attach an object to its last vertex
 instTope = instance_nearest(x,y,o_strandedShip)
 instTope.depth = depth-1;
-rope1.vertexAttachObject(last, instTope, vertexAttachmentType.both);
+rope1.vertexAttachTo(last, instTope);
 
 //instTope = instance_create(x, y, o_coco);
 //rope1.vertexAttachObject(last, instTope, vertexAttachmentType.positionOnly);
