@@ -10,9 +10,9 @@ function UnplugFromShip()
 	plugged = false;
 	o_cable.plugged = false;
 	instance_destroy(o_cableStrandedShipFake);
-	instance_destroy(o_chargerStrandedShip);
-	instance_create_layer(x,y, "Enemies", o_cableStrandedShip);
+	instance_destroy(ship);
 	o_cable.pluggedShip = false;
 	global.unPluggingShip = true;
 	global.unPlugging = true;
+	instance_create_layer(o_strandedShip.x, o_strandedShip.y, "Enemies", o_cableStrandedShip);
 }

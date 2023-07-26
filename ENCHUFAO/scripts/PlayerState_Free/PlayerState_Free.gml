@@ -34,8 +34,7 @@ function PlayerState_Free()
 	{
 		PluggedToShip();
 	}
-	
-	if (plugged == true)
+	else if (plugged == true)
 	{
 		PluggedToEnchufe()
 	}
