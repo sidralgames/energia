@@ -27,7 +27,7 @@ function CheckEnchufeUpgrade()
 	{
 		inEnchufe.charging = true;
 		upgraded = true;
-		global.chargeTime += 1;
+		global.chargeTime += 0.5;
 	}
 	else if (inEnchufe.upgradeDischarge = true) && (upgraded = false)
 	{
@@ -39,7 +39,7 @@ function CheckEnchufeUpgrade()
 	{
 		inEnchufe.charging = true;
 		upgraded = true;
-		global.superShot += 0.5;
+		global.superShot += 0.25;
 		instance_destroy(o_partBalaP)
 		instance_create(-100,-100,o_partBalaP)
 	}
@@ -80,5 +80,18 @@ function CheckEnchufeUpgrade()
 		inEnchufe.charging = true;
 		upgraded = true;
 		global._speed += 0.5;
+	}
+	else if (inEnchufe.upgradeChargerShoots = true) && (upgraded = false)
+	{
+		inEnchufe.charging = true;
+		upgraded = true;
+		global.chargerShoots = true;
+	}
+	else if (inEnchufe.upgradeSlowMo = true) && (upgraded = false)
+	{
+		inEnchufe.charging = true;
+		upgraded = true;
+		global.slowMoTimeMax += 50;
+		global.slowMoTime = global.slowMoTimeMax;
 	}
 }

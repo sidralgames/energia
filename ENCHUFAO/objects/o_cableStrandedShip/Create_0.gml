@@ -20,24 +20,26 @@ rope1.vertexAttachTo(first, inst);
 plugged = false;
 
 		//// Attach an object to its last vertex
+instTope = instance_create_layer(x,y,"Player", o_chargerStrandedShip);
+instTope.depth = depth-1;
+rope1.vertexAttachObject(last, instTope, vertexAttachmentType.both);
 
-if (global.newChargerX !=0 && global.newChargerY != 0)
+if instance_exists(o_playerShip)
 {
-	creandoCharger = true
-
+	if (global.pluggingStrandedShipToEnchufe)
+	{
+		global.pluggingStrandedShipToEnchufe = false;
+		enchufe = instance_nearest(o_playerShip.x,o_playerShip.y,o_enchufe_Father);
 	
-}
-else
-{
-	creandoCharger = false
-	instTope = instance_create_layer(x,y,"Player", o_chargerStrandedShip);
-	instTope.depth = depth-1;
-	rope1.vertexAttachObject(last, instTope, vertexAttachmentType.both);
-}
+		if instance_exists(enchufe)
+		{
 
+			rope1.vertexAttachTo(last, enchufe);
+		}
+	}
+}
 
 //instTope = instance_create(x, y, o_coco);
 //rope1.vertexAttachObject(last, instTope, vertexAttachmentType.positionOnly);
 
 alarm[0] = random_range(10,95);
-

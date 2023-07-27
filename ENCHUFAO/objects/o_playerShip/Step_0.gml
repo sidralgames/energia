@@ -182,19 +182,48 @@ inEnchufe = collision_circle(x,y,20,o_enchufe_Father,false,true)
 
 if (inEnchufe) 
 {	
-	if (inEnchufe.abierto = true) && (inEnchufe.contOvercharged <=0) && (inEnchufe.dying == false)
+	if (pluggedShip)
 	{
-		if (key_x)
+		if (inEnchufe.abierto = true) && (inEnchufe.contOvercharged <=0) && (inEnchufe.dying == false)
 		{
-			if (plugged = false) && (o_charger.overcharged = false) && (inEnchufe.dying == false)
+			if (key_x)
 			{
-				Plug();
-		
-				CheckEnchufe();
-			
-				if (room = Sala_Upgade)
+				if (inEnchufe.isPETA_F == false)
 				{
-					CheckEnchufeUpgrade()
+					inEnchufe.withStrandedShip = true;
+					PlugStrandedShipToEnchufe();
+				}
+			}
+		}
+	}
+	else
+	{
+		if (alarm[8] <= 0)
+		{
+			if (inEnchufe.abierto = true) && (inEnchufe.contOvercharged <=0)
+			&& (inEnchufe.dying == false) && (!pluggedShip)
+			{
+				if (key_x)
+				{
+					if (plugged = false) && (o_charger.overcharged = false) && (inEnchufe.dying == false)
+					{
+						if (inEnchufe.withStrandedShip == false)
+						{
+							Plug();
+		
+							CheckEnchufe();
+			
+							if (room = Sala_Upgade)
+							{
+								CheckEnchufeUpgrade()
+							}
+						}
+						else
+						{
+							PlugToShip();
+							inEnchufe.withStrandedShip = false;
+						}
+					}
 				}
 			}
 		}

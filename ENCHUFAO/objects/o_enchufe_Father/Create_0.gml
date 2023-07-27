@@ -4,6 +4,9 @@
 //{
 //	lightEnchufe= instance_create_layer(x,y,"LightPlayer",o_Light_Enchufe);
 randomize();
+
+withStrandedShip = false;
+
 charging = false;
 isPETA = false;
 isPETAHP = false;
@@ -41,6 +44,8 @@ upgradeFireRate = false;
 upgradeShield = false;
 upgradeReReRe = false;
 upgradeSpeed = false;
+upgradeChargerShoots = false;
+upgradeSlowMo = false;
 charge = 0;
 maxCharge = 200;
 _hpush = random_range(0.05, 0.1)

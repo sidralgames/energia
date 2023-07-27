@@ -66,6 +66,8 @@ global.unPluggingShip = false;
 global.plugging = false;
 global.unPlugging = false;
 
+global.pluggingStrandedShipToEnchufe = false;
+
 global.bombAmmoMax = 5
 global.bombAmmo = 2;
 
@@ -80,6 +82,8 @@ global.chargingHp = false;
 global.chargingShield = false;
 global.chargingEnergy = false;
 global.chargingPETA = false;
+
+global.chargerShoots = false;
 
 global.numberOfUpgrades = 0;
 
@@ -96,6 +100,8 @@ AddUpgradeSuperShot();
 AddUpgradeShields();
 AddUpgradeReReRe();
 AddUpgradeSpeedUp();
+AddUpgradeChargerShoots();
+AddUpgradeSlowMo();
 
 
 for (var i = 0; i < global.numberOfUpgrades; i++)
