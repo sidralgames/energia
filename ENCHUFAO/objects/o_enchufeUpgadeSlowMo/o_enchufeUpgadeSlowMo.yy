@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_enchufeUpgadeSlowMo",
   "spriteId": {
-    "name": "s_enchufe_AmmoUp",
-    "path": "sprites/s_enchufe_AmmoUp/s_enchufe_AmmoUp.yy",
+    "name": "s_enchufeUpgradeSlowMo",
+    "path": "sprites/s_enchufeUpgradeSlowMo/s_enchufeUpgradeSlowMo.yy",
   },
   "solid": false,
   "visible": true,

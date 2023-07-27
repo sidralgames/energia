@@ -13,14 +13,28 @@ draw_set_halign(fa_center)
 //	draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+150,"Boton Raton Derecho para enchufarte/desenchufarte")
 //	draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+180,"Enchufate para empezar")
 //}
+if instance_exists(o_shipSelector)
+{
+	ship = ds_map_find_value(global.shipList,o_shipSelector.selected);
+}
+
+if (ship.locked == false)
+{
+	spriteToShow = ship.sprite;
+}
+else
+{
+	spriteToShow = ship.spriteLocked;
+}
+
 if (shipSelected = false)
 {
-	draw_sprite_ext(global.spriteShip,0,x,y+100,2,2,90,image_blend, image_alpha)
+	draw_sprite_ext(spriteToShow,0,x,y+100,2,2,90,image_blend, image_alpha)
 	draw_sprite_ext(s_arrows,0,x-70,y+100,1,1,0,image_blend, image_alpha)
 	draw_sprite_ext(s_arrows,1,x+70,y+100,1,1,0,image_blend, image_alpha)
 }
 
-if (key_x) && (shipSelected = false)
+if (key_x) && (shipSelected = false) && (ship.locked == false)
 {
 	shipSelected = true;
 	instance_create_layer(512,269, "Enchufes", o_enchufeInicio)

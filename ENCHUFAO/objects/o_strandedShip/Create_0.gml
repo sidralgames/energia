@@ -2,6 +2,10 @@
 // You can write your code in this editor
 
 connected = false;
+connectedToEnchufe = false;
+charge = 0;
+maxCharge = 500;
+unlocked = false;
 
 sprite = choose(splayer, splayer_Blue, splayer_Dark, splayer_Red, splayer_Purple)
 

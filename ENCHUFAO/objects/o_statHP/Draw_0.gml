@@ -1,11 +1,25 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (_visible = true)
+if instance_exists(o_shipSelector)
 {
-	for (var i = 0; i <= global.hpStat-1; i++)
+
+	ship = ds_map_find_value(global.shipList, o_shipSelector.selected)
+
+	if (_visible = true) && (ship.locked = false)
 	{
-		draw_sprite(sprite_index, 0, (x + 15*i), y)	
+		for (var i = 0; i <= global.hpStat-1; i++)
+		{
+			draw_sprite(sprite_index, 0, (x + 15*i), y)	
+		}
 	}
+	else if (_visible = true) && (ship.locked = true)
+	{
+		for (var i = 0; i <= 4; i++)
+		{
+			draw_sprite(s_indivStatLocked, 0, (x + 15*i), y)	
+		}
+	}
+	
 }
 
 

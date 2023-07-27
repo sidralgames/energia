@@ -149,7 +149,7 @@ if (key_shoot) && (!superShot)
 	{
 		PlayerShipShoot();
 		
-		if (!plugged) && (!o_charger.overcharged)
+		if (!plugged) && (!o_charger.overcharged) && (global.chargerShoots)
 		{
 			ChargerShoot()
 		}
@@ -390,6 +390,7 @@ if (global.hp < 1)
 	//{
 	//	instance_destroy(lightPlayer)
 	//}
+	global.relativeSpeed = 1;
 	screenShake(3,60)
 	instance_create(x,y,o_explo1)
 	audio_play_sound_on(global.audioEmitter, snd_death, false, 50)

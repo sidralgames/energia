@@ -18,6 +18,7 @@ function PlugToShip()
 	global.pluggingShip = true;
 	o_strandedShip.connected = true;
 	o_chargerStrandedShip.connected = true;
+	o_strandedShip.connectedToEnchufe = false;
 	global.xToPlug = ship.x;
 	global.yToPlug = ship.y;
 }

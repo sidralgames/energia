@@ -80,3 +80,4 @@ else
 	global.cableColor = white
 }
 
+part_type_sprite(global.balaP,global.bulletPart_sprite,true,1,false)

@@ -44,8 +44,9 @@ instance_create(-100,-100,o_partBalaTorreta)
 instance_create(-100,-100,o_partMisil)
 instance_create(-100,-100,o_partOverCharged)
 instance_create(-100,-100,o_partBalaTorretaBig);
+instance_create(-100,-100,o_partRepairing);
 
-
+global.repairingSprite = s_repairingPart;
 global.enemies = 0;
 speaking = false;
 contSuperShotMain = 0;
@@ -86,6 +87,7 @@ global.chargingPETA = false;
 global.chargerShoots = false;
 
 global.numberOfUpgrades = 0;
+global.numberOfShips = 0;
 
 global.upgradesList = ds_map_create();
 
@@ -102,6 +104,17 @@ AddUpgradeReReRe();
 AddUpgradeSpeedUp();
 AddUpgradeChargerShoots();
 AddUpgradeSlowMo();
+
+
+global.shipList = ds_map_create();
+
+AddShipGreen();
+AddShipBlue();
+AddShipRed();
+AddShipDark();
+AddShipPurple();
+
+
 
 
 for (var i = 0; i < global.numberOfUpgrades; i++)

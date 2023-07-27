@@ -139,3 +139,9 @@ if (room = Sala_FirstBoss) && (global.BossBreach_awaken = true) && !instance_exi
 	draw_sprite_ext(s_bossHealthBar_In, 0,__view_get( e__VW.XView, 0 )+233,__view_get( e__VW.YView, 0 )+35, global.BossBreach_HP/global.BossBreach_HPMax, 1,image_angle, image_blend, image_alpha)
 	draw_sprite_ext(s_bossHealthBar_OutFront, 0,__view_get( e__VW.XView, 0 )+230,__view_get( e__VW.YView, 0 )+35, 1,1,image_angle, image_blend, image_alpha)
 }
+
+
+if (alarm[2]>0)
+{
+	draw_sprite_ext(s_ship_unlocked,0,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+120,1,1,0,image_blend, image_alpha)	
+}
