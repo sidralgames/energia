@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+global.Go = false;
 global.enemies = 0;
 global.enemiesMax = 1 + (global.level * 2);
 global.totalEnemiesOnScreen = 0;

@@ -4,7 +4,7 @@ function AddShipDark()
 {
 	ds_map_add(global.shipList, global.numberOfShips,
 	{ 
-		locked: true,
+		unlocked: global.shipDarkUnlocked,
 		sprite: splayer_Dark,
 		spriteLocked: splayer_Dark_Locked,
 		position: 3,

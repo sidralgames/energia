@@ -5,6 +5,8 @@
 //	lightEnchufe= instance_create_layer(x,y,"LightPlayer",o_Light_Enchufe);
 randomize();
 
+deleteData = false;
+
 withStrandedShip = false;
 
 charging = false;

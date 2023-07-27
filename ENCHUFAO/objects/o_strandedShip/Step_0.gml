@@ -43,14 +43,16 @@ if instance_exists(o_chargerStrandedShipFather)
 	if (charge >= maxCharge)
 	{
 		for (var i = 0; i < global.numberOfShips; i++)
+		{
+			shipToUnlock = ds_map_find_value(global.shipList,i);
+			if (shipToUnlock.sprite == sprite)
 			{
-				shipToUnlock = ds_map_find_value(global.shipList,i);
-				if (shipToUnlock.sprite == sprite)
-				{
-					shipToUnlock.locked = false;
-				}
+				shipToUnlock.unlocked = 1;
 			}
-			
+		}
+		
+		CheckShipToUnlock()
+		
 		if (unlocked == false)
 		{
 			unlocked = true;

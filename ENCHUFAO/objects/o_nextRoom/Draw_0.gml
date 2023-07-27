@@ -18,7 +18,7 @@ if instance_exists(o_shipSelector)
 	ship = ds_map_find_value(global.shipList,o_shipSelector.selected);
 }
 
-if (ship.locked == false)
+if (ship.unlocked == 1)
 {
 	spriteToShow = ship.sprite;
 }
@@ -34,11 +34,12 @@ if (shipSelected = false)
 	draw_sprite_ext(s_arrows,1,x+70,y+100,1,1,0,image_blend, image_alpha)
 }
 
-if (key_x) && (shipSelected = false) && (ship.locked == false)
+if (key_x) && (shipSelected = false) && (ship.unlocked == 1)
 {
 	shipSelected = true;
 	instance_create_layer(512,269, "Enchufes", o_enchufeInicio)
 	instance_create_layer(112,272, "Enchufes" ,o_enchufeResetSelector)
+	instance_create_layer(590,40, "Enchufes" ,o_enchufeDeleteData)
 	Stats._visible = false;
 	player = instance_create_layer(x,y+100,"Player", o_playerShip)
 	

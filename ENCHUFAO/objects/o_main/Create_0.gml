@@ -9,6 +9,9 @@ enum ENEMYSTATE
 	SHOCKED
 }
 
+
+
+
 global.audioEmitter = audio_emitter_create();
 
 global.relativeSpeed = 1.0;
@@ -34,6 +37,8 @@ global.totalEnemiesOnScreen = 0;
 
 
 global.coverSpeed = 1.05;
+
+global.deletingData = false;
 
 instance_create(-100,-100,o_partBalaP)
 instance_create(-100,-100,o_partNaveP)

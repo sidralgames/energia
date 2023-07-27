@@ -5,18 +5,18 @@ if instance_exists(o_shipSelector)
 	
 	ship = ds_map_find_value(global.shipList, o_shipSelector.selected)
 
-	if (_visible = true) && (ship.locked = false)
+	if (_visible = true) && (ship.unlocked = 1)
 	{
 		for (var i = 0; i <= global.speedStat-1; i++)
 		{
 			draw_sprite(sprite_index, 0, (x + 15*i), y)	
 		}
 	}
-	else if (_visible = true) && (ship.locked = true)
+	else if (_visible = true) && (ship.unlocked = 0)
 	{
 		for (var i = 0; i <= 4; i++)
 		{
-			draw_sprite(s_indivStatLocked, 0, (x + 15*i), y)	
+			draw_sprite(s_indivStatLocked, 0, (x + 16*i), y)	
 		}
 	}
 

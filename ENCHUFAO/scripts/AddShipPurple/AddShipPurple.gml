@@ -4,7 +4,7 @@ function AddShipPurple()
 {
 	ds_map_add(global.shipList, global.numberOfShips,
 	{ 
-		locked: true,
+		unlocked: global.shipPurpleUnlocked,
 		sprite: splayer_Purple,
 		spriteLocked: splayer_Purple_Locked,
 		position: 4,

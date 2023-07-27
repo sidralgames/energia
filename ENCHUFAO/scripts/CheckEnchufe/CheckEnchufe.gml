@@ -12,6 +12,10 @@ function CheckEnchufe()
 	{
 		global.Go = true;	
 	}
+	if (inEnchufe.deleteData = true)
+	{
+		global.deletingData = true;	
+	}
 			
 	//-----------SALA STANDARD-----------//
 	if (inEnchufe.hp = true)
