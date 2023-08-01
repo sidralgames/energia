@@ -9,16 +9,18 @@ function PlugToShip()
 	audio_play_sound_on(global.audioEmitter,choose(snd_plugged, snd_plugged_2, snd_plugged_3),false, 50);
 	
 	pluggedShip = true;
-	instance_destroy(o_cableStrandedShip);
+	
 	instance_create_layer(x,y, "Enemies", o_cableStrandedShipFake);
 	
 	ship = instance_nearest(x,y,o_chargerStrandedShip);
-	ship._hpush = o_strandedShip._hpush;
-	ship._vpush = o_strandedShip._vpush;
+	thisStrandedShip = ship.myShip;
+	instance_destroy(thisStrandedShip.myCable);
+	ship._hpush = thisStrandedShip._hpush;
+	ship._vpush = thisStrandedShip._vpush;
 	global.pluggingShip = true;
-	o_strandedShip.connected = true;
-	o_chargerStrandedShip.connected = true;
-	o_strandedShip.connectedToEnchufe = false;
+	thisStrandedShip.connected = true;
+	ship.connected = true;
+	thisStrandedShip.connectedToEnchufe = false;
 	global.xToPlug = ship.x;
 	global.yToPlug = ship.y;
 }

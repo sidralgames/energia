@@ -45,6 +45,9 @@ function SetupLevelBasic()
 
 
 	instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Player", o_playerShip);
+	CreateStrandedShip();
+
+
 	//Create the controller
 	var _controller_x = width_ div 2
 	var _controller_y = height_ div 2
@@ -276,6 +279,7 @@ function SetupLevelBasic()
 				if (irandom(oddsStrandedShip) == oddsStrandedShip) && (StrandedShipsInLevel < StrandedShipsInLevelMax) 
 				{
 					instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Player",o_strandedShip); 
+					
 					StrandedShipsInLevel +=1;
 					strandedShipOK = true;
 				}

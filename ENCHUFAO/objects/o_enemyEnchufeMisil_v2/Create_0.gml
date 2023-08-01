@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 slowMoPickUps = 8;
-
+cable = noone;
 isCounted=false;
 waiting = false;
 version2 = true;

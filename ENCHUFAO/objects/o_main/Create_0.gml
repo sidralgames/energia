@@ -9,7 +9,11 @@ enum ENEMYSTATE
 	SHOCKED
 }
 
-
+global.strandedShipGreen = false;
+global.strandedShipBlue = false;
+global.strandedShipRed = false;
+global.strandedShipDark = false;
+global.strandedShipPurple = false;
 
 
 global.audioEmitter = audio_emitter_create();

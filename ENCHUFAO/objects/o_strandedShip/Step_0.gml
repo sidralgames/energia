@@ -1,62 +1,88 @@
 /// @description Insert description here
 // You can write your code in this editor
-_angle += max(0.5*sign(_hpush), 2*(abs(_hpush)),0.5*sign(_vpush), 2*(abs(_vpush)));
 
 
 
-if instance_exists(o_chargerStrandedShipFather)
+	myCable = instance_nearest(x,y,o_cableStrandedShip);
+	myCableFake = instance_nearest(x,y,o_cableStrandedShipFake);
+	
+	
+
+	
+switch(state)
 {
-	if (point_distance(x,y,o_chargerStrandedShipFather.x,o_chargerStrandedShipFather.y) <= global.strandedShipCableStat*35)
-	{
-		
-		if (connected)
-		{
-			_hpush = lerp(_hpush, 0, 0.005);
-			_vpush = lerp(_vpush, 0, 0.005);
-		}
-		MoveZeroGrv();
-	}
-	else
-	{
-		dir = point_direction(x,y,o_chargerStrandedShipFather.x,o_chargerStrandedShipFather.y)
-		_hpush += lengthdir_x(0.5,dir)
-		_vpush += lengthdir_y(0.5,dir)
-		//alarm[5] = 20;
-		o_chargerStrandedShipFather._hpush -= lengthdir_x(0.2 * weight,dir)
-		o_chargerStrandedShipFather._vpush -= lengthdir_y(0.2 * weight,dir)
-		MoveZeroGrv();
-	}
+	case STRANDEDSHIPSTATE.STRANDED: StrandedShip_StrandedState(); break;	
+	case STRANDEDSHIPSTATE.CONNECTEDSHIP: StrandedShip_ConnectedShip(); break;	
+	case STRANDEDSHIPSTATE.CONNECTEDSHIPCHARGED: StrandedShip_ConnectedShipCharged(); break;	
+	case STRANDEDSHIPSTATE.CONNECTEDENCHUFE: StrandedShip_ConnectedEnchufe(); break;	
+}
+
+MoveZeroGrv();
+
+
+if (chargedInEnergy == false) 
+{
+	_angle += max(0.5*sign(_hpush), 2*(abs(_hpush)),0.5*sign(_vpush), 2*(abs(_vpush)));
+}
+else
+{
+	part_particles_create(global.naveP_sys, x, y, global.naveP , 5)
+}
+
+
+if (alarm[4] <= 0)
+{
 	
-	
-	if (connectedToEnchufe)
+	diffX = choose(random_range(-50,-100),random_range(50,100));
+	diffY = choose(random_range(-50,-100),random_range(50,100));
+	alarm[4] = random_range(30, 60)
+}
+
+if (alarm[6] <= 0)
+{
+	strandedSpeed = random_range(minSpeed,maxSpeed)	
+	alarm[6] = random_range(120,400)
+}
+
+if (chargedInEnergy) && (chargedInHp) && (chargedInAmmo) && (goesToNextRoom = false)
+{
+	//-------------------UNLOCK SHIP--------------------//
+	for (var i = 0; i < global.numberOfShips; i++)
 	{
-		_hpush = lerp(_hpush, 0, 0.005);
-		_vpush = lerp(_vpush, 0, 0.005);
-		
-		if (alarm[0] <=0) && (!unlocked)
+		shipToUnlock = ds_map_find_value(global.shipList,i);
+		if (shipToUnlock.sprite == sprite)
 		{
-			part_particles_create(global.repairingPart_sys, x+random_range(-15,15), y+random_range(-15,15), global.repairingPart , 1)	
-			alarm[0] = 3;
-		}
-	}
-	
-	if (charge >= maxCharge)
-	{
-		for (var i = 0; i < global.numberOfShips; i++)
-		{
-			shipToUnlock = ds_map_find_value(global.shipList,i);
-			if (shipToUnlock.sprite == sprite)
+			if (shipToUnlock.unlocked = 0)
 			{
 				shipToUnlock.unlocked = 1;
+				o_main.alarm[2] = 60; //----UNLOCKED SHIP BANNER
 			}
 		}
-		
-		CheckShipToUnlock()
-		
-		if (unlocked == false)
-		{
-			unlocked = true;
-			o_main.alarm[2] = 60;
-		}
 	}
+		
+	CheckShipToUnlock()
+
+	//-----------------MOVE IT TO NEXT ROOM----------------------//
+	if (sprite = splayer)
+	{
+		global.strandedShipGreen = true;
+	}
+	else if (sprite = splayer_Blue)
+	{
+		global.strandedShipBlue = true;
+	}
+	else if (sprite = splayer_Dark)
+	{
+		global.strandedShipDark = true;
+	}
+	else if (sprite = splayer_Red)
+	{
+		global.strandedShipRed = true;
+	}
+	else if (sprite = splayer_Purple)
+	{
+		global.strandedShipPurple = true;
+	}
+	
+	goesToNextRoom = true;
 }

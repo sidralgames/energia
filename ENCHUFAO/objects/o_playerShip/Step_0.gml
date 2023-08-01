@@ -230,7 +230,7 @@ if (inEnchufe)
 	}
 }
 
-connectedToShip = collision_circle(x,y,20,o_chargerStrandedShipFather,false,true);
+connectedToShip = collision_circle(x,y,20,o_chargerStrandedShip,false,true);
 
 if (connectedToShip)
 {

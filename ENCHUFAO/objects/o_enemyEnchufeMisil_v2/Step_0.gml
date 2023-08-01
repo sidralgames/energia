@@ -11,10 +11,8 @@ switch(state)
 
 if (_hp <= 0)
 	{
-		if (state = ENEMYSTATE.FREE)
-		{
-			instance_destroy(cable)
-		}
+		
+		instance_destroy(cable)
 		screenShake(1,10)
 		global.XPpoints +=30;
 		explo = instance_create(x,y,o_explo2)
