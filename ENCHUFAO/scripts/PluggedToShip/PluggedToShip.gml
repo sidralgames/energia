@@ -34,8 +34,8 @@ function PluggedToShip()
 		_hpush = lengthdir_x(1,dir)
 		_vpush = lengthdir_y(1,dir)
 		alarm[5] = 20;
-		ship._hpush -= lengthdir_x(1.5*o_strandedShip.weight,dir)
-		ship._vpush -= lengthdir_y(1.5*o_strandedShip.weight,dir)
+		ship._hpush -= lengthdir_x(1.5,dir)
+		ship._vpush -= lengthdir_y(1.5,dir)
 	}
 	
 	if (key_x) 

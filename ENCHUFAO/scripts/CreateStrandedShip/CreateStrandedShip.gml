@@ -8,16 +8,19 @@ function CreateStrandedShip()
 
 	if (global.strandedShipGreen)
 	{
+		stranded.createdStranded = false;
 		stranded = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Player", o_strandedShip);
 		stranded.y+=2;
 		stranded.chargedInEnergy = true;
 		stranded.chargedInHp = true;
 		stranded.chargedInAmmo = true;
 		stranded.sprite = splayer;
+		
 	}
 	if (global.strandedShipBlue)
 	{
 		stranded = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Player", o_strandedShip);
+		stranded.createdStranded = false;
 		stranded.y-=2;
 		stranded.chargedInEnergy = true;
 		stranded.chargedInHp = true;
@@ -27,6 +30,7 @@ function CreateStrandedShip()
 	if (global.strandedShipPurple)
 	{
 		stranded = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Player", o_strandedShip);
+		stranded.createdStranded = false;
 		stranded.y+=6;
 		stranded.chargedInEnergy = true;
 		stranded.chargedInHp = true;
@@ -36,7 +40,8 @@ function CreateStrandedShip()
 	if (global.strandedShipDark)
 	{
 		stranded = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Player", o_strandedShip);
-		stranded.y-=2;
+		stranded.createdStranded = false;
+		stranded.y-=6;
 		stranded.chargedInEnergy = true;
 		stranded.chargedInHp = true;
 		stranded.chargedInAmmo = true;
@@ -44,8 +49,10 @@ function CreateStrandedShip()
 	}
 	if (global.strandedShipRed)
 	{
-		stranded.x+=6;
 		stranded = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Player", o_strandedShip);
+		stranded.createdStranded = false;
+		stranded.chargedInEnergy = true;
+		stranded.x+=6;
 		stranded.chargedInEnergy = true;
 		stranded.chargedInHp = true;
 		stranded.chargedInAmmo = true;

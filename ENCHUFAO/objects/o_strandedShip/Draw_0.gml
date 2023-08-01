@@ -1,8 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-draw_sprite_ext(sprite, image_index,x,y,1,1,_angle,image_blend, image_alpha)
-
+if set = true
+{
+draw_sprite_ext(sprite, image_index,x,y,xscale,yscale,_angle,image_blend, image_alpha)
+}
 
 
 if (connectedToEnchufe)

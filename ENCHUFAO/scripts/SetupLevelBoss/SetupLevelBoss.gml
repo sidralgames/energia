@@ -42,6 +42,8 @@ function SetupLevelBoss()
 
 
 	instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Player", o_playerShip);
+	CreateStrandedShip();
+	
 	//Create the controller
 	var _controller_x = width_ div 2
 	var _controller_y = height_ div 2

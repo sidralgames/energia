@@ -1,6 +1,60 @@
 /// @description Insert description here
 // You can write your code in this editor
+if (set == false)
+{
+	if (createdStranded)
+	{
+		ship = ds_map_find_value(global.shipList, irandom(global.numberOfShips-1))
+		while (ship.sprite = global.spriteShip)
+		{
+			ship = ds_map_find_value(global.shipList, irandom(global.numberOfShips-1))
+		}
+		sprite = ship.sprite
+	}
 
+	if (sprite = splayer)
+	{
+		strandedShipCableStat = 4;
+		weight = 1;
+		minSpeed = 1.5;
+		maxSpeed = 2.5;
+	
+	}
+	else if (sprite = splayer_Blue)
+	{
+		strandedShipCableStat = 2;
+		weight = 1;
+		minSpeed = 1.95;
+		maxSpeed = 3.5;
+	}
+	else if (sprite = splayer_Dark)
+	{
+		strandedShipCableStat = 3;	
+		weight = 1;
+		minSpeed = 1.75;
+		maxSpeed = 2.75;
+	}
+	else if (sprite = splayer_Red)
+	{
+		strandedShipCableStat = 4.5;
+		weight = 0.5;
+		minSpeed = 1.5;
+		maxSpeed = 2;
+	}
+	else if (sprite = splayer_Purple)
+	{
+		strandedShipCableStat = 3;
+		weight = 1;
+		minSpeed = 1.75;
+		maxSpeed = 2.75;
+	}
+
+sprite_index = sprite;
+maxDistance = strandedShipCableStat *35;
+cable = instance_create_layer(x,y,"Cable", o_cableStrandedShip);
+set = true;
+
+}
 
 
 	myCable = instance_nearest(x,y,o_cableStrandedShip);
