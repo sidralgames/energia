@@ -19,7 +19,7 @@ if instance_exists(o_playerShip) && (room != Sala_Inicio)
 		{
 			if (global.hp <= global.hpMax)
 			{
-				global.hp +=0.005*global.chargeTime;
+				global.hp +=0.007*global.chargeTime;
 			}
 		}
 		

@@ -15,8 +15,8 @@ function PlugToShip()
 	ship = instance_nearest(x,y,o_chargerStrandedShip);
 	thisStrandedShip = ship.myShip;
 	instance_destroy(thisStrandedShip.myCable);
-	ship._hpush = thisStrandedShip._hpush;
-	ship._vpush = thisStrandedShip._vpush;
+	//ship._hpush = thisStrandedShip._hpush;
+	//ship._vpush = thisStrandedShip._vpush;
 	global.pluggingShip = true;
 	thisStrandedShip.connected = true;
 	ship.connected = true;

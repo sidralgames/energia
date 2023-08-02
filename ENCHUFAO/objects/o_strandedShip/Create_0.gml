@@ -1,13 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
-alarm[7] = 60;
+
 sprite = -1;
 connected = false;
 connectedToEnchufe = false;
 set = false;
 charge = 0;
 maxCharge = 500;
-
+hpMax = 3;
+hp = hpMax;
+tocado = false;
 
 
 weight = 0;
@@ -44,7 +46,9 @@ strandedSpeed = random_range(1.5,2.5);
 state = STRANDEDSHIPSTATE.STRANDED;
 
 
-
+imageStrandedAmmo = 0;
+imageStrandedEnergy = 0;
+imageStrandedHp = 0;
 
 unlocked = false;
 

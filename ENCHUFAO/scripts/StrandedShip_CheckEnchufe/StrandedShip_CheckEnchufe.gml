@@ -4,64 +4,91 @@ function StrandedShip_CheckEnchufe()
 {
 	with(myCable)
 	{
-		if (enchufe.energy == true) && (inst.chargedInEnergy == false)
+		if (inst.shipReady)
 		{
-			if (inst.chargeEnergy <= inst.maxChargeEnergy+10)
+			if (enchufe.hp == true) 
 			{
-				inst.chargeEnergy+=1;
+				if (floor(inst.hp) < inst.hpMax)
+				{
+					if (alarm[0] <=0)
+					{
+						part_particles_create(global.repairingPart_sys, x+random_range(-15,15), y+random_range(-15,15), global.repairingPart , 1)	
+						alarm[0] = 3;
+					}
+					
+					inst.hp+=0.015;
+				}
+				
 			}
-			draw_sprite_ext(s_enchufeChargeHP_Out,0,x-14,y-30,1,1,0,image_blend, image_alpha)
-			draw_sprite_ext(s_enchufeChargeHP_In,0,x-14,y-30,(inst.chargeEnergy/inst.maxChargeEnergy),1,0,image_blend, image_alpha)
 			
-			if (inst.chargeEnergy >= inst.maxChargeEnergy-1)
-			{
-				inst.chargedInEnergy = true;
-				inst.unlocked = true;
-			}
 		}
-		else if (enchufe.hp == true) && (inst.chargedInHp == false)
+		else
 		{
-			if (inst.chargeHp <= inst.maxChargeHp+10)
+			if (enchufe.energy == true) && (inst.chargedInEnergy == false)
 			{
-				inst.chargeHp+=1;
-			}
-			draw_sprite_ext(s_enchufeChargeHP_Out,0,x-14,y-30,1,1,0,image_blend, image_alpha)
-			draw_sprite_ext(s_enchufeChargeHP_In,0,x-14,y-30,(inst.chargeHp/inst.maxChargeHp),1,0,image_blend, image_alpha)
+				if (inst.chargeEnergy <= inst.maxChargeEnergy+10)
+				{
+					inst.chargeEnergy+=1;
+				}
+				draw_sprite_ext(s_enchufeChargeHP_Out,0,x-14,y-30,1,1,0,image_blend, image_alpha)
+				draw_sprite_ext(s_enchufeChargeHP_In,0,x-14,y-30,(inst.chargeEnergy/inst.maxChargeEnergy),1,0,image_blend, image_alpha)
 			
-			if (inst.chargeHp >= inst.maxChargeHp-1)
-			{
-				inst.chargedInHp = true;
-				inst.unlocked = true;
+				if (inst.chargeEnergy >= inst.maxChargeEnergy-1)
+				{
+					inst.chargedInEnergy = true;
+					inst.unlocked = true;
+				}
 			}
-		}
-		else if (enchufe.ammo == true) && (inst.chargedInAmmo == false)
-		{
-			if (inst.chargeAmmo <= inst.maxChargeAmmo+10)
+			else if (enchufe.hp == true) && (inst.chargedInHp == false)
 			{
-				inst.chargeAmmo+=1;
-			}
-			draw_sprite_ext(s_enchufeChargeHP_Out,0,x-14,y-30,1,1,0,image_blend, image_alpha)
-			draw_sprite_ext(s_enchufeChargeHP_In,0,x-14,y-30,(inst.chargeAmmo/inst.maxChargeAmmo),1,0,image_blend, image_alpha)
+				if (inst.chargeHp <= inst.maxChargeHp+10)
+				{
+					if (alarm[0] <=0)
+					{
+						part_particles_create(global.repairingPart_sys, x+random_range(-15,15), y+random_range(-15,15), global.repairingPart , 1)	
+						alarm[0] = 3;
+					}
+					
+					inst.chargeHp+=1;
+				}
+				draw_sprite_ext(s_enchufeChargeHP_Out,0,x-14,y-30,1,1,0,image_blend, image_alpha)
+				draw_sprite_ext(s_enchufeChargeHP_In,0,x-14,y-30,(inst.chargeHp/inst.maxChargeHp),1,0,image_blend, image_alpha)
 			
-			if (inst.chargeAmmo >= inst.maxChargeAmmo-1)
-			{
-				inst.chargedInAmmo = true;
-				inst.unlocked = true;
+				if (inst.chargeHp >= inst.maxChargeHp-1)
+				{
+					inst.chargedInHp = true;
+					inst.unlocked = true;
+				}
 			}
-		}
-		else if (enchufe.shield == true) && (inst.chargedInAmmo == false)
-		{
-			if (inst.chargeAmmo <= inst.maxChargeAmmo+10)
+			else if (enchufe.ammo == true) && (inst.chargedInAmmo == false)
 			{
-				inst.chargeAmmo+=1;
-			}
-			draw_sprite_ext(s_enchufeChargeHP_Out,0,x-14,y-30,1,1,0,image_blend, image_alpha)
-			draw_sprite_ext(s_enchufeChargeHP_In,0,x-14,y-30,(inst.chargeAmmo/inst.maxChargeAmmo),1,0,image_blend, image_alpha)
+				if (inst.chargeAmmo <= inst.maxChargeAmmo+10)
+				{
+					inst.chargeAmmo+=1;
+				}
+				draw_sprite_ext(s_enchufeChargeHP_Out,0,x-14,y-30,1,1,0,image_blend, image_alpha)
+				draw_sprite_ext(s_enchufeChargeHP_In,0,x-14,y-30,(inst.chargeAmmo/inst.maxChargeAmmo),1,0,image_blend, image_alpha)
 			
-			if (inst.chargeAmmo >= inst.maxChargeAmmo-1)
+				if (inst.chargeAmmo >= inst.maxChargeAmmo-1)
+				{
+					inst.chargedInAmmo = true;
+					inst.unlocked = true;
+				}
+			}
+			else if (enchufe.shield == true) && (inst.chargedInAmmo == false)
 			{
-				inst.chargedInAmmo = true;
-				inst.unlocked = true;
+				if (inst.chargeAmmo <= inst.maxChargeAmmo+10)
+				{
+					inst.chargeAmmo+=1;
+				}
+				draw_sprite_ext(s_enchufeChargeHP_Out,0,x-14,y-30,1,1,0,image_blend, image_alpha)
+				draw_sprite_ext(s_enchufeChargeHP_In,0,x-14,y-30,(inst.chargeAmmo/inst.maxChargeAmmo),1,0,image_blend, image_alpha)
+			
+				if (inst.chargeAmmo >= inst.maxChargeAmmo-1)
+				{
+					inst.chargedInAmmo = true;
+					inst.unlocked = true;
+				}
 			}
 		}
 	}

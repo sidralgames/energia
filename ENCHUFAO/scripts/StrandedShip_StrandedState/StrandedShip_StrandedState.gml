@@ -4,15 +4,9 @@ function StrandedShip_StrandedState()
 {
 	if (connected)
 	{
-		if (unlocked = false)
-		{
-			state = STRANDEDSHIPSTATE.CONNECTEDSHIP;
-		}
-		else
-		{
-			state = STRANDEDSHIPSTATE.CONNECTEDSHIPCHARGED;
-		}
+		state = STRANDEDSHIPSTATE.CONNECTEDSHIP;
 	}
+	
 	if instance_exists(o_playerShip)
 	{	
 		if (chargedInEnergy) && (chargedInHp)

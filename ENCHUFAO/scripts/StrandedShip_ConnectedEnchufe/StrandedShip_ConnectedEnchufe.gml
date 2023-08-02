@@ -7,16 +7,7 @@ function StrandedShip_ConnectedEnchufe()
 	
 	_hpush = lerp(_hpush, 0, 0.005);
 	_vpush = lerp(_vpush, 0, 0.005);
-		
-	if (alarm[0] <=0) && (!unlocked)
-	{
-		part_particles_create(global.repairingPart_sys, x+random_range(-15,15), y+random_range(-15,15), global.repairingPart , 1)	
-		alarm[0] = 3;
-	}
-		
 
-	
-	
 	//-----Enchufe Movement---------//
 
 	if (chargedInEnergy) && (chargedInHp)
@@ -94,13 +85,12 @@ function StrandedShip_ConnectedEnchufe()
 	
 	if (connected)
 	{
-		if (!chargedInAmmo) && (!chargedInHp) && (!chargedInEnergy)
-		{
-			state = STRANDEDSHIPSTATE.CONNECTEDSHIP;
-		}
-		else
-		{
-			state = STRANDEDSHIPSTATE.CONNECTEDSHIPCHARGED;
-		}
+		myCharger._hpush=0;
+		myCharger._vpush = 0;
+		path_end();
+		_hpush = 0;
+		_vpush = 0;
+		speed = 0;
+		state = STRANDEDSHIPSTATE.CONNECTEDSHIP;
 	}
 }

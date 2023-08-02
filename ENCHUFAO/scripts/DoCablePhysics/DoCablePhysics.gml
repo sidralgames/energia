@@ -2,7 +2,16 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function DoCablePhysics()
 {
-
+	if (tile_meeting(x+_hpush,y,"Tiles"))
+	{
+	    _hpush = -_hpush*bnc;
+	} 
+	
+	if (tile_meeting(x,y+_vpush,"Tiles"))
+	{
+	    _vpush = -_vpush*bnc;
+	}
+	
 	if instance_exists(myCharger)
 	{
 		if (point_distance(x,y,myCharger.x,myCharger.y) <= strandedShipCableStat*35)
@@ -18,15 +27,13 @@ function DoCablePhysics()
 		}
 		else
 		{
-			
 			dir = point_direction(x,y,myCharger.x,myCharger.y)
 			_hpush += lengthdir_x(0.2*weight,dir)
 			_vpush += lengthdir_y(0.2*weight,dir)
 
 			myCharger._hpush -= lengthdir_x(0.5 * weight,dir)
 			myCharger._vpush -= lengthdir_y(0.5 * weight,dir)
-			
-			
+
 		}
 	}
 }

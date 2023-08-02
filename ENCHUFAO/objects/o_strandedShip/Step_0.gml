@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+shipReady = (chargedInAmmo) && (chargedInEnergy) && (chargedInHp)
+
 if (set == false)
 {
 	if (createdStranded)
@@ -18,6 +21,8 @@ if (set == false)
 		weight = 1;
 		minSpeed = 1.5;
 		maxSpeed = 2.5;
+		hpMax = 4;
+		hp = hpMax;
 	
 	}
 	else if (sprite = splayer_Blue)
@@ -26,6 +31,8 @@ if (set == false)
 		weight = 1;
 		minSpeed = 1.95;
 		maxSpeed = 3.5;
+		hpMax = 3;
+		hp = hpMax;
 	}
 	else if (sprite = splayer_Dark)
 	{
@@ -33,6 +40,8 @@ if (set == false)
 		weight = 1;
 		minSpeed = 1.75;
 		maxSpeed = 2.75;
+		hpMax = 3;
+		hp = hpMax;
 	}
 	else if (sprite = splayer_Red)
 	{
@@ -40,6 +49,8 @@ if (set == false)
 		weight = 0.5;
 		minSpeed = 1.5;
 		maxSpeed = 2;
+		hpMax = 5;
+		hp = hpMax;
 	}
 	else if (sprite = splayer_Purple)
 	{
@@ -47,6 +58,8 @@ if (set == false)
 		weight = 1;
 		minSpeed = 1.75;
 		maxSpeed = 2.75;
+		hpMax = 4;
+		hp = hpMax;
 	}
 
 sprite_index = sprite;
@@ -62,7 +75,8 @@ set = true;
 	
 	
 
-	
+MoveZeroGrv();
+
 switch(state)
 {
 	case STRANDEDSHIPSTATE.STRANDED: StrandedShip_StrandedState(); break;	
@@ -71,7 +85,7 @@ switch(state)
 	case STRANDEDSHIPSTATE.CONNECTEDENCHUFE: StrandedShip_ConnectedEnchufe(); break;	
 }
 
-MoveZeroGrv();
+
 
 
 if (chargedInEnergy == false) 
@@ -140,3 +154,17 @@ if (chargedInEnergy) && (chargedInHp) && (chargedInAmmo) && (goesToNextRoom = fa
 	
 	goesToNextRoom = true;
 }
+
+if (hp <= 0) && (goesToNextRoom = true)
+{
+	instance_create_layer(x,y,"Player", o_exploBomb);
+	goesToNextRoom = false;
+	chargeAmmo = 0;
+	chargeEnergy = 0;
+	chargeHp = 0;
+	chargedInAmmo = false;
+	chargedInEnergy = false;
+	chargedInHp = false;
+	state = STRANDEDSHIPSTATE.STRANDED;
+}
+	
