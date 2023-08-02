@@ -2,7 +2,11 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function StrandedShip_ConnectedEnchufe()
 {
-	
+	if instance_exists(myCharger)
+	{
+		myCharger._hpush=0;
+		myCharger._vpush=0;
+	}
 	DoCablePhysics();
 	
 	_hpush = lerp(_hpush, 0, 0.005);
@@ -92,5 +96,26 @@ function StrandedShip_ConnectedEnchufe()
 		_vpush = 0;
 		speed = 0;
 		state = STRANDEDSHIPSTATE.CONNECTEDSHIP;
+	}
+	
+	if (shipReady)
+	{
+		with(myCable)
+		{
+			enchufe.withStrandedShip = false;
+		}
+		
+		o_playerShip.pluggedShip=false;
+		connectedToEnchufe = false;
+		instance_destroy(myCable);
+		instance_destroy(myCableFake);
+		instance_destroy(myCharger);
+		
+		myCable = instance_create_layer(x, y, "Enemies", o_cableStrandedShip);
+		
+		myCable.rope1.vertexDeAttachTo(last)
+		
+		connected = false;
+		state = STRANDEDSHIPSTATE.STRANDED;
 	}
 }

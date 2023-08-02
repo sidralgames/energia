@@ -2,9 +2,11 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function StrandedShip_MoveIA()
 {
-	
-	myCharger._hpush = 0;
-	myCharger._vpush = 0;
+	if instance_exists(myCharger)
+	{
+		myCharger._hpush = 0;
+		myCharger._vpush = 0;
+	}
 	_hpush = 0;
 	_vpush = 0;
 	

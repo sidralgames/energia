@@ -4,6 +4,8 @@ function StrandedShip_StrandedState()
 {
 	if (connected)
 	{
+		myCharger._hpush=0;
+		myCharger._vpush = 0;
 		state = STRANDEDSHIPSTATE.CONNECTEDSHIP;
 	}
 	

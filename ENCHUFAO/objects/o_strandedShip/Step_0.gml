@@ -165,6 +165,8 @@ if (hp <= 0) && (goesToNextRoom = true)
 	chargedInAmmo = false;
 	chargedInEnergy = false;
 	chargedInHp = false;
+	speed = 0;
+	path_end();
 	state = STRANDEDSHIPSTATE.STRANDED;
 }
 	

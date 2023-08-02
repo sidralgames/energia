@@ -8,8 +8,8 @@ function CreateStrandedShip()
 
 	if (global.strandedShipGreen)
 	{
-		stranded.createdStranded = false;
 		stranded = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Player", o_strandedShip);
+		stranded.createdStranded = false;
 		stranded.y+=2;
 		stranded.chargedInEnergy = true;
 		stranded.chargedInHp = true;

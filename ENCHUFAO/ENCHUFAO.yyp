@@ -377,6 +377,7 @@
     {"id":{"name":"s_breachBoss","path":"sprites/s_breachBoss/s_breachBoss.yy",},"order":12,},
     {"id":{"name":"obj_sc_box","path":"objects/obj_sc_box/obj_sc_box.yy",},"order":6,},
     {"id":{"name":"o_chargerStrandedShipFather","path":"objects/o_chargerStrandedShipFather/o_chargerStrandedShipFather.yy",},"order":28,},
+    {"id":{"name":"UnplugStrandedShipReady","path":"scripts/UnplugStrandedShipReady/UnplugStrandedShipReady.yy",},"order":47,},
     {"id":{"name":"PlayerStats_Green","path":"scripts/PlayerStats_Green/PlayerStats_Green.yy",},"order":6,},
     {"id":{"name":"obj_light_mouse","path":"objects/obj_light_mouse/obj_light_mouse.yy",},"order":4,},
     {"id":{"name":"light_maintain_shadow_map","path":"scripts/light_maintain_shadow_map/light_maintain_shadow_map.yy",},"order":2,},
