@@ -15,6 +15,11 @@ global.strandedShipRed = false;
 global.strandedShipDark = false;
 global.strandedShipPurple = false;
 
+global.numStrandedShipGreen = 0;
+global.numStrandedShipBlue = 0;
+global.numStrandedShipRed = 0;
+global.numStrandedShipPurple = 0;
+global.numStrandedShipDark = 0;
 
 global.audioEmitter = audio_emitter_create();
 
@@ -97,6 +102,7 @@ global.chargerShoots = false;
 
 global.numberOfUpgrades = 0;
 global.numberOfShips = 0;
+global.posNumberOfShips = 0;
 
 global.upgradesList = ds_map_create();
 
@@ -123,7 +129,13 @@ AddShipRed();
 AddShipDark();
 AddShipPurple();
 
+//global.possibleShipList = ds_map_create();
 
+//AddShipGreenPos();
+//AddShipBluePos();
+//AddShipRedPos();
+//AddShipDarkPos();
+//AddShipPurplePos();
 
 
 for (var i = 0; i < global.numberOfUpgrades; i++)

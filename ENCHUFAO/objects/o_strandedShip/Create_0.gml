@@ -2,6 +2,8 @@
 // You can write your code in this editor
 
 sprite = -1;
+strtandedPrecision = 2;
+disconectedFirstTime = false;
 connected = false;
 connectedToEnchufe = false;
 set = false;
@@ -10,7 +12,8 @@ maxCharge = 500;
 hpMax = 3;
 hp = hpMax;
 tocado = false;
-
+cableFake = noone;
+numShip = irandom(global.numberOfShips-1);
 
 weight = 0;
 minSpeed = 0;

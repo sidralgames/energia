@@ -46,6 +46,6 @@ if (shipReady)
 	}
 }
 
-//draw_text(x,y-40,"hpush " + string(_hpush));
-//draw_text(x,y-60,"vpush " + string(_vpush));
+//draw_text(x,y-40,"hspeed " + string(hspeed));
+//draw_text(x,y-60,"vspeed " + string(vspeed));
 //draw_text(x,y-80,"speed " + string(speed));

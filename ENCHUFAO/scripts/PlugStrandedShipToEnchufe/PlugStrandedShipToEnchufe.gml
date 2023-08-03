@@ -14,5 +14,8 @@ function PlugStrandedShipToEnchufe()
 	global.unPluggingShip = true;
 	thisStrandedShip.connected = false;
 	thisStrandedShip.connectedToEnchufe = true;
-	instance_create_layer(thisStrandedShip.x, thisStrandedShip.y, "Enemies", o_cableStrandedShip);
+	with (thisStrandedShip)
+	{
+		cable = instance_create_layer(x, y, "Enemies", o_cableStrandedShip);
+	}
 }

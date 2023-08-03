@@ -10,10 +10,14 @@ function PlugToShip()
 	
 	pluggedShip = true;
 	
-	instance_create_layer(x,y, "Enemies", o_cableStrandedShipFake);
+	
 	
 	ship = instance_nearest(x,y,o_chargerStrandedShip);
 	thisStrandedShip = ship.myShip;
+	with (thisStrandedShip)
+	{
+		cableFake = instance_create_layer(x,y, "Enemies", o_cableStrandedShipFake);
+	}
 	instance_destroy(thisStrandedShip.myCable);
 	//ship._hpush = thisStrandedShip._hpush;
 	//ship._vpush = thisStrandedShip._vpush;

@@ -5,73 +5,12 @@ shipReady = (chargedInAmmo) && (chargedInEnergy) && (chargedInHp)
 
 if (set == false)
 {
-	if (createdStranded)
-	{
-		ship = ds_map_find_value(global.shipList, irandom(global.numberOfShips-1))
-		while (ship.sprite = global.spriteShip)
-		{
-			ship = ds_map_find_value(global.shipList, irandom(global.numberOfShips-1))
-		}
-		sprite = ship.sprite
-	}
-
-	if (sprite = splayer)
-	{
-		strandedShipCableStat = 4;
-		weight = 1;
-		minSpeed = 1.5;
-		maxSpeed = 2.5;
-		hpMax = 4;
-		hp = hpMax;
-	
-	}
-	else if (sprite = splayer_Blue)
-	{
-		strandedShipCableStat = 2;
-		weight = 1;
-		minSpeed = 1.95;
-		maxSpeed = 3.5;
-		hpMax = 3;
-		hp = hpMax;
-	}
-	else if (sprite = splayer_Dark)
-	{
-		strandedShipCableStat = 3;	
-		weight = 1;
-		minSpeed = 1.75;
-		maxSpeed = 2.75;
-		hpMax = 3;
-		hp = hpMax;
-	}
-	else if (sprite = splayer_Red)
-	{
-		strandedShipCableStat = 4.5;
-		weight = 0.5;
-		minSpeed = 1.5;
-		maxSpeed = 2;
-		hpMax = 5;
-		hp = hpMax;
-	}
-	else if (sprite = splayer_Purple)
-	{
-		strandedShipCableStat = 3;
-		weight = 1;
-		minSpeed = 1.75;
-		maxSpeed = 2.75;
-		hpMax = 4;
-		hp = hpMax;
-	}
-
-sprite_index = sprite;
-maxDistance = strandedShipCableStat *35;
-cable = instance_create_layer(x,y,"Cable", o_cableStrandedShip);
-set = true;
-
+	SetStrandedShip();
 }
 
 
-	myCable = instance_nearest(x,y,o_cableStrandedShip);
-	myCableFake = instance_nearest(x,y,o_cableStrandedShipFake);
+myCable = cable;
+myCableFake = cableFake;
 	
 	
 
@@ -134,24 +73,30 @@ if (chargedInEnergy) && (chargedInHp) && (chargedInAmmo) && (goesToNextRoom = fa
 	if (sprite = splayer)
 	{
 		global.strandedShipGreen = true;
+		global.numStrandedShipGreen += 1;
 	}
 	else if (sprite = splayer_Blue)
 	{
 		global.strandedShipBlue = true;
+		global.numStrandedShipBlue += 1;
 	}
 	else if (sprite = splayer_Dark)
 	{
 		global.strandedShipDark = true;
+		global.numStrandedShipDark += 1;
 	}
 	else if (sprite = splayer_Red)
 	{
 		global.strandedShipRed = true;
+		global.numStrandedShipRed += 1;
 	}
 	else if (sprite = splayer_Purple)
 	{
 		global.strandedShipPurple = true;
+		global.numStrandedShipPurple += 1;
 	}
-	
+	//global.posNumberOfShips-=1;
+	//ds_map_delete(global.posNumberOfShips, numShip)
 	goesToNextRoom = true;
 }
 
@@ -165,8 +110,11 @@ if (hp <= 0) && (goesToNextRoom = true)
 	chargedInAmmo = false;
 	chargedInEnergy = false;
 	chargedInHp = false;
-	speed = 0;
 	path_end();
+	hp = hpMax;
+	_hpush = hspeed;
+	_vpush = vspeed;
+	speed = 0;
 	state = STRANDEDSHIPSTATE.STRANDED;
 }
 	

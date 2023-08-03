@@ -16,5 +16,8 @@ function UnplugStrandedShipReady()
 		global.unPlugging = true;
 		thisStrandedShip.connected = false;
 		thisStrandedShip.state = STRANDEDSHIPSTATE.STRANDED;
-		instance_create_layer(thisStrandedShip.x, thisStrandedShip.y, "Enemies", o_cableStrandedShip);
+		with (thisStrandedShip)
+		{
+		cable = instance_create_layer(x, y, "Enemies", o_cableStrandedShip);
+		}
 }
