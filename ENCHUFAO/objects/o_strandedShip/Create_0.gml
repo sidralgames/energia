@@ -14,12 +14,13 @@ hp = hpMax;
 tocado = false;
 cableFake = noone;
 numShip = irandom(global.numberOfShips-1);
+changedSpeed = false;
 
 weight = 0;
 minSpeed = 0;
 maxSpeed = 0;
 
-chargedInEnergy = false;
+chargedInEnergy = true;
 chargeEnergy = 0;
 maxChargeEnergy = 500;
 
@@ -27,7 +28,7 @@ chargedInHp = false;
 chargeHp = 0;
 maxChargeHp = 500;
 
-chargedInAmmo = false;
+chargedInAmmo = true;
 chargeAmmo = 0;
 maxChargeAmmo = 500;
 

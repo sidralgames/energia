@@ -106,17 +106,16 @@ function StrandedShip_ConnectedEnchufe()
 			enchufe.withStrandedShip = false;
 		}
 		
-		//o_playerShip.pluggedShip=false;
+		o_playerShip.pluggedShip=false;
 		connectedToEnchufe = false;
 		instance_destroy(myCable);
-		instance_destroy(myCableFake);
 		instance_destroy(myCharger);
 		
-		myCable = instance_create_layer(x, y, "Enemies", o_cableStrandedShip);
+		cable = instance_create_layer(x, y, "Enemies", o_cableStrandedShip);
 		
 		//myCable.rope1.vertexDeAttachTo(last)
 		
-		//connected = false;
+		connected = false;
 		state = STRANDEDSHIPSTATE.STRANDED;
 	}
 }

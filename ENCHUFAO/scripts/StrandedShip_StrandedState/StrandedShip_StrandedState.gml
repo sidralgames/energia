@@ -13,7 +13,25 @@ function StrandedShip_StrandedState()
 	{	
 		if (chargedInEnergy) && (chargedInHp)
 		{
-			StrandedShip_MoveIA()
+			if point_distance(x,y,o_playerShip.x, o_playerShip.y) > 10	
+			{
+				myPath = path_add();
+				mp_grid_path(gridRoom1, myPath, x, y, o_playerShip.x,  o_playerShip.y, true);
+				changedSpeed = false;
+				StrandedShip_MoveIA();
+			}
+			else
+			{
+				path_end();
+				if (changedSpeed = false)
+				{
+					changedSpeed = true;
+					_hpush = hspeed;
+					_vpush = vspeed;
+					speed = 0;	
+				}
+				_angle = point_direction(myCharger.x,  myCharger.y, x, y)
+			}
 		}
 	}
 
