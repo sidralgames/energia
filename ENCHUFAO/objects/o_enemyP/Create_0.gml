@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+diffX = choose(random_range(-50, 50));
+diffY = choose(random_range(-50, 50));
 
 isCounted = false;
 hsp_final = 0

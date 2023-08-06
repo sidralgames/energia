@@ -159,6 +159,7 @@
     {"id":{"name":"snd_shoot1","path":"sounds/snd_shoot1/snd_shoot1.yy",},"order":8,},
     {"id":{"name":"Approach","path":"scripts/Approach/Approach.yy",},"order":3,},
     {"id":{"name":"o_enchufeUpgadeShields","path":"objects/o_enchufeUpgadeShields/o_enchufeUpgadeShields.yy",},"order":32,},
+    {"id":{"name":"EnemyBasicChasingIA","path":"scripts/EnemyBasicChasingIA/EnemyBasicChasingIA.yy",},"order":43,},
     {"id":{"name":"o_enemy_1","path":"objects/o_enemy_1/o_enemy_1.yy",},"order":1,},
     {"id":{"name":"o_waller","path":"objects/o_waller/o_waller.yy",},"order":5,},
     {"id":{"name":"s_wall_tilesConespacio","path":"sprites/s_wall_tilesConespacio/s_wall_tilesConespacio.yy",},"order":0,},

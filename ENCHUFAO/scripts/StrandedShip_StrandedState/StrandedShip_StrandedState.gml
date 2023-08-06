@@ -13,24 +13,37 @@ function StrandedShip_StrandedState()
 	{	
 		if (chargedInEnergy) && (chargedInHp)
 		{
-			if point_distance(x,y,o_playerShip.x, o_playerShip.y) > 10	
+			if point_distance(x,y,o_playerShip.x, o_playerShip.y) > 50	
 			{
-				myPath = path_add();
-				mp_grid_path(gridRoom1, myPath, x, y, o_playerShip.x,  o_playerShip.y, true);
-				changedSpeed = false;
-				StrandedShip_MoveIA();
+					myPath = path_add();
+					mp_grid_path(gridRoom1, myPath, x, y, o_playerShip.x,  o_playerShip.y, true);
+					changedSpeed = false;
+					StrandedShip_MoveIA();
 			}
 			else
 			{
-				path_end();
 				if (changedSpeed = false)
 				{
 					changedSpeed = true;
-					_hpush = hspeed;
-					_vpush = vspeed;
+					//_hpush = hspeed;
+					//_vpush = vspeed;
 					speed = 0;	
 				}
-				_angle = point_direction(myCharger.x,  myCharger.y, x, y)
+				path_end();
+				var a = point_direction(x, y, o_playerShip.x+diffX,  o_playerShip.y+diffY);
+				direction += sign(dsin(a - direction)) * (strtandedPrecision * global.relativeSpeed);
+				_angle = direction;
+				speed = strandedSpeed * min(1, global.relativeSpeed+0.2);
+				if (tile_meeting(x+hspeed,y,"Tiles"))
+					{
+					    hspeed = -hspeed*bnc;
+					} 
+	
+					if (tile_meeting(x,y+vspeed,"Tiles"))
+					{
+					    vspeed = -vspeed*bnc;
+					}
+				//_angle = point_direction(myCharger.x,  myCharger.y, x, y)
 			}
 		}
 	}

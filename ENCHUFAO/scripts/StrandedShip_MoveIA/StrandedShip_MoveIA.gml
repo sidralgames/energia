@@ -15,7 +15,11 @@ function StrandedShip_MoveIA()
 	{
 		if instance_exists(o_playerShip)
 		{
-			if tile_meeting(x, y, "Tiles")
+			if tile_meeting(x + lengthdir_x(20, 1), y+ lengthdir_y(20, 1), "Tiles") ||
+			tile_meeting(x + lengthdir_x(20, 90), y+ lengthdir_y(20, 90), "Tiles") ||
+			tile_meeting(x + lengthdir_x(20, 180), y+ lengthdir_y(20, 180), "Tiles") ||
+			tile_meeting(x + lengthdir_x(20, 270), y+ lengthdir_y(20, 270), "Tiles") || 
+			tile_meeting(x, y, "Tiles")
 			{
 				_speed = (strandedSpeed * 0.75) * min(1, global.relativeSpeed+0.2);
 				path_start(myPath,_speed ,path_action_continue, false)

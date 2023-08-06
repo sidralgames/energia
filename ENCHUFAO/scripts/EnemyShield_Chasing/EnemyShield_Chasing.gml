@@ -3,44 +3,16 @@
 function EnemyShield_Chasing()
 {
 	part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(8,direction), y-lengthdir_y(8,direction), global.naveEnemy_Waiting , 1)
-
+	if (alarm[4] <= 0)
+	{
+		diffX = choose(random_range(-50, 50));
+		diffY = choose(random_range(-50, 50));
+		alarm[4] = random_range(30, 60)
+	}
+	
 	if instance_exists(o_playerShip)
 	{
-		myPath = path_add();
-		mp_grid_path(gridRoom1, myPath, x, y, o_playerShip.x ,o_playerShip.y, true);
-	
-		if !tile_meeting(x, y, "Tiles")
-		{
-			if (alarm[5] <= 0)
-			{
-				path_end()
-				var a = point_direction(x, y, o_playerShip.x,  o_playerShip.y);
-				direction += sign(dsin(a - direction)) * precision;
-				image_angle = direction;
-				if (alarm[10] <= 0)
-				{
-				speed = enemySpeed * min(1, global.relativeSpeed+0.2);
-				}
-				else
-				{
-					speed = enemySpeed 
-				}
-			}
-		}
-		else
-		{
-			alarm[5] = 5;
-			if (alarm[10] <= 0)
-			{
-				_speed = enemySpeed * min(1, global.relativeSpeed+0.2);
-			}
-			else
-			{
-				_speed = enemySpeed
-			}
-			path_start(myPath,_speed ,path_action_stop, false)
-			image_angle = direction
-		}
+		EnemyBasicChasingIA();
 	}
 
 	if instance_exists(shield)

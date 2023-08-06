@@ -15,7 +15,7 @@ function SetStrandedShip()
 
 	if (sprite = splayer)
 	{
-		strandedShipCableStat = 4;
+		strandedShipCableStat = 3.5;
 		strtandedPrecision = 2;
 		weight = 1;
 		minSpeed = 1.5;
@@ -27,7 +27,7 @@ function SetStrandedShip()
 	else if (sprite = splayer_Blue)
 	{
 		strandedShipCableStat = 2;
-		strtandedPrecision = 3;
+		strtandedPrecision = 2.75;
 		weight = 1;
 		minSpeed = 1.95;
 		maxSpeed = 3.25;
@@ -46,7 +46,7 @@ function SetStrandedShip()
 	}
 	else if (sprite = splayer_Red)
 	{
-		strandedShipCableStat = 4.5;
+		strandedShipCableStat = 4;
 		strtandedPrecision = 2;
 		weight = 0.5;
 		minSpeed = 1.5;
