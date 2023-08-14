@@ -20,7 +20,18 @@ weight = 0;
 minSpeed = 0;
 maxSpeed = 0;
 
-chargedInEnergy = true;
+
+oddChargedEnergy = choose(0,1)
+if (oddChargedEnergy == 1)
+{
+	chargedInEnergy = true;
+}
+else
+{
+	chargedInEnergy = false;
+}
+
+
 chargeEnergy = 0;
 maxChargeEnergy = 500;
 
@@ -28,7 +39,16 @@ chargedInHp = false;
 chargeHp = 0;
 maxChargeHp = 500;
 
-chargedInAmmo = true;
+
+oddChargedAmmo = choose(0,1)
+if (oddChargedAmmo == 1)
+{
+	chargedInAmmo = true;
+}
+else
+{
+	chargedInAmmo = false;
+}
 chargeAmmo = 0;
 maxChargeAmmo = 500;
 

@@ -9,7 +9,7 @@ randomize();
 enemiesMin = min(3,global.level+1);
 enemiesMax = min(7,global.level+2);
 levelType = choose(0,0,0);
-PetasInLevelMax = 2;
+PetasInLevelMax = 5;
 PetasInLevel = 0;
 StrandedShipsInLevel = 0;
 StrandedShipsInLevelMax = 1;

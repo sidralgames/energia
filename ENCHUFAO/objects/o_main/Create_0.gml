@@ -101,6 +101,7 @@ global.chargingPETA = false;
 global.chargerShoots = false;
 
 global.numberOfUpgrades = 0;
+global.numberOfUpgradesPlayer = 0;
 global.numberOfShips = 0;
 global.posNumberOfShips = 0;
 
@@ -129,6 +130,23 @@ AddShipRed();
 AddShipDark();
 AddShipPurple();
 
+
+global.PlayerUpgradesList = ds_map_create();
+
+AddUpgradeAmmoPlayer();
+AddUpgradeEnergyPlayer();
+AddUpgradeHPPlayer();
+AddUpgradeFasterChargePlayer();
+AddUpgradeSlowerDischargePlayer();
+AddUpgradeLongerCablePlayer();
+AddUpgradeFireRatePlayer();
+AddUpgradeSuperShotPlayer();
+AddUpgradeShieldsPlayer();
+AddUpgradeReReRePlayer();
+AddUpgradeSpeedUpPlayer();
+AddUpgradeChargerShootsPlayer();
+AddUpgradeSlowMoPlayer();
+
 //global.possibleShipList = ds_map_create();
 
 //AddShipGreenPos();
@@ -138,7 +156,7 @@ AddShipPurple();
 //AddShipPurplePos();
 
 
-for (var i = 0; i < global.numberOfUpgrades; i++)
+for (var i = 0; i < global.numberOfUpgrades-1; i++)
 {
 	upgrades = ds_map_find_value(global.upgradesList,i);
 	upgrades.isPicked = false;

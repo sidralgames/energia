@@ -45,6 +45,7 @@
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Banners","instances":[],"visible":true,"depth":400,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Pause","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_65039395","properties":[],"isDnd":false,"objectId":{"name":"o_pause","path":"objects/o_pause/o_pause.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":416.0,"y":160.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_34956E48","properties":[],"isDnd":false,"objectId":{"name":"o_pauseMenu","path":"objects/o_pauseMenu/o_pauseMenu.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":224.0,"y":128.0,},
       ],"visible":true,"depth":500,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Main","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3DA4B377","properties":[],"isDnd":false,"objectId":{"name":"o_main","path":"objects/o_main/o_main.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":160.0,"y":160.0,},
@@ -112,6 +113,7 @@
     {"name":"inst_783C68E2","path":"rooms/Sala_Inicio/Sala_Inicio.yy",},
     {"name":"inst_5C647035","path":"rooms/Sala_Inicio/Sala_Inicio.yy",},
     {"name":"inst_65039395","path":"rooms/Sala_Inicio/Sala_Inicio.yy",},
+    {"name":"inst_34956E48","path":"rooms/Sala_Inicio/Sala_Inicio.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

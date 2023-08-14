@@ -102,6 +102,8 @@ if (chargedInEnergy) && (chargedInHp) && (chargedInAmmo) && (goesToNextRoom = fa
 
 if (hp <= 0) && (goesToNextRoom = true)
 {
+	StrandedShip_False();
+	
 	instance_create_layer(x,y,"Player", o_exploBomb);
 	goesToNextRoom = false;
 	chargeAmmo = 0;

@@ -5,7 +5,7 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Movement",
-    "path": "folders/Scripts/GENERAL/Movement.yy",
+    "name": "UPGRADESLIST",
+    "path": "folders/Scripts/GENERAL/UPGRADESLIST.yy",
   },
 }

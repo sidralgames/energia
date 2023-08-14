@@ -193,6 +193,12 @@ if (inEnchufe)
 					inEnchufe.withStrandedShip = true;
 					PlugStrandedShipToEnchufe();
 				}
+				else
+				{
+					SimpleStrandedUnplug();
+					Plug();
+					CheckEnchufe();
+				}
 			}
 		}
 	}

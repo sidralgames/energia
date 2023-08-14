@@ -27,7 +27,7 @@ if (room != Sala_Inicio)
 	draw_sprite_ext(s_shieldBar_out,0,__view_get( e__VW.XView, 0 )+620,__view_get( e__VW.YView, 0 )+355,1,1,0,image_blend, image_alpha)
 	draw_sprite_ext(s_shieldBar_in,0,__view_get( e__VW.XView, 0 )+620,__view_get( e__VW.YView, 0 )+355,1,(global.shields/global.shieldsMax),0,image_blend, image_alpha)
 }
-draw_text(__view_get( e__VW.XView, 0 )+30,__view_get( e__VW.YView, 0 )+20, "existe " + string(global.EXISTE))
+//draw_text(__view_get( e__VW.XView, 0 )+30,__view_get( e__VW.YView, 0 )+20, "existe " + string(global.EXISTE))
 if (room = Sala_0)
 {
 draw_set_halign(fa_right)
@@ -40,8 +40,8 @@ draw_set_font(Font2)
 draw_set_color(azul)
 draw_text(__view_get( e__VW.XView, 0 )+630,__view_get( e__VW.YView, 0 )+20, "Level " + string(global.level))
 draw_text(__view_get( e__VW.XView, 0 )+630,__view_get( e__VW.YView, 0 )+40, "Score: " + string(global.XPpoints))
-draw_text(__view_get( e__VW.XView, 0 )+630,__view_get( e__VW.YView, 0 )+60, "Enemies: " + string(global.enemies))
-draw_text(__view_get( e__VW.XView, 0 )+630,__view_get( e__VW.YView, 0 )+80, "Enemies max: " + string(global.enemiesMax))
+//draw_text(__view_get( e__VW.XView, 0 )+630,__view_get( e__VW.YView, 0 )+60, "Enemies: " + string(global.enemies))
+//draw_text(__view_get( e__VW.XView, 0 )+630,__view_get( e__VW.YView, 0 )+80, "Enemies max: " + string(global.enemiesMax))
 
 //if instance_exists(o_waller)
 //{

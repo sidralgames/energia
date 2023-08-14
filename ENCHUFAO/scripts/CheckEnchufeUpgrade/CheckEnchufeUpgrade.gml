@@ -2,8 +2,14 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function CheckEnchufeUpgrade()
 {
+	for (var i= 0; i< global.numberOfUpgradesPlayer -1; i++)
+	{
+		upg = ds_map_find_value(global.PlayerUpgradesList, i)	
+	}
+	
 	if (inEnchufe.upgradeAmmo = true) && (upgraded = false)
 	{
+		upg.times+=1;
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.ammoMax += 50;
@@ -11,6 +17,7 @@ function CheckEnchufeUpgrade()
 	}
 	else if (inEnchufe.upgradeEnergy = true) && (upgraded = false)
 	{
+		upg.times+=1;
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.energyTotal += 50;
@@ -18,6 +25,7 @@ function CheckEnchufeUpgrade()
 	}
 	else if (inEnchufe.upgradeHP = true) && (upgraded = false)
 	{
+		upg.times+=1;
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.hpMax += 1;
@@ -25,18 +33,21 @@ function CheckEnchufeUpgrade()
 	}
 	else if (inEnchufe.upgradeCharge = true) && (upgraded = false)
 	{
+		upg.times+=1;
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.chargeTime += 0.5;
 	}
 	else if (inEnchufe.upgradeDischarge = true) && (upgraded = false)
 	{
+		upg.times+=1;
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.DischargeTime += 2;
 	}
 	else if (inEnchufe.upgradeSuperShot = true) && (upgraded = false)
 	{
+		upg.times+=1;
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.superShot += 0.25;
@@ -45,6 +56,7 @@ function CheckEnchufeUpgrade()
 	}
 	else if (inEnchufe.upgradeCable = true) && (upgraded = false)
 	{
+		upg.times+=1;
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.cableStat+=1;
@@ -55,12 +67,14 @@ function CheckEnchufeUpgrade()
 	}
 	else if (inEnchufe.upgradeFireRate = true) && (upgraded = false)
 	{
+		upg.times+=1;
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.fireRate-=4;
 	}
 	else if (inEnchufe.upgradeShield = true) && (upgraded = false)
 	{
+		upg.times+=1;
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.shieldsMax += 1;
@@ -68,6 +82,7 @@ function CheckEnchufeUpgrade()
 	}
 	else if (inEnchufe.upgradeReReRe = true) && (upgraded = false)
 	{
+		upg.times+=1;
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.hp = global.hpMax;
@@ -77,21 +92,26 @@ function CheckEnchufeUpgrade()
 	}
 	else if (inEnchufe.upgradeSpeed = true) && (upgraded = false)
 	{
+		upg.times+=1;
 		inEnchufe.charging = true;
 		upgraded = true;
 		global._speed += 0.5;
 	}
 	else if (inEnchufe.upgradeChargerShoots = true) && (upgraded = false)
 	{
+		upg.times+=1;
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.chargerShoots = true;
 	}
 	else if (inEnchufe.upgradeSlowMo = true) && (upgraded = false)
 	{
+		upg.times+=1;
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.slowMoTimeMax += 50;
 		global.slowMoTime = global.slowMoTimeMax;
 	}
+	
+	
 }

@@ -284,7 +284,7 @@ function SetupLevelBasic()
 					strandedShipOK = true;
 				}
 				
-				if (irandom(oddsPETA) == oddsPETA) && (PetasInLevel < PetasInLevelMax) && global.level > 2
+				if (irandom(oddsPETA) == oddsPETA) && (PetasInLevel < PetasInLevelMax) //&& global.level > 2
 				{
 					instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_PETApickUp); 
 					PetasInLevel +=1;
@@ -345,7 +345,8 @@ function SetupLevelBasic()
 						{
 							if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 80)
 							{
-								instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Final); 
+								finalE = instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Final); 
+								finalE.depth = layer_get_depth("Enchufes")+20;
 								enchufeFinal = true;
 							}
 						}
