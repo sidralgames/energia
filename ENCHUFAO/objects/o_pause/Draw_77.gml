@@ -29,7 +29,7 @@ if (pause)
 if (key_start)
 {
 	instance_activate_object(o_pauseMenu);
-	alarm[0] = 2;
+	alarm[0] = 5;
 }
 
 
