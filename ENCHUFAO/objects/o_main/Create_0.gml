@@ -110,21 +110,36 @@ global.numberOfUpgradesPlayer = 0;
 global.numberOfShips = 0;
 global.posNumberOfShips = 0;
 
+
+global.ammoIsUpgraded = false;
+global.cableIsUpgraded = false;
+global.chargerShootsIsUpgraded = false;
+global.energyIsUpgraded = false;
+global.fasterChargeIsUpgraded = false;
+global.fireRateIsUpgraded = false;
+global.HPIsUpgraded = false;
+global.rerereIsUpgraded = false;
+global.shieldsIsUpgraded = false;
+global.slowerDischargeIsUpgraded = false;
+global.slowMoIsUpgraded = false;
+global.speedIsUpgraded = false;
+global.superShotIsUpgraded = false;
+
 global.upgradesList = ds_map_create();
 
-//AddUpgradeAmmo();
-//AddUpgradeEnergy();
-//AddUpgradeHP();
+AddUpgradeAmmo();
+AddUpgradeEnergy();
+AddUpgradeHP();
 AddUpgradeFasterCharge();
 AddUpgradeSlowerDischarge();
-//AddUpgradeLongerCable();
+AddUpgradeLongerCable();
 AddUpgradeFireRate();
 AddUpgradeSuperShot();
-//AddUpgradeShields();
-//AddUpgradeReReRe();
-//AddUpgradeSpeedUp();
-//AddUpgradeChargerShoots();
-//AddUpgradeSlowMo();
+AddUpgradeShields();
+AddUpgradeReReRe();
+AddUpgradeSpeedUp();
+AddUpgradeChargerShoots();
+AddUpgradeSlowMo();
 
 
 global.shipList = ds_map_create();

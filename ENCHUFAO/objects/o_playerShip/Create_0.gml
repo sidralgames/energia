@@ -1,18 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-ammoIsUpgraded = false;
-energyIsUpgraded = false;
-HPIsUpgraded = false;
-shieldsIsUpgraded = false;
-cableIsUpgraded = false;
-fireRateIsUpgraded = false;
-fasterChargeIsUpgraded = false;
-slowerDischargeIsUpgraded = false;
-superShotIsUpgraded = false;
-rerereIsUpgraded = false;
-speedIsUpgraded = false;
-chargerShootsIsUpgraded = false;
-slowMoIsUpgraded = false;
+
 
 
 

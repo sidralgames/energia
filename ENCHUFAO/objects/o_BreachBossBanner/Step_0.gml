@@ -11,6 +11,7 @@ y = __view_get( e__VW.YView, 0 )+0;
 if (image_index > 18)
 {
 	instance_activate_all();
+	instance_deactivate_object(o_pauseMenu);
 
 }
 
@@ -18,6 +19,7 @@ if (image_index >24)
 {
 	o_breachSpawner.alarm[0] = 1;
 	o_breachSpawner.alarm[1] = 1;
+	instance_deactivate_object(o_pauseMenu);
 	instance_destroy();
 }
 

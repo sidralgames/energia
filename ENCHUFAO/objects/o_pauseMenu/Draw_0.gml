@@ -4,37 +4,39 @@ azul = make_color_rgb(44,232, 245);
 
 
 draw_sprite_ext(s_pauseBackground,0, __view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0,1,1,0,image_blend, image_alpha)
-
+timesToDraw = 0;
 for (var i = 0; i<global.numberOfUpgradesPlayer; i++)
 {
-	upgrades = ds_map_find_value(global.PlayerUpgradesList, i)
+	upgrades = ds_map_find_value(global.PlayerUpgradesList, i);
+	
 	if (upgrades.times > 0) && (upgrades.inStat == false)
 	{
+		timesToDraw +=1;	
+	
 		if (upgrades.times = 1)
 		{
 			draw_set_halign(fa_left)
 			draw_set_font(Font2)
 			draw_set_color(azul)
-			draw_text(__view_get( e__VW.XView, 0 )+15,__view_get( e__VW.YView, 0 )+220+i*17, upgrades.nameUpgrade)
-			draw_text(__view_get( e__VW.XView, 0 )+16,__view_get( e__VW.YView, 0 )+221+i*17, upgrades.nameUpgrade)
+			draw_text(__view_get( e__VW.XView, 0 )+15,__view_get( e__VW.YView, 0 )+220+timesToDraw*17, upgrades.nameUpgrade)
+			draw_text(__view_get( e__VW.XView, 0 )+16,__view_get( e__VW.YView, 0 )+221+timesToDraw*17, upgrades.nameUpgrade)
 			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+16,__view_get( e__VW.YView, 0 )+220+i*17, upgrades.nameUpgrade)
+			draw_text(__view_get( e__VW.XView, 0 )+16,__view_get( e__VW.YView, 0 )+220+timesToDraw*17, upgrades.nameUpgrade)
 		}
 		else
 		{
 			draw_set_halign(fa_left)
 			draw_set_font(Font2)
 			draw_set_color(azul)
-			draw_text(__view_get( e__VW.XView, 0 )+19,__view_get( e__VW.YView, 0 )+210+i*17, upgrades.nameUpgrade)/////Como?? " x " + upgrades.times??
-			draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+211+i*17, upgrades.nameUpgrade)
+			draw_text(__view_get( e__VW.XView, 0 )+15,__view_get( e__VW.YView, 0 )+220+timesToDraw*17, string(upgrades.nameUpgrade) +" x" + string(upgrades.times))
+			draw_text(__view_get( e__VW.XView, 0 )+16,__view_get( e__VW.YView, 0 )+221+timesToDraw*17, string(upgrades.nameUpgrade) +" x" + string(upgrades.times))
 			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+210+i*17, upgrades.nameUpgrade)
+			draw_text(__view_get( e__VW.XView, 0 )+16,__view_get( e__VW.YView, 0 )+220+timesToDraw*17, string(upgrades.nameUpgrade) +" x" + string(upgrades.times))
 		}
 	}
 }
 
 draw_sprite_ext(s_pause,0, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+50,1,1,0,image_blend, image_alpha)
-
 
 draw_sprite_ext(s_shipstats,0, __view_get( e__VW.XView, 0 )+60,__view_get( e__VW.YView, 0 )+150,1,1,0,image_blend, image_alpha)
 
