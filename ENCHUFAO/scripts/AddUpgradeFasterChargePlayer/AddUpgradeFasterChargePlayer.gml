@@ -6,6 +6,7 @@ ds_map_add(global.PlayerUpgradesList, global.numberOfUpgradesPlayer,
 	{ 
 		isPicked: false,
 		times: 0,
+		inStat: false,
 		unique: false,
 		nameUpgrade: "Faster Charge",
 		obj: o_enchufeUpgadeCharge,

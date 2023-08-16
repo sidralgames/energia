@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+customFont = font_add("ChubbyChoo-SemiBold.ttf", 32, false, false, 32, 128);
+
 enum ENEMYSTATE
 {
 	PLUGGED,
@@ -8,6 +11,8 @@ enum ENEMYSTATE
 	CHASING,
 	SHOCKED
 }
+
+isPaused = false;
 
 global.strandedShipGreen = false;
 global.strandedShipBlue = false;
@@ -107,19 +112,19 @@ global.posNumberOfShips = 0;
 
 global.upgradesList = ds_map_create();
 
-AddUpgradeAmmo();
-AddUpgradeEnergy();
-AddUpgradeHP();
+//AddUpgradeAmmo();
+//AddUpgradeEnergy();
+//AddUpgradeHP();
 AddUpgradeFasterCharge();
 AddUpgradeSlowerDischarge();
-AddUpgradeLongerCable();
+//AddUpgradeLongerCable();
 AddUpgradeFireRate();
 AddUpgradeSuperShot();
-AddUpgradeShields();
-AddUpgradeReReRe();
-AddUpgradeSpeedUp();
-AddUpgradeChargerShoots();
-AddUpgradeSlowMo();
+//AddUpgradeShields();
+//AddUpgradeReReRe();
+//AddUpgradeSpeedUp();
+//AddUpgradeChargerShoots();
+//AddUpgradeSlowMo();
 
 
 global.shipList = ds_map_create();
@@ -133,19 +138,7 @@ AddShipPurple();
 
 global.PlayerUpgradesList = ds_map_create();
 
-AddUpgradeAmmoPlayer();
-AddUpgradeEnergyPlayer();
-AddUpgradeHPPlayer();
-AddUpgradeFasterChargePlayer();
-AddUpgradeSlowerDischargePlayer();
-AddUpgradeLongerCablePlayer();
-AddUpgradeFireRatePlayer();
-AddUpgradeSuperShotPlayer();
-AddUpgradeShieldsPlayer();
-AddUpgradeReReRePlayer();
-AddUpgradeSpeedUpPlayer();
-AddUpgradeChargerShootsPlayer();
-AddUpgradeSlowMoPlayer();
+
 
 //global.possibleShipList = ds_map_create();
 
@@ -156,7 +149,7 @@ AddUpgradeSlowMoPlayer();
 //AddShipPurplePos();
 
 
-for (var i = 0; i < global.numberOfUpgrades-1; i++)
+for (var i = 0; i < global.numberOfUpgrades; i++)
 {
 	upgrades = ds_map_find_value(global.upgradesList,i);
 	upgrades.isPicked = false;

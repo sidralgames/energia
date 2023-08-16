@@ -6,6 +6,7 @@ ds_map_add(global.PlayerUpgradesList, global.numberOfUpgradesPlayer,
 	{ 
 		isPicked: false,
 		times: 0,
+		inStat: false,
 		unique: false,
 		nameUpgrade: "Super Shot",
 		obj: o_enchufeUpgadeSuperShot,

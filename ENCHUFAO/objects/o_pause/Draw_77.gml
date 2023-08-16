@@ -29,6 +29,10 @@ if (pause)
 if (key_start)
 {
 	instance_activate_object(o_pauseMenu);
+	if instance_exists(o_main)
+	{
+		o_main.isPaused = true;
+	}
 	alarm[0] = 5;
 }
 

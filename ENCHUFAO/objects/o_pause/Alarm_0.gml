@@ -4,6 +4,7 @@
 if (!pause)
 	{
 		pause = true;
+		
 		instance_activate_object(o_pauseMenu);
 		instance_deactivate_all(true);
 		instance_activate_object(o_pauseMenu);
@@ -21,8 +22,10 @@ if (!pause)
 	}
 	else
 	{
+		
 		pause = false;
 		instance_activate_all();
+		o_main.isPaused = false;
 		instance_deactivate_object(o_pauseMenu);
 		if (surface_exists(pauseSurf)) surface_free(pauseSurf);
 		if (buffer_exists(pauseSurfBuffer)) buffer_delete(pauseSurfBuffer);

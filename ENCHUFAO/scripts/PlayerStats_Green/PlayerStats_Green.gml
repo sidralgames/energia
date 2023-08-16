@@ -29,4 +29,11 @@ function PlayerStats_Green()
 	global.shieldStat = global.shieldsMax;
 	global.cableStat = 4;
 	
+	
+	global.ammoStatInitial = global.ammoStat;
+	global.energyStatInitial = global.energyStat;
+	global.HPStatInitial = global.hpStat;
+	global.speedStatInitial = global.speedStat;
+	global.cableStatInitial = global.cableStat;
+	global.shieldStatInitial = global.shieldStat;
 }

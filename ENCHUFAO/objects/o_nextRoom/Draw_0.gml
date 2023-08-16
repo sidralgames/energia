@@ -42,5 +42,11 @@ if (key_x) && (shipSelected = false) && (ship.unlocked == 1)
 	instance_create_layer(30,40, "Enchufes" ,o_enchufeDeleteData)
 	Stats._visible = false;
 	player = instance_create_layer(x,y+100,"Player", o_playerShip)
+	global.ammoStatInitial = global.ammoStat;
+	global.energyStatInitial = global.energyStat;
+	global.HPStatInitial = global.hpStat;
+	global.speedStatInitial = global.speedStat;
+	global.cableStatInitial = global.cableStat;
+	global.shieldStatInitial = global.shieldStat;
 	
 }

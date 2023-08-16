@@ -2,116 +2,270 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function CheckEnchufeUpgrade()
 {
-	for (var i= 0; i< global.numberOfUpgradesPlayer -1; i++)
-	{
-		upg = ds_map_find_value(global.PlayerUpgradesList, i)	
-	}
-	
 	if (inEnchufe.upgradeAmmo = true) && (upgraded = false)
 	{
-		upg.times+=1;
+		if (!ammoIsUpgraded)
+		{
+			AddUpgradeAmmoPlayer();
+		}
+		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+		{
+			upg = ds_map_find_value(global.PlayerUpgradesList, i)
+			if (upg.obj = o_enchufeUpgadeAmmo)
+			{
+				upg.times+=1;
+			}
+		}
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.ammoMax += 50;
 		global.ammo = global.ammoMax;
+		global.ammoStat+=1;
+		ammoIsUpgraded = true;
 	}
 	else if (inEnchufe.upgradeEnergy = true) && (upgraded = false)
 	{
-		upg.times+=1;
+		if (!energyIsUpgraded)
+		{
+			AddUpgradeEnergyPlayer();
+		}
+		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+		{
+			upg = ds_map_find_value(global.PlayerUpgradesList, i)
+			if (upg.obj = o_enchufeUpgadeEnergy)
+			{
+				upg.times+=1;
+			}
+		}
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.energyTotal += 50;
 		global.energy = global.energyTotal;
+		global.energyStat+=1;
+		energyIsUpgraded = true;
 	}
 	else if (inEnchufe.upgradeHP = true) && (upgraded = false)
 	{
-		upg.times+=1;
+		if (!HPIsUpgraded)
+		{
+			AddUpgradeHPPlayer();
+		}
+		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+		{
+			upg = ds_map_find_value(global.PlayerUpgradesList, i)
+			if (upg.obj = o_enchufeUpgadeHP)
+			{
+				upg.times+=1;
+			}
+		}
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.hpMax += 1;
 		global.hp = global.hpMax;
+		global.hpStat+=1;
+		HPIsUpgraded = true;
 	}
 	else if (inEnchufe.upgradeCharge = true) && (upgraded = false)
 	{
-		upg.times+=1;
+		if (!fasterChargeIsUpgraded)
+		{
+			AddUpgradeFasterChargePlayer();
+		}
+		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+		{
+			upg = ds_map_find_value(global.PlayerUpgradesList, i)
+			if (upg.obj = o_enchufeUpgadeCharge)
+			{
+				upg.times+=1;
+			}
+		}
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.chargeTime += 0.5;
+		fasterChargeIsUpgraded = true;
 	}
 	else if (inEnchufe.upgradeDischarge = true) && (upgraded = false)
 	{
-		upg.times+=1;
+		if (!slowerDischargeIsUpgraded)
+		{
+			AddUpgradeSlowerDischargePlayer();
+		}
+		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+		{
+			upg = ds_map_find_value(global.PlayerUpgradesList, i)
+			if (upg.obj = o_enchufeUpgadeDischarge)
+			{
+				upg.times+=1;
+			}
+		}
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.DischargeTime += 2;
+		slowerDischargeIsUpgraded = true;
 	}
 	else if (inEnchufe.upgradeSuperShot = true) && (upgraded = false)
 	{
-		upg.times+=1;
+		if (!superShotIsUpgraded)
+		{
+			AddUpgradeSuperShotPlayer();
+		}
+		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+		{
+			upg = ds_map_find_value(global.PlayerUpgradesList, i)
+			if (upg.obj = o_enchufeUpgadeSuperShot)
+			{
+				upg.times+=1;
+			}
+		}
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.superShot += 0.25;
 		instance_destroy(o_partBalaP)
-		instance_create(-100,-100,o_partBalaP)
+		instance_create(-100,-100,o_partBalaP);
+		superShotIsUpgraded = true;
 	}
 	else if (inEnchufe.upgradeCable = true) && (upgraded = false)
 	{
-		upg.times+=1;
+		if (!cableIsUpgraded)
+		{
+			AddUpgradeLongerCablePlayer();
+		}
+		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+		{
+			upg = ds_map_find_value(global.PlayerUpgradesList, i)
+			if (upg.obj = o_enchufeUpgadeCable)
+			{
+				upg.times+=1;
+			}
+		}
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.cableStat+=1;
 		instance_destroy(o_cable);
 		instance_destroy(o_charger);
 		instance_create(x,y,o_cable)
+		cableIsUpgraded = true;
 
 	}
 	else if (inEnchufe.upgradeFireRate = true) && (upgraded = false)
 	{
-		upg.times+=1;
+		if (!fireRateIsUpgraded)
+		{
+			AddUpgradeFireRatePlayer();
+		}
+		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+		{
+			upg = ds_map_find_value(global.PlayerUpgradesList, i)
+			if (upg.obj = o_enchufeUpgadeFireRate)
+			{
+				upg.times+=1;
+			}
+		}
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.fireRate-=4;
+		fireRateIsUpgraded = true;
 	}
 	else if (inEnchufe.upgradeShield = true) && (upgraded = false)
 	{
-		upg.times+=1;
+		if (!shieldsIsUpgraded)
+		{
+			AddUpgradeShieldsPlayer();
+		}
+		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+		{
+			upg = ds_map_find_value(global.PlayerUpgradesList, i)
+			if (upg.obj = o_enchufeUpgadeShields)
+			{
+				upg.times+=1;
+			}
+		}
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.shieldsMax += 1;
 		global.shields = global.shieldsMax;
+		global.shieldStat+=1;
+		shieldsIsUpgraded = true;
 	}
 	else if (inEnchufe.upgradeReReRe = true) && (upgraded = false)
 	{
-		upg.times+=1;
+		if (!rerereIsUpgraded)
+		{
+			AddUpgradeReReRePlayer();
+		}
+		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+		{
+			upg = ds_map_find_value(global.PlayerUpgradesList, i)
+			if (upg.obj = o_enchufeUpgadeReReRe)
+			{
+				upg.times+=1;
+			}
+		}
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.hp = global.hpMax;
 		global.energy = global.energyTotal;
 		global.ammo = global.ammoMax;
 		global.shields = global.shieldsMax;
+		rerereIsUpgraded = true;
 	}
 	else if (inEnchufe.upgradeSpeed = true) && (upgraded = false)
 	{
-		upg.times+=1;
+		if (!speedIsUpgraded)
+		{
+			AddUpgradeSpeedUpPlayer();
+		}
+		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+		{
+			upg = ds_map_find_value(global.PlayerUpgradesList, i)
+			if (upg.obj = o_enchufeUpgadeSpeedUp)
+			{
+				upg.times+=1;
+			}
+		}
 		inEnchufe.charging = true;
 		upgraded = true;
 		global._speed += 0.5;
+		global.speedStat+=1;
+		speedIsUpgraded = true;
 	}
 	else if (inEnchufe.upgradeChargerShoots = true) && (upgraded = false)
 	{
-		upg.times+=1;
+		if (!chargerShootsIsUpgraded)
+		{
+			AddUpgradeChargerShootsPlayer();
+		}
+		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+		{
+			upg = ds_map_find_value(global.PlayerUpgradesList, i)
+			if (upg.obj = o_enchufeUpgadeChargerShoots)
+			{
+				upg.times+=1;
+			}
+		}
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.chargerShoots = true;
+		chargerShootsIsUpgraded = true;
 	}
 	else if (inEnchufe.upgradeSlowMo = true) && (upgraded = false)
 	{
-		upg.times+=1;
+		if (!slowMoIsUpgraded)
+		{
+			AddUpgradeSlowMoPlayer();
+		}
+		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+		{
+			upg = ds_map_find_value(global.PlayerUpgradesList, i)
+			if (upg.obj = o_enchufeUpgadeSlowMo)
+			{
+				upg.times+=1;
+			}
+		}
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.slowMoTimeMax += 50;
 		global.slowMoTime = global.slowMoTimeMax;
+		slowMoIsUpgraded = true;
 	}
-	
-	
 }
