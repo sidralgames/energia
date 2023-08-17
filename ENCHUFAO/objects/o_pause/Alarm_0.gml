@@ -4,7 +4,7 @@
 if (!pause)
 	{
 		pause = true;
-		
+		spriteBack=0;
 		instance_activate_object(o_pauseMenu);
 		instance_deactivate_all(true);
 		instance_activate_object(o_pauseMenu);
@@ -12,13 +12,6 @@ if (!pause)
 		surface_set_target(pauseSurf);
 		draw_surface(application_surface,0,0);
 		surface_reset_target();
-		
-		if (buffer_exists(pauseSurfBuffer))
-		{
-			buffer_delete(pauseSurfBuffer)
-		}
-		pauseSurfBuffer = buffer_create(resW * resH * 4, buffer_fixed, 1);
-		buffer_get_surface(pauseSurfBuffer, pauseSurf,0);
 	}
 	else
 	{
@@ -28,6 +21,5 @@ if (!pause)
 		o_main.isPaused = false;
 		instance_deactivate_object(o_pauseMenu);
 		if (surface_exists(pauseSurf)) surface_free(pauseSurf);
-		if (buffer_exists(pauseSurfBuffer)) buffer_delete(pauseSurfBuffer);
 	}
 

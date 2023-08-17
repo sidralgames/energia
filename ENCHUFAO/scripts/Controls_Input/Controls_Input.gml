@@ -10,6 +10,11 @@ function Controls_Input()
 	key_shoot = mouse_check_button(mb_left) || gamepad_button_check(0, gp_shoulderr)
 	key_bomb = mouse_check_button(mb_middle) || gamepad_button_check(0, gp_shoulderl)
 	
+	key_upP = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W")) || gamepad_button_check_pressed(0, gp_padu)// || gamepad_axis_value(0, gp_axislv) < -0.5;
+	key_downP = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S")) || gamepad_button_check_pressed(0, gp_padd) //|| gamepad_axis_value(0, gp_axislv) > 0.5;
+	
+	
+	
 	key_r1Down =  gamepad_button_check(0, gp_shoulderr)
 	key_l1Down =  gamepad_button_check(0, gp_shoulderl)
 	key_r2Down =  gamepad_button_check(0, gp_shoulderrb)

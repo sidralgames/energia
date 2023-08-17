@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 customFont = font_add("ChubbyChoo-SemiBold.ttf", 32, false, false, 32, 128);
-
+global.screenshakeIsOn = true;
 enum ENEMYSTATE
 {
 	PLUGGED,
