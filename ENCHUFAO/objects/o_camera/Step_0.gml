@@ -26,21 +26,23 @@ Controls_Input()
 		}
 		
 	}
-
+	
+	if (global.screenshakeIsOn)
+	{
 	//shake
-	if (shakeRemain >0)
-	{
-		x+= random_range(-shakeRemain,shakeRemain);
-		y+= random_range(-shakeRemain, shakeRemain);
+		if (shakeRemain >0)
+		{
+			x+= random_range(-shakeRemain,shakeRemain);
+			y+= random_range(-shakeRemain, shakeRemain);
 
-		shakeRemain = lerp(shakeRemain, 0, 0.05)
-	}
+			shakeRemain = lerp(shakeRemain, 0, 0.05)
+		}
 	
-	if (shakeRemain <= 0.5)
-	{
-		shakeRemain = 0
+		if (shakeRemain <= 0.5)
+		{
+			shakeRemain = 0
+		}
 	}
-	
 
 
 

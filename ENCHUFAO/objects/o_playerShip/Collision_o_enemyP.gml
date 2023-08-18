@@ -12,6 +12,7 @@ if (global.shields<1)
 		global.hp -=1;
 		screenShake(4,30)
 		other._hp = 0;
+		global.hitsTaken+=1;
 	}
 }
 

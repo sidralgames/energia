@@ -17,7 +17,7 @@ switch(state)
 
 if (_hp <= 0)
 {
-	screenShake(1,10);
+	EnemyDeathShake();
 	
 	global.XPpoints +=enemyXP;
 	

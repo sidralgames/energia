@@ -3,6 +3,7 @@
 
 _hp = 0;
 global.shields-=1;
+global.shieldsUsed+=1;
 gamepad_set_vibration(0,0.1,0.1);
 if instance_exists(o_playerShip)
 {

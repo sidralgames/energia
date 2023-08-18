@@ -17,7 +17,7 @@ function PlayerShipPETA()
 	
 		var peta = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
 		"Enchufes", o_enchufePETA);
-		
+		global.petasUsed+=1;
 		global.PETAAmmo-=1;
 		
 		off =  random_range(offRange,-offRange)

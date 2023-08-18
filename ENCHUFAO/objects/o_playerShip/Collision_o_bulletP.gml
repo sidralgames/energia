@@ -11,7 +11,8 @@ if (global.shields<1)
 		alarm[1] = 30
 		tocado = true;
 		global.hp -=1;
-		screenShake(4,30)
+		screenShake(4,30);
+		global.hitsTaken+=1;
 	}
 }
 

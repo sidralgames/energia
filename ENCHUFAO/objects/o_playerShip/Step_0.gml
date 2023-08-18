@@ -72,7 +72,7 @@ else
 
 part_particles_create(global.naveP_sys, x, y, global.naveP , 5)
 PlayerState_Free();
-Move();
+MovePlayer();
 
 if (o_charger.overcharged)
 {

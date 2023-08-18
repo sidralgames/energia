@@ -2,6 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PlayerShipBomb()
 {
+	
 	gamepad_set_vibration(0,0.2,0.2);
 	alarm[4] = 3 ;
 	explo = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
@@ -19,7 +20,7 @@ function PlayerShipBomb()
 		"Bullets", o_bulletPlayer_Bomb);
 		
 		global.bombAmmo-=1;
-		
+		global.bombsFired+=1;
 		off =  random_range(offRange,-offRange)
 		bullet._hpush = lengthdir_x(5, _angle + off);
 		bullet._vpush = lengthdir_y(5, _angle + off);

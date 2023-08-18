@@ -1,6 +1,22 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
+
+
+//RESETEAR BIEN LAS GLOBALES PORQUE AHORA ES GAME RESTART Y CHAO, POR EJEMPLO LA DE ABAJO
+global.timesConnected = 0;
+global.secsInSlowMo = 0;
+global.enemiesKilled = 0;
+global.playerBumps = 0;
+global.shootsFired = 0;
+global.shieldsUsed = 0;
+global.hitsTaken = 0;
+global.secsConnected = 0;
+global.bombsFired = 0;
+global.petasUsed = 0;
+
+
 customFont = font_add("ChubbyChoo-SemiBold.ttf", 32, false, false, 32, 128);
 global.screenshakeIsOn = true;
 enum ENEMYSTATE
@@ -152,6 +168,10 @@ AddShipPurple();
 
 
 global.PlayerUpgradesList = ds_map_create();
+
+global.numberOfInfos = 0;
+global.InfoList = ds_map_create();
+
 
 
 

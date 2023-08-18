@@ -6,6 +6,7 @@ pauseSurf = -1;
 pauseSurfBuffer = -1;
 
 pausedByCinematic = false;
+goToMenu = false;
 image_speed = 0.25;
 
 resW = display_get_width();
@@ -18,6 +19,7 @@ alarm[1] = 20;
 font_add_enable_aa(false);
 
 customFont = font_add("ChubbyChoo-SemiBold.ttf", 14, false, false, 32, 128);
+customFont2 = font_add("ChubbyChoo-SemiBold.ttf", 12, false, false, 32, 128);
 
 timesToDraw = 0;
 

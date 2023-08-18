@@ -12,7 +12,7 @@ if instance_exists(o_playerShip)
 
 if (_hp <= 0)
 {
-	screenShake(1,10)
+	EnemyDeathShake();
 	if instance_exists(cross)
 	{
 		instance_destroy(cross)

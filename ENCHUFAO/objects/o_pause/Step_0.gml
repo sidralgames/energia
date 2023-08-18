@@ -9,6 +9,24 @@ if instance_exists(o_playerShip)
 InputMenu();
 Controls_Input();
 
+if (goToMenu)
+{
+	spriteBack+=0.5;
+	if (spriteBack >=7)
+	{
+		spriteBack = 7;
+	}
+	
+}
+else
+{
+	spriteBack-=0.5;
+	if (spriteBack <=1)
+	{
+		spriteBack = 0;
+	}
+	
+}
 if (pause)
 {
 	if (key_upP)
@@ -43,14 +61,10 @@ if (pause)
 				}
 				break;
 			
-				case 1: 
-				if (spriteBack = 1)
+				case 1:
 				{
-					spriteBack = 0;	
-				}
-				else if (spriteBack = 0)
-				{
-					spriteBack = 1	
+					goToMenu = true;
+					selected = 0;
 				}
 				break;
 			
@@ -87,19 +101,15 @@ if (pause)
 				break;
 			
 				case 1: 
-				if (spriteBack = 1)
 				{
-					spriteBack = 0;	
-				}
-				else if (spriteBack = 0)
-				{
-					spriteBack = 1	
+					global.screenshakeIsOn = !global.screenshakeIsOn;
 				}
 				break;
 			
 				case 2:
 				{
-					global.screenshakeIsOn = !global.screenshakeIsOn;
+					goToMenu = false;
+					
 				}
 				break;
 				
