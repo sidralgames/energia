@@ -10,5 +10,9 @@ function infoPause()
 		case 3: text = "You have dropped " + string(global.bombsFired) + " bombs"; break;
 		case 4: text = "Saved " + string(global.shieldsUsed) + " times by a shield"; break;
 		case 5: text = string(global.hitsTaken) + " Hits taken"; break;
+		case 6: text = "Tip: Do not get hit"; break;
+		case 7: text = "Remember: L2 to slowmotion"; break;
+		case 8: text = "Tip: Contain the breach"; break;
+		case 9: text = "Tip: Keep an eye on you energy"; break;
 	}
 }

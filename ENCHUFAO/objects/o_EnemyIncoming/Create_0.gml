@@ -10,7 +10,12 @@ else if (global.level =3)
 {
 	enemy = choose(o_enemy, o_enemyFast, o_enemyDisp, o_enemy_Waiting_Shield)
 }
-else if (global.level >=5)
+else if (global.level =5)
+{
+	enemy = choose(o_enemy, o_enemyFast, o_enemyDisp, o_enemyMisil, o_enemy_Waiting_Shield,
+	o_enemy, o_enemyFast, o_enemyDisp, o_enemyMisil, o_enemy_Waiting_Shield)
+}
+else if (global.level >5)
 {
 	enemy = choose(o_enemy, o_enemyFast, o_enemyDisp, o_enemyMisil, o_enemy_Waiting_Shield,
 	o_enemy, o_enemyFast, o_enemyDisp, o_enemyMisil, o_enemy_Waiting_Shield, o_enemyTurret)

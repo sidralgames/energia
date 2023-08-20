@@ -11,7 +11,7 @@ Controls_Input();
 
 if (goToMenu)
 {
-	spriteBack+=0.5;
+	spriteBack+=0.4;
 	if (spriteBack >=7)
 	{
 		spriteBack = 7;
@@ -64,7 +64,6 @@ if (pause)
 				case 1:
 				{
 					goToMenu = true;
-					selected = 0;
 				}
 				break;
 			

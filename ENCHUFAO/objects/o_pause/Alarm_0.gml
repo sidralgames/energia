@@ -4,7 +4,7 @@
 if (!pause)
 	{
 		
-		info = irandom(5);
+		info = irandom(9);
 		pause = true;
 		spriteBack=0;
 		instance_activate_object(o_pauseMenu);
