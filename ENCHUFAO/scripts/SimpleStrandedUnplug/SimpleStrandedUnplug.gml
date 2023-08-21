@@ -16,6 +16,17 @@ function SimpleStrandedUnplug()
 	//global.unPlugging = true;
 	thisStrandedShip.connected = false;
 	thisStrandedShip.state = STRANDEDSHIPSTATE.STRANDED;
+	if (thisStrandedShip._hpush <= 0.2) && (thisStrandedShip._hpush >= 0) && (abs(thisStrandedShip._vpush) <=0.2)
+	{
+		thisStrandedShip._hpush = 0.5;
+		thisStrandedShip._vpush = choose(0.3, -0.3);
+	}
+	else if (thisStrandedShip._hpush >= -0.2) && (thisStrandedShip._hpush <= 0) && (abs(thisStrandedShip._vpush) <=0.2)
+	{
+		thisStrandedShip._hpush = -0.5;
+		thisStrandedShip._vpush = choose(0.3, -0.3);
+		
+	}
 	with (thisStrandedShip)
 	{
 		cable = instance_create_layer(x, y, "Enemies", o_cableStrandedShip);

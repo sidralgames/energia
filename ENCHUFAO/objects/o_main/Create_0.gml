@@ -63,6 +63,8 @@ global.BossBreach_Banner = false;
 global.slowMoTimeMax = 300;
 global.slowMoTime = 300;
 
+global.overchargeTime = 1;
+
 global.totalEnemiesOnScreen = 0;
 
 
@@ -140,6 +142,7 @@ global.slowerDischargeIsUpgraded = false;
 global.slowMoIsUpgraded = false;
 global.speedIsUpgraded = false;
 global.superShotIsUpgraded = false;
+global.overchargeIsUpgraded = false;
 
 global.upgradesList = ds_map_create();
 
@@ -156,6 +159,7 @@ AddUpgradeReReRe();
 AddUpgradeSpeedUp();
 AddUpgradeChargerShoots();
 AddUpgradeSlowMo();
+AddUpgradeOvercharge();
 
 
 global.shipList = ds_map_create();

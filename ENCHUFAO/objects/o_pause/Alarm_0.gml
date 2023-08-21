@@ -7,6 +7,7 @@ if (!pause)
 		info = irandom(9);
 		pause = true;
 		spriteBack=0;
+		selected=0;
 		instance_activate_object(o_pauseMenu);
 		instance_deactivate_all(true);
 		instance_activate_object(o_pauseMenu);
@@ -19,6 +20,9 @@ if (!pause)
 	{
 		
 		pause = false;
+		selected=0;
+		spriteBack=0;
+		goToMenu=false;
 		instance_activate_all();
 		o_main.isPaused = false;
 		instance_deactivate_object(o_pauseMenu);

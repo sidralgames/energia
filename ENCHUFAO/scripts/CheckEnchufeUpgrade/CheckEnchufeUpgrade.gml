@@ -282,4 +282,24 @@ function CheckEnchufeUpgrade()
 		global.slowMoTime = global.slowMoTimeMax;
 		
 	}
+	else if (inEnchufe.upgradeOvercharge = true) && (upgraded = false)
+	{
+		if (!global.overchargeIsUpgraded)
+		{
+			global.overchargeIsUpgraded = true;
+			AddUpgradeOverchargePlayer();
+		}
+		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+		{
+			upg = ds_map_find_value(global.PlayerUpgradesList, i)
+			if (upg.obj = o_enchufeUpgadeOvercharge)
+			{
+				upg.times+=1;
+			}
+		}
+		inEnchufe.charging = true;
+		upgraded = true;
+		global.overchargeTime-=0.2;
+		
+	}
 }

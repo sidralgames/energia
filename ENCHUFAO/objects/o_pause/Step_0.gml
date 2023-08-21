@@ -11,7 +11,7 @@ Controls_Input();
 
 if (goToMenu)
 {
-	spriteBack+=0.4;
+	spriteBack+=0.7;
 	if (spriteBack >=7)
 	{
 		spriteBack = 7;
@@ -20,7 +20,7 @@ if (goToMenu)
 }
 else
 {
-	spriteBack-=0.5;
+	spriteBack-=0.8;
 	if (spriteBack <=1)
 	{
 		spriteBack = 0;

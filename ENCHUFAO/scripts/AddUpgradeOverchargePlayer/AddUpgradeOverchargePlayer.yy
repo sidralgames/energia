@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "addInfoEnemiesKilled",
+  "name": "AddUpgradeOverchargePlayer",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

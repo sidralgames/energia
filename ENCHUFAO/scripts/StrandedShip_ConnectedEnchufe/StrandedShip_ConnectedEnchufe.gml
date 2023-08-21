@@ -98,15 +98,17 @@ function StrandedShip_ConnectedEnchufe()
 		state = STRANDEDSHIPSTATE.CONNECTEDSHIP;
 	}
 	
-	if (shipReady) && (disconectedFirstTime == false)
+	if (shipReady) && (disconectedFirstTime == false) 
 	{
 		disconectedFirstTime = true;
 		with(myCable)
 		{
 			enchufe.withStrandedShip = false;
 		}
-		
-		o_playerShip.pluggedShip=false;
+		if instance_exists(o_playerShip)
+		{
+			o_playerShip.pluggedShip=false;
+		}
 		connectedToEnchufe = false;
 		instance_destroy(myCable);
 		instance_destroy(myCharger);

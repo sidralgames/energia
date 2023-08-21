@@ -20,6 +20,7 @@ if (pause)
 if (key_start)
 {
 	//addInfoEnemiesKilled();
+
 	instance_activate_object(o_pauseMenu);
 	if instance_exists(o_main)
 	{
@@ -37,18 +38,18 @@ azul = make_color_rgb(44,232, 245);
 orange = make_color_rgb(254,174, 52);
 yellow = make_color_rgb(254,231, 97);
 
+draw_set_alpha(0.5);
+draw_rectangle_color(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ), __view_get( e__VW.XView, 0 )+ 640,__view_get( e__VW.YView, 0 )+360,c_black, c_black, c_black,c_black, false)
+draw_set_alpha(1);
 
 draw_sprite_ext(s_pauseBackground,spriteBack, __view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0,1,1,0,image_blend, image_alpha)
+draw_sprite_ext(s_pause,0, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+50,1,1,0,image_blend, image_alpha)
 
 
 	if (spriteBack < 1)
 	{
 		timesToDraw = 0;
 
-		draw_set_alpha(0.25)
-		draw_rectangle_color(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ), __view_get( e__VW.XView, 0 )+ 640,__view_get( e__VW.YView, 0 )+360,c_black, c_black, c_black,c_black, false)
-		draw_set_alpha(1);
-	
 		infoPause();
 		
 		draw_set_halign(fa_center)
@@ -61,8 +62,7 @@ draw_sprite_ext(s_pauseBackground,spriteBack, __view_get( e__VW.XView, 0 )+0,__v
 			
 		DrawUpgradeNames();
 		
-		draw_sprite_ext(s_pause,0, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+50,1,1,0,image_blend, image_alpha)
-
+		
 		DrawStatsUpgrades();
 
 		//-------------MENU-------------////
