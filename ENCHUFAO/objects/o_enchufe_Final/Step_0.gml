@@ -24,8 +24,12 @@ if instance_exists(o_playerShip)
 {
 	if o_playerShip.plugged = true && (o_playerShip.pluggedFinal = true)
 	{
-		if cont = false
+		if (cont = false)
 		{
+			if (o_playerShip.bumpsAchievement = true) && (global.achNoBump = 0) && (room  = Sala_0)
+			{
+				global.achNoBump = 1;
+			}
 			cont = true
 			alarm[0] = 120;
 		}

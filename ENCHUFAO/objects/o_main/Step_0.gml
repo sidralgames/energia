@@ -2,7 +2,12 @@
 // You can write your code in this editor
 
 
+///-------------ACHIEVEMENTS-----////
 
+if (global.enemiesKilledTotalAch >= 500) && (global.ach500Enemies = 0)
+{
+	global.ach500Enemies = 1;
+}
 
 
 if instance_exists(o_playerShip) && (room != Sala_Inicio)

@@ -1,7 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 Controls_Input()
-draw_self();
+if (!instance_exists(o_menuAchievements))
+{
+	draw_self();
+}
 draw_set_halign(fa_center)
 //if gamepad_is_connected(0)
 //{
@@ -27,26 +30,29 @@ else
 	spriteToShow = ship.spriteLocked;
 }
 
-if (shipSelected = false)
+if (shipSelected = false) && (canSelectShip)
 {
 	draw_sprite_ext(spriteToShow,0,x,y+100,2,2,90,image_blend, image_alpha)
 	draw_sprite_ext(s_arrows,0,x-70,y+100,1,1,0,image_blend, image_alpha)
 	draw_sprite_ext(s_arrows,1,x+70,y+100,1,1,0,image_blend, image_alpha)
 }
 
-if (key_x) && (shipSelected = false) && (ship.unlocked == 1)
+if (canSelectShip) && (alarm[0] < 60)
 {
-	shipSelected = true;
-	instance_create_layer(512,269, "Enchufes", o_enchufeInicio)
-	instance_create_layer(112,272, "Enchufes" ,o_enchufeResetSelector)
-	instance_create_layer(30,40, "Enchufes" ,o_enchufeDeleteData)
-	Stats._visible = false;
-	player = instance_create_layer(x,y+100,"Player", o_playerShip)
-	global.ammoStatInitial = global.ammoStat;
-	global.energyStatInitial = global.energyStat;
-	global.HPStatInitial = global.hpStat;
-	global.speedStatInitial = global.speedStat;
-	global.cableStatInitial = global.cableStat;
-	global.shieldStatInitial = global.shieldStat;
+	if (key_x) && (shipSelected = false) && (ship.unlocked == 1)
+	{
+		shipSelected = true;
+		instance_create_layer(512,269, "Enchufes", o_enchufeInicio)
+		instance_create_layer(112,272, "Enchufes" ,o_enchufeResetSelector)
+		instance_create_layer(30,40, "Enchufes" ,o_enchufeDeleteData)
+		Stats._visible = false;
+		player = instance_create_layer(x,y+100,"Player", o_playerShip)
+		global.ammoStatInitial = global.ammoStat;
+		global.energyStatInitial = global.energyStat;
+		global.HPStatInitial = global.hpStat;
+		global.speedStatInitial = global.speedStat;
+		global.cableStatInitial = global.cableStat;
+		global.shieldStatInitial = global.shieldStat;
 	
+	}
 }

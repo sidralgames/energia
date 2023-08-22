@@ -2,15 +2,15 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function DoCablePhysics()
 {
-	if (tile_meeting(x+_hpush,y,"Tiles"))
-	{
-	    _hpush = -_hpush*bnc;
-	} 
+	//if (tile_meeting(x+_hpush,y,"Tiles"))
+	//{
+	//    _hpush = -_hpush*bnc;
+	//} 
 	
-	if (tile_meeting(x,y+_vpush,"Tiles"))
-	{
-	    _vpush = -_vpush*bnc;
-	}
+	//if (tile_meeting(x,y+_vpush,"Tiles"))
+	//{
+	//    _vpush = -_vpush*bnc;
+	//}
 	
 	if instance_exists(myCharger)
 	{

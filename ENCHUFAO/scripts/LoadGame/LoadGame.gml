@@ -9,6 +9,9 @@ function LoadGame()
 	global.shipRedUnlocked = ini_read_real("ships","shipRedUnlocked", 0);
 	global.shipDarkUnlocked = ini_read_real("ships","shipDarkUnlocked", 0);
 	global.shipPurpleUnlocked = ini_read_real("ships","shipPurpleUnlocked", 0);
+	global.achNoBump =  ini_read_real("ach","noBump", 0);
+	global.ach500Enemies =  ini_read_real("ach","500Enemies", 0);
+	global.enemiesKilledTotalAch = ini_read_real("ach","EnemiesKilledTotal", 0);
 	ini_close();
 	
 	

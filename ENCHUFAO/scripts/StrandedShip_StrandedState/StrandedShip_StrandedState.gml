@@ -4,8 +4,14 @@ function StrandedShip_StrandedState()
 {
 	if (connected)
 	{
-		myCharger._hpush=0;
+		myCharger._hpush = 0;
 		myCharger._vpush = 0;
+		path_end();
+		speed = 0;
+		_hpush = 0;
+		_vpush = 0;
+		vspeed = 0;
+		hspeed = 0;
 		state = STRANDEDSHIPSTATE.CONNECTEDSHIP;
 	}
 	
@@ -34,7 +40,10 @@ function StrandedShip_StrandedState()
 				direction += sign(dsin(a - direction)) * (strtandedPrecision * global.relativeSpeed);
 				_angle = direction;
 				speed = strandedSpeed * min(1, global.relativeSpeed+0.2);
-				if (tile_meeting(x+hspeed,y,"Tiles"))
+				
+				if (!connected)
+				{
+					if (tile_meeting(x+hspeed,y,"Tiles"))
 					{
 					    hspeed = -hspeed*bnc;
 					} 
@@ -43,6 +52,7 @@ function StrandedShip_StrandedState()
 					{
 					    vspeed = -vspeed*bnc;
 					}
+				}
 				//_angle = point_direction(myCharger.x,  myCharger.y, x, y)
 			}
 		}

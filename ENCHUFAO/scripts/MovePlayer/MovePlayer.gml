@@ -9,12 +9,14 @@ if (tile_meeting(x+_hpush*1.25,y,"Tiles"))
     _hpush = -_hpush*bnc;
 	alarm[3] = 5;
 	global.playerBumps+=1;
+	bumpsAchievement = false;
 }
 if (tile_meeting(x,y+_vpush*1.25,"Tiles"))
 {
     _vpush = -_vpush*bnc;
 	alarm[3] = 5;
 	global.playerBumps+=1;
+	bumpsAchievement = false;
 }
 
 x+=_hpush * global.relativeSpeed;

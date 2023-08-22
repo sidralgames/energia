@@ -7,3 +7,4 @@ if (isCounted == true)
 
 global.totalEnemiesOnScreen-=1;
 global.enemiesKilled+=1;
+global.enemiesKilledTotalAch+=1;

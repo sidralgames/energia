@@ -9,4 +9,9 @@ function LoadDefaultData()
 	global.shipDarkUnlocked  = 0;
 	global.shipPurpleUnlocked  = 0;
 	
+	//achievement
+	global.achNoBump = 0;
+	global.ach500Enemies = 0;
+	global.enemiesKilledTotalAch = 0;
+	
 }

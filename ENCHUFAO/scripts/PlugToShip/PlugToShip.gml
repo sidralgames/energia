@@ -16,6 +16,7 @@ function PlugToShip()
 	with (thisStrandedShip)
 	{
 		cableFake = instance_create_layer(x,y, "Enemies", o_cableStrandedShipFake);
+		path_end();
 	}
 	//ship._hpush = thisStrandedShip._hpush;
 	//ship._vpush = thisStrandedShip._vpush;
@@ -24,6 +25,10 @@ function PlugToShip()
 	ship.connected = true;
 	thisStrandedShip.connectedToEnchufe = false;
 	thisStrandedShip.speed = 0;
+	thisStrandedShip._hpush = 0;
+	thisStrandedShip._vpush = 0;
+	thisStrandedShip.hspeed = 0;
+	thisStrandedShip.vspeed = 0;
 	global.xToPlug = ship.x;
 	global.yToPlug = ship.y;
 }

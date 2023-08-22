@@ -2,6 +2,11 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function StrandedShip_ConnectedShip()
 {
+	speed = 0;
+	path_end();
+	
+	DoCablePhysics();
+	
 	if (tile_meeting(x+_hpush,y,"Tiles"))
 	{
 	    _hpush = -_hpush*bnc;
@@ -11,7 +16,6 @@ function StrandedShip_ConnectedShip()
 	{
 	    _vpush = -_vpush*bnc;
 	}
-	DoCablePhysics();
 	
 	//----- GO TO CONNECTED ENCHUFE STATE----//
 	if (connectedToEnchufe)

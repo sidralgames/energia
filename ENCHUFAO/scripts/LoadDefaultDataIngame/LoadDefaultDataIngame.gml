@@ -9,6 +9,10 @@ function LoadDefaultDataIngame()
 	global.shipDarkUnlocked  = 0;
 	global.shipPurpleUnlocked  = 0;
 	
+	global.ach500Enemies = 0;
+	global.achNoBump = 0;
+	global.enemiesKilledTotalAch = 0;
+	
 	for (var i = 0; i <global.numberOfShips; i++)
 	{
 		ship = ds_map_find_value(global.shipList, i)

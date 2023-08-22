@@ -3,17 +3,17 @@
 function DrawStatsUpgrades()
 {
 	draw_sprite_ext(s_statsAndUpgrades,0, __view_get( e__VW.XView, 0 )+130,__view_get( e__VW.YView, 0 )+110,1,1,0,image_blend, image_alpha)
-	draw_sprite_ext(s_shipstatsPause,0, __view_get( e__VW.XView, 0 )+75,__view_get( e__VW.YView, 0 )+172,1,1,0,image_blend, image_alpha)
+	draw_sprite_ext(s_shipstatsPause,0, __view_get( e__VW.XView, 0 )+65,__view_get( e__VW.YView, 0 )+172,1,1,0,image_blend, image_alpha)
 	
 	for (var i = 0; i <= global.energyStat-1; i++)
 	{
 		if (i < global.energyStatInitial)
 		{
-			draw_sprite(s_indivStatPause, 0,  __view_get( e__VW.XView, 0 )+ 132 +(i * 10),__view_get( e__VW.YView, 0 )+135)	
+			draw_sprite(s_indivStatPause, 0,  __view_get( e__VW.XView, 0 )+ 120 +(i * 10),__view_get( e__VW.YView, 0 )+135)	
 		}
 		else
 		{
-			draw_sprite(s_indivStatPause, 1,  __view_get( e__VW.XView, 0 )+ 132 +(i * 10),__view_get( e__VW.YView, 0 )+135)	
+			draw_sprite(s_indivStatPause, 1,  __view_get( e__VW.XView, 0 )+ 120 +(i * 10),__view_get( e__VW.YView, 0 )+135)	
 		}
 	}
 
@@ -21,11 +21,11 @@ function DrawStatsUpgrades()
 	{
 		if (i < global.speedStatInitial)
 		{
-			draw_sprite(s_indivStatPause, 0,  __view_get( e__VW.XView, 0 )+ 132 +(i * 10),__view_get( e__VW.YView, 0 )+150)	
+			draw_sprite(s_indivStatPause, 0,  __view_get( e__VW.XView, 0 )+ 120 +(i * 10),__view_get( e__VW.YView, 0 )+150)	
 		}
 		else
 		{
-			draw_sprite(s_indivStatPause, 1,  __view_get( e__VW.XView, 0 )+ 132 +(i * 10),__view_get( e__VW.YView, 0 )+150)	
+			draw_sprite(s_indivStatPause, 1,  __view_get( e__VW.XView, 0 )+ 120 +(i * 10),__view_get( e__VW.YView, 0 )+150)	
 		}
 	}
 
@@ -33,11 +33,11 @@ function DrawStatsUpgrades()
 	{
 		if (i < global.HPStatInitial)
 		{
-			draw_sprite(s_indivStatPause, 0,  __view_get( e__VW.XView, 0 )+ 132 +(i * 10),__view_get( e__VW.YView, 0 )+165)	
+			draw_sprite(s_indivStatPause, 0,  __view_get( e__VW.XView, 0 )+ 120 +(i * 10),__view_get( e__VW.YView, 0 )+165)	
 		}
 		else
 		{
-			draw_sprite(s_indivStatPause, 1,  __view_get( e__VW.XView, 0 )+ 132 +(i * 10),__view_get( e__VW.YView, 0 )+165)
+			draw_sprite(s_indivStatPause, 1,  __view_get( e__VW.XView, 0 )+ 120 +(i * 10),__view_get( e__VW.YView, 0 )+165)
 		}
 	}
 
@@ -45,11 +45,11 @@ function DrawStatsUpgrades()
 	{
 		if (i < global.ammoStatInitial)
 		{
-			draw_sprite(s_indivStatPause, 0,  __view_get( e__VW.XView, 0 )+ 132 +(i * 10),__view_get( e__VW.YView, 0 )+180)	
+			draw_sprite(s_indivStatPause, 0,  __view_get( e__VW.XView, 0 )+ 120 +(i * 10),__view_get( e__VW.YView, 0 )+180)	
 		}
 		else
 		{
-			draw_sprite(s_indivStatPause, 1,  __view_get( e__VW.XView, 0 )+ 132 +(i * 10),__view_get( e__VW.YView, 0 )+180)	
+			draw_sprite(s_indivStatPause, 1,  __view_get( e__VW.XView, 0 )+ 120 +(i * 10),__view_get( e__VW.YView, 0 )+180)	
 		}
 	}
 
@@ -57,11 +57,11 @@ function DrawStatsUpgrades()
 	{
 		if (i < global.shieldStatInitial)
 		{
-			draw_sprite(s_indivStatPause, 0,  __view_get( e__VW.XView, 0 )+ 132 +(i * 10),__view_get( e__VW.YView, 0 )+195)	
+			draw_sprite(s_indivStatPause, 0,  __view_get( e__VW.XView, 0 )+ 120 +(i * 10),__view_get( e__VW.YView, 0 )+195)	
 		}
 		else
 		{
-			draw_sprite(s_indivStatPause, 1,  __view_get( e__VW.XView, 0 )+ 132 +(i * 10),__view_get( e__VW.YView, 0 )+195)	
+			draw_sprite(s_indivStatPause, 1,  __view_get( e__VW.XView, 0 )+ 120 +(i * 10),__view_get( e__VW.YView, 0 )+195)	
 		}
 	}
 
@@ -69,11 +69,11 @@ function DrawStatsUpgrades()
 	{
 		if (i < global.cableStatInitial)
 		{
-			draw_sprite(s_indivStatPause, 0,  __view_get( e__VW.XView, 0 )+ 132 +(i * 10),__view_get( e__VW.YView, 0 )+210)	
+			draw_sprite(s_indivStatPause, 0,  __view_get( e__VW.XView, 0 )+ 120 +(i * 10),__view_get( e__VW.YView, 0 )+210)	
 		}
 		else
 		{
-			draw_sprite(s_indivStatPause, 1,  __view_get( e__VW.XView, 0 )+ 132 +(i * 10),__view_get( e__VW.YView, 0 )+210)	
+			draw_sprite(s_indivStatPause, 1,  __view_get( e__VW.XView, 0 )+ 120 +(i * 10),__view_get( e__VW.YView, 0 )+210)	
 		}
 	}
 }
