@@ -299,7 +299,7 @@ function CheckEnchufeUpgrade()
 		}
 		inEnchufe.charging = true;
 		upgraded = true;
-		global.overchargeTime-=0.2;
+		global.overchargeTime-=0.3;
 		
 	}
 }

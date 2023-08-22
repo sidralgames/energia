@@ -37,7 +37,7 @@ function BossBreachIdle()
 			alarm[5] = attackTime;
 			sprite_index = spriteAttack;
 		
-			if (global.BossBreach_HP > 50)
+			if (global.BossBreach_HP > 75)
 			{
 				state = BOSSBREACHSTATE.ATTACKONE;	
 			}

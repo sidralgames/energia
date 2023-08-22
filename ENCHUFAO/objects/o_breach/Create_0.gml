@@ -15,7 +15,7 @@ global.breachBanner = true;
 contBanner = 0;
 if (room = Sala_FirstBoss)
 {
-	if (global.BossBreach_HP > 75)
+	if (global.BossBreach_HP > 100)
 	{
 		spawn = choose(0,1,2)
 	}

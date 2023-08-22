@@ -3,8 +3,9 @@
 if (global.bombAmmo < global.bombAmmoMax)
 {
 	global.bombAmmo +=1;
+	instance_destroy();
 }
-instance_destroy();
+
 
 
 

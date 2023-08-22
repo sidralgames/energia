@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-if global.BossBreach_HP <50 
+if global.BossBreach_HP <75 
 {
 	 speed=1.5* global.relativeSpeed;;
 }

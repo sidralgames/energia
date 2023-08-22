@@ -102,6 +102,11 @@ if (chargedInEnergy) && (chargedInHp) && (chargedInAmmo) && (goesToNextRoom = fa
 
 if (hp <= 0) && (goesToNextRoom = true)
 {
+	shipReady = false;
+	chargedInAmmo = false;
+	chargedInEnergy = false;
+	chargedInHp = false;
+	state = STRANDEDSHIPSTATE.STRANDED;
 	StrandedShip_False();
 	
 	instance_create_layer(x,y,"Player", o_exploBomb);
@@ -109,14 +114,12 @@ if (hp <= 0) && (goesToNextRoom = true)
 	chargeAmmo = 0;
 	chargeEnergy = 0;
 	chargeHp = 0;
-	chargedInAmmo = false;
-	chargedInEnergy = false;
-	chargedInHp = false;
+
 	path_end();
 	hp = hpMax;
 	_hpush = hspeed;
 	_vpush = vspeed;
 	speed = 0;
-	state = STRANDEDSHIPSTATE.STRANDED;
+	
 }
 	

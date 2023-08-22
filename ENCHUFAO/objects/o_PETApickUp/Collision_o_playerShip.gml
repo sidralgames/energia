@@ -3,8 +3,9 @@
 if (global.PETAAmmo < global.PETAsMax)
 {
 	global.PETAAmmo +=1;
+	instance_destroy();
 }
-instance_destroy();
+
 
 
 

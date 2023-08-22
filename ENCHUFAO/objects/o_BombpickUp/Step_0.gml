@@ -10,10 +10,10 @@ shift = amplitude * dsin(t);
 
 if instance_exists(o_playerShip)
 {
-	if (point_distance(x,y, o_playerShip.x, o_playerShip.y) < 30)
+	if (point_distance(x,y, o_playerShip.x, o_playerShip.y) < 30) && (global.bombAmmo < global.bombAmmoMax)
 	{
 		direction = point_direction(x,y, o_playerShip.x, o_playerShip.y)
-		speed = 3;
+		speed = 4;
 	}
 	else
 	{

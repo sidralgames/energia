@@ -4,7 +4,9 @@
 if (canShot)
 {
 	
-	if collision_rectangle(x-2,y,x+2,y-16-long*image_yscale,o_playerShip,false,true) && (laserActive = false)
+	if collision_rectangle(x-2,y,x+2,y-16-long*image_yscale,o_playerShip,false,true) ||
+	collision_rectangle(x-2,y,x+2,y-16-long*image_yscale,o_enemyP,false,true)
+	&& (laserActive = false)
 	{
 		
 		laserActive = true;
@@ -28,7 +30,8 @@ if (canShot)
 		//	}
 		//}
 		
-		if collision_line(x,y,x, y-16-long*image_yscale, o_playerShip,false, true)
+		if collision_line(x,y,x, y-16-long*image_yscale, o_playerShip,false, true) || 
+		collision_rectangle(x-2,y,x+2,y-16-long*image_yscale,o_enemyP,false,true)
 		{
 			if o_playerShip.tocado=false
 			{

@@ -2,15 +2,12 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PlugToShip()
 {
-	
 	gamepad_set_vibration(0,0.2,0.2);
 	alarm[4] = 10;
 	
 	audio_play_sound_on(global.audioEmitter,choose(snd_plugged, snd_plugged_2, snd_plugged_3),false, 50);
 	
 	pluggedShip = true;
-	
-	
 	
 	ship = instance_nearest(x,y,o_chargerStrandedShip);
 	thisStrandedShip = ship.myShip;
@@ -26,6 +23,7 @@ function PlugToShip()
 	thisStrandedShip.connected = true;
 	ship.connected = true;
 	thisStrandedShip.connectedToEnchufe = false;
+	thisStrandedShip.speed = 0;
 	global.xToPlug = ship.x;
 	global.yToPlug = ship.y;
 }
