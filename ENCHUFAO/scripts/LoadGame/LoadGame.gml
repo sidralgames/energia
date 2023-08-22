@@ -12,6 +12,9 @@ function LoadGame()
 	global.achNoBump =  ini_read_real("ach","noBump", 0);
 	global.ach500Enemies =  ini_read_real("ach","500Enemies", 0);
 	global.enemiesKilledTotalAch = ini_read_real("ach","EnemiesKilledTotal", 0);
+	global.bestLevelRun = ini_read_real("stats","BestRun", 0);
+	global.totalDeaths = ini_read_real("stats","TotalDeaths", 0);
+	global.totalBullets = ini_read_real("stats","TotalBullets", 0);
 	ini_close();
 	
 	

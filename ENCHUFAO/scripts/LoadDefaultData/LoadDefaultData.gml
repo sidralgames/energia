@@ -14,4 +14,8 @@ function LoadDefaultData()
 	global.ach500Enemies = 0;
 	global.enemiesKilledTotalAch = 0;
 	
+	//stats
+	global.bestLevelRun = 0;
+	global.totalDeaths = 0;
+	global.totalBullets = 0;
 }

@@ -177,6 +177,18 @@ global.numberOfInfos = 0;
 global.InfoList = ds_map_create();
 
 
+global.achievementList = ds_map_create();
+global.numberOfAch = 0;
+AddAchNoBump();
+AddAch500Enemies();
+
+
+global.statsList = ds_map_create();
+global.numberOfStats = 0;
+AddEnemiesKilledStat();
+AddBestRunStat();
+AddTotalDeathsStat();
+AddTotalBulletsStat();
 
 
 //global.possibleShipList = ds_map_create();

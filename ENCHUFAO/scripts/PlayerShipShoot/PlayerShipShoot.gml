@@ -30,6 +30,7 @@ function PlayerShipShoot()
 		_angle +=off
 		alarm[0]=fireRate;
 		global.shootsFired+=1;
+		global.totalBullets+=1;
 	}
 	else if (global.ammo > 50) && (global.ammo <= 100)
 	{
@@ -60,6 +61,7 @@ function PlayerShipShoot()
 		_vpush += -lengthdir_y(recoil_standard, _angle+off);
 		//_angle +=off
 		global.shootsFired+=2;
+		global.totalBullets+=2;
 		alarm[0]=fireRate;
 	}
 	else if (global.ammo > 100) && (global.ammo <= 150)
@@ -97,6 +99,7 @@ function PlayerShipShoot()
 		_vpush += -lengthdir_y(recoil_standard, _angle+off);
 		//_angle +=off
 		global.shootsFired+=3;
+		global.totalBullets+=3;
 		alarm[0]=fireRate;
 	}
 	else if (global.ammo > 150)
@@ -143,6 +146,7 @@ function PlayerShipShoot()
 		_vpush += -lengthdir_y(recoil_standard, _angle+off);
 		//_angle +=off
 		global.shootsFired+=4;
+		global.totalBullets+=4;
 		alarm[0]=fireRate;
 	}
 	

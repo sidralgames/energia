@@ -406,5 +406,6 @@ if (global.hp < 1)
 	instance_destroy(o_enemy)
 	instance_destroy(o_cable)
 	instance_destroy(o_charger)
+	global.totalDeaths+=1;
 	instance_create(x, y, o_gameOver)
 }

@@ -4,27 +4,33 @@
 if (cont = true)
 {
 	global.level+=1;
+	
+	if (global.bestLevelRun <= global.level)
+	{
+		global.bestLevelRun = global.level;
+	}
+	
 	if (global.level = 7)
 	{
 		room_goto(Sala_FirstBoss)
 	}
 	else
 	{
-	//if (global.level = 3) || (global.level = 6) || (global.level = 9)
-	if (global.level mod 2 == 0)
-	{
-		global.XPpoints += global.level*100;
-		room_goto(Sala_Upgade)
-	}
-	else 
-	{
-		if instance_exists(o_upgradesManager)
+		//if (global.level = 3) || (global.level = 6) || (global.level = 9)
+		if (global.level mod 2 == 0)
 		{
-			instance_destroy(o_upgradesManager);
+			global.XPpoints += global.level*100;
+			room_goto(Sala_Upgade)
 		}
+		else 
+		{
+			if instance_exists(o_upgradesManager)
+			{
+				instance_destroy(o_upgradesManager);
+			}
 		
-		room_goto(Sala_0)
-	}
+			room_goto(Sala_0)
+		}
 	}
 }
 

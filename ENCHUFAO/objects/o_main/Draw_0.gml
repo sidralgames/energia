@@ -10,7 +10,7 @@ rojo = make_color_rgb(228,59, 68)
 
 //draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+80,"SHIELDS: " + string(round(global.shields)) + " / " + string(round(global.shieldsMax)))
 
-draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+100,"killedtotal: " + string(global.enemiesKilledTotalAch))
+//draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+100,"killedtotal: " + string(global.enemiesKilledTotalAch))
 
 
 if (!isPaused)

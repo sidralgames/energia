@@ -11,4 +11,23 @@ if (key_x)
 }
 
 
+if (key_right_p)
+{
+	selected+=1;
+	
+}
+if (key_left_p)
+{
+	selected-=1;
+	
+}
 
+if selected > global.numberOfAch-1
+{
+	selected  = 0	
+}
+
+if selected < 0 
+{
+	selected = global.numberOfAch-1
+}

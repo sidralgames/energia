@@ -1,10 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 Controls_Input()
-if (!instance_exists(o_menuAchievements))
-{
+//if (!instance_exists(o_menuAchievements))
+//{
 	draw_self();
-}
+//}
 draw_set_halign(fa_center)
 //if gamepad_is_connected(0)
 //{

@@ -13,13 +13,13 @@
   "bbox_left": 0,
   "bbox_right": 93,
   "bbox_top": 0,
-  "bbox_bottom": 81,
+  "bbox_bottom": 97,
   "HTile": false,
   "VTile": false,
   "For3D": false,
   "DynamicTexturePage": false,
   "width": 94,
-  "height": 82,
+  "height": 98,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -28,8 +28,8 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3f4e225d-d193-4af5-a911-e203461a34f6",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"41cbea70-a7e0-4c32-b29f-430365f02cc6",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ebe713f4-ce90-4d01-aa66-474659844003",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e957fc7b-58b9-442d-ab64-789540227897",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -46,8 +46,8 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"0c6dd649-2f2a-47f4-b8f9-32974b3e1929","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3f4e225d-d193-4af5-a911-e203461a34f6","path":"sprites/s_ach_500Enemies/s_ach_500Enemies.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"adfaa3ea-ae88-4503-b8e8-2db9958eb4ba","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"41cbea70-a7e0-4c32-b29f-430365f02cc6","path":"sprites/s_ach_500Enemies/s_ach_500Enemies.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"01e77b32-69eb-4af8-8982-346d67b86881","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ebe713f4-ce90-4d01-aa66-474659844003","path":"sprites/s_ach_500Enemies/s_ach_500Enemies.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6bc9657d-2cb5-4567-bcc1-dec3f123e0e9","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e957fc7b-58b9-442d-ab64-789540227897","path":"sprites/s_ach_500Enemies/s_ach_500Enemies.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
@@ -66,7 +66,7 @@
     "eventStubScript": null,
   },
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6bf2213e-fb63-4bf6-b9d6-59b4f587feb5","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b6953778-34f6-45bc-b150-bb371c04c647","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {

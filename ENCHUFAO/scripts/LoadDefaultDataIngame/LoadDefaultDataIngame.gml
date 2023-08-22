@@ -13,6 +13,10 @@ function LoadDefaultDataIngame()
 	global.achNoBump = 0;
 	global.enemiesKilledTotalAch = 0;
 	
+	global.bestLevelRun = 0;
+	global.totalDeaths = 0;
+	global.totalBullets = 0;
+	
 	for (var i = 0; i <global.numberOfShips; i++)
 	{
 		ship = ds_map_find_value(global.shipList, i)

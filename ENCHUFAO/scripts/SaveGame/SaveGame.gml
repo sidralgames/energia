@@ -8,9 +8,14 @@ function SaveGame()
 	ini_write_real("ships","shipRedUnlocked", global.shipRedUnlocked);
 	ini_write_real("ships","shipDarkUnlocked", global.shipDarkUnlocked);
 	ini_write_real("ships","shipPurpleUnlocked", global.shipPurpleUnlocked);
+	
 	ini_write_real("ach","noBump", global.achNoBump);
 	ini_write_real("ach","500Enemies", global.ach500Enemies);
 	ini_write_real("ach","EnemiesKilledTotal", global.enemiesKilledTotalAch);
+	
+	ini_write_real("stats","BestRun", global.bestLevelRun);
+	ini_write_real("stats","TotalDeaths", global.totalDeaths);
+	ini_write_real("stats","TotalBullets", global.totalBullets);
 	
 	ini_close();
 }
