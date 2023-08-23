@@ -31,7 +31,12 @@ if (key_x)
 	{
 		case 0: o_pause.alarm[0] = 5; break;
 		case 1: spriteBack = 1;
-		case 2: game_restart(); break;
+		case 2: 
+		{
+			SaveGame();
+			game_restart();
+		}
+		break;
 	}
 }
 

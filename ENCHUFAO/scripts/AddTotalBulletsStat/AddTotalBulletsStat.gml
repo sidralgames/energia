@@ -4,7 +4,7 @@ function AddTotalBulletsStat()
 {
 ds_map_add(global.statsList, global.numberOfStats,
 	{ 
-		textStat: "Total Bullets Fired: " + string(global.totalBullets),
+		textStat: "Bullets Fired: " + string(global.totalBullets),
 	})
 
 global.numberOfStats +=1;

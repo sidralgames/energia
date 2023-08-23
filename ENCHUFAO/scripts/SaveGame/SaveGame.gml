@@ -16,6 +16,18 @@ function SaveGame()
 	ini_write_real("stats","BestRun", global.bestLevelRun);
 	ini_write_real("stats","TotalDeaths", global.totalDeaths);
 	ini_write_real("stats","TotalBullets", global.totalBullets);
+	ini_write_real("stats","TotalBombs", global.totalBombs);
+	
+	ini_write_real("stats","TotalPlugs", global.totalPlugs);
+	ini_write_real("stats","TotalPETAS", global.totalPETAS);
+	
+	ini_write_real("stats","slowmilisecs", global.slowmilisecs);
+	
+	ini_write_real("stats","realHourSlow", global.realHourSlow);
+	ini_write_real("stats","realMinutSlow", global.realMinutSlow);
+	ini_write_real("stats","realSecsSlow", global.realSecsSlow);
+	
+	
 	
 	ini_close();
 }

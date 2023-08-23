@@ -23,6 +23,9 @@ if (alarm[7] <= 0) && (!key_BulletTime) && (global.slowMoTime > 105)
 
 if (key_BulletTime) && (canSlowMotion = true)
 {
+	
+	SetTimeSlow();
+	
 	o_main.alarm[1] = 90;
 	
 	if (global.slowMoTime >=0)
@@ -73,6 +76,11 @@ else
 part_particles_create(global.naveP_sys, x, y, global.naveP , 5)
 PlayerState_Free();
 MovePlayer();
+
+//if (plugged)
+//{
+//	GetTime(0);	
+//}
 
 if (o_charger.overcharged)
 {

@@ -4,7 +4,7 @@ function AddEnemiesKilledStat()
 {
 ds_map_add(global.statsList, global.numberOfStats,
 	{ 
-		textStat: "Total Enemies Killed: " + string(global.enemiesKilledTotalAch),
+		textStat: "Enemies Killed: " + string(global.enemiesKilledTotalAch),
 	})
 
 global.numberOfStats +=1;

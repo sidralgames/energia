@@ -1,11 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
+global.milisecs = 0;
+global.secs = 0;
+global.minut = 0;
+global.hour = 0;
 
 
 //RESETEAR BIEN LAS GLOBALES PORQUE AHORA ES GAME RESTART Y CHAO, POR EJEMPLO LA DE ABAJO
-global.timesConnected = 0;
+
 global.secsInSlowMo = 0;
 global.enemiesKilled = 0;
 global.playerBumps = 0;
@@ -185,10 +188,16 @@ AddAch500Enemies();
 
 global.statsList = ds_map_create();
 global.numberOfStats = 0;
-AddEnemiesKilledStat();
 AddBestRunStat();
 AddTotalDeathsStat();
+AddTotalTimesPlugStat();
+AddTotalConnectedTimeStat();
+AddEnemiesKilledStat();
 AddTotalBulletsStat();
+AddBulletForEnemyStat();
+AddTotalBombsStat();
+AddTotalPETAStat();
+AddTotalSlowMoTimeStat();
 
 
 //global.possibleShipList = ds_map_create();
@@ -206,3 +215,5 @@ for (var i = 0; i < global.numberOfUpgrades; i++)
 	upgrades.isPicked = false;
 	
 }
+
+

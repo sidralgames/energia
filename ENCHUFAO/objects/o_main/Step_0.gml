@@ -63,6 +63,7 @@ if instance_exists(o_playerShip) && (room != Sala_Inicio)
 
 if keyboard_check_pressed(ord("R"))
 {
+	SaveGame();
 	game_restart()
 }
 

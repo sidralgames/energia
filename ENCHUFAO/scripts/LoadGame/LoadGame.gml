@@ -15,6 +15,16 @@ function LoadGame()
 	global.bestLevelRun = ini_read_real("stats","BestRun", 0);
 	global.totalDeaths = ini_read_real("stats","TotalDeaths", 0);
 	global.totalBullets = ini_read_real("stats","TotalBullets", 0);
+	global.totalBombs = ini_read_real("stats","TotalBombs", 0);
+	global.totalPlugs = ini_read_real("stats","TotalPlugs", 0);
+	global.totalPETAS = ini_read_real("stats","TotalPETAS", 0);
+	
+	global.slowmilisecs = ini_read_real("stats","slowmilisecs", 0);
+	
+	global.realHourSlow = ini_read_real("stats","realHourSlow", 0);
+	global.realMinutSlow = ini_read_real("stats","realMinutSlow", 0);
+	global.realSecsSlow = ini_read_real("stats","realSecsSlow", 0);
+	
 	ini_close();
 	
 	

@@ -16,6 +16,15 @@ function LoadDefaultDataIngame()
 	global.bestLevelRun = 0;
 	global.totalDeaths = 0;
 	global.totalBullets = 0;
+	global.totalBombs = 0;
+	global.totalPlugs = 0;
+	global.totalPETAS = 0;
+	
+	global.slowmilisecs = 0;
+	
+	global.realHourSlow = 0;
+	global.realMinutSlow = 0;
+	global.realSecsSlow = 0;
 	
 	for (var i = 0; i <global.numberOfShips; i++)
 	{

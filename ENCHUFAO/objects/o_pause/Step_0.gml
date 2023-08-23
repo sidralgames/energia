@@ -69,6 +69,7 @@ if (pause)
 			
 				case 2:
 				{
+					SaveGame();
 					game_restart();
 				}
 				break;
@@ -114,6 +115,7 @@ if (pause)
 				
 				case 3:
 				{
+					SaveGame();
 					game_restart();
 				}
 				break;
