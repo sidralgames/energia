@@ -1,11 +1,10 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function AddTotalConnectedTimeStat()
+function AddTotalBumpsStat()
 {
 ds_map_add(global.statsList, global.numberOfStats,
 	{ 
-		textStat: "Plugged Time: " + GetTimeConnected() //global.realHourSlow) + ":" + string(global.realMinutSlow) + ":" + string(global.realSecsSlow),
-	
+		textStat: "Bumps On The Wall: " + string(global.totalBumps),
 	})
 
 global.numberOfStats +=1;

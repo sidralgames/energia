@@ -198,6 +198,7 @@ AddBulletForEnemyStat();
 AddTotalBombsStat();
 AddTotalPETAStat();
 AddTotalSlowMoTimeStat();
+AddTotalBumpsStat();
 
 
 //global.possibleShipList = ds_map_create();

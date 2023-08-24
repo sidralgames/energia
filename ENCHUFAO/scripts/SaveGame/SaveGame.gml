@@ -22,10 +22,10 @@ function SaveGame()
 	ini_write_real("stats","TotalPETAS", global.totalPETAS);
 	
 	ini_write_real("stats","slowmilisecs", global.slowmilisecs);
+	ini_write_real("stats","connectedmilisecs", global.connectedmilisecs);
+	ini_write_real("stats","TotalBumps", global.totalBumps);
 	
-	ini_write_real("stats","realHourSlow", global.realHourSlow);
-	ini_write_real("stats","realMinutSlow", global.realMinutSlow);
-	ini_write_real("stats","realSecsSlow", global.realSecsSlow);
+
 	
 	
 	

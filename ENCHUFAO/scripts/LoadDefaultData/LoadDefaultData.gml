@@ -21,10 +21,8 @@ function LoadDefaultData()
 	global.totalBombs = 0;
 	global.totalPlugs = 0;
 	global.totalPETAS = 0;
+	global.totalBumps = 0;
 	
 	global.slowmilisecs = 0;
-	
-	global.realHourSlow = 0;
-	global.realMinutSlow = 0;
-	global.realSecsSlow = 0;
+	global.connectedmilisecs = 0;
 }

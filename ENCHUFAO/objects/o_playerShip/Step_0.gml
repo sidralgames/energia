@@ -77,10 +77,10 @@ part_particles_create(global.naveP_sys, x, y, global.naveP , 5)
 PlayerState_Free();
 MovePlayer();
 
-//if (plugged)
-//{
-//	GetTime(0);	
-//}
+if (plugged)
+{
+	SetTimeConnected();	
+}
 
 if (o_charger.overcharged)
 {
