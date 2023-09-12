@@ -8,7 +8,10 @@
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "o_cableFather",
+    "path": "objects/o_cableFather/o_cableFather.yy",
+  },
   "physicsObject": true,
   "physicsSensor": false,
   "physicsShape": 1,

@@ -3,6 +3,9 @@
 //if room != Sala_Inicio
 //{
 //	lightEnchufe= instance_create_layer(x,y,"LightPlayer",o_Light_Enchufe);
+//type = collisionType.custom;
+
+
 randomize();
 
 deleteData = false;

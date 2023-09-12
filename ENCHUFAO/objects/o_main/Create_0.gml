@@ -7,6 +7,8 @@ global.minut = 0;
 global.hour = 0;
 
 global.energyLow = 80;
+global.bombIsClusterBomb = false;
+
 //RESETEAR BIEN LAS GLOBALES PORQUE AHORA ES GAME RESTART Y CHAO, POR EJEMPLO LA DE ABAJO
 
 global.secsInSlowMo = 0;

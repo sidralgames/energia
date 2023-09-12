@@ -1,6 +1,40 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if (inEnchufe) && (!inEnchufe.enchufeActive)
+{
+	if (radi > 17)
+	{
+		radi-=0.15;
+	}
+	else
+	{
+		radi = 21;
+	}
+	draw_set_color(c_white)
+	draw_circle(inEnchufe.x, inEnchufe.y, radi+0.5, true)
+	draw_circle(inEnchufe.x, inEnchufe.y, radi, true)
+	draw_circle(inEnchufe.x, inEnchufe.y, 17, true)
+	draw_circle(inEnchufe.x, inEnchufe.y, 17.3, true)
+}
+
+if (connectedToShip) && (!pluggedShip)
+{
+	if (radi > 12)
+	{
+		radi-=0.15;
+	}
+	else
+	{
+		radi = 16;
+	}
+	
+	draw_set_color(c_white)
+	draw_circle(connectedToShip.x, connectedToShip.y, radi+0.5, true)
+	draw_circle(connectedToShip.x, connectedToShip.y, radi, true)
+	draw_circle(connectedToShip.x, connectedToShip.y, 12, true)
+	draw_circle(connectedToShip.x, connectedToShip.y, 12.3, true)
+}
 
 draw_sprite_ext(global.spriteShip,image_index,x,y,1,1,_angle,image_blend,image_alpha)
 

@@ -2,6 +2,8 @@
 
 // Create a new verlet system
 // You can create multiple systems with different physic properties
+
+canCollide = false;
 fric = 0.85;
 verletSystem1 = new verletSystem(fric, 0.0);
 off = 0;
@@ -10,7 +12,7 @@ cableColor = c_white;
 inst = instance_nearest(x,y,o_strandedShip)
 _segments = 5 * inst.strandedShipCableStat;
 // Create a new rope
-rope1 = verletGroupCreateRope(verletSystem1, x, y, cableColor, 2, 3, _segments, 2, 100);
+rope1 = verletGroupCreateRope(verletSystem1, x, y, cableColor, 2, 3, _segments, 2, 100, canCollide);
 //rope1 = verletGroupCreateRopeTextured(verletSystem1, x, y, s_tentacle, _segments, 1, 10);
 
  //Attach its first vertex to an object

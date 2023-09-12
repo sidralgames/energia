@@ -136,6 +136,9 @@ function verletGroup() constructor {
 	spawnRipDelaySeconds = 2; // "
 	system = noone;
 	
+	
+	
+		
 	vertexList = ds_list_create();
 	stickList = ds_list_create();
 	attachmentList = ds_list_create();
@@ -363,7 +366,7 @@ function verletGroup() constructor {
 			for (var i = 0; i < vertexAmount; i++) {
 				currentVertex = vertexList[| i];
 				
-				if (!currentVertex.fixed) {
+				if (!currentVertex.fixed) && canCollide{
 					vx = (currentVertex.x - currentVertex.xLast) * frict;
 					vy = (currentVertex.y - currentVertex.yLast) * frict;
 					
@@ -489,6 +492,7 @@ function verletGroupCreateRope(system, xx, yy, color, width, segmentLength, segm
 	newGroup.width = width;
 	newGroup.stiffness = stiffness;
 	newGroup.maxTension = maxTension;
+	newGroup.canCollide = canCollide;
 	
 	with (newGroup) {
 		// Create vertices
@@ -554,6 +558,7 @@ function verletGroupCreateRopeTextured(system, xx, yy, sprite, segments, stiffne
 	newGroup.sprite = sprite;
 	newGroup.stiffness = stiffness;
 	newGroup.maxTension = maxTension;
+	newGroup.canCollide = canCollide;
 	
 	with (newGroup) {
 		// Create the vertices and sticks

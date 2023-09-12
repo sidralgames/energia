@@ -211,7 +211,7 @@ function SetupLevelBasic()
 	    }
 	}
 
-
+	SetVines();
 
 
 	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo) || 
@@ -219,5 +219,7 @@ function SetupLevelBasic()
 	{
 		room_restart();
 	}
+	
+	
 
 }

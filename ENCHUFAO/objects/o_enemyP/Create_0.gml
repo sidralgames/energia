@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+type = collisionType.custom;
+
 diffX = choose(random_range(-50, 50));
 diffY = choose(random_range(-50, 50));
 

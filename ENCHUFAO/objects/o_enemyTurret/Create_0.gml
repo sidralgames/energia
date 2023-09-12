@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+type = collisionType.custom;
+
+
 event_inherited();
 slowMoPickUps = 8;
 alarm[10] = 30;

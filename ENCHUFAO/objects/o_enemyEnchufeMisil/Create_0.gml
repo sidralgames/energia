@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+type = collisionType.custom;
+
+
 slowMoPickUps = 5;
 cable = noone;
 isCounted=false;

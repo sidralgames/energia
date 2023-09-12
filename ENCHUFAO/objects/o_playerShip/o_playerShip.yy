@@ -14,7 +14,10 @@
     "path": "sprites/splayer/splayer.yy",
   },
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "parCollision",
+    "path": "objects/parCollision/parCollision.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,

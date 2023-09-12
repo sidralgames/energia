@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+type = collisionType.custom;
+
+
 if (tile_meeting(x,y, "Tiles"))
 {
    instance_destroy();

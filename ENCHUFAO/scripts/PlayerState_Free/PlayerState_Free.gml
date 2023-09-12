@@ -65,13 +65,13 @@ function PlayerState_Free()
 	if abs(axisrh) > 0.3 || abs(axisrv) > 0.3
 	{
 		
-	image_angle = direIm;
+	_angle = direIm;
 	dire = direIm;
 	
 	}
 	else
 	{
-		direIm = image_angle;
+		direIm = _angle;
 		dire = direIm;
 	}
 }

@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+type = collisionType.custom;
 
 slowMoPickUps = choose(6,7);
 flashAlpha = 0;
