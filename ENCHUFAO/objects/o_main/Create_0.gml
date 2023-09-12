@@ -1,12 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+global.song = choose(snd_song2, snd_song3)
 global.milisecs = 0;
 global.secs = 0;
 global.minut = 0;
 global.hour = 0;
 
-
+global.energyLow = 80;
 //RESETEAR BIEN LAS GLOBALES PORQUE AHORA ES GAME RESTART Y CHAO, POR EJEMPLO LA DE ABAJO
 
 global.secsInSlowMo = 0;
@@ -109,8 +109,8 @@ global.unPlugging = false;
 
 global.pluggingStrandedShipToEnchufe = false;
 
-global.bombAmmoMax = 5
-global.bombAmmo = 2;
+global.bombAmmoMax = 7
+global.bombAmmo = 7;
 
 global.PETAsMax = 3;
 global.PETAAmmo = 1;
@@ -146,6 +146,9 @@ global.slowMoIsUpgraded = false;
 global.speedIsUpgraded = false;
 global.superShotIsUpgraded = false;
 global.overchargeIsUpgraded = false;
+global.clusterIsUpgraded = false;
+
+
 
 global.upgradesList = ds_map_create();
 
@@ -163,6 +166,7 @@ AddUpgradeSpeedUp();
 AddUpgradeChargerShoots();
 AddUpgradeSlowMo();
 AddUpgradeOvercharge();
+AddUpgradeClusterBomb();
 
 
 global.shipList = ds_map_create();

@@ -3,7 +3,7 @@
 function scr_sound()
 {
 	var snd = argument[0]; //choose sound
-	if !audio_is_playing(snd_song)
+	if !audio_is_playing(snd)
 	{
 		audio_play_sound(snd,1,false);
 	}

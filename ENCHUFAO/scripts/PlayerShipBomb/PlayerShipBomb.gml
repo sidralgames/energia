@@ -2,7 +2,14 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PlayerShipBomb()
 {
-	
+	if (global.bombIsClusterBomb)
+	{
+		bombToFire = o_bulletPlayer_BombCluster;
+	}
+	else
+	{
+		bombToFire = o_bulletPlayer_Bomb;
+	}
 	gamepad_set_vibration(0,0.2,0.2);
 	alarm[4] = 3 ;
 	explo = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
@@ -17,7 +24,7 @@ function PlayerShipBomb()
 		
 	
 		var bullet = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
-		"Bullets", o_bulletPlayer_Bomb);
+		"Bullets", bombToFire);
 		
 		global.bombAmmo-=1;
 		global.bombsFired+=1;

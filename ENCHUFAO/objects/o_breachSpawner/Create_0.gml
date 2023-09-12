@@ -14,10 +14,17 @@ alarm[2] = 30;
 
 
 
-if !audio_is_playing(snd_song)
+if !audio_is_playing(global.song)
 {
-	audio_play_sound_on(global.audioEmitter,snd_song, true, 50)
+	audio_stop_sound(global.song)
 }
+
+if !audio_is_playing(snd_songBossBreach)
+{
+	audio_play_sound_on(global.audioEmitter,snd_songBossBreach, true, 50)
+}
+
+
 
 breachesCount = 0;
 bossCount = 0;

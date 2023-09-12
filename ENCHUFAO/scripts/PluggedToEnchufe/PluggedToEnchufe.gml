@@ -14,7 +14,7 @@ function PluggedToEnchufe()
 	{
 		alarm[4] = 50;
 	}
-	pluggedTimer+=min(0.2, 0.5*global.overchargeTime);
+	pluggedTimer+=min(0.2, 0.65*global.overchargeTime);
 		
 	if (pluggedTimer >= 300)
 	{	

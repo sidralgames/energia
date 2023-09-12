@@ -302,4 +302,24 @@ function CheckEnchufeUpgrade()
 		global.overchargeTime-=0.3;
 		
 	}
+	else if (inEnchufe.upgradeClusterBomb = true) && (upgraded = false)
+	{
+		if (!global.clusterIsUpgraded)
+		{
+			global.clusterIsUpgraded = true;
+			AddUpgradeClusterBombPlayer();
+		}
+		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+		{
+			upg = ds_map_find_value(global.PlayerUpgradesList, i)
+			if (upg.obj = o_enchufeUpgadeClusterBomb)
+			{
+				upg.times+=1;
+			}
+		}
+		inEnchufe.charging = true;
+		upgraded = true;
+		global.bombIsClusterBomb=true;
+		
+	}
 }

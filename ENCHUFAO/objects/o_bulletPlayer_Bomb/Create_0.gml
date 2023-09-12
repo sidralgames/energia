@@ -4,7 +4,7 @@ image_speed = 0.5;
 
 _hpush = 0;
 _vpush = 0;
-
+scale = 1;
 bnc = 0.5;
 
 hsp_f = 0;

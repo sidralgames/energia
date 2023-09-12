@@ -408,7 +408,7 @@ if (global.hp < 1)
 	screenShake(3,60)
 	instance_create(x,y,o_explo1)
 	audio_play_sound_on(global.audioEmitter, snd_death, false, 50)
-	audio_stop_sound(snd_song)
+	audio_stop_sound(global.song)
 	audio_stop_sound(snd_battery)
 	instance_destroy();	
 	instance_destroy(o_enemy)

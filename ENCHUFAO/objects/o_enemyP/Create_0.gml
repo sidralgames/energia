@@ -14,7 +14,7 @@ _hpush = 0;
 _vpush = 0;
 hsp_f =0;
 vsp_f =0;
-
+_hp=3;
 takeCover = false;
 shocked = false;
 waiting = false;
@@ -22,6 +22,7 @@ bounced = false;
 shocked = false;
 tocado = false;
 waiting = false;
+flashAlpha = 0;
 
 
 global.totalEnemiesOnScreen+=1;

@@ -1,11 +1,18 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+if (global.changingTiles)
+{
+	if !tile_meeting(x,y,"Tiles")
+	{
+		instance_destroy();
+	}
+}
 if (canShot)
 {
 	
-	if collision_rectangle(x-2,y,x+2,y-16-long*image_yscale,o_playerShip,false,true) ||
-	collision_rectangle(x-2,y,x+2,y-16-long*image_yscale,o_enemyP,false,true)
+	if (collision_rectangle(x-2,y,x+2,y-16-long*image_yscale,o_playerShip,false,true) ||
+	collision_rectangle(x-2,y,x+2,y-16-long*image_yscale,o_enemyP,false,true)) && 
+	(collision_rectangle(x-2,y,x+2,y-26-long*image_yscale,o_laser,false,true))
 	&& (laserActive = false)
 	{
 		

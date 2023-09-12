@@ -94,7 +94,7 @@ if (!isPaused)
 	
 	//}
 	draw_set_font(Font1)
-	if (global.energy <=80)
+	if (global.energy <=global.energyLow)
 	{
 		if global.PETAAmmo > 0
 		{

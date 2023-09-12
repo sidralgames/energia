@@ -4,7 +4,7 @@ function LoadGame()
 {
 	//--------SHIPS------//
 	ini_open("EnxufaoData.ini");
-	global.shipGreenUnlocked = ini_read_real("ships","shipGreenUnlocked", 1);
+	global.shipGreenUnlocked = ini_read_real("ships","shipGreenUnlocked", 0);
 	global.shipBlueUnlocked = ini_read_real("ships","shipBlueUnlocked", 0);
 	global.shipRedUnlocked = ini_read_real("ships","shipRedUnlocked", 0);
 	global.shipDarkUnlocked = ini_read_real("ships","shipDarkUnlocked", 0);

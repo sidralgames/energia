@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+imageStrandedAmmo=0;
+imageStrandedHp=0;
+imageStrandedEnergy=0;
 
 bumpsAchievement = true;
 

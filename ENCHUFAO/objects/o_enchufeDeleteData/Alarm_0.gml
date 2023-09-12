@@ -13,6 +13,7 @@ if (cont = true)
 	o_nextRoom.shipSelected = false
 	_visible = false;
 	o_enchufeInicio._visible = false;
+	
 	o_enchufeResetSelector._visible = false;
 }
 

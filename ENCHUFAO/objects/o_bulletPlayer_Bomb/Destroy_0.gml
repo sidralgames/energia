@@ -1,4 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-instance_create(x,y,o_exploBomb)
+bomb = instance_create(x,y,o_exploBomb);
+if (sprite_index = s_bombCluster)
+{
+	bomb.sprite_index = s_explo2;	
+}
+bomb.image_xscale = 1.3;
+bomb.image_yscale = 1.3;
+instance_create(x,y,o_shockwaveTiles)

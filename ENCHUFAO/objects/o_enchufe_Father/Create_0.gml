@@ -49,6 +49,7 @@ upgradeSpeed = false;
 upgradeChargerShoots = false;
 upgradeSlowMo = false;
 upgradeOvercharge = false;
+upgradeClusterBomb = false;
 charge = 0;
 maxCharge = 200;
 _hpush = random_range(0.05, 0.1)
