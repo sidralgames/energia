@@ -11,7 +11,7 @@ if (alarm[0] <= 0)
 
 	instance_destroy();
 }
-dir +=19
+dir +=33
 global.changingTiles = true;
 
 
@@ -20,11 +20,11 @@ var _tilemap_id = layer_tilemap_get_id("Tiles");
 _x = x+lengthdir_x(10, dir)
 _y = y+lengthdir_y(10, dir)
 
-_x2 = x+lengthdir_x(20, dir)
-_y2 = y+lengthdir_y(20, dir)
+_x2 = x+lengthdir_x(30, dir)
+_y2 = y+lengthdir_y(30, dir)
 
-_x3 = x+lengthdir_x(40, dir)
-_y3 = y+lengthdir_y(40, dir)
+_x3 = x+lengthdir_x(60, dir)
+_y3 = y+lengthdir_y(60, dir)
 
 
 
@@ -52,7 +52,7 @@ if (global.wallgrid_[# _x2/32, _y2/32] != FLOOR)&& (_x2 > 50) && (_x2 < room_wid
 	velo = random_range(1,1.5);
 	global.wallgrid_[# _x2/32, _y2/32] = FLOOR
 	mp_grid_clear_rectangle(gridRoom1, _x2-15,_y2-15,_x2,_y2)
-	met2 = instance_create_layer(x+lengthdir_x(20, dir),y+lengthdir_y(20, dir), "Meteors",o_meteor)
+	met2 = instance_create_layer(x+lengthdir_x(30, dir),y+lengthdir_y(30, dir), "Meteors",o_meteor)
 	
 	if instance_exists(met2)
 	{
@@ -69,7 +69,7 @@ if (global.wallgrid_[# _x3/32, _y3/32] != FLOOR) && (_x3 > 50) && (_x3 < room_wi
 	velo = random_range(1,1.5);
 	global.wallgrid_[# _x3/32, _y3/32] = FLOOR
 	mp_grid_clear_rectangle(gridRoom1, _x3-15,_y3-15,_x3,_y3)
-	met3 = instance_create_layer(x+lengthdir_x(40, dir),y+lengthdir_y(40, dir),"Meteors", o_meteor)
+	met3 = instance_create_layer(x+lengthdir_x(60, dir),y+lengthdir_y(60, dir),"Meteors", o_meteor)
 	
 	if instance_exists(met3)
 	{

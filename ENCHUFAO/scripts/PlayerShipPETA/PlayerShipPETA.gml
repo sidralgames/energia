@@ -23,8 +23,8 @@ function PlayerShipPETA()
 		off =  random_range(offRange,-offRange)
 		if instance_exists(peta)
 		{
-			peta._hpush = lengthdir_x(3, _angle + off);
-			peta._vpush = lengthdir_y(3, _angle + off);
+			peta._hpush = lengthdir_x(2, _angle + off);
+			peta._vpush = lengthdir_y(2, _angle + off);
 			peta._angle = dire+off;
 			peta.direction = dire+off;
 			//_hpush += -lengthdir_x(recoil_standard, _angle+off);

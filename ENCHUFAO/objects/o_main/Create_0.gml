@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+full = false;
 global.song = choose(snd_song2, snd_song3)
 global.milisecs = 0;
 global.secs = 0;

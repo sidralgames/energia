@@ -15,38 +15,13 @@ if instance_exists(o_playerShip) && (room != Sala_Inicio)
 
 	if (o_playerShip.plugged)
 	{
-		if (global.energy <= global.energyTotal)
-		{
-			global.energy+=0.75*global.chargeTime;
-		}
-		
-		if (global.chargingHp = true)
-		{
-			if (global.hp <= global.hpMax)
-			{
-				global.hp +=0.007*global.chargeTime;
-			}
-		}
-		
-		if (global.chargingShield = true)
-		{
-			if (global.shields <= global.shieldsMax)
-			{
-				global.shields +=0.005*global.chargeTime;
-			}
-		}
-		
-		if (global.chargingAmmo = true)
-		{
-			if (global.ammo <= global.ammoMax)
-			{
-				global.ammo +=0.4*global.chargeTime;
-			}
-		}
+		PlayerPluggedMainEnchufes()
 			
 	}
 	else if (o_playerShip.plugged == false)
 	{
+		full = false;
+		
 		if (global.energy>0)
 		{
 			if (abs(o_playerShip._hpush >= 0.1)) || (abs(o_playerShip._vpush >= 0.1))
@@ -61,12 +36,12 @@ if instance_exists(o_playerShip) && (room != Sala_Inicio)
 	}
 }
 
+
 if keyboard_check_pressed(ord("R"))
 {
 	SaveGame();
 	game_restart()
 }
-
 
 
 if (global.chargingHp)

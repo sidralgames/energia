@@ -20,11 +20,11 @@ var _tilemap_id = layer_tilemap_get_id("Tiles");
 _x = x+lengthdir_x(10, dir)
 _y = y+lengthdir_y(10, dir)
 
-_x2 = x+lengthdir_x(30, dir)
-_y2 = y+lengthdir_y(30, dir)
+_x2 = x+lengthdir_x(20, dir)
+_y2 = y+lengthdir_y(20, dir)
 
-_x3 = x+lengthdir_x(60, dir)
-_y3 = y+lengthdir_y(60, dir)
+_x3 = x+lengthdir_x(40, dir)
+_y3 = y+lengthdir_y(40, dir)
 
 
 
@@ -32,6 +32,10 @@ _y3 = y+lengthdir_y(60, dir)
 if (global.wallgrid_[# _x/32, _y/32] != FLOOR) && (_x > 50) && (_x < room_width-50)
 	&& (_y > 50) && (_y < room_height-50)
 {
+	if oddsPETA = irandom(oddsPETA)
+	{
+		canCreate = true;
+	}
 	tilemap_set_at_pixel(_tilemap_id, 0, _x, _y);
 	velo = random_range(1,1.5);
 	global.wallgrid_[# _x/32, _y/32] = FLOOR
@@ -42,34 +46,46 @@ if (global.wallgrid_[# _x/32, _y/32] != FLOOR) && (_x > 50) && (_x < room_width-
 		met._hpush = lengthdir_x(velo,dir)
 		met._vpush = lengthdir_y(velo,dir)
 	}
+	xtoCreate = _x;
+	yToCreate = _y;
 }
 
 
 if (global.wallgrid_[# _x2/32, _y2/32] != FLOOR)&& (_x2 > 50) && (_x2 < room_width-50)
 	&& (_y2 > 50) && (_y2 < room_height-50)
 {
+	if oddsPETA = irandom(oddsPETA)
+	{
+		canCreate = true;
+	}
 	tilemap_set_at_pixel(_tilemap_id, 0, _x2, _y2);
 	velo = random_range(1,1.5);
 	global.wallgrid_[# _x2/32, _y2/32] = FLOOR
 	mp_grid_clear_rectangle(gridRoom1, _x2-15,_y2-15,_x2,_y2)
-	met2 = instance_create_layer(x+lengthdir_x(30, dir),y+lengthdir_y(30, dir), "Meteors",o_meteor)
+	met2 = instance_create_layer(x+lengthdir_x(20, dir),y+lengthdir_y(20, dir), "Meteors",o_meteor)
 	
 	if instance_exists(met2)
 	{
 		met2._hpush = lengthdir_x(velo,dir)
 		met2._vpush = lengthdir_y(velo,dir)
 	}
+	xtoCreate = _x2;
+	yToCreate = _y2;
 }
 
 
 if (global.wallgrid_[# _x3/32, _y3/32] != FLOOR) && (_x3 > 50) && (_x3 < room_width-50)
 	&& (_y3 > 50) && (_y3 < room_height-50)
 {
+	if oddsPETA = irandom(oddsPETA)
+	{
+		canCreate = true;
+	}
 	tilemap_set_at_pixel(_tilemap_id, 0, _x3, _y3);
 	velo = random_range(1,1.5);
 	global.wallgrid_[# _x3/32, _y3/32] = FLOOR
 	mp_grid_clear_rectangle(gridRoom1, _x3-15,_y3-15,_x3,_y3)
-	met3 = instance_create_layer(x+lengthdir_x(60, dir),y+lengthdir_y(60, dir),"Meteors", o_meteor)
+	met3 = instance_create_layer(x+lengthdir_x(40, dir),y+lengthdir_y(40, dir),"Meteors", o_meteor)
 	
 	if instance_exists(met3)
 	{
@@ -77,4 +93,13 @@ if (global.wallgrid_[# _x3/32, _y3/32] != FLOOR) && (_x3 > 50) && (_x3 < room_wi
 		met3._vpush = lengthdir_y(velo,dir)
 
 	}
+	xtoCreate = _x3;
+	yToCreate = _y3;
+}
+
+if (canCreate = true)
+{
+	canCreate = false;
+	instance_create_layer(xtoCreate, yToCreate, "Enchufes", 
+	choose(o_enchufePETA, o_enchufePETAAmmo, o_enchufePETAHP, o_enchufePETAShield, o_enchufePETAAll))	
 }

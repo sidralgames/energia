@@ -25,7 +25,7 @@ for ( var yyW = 0; yyW < height_; yyW++)
 		 if (tile_exist) && (!tile_exist_top) && (irandom(oddsVine_s) = oddsVine_s) && (eyW < room_height -32) && (eyW > 32) //&& (!tile_exist_downLeft) && (!tile_exist_downRight)
 		 {
 			lay= choose("Meteors");
-			for (var i=0; i<choose(2,3,4,5); i++)
+			for (var i=0; i<choose(2,3,4); i++)
 			{
 				vineUp = instance_create_layer(exW + random_range(-14, 14),eyW-random_range(12,14),lay,oVine_Suelo);
 				if instance_exists(vineUp)
@@ -38,7 +38,7 @@ for ( var yyW = 0; yyW < height_; yyW++)
 		 if (tile_exist) && (!tile_exist_down) && (irandom(oddsVine_s) = oddsVine_s) && (eyW < room_height -32) && (eyW > 32) //&& (!tile_exist_downLeft) && (!tile_exist_downRight)
 		 {
 			lay= choose("Meteors");
-			for (var i=0; i<choose(2,3,4,5); i++)
+			for (var i=0; i<choose(2,3,4); i++)
 			{
 				vineDown = instance_create_layer(exW + random_range(-14, 14),eyW+random_range(12,14),lay,oVine_Techo);
 				if instance_exists(vineDown)
