@@ -17,6 +17,7 @@ if (global.laser > 0)
 if instance_exists(inEnchufe)
 {
 	if (inEnchufe) && (!inEnchufe.enchufeActive)
+	&& (inEnchufe.abierto == true)
 	{
 		if (radi > 17)
 		{

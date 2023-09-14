@@ -414,6 +414,7 @@ if (global.laser > 0)
 			}
 			laserCont = 60;
 			laserActive = true;
+			drawflash=true;
 		}
 	}
 	else

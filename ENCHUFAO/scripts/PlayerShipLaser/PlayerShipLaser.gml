@@ -67,7 +67,7 @@ function PlayerShipLaser(argument0)
 	enemy = collision_line(x,y,x+lengthdir_x(maxLenght_+20, argument0+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,argument0+random_range(2,-2)), o_enemyP,false, true)
 	if (enemy)
 	{
-		screenShake(4,10)
+		screenShake(4,10);
 		enemy._hp -=(0.25+global.laserDamage);
 		enemy.flashAlpha = 1;
 		//explo = instance_create(enemy.x, enemy.y, o_explo2)
