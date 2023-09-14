@@ -175,17 +175,17 @@ function CheckEnchufeUpgrade()
 		global.fireRate-=4;
 		
 	}
-	else if (inEnchufe.upgradeShield = true) && (upgraded = false)
+	else if (inEnchufe.upgradeLaser = true) && (upgraded = false)
 	{
-		if (!global.shieldsIsUpgraded)
+		if (!global.laserMaxIsUpgraded)
 		{
-			global.shieldsIsUpgraded = true;
-			AddUpgradeShieldsPlayer();
+			global.laserMaxIsUpgraded = true;
+			AddUpgradeLaserMaxPlayer();
 		}
 		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
 		{
 			upg = ds_map_find_value(global.PlayerUpgradesList, i)
-			if (upg.obj = o_enchufeUpgadeShields)
+			if (upg.obj = o_enchufeUpgadeLaserMax)
 			{
 				upg.times+=1;
 			}
@@ -194,7 +194,7 @@ function CheckEnchufeUpgrade()
 		upgraded = true;
 		global.laserMax += 1;
 		global.laser = global.laserMax;
-		global.shieldStat+=1;
+		global.laserStat+=1;
 		
 	}
 	else if (inEnchufe.upgradeReReRe = true) && (upgraded = false)

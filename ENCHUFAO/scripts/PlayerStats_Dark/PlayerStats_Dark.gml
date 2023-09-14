@@ -12,8 +12,8 @@ function PlayerStats_Dark()
 	global.hpMax = 3;
 	global.hp = 3;
 	
-	global.laserMax = 2;
-	global.laser = 2;
+	global.laserMax = 3;
+	global.laser = 3;
 	
 	global.ammo = 400;
 	global.ammoMax = 400;
@@ -25,6 +25,6 @@ function PlayerStats_Dark()
 	global.speedStat = 6;
 	global.hpStat = global.hpMax;
 	global.ammoStat = global.ammoMax / 50;
-	global.shieldStat = global.laserMax;
+	global.laserStat = global.laserMax;
 	global.cableStat = 3;
 }

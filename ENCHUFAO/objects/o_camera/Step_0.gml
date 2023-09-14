@@ -16,6 +16,7 @@ Controls_Input()
 			y_point_to_move_camera_to= mean(follow.y,follow.y,follow.y,follow.y,follow.y+axisrv*160);
 			x=lerp(x,x_point_to_move_camera_to,0.05);
 			y=lerp(y,y_point_to_move_camera_to,0.05);
+			
 		}
 		else
 		{
@@ -36,14 +37,25 @@ Controls_Input()
 			y+= random_range(-shakeRemain, shakeRemain);
 
 			shakeRemain = lerp(shakeRemain, 0, 0.05)
+			outRemain = lerp(outRemain, 0, 0.05)
+			
 		}
 	
 		if (shakeRemain <= 0.5)
 		{
-			shakeRemain = 0
+			
+			shakeRemain = 0;
 		}
+		
+		
+		camera_set_view_pos(view_camera[0],clamp(x-viewWidthHalf, -outRemain, room_width-(viewWidthHalf*2)+outRemain),clamp(y-viewHeightHalf, -outRemain, room_height-(viewHeightHalf*2)+outRemain))
+	}
+	else
+	{
+		camera_set_view_pos(view_camera[0],clamp(x-viewWidthHalf, 0, room_width-(viewWidthHalf*2)),clamp(y-viewHeightHalf, 0, room_height-(viewHeightHalf*2)))	
 	}
 
+	
 
 
 

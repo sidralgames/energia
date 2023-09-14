@@ -34,7 +34,7 @@ function PlayerPluggedMainEnchufes()
 	}
 	else
 	{
-		global.laserDrain = 0.002;
+		global.laserDrain = 0.005;
 	}
 	
 	//------------AMMO-----------//

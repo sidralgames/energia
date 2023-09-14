@@ -7,7 +7,7 @@ if instance_exists(o_shipSelector)
 
 	if (_visible = true) && (ship.unlocked = 1)
 	{
-		for (var i = 0; i <= global.shieldStat-1; i++)
+		for (var i = 0; i <= global.laserStat-1; i++)
 		{
 			draw_sprite(sprite_index, 0, (x + 15*i), y)	
 		}

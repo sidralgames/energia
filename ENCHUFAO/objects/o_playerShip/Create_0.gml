@@ -3,6 +3,10 @@
 type = collisionType.custom;
 
 contExploTile = 0;
+offsetLaser = 10;
+laserAborted = false
+thisLenght=0
+
 laserCont = 0;
 flashLaser = false
 blueWidht = 20;

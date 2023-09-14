@@ -3,4 +3,4 @@
 shockwave = instance_create(x,y,o_shockwave)
 instance_create(x,y,o_shockwaveTiles)
 shockwave.depth = depth+1;
-screenShake(5,20);
+screenShake(6,50);

@@ -52,7 +52,7 @@ if (canSelectShip) && (alarm[0] < 60)
 		global.HPStatInitial = global.hpStat;
 		global.speedStatInitial = global.speedStat;
 		global.cableStatInitial = global.cableStat;
-		global.shieldStatInitial = global.shieldStat;
+		global.laserStatInitial = global.laserStat;
 	
 	}
 }

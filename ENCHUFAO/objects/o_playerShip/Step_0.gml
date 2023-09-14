@@ -391,15 +391,23 @@ if (global.laser > 0)
 {
 	if (key_laser)
 	{
+		laserAborted = false;
+		gamepad_set_vibration(0,0.05*laserCont,0.05*laserCont)
 		laserCont+=1.5;
-		if (laserCont >= 60)
+		if (laserCont >= 60) && (laserActive = false)
 		{
+			screenShake(15,20)
 			laserCont = 60;
 			laserActive = true;
 		}
 	}
 	else
 	{
+		if (laserAborted = false)
+		{
+			laserAborted = true;
+			alarm[4] = 10;
+		}
 		contExploTile = 0;
 		laserCont = 0;
 		laserActive = false;
@@ -412,8 +420,15 @@ if (global.laser > 0)
 
 	if (laserActive) && (key_laser)
 	{
-		PlayerShipLaser();
+		gamepad_set_vibration(0,2,2)
+		PlayerShipLaser(_angle);
+		//PlayerShipLaser(_angle+offsetLaser);
+		//PlayerShipLaser(_angle-offsetLaser);
 	}
+}
+else
+{
+	laserActive = false
 }
 
 

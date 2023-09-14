@@ -10,7 +10,7 @@ function PlayerShipShoot()
 	explo.image_yscale = 0.15;
 	explo.image_speed = 3;
 	
-	screenShake(1,10)
+	screenShake(2,30)
 	audio_play_sound_on(global.audioEmitter,snd_shoot1, false, 50)
 		
 	if (global.ammo > 0) && (global.ammo <= 50)

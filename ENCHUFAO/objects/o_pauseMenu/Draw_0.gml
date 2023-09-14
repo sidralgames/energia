@@ -90,9 +90,9 @@ for (var i = 0; i <= global.ammoStat-1; i++)
 	}
 }
 
-for (var i = 0; i <= global.shieldStat-1; i++)
+for (var i = 0; i <= global.laserStat-1; i++)
 {
-	if (i < global.shieldStatInitial)
+	if (i < global.laserStatInitial)
 	{
 		draw_sprite(s_indivStat, 0,  __view_get( e__VW.XView, 0 )+ 125 +(i * 15),__view_get( e__VW.YView, 0 )+180)	
 	}

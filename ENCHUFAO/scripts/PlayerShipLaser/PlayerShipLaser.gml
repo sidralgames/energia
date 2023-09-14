@@ -1,9 +1,12 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function PlayerShipLaser()
+function PlayerShipLaser(argument0)
 {
+	alarm[4] = 10;
 	if (global.laser > 0)
 	{
+		screenShake(2,10)
+		gamepad_set_vibration(0,0.3,0.3)
 		global.laser-=global.laserDrain;
 	}
 	
@@ -14,18 +17,19 @@ function PlayerShipLaser()
 	for(var i = 0; i < maxLenght_; i++)
 	{
 		maxLenght = i ;
-	     var lx = x + lengthdir_x(i, _angle);
-	     var ly = y + lengthdir_y(i, _angle);
+	     var lx = x + lengthdir_x(i, argument0);
+	     var ly = y + lengthdir_y(i, argument0);
 		 
 	     if tile_meeting(lx,ly,"Tiles") || place_meeting(lx, ly, o_enemyP)
 		 {
 			 maxLenght_=i
 			 maxLenght = maxLenght_;
+			 thisLenght = maxLenght;
 			 
 			 var _tilemap_id = layer_tilemap_get_id("Tiles");
 
-			 _x = x+lengthdir_x(maxLenght+random_range(5,20), _angle+random_range(5,-5))
-			 _y = y+lengthdir_y(maxLenght+random_range(5,20), _angle+random_range(5,-5))
+			 _x = x+lengthdir_x(maxLenght+random_range(5,20), argument0+random_range(5,-5))
+			 _y = y+lengthdir_y(maxLenght+random_range(5,20), argument0+random_range(5,-5))
   
 			 if (global.wallgrid_[# floor(_x/32), floor(_y/32)] != FLOOR) && (_x > 40) && (_x < room_width-40)
 			 && (_y > 40) && (_y < room_height-40)
@@ -39,11 +43,11 @@ function PlayerShipLaser()
 					velo = random_range(1,1.5);
 					global.wallgrid_[# _x/32, _y/32] = FLOOR
 					mp_grid_clear_rectangle(gridRoom1, _x-15,_y-15,_x,_y)
-					met = instance_create_layer(_x+lengthdir_x(10, _angle),_y+lengthdir_y(10, _angle),"Meteors", o_meteor)
+					met = instance_create_layer(_x+lengthdir_x(10, argument0),_y+lengthdir_y(10, argument0),"Meteors", o_meteor)
 					if instance_exists(met)
 					{
-						met._hpush = lengthdir_x(velo,_angle)
-						met._vpush = lengthdir_y(velo,_angle)
+						met._hpush = lengthdir_x(velo,argument0)
+						met._vpush = lengthdir_y(velo,argument0)
 					}
 				}
 			 }
@@ -60,7 +64,7 @@ function PlayerShipLaser()
 	grappleX = lx;
 	grappleY = ly;
 	
-	enemy = collision_line(x,y,x+lengthdir_x(maxLenght_+20, _angle+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,_angle+random_range(2,-2)), o_enemyP,false, true)
+	enemy = collision_line(x,y,x+lengthdir_x(maxLenght_+20, argument0+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,argument0+random_range(2,-2)), o_enemyP,false, true)
 	if (enemy)
 	{
 		enemy._hp -=(0.25+global.laserDamage);

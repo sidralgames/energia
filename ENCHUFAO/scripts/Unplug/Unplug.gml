@@ -21,7 +21,7 @@ function Unplug()
 	global.chargingLaser = false;
 	global.chargingEnergy = false;
 	global.hp = round(global.hp);
-	global.laserDrain = 0.002;
+	global.laserDrain = 0.005;
 	pluggedFinal = false;
 	
 }

@@ -95,7 +95,7 @@ function SetupLevelBasic()
 
 	SetTiles();
 
-
+	var oddsPETAinTile = 60;
 
 	for ( var yyW = 0; yyW < height_; yyW++) {
 	    for (var xxW = 0; xxW < width_; xxW++) {
@@ -107,10 +107,18 @@ function SetupLevelBasic()
 	     if (irandom(oddsW) == oddsW){
 	    if (global.wallgrid_[# xxW, yyW] == WALL) 
 				 {
+					if (oddsPETAinTile = irandom(oddsPETAinTile))
+					{
+						instance_create_layer(exW,eyW, "ObjectsTiles", o_PETAinTile);
+					}
 					instance_create_layer(exW,eyW, "Walls", o_wall);
 			     }
 			     if (global.wallgrid_[# xxW, yyW] == VOID) 
 				 {
+					if (oddsPETAinTile = irandom(oddsPETAinTile))
+					{
+						instance_create_layer(exW,eyW, "ObjectsTiles", o_PETAinTile);
+					}
 					instance_create_layer(exW,eyW, "Walls", o_wall);
 			     }
  

@@ -13,7 +13,7 @@ global.laserDamage=0;
 global.shields = 0;
 global.shieldsMax = 3;
 
-global.laserDrain = 0.002;
+global.laserDrain = 0.005;
 global.energyLow = 80;
 global.bombIsClusterBomb = false;
 
@@ -150,7 +150,7 @@ global.fasterChargeIsUpgraded = false;
 global.fireRateIsUpgraded = false;
 global.HPIsUpgraded = false;
 global.rerereIsUpgraded = false;
-global.shieldsIsUpgraded = false;
+global.laserMaxIsUpgraded = false;
 global.slowerDischargeIsUpgraded = false;
 global.slowMoIsUpgraded = false;
 global.speedIsUpgraded = false;
@@ -171,7 +171,7 @@ AddUpgradeSlowerDischarge();
 AddUpgradeLongerCable();
 AddUpgradeFireRate();
 AddUpgradeSuperShot();
-AddUpgradeShields();
+AddUpgradeLaserMax();
 AddUpgradeReReRe();
 AddUpgradeSpeedUp();
 AddUpgradeChargerShoots();
