@@ -1,6 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 Controls_Input()
+
+if (flashAlpha > 0) 
+{
+	flashAlpha -= 0.09;
+}
+
 switch(state)
 {
 	case ENEMYSTATE.PLUGGED: EnemyEnchufePlugged(); break;

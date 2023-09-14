@@ -8,7 +8,7 @@ laserAborted = false
 thisLenght=0
 
 cooldownLaser = 20;
-
+impulse = false;
 
 laserCont = 0;
 flashLaser = false

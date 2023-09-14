@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 type = collisionType.custom;
-
+flashAlpha = 0;
 
 slowMoPickUps = 5;
 cable = noone;

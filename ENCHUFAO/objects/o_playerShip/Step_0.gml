@@ -407,6 +407,7 @@ if (global.laser > 0)
 		laserCont+=1.5;
 		if (laserCont >= 60) && (laserActive = false) 
 		{
+			impulse = false;
 			if (cooldownLaser<=0)
 			{
 				screenShake(15,20)
@@ -428,12 +429,19 @@ if (global.laser > 0)
 		flashLaser = false;
 		blueWidht = 20;
 		whiteWidht = 30;
-		whiteW = 10
-		blueW = 30
+		whiteW = 10;
+		blueW = 30;
+		impulse = false;
 	}
 
 	if (laserActive) && (key_laser) && (global.laser>0)
 	{
+		if (impulse = false)
+		{
+			_hpush += -lengthdir_x(10, _angle);
+			_vpush += -lengthdir_y(10, _angle);
+			impulse = true;
+		}
 		gamepad_set_vibration(0,2,2)
 		PlayerShipLaser(_angle);
 		//PlayerShipLaser(_angle+offsetLaser);
