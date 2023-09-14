@@ -2,18 +2,19 @@
 
 // Create a new verlet system
 // You can create multiple systems with different physic properties
+canCollide = false
 fric = 0.85;
 verletSystem1 = new verletSystem(fric, 0.0);
 off = 0;
-cableColor = make_color_rgb(228,59, 68) ;
+cableColor = c_black ;
 // Create verlet groups
 _segments = 25
 // Create a new rope
-rope1 = verletGroupCreateRope(verletSystem1, x, y, cableColor, 2, 4, _segments, 1, 100);
+rope1 = verletGroupCreateRope(verletSystem1, x, y, cableColor, 5, 4, _segments, 1, 100,canCollide);
 //rope1 = verletGroupCreateRopeTextured(verletSystem1, x, y, s_tentacle, _segments, 1, 10);
 
  //Attach its first vertex to an object
-inst = instance_nearest(x,y,o_enemyBOSS)
+inst = instance_nearest(x,y,o_enemyFastBoss)
 rope1.vertexAttachTo(first, inst);
 
 

@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "O_SELECTuPGRADE",
   "spriteId": {
-    "name": "Sprite65",
-    "path": "sprites/Sprite65/Sprite65.yy",
+    "name": "s_selectUpgrade",
+    "path": "sprites/s_selectUpgrade/s_selectUpgrade.yy",
   },
   "solid": false,
   "visible": true,

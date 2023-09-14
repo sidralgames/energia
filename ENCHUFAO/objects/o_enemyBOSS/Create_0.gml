@@ -3,7 +3,7 @@
 waiting = false;
 instance_create(x,y,o_gridRoom)
 stateBoss = 0;
-cable = instance_create_layer(x,y,"Cable", o_cableEnemyBoss)
+
 hsp_final = 0
 hsp_f = 0
 vsp_final = 0
@@ -38,6 +38,6 @@ speed=_speed;
 off = 90;
 len = 0;
 
-
+cable = instance_create_layer(x,y,"Cable", o_cableEnemyBoss)
 
 
