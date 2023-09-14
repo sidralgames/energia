@@ -7,6 +7,9 @@ offsetLaser = 10;
 laserAborted = false
 thisLenght=0
 
+cooldownLaser = 20;
+
+
 laserCont = 0;
 flashLaser = false
 blueWidht = 20;

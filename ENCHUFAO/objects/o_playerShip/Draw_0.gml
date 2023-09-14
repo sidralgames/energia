@@ -9,7 +9,7 @@ azul = make_color_rgb(44,232, 245)
  
 if (global.laser > 0)
 {
-	DrawLaserPlayer(_angle, thisLenght);
+	DrawLaserPlayer(_angle);
 	//DrawLaserPlayer(_angle+offsetLaser,thisLenght);
 	//DrawLaserPlayer(_angle-offsetLaser,thisLenght);
 }
