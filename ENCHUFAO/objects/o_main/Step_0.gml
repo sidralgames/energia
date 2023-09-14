@@ -52,7 +52,7 @@ else if (global.chargingAmmo)
 {
 	global.cableColor = yellow
 }
-else if (global.chargingShield)
+else if (global.chargingLaser)
 {
 	global.cableColor = blue
 }

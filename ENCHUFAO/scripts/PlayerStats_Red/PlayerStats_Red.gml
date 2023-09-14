@@ -12,8 +12,8 @@ function PlayerStats_Red()
 	global.hpMax = 6;
 	global.hp = 6;
 	
-	global.shieldsMax = 1;
-	global.shields = 0;
+	global.laserMax = 1;
+	global.laser = 1;
 	
 	global.ammo = 300;
 	global.ammoMax = 300;
@@ -25,6 +25,6 @@ function PlayerStats_Red()
 	global.speedStat = 2;
 	global.hpStat = global.hpMax;
 	global.ammoStat = global.ammoMax / 50;
-	global.shieldStat = global.shieldsMax;
+	global.shieldStat = global.laserMax;
 	global.cableStat = 5;
 }

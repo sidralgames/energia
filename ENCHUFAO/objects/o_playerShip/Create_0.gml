@@ -2,13 +2,20 @@
 // You can write your code in this editor
 type = collisionType.custom;
 
+contExploTile = 0;
+laserCont = 0;
+flashLaser = false
+blueWidht = 20;
+whiteWidht = 10;
+blueW = 30
+whiteW = 10
 imageStrandedAmmo=0;
 imageStrandedHp=0;
 imageStrandedEnergy=0;
 radi = 17;
 bumpsAchievement = true;
-
-
+maxLenght = 0;
+laserActive = true;
 
 hsp_final = 0
 hsp_f = 0
@@ -38,7 +45,7 @@ canSuperShot = true;
 global.pluggedInEnergy = false;
 global.pluggedInHp= false;
 global.pluggedInAmmo= false;
-global.pluggedInShield= false;
+global.pluggedInLaser= false;
 
 
 crosshairSuper = false;

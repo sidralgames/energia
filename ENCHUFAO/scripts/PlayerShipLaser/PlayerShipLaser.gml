@@ -1,0 +1,69 @@
+// Script assets have changed for v2.3.0 see
+// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+function PlayerShipLaser()
+{
+	if (global.laser > 0)
+	{
+		global.laser-=global.laserDrain;
+	}
+	
+	_angle+=random_range(1,-1);
+	_hpush += -lengthdir_x(0.13, _angle);
+	_vpush += -lengthdir_y(0.13, _angle);
+	var maxLenght_ = 640;
+	for(var i = 0; i < maxLenght_; i++)
+	{
+		maxLenght = i ;
+	     var lx = x + lengthdir_x(i, _angle);
+	     var ly = y + lengthdir_y(i, _angle);
+		 
+	     if tile_meeting(lx,ly,"Tiles") || place_meeting(lx, ly, o_enemyP)
+		 {
+			 maxLenght_=i
+			 maxLenght = maxLenght_;
+			 
+			 var _tilemap_id = layer_tilemap_get_id("Tiles");
+
+			 _x = x+lengthdir_x(maxLenght+random_range(5,20), _angle+random_range(5,-5))
+			 _y = y+lengthdir_y(maxLenght+random_range(5,20), _angle+random_range(5,-5))
+  
+			 if (global.wallgrid_[# floor(_x/32), floor(_y/32)] != FLOOR) && (_x > 40) && (_x < room_width-40)
+			 && (_y > 40) && (_y < room_height-40)
+			 {
+				contExploTile+=1.3;
+				if (contExploTile >=35)
+				{
+					tilemap_set_at_pixel(_tilemap_id, 0, _x, _y);
+					contExploTile = 0;
+					global.changingTiles = true;
+					velo = random_range(1,1.5);
+					global.wallgrid_[# _x/32, _y/32] = FLOOR
+					mp_grid_clear_rectangle(gridRoom1, _x-15,_y-15,_x,_y)
+					met = instance_create_layer(_x+lengthdir_x(10, _angle),_y+lengthdir_y(10, _angle),"Meteors", o_meteor)
+					if instance_exists(met)
+					{
+						met._hpush = lengthdir_x(velo,_angle)
+						met._vpush = lengthdir_y(velo,_angle)
+					}
+				}
+			 }
+			 else
+			 {
+				 if (contExploTile > 0)
+				 {
+					 contExploTile -= 0.05;
+				 }
+			 }
+		}  
+	}
+	
+	grappleX = lx;
+	grappleY = ly;
+	
+	enemy = collision_line(x,y,x+lengthdir_x(maxLenght_+20, _angle+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,_angle+random_range(2,-2)), o_enemyP,false, true)
+	if (enemy)
+	{
+		enemy._hp -=(0.25+global.laserDamage);
+		enemy.flashAlpha = 1;
+	}
+}

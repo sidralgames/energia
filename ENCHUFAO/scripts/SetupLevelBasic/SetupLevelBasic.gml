@@ -10,6 +10,15 @@ function SetupLevelBasic()
 	enchufeShield = false;
 	enchufeAmmo = false;
 	enchufeFinal = false;
+	
+	ShieldsInLevel = 0;
+	ShieldsInLevelMax = 2;
+	
+	BombsInLevelMax = 3;
+	BombsInLevel = 0;
+	
+	PetasInLevelMax = 2;
+	PetasInLevel = 0;
 
 	__background_set( e__BG.X, 0, irandom(2000) );
 	__background_set( e__BG.Y, 0, irandom(1000) );
@@ -127,6 +136,7 @@ function SetupLevelBasic()
 				
 				var oddsPETA = 300;
 				var oddsBomb = 300;
+				var oddsShield = 300;
 			
 			    var exM = xx * CELL_WIDTH+CELL_WIDTH/2;
 			    var eyM = yy * CELL_HEIGHT+CELL_HEIGHT/2;
@@ -149,6 +159,12 @@ function SetupLevelBasic()
 				{
 					instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_BombpickUp); 
 					BombsInLevel +=1;
+				}
+				
+				if (irandom(oddsShield) == oddsShield) && (ShieldsInLevel < ShieldsInLevelMax) 
+				{
+					instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_ShieldpickUp); 
+					ShieldsInLevel +=1;
 				}
 				
 				if (irandom(oddsE0) == oddsE0) && (enchufe0 = false)

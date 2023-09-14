@@ -4,7 +4,7 @@ function AddBulletForEnemyStat()
 {
 ds_map_add(global.statsList, global.numberOfStats,
 	{ 
-		textStat: "Bullets To Kill 1 Enemy: " + string((global.totalBullets / global.enemiesKilledTotalAch)),
+		textStat: "Bullets / Enemy: " + string((global.totalBullets / global.enemiesKilledTotalAch)),
 	})
 
 global.numberOfStats +=1;

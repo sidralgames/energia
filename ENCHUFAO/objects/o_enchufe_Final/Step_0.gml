@@ -13,7 +13,7 @@ else
 if (room = Sala_0)
 {
 	if (global.pluggedInEnergy) && (global.pluggedInHp) &&
-	(global.pluggedInAmmo) && (global.pluggedInShield)
+	(global.pluggedInAmmo) && (global.pluggedInLaser)
 	{
 		abierto = true;	
 	}

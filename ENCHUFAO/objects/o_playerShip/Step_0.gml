@@ -387,6 +387,37 @@ if (room = Sala_0) || (room = Sala_FirstBoss)
 	
 }
 
+if (global.laser > 0)
+{
+	if (key_laser)
+	{
+		laserCont+=1.5;
+		if (laserCont >= 60)
+		{
+			laserCont = 60;
+			laserActive = true;
+		}
+	}
+	else
+	{
+		contExploTile = 0;
+		laserCont = 0;
+		laserActive = false;
+		flashLaser = false;
+		blueWidht = 20;
+		whiteWidht = 30;
+		whiteW = 10
+		blueW = 30
+	}
+
+	if (laserActive) && (key_laser)
+	{
+		PlayerShipLaser();
+	}
+}
+
+
+
 if (room != Sala_Inicio)
 {
 	//if instance_exists(lightPlayer)

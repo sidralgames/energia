@@ -8,7 +8,7 @@ rojo = make_color_rgb(228,59, 68)
 
 //draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+60,"HP: " + string(round(global.hp)) + " / " + string(round(global.hpMax)))
 
-//draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+80,"SHIELDS: " + string(round(global.shields)) + " / " + string(round(global.shieldsMax)))
+//draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+80,"SHIELDS: " + string(round(global.laser)) + " / " + string(round(global.laserMax)))
 
 //draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+100,"milisecsSlow: " + string(global.slowmilisecs))
 
@@ -31,7 +31,7 @@ if (!isPaused)
 
 
 		draw_sprite_ext(s_shieldBar_out,0,__view_get( e__VW.XView, 0 )+620,__view_get( e__VW.YView, 0 )+355,1,1,0,image_blend, image_alpha)
-		draw_sprite_ext(s_shieldBar_in,0,__view_get( e__VW.XView, 0 )+620,__view_get( e__VW.YView, 0 )+355,1,(global.shields/global.shieldsMax),0,image_blend, image_alpha)
+		draw_sprite_ext(s_shieldBar_in,0,__view_get( e__VW.XView, 0 )+620,__view_get( e__VW.YView, 0 )+355,1,(global.laser/global.laserMax),0,image_blend, image_alpha)
 	}
 	//draw_text(__view_get( e__VW.XView, 0 )+30,__view_get( e__VW.YView, 0 )+20, "existe " + string(global.EXISTE))
 	if (room = Sala_0)

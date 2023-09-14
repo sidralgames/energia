@@ -34,7 +34,7 @@ if (global.wallgrid_[# _x/32, _y/32] != FLOOR) && (_x > 50) && (_x < room_width-
 {
 	if oddsPETA = irandom(oddsPETA)
 	{
-		canCreate = true;
+		canCreatePeta = true;
 	}
 	tilemap_set_at_pixel(_tilemap_id, 0, _x, _y);
 	velo = random_range(1,1.5);
@@ -46,8 +46,8 @@ if (global.wallgrid_[# _x/32, _y/32] != FLOOR) && (_x > 50) && (_x < room_width-
 		met._hpush = lengthdir_x(velo,dir)
 		met._vpush = lengthdir_y(velo,dir)
 	}
-	xtoCreate = _x;
-	yToCreate = _y;
+	xtoCreateP = _x;
+	yToCreateP = _y;
 }
 
 
@@ -56,7 +56,7 @@ if (global.wallgrid_[# _x2/32, _y2/32] != FLOOR)&& (_x2 > 50) && (_x2 < room_wid
 {
 	if oddsPETA = irandom(oddsPETA)
 	{
-		canCreate = true;
+		canCreatePeta = true;
 	}
 	tilemap_set_at_pixel(_tilemap_id, 0, _x2, _y2);
 	velo = random_range(1,1.5);
@@ -69,8 +69,8 @@ if (global.wallgrid_[# _x2/32, _y2/32] != FLOOR)&& (_x2 > 50) && (_x2 < room_wid
 		met2._hpush = lengthdir_x(velo,dir)
 		met2._vpush = lengthdir_y(velo,dir)
 	}
-	xtoCreate = _x2;
-	yToCreate = _y2;
+	xtoCreateP = _x2;
+	yToCreateP = _y2;
 }
 
 
@@ -79,7 +79,7 @@ if (global.wallgrid_[# _x3/32, _y3/32] != FLOOR) && (_x3 > 50) && (_x3 < room_wi
 {
 	if oddsPETA = irandom(oddsPETA)
 	{
-		canCreate = true;
+		canCreatePeta = true;
 	}
 	tilemap_set_at_pixel(_tilemap_id, 0, _x3, _y3);
 	velo = random_range(1,1.5);
@@ -93,13 +93,13 @@ if (global.wallgrid_[# _x3/32, _y3/32] != FLOOR) && (_x3 > 50) && (_x3 < room_wi
 		met3._vpush = lengthdir_y(velo,dir)
 
 	}
-	xtoCreate = _x3;
-	yToCreate = _y3;
+	xtoCreateP = _x3;
+	yToCreateP = _y3;
 }
 
-if (canCreate = true)
+if (canCreatePeta = true)
 {
-	canCreate = false;
-	instance_create_layer(xtoCreate, yToCreate, "Enchufes", 
-	choose(o_enchufePETA, o_enchufePETAAmmo, o_enchufePETAHP, o_enchufePETAShield, o_enchufePETAAll))	
+	canCreatePeta = false;
+	instance_create_layer(xtoCreateP, yToCreateP, "Enchufes", 
+	choose(o_enchufePETA, o_enchufePETAAmmo, o_enchufePETAHP, o_enchufePETAShield))	
 }

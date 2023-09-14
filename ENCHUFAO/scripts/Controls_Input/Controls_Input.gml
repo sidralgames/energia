@@ -8,6 +8,7 @@ function Controls_Input()
 	key_down = keyboard_check(vk_down) || keyboard_check(ord("S")) || gamepad_button_check(0, gp_padd) || gamepad_axis_value(0, gp_axislv) > 0.5;
 	key_x = keyboard_check_pressed(ord("X")) || gamepad_button_check_pressed(0, gp_face1) || mouse_check_button_pressed(mb_right)
 	key_shoot = mouse_check_button(mb_left) || gamepad_button_check(0, gp_shoulderr)
+	key_laser = mouse_check_button(mb_left) || gamepad_button_check(0, gp_shoulderrb)
 	key_bomb = mouse_check_button(mb_middle) || gamepad_button_check(0, gp_shoulderl)
 	
 	key_upP = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W")) || gamepad_button_check_pressed(0, gp_padu)// || gamepad_axis_value(0, gp_axislv) < -0.5;

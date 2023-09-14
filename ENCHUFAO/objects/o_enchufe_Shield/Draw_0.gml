@@ -9,7 +9,7 @@
 // Inherit the parent event
 event_inherited();
 
-if (global.chargingShield) && (!global.pluggedInShield) && (charging)
+if (global.chargingLaser) && (!global.pluggedInLaser) && (charging)
 {
 	if (charge <= 200)
 	{
@@ -21,7 +21,7 @@ if (global.chargingShield) && (!global.pluggedInShield) && (charging)
 
 if (charge >= 200)
 {
-	global.pluggedInShield = true;
+	global.pluggedInLaser = true;
 }
 
 

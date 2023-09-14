@@ -23,12 +23,18 @@ function PlayerPluggedMainEnchufes()
 	}
 	
 	//------------SHIELD-----------//
-	if (global.chargingShield = true)
+	if (global.chargingLaser = true)
 	{
-		if (global.shields <= global.shieldsMax)
+		if (global.laser <= global.laserMax)
 		{
-			global.shields +=0.005*global.chargeTime;
+			global.laser +=0.005*global.chargeTime;
 		}
+		
+		global.laserDrain = 0.015;
+	}
+	else
+	{
+		global.laserDrain = 0.002;
 	}
 	
 	//------------AMMO-----------//

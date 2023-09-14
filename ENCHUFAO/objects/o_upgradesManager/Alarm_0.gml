@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (upgradesTotal < 4)
+if (upgradesTotal < 5)
 {
 	upgradeChosen = ds_map_find_value(global.upgradesList,irandom(global.numberOfUpgrades-1));
 		

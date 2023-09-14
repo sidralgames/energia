@@ -7,6 +7,13 @@ global.secs = 0;
 global.minut = 0;
 global.hour = 0;
 
+global.laserWidth = 0;
+global.laserDamage=0;
+
+global.shields = 0;
+global.shieldsMax = 3;
+
+global.laserDrain = 0.002;
 global.energyLow = 80;
 global.bombIsClusterBomb = false;
 
@@ -112,8 +119,8 @@ global.unPlugging = false;
 
 global.pluggingStrandedShipToEnchufe = false;
 
-global.bombAmmoMax = 7
-global.bombAmmo = 7;
+global.bombAmmoMax = 5
+global.bombAmmo = 2;
 
 global.PETAsMax = 3;
 global.PETAAmmo = 1;
@@ -123,7 +130,7 @@ global.Go = false;
 global.resetingShip = false;
 global.chargingAmmo = false;
 global.chargingHp = false;
-global.chargingShield = false;
+global.chargingLaser = false;
 global.chargingEnergy = false;
 global.chargingPETA = false;
 
@@ -150,6 +157,7 @@ global.speedIsUpgraded = false;
 global.superShotIsUpgraded = false;
 global.overchargeIsUpgraded = false;
 global.clusterIsUpgraded = false;
+global.laserIsUpgraded = false;
 
 
 
@@ -170,6 +178,7 @@ AddUpgradeChargerShoots();
 AddUpgradeSlowMo();
 AddUpgradeOvercharge();
 AddUpgradeClusterBomb();
+AddUpgradeLaser();
 
 
 global.shipList = ds_map_create();

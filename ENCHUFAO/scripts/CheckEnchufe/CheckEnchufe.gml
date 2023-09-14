@@ -24,7 +24,7 @@ function CheckEnchufe()
 	}
 	if (inEnchufe.shield = true)
 	{
-		global.chargingShield= true;	
+		global.chargingLaser= true;	
 	}
 	if (inEnchufe.ammo = true)
 	{
@@ -56,12 +56,12 @@ function CheckEnchufe()
 		if (inEnchufe.isPETAShield = true)
 		{
 			global.chargingEnergy = true;
-			global.chargingShield = true;	
+			global.chargingLaser = true;	
 		}
 		if (inEnchufe.isPETAAll= true)
 		{
 			global.chargingEnergy = true;
-			global.chargingShield = true;	
+			global.chargingLaser = true;	
 			global.chargingHp = true;	
 			global.chargingAmmo = true;	
 		}

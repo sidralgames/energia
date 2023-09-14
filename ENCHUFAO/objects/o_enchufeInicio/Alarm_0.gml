@@ -3,7 +3,7 @@
 if (cont = true)
 {
 	//Set to false run upgrades like this
-	global.bombIsClusterBomb = true;
+	global.bombIsClusterBomb = false;
 	room_goto(Sala_0)
 }
 

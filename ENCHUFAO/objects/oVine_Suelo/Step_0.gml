@@ -17,11 +17,14 @@
 			}
 			
 			collision = instance_nearest(x,y,parCollision);
-			if (point_distance(x,y,collision.x, collision.y) < 200)
+			if instance_exists(collision)
 			{
-				if (verletSystemExists(verletSystem1)) 
+				if (point_distance(x,y,collision.x, collision.y) < 200)
 				{
-					verletSystem1.simulate();
+					if (verletSystemExists(verletSystem1)) 
+					{
+						verletSystem1.simulate();
+					}
 				}
 			}
 		}

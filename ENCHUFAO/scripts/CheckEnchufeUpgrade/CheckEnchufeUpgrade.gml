@@ -192,8 +192,8 @@ function CheckEnchufeUpgrade()
 		}
 		inEnchufe.charging = true;
 		upgraded = true;
-		global.shieldsMax += 1;
-		global.shields = global.shieldsMax;
+		global.laserMax += 1;
+		global.laser = global.laserMax;
 		global.shieldStat+=1;
 		
 	}
@@ -217,7 +217,7 @@ function CheckEnchufeUpgrade()
 		global.hp = global.hpMax;
 		global.energy = global.energyTotal;
 		global.ammo = global.ammoMax;
-		global.shields = global.shieldsMax;
+		global.laser = global.laserMax;
 		
 	}
 	else if (inEnchufe.upgradeSpeed = true) && (upgraded = false)
@@ -320,6 +320,28 @@ function CheckEnchufeUpgrade()
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.bombIsClusterBomb=true;
+		
+	}
+	else if (inEnchufe.upgradeLaser = true) && (upgraded = false)
+	{
+		if (!global.laserIsUpgraded)
+		{
+			global.laserIsUpgraded = true;
+			AddUpgradeLaserPlayer();
+		}
+		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+		{
+			upg = ds_map_find_value(global.PlayerUpgradesList, i)
+			if (upg.obj = o_enchufeUpgadeLaser)
+			{
+				upg.times+=1;
+			}
+		}
+		
+		inEnchufe.charging = true;
+		upgraded = true;
+		global.laserDamage+=0.5;
+		global.laserWidth+=3;
 		
 	}
 }

@@ -13,10 +13,10 @@ function UnplugPETA()
 		global.unPlugging = true;
 		global.chargingAmmo = false;
 		global.chargingHp = false;
-		global.chargingShield = false;
+		global.chargingLaser = false;
 		global.chargingEnergy = false;
 		global.hp = round(global.hp)
-		global.shields = round(global.shields)
+		global.laserDrain = 0.002;
 		o_playerShip.pluggedFinal = false;
 	}
 	
