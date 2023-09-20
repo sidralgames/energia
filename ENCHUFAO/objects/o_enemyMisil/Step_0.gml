@@ -1,7 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 Controls_Input()
-
+if (flashAlpha > 0) 
+{
+	flashAlpha -= 0.09;
+}
 superShotPressed = (key_r3Dowm && key_l3Dowm)
 
 part_particles_create(global.naveEnemy1_sys, x, y, global.naveEnemy1 , 3)

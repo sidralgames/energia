@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_nextRoom",
   "spriteId": {
-    "name": "Sprite20",
-    "path": "sprites/Sprite20/Sprite20.yy",
+    "name": "s_title",
+    "path": "sprites/s_title/s_title.yy",
   },
   "solid": false,
   "visible": true,

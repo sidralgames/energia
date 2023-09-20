@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
+CreateSlowmoParts();
 
 
 
@@ -9,6 +9,3 @@
 // Inherit the parent event
 event_inherited();
 
-energy = true;
-upgradeLaserMax = true;
-charging = false;

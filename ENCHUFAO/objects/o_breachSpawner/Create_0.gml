@@ -14,15 +14,15 @@ alarm[2] = 30;
 
 
 
-if audio_is_playing(global.song)
-{
-	audio_stop_sound(global.song)
-}
+//if audio_is_playing(global.song)
+//{
+//	audio_stop_sound(global.song)
+//}
 
-if !audio_is_playing(snd_songBossBreach)
-{
-	audio_play_sound_on(global.audioEmitter,snd_songBossBreach, true, 50)
-}
+//if !audio_is_playing(snd_songBossBreach)
+//{
+//	audio_play_sound_on(global.audioEmitter,snd_songBossBreach, true, 50)
+//}
 
 
 

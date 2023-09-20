@@ -5,8 +5,8 @@ function DrawLaserPlayer(argument0)
 
 if (key_laser) && !(laserActive)
 	{
-		blueW =  lerp(blueW, 1, 0.05*global.relativeSpeed);
-		whiteW =  lerp(whiteW, 1, 0.05*global.relativeSpeed);
+		blueW =  lerp(blueW, global.laserWidth+1, 0.05*global.relativeSpeed);
+		whiteW =  lerp(whiteW, global.laserWidth+1, 0.05*global.relativeSpeed);
 		draw_set_alpha(0.2+random(0.5))
 		draw_circle_colour(x-1+lengthdir_x(10,_angle), y-1+lengthdir_y(10, _angle),(height*2)+blueW+global.laserWidth,azul, azul, false)
 		draw_circle_colour(x-1+lengthdir_x(10,_angle), y-1+lengthdir_y(10, _angle),(height*1)+whiteW+global.laserWidth,blanco, blanco, false)
@@ -20,8 +20,8 @@ if (key_laser) && !(laserActive)
 			draw_rectangle(__view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0,__view_get( e__VW.XView, 0 )+640,__view_get( e__VW.YView, 0 )+360,false)
 			drawflash=false;
 		}
-		blueWidht = lerp(blueWidht, 4, 0.1*global.relativeSpeed);
-		whiteWidht =  lerp(whiteWidht, 1, 0.2*global.relativeSpeed);
+		blueWidht = lerp(blueWidht,global.laserWidth+ 4, 0.1*global.relativeSpeed);
+		whiteWidht =  lerp(whiteWidht, global.laserWidth+1, 0.2*global.relativeSpeed);
 	
 		draw_set_alpha(0.8+random(0.6))
 		draw_circle_colour(x+lengthdir_x(10,_angle), y-1+lengthdir_y(10, _angle),(height*2)+blueWidht+0.5+global.laserWidth,azul, azul, false)

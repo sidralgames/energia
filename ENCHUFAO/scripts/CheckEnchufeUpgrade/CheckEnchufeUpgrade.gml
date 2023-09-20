@@ -175,7 +175,7 @@ function CheckEnchufeUpgrade()
 		global.fireRate-=4;
 		
 	}
-	else if (inEnchufe.upgradeLaser = true) && (upgraded = false)
+	else if (inEnchufe.upgradeLaserMax = true) && (upgraded = false)
 	{
 		if (!global.laserMaxIsUpgraded)
 		{
@@ -341,7 +341,7 @@ function CheckEnchufeUpgrade()
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.laserDamage+=0.5;
-		global.laserWidth+=3;
+		global.laserWidth+=2;
 		
 	}
 }
