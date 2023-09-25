@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 full = false;
-global.song = choose(snd_song2, snd_song3)
+global.song = choose(snd_songMaster)
 global.milisecs = 0;
 global.secs = 0;
 global.minut = 0;

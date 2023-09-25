@@ -210,6 +210,7 @@
     {"id":{"name":"o_nextRoom","path":"objects/o_nextRoom/o_nextRoom.yy",},"order":3,},
     {"id":{"name":"sh_blend_light","path":"shaders/sh_blend_light/sh_blend_light.yy",},"order":0,},
     {"id":{"name":"o_slowMoPickUp","path":"objects/o_slowMoPickUp/o_slowMoPickUp.yy",},"order":33,},
+    {"id":{"name":"snd_songMaster","path":"sounds/snd_songMaster/snd_songMaster.yy",},"order":15,},
     {"id":{"name":"s_resume","path":"sprites/s_resume/s_resume.yy",},"order":50,},
     {"id":{"name":"PluggedToEnchufe","path":"scripts/PluggedToEnchufe/PluggedToEnchufe.yy",},"order":34,},
     {"id":{"name":"o_enchufeInicio","path":"objects/o_enchufeInicio/o_enchufeInicio.yy",},"order":6,},
