@@ -31,7 +31,7 @@ function PlayerShipLaser(argument0)
 			 _x = x+lengthdir_x(maxLenght+random_range(5,20), argument0+random_range(5,-5))
 			 _y = y+lengthdir_y(maxLenght+random_range(5,20), argument0+random_range(5,-5))
   
-			 if (global.wallgrid_[# floor(_x/32), floor(_y/32)] != FLOOR) && (_x > 40) && (_x < room_width-40)
+			 if (global.wallgrid_[# (_x/32), (_y/32)] != FLOOR) && (_x > 40) && (_x < room_width-40)
 			 && (_y > 40) && (_y < room_height-40)
 			 {
 				contExploTile+=1.3;

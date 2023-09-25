@@ -11,7 +11,7 @@ function PlayerPluggedMainEnchufes()
 	//------------HP-----------//
 	if (global.chargingHp = true)
 	{
-		if (global.hp <= global.hpMax)
+		if (global.hp < global.hpMax)
 		{
 			global.hp +=0.007*global.chargeTime;
 			if (alarm[3] <=0)
