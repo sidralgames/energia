@@ -3,6 +3,7 @@
 draw_set_halign(fa_left)
 
 azul = make_color_rgb(44,232, 245) 
+azulO = make_color_rgb(0,149,233)
 rojo = make_color_rgb(228,59, 68) 
 //draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+40,"ENERGY: " + string(round(global.energy)) + " / " + string(round(global.energyTotal)))
 
@@ -20,54 +21,78 @@ if (!isPaused)
 
 	if (room != Sala_Inicio)
 	{
-		draw_sprite_ext(s_energyBar_out,0,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+35,1,1,0,image_blend, image_alpha)
 		
-		draw_sprite_ext(s_energyBar_screen,0,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+35,1,1,0,image_blend, image_alpha)
+		//draw_sprite_ext(s_hpNewUIEnergScreen,0,__view_get( e__VW.XView, 0 )+43,__view_get( e__VW.YView, 0 )+35,1,1,0,image_blend, image_alpha)
 		
 		if (global.energy <= global.energyLow+30)
 		{
-			draw_sprite_ext(s_energyBar_inDanger,0,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+35,(global.energy/global.energyTotal),1,0,image_blend, image_alpha)
+			draw_sprite_ext(s_energyBarDanger,0,__view_get( e__VW.XView, 0 )+17,__view_get( e__VW.YView, 0 )+47,(global.energy/global.energyTotal),1,0,image_blend, image_alpha)
 		}
 		else
 		{
-			draw_sprite_ext(s_energyBar_in,0,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+35,(global.energy/global.energyTotal),1,0,image_blend, image_alpha)
+			draw_sprite_ext(s_energyBar_in,0,__view_get( e__VW.XView, 0 )+17,__view_get( e__VW.YView, 0 )+47,(global.energy/global.energyTotal),1,0,image_blend, image_alpha)
 			
 		}
-		draw_sprite_ext(s_energyBar_out,0,__view_get( e__VW.XView, 0 )+23,__view_get( e__VW.YView, 0 )+35,1,1,0,image_blend, image_alpha)
-		
+		draw_sprite_ext(s_laserUI,0,__view_get( e__VW.XView, 0 )+13,__view_get( e__VW.YView, 0 )+68,1,(global.laser/global.laserMax),0,image_blend, image_alpha)
+		draw_sprite_ext(s_ammoUI,0,__view_get( e__VW.XView, 0 )+33,__view_get( e__VW.YView, 0 )+68,1,(global.ammo/global.ammoMax),0,image_blend, image_alpha)
+		draw_sprite_ext(s_hpNewUI,0,__view_get( e__VW.XView, 0 )+12,__view_get( e__VW.YView, 0 )+30,1,1,0,image_blend, image_alpha)
+		draw_sprite_ext(s_SCOREUI,0,__view_get( e__VW.XView, 0 )+640,__view_get( e__VW.YView, 0 )+0,1,1,0,image_blend, image_alpha)
 
-		draw_sprite_ext(s_hpNewUI,0,__view_get( e__VW.XView, 0 )+22,__view_get( e__VW.YView, 0 )+70,1,1,0,image_blend, image_alpha)
-		
-		for (var i=0; i< global.hpMax; i++)
+
+	
+		for (var k=0; k< global.hpMax; k++)
 		{
-			draw_sprite_ext(s_hpDinamicBack, 0, __view_get( e__VW.XView, 0 )+22+ (i*12),__view_get( e__VW.YView, 0 )+71, 1,1,0,image_blend, image_alpha)
+			draw_sprite_ext(s_hpDinamicBack, 0, __view_get( e__VW.XView, 0 )+36+ (k*17),__view_get( e__VW.YView, 0 )+28, 1,1,0,image_blend, image_alpha)
 		}
 		
 		for (var i=0; i< floor(global.hp); i++)
 		{
-			draw_sprite_ext(s_hpDinamic, 0, __view_get( e__VW.XView, 0 )+22+ (i*12),__view_get( e__VW.YView, 0 )+71, 1,1,0,image_blend, image_alpha)
+			draw_sprite_ext(s_hpDinamic, 0, __view_get( e__VW.XView, 0 )+36+ (i*17),__view_get( e__VW.YView, 0 )+28, 1,1,0,image_blend, image_alpha)
+		}
+		
+		for (var h=0; h< (global.shields); h++)
+		{
+			draw_sprite_ext(s_shieldDinamic, 0, __view_get( e__VW.XView, 0 )+36+ (k*17) + (h*17),__view_get( e__VW.YView, 0 )+28, 1,1,0,image_blend, image_alpha)
 		}
 
-		draw_sprite_ext(s_ammoBar_out30,0,__view_get( e__VW.XView, 0 )+600,__view_get( e__VW.YView, 0 )+355,1,1,0,image_blend, image_alpha)
-		draw_sprite_ext(s_ammoBar_in,0,__view_get( e__VW.XView, 0 )+600,__view_get( e__VW.YView, 0 )+355,1,(global.ammo/global.ammoMax),0,image_blend, image_alpha)
-
-
-		draw_sprite_ext(s_shieldBar_out,0,__view_get( e__VW.XView, 0 )+620,__view_get( e__VW.YView, 0 )+355,1,1,0,image_blend, image_alpha)
-		draw_sprite_ext(s_shieldBar_in,0,__view_get( e__VW.XView, 0 )+620,__view_get( e__VW.YView, 0 )+355,1,(global.laser/global.laserMax),0,image_blend, image_alpha)
+		draw_sprite_ext(s_hpNewUI,0,__view_get( e__VW.XView, 0 )+12,__view_get( e__VW.YView, 0 )+30,1,1,0,image_blend, image_alpha)
+		
+		
+		for (var a=0; a< global.bombAmmo; a++)
+		{
+			if (global.bombIsClusterBomb)
+			{
+				draw_sprite_ext(s_bombUICluster, 0, __view_get( e__VW.XView, 0 )+16+ (a*19),__view_get( e__VW.YView, 0 )+62, 1,1,0,image_blend, image_alpha)
+			}
+			else
+			{
+				draw_sprite_ext(s_bombUI, 0, __view_get( e__VW.XView, 0 )+16+ (a*19),__view_get( e__VW.YView, 0 )+62, 1,1,0,image_blend, image_alpha)
+			}
+		}
+		
+		for (var t=0; t< global.PETAAmmo; t++)
+		{
+			draw_sprite_ext(s_petaUI, 0, __view_get( e__VW.XView, 0 )+53,__view_get( e__VW.YView, 0 )+84 + (t*21), 1,1,0,image_blend, image_alpha)
+		}
+		
+		
 	}
 	//draw_text(__view_get( e__VW.XView, 0 )+30,__view_get( e__VW.YView, 0 )+20, "existe " + string(global.EXISTE))
-	if (room = Sala_0)
+	if (room != Sala_Inicio)
 	{
-	draw_set_halign(fa_right)
-	draw_set_font(Font2)
-	//draw_set_color(c_white)
-	//draw_text(__view_get( e__VW.XView, 0 )+630,__view_get( e__VW.YView, 0 )+21, "Level " + string(global.level))
-	//draw_text(__view_get( e__VW.XView, 0 )+630,__view_get( e__VW.YView, 0 )+41, "Score: " + string(global.XPpoints))
+	draw_set_alpha(1);
+	draw_set_halign(fa_left)
+	draw_set_font(customFont2)
+	draw_set_color(azulO)
+	//draw_text(__view_get( e__VW.XView, 0 )+564,__view_get( e__VW.YView, 0 )+7, string(global.level))
+	
+	draw_text(__view_get( e__VW.XView, 0 )+581,__view_get( e__VW.YView, 0 )-3, string(global.XPpoints))
 	//draw_text(__view_get( e__VW.XView, 0 )+630,__view_get( e__VW.YView, 0 )+61, "Enemies: " + string(global.enemies))
 	//draw_text(__view_get( e__VW.XView, 0 )+630,__view_get( e__VW.YView, 0 )+81, "Enemies max: " + string(global.enemiesMax))
-	draw_set_color(azul)
-	draw_text(__view_get( e__VW.XView, 0 )+630,__view_get( e__VW.YView, 0 )+20, "Level " + string(global.level))
-	draw_text(__view_get( e__VW.XView, 0 )+630,__view_get( e__VW.YView, 0 )+40, "Score: " + string(global.XPpoints))
+	draw_set_color(c_white)
+	//draw_text(__view_get( e__VW.XView, 0 )+565,__view_get( e__VW.YView, 0 )+6, string(global.level))
+	
+	draw_text(__view_get( e__VW.XView, 0 )+582,__view_get( e__VW.YView, 0 )-4, string(global.XPpoints))
 	//draw_text(__view_get( e__VW.XView, 0 )+630,__view_get( e__VW.YView, 0 )+60, "Enemies: " + string(global.enemies))
 	//draw_text(__view_get( e__VW.XView, 0 )+630,__view_get( e__VW.YView, 0 )+80, "Enemies max: " + string(global.enemiesMax))
 
@@ -90,14 +115,20 @@ if (!isPaused)
 			draw_sprite_ext(s_bulletTimeIndicator,1,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+345,1,1,0,image_blend, 0.6)
 			draw_sprite_ext(s_bulletTimeIndicator,0,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+345,(global.slowMoTime/global.slowMoTimeMax),1,0,image_blend, 0.6)
 		}
-		for (var i=0; i< global.bombAmmo; i++)
-		{
-			draw_sprite_ext(s_bomb, 0, __view_get( e__VW.XView, 0 )+25+ (i*19),__view_get( e__VW.YView, 0 )+105, 1,1,0,image_blend, image_alpha)
-		}
-		for (var t=0; t< global.PETAAmmo; t++)
-		{
-			draw_sprite_ext(s_PETApickUp, 0, __view_get( e__VW.XView, 0 )+25+ (t*16),__view_get( e__VW.YView, 0 )+125, 0.8,0.8,0,image_blend, image_alpha)
-		}
+		
+		
+		//draw_set_halign(fa_left)
+		//draw_set_color(azul)
+		
+		//draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+125, "x " + string(global.PETAAmmo))
+	
+		
+		//draw_sprite_ext(s_PETApickUp, 0, __view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+125, 0.8,0.8,0,image_blend, image_alpha)
+		//draw_set_color(c_white)
+
+		//draw_text(__view_get( e__VW.XView, 0 )+21,__view_get( e__VW.YView, 0 )+124, "x " + string(global.PETAAmmo))
+		
+		
 	}
 	draw_set_color(c_white)
 	//if (room = Sala_0)
@@ -115,7 +146,7 @@ if (!isPaused)
 	//	}
 	
 	//}
-	draw_set_font(Font1)
+	draw_set_font(customFont)
 	if (global.energy <=global.energyLow)
 	{
 		if global.PETAAmmo > 0

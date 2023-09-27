@@ -12,7 +12,7 @@ if (state = ENEMYSTATE.WAITING)
 				state = ENEMYSTATE.CHASING;
 			}
 }
-_hp -= global.superShot;
+_hp -= global.superShot+global.amplifyPowerAmmo;
 flashAlpha = 1;
 instance_destroy(other);
 

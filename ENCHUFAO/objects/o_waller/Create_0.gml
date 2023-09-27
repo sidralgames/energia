@@ -21,6 +21,7 @@ levelType = choose(0,0,0);
 StrandedShipsInLevel = 0;
 StrandedShipsInLevelMax = 1;
 strandedShipOK = false;
+creadaStrandedRed = false;
 
 
 global.changingTiles = false;

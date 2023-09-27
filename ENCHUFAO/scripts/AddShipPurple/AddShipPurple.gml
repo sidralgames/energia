@@ -8,6 +8,7 @@ function AddShipPurple()
 		sprite: splayer_Purple,
 		spriteLocked: splayer_Purple_Locked,
 		position: 4,
+		stat: "FAST DURING SLOWMO"
 		
 	})
 	global.numberOfShips +=1;

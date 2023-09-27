@@ -15,8 +15,10 @@ function PlayerStats_Dark()
 	global.laserMax = 3;
 	global.laser = 3;
 	
-	global.ammo = 400;
-	global.ammoMax = 400;
+	global.ammo = 350;
+	global.ammoMax = 350;
+	
+	global.bombAmmo = 2;
 	
 	global._speed = 3.5;
 	global.walkAcceleration = 0.15;

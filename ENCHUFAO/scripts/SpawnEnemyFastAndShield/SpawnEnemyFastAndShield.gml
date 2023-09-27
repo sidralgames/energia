@@ -9,6 +9,13 @@ function SpawnEnemyFastAndShield()
 		enemies = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2+random_range(-28,28), cy*CELL_HEIGHT+CELL_HEIGHT/2+random_range(-10,10), "Enemies", obj)
 		if instance_exists(enemies)
 		{
+			if (global.spriteShip = splayer_Dark)
+			{
+				if instance_exists(enemies)
+				{
+					enemies._hp-=1;
+				}
+			}
 			enemies.isCounted = false;
 			enemies.state = ENEMYSTATE.WAITING;
 			enemies.speed = 0;

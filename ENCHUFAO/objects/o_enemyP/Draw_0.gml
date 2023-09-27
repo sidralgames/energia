@@ -10,6 +10,6 @@ if flashAlpha>0
 	shader_reset()
 }
 
-
+//draw_text(x, y-40, string(_hp))
 
 

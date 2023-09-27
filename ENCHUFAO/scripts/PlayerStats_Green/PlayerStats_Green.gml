@@ -19,7 +19,9 @@ function PlayerStats_Green()
 	global.ammo = 150;
 	global.ammoMax = 150;
 	
-	global._speed = 3;
+	global.bombAmmo = 4;
+	
+	global._speed = 2.75;
 	global.walkAcceleration = 0.2;
 	
 	global.energyStat = global.energyTotal/50;

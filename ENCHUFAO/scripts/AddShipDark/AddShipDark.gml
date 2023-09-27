@@ -8,6 +8,7 @@ function AddShipDark()
 		sprite: splayer_Dark,
 		spriteLocked: splayer_Dark_Locked,
 		position: 3,
+		stat: "ENEMIES HAVE -1 HP"
 		
 	})
 	global.numberOfShips +=1;

@@ -218,6 +218,14 @@ function CheckEnchufeUpgrade()
 		global.energy = global.energyTotal;
 		global.ammo = global.ammoMax;
 		global.laser = global.laserMax;
+		if (global.shields <= 8)
+		{
+			global.shields += 2;
+		}
+		else
+		{
+			global.shields = global.shieldsMax;	
+		}
 		
 	}
 	else if (inEnchufe.upgradeSpeed = true) && (upgraded = false)
@@ -299,7 +307,7 @@ function CheckEnchufeUpgrade()
 		}
 		inEnchufe.charging = true;
 		upgraded = true;
-		global.overchargeTime-=0.3;
+		global.overchargeTime-=0.1;
 		
 	}
 	else if (inEnchufe.upgradeClusterBomb = true) && (upgraded = false)

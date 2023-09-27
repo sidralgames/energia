@@ -64,6 +64,16 @@ function SetStrandedShip()
 		hpMax = 4;
 		hp = hpMax;
 	}
+	else if (sprite = splayer_mp3)
+	{
+		strandedShipCableStat = 3;
+		strtandedPrecision = 2;
+		weight = 1;
+		minSpeed = 1.75;
+		maxSpeed = 2.75;
+		hpMax = 4;
+		hp = hpMax;
+	}
 
 	sprite_index = sprite;
 	maxDistance = strandedShipCableStat *35;

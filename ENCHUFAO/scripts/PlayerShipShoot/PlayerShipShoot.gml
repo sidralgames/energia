@@ -18,7 +18,10 @@ function PlayerShipShoot()
 		var bullet = instance_create_layer(x + ((_hpush*3) * global.relativeSpeed) + lengthdir_x(15, _angle), y +((_vpush*5) * global.relativeSpeed) + lengthdir_y(15, _angle),
 		"Bullets", o_bulletPlayer);
 		
-		global.ammo-=1;
+		if (!global.infiniteAmmoIsOn)
+		{
+			global.ammo-=1;
+		}
 		
 		off =  random_range(offRange,-offRange)
 		bullet._hpush = lengthdir_x(9, _angle + off);
@@ -39,7 +42,10 @@ function PlayerShipShoot()
 		var bullet2 = instance_create_layer(x + ((_hpush*3) * global.relativeSpeed) + lengthdir_x(15, _angle), y +((_vpush*5) * global.relativeSpeed) + lengthdir_y(15, _angle),
 		"Bullets", o_bulletPlayer);
 		
-		global.ammo-=2;
+		if (!global.infiniteAmmoIsOn)
+		{
+			global.ammo-=2;
+		}
 		
 		off =  random_range(offRange,-offRange)
 		off1 = 3;
@@ -73,7 +79,10 @@ function PlayerShipShoot()
 		var bullet2 = instance_create_layer(x + ((_hpush*3) * global.relativeSpeed) + lengthdir_x(15, _angle), y +((_vpush*5) * global.relativeSpeed) + lengthdir_y(15, _angle),
 		"Bullets", o_bulletPlayer);
 		
-		global.ammo-=3;
+		if (!global.infiniteAmmoIsOn)
+		{
+			global.ammo-=3;
+		}
 		
 		off = 0;
 		off1 = 3;
@@ -113,7 +122,10 @@ function PlayerShipShoot()
 		var bullet3 = instance_create_layer(x + ((_hpush*3) * global.relativeSpeed) + lengthdir_x(15, _angle), y +((_vpush*5) * global.relativeSpeed) + lengthdir_y(15, _angle),
 		"Bullets", o_bulletPlayer);
 		
-		global.ammo-=4;
+		if (!global.infiniteAmmoIsOn)
+		{
+			global.ammo-=4;
+		}
 		
 		off = 1;
 		off1 = 4;

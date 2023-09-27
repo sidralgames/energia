@@ -2,6 +2,19 @@
 // You can write your code in this editor
 Controls_Input();
 
+if (partChanged = true) && (!plugged)
+{
+	partChanged = false;
+	global.amplifyPowerLaser = 0;
+	global.amplifyPowerAmmo = 0;
+	instance_destroy(o_partBalaP);
+	instance_create(-100,-100,o_partBalaP);	
+}
+
+if (global.infiniteHPIsOn)
+{
+	global.hp = global.hpMax;
+}
 colorBT_fx = layer_get_fx("EffectColorBulletTime");
 colorBT_fx_params = fx_get_parameters(colorBT_fx);
 

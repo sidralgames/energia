@@ -8,6 +8,14 @@ function SpawnEnemyFast()
 		
 		if instance_exists(enemies)
 		{
+			if (global.spriteShip = splayer_Dark)
+			{
+				if instance_exists(enemies)
+				{
+					enemies._hp-=1;
+				}
+			}
+			
 			enemies.isCounted = false;
 			enemies.state = ENEMYSTATE.WAITING;
 			enemies.speed = 0;

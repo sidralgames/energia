@@ -15,7 +15,7 @@ if (state = ENEMYSTATE.WAITING)
 		}
 }
 
-_hp -= global.superShot;
+_hp -= 1;
 flashAlpha = 1;
 instance_destroy(other);
 

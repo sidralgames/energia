@@ -16,6 +16,8 @@ draw_set_halign(fa_center)
 //	draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+150,"Boton Raton Derecho para enchufarte/desenchufarte")
 //	draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+180,"Enchufate para empezar")
 //}
+azul = make_color_rgb(44,232, 245) 
+
 if instance_exists(o_shipSelector)
 {
 	ship = ds_map_find_value(global.shipList,o_shipSelector.selected);
@@ -32,9 +34,32 @@ else
 
 if (shipSelected = false) && (canSelectShip)
 {
-	draw_sprite_ext(spriteToShow,0,x,y+100,2,2,90,image_blend, image_alpha)
-	draw_sprite_ext(s_arrows,0,x-70,y+100,1,1,0,image_blend, image_alpha)
-	draw_sprite_ext(s_arrows,1,x+70,y+100,1,1,0,image_blend, image_alpha)
+	draw_sprite_ext(spriteToShow,0,x,y+90,2,2,90,image_blend, image_alpha)
+	draw_set_font(customFont);
+	
+	if (ship.unlocked == 1)
+	{
+		draw_set_color(azul)
+		draw_text(x-1,y+245, string(ship.stat))
+		draw_text(x-1,y+247, string(ship.stat))
+	
+		draw_set_color(c_white)
+		draw_text(x,y+245, string(ship.stat))
+	}
+	else
+	{
+		draw_set_color(azul)
+		draw_text(x-1,y+245, "???? ??? ?????")
+		draw_text(x-1,y+247, "???? ??? ?????")
+	
+		draw_set_color(c_white)
+		draw_text(x,y+245, "???? ??? ?????")
+	}
+	
+	
+	
+	draw_sprite_ext(s_arrows,0,x-70,y+90,1,1,0,image_blend, image_alpha)
+	draw_sprite_ext(s_arrows,1,x+70,y+90,1,1,0,image_blend, image_alpha)
 }
 
 if (canSelectShip) && (alarm[0] < 60)

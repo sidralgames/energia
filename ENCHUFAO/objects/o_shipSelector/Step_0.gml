@@ -26,25 +26,12 @@ if !instance_exists(o_playerShip)
 		
 	switch(ship.position)
 	{
-		case 0: {
-			PlayerStats_Green()
-			} break;
-		case 1:
-		{
-			PlayerStats_Blue()
-			} break;
-		case 2:
-		{
-			PlayerStats_Red()
-			} break;
-		case 3:
-		{
-			PlayerStats_Dark()
-			} break;
-		case 4:
-		{
-			PlayerStats_Purple()
-		}break;
+		case 0: PlayerStats_Green(); break;
+		case 1: PlayerStats_Blue(); break;
+		case 2: PlayerStats_Red(); break;
+		case 3: PlayerStats_Dark(); break;
+		case 4: PlayerStats_Purple(); break;
+		case 5: PlayerStats_MP3(); break;
 	}
 }
 

@@ -6,8 +6,12 @@ function PlayerShipLaser(argument0)
 	if (global.laser > 0)
 	{
 		screenShake(2,10)
-		gamepad_set_vibration(0,0.3,0.3)
-		global.laser-=global.laserDrain;
+		gamepad_set_vibration(0,random_range(0.25, 0.35),random_range(0.25, 0.35));
+		
+		if (!global.infiniteLaserIsOn)
+		{
+			global.laser-=global.laserDrain;
+		}
 	}
 	
 	_angle+=random_range(1,-1);
@@ -68,7 +72,7 @@ function PlayerShipLaser(argument0)
 	if (enemy)
 	{
 		screenShake(4,10);
-		enemy._hp -=(0.25+global.laserDamage);
+		enemy._hp -=(0.25+global.laserDamage+(global.amplifyPowerLaser/2));
 		enemy.flashAlpha = 1;
 		//explo = instance_create(enemy.x, enemy.y, o_explo2)
 		//explo.image_xscale = 0.25;

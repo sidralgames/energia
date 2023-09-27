@@ -54,6 +54,12 @@ function SetupLevelBasic()
 
 
 	instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Player", o_playerShip);
+	if (global.level = 1) && (global.spriteShip = splayer_Red) && (creadaStrandedRed = false)
+	{
+		creadaStrandedRed = true;
+		global.strandedShipGreen = true;
+	}
+
 	CreateStrandedShip();
 
 
@@ -148,7 +154,8 @@ function SetupLevelBasic()
 			
 			    var exM = xx * CELL_WIDTH+CELL_WIDTH/2;
 			    var eyM = yy * CELL_HEIGHT+CELL_HEIGHT/2;
-			
+				
+				
 				if (irandom(oddsStrandedShip) == oddsStrandedShip) && (StrandedShipsInLevel < StrandedShipsInLevelMax) 
 				{
 					var ship = instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Player",o_strandedShip); 

@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_enemyFast",
   "spriteId": {
-    "name": "Sprite11",
-    "path": "sprites/Sprite11/Sprite11.yy",
+    "name": "s_enemyMini",
+    "path": "sprites/s_enemyMini/s_enemyMini.yy",
   },
   "solid": false,
   "visible": true,

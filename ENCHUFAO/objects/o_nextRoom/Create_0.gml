@@ -6,3 +6,9 @@ global.XPpoints = 0;
 shipSelected = false
 canSelectShip = false;
 
+font_add_enable_aa(false);
+
+customFont = font_add("ChubbyChoo-SemiBold.ttf", 16, false, false, 32, 128);
+customFont2 = font_add("ChubbyChoo-SemiBold.ttf", 12, false, false, 32, 128);
+
+

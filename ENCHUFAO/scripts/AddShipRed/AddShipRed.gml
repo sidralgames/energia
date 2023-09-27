@@ -8,6 +8,7 @@ function AddShipRed()
 		sprite: splayer_Red,
 		spriteLocked: splayer_Red_Locked,
 		position: 2,
+		stat: "START WITH A SIDEKICK SHIP"
 		
 	})
 	global.numberOfShips +=1;

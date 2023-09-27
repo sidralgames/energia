@@ -18,6 +18,10 @@ function CheckShipToUnlock()
 	{
 		global.shipPurpleUnlocked = 1;
 	}
+	else if (sprite = splayer_mp3)
+	{
+		global.shipMP3Unlocked = 1;
+	}
 	
 	SaveGame();
 }

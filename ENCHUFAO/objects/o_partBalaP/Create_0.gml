@@ -9,7 +9,7 @@ part_system_depth(global.balaP_sys,layer_get_depth("Part"));
 //Particle
 global.balaP = part_type_create();
 part_type_scale(global.balaP,1,1);
-part_type_size(global.balaP, 1*global.superShot,1.75*global.superShot,-0.075,0);
+part_type_size(global.balaP, 1*(global.superShot+global.amplifyPowerAmmo),1.75*(global.superShot+global.amplifyPowerAmmo),-0.075,0);
 part_type_orientation(global.balaP,0,359,0,0,0)
 part_type_alpha2(global.balaP, 1,0.5);
 part_type_speed(global.balaP,0,0,0,0);

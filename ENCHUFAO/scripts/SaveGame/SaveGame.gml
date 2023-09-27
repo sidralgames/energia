@@ -8,6 +8,7 @@ function SaveGame()
 	ini_write_real("ships","shipRedUnlocked", global.shipRedUnlocked);
 	ini_write_real("ships","shipDarkUnlocked", global.shipDarkUnlocked);
 	ini_write_real("ships","shipPurpleUnlocked", global.shipPurpleUnlocked);
+	ini_write_real("ships","shipMP3Unlocked", global.shipMP3Unlocked);
 	
 	ini_write_real("ach","noBump", global.achNoBump);
 	ini_write_real("ach","500Enemies", global.ach500Enemies);

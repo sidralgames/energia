@@ -1,6 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-
 shipReady = (chargedInAmmo) && (chargedInEnergy) && (chargedInHp)
 
 if (set == false)
@@ -67,7 +66,7 @@ if (chargedInEnergy) && (chargedInHp) && (chargedInAmmo) && (goesToNextRoom = fa
 		}
 	}
 		
-	CheckShipToUnlock()
+	CheckShipToUnlock();
 
 	//-----------------MOVE IT TO NEXT ROOM----------------------//
 	if (sprite = splayer)
@@ -94,6 +93,11 @@ if (chargedInEnergy) && (chargedInHp) && (chargedInAmmo) && (goesToNextRoom = fa
 	{
 		global.strandedShipPurple = true;
 		global.numStrandedShipPurple += 1;
+	}
+	else if (sprite = splayer_mp3)
+	{
+		global.strandedShipMP3 = true;
+		global.numStrandedShipMP3 += 1;
 	}
 	//global.posNumberOfShips-=1;
 	//ds_map_delete(global.posNumberOfShips, numShip)

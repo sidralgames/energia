@@ -21,8 +21,16 @@ if (tile_meeting(x,y+_vpush*1.25,"Tiles"))
 	bumpsAchievement = false;
 }
 
-x+=_hpush * global.relativeSpeed;
-y+=_vpush * global.relativeSpeed;
+if (global.spriteShip = splayer_Purple)
+{
+	x+=_hpush * min(1, (global.relativeSpeed+0.5));
+	y+=_vpush * min(1, (global.relativeSpeed+0.5));
+}
+else
+{
+	x+=_hpush * global.relativeSpeed;
+	y+=_vpush * global.relativeSpeed;
+}
 
 }
 	

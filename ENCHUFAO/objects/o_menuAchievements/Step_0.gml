@@ -5,8 +5,9 @@ Controls_Input();
 
 if (key_x)
 {
-	o_menuHome.alarm[0]=10;
-	o_menuHome._visible = true;
+	menuHome = instance_create(x,y,o_menuHome);
+	menuHome.alarm[0]=10;
+	menuHome._visible = true;
 	instance_destroy();	
 }
 

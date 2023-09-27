@@ -8,6 +8,7 @@ function LoadDefaultDataIngame()
 	global.shipRedUnlocked  = 0;
 	global.shipDarkUnlocked  = 0;
 	global.shipPurpleUnlocked  = 0;
+	global.shipMP3Unlocked  = 0;
 	
 	global.ach500Enemies = 0;
 	global.achNoBump = 0;
@@ -23,6 +24,13 @@ function LoadDefaultDataIngame()
 	
 	global.slowmilisecs = 0;
 	global.connectedmilisecs = 0;
+	
+	
+	global.godModeIsOn = false;
+	global.infiniteEnergyIsOn = false;
+	global.infiniteAmmoIsOn = false;
+	global.infiniteHPIsOn = false;
+	global.infiniteLaserIsOn = false;
 	
 	
 	for (var i = 0; i <global.numberOfShips; i++)

@@ -2,7 +2,14 @@
 // You can write your code in this editor
 if (global.shields < global.shieldsMax)
 {
-	global.shields +=1;
+	if (global.spriteShip = splayer_Blue)
+	{
+		global.shields +=2;
+	}
+	else
+	{
+		global.shields +=1;
+	}
 	instance_destroy();
 }
 

@@ -24,4 +24,10 @@ function Unplug()
 	global.laserDrain = 0.005;
 	pluggedFinal = false;
 	
+	if (global.spriteShip = splayer_mp3)
+	{
+		global.amplifyPowerLaser = 0;
+		global.amplifyPowerAmmo = 0;
+	}
+	
 }

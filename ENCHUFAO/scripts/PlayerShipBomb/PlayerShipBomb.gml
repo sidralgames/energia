@@ -26,7 +26,11 @@ function PlayerShipBomb()
 		var bullet = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
 		"Bullets", bombToFire);
 		
-		global.bombAmmo-=1;
+		if (!global.godModeIsOn)
+		{
+			global.bombAmmo-=1;
+		}
+		
 		global.bombsFired+=1;
 		global.totalBombs+=1;
 		off =  random_range(offRange,-offRange)

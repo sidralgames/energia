@@ -41,13 +41,15 @@ if (alarm[0] <= 0)
 				}break;
 				case 1:
 				{
-					o_nextRoom.canSelectShip = true;
+					instance_create(x,y,o_menuOptions);
+					instance_destroy();
 					_visible = false;
 		
 				}break;
 				case 2:
 				{
 					instance_create(x,y,o_menuAchievements);
+					instance_destroy();
 					_visible = false;
 		
 				}break;

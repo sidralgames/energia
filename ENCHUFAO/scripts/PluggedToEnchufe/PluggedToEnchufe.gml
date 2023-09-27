@@ -14,7 +14,7 @@ function PluggedToEnchufe()
 	{
 		alarm[4] = 50;
 	}
-	pluggedTimer+=min(0.2, 0.65*global.overchargeTime);
+	pluggedTimer+=max(0.1, 0.38*global.overchargeTime);
 		
 	if (pluggedTimer >= 300)
 	{	
@@ -47,7 +47,20 @@ function PluggedToEnchufe()
 		enchufe._hpush -= lengthdir_x(0.1,dir)
 		enchufe._vpush -= lengthdir_y(0.1,dir)
 	}
+
 	
+	if (global.spriteShip = splayer_mp3)
+	{
+		global.amplifyPowerLaser = 2.5;
+		global.amplifyPowerAmmo = 0.5;
+		if (partChanged = false)
+		{
+			instance_destroy(o_partBalaP)
+			instance_create(-100,-100,o_partBalaP);
+			partChanged = true;
+		}
+	}
+			
 	if (key_x) 
 	{
 		Unplug();

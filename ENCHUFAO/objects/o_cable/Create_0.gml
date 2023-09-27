@@ -9,8 +9,16 @@ off = 0;
 cableColor = c_white;
 // Create verlet groups
 _segments = 5 * global.cableStat
+if (global.cableStat>6 && room = Sala_Inicio)
+{
+_widhtCable = 5
+}
+else
+{
+_widhtCable = 2	
+}
 // Create a new rope
-rope1 = verletGroupCreateRope(verletSystem1, x, y, cableColor, 2, 3, _segments, 2, 100,canCollide);
+rope1 = verletGroupCreateRope(verletSystem1, x, y, cableColor, _widhtCable, 3, _segments, 2, 100,canCollide);
 //rope1 = verletGroupCreateRopeTextured(verletSystem1, x, y, s_tentacle, _segments, 1, 10);
 
  //Attach its first vertex to an object

@@ -15,6 +15,8 @@ function PlayerStats_Purple()
 	global.laserMax = 2;
 	global.laser = 2;
 	
+	global.bombAmmo = 2;
+	
 	global.ammo = 200;
 	global.ammoMax = 200;
 	

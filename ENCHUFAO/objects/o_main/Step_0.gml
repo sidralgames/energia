@@ -22,15 +22,18 @@ if instance_exists(o_playerShip) && (room != Sala_Inicio)
 	{
 		full = false;
 		
-		if (global.energy>0)
+		if (!global.infiniteEnergyIsOn)
 		{
-			if (abs(o_playerShip._hpush >= 0.1)) || (abs(o_playerShip._vpush >= 0.1))
+			if (global.energy>0)
 			{
-				global.energy-=( 0.1 * (abs(o_playerShip._hpush)+abs(o_playerShip._vpush))) / global.DischargeTime;
-			}
-			else
-			{
-				global.energy-= (0.1) / global.DischargeTime
+				if (abs(o_playerShip._hpush >= 0.1)) || (abs(o_playerShip._vpush >= 0.1))
+				{
+					global.energy-=( 0.1 * (abs(o_playerShip._hpush)+abs(o_playerShip._vpush))) / global.DischargeTime;
+				}
+				else
+				{
+					global.energy-= (0.1) / global.DischargeTime
+				}
 			}
 		}
 	}

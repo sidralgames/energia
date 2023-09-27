@@ -1,6 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if (global.bombIsClusterBomb)
+{
+	sprite_index = s_bombCluster;	
+}
+
 image_speed = 0.5;
 
 t = 6;

@@ -8,6 +8,7 @@ function AddShipBlue()
 		sprite: splayer_Blue,
 		spriteLocked: splayer_Blue_Locked,
 		position: 1,
+		stat: "2x1 IN SHIELDS"
 		
 	})
 	global.numberOfShips +=1;

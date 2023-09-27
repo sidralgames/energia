@@ -12,18 +12,9 @@ if (round(global.shields<=0))
 	instance_destroy();
 }
 
-if (global.shields = 1)
-{
-	image_alpha = 0.4;
-}
-else if (global.shields = 2)
-{
-	image_alpha = 0.65;
-}
-else if (global.shields >= 3)
-{
-	image_alpha = 1;
-}
+
+image_alpha = 0.8;
+
 
 
 

@@ -6,20 +6,22 @@ function PlayerStats_Red()
 	global.spritePart = s_bullet_partTorreta;
 	global.bulletPart_sprite = s_bullet_part;
 		
-	global.energyTotal = 350;
+	global.energyTotal = 250;
 	global.energy = global.energyTotal;
 	
-	global.hpMax = 6;
-	global.hp = 6;
+	global.hpMax = 5;
+	global.hp = 5;
 	
 	global.laserMax = 1;
 	global.laser = 1;
 	
-	global.ammo = 300;
-	global.ammoMax = 300;
+	global.bombAmmo = 2;
 	
-	global._speed = 2.5;
-	global.walkAcceleration = 0.1;
+	global.ammo = 250;
+	global.ammoMax = 250;
+	
+	global._speed = 2.15;
+	global.walkAcceleration = 0.102;
 	
 	global.energyStat = global.energyTotal/50;
 	global.speedStat = 2;

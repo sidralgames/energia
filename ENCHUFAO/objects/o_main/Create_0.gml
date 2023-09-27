@@ -1,6 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 full = false;
+
+global.amplifyPowerLaser = 0;
+global.amplifyPowerAmmo = 0;
+
+
 global.song = choose(snd_songMaster)
 global.milisecs = 0;
 global.secs = 0;
@@ -11,7 +16,7 @@ global.laserWidth = 0;
 global.laserDamage=0;
 
 global.shields = 0;
-global.shieldsMax = 3;
+global.shieldsMax = 10;
 
 global.laserDrain = 0.005;
 global.energyLow = 80;
@@ -29,8 +34,11 @@ global.secsConnected = 0;
 global.bombsFired = 0;
 global.petasUsed = 0;
 
+font_add_enable_aa(false);
 
-customFont = font_add("ChubbyChoo-SemiBold.ttf", 32, false, false, 32, 128);
+customFont = font_add("ChubbyChoo-SemiBold.ttf", 16, false, false, 32, 128);
+customFont2 = font_add("ChubbyChoo-SemiBold.ttf", 12, false, false, 32, 128);
+
 global.screenshakeIsOn = true;
 enum ENEMYSTATE
 {
@@ -48,12 +56,14 @@ global.strandedShipBlue = false;
 global.strandedShipRed = false;
 global.strandedShipDark = false;
 global.strandedShipPurple = false;
+global.strandedShipMP3 = false;
 
 global.numStrandedShipGreen = 0;
 global.numStrandedShipBlue = 0;
 global.numStrandedShipRed = 0;
 global.numStrandedShipPurple = 0;
 global.numStrandedShipDark = 0;
+global.numStrandedShipMP3 = 0;
 
 global.audioEmitter = audio_emitter_create();
 
@@ -119,7 +129,7 @@ global.unPlugging = false;
 
 global.pluggingStrandedShipToEnchufe = false;
 
-global.bombAmmoMax = 5
+global.bombAmmoMax = 4
 global.bombAmmo = 2;
 
 global.PETAsMax = 3;
@@ -188,6 +198,7 @@ AddShipBlue();
 AddShipRed();
 AddShipDark();
 AddShipPurple();
+AddShipMP3();
 
 
 global.PlayerUpgradesList = ds_map_create();

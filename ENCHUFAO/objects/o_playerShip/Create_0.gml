@@ -2,11 +2,20 @@
 // You can write your code in this editor
 type = collisionType.custom;
 
+global.amplifyPowerLaser = 0;
+global.amplifyPowerAmmo = 0;
+instance_destroy(o_partBalaP);
+instance_create(-100,-100,o_partBalaP);	
+
+partChanged = false;
+Controls_Input();
 contExploTile = 0;
 offsetLaser = 10;
 laserAborted = false
 thisLenght=0
-
+drawflash=false;
+inEnchufe = false;
+connectedToShip = false;
 cooldownLaser = 20;
 impulse = false;
 

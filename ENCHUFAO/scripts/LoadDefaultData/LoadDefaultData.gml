@@ -8,6 +8,7 @@ function LoadDefaultData()
 	global.shipRedUnlocked  = 0;
 	global.shipDarkUnlocked  = 0;
 	global.shipPurpleUnlocked  = 0;
+	global.shipMP3Unlocked  = 0;
 	
 	//achievement
 	global.achNoBump = 0;
@@ -25,4 +26,11 @@ function LoadDefaultData()
 	
 	global.slowmilisecs = 0;
 	global.connectedmilisecs = 0;
+	
+	global.godModeIsOn = false;
+	global.infiniteEnergyIsOn = false;
+	global.infiniteAmmoIsOn = false;
+	global.infiniteHPIsOn = false;
+	global.infiniteLaserIsOn = false;
+	
 }
