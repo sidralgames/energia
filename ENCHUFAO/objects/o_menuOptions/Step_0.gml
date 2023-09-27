@@ -37,7 +37,7 @@ if (alarm[0] <= 0)
 					shipSelected = true;
 					instance_create_layer(512,269, "Enchufes", o_enchufeInicio)
 					instance_create_layer(112,272, "Enchufes" ,o_enchufeResetSelector)
-					instance_create_layer(30,40, "Enchufes" ,o_enchufeDeleteData)
+					instance_create_layer(50,40, "Enchufes" ,o_enchufeDeleteData)
 		
 					player = instance_create_layer(x,y+100,"Player", o_playerShip)
 					global.ammoStatInitial = global.ammoStat;

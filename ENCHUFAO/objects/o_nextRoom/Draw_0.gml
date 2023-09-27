@@ -35,25 +35,26 @@ else
 if (shipSelected = false) && (canSelectShip)
 {
 	draw_sprite_ext(spriteToShow,0,x,y+90,2,2,90,image_blend, image_alpha)
+
 	draw_set_font(customFont);
 	
 	if (ship.unlocked == 1)
 	{
 		draw_set_color(azul)
-		draw_text(x-1,y+245, string(ship.stat))
-		draw_text(x-1,y+247, string(ship.stat))
+		draw_text(x-1,y+245, string("SHIP BONUS: " + ship.stat))
+		draw_text(x-1,y+247, string("SHIP BONUS: "+ ship.stat))
 	
 		draw_set_color(c_white)
-		draw_text(x,y+245, string(ship.stat))
+		draw_text(x,y+245, string("SHIP BONUS: " + ship.stat))
 	}
 	else
 	{
 		draw_set_color(azul)
-		draw_text(x-1,y+245, "???? ??? ?????")
-		draw_text(x-1,y+247, "???? ??? ?????")
+		draw_text(x-1,y+245, "BONUS: ???? ??? ?????")
+		draw_text(x-1,y+247, "BONUS: ???? ??? ?????")
 	
 		draw_set_color(c_white)
-		draw_text(x,y+245, "???? ??? ?????")
+		draw_text(x,y+245, "BONUS: ???? ??? ?????")
 	}
 	
 	
@@ -69,7 +70,7 @@ if (canSelectShip) && (alarm[0] < 60)
 		shipSelected = true;
 		instance_create_layer(512,269, "Enchufes", o_enchufeInicio)
 		instance_create_layer(112,272, "Enchufes" ,o_enchufeResetSelector)
-		instance_create_layer(30,40, "Enchufes" ,o_enchufeDeleteData)
+		instance_create_layer(50,40, "Enchufes" ,o_enchufeDeleteData)
 		Stats._visible = false;
 		player = instance_create_layer(x,y+100,"Player", o_playerShip)
 		global.ammoStatInitial = global.ammoStat;
