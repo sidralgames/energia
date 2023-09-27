@@ -6,7 +6,7 @@ function PlayerStats_Blue()
 	global.spritePart = s_nave_part;
 	global.bulletPart_sprite = s_nave_part;
 		
-	global.energyTotal = 400;
+	global.energyTotal = 300;
 	global.energy = global.energyTotal;
 	
 	global.hpMax = 2;
