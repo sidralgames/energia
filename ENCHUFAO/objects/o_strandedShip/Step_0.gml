@@ -72,31 +72,37 @@ if (chargedInEnergy) && (chargedInHp) && (chargedInAmmo) && (goesToNextRoom = fa
 	if (sprite = splayer)
 	{
 		global.strandedShipGreen = true;
+		global.strandedShipGreenHP = hp;
 		global.numStrandedShipGreen += 1;
 	}
 	else if (sprite = splayer_Blue)
 	{
 		global.strandedShipBlue = true;
+		global.strandedShipBlueHP = hp;
 		global.numStrandedShipBlue += 1;
 	}
 	else if (sprite = splayer_Dark)
 	{
 		global.strandedShipDark = true;
+		global.strandedShipDarkHP = hp;
 		global.numStrandedShipDark += 1;
 	}
 	else if (sprite = splayer_Red)
 	{
 		global.strandedShipRed = true;
+		global.strandedShipRedHP = hp;
 		global.numStrandedShipRed += 1;
 	}
 	else if (sprite = splayer_Purple)
 	{
 		global.strandedShipPurple = true;
+		global.strandedShipPurpleHP = hp;
 		global.numStrandedShipPurple += 1;
 	}
 	else if (sprite = splayer_mp3)
 	{
 		global.strandedShipMP3 = true;
+		global.strandedShipMP3HP = hp;
 		global.numStrandedShipMP3 += 1;
 	}
 	//global.posNumberOfShips-=1;

@@ -5,6 +5,13 @@ full = false;
 global.amplifyPowerLaser = 0;
 global.amplifyPowerAmmo = 0;
 
+global.strandedShipGreenHP = 0;
+global.strandedShipBlueHP = 0;
+global.strandedShipRedHP = 0;
+global.strandedShipPurpleHP = 0;
+global.strandedShipDarkHP = 0;
+global.strandedShipMP3HP = 0;
+
 
 global.song = choose(snd_songMaster)
 global.milisecs = 0;

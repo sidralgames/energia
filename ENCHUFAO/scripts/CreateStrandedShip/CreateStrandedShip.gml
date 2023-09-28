@@ -2,60 +2,23 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function CreateStrandedShip()
 {
-		var cx = 1*width_ div 2;
-		var cy = 1*height_ div 2;
-
-
-	if (global.strandedShipGreen)
+	cx = 1*width_ div 2;
+	cy = 1*height_ div 2;
+	
+	if (global.spriteShip = splayer_Red)
 	{
-		stranded = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Player", o_strandedShip);
-		stranded.createdStranded = false;
-		stranded.y+=2;
-		stranded.chargedInEnergy = true;
-		stranded.chargedInHp = true;
-		stranded.chargedInAmmo = true;
-		stranded.sprite = splayer;
-		
+		if (global.bonusIsUpgraded)
+		{
+			CreateStrandedShipBonusUpgraded();
+		}
+		else
+		{
+			CreateStrandedShipStandard();
+		}
 	}
-	if (global.strandedShipBlue)
+	else
 	{
-		stranded = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Player", o_strandedShip);
-		stranded.createdStranded = false;
-		stranded.y-=2;
-		stranded.chargedInEnergy = true;
-		stranded.chargedInHp = true;
-		stranded.chargedInAmmo = true;
-		stranded.sprite = splayer_Blue;
+		CreateStrandedShipStandard();
 	}
-	if (global.strandedShipPurple)
-	{
-		stranded = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Player", o_strandedShip);
-		stranded.createdStranded = false;
-		stranded.y+=6;
-		stranded.chargedInEnergy = true;
-		stranded.chargedInHp = true;
-		stranded.chargedInAmmo = true;
-		stranded.sprite = splayer_Purple;
-	}
-	if (global.strandedShipDark)
-	{
-		stranded = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Player", o_strandedShip);
-		stranded.createdStranded = false;
-		stranded.y-=6;
-		stranded.chargedInEnergy = true;
-		stranded.chargedInHp = true;
-		stranded.chargedInAmmo = true;
-		stranded.sprite = splayer_Dark;
-	}
-	if (global.strandedShipRed)
-	{
-		stranded = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Player", o_strandedShip);
-		stranded.createdStranded = false;
-		stranded.chargedInEnergy = true;
-		stranded.x+=6;
-		stranded.chargedInEnergy = true;
-		stranded.chargedInHp = true;
-		stranded.chargedInAmmo = true;
-		stranded.sprite = splayer_Red;
-	}
+	
 }

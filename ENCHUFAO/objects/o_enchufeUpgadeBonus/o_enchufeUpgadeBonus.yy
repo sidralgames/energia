@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_enchufeUpgadeBonus",
   "spriteId": {
-    "name": "s_enchufeUpgradeCharge",
-    "path": "sprites/s_enchufeUpgradeCharge/s_enchufeUpgradeCharge.yy",
+    "name": "s_enchufeUpgradeBonus",
+    "path": "sprites/s_enchufeUpgradeBonus/s_enchufeUpgradeBonus.yy",
   },
   "solid": false,
   "visible": true,
