@@ -9,6 +9,7 @@ function SetupLevelBasic()
 	enchufeHP = false;
 	enchufeShield = false;
 	enchufeAmmo = false;
+	enchufeBomb = false;
 	enchufeFinal = false;
 	
 	ShieldsInLevel = 0;
@@ -60,7 +61,7 @@ function SetupLevelBasic()
 		global.strandedShipGreen = true;
 	}
 
-	CreateStrandedShip();
+	
 
 
 	//Create the controller
@@ -147,10 +148,13 @@ function SetupLevelBasic()
 				var oddsESH = 300;
 				var oddsEF = 300;
 				var oddsStrandedShip = 300;
+				var oddsEBomb = 300;
 				
 				var oddsPETA = 300;
 				var oddsBomb = 300;
 				var oddsShield = 300;
+				
+				
 			
 			    var exM = xx * CELL_WIDTH+CELL_WIDTH/2;
 			    var eyM = yy * CELL_HEIGHT+CELL_HEIGHT/2;
@@ -170,11 +174,11 @@ function SetupLevelBasic()
 					PetasInLevel +=1;
 				}
 				
-				if (irandom(oddsBomb) == oddsBomb) && (BombsInLevel < BombsInLevelMax) 
-				{
-					instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_BombpickUp); 
-					BombsInLevel +=1;
-				}
+				//if (irandom(oddsBomb) == oddsBomb) && (BombsInLevel < BombsInLevelMax) 
+				//{
+				//	instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_BombpickUp); 
+				//	BombsInLevel +=1;
+				//}
 				
 				if (irandom(oddsShield) == oddsShield) && (ShieldsInLevel < ShieldsInLevelMax) 
 				{
@@ -221,6 +225,17 @@ function SetupLevelBasic()
 							enchufeAmmo = true;
 						}
 					}
+					
+					if (irandom(oddsEBomb) == oddsEBomb) && (enchufeBomb = false)
+					{
+						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
+					
+						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 250)
+						{
+							instance_create_layer(exM,eyM,"Enchufes",o_enchufeBombs); 
+							enchufeBomb = true;
+						}
+					}
 				
 					if (irandom(oddsEF) == oddsEF) && (enchufeFinal = false)
 					{
@@ -245,8 +260,9 @@ function SetupLevelBasic()
 	SetVines();
 
 
-	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo) || 
-	(!enchufeShield) || (!enchufeFinal) || (!strandedShipOK)
+	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo)
+	|| (!enchufeShield) || (!enchufeFinal) || (!strandedShipOK) 
+	|| (!enchufeBomb)
 	{
 		room_restart();
 	}

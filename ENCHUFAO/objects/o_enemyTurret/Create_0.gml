@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 type = collisionType.custom;
-
+checkHP = false;
 
 event_inherited();
 slowMoPickUps = 8;

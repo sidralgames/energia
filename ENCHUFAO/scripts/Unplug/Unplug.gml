@@ -19,8 +19,10 @@ function Unplug()
 	global.chargingAmmo = false;
 	global.chargingHp = false;
 	global.chargingLaser = false;
+	global.chargingBombs = false;
 	global.chargingEnergy = false;
-	global.hp = round(global.hp);
+	global.hp = floor(global.hp);///////round?////////////////////////
+	global.bombAmmo = floor(global.bombAmmo);
 	global.laserDrain = 0.005;
 	pluggedFinal = false;
 	

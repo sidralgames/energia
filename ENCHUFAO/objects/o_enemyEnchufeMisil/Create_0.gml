@@ -2,7 +2,7 @@
 // You can write your code in this editor
 type = collisionType.custom;
 flashAlpha = 0;
-
+checkHP = false;
 slowMoPickUps = 5;
 cable = noone;
 isCounted=false;

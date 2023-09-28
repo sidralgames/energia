@@ -35,6 +35,11 @@ function CheckEnchufe()
 		global.chargingEnergy = true;
 	}
 	
+	if (inEnchufe.enchufeBomb = true)
+	{
+		global.chargingBombs = true;	
+	}
+	
 	if (inEnchufe.isPETA_F)
 	{
 		inEnchufe.petaActive = true;

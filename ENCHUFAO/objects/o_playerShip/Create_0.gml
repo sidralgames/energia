@@ -2,6 +2,11 @@
 // You can write your code in this editor
 type = collisionType.custom;
 
+if (global.shipGreenBonusUpgraded)
+{
+	global.bombAmmo = global.bombAmmoMax;	
+}
+
 global.amplifyPowerLaser = 0;
 global.amplifyPowerAmmo = 0;
 instance_destroy(o_partBalaP);
@@ -108,4 +113,45 @@ _angle = point_direction(x,y,o_crosshair.x, o_crosshair.y)
 //{
 //	lightPlayer=-1;
 //}
+greenO = make_color_rgb(99,199,77)
+green = make_color_rgb(108,242,79)
+red = make_color_rgb(228,59,68)
+purpleO = make_color_rgb(181,80,136)
+purple = make_color_rgb(246,117,122)
+rojoosc= make_colour_rgb(255,0,68);
+rojo= make_colour_rgb(228,59,69);
+blanco= make_colour_rgb(255,255,255);
+blue = make_color_rgb(44,232, 245) ;
+orange = make_color_rgb(255,0,68);
+oranget = make_color_rgb(247,118,34);
+blueO = make_color_rgb(0,149,233)
+blueOO = make_color_rgb(18,78,137)
+if (global.spriteShip = splayer)
+{
+	colorLaser = green;
+}
 
+if (global.spriteShip = splayer_Blue)
+{
+	colorLaser = blue;
+}
+
+if (global.spriteShip = splayer_Red)
+{
+	colorLaser = oranget;
+}
+
+if (global.spriteShip = splayer_Purple)
+{
+	colorLaser = purpleO;
+}
+
+if (global.spriteShip = splayer_Dark)
+{
+	colorLaser = orange;
+}
+
+if (global.spriteShip = splayer_mp3)
+{
+	colorLaser = blueO;
+}

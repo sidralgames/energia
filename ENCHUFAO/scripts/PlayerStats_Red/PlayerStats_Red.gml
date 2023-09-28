@@ -3,8 +3,8 @@
 function PlayerStats_Red()
 {
 	global.spriteShip = splayer_Red;
-	global.spritePart = s_bullet_partTorreta;
-	global.bulletPart_sprite = s_bullet_part;
+	global.spritePart = s_bullet_part_Orange;
+	global.bulletPart_sprite = s_bullet_part_Orange;
 		
 	global.energyTotal = 250;
 	global.energy = global.energyTotal;

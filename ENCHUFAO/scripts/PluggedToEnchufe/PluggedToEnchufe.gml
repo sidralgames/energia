@@ -51,8 +51,17 @@ function PluggedToEnchufe()
 	
 	if (global.spriteShip = splayer_mp3)
 	{
-		global.amplifyPowerLaser = 2.5;
-		global.amplifyPowerAmmo = 0.5;
+		if (global.bonusIsUpgraded)
+		{
+			global.amplifyPowerLaser = 3.5;
+			global.amplifyPowerAmmo = 1;
+		}
+		else
+		{
+			global.amplifyPowerLaser = 2.5;
+			global.amplifyPowerAmmo = 0.5;
+		}
+		
 		if (partChanged = false)
 		{
 			instance_destroy(o_partBalaP)

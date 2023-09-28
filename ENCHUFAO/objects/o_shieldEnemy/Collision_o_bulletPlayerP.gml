@@ -3,6 +3,6 @@
 
 
 instance_destroy(other);
-hp-=1;
+_hp-=1;
 
 

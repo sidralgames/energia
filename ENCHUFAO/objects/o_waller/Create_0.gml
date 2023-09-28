@@ -23,7 +23,7 @@ StrandedShipsInLevelMax = 1;
 strandedShipOK = false;
 creadaStrandedRed = false;
 
-
+alarm[6] = 50 
 global.changingTiles = false;
 
 if (levelType = 0)

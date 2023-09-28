@@ -3,7 +3,7 @@
 
 image_alpha = irandom(0.5)+0.8
 
-if (hp <= 0) || !instance_exists(enemyBelongs)
+if (_hp <= 0) || !instance_exists(enemyBelongs)
 {
 	instance_destroy();
 }

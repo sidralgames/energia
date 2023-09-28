@@ -91,6 +91,15 @@ global.overchargeTime = 1;
 global.totalEnemiesOnScreen = 0;
 
 
+global.shipGreenBonusUpgraded = false;
+global.shipRedBonusUpgraded = false;
+global.shipBlueBonusUpgraded = false;
+global.shipPurpleBonusUpgraded = false;
+global.shipDarkBonusUpgraded = false;
+global.shipMP3BonusUpgraded = false;
+
+
+
 global.coverSpeed = 1.05;
 
 global.deletingData = false;
@@ -143,6 +152,11 @@ global.chargingHp = false;
 global.chargingLaser = false;
 global.chargingEnergy = false;
 global.chargingPETA = false;
+global.chargingBombs = false;
+
+
+global.relativeFastSpeed = 0.3;
+
 
 global.chargerShoots = false;
 
@@ -168,6 +182,7 @@ global.superShotIsUpgraded = false;
 global.overchargeIsUpgraded = false;
 global.clusterIsUpgraded = false;
 global.laserIsUpgraded = false;
+global.bonusIsUpgraded = false;
 
 
 
@@ -189,6 +204,7 @@ AddUpgradeSlowMo();
 AddUpgradeOvercharge();
 AddUpgradeClusterBomb();
 AddUpgradeLaser();
+AddUpgradeBonus();
 
 
 global.shipList = ds_map_create();

@@ -24,7 +24,8 @@ function PlayerShipLaser(argument0)
 	     var lx = x + lengthdir_x(i, argument0);
 	     var ly = y + lengthdir_y(i, argument0);
 		 
-	     if tile_meeting(lx,ly,"Tiles") || place_meeting(lx, ly, o_enemyP)
+	     if tile_meeting(lx,ly,"Tiles") || place_meeting(lx, ly, o_enemyP) 
+		 || place_meeting(lx, ly, o_bulletPlayer_Bomb) 
 		 {
 			 maxLenght_=i
 			 maxLenght = maxLenght_;
@@ -77,5 +78,21 @@ function PlayerShipLaser(argument0)
 		//explo = instance_create(enemy.x, enemy.y, o_explo2)
 		//explo.image_xscale = 0.25;
 		//explo.image_yscale = 0.25;
+	}
+	
+	bomb1 = collision_line(x,y,x+lengthdir_x(maxLenght_+20, argument0+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,argument0+random_range(2,-2)), o_bulletPlayer_Bomb,false, true)
+	
+	if (bomb1)
+	{
+		screenShake(4,10);
+		
+		bomb = instance_create(bomb1.x,bomb1.y,o_exploBomb);
+		if (bomb1.sprite_index = s_bombCluster)
+		{
+			bomb.sprite_index = s_explo2;	
+		}
+		bomb.image_xscale = 2.5;
+		bomb.image_yscale = 2.5;
+		instance_destroy(bomb1);
 	}
 }

@@ -14,7 +14,30 @@ rojo = make_color_rgb(228,59, 68)
 //draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+100,"milisecsSlow: " + string(global.slowmilisecs))
 
 //draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+120,"milisecsConnec: " + string(global.connectedmilisecs))
-
+//if (global.spriteShip = splayer)
+//{
+//	ship = 0;
+//}
+//if (global.spriteShip = splayer_Blue)
+//{
+//	ship = 1;
+//}
+//if (global.spriteShip = splayer_Red)
+//{
+//	ship = 2;
+//}
+//if (global.spriteShip = splayer_Dark)
+//{
+//	ship = 3;
+//}
+//if (global.spriteShip = splayer_Purple)
+//{
+//	ship = 4;
+//}
+//if (global.spriteShip = splayer_mp3)
+//{
+//	ship = 5;
+//}
 
 if (!isPaused)
 {
@@ -58,7 +81,7 @@ if (!isPaused)
 		draw_sprite_ext(s_hpNewUI,0,__view_get( e__VW.XView, 0 )+12,__view_get( e__VW.YView, 0 )+30,1,1,0,image_blend, image_alpha)
 		
 		
-		for (var a=0; a< global.bombAmmo; a++)
+		for (var a=0; a< floor(global.bombAmmo); a++)
 		{
 			if (global.bombIsClusterBomb)
 			{

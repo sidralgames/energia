@@ -16,7 +16,7 @@ function PlayerShipBomb()
 	"Bullets", o_explo3)
 	explo.image_xscale = 0.15;
 	explo.image_yscale = 0.15;
-	explo.image_speed = 3;
+	explo.image_speed = 3*global.relativeSpeed;
 	
 	screenShake(2,5)
 	

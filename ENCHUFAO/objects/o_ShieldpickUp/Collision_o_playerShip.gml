@@ -4,7 +4,14 @@ if (global.shields < global.shieldsMax)
 {
 	if (global.spriteShip = splayer_Blue)
 	{
-		global.shields +=2;
+		if (global.bonusIsUpgraded)
+		{
+			global.shields +=3;
+		}
+		else
+		{
+			global.shields +=2;
+		}
 	}
 	else
 	{

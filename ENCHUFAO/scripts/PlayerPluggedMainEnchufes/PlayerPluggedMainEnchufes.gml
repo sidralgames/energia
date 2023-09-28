@@ -45,4 +45,14 @@ function PlayerPluggedMainEnchufes()
 			global.ammo +=0.4*global.chargeTime;
 		}
 	}
+	
+	
+	//------------BOMBS-----------//
+	if (global.chargingBombs = true)
+	{
+		if (global.bombAmmo <= global.bombAmmoMax)
+		{
+			global.bombAmmo +=0.008*global.chargeTime;
+		}
+	}
 }

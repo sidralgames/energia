@@ -3,8 +3,8 @@
 function PlayerStats_Green()
 {
 	global.spriteShip = splayer;
-	global.spritePart = s_nave_part;
-	global.bulletPart_sprite = s_bullet_part;
+	global.spritePart = s_bullet_part_Green;
+	global.bulletPart_sprite = s_bullet_part_Green;
 	
 		
 	global.energyTotal = 400;

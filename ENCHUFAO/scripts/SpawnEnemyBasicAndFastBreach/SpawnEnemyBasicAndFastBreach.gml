@@ -40,13 +40,6 @@ function SpawnEnemyBasicAndFastBreach()
 				}
 				else
 				{
-					if (global.spriteShip = splayer_Dark)
-					{
-						if instance_exists(enemies)
-						{
-							enemies._hp-=1;
-						}
-					}
 				enemies.isCounted = false;
 				enemies.state = ENEMYSTATE.CHASING;
 				enemies.image_angle = point_direction(x, y, o_playerShip.x, o_playerShip.y)+random_range(-30,30)

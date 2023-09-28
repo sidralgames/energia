@@ -3,8 +3,8 @@
 function PlayerStats_MP3()
 {
 	global.spriteShip = splayer_mp3;
-	global.spritePart = s_nave_part;
-	global.bulletPart_sprite = s_nave_part;
+	global.spritePart = s_bullet_part_BlueO;
+	global.bulletPart_sprite = s_bullet_part_BlueO;
 		
 	global.energyTotal = 350;
 	global.energy = global.energyTotal;

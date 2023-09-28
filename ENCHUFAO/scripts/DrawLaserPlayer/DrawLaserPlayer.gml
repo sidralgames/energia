@@ -8,7 +8,7 @@ if (key_laser) && !(laserActive)
 		blueW =  lerp(blueW, global.laserWidth+1, 0.05*global.relativeSpeed);
 		whiteW =  lerp(whiteW, global.laserWidth+1, 0.05*global.relativeSpeed);
 		draw_set_alpha(0.2+random(0.5))
-		draw_circle_colour(x-1+lengthdir_x(10,_angle), y-1+lengthdir_y(10, _angle),(height*2)+blueW+global.laserWidth+global.amplifyPowerLaser,azul, azul, false)
+		draw_circle_colour(x-1+lengthdir_x(10,_angle), y-1+lengthdir_y(10, _angle),(height*2)+blueW+global.laserWidth+global.amplifyPowerLaser,colorLaser, colorLaser, false)
 		draw_circle_colour(x-1+lengthdir_x(10,_angle), y-1+lengthdir_y(10, _angle),(height*1)+whiteW+global.laserWidth+global.amplifyPowerLaser,blanco, blanco, false)
 	}
 	if (laserActive) 
@@ -24,13 +24,13 @@ if (key_laser) && !(laserActive)
 		whiteWidht =  lerp(whiteWidht, global.laserWidth+global.amplifyPowerLaser+1, 0.2*global.relativeSpeed);
 	
 		draw_set_alpha(0.8+random(0.6))
-		draw_circle_colour(x+lengthdir_x(10,_angle), y-1+lengthdir_y(10, _angle),(height*2)+blueWidht+0.5+global.laserWidth+global.amplifyPowerLaser,azul, azul, false)
+		draw_circle_colour(x+lengthdir_x(10,_angle), y-1+lengthdir_y(10, _angle),(height*2)+blueWidht+0.5+global.laserWidth+global.amplifyPowerLaser,colorLaser, colorLaser, false)
 		draw_circle_colour(x+lengthdir_x(10,_angle), y-1+lengthdir_y(10, _angle),(height*1)+whiteWidht+global.laserWidth+global.amplifyPowerLaser,blanco, blanco, false)
 	
-		draw_circle_colour(x+lengthdir_x(maxLenght,argument0), y-1+lengthdir_y(maxLenght, argument0),(height*2)+blueWidht+0.5+global.laserWidth+global.amplifyPowerLaser,azul, azul, false)
+		draw_circle_colour(x+lengthdir_x(maxLenght,argument0), y-1+lengthdir_y(maxLenght, argument0),(height*2)+blueWidht+1.5+global.laserWidth+global.amplifyPowerLaser,colorLaser, colorLaser, false)
 		draw_circle_colour(x+lengthdir_x(maxLenght,argument0), y-1+lengthdir_y(maxLenght, argument0),(height*1)+whiteWidht+global.laserWidth+global.amplifyPowerLaser,blanco, blanco, false)
 	
-		draw_set_color(azul);
+		draw_set_color(colorLaser);
 		draw_set_alpha(0.2+random(0.4))
 		draw_line_width( x+lengthdir_x(13,_angle), y-1+lengthdir_y(13, _angle), x+lengthdir_x(maxLenght,argument0), y-1+lengthdir_y(maxLenght, argument0),(height * 5) + blueWidht+2+global.laserWidth+global.amplifyPowerLaser);
 		draw_set_alpha(0.8+random(0.6))

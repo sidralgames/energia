@@ -352,4 +352,50 @@ function CheckEnchufeUpgrade()
 		global.laserWidth+=2;
 		
 	}
+	else if (inEnchufe.upgradeBonus = true) && (upgraded = false)
+	{
+		if (!global.bonusIsUpgraded)
+		{
+			global.bonusIsUpgraded = true;
+			AddUpgradeBonusPlayer();
+		}
+		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+		{
+			upg = ds_map_find_value(global.PlayerUpgradesList, i)
+			if (upg.obj = o_enchufeUpgadeBonus)
+			{
+				upg.times+=1;
+			}
+		}
+	
+		inEnchufe.charging = true;
+		upgraded = true;
+		
+		if (global.spriteShip = splayer)
+		{
+			global.shipGreenBonusUpgraded = true;
+		}
+		else if (global.spriteShip = splayer_Blue)
+		{
+			global.shipBlueBonusUpgraded = true;
+		}
+		else if (global.spriteShip = splayer_Red)
+		{
+			global.shipRedBonusUpgraded = true;
+		}
+		else if (global.spriteShip = splayer_Dark)
+		{
+			global.shipDarkBonusUpgraded = true;
+		}
+		else if (global.spriteShip = splayer_Purple)
+		{
+			global.relativeFastSpeed += 0.3;
+			global.shipPurpleBonusUpgraded = true;
+		}
+		else if (global.spriteShip = splayer_mp3)
+		{
+			global.shipMP3BonusUpgraded = true;
+		}
+		
+	}
 }

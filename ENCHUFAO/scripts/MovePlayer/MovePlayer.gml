@@ -23,8 +23,8 @@ if (tile_meeting(x,y+_vpush*1.25,"Tiles"))
 
 if (global.spriteShip = splayer_Purple)
 {
-	x+=_hpush * min(1, (global.relativeSpeed+0.5));
-	y+=_vpush * min(1, (global.relativeSpeed+0.5));
+	x+=_hpush * min(1, (global.relativeSpeed+global.relativeFastSpeed));
+	y+=_vpush * min(1, (global.relativeSpeed+global.relativeFastSpeed));
 }
 else
 {
