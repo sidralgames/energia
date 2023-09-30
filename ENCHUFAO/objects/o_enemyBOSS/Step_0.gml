@@ -8,53 +8,6 @@ part_particles_create(global.naveEnemy1_sys, x, y, global.naveEnemy1 , 3)
 
 if instance_exists(o_playerShip)
 {
-	if x > __view_get( e__VW.XView, 0 )-20 && x < __view_get( e__VW.XView, 0 )+660
-	{
-		if y > __view_get( e__VW.YView, 0 )-20 && y < __view_get( e__VW.YView, 0 )+380
-		{
-			if (o_playerShip.crosshairSuper) && (crosshairSuper = false)
-			{
-				cross = instance_create(x,y,o_crosshairSuper)
-				crosshairSuper = true;
-				
-			}
-		}
-	}
-	
-	if (crosshairSuper)
-	{
-		if instance_exists(cross)
-		{
-			cross.x = x;
-			cross.y = y;
-		
-			if (cross.image_speed = 0)
-			{
-				if (superShotPressed)
-				{
-					global.flashSuperShot = true;
-					o_main.contSuperShotMain = 5;
-					o_playerShip.canSuperShot = false;
-					o_playerShip.alarm[2] = 120;
-					screenShake(7, 30)
-					instance_destroy(cross)
-					alarm[3] = random_range(0,10)
-				}
-			}
-			else
-			{
-				if (o_playerShip.contSuperShot = 0)
-				{
-					crosshairSuper = false;
-					instance_destroy(cross)
-				}
-			}
-		}
-		else
-		{
-			crosshairSuper = false;	
-		}
-	}
 	
 	myPath = path_add();
 	mp_grid_path(gridRoom1, myPath, x, y, o_playerShip.x ,o_playerShip.y, true);

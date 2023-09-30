@@ -19,7 +19,7 @@ function EnemyShield_Chasing()
 	{
 		shield.x = x+lengthdir_x(10, direction)
 		shield.y = y+lengthdir_y(10, direction)
-		shield.image_angle = image_angle;
+		shield.image_angle = _angle;
 	}
 	else
 	{

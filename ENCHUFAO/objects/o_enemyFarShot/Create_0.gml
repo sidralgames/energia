@@ -1,7 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited();
-
+isMotherShip = false;
+type = collisionType.custom;
 slowMoPickUps = choose(2,3);
 closeToWall = false
 alarm[10] = 30;

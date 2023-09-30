@@ -5,6 +5,12 @@ function PlayerPluggedMainEnchufes()
 	//-----------ALL ENERGY---------//
 	if (global.energy <= global.energyTotal)
 	{
+		if (alarm[4] <=0)
+		{
+				part_particles_create(global.energyPart_sys, o_playerShip.x+random_range(-15,15), o_playerShip.y+random_range(-15,15), global.energyPart , 1)	
+				alarm[4] = 3;
+		}
+			
 		global.energy+=0.75*global.chargeTime;
 	}
 	
@@ -28,6 +34,13 @@ function PlayerPluggedMainEnchufes()
 		if (global.laser <= global.laserMax)
 		{
 			global.laser +=0.005*global.chargeTime;
+			
+			if (alarm[3] <=0)
+			{
+				part_particles_create(global.laserPart_sys, o_playerShip.x+random_range(-15,15), o_playerShip.y+random_range(-15,15), global.laserPart , 1)	
+				alarm[3] = 3;
+			}
+			
 		}
 		
 		global.laserDrain = 0.015;
@@ -43,16 +56,22 @@ function PlayerPluggedMainEnchufes()
 		if (global.ammo <= global.ammoMax)
 		{
 			global.ammo +=0.4*global.chargeTime;
+			
+			if (alarm[3] <=0)
+			{
+				part_particles_create(global.ammoPart_sys, o_playerShip.x+random_range(-15,15), o_playerShip.y+random_range(-15,15), global.ammoPart , 1)	
+				alarm[3] = 3;
+			}
 		}
 	}
 	
 	
 	//------------BOMBS-----------//
-	if (global.chargingBombs = true)
-	{
-		if (global.bombAmmo <= global.bombAmmoMax)
-		{
-			global.bombAmmo +=0.008*global.chargeTime;
-		}
-	}
+	//if (global.chargingBombs = true)
+	//{
+	//	if (global.bombAmmo <= global.bombAmmoMax)
+	//	{
+	//		global.bombAmmo +=0.008*global.chargeTime;
+	//	}
+	//}
 }

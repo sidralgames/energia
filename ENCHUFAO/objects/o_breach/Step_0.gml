@@ -41,6 +41,26 @@ switch (spawn)
 	{
 		if (alarm[0] <= 0) && (image_index > 50)
 		{
+			SpawnEnemyMiniAndFastBreach();
+			alarm[0] = random_range(minRate,maxRate)
+		}
+		
+	}
+	break;
+	case 4:
+	{
+		if (alarm[0] <= 0) && (image_index > 50)
+		{
+			SpawnEnemyMiniBreach();
+			alarm[0] = random_range(minRate,maxRate)
+		}
+		
+	}
+	break;
+	case 5:
+	{
+		if (alarm[0] <= 0) && (image_index > 50)
+		{
 			SpawnBulletEyeAndPeta();
 			alarm[0] = random_range(minRate,maxRate)
 		}

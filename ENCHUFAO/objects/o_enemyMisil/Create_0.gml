@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+isShield = false;
+enemyIsMini = false;
+canBounce = false;
 type = collisionType.custom;
 checkHP = false;
 slowMoPickUps = 8;

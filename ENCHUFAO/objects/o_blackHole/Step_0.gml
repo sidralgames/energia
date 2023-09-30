@@ -3,7 +3,7 @@
 //Move();
 
 //_angle += abs(_hpush)*15;
-image_angle += rot;
+image_angle += rot*global.relativeSpeed;
 
 
 

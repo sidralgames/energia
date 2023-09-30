@@ -3,7 +3,7 @@
 _hpush = lerp(_hpush, 0, 0.05);
 _vpush = lerp(_vpush, 0, 0.05);
 
-_angle += max(0.5*sign(_hpush), 5*(abs(_hpush)),0.5*sign(_vpush), 5*(abs(_vpush)));
+_angle += max(0.5*sign(_hpush), 5*(abs(_hpush)),0.5*sign(_vpush), 5*(abs(_vpush))*global.relativeSpeed);
 
 MoveZeroGrv_Bomb();
 

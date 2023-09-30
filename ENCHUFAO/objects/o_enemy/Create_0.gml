@@ -20,7 +20,7 @@ speed=random(1)+2;
 
 state = ENEMYSTATE.CHASING;
 
-enemyXP = 20;
+enemyXP = global.enemyStandardXP;
 
 direction_ =direction;
 

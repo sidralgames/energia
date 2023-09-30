@@ -22,4 +22,8 @@ function StrandedShip_False()
 	{
 		global.strandedShipPurple = false;
 	}
+	else if (sprite = splayer_mp3)
+	{
+		global.strandedShipMP3 = false;
+	}
 }

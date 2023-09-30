@@ -101,5 +101,5 @@ if (global.wallgrid_[# _x3/32, _y3/32] != FLOOR) && (_x3 > 50) && (_x3 < room_wi
 //{
 //	canCreatePeta = false;
 //	instance_create_layer(xtoCreateP, yToCreateP, "Enchufes", 
-//	choose(o_enchufePETA, o_enchufePETAAmmo, o_enchufePETAHP, o_enchufePETAShield))	
+//	choose(o_enchufePETA, o_enchufePETAAmmo, o_enchufePETAHP, o_enchufePETALaser))	
 //}

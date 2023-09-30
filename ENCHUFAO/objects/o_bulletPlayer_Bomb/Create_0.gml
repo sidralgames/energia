@@ -13,3 +13,4 @@ _angle = image_angle;
 
 alarm[0] = 10;
 
+hitByLaser = false;

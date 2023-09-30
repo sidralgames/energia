@@ -42,7 +42,7 @@ y+=_vpush * global.relativeSpeed;
 _hpush = lerp(_hpush, 0 , 0.001);
 _vpush = lerp(_vpush, 0 , 0.001);
 
-_angle += _hpush*3;
+_angle += _hpush*3*global.relativeSpeed;
 
 if (hp <= 0)
 {

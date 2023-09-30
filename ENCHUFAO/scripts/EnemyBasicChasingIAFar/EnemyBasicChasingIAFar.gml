@@ -2,16 +2,17 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function EnemyBasicChasingIAFar()
 {
-	myPath = path_add();
-	mp_grid_path(gridRoom1, myPath, x, y, o_playerShip.x ,o_playerShip.y, true);
-	if (point_distance(x,y,o_playerShip.x, o_playerShip.y) > 200)
-	{
-	
-		if tile_meeting(x + lengthdir_x(20, 1), y+ lengthdir_y(20, 1), "Tiles") ||
+	collisionWithTile = tile_meeting(x + lengthdir_x(20, 1), y+ lengthdir_y(20, 1), "Tiles") ||
 		tile_meeting(x + lengthdir_x(20, 90), y+ lengthdir_y(20, 90), "Tiles") ||
 		tile_meeting(x + lengthdir_x(20, 180), y+ lengthdir_y(20, 180), "Tiles") ||
 		tile_meeting(x + lengthdir_x(20, 270), y+ lengthdir_y(20, 270), "Tiles") || 
-		tile_meeting(x, y, "Tiles")
+		tile_meeting(x, y, "Tiles");
+		
+	myPath = path_add();
+	mp_grid_path(gridRoom1, myPath, x, y, o_playerShip.x ,o_playerShip.y, true);
+	if (point_distance(x,y,o_playerShip.x, o_playerShip.y) >= 200)
+	{
+		if (collisionWithTile)
 		{
 			closeToWall = true;
 			if (alarm[10] <= 0)
@@ -24,7 +25,7 @@ function EnemyBasicChasingIAFar()
 			}
 			path_start(myPath,_speed ,path_action_continue, false)
 		
-			image_angle = direction;
+			_angle = direction;
 
 		}
 		else
@@ -33,7 +34,7 @@ function EnemyBasicChasingIAFar()
 			closeToWall = false;
 			var a = point_direction(x, y, o_playerShip.x+diffX,  o_playerShip.y+diffY);
 			direction += sign(dsin(a - direction)) * (precision * global.relativeSpeed);
-			image_angle = direction;
+			_angle = direction;
 			if (alarm[10] <= 0)
 			{
 				speed = enemySpeed * min(1, global.relativeSpeed+0.2);
@@ -44,14 +45,13 @@ function EnemyBasicChasingIAFar()
 			}
 			
 			if (tile_meeting(x+hspeed,y,"Tiles"))
-					{
-					    hspeed = -hspeed*bnc;
-					} 
-	
-					if (tile_meeting(x,y+vspeed,"Tiles"))
-					{
-					    vspeed = -vspeed*bnc;
-					}
+			{
+			    hspeed = -hspeed*bnc;
+			}
+			else if (tile_meeting(x,y+vspeed,"Tiles"))
+				{
+				    vspeed = -vspeed*bnc;
+			}
 		
 		}
 	}
@@ -61,7 +61,7 @@ function EnemyBasicChasingIAFar()
 			closeToWall = false;
 			var a = point_direction(x, y, o_playerShip.x+diffX,  o_playerShip.y+diffY);
 			direction += sign(dsin(a - direction)) * (precision * global.relativeSpeed);
-			image_angle = direction;
+			_angle = direction;
 			if (alarm[10] <= 0)
 			{
 				speed = enemySpeed * min(1, global.relativeSpeed+0.2);

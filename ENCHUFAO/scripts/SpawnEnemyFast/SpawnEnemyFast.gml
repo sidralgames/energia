@@ -12,8 +12,8 @@ function SpawnEnemyFast()
 			enemies.isCounted = false;
 			enemies.state = ENEMYSTATE.WAITING;
 			enemies.speed = 0;
-			enemies.image_angle = irandom(360)
-			enemies.direction = enemies.image_angle;
+			enemies._angle = irandom(360)
+			enemies.direction = enemies._angle;
 		}
 	}
 }

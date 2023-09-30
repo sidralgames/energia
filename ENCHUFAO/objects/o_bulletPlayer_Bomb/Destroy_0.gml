@@ -1,11 +1,27 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-bomb = instance_create(x,y,o_exploBomb);
-if (sprite_index = s_bombCluster)
+if (hitByLaser = false)
 {
-	bomb.sprite_index = s_explo2;	
+	ebomb = instance_create(x,y,o_exploBomb);
+	ebomb.image_xscale = 1.4;
+	ebomb.image_yscale = 1.4;
+	if (sprite_index = s_bombCluster)
+	{
+		ebomb.sprite_index = s_explo2;	
+	}
+	instance_create(x,y,o_shockwaveTiles)
 }
-bomb.image_xscale = 1.4;
-bomb.image_yscale = 1.4;
+else
+{
+	ebomb = instance_create(x,y,o_exploBomb);
+	ebomb.image_xscale = 1.8;
+	ebomb.image_yscale = 1.8;
+	if (sprite_index = s_bombCluster)
+	{
+		ebomb.sprite_index = s_explo2;	
+	}
+	instance_create(x,y,o_shockwaveTiles)
+}
+
 instance_create(x,y,o_shockwaveTiles)

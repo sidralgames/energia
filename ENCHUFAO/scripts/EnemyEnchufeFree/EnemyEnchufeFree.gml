@@ -36,7 +36,7 @@ function EnemyEnchufeFree()
 	
 	
 	
-	_angle += _hpush*5;
+	_angle += _hpush*5*global.relativeSpeed;
 	
 	}
 	if (canPlug >= 0)

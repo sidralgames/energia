@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+isShield = false;
 type = collisionType.custom;
 flashAlpha = 0;
 checkHP = false;
@@ -7,6 +8,8 @@ slowMoPickUps = 5;
 cable = noone;
 isCounted=false;
 waiting = false;
+enemyIsMini = false;
+canBounce = false;
 enchufe = instance_nearest(x,y,o_enchufe_Father)
 version2 = false;
 state = ENEMYSTATE.PLUGGED;

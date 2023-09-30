@@ -26,7 +26,7 @@ function Enemy_Waiting()
 	{
 		alarm[0] = random_range(300,700);
 		direction = irandom(360);
-		image_angle = direction;
+		_angle = direction;
 		waitingSpeed = random_range(0.4,0.7);
 		breakDistance = random_range(0.005, 0.05);
 		accelDistance = random_range(0.005, 0.05);
@@ -44,13 +44,13 @@ function Enemy_Waiting()
 	if (point_distance(xStart, yStart,x, y) > maxDistance)
 	{
 		direction = (direction + 180) mod 360;
-		image_angle = direction;
+		_angle = direction;
 	}
 	
 	if tile_meeting(x+lengthdir_x(5,direction), y+lengthdir_y(5,direction), "Tiles")
 	{
 		direction = (direction + random_range(140,220)) mod 360
-		image_angle = direction
+		_angle = direction
 		alarm[0] = random_range(50,60);
 	}
 }

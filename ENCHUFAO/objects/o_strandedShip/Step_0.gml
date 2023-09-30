@@ -28,7 +28,7 @@ switch(state)
 
 if (!chargedInEnergy) || (!chargedInHp)
 {
-	_angle += max(0.5*sign(_hpush), 2*(abs(_hpush)),0.5*sign(_vpush), 2*(abs(_vpush)));
+	_angle += max(0.5*sign(_hpush), 2*(abs(_hpush)),0.5*sign(_vpush), 2*(abs(_vpush))*global.relativeSpeed);
 }
 else
 {
@@ -73,37 +73,31 @@ if (chargedInEnergy) && (chargedInHp) && (chargedInAmmo) && (goesToNextRoom = fa
 	{
 		global.strandedShipGreen = true;
 		global.strandedShipGreenHP = hp;
-		global.numStrandedShipGreen += 1;
 	}
 	else if (sprite = splayer_Blue)
 	{
 		global.strandedShipBlue = true;
 		global.strandedShipBlueHP = hp;
-		global.numStrandedShipBlue += 1;
 	}
 	else if (sprite = splayer_Dark)
 	{
 		global.strandedShipDark = true;
 		global.strandedShipDarkHP = hp;
-		global.numStrandedShipDark += 1;
 	}
 	else if (sprite = splayer_Red)
 	{
 		global.strandedShipRed = true;
 		global.strandedShipRedHP = hp;
-		global.numStrandedShipRed += 1;
 	}
 	else if (sprite = splayer_Purple)
 	{
 		global.strandedShipPurple = true;
 		global.strandedShipPurpleHP = hp;
-		global.numStrandedShipPurple += 1;
 	}
 	else if (sprite = splayer_mp3)
 	{
 		global.strandedShipMP3 = true;
 		global.strandedShipMP3HP = hp;
-		global.numStrandedShipMP3 += 1;
 	}
 	//global.posNumberOfShips-=1;
 	//ds_map_delete(global.posNumberOfShips, numShip)

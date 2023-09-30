@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_laser",
   "spriteId": {
-    "name": "Sprite84",
-    "path": "sprites/Sprite84/Sprite84.yy",
+    "name": "s_laserEnemy",
+    "path": "sprites/s_laserEnemy/s_laserEnemy.yy",
   },
   "solid": false,
   "visible": true,

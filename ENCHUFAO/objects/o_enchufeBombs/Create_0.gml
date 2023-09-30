@@ -11,5 +11,12 @@ event_inherited();
 
 energy = true;
 enchufeBomb = true;
+
+if (global.bombIsClusterBomb)
+{
+	sprite_index = s_enchufeBombsCluster;
+}
+
+
 sprite_enchufePluged = sprite_index;
 

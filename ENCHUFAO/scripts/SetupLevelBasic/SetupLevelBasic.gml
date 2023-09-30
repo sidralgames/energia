@@ -174,11 +174,11 @@ function SetupLevelBasic()
 					PetasInLevel +=1;
 				}
 				
-				//if (irandom(oddsBomb) == oddsBomb) && (BombsInLevel < BombsInLevelMax) 
-				//{
-				//	instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_BombpickUp); 
-				//	BombsInLevel +=1;
-				//}
+				if (irandom(oddsBomb) == oddsBomb) && (BombsInLevel < BombsInLevelMax) 
+				{
+					instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_BombpickUp); 
+					BombsInLevel +=1;
+				}
 				
 				if (irandom(oddsShield) == oddsShield) && (ShieldsInLevel < ShieldsInLevelMax) 
 				{
@@ -262,7 +262,7 @@ function SetupLevelBasic()
 
 	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo)
 	|| (!enchufeShield) || (!enchufeFinal) || (!strandedShipOK) 
-	|| (!enchufeBomb)
+	//|| (!enchufeBomb)
 	{
 		room_restart();
 	}

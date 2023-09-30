@@ -30,11 +30,11 @@ if (timesTotal > 0)
 						{
 							if (global.level = 1)
 							{
-								enemyToSpawn = choose(0,1,1,2)
+								enemyToSpawn = choose(0,0,1,2,3)
 							}
 							else
 							{
-								enemyToSpawn = choose(0,1,2)
+								enemyToSpawn = choose(0,1,2,3)
 							}
 							instance_create(exM,eyM,o_enemySpawnerIndicator);
 							spawners+=1;
@@ -43,6 +43,7 @@ if (timesTotal > 0)
 								case 0: SpawnEnemyFast(); break;
 								case 1: SpawnEnemyBasic(); break;
 								case 2: SpawnEnemyFastAndShield(); break;
+								case 3: SpawnEnemyMini(); break;
 								
 							}
 							

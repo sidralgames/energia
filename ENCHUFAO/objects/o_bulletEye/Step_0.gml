@@ -8,7 +8,7 @@ part_particles_create(global.balaPTorretaBig_sys, x, y, global.balaPTorretaBig ,
 
 
 MoveZeroGrv()
-image_angle += _hpush*2;
+image_angle += _hpush*2*global.relativeSpeed;
 
 hp--;
 

@@ -7,7 +7,7 @@ function Enemy_Shocked()
 	_hpush = lerp(_hpush, 0, 0.02);
 	_vpush = lerp(_vpush, 0, 0.02);
 	
-	image_angle = dirShoked;
+	_angle = dirShoked;
 	
 	MoveZeroGrv();
 	

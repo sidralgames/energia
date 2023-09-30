@@ -20,7 +20,7 @@ function EnemyBasicChasingIA()
 			_speed = enemySpeed;
 		}
 		path_start(myPath,_speed ,path_action_stop, false)
-		image_angle = direction;
+		_angle = direction;
 
 	}
 	else
@@ -28,7 +28,7 @@ function EnemyBasicChasingIA()
 		path_end()
 		var a = point_direction(x, y, o_playerShip.x+diffX,  o_playerShip.y+diffY);
 		direction += sign(dsin(a - direction)) * (precision * global.relativeSpeed);
-		image_angle = direction;
+		_angle = direction;
 		if (alarm[10] <= 0)
 		{
 			speed = enemySpeed * min(1, global.relativeSpeed+0.2);

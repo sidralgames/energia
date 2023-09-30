@@ -6,7 +6,7 @@ function SpawnEnemyFastBreach()
 	{
 		for (var i=0; i<1; i++)
 		{
-			peta =  choose(o_enchufePETA,o_enchufePETAAll,o_enchufePETAShield,
+			peta =  choose(o_enchufePETA,o_enchufePETAAll,o_enchufePETALaser,
 			o_enchufePETAAmmo,o_enchufePETAAmmo,o_enchufePETAAmmo,o_enchufePETAHP);
 			if (petaCreated = false)
 			{
@@ -42,8 +42,8 @@ function SpawnEnemyFastBreach()
 				{
 					enemies.isCounted = false;
 					enemies.state = ENEMYSTATE.CHASING;
-					enemies.image_angle = point_direction(x, y, o_playerShip.x, o_playerShip.y)+random_range(-30,30)
-					enemies.direction = enemies.image_angle;
+					enemies._angle = point_direction(x, y, o_playerShip.x, o_playerShip.y)+random_range(-30,30)
+					enemies.direction = enemies._angle;
 				}
 			}
 			

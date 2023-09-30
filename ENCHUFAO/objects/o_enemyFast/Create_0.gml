@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited();
-
+type = collisionType.custom;
 slowMoPickUps = choose(2,3);
 
 alarm[10] = 30;
@@ -20,7 +20,7 @@ speed=random(1)+2;
 
 state = ENEMYSTATE.CHASING;
 
-enemyXP = 20;
+enemyXP = global.enemyFastXP;
 
 direction_ =direction;
 

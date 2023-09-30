@@ -2,5 +2,5 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SpawnBlackHole()
 {
-	instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Enchufes", o_blackHole)
+	instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Meteors", o_blackHole)
 }

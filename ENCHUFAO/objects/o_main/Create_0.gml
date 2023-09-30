@@ -2,22 +2,23 @@
 // You can write your code in this editor
 full = false;
 
+//---------- ENEMIES XP LIST-----------------//
+global.enemyStandardXP = 20;
+global.enemyFastXP = 20;
+global.enemyFastMiniXP = 10;
+global.enemyDispXP = 35;
+global.enemyShieldXP = 50;
+global.enemyMothershipXP = 100;
+
+
+
 global.amplifyPowerLaser = 0;
 global.amplifyPowerAmmo = 0;
 
-global.strandedShipGreenHP = 0;
-global.strandedShipBlueHP = 0;
-global.strandedShipRedHP = 0;
-global.strandedShipPurpleHP = 0;
-global.strandedShipDarkHP = 0;
-global.strandedShipMP3HP = 0;
-
-
 global.song = choose(snd_songMaster)
-global.milisecs = 0;
+
 global.secs = 0;
-global.minut = 0;
-global.hour = 0;
+
 
 global.laserWidth = 0;
 global.laserDamage=0;
@@ -27,17 +28,15 @@ global.shieldsMax = 10;
 
 global.laserDrain = 0.005;
 global.energyLow = 80;
-global.bombIsClusterBomb = false;
+
 
 //RESETEAR BIEN LAS GLOBALES PORQUE AHORA ES GAME RESTART Y CHAO, POR EJEMPLO LA DE ABAJO
 
-global.secsInSlowMo = 0;
 global.enemiesKilled = 0;
 global.playerBumps = 0;
 global.shootsFired = 0;
 global.shieldsUsed = 0;
 global.hitsTaken = 0;
-global.secsConnected = 0;
 global.bombsFired = 0;
 global.petasUsed = 0;
 
@@ -58,6 +57,8 @@ enum ENEMYSTATE
 
 isPaused = false;
 
+
+//------------ STRANDED SHIPS --------------//
 global.strandedShipGreen = false;
 global.strandedShipBlue = false;
 global.strandedShipRed = false;
@@ -65,12 +66,16 @@ global.strandedShipDark = false;
 global.strandedShipPurple = false;
 global.strandedShipMP3 = false;
 
-global.numStrandedShipGreen = 0;
-global.numStrandedShipBlue = 0;
-global.numStrandedShipRed = 0;
-global.numStrandedShipPurple = 0;
-global.numStrandedShipDark = 0;
-global.numStrandedShipMP3 = 0;
+global.strandedShipGreenHP = 0;
+global.strandedShipBlueHP = 0;
+global.strandedShipRedHP = 0;
+global.strandedShipPurpleHP = 0;
+global.strandedShipDarkHP = 0;
+global.strandedShipMP3HP = 0;
+
+global.strandedHPUpgrade = 0;
+global.pluggingStrandedShipToEnchufe = false;
+
 
 global.audioEmitter = audio_emitter_create();
 
@@ -97,20 +102,11 @@ global.overchargeTime = 1;
 
 global.totalEnemiesOnScreen = 0;
 
-
-global.shipGreenBonusUpgraded = false;
-global.shipRedBonusUpgraded = false;
-global.shipBlueBonusUpgraded = false;
-global.shipPurpleBonusUpgraded = false;
-global.shipDarkBonusUpgraded = false;
-global.shipMP3BonusUpgraded = false;
-
-
-
 global.coverSpeed = 1.05;
 
 global.deletingData = false;
 
+//----------PARTICLES----------//
 instance_create(-100,-100,o_partBalaP)
 instance_create(-100,-100,o_partNaveP)
 instance_create(-100,-100,o_partNaveEnemy1)
@@ -121,6 +117,11 @@ instance_create(-100,-100,o_partMisil)
 instance_create(-100,-100,o_partOverCharged)
 instance_create(-100,-100,o_partBalaTorretaBig);
 instance_create(-100,-100,o_partRepairing);
+instance_create(-100,-100,o_partAmmo);
+instance_create(-100,-100,o_partLaser);
+instance_create(-100,-100,o_partEnergy);
+instance_create(-100,-100,o_partNaveEnemy_Mini);
+
 
 global.repairingSprite = s_repairingPart;
 global.enemies = 0;
@@ -135,16 +136,13 @@ yellow = make_color_rgb(254,174,52)
 
 global.cableColor = white;
 
-global.flashSuperShot = false;
-
 global.pluggingShip = false;
 global.unPluggingShip = false;
 
 global.plugging = false;
 global.unPlugging = false;
 
-global.pluggingStrandedShipToEnchufe = false;
-
+//----STARTING AMMO--//
 global.bombAmmoMax = 4
 global.bombAmmo = 2;
 
@@ -154,6 +152,8 @@ global.PETAAmmo = 1;
 PlayerStats_Green()
 global.Go = false;
 global.resetingShip = false;
+
+//----CHARGING ENCHUFES----//
 global.chargingAmmo = false;
 global.chargingHp = false;
 global.chargingLaser = false;
@@ -165,13 +165,35 @@ global.chargingBombs = false;
 global.relativeFastSpeed = 0.3;
 
 
-global.chargerShoots = false;
 
-global.numberOfUpgrades = 0;
-global.numberOfUpgradesPlayer = 0;
-global.numberOfShips = 0;
+
 global.posNumberOfShips = 0;
 
+
+//---------------------UPGRADES-----------------17----//
+global.numberOfUpgrades = 0;
+global.numberOfUpgradesPlayer = 0;
+
+global.PlayerUpgradesList = ds_map_create();
+
+global.upgradesList = ds_map_create();
+AddUpgradeAmmo();
+AddUpgradeEnergy();
+AddUpgradeHP();
+AddUpgradeFasterCharge();
+AddUpgradeSlowerDischarge();//5
+AddUpgradeLongerCable();
+AddUpgradeFireRate();
+AddUpgradeSuperShot();
+AddUpgradeLaserMax();
+AddUpgradeReReRe();//10
+AddUpgradeSpeedUp();
+AddUpgradeChargerShoots();
+AddUpgradeSlowMo();
+AddUpgradeOvercharge();
+AddUpgradeClusterBomb();//15
+AddUpgradeLaser();
+AddUpgradeBonus();
 
 global.ammoIsUpgraded = false;
 global.cableIsUpgraded = false;
@@ -191,31 +213,23 @@ global.clusterIsUpgraded = false;
 global.laserIsUpgraded = false;
 global.bonusIsUpgraded = false;
 
+global.bombIsClusterBomb = false;
+global.chargerShoots = false;
 
 
-global.upgradesList = ds_map_create();
+//-------BONUS UPGRADE FOR EACH SHIP--------//
+global.shipGreenBonusUpgraded = false;
+global.shipRedBonusUpgraded = false;
+global.shipBlueBonusUpgraded = false;
+global.shipPurpleBonusUpgraded = false;
+global.shipDarkBonusUpgraded = false;
+global.shipMP3BonusUpgraded = false;
 
-AddUpgradeAmmo();
-AddUpgradeEnergy();
-AddUpgradeHP();
-AddUpgradeFasterCharge();
-AddUpgradeSlowerDischarge();
-AddUpgradeLongerCable();
-AddUpgradeFireRate();
-AddUpgradeSuperShot();
-AddUpgradeLaserMax();
-AddUpgradeReReRe();
-AddUpgradeSpeedUp();
-AddUpgradeChargerShoots();
-AddUpgradeSlowMo();
-AddUpgradeOvercharge();
-AddUpgradeClusterBomb();
-AddUpgradeLaser();
-AddUpgradeBonus();
 
+//---------------- PLAYER SHIPS -----------------//
+global.numberOfShips = 0;
 
 global.shipList = ds_map_create();
-
 AddShipGreen();
 AddShipBlue();
 AddShipRed();
@@ -223,15 +237,10 @@ AddShipDark();
 AddShipPurple();
 AddShipMP3();
 
-
-global.PlayerUpgradesList = ds_map_create();
-
-global.numberOfInfos = 0;
-global.InfoList = ds_map_create();
-
+//---------------- ACHIEVEMENTS--------------------//
+global.numberOfAch = 0;
 
 global.achievementList = ds_map_create();
-global.numberOfAch = 0;
 AddAchNoBump();
 AddAch500Enemies();
 

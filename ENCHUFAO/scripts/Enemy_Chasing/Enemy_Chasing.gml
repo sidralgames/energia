@@ -2,79 +2,56 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Enemy_Chasing()
 {
-//--------BOUNCE WITH EACH OTHER---------//
-	if collision_circle(x,y,5,o_enemyP,false,true) && (!bounced)
+	if instance_exists(o_playerShip)
 	{
-		bounced = true;
-		alarm[8] = 30;
-	    direction = direction+choose(random_range(30,50),random_range(-30,-50))
-		image_angle = direction;
-	} 
-	
-	if (alarm[8] <= 0)
+	//--------BOUNCE WITH EACH OTHER---------//
+	if (enemyIsMini)
 	{
-		bounced = false;	
-	}
-	
-//-----------TAKE COVER-------------//
-	enemyShield = collision_circle(x,y,100,o_enemy_Waiting_Shield,false,true);
-	
-	if (enemyShield) && (enemyShield.existsShield) && (alarm[7] <= 0)
-	{
-		takeCover = true;
-		enemySpeed = global.coverSpeed * min(1, global.relativeSpeed+0.2);	
+		enemyToBounce = collision_circle(x,y,4,o_enemyP,false,true)
 	}
 	else
 	{
-		enemySpeed = enemySpeedInitial * min(1, global.relativeSpeed+0.2);
+		enemyToBounce = collision_circle(x,y,10,o_enemyP,false,true)
 	}
-
-	if (takeCover)
-	{
-		if (enemyShield)
+		if  enemyToBounce && (enemyToBounce.canBounce) && (!bounced)
 		{
-			if instance_exists(o_playerShip)
-			{
-				if (point_distance(x,y,o_playerShip.x, o_playerShip.y)) < (point_distance(enemyShield.x,enemyShield.y,o_playerShip.x, o_playerShip.y))
-				{
-					enemySpeed = (global.coverSpeed-0.5) * min(1, global.relativeSpeed+0.2);
-				}
-				else
-				{
-					enemySpeed = global.coverSpeed * min(1, global.relativeSpeed+0.2);
-				}
-			}
+			bounced = true;
+			alarm[8] = 10;
+		    direction = direction+choose(random_range(30,50),random_range(-30,-50))
+			_angle = direction;
+		} 
+	
+		if (alarm[8] <= 0)
+		{
+			bounced = false;	
 		}
-		if (alarm[6] <= 0)
+	
+	//-----------TAKE COVER-------------//
+	
+		EnemyTakeCover();
+	
+		//----------------CHASING MOVENEMT------------------//
+		if (enemyIsMini)
 		{
-			leaveCover = choose(0,0,1);
+			part_particles_create(global.naveEnemy_Mini_sys, x-lengthdir_x(2,direction), y-lengthdir_y(2,direction), global.naveEnemy_Mini , 1)
+		}
+		else
+		{
+			part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(8,direction), y-lengthdir_y(8,direction), global.naveEnemy_Waiting , 1)
+
+		}
 		
-		if (leaveCover == 1)
-			{
-				enemySpeed = enemySpeedInitial * min(1, global.relativeSpeed+0.2);
-				alarm[7] = random_range(300,600) //leave cover time
-				takeCover = false;
-			}
-			else
-			{
-				alarm[6] = random_range(200,300) //retry leave cover time
-			}
+		if (alarm[4] <= 0)
+		{
+	
+			diffX = choose(random_range(-50, 50));
+			diffY = choose(random_range(-50, 50));
+			alarm[4] = random_range(30, 60)
 		}
-	}
-	
-//----------------CHASING MOVENEMT------------------//
-	part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(8,direction), y-lengthdir_y(8,direction), global.naveEnemy_Waiting , 1)
 
-	if (alarm[4] <= 0)
-	{
-	
-		diffX = choose(random_range(-50, 50));
-		diffY = choose(random_range(-50, 50));
-		alarm[4] = random_range(30, 60)
-	}
-
-	if instance_exists(o_playerShip)
-	{
-		EnemyBasicChasingIA();
+		if instance_exists(o_playerShip)
+		{
+			EnemyBasicChasingIA();
+		}
 	}
 }

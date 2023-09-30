@@ -1,5 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
+isShield = false;
+_angle = 0;
+alarm[11] = random_range(30,60);
+canBounce = false;
+enemyIsMini = false;
 type = collisionType.custom;
 checkHP = false;
 diffX = choose(random_range(-50, 50));

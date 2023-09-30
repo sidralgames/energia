@@ -23,7 +23,10 @@
 				{
 					if (verletSystemExists(verletSystem1)) 
 					{
-						verletSystem1.simulate();
+						if instance_exists(collision)
+						{
+							verletSystem1.simulate();
+						}
 					}
 				}
 			}

@@ -73,7 +73,14 @@ function PlayerShipLaser(argument0)
 	if (enemy)
 	{
 		screenShake(4,10);
-		enemy._hp -=(0.25+global.laserDamage+(global.amplifyPowerLaser/2));
+		if (enemy.isShield == true) || (enemy.enemyIsMini == true)
+		{
+			enemy._hp -=(0.95+global.laserDamage+(global.amplifyPowerLaser/2));
+		}
+		else
+		{
+			enemy._hp -=(0.25+global.laserDamage+(global.amplifyPowerLaser/2));
+		}
 		enemy.flashAlpha = 1;
 		//explo = instance_create(enemy.x, enemy.y, o_explo2)
 		//explo.image_xscale = 0.25;
@@ -85,14 +92,7 @@ function PlayerShipLaser(argument0)
 	if (bomb1)
 	{
 		screenShake(4,10);
-		
-		bomb = instance_create(bomb1.x,bomb1.y,o_exploBomb);
-		if (bomb1.sprite_index = s_bombCluster)
-		{
-			bomb.sprite_index = s_explo2;	
-		}
-		bomb.image_xscale = 2.5;
-		bomb.image_yscale = 2.5;
+		bomb1.hitByLaser = true;
 		instance_destroy(bomb1);
 	}
 }

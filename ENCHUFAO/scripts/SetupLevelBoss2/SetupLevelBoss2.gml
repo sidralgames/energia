@@ -273,7 +273,7 @@ for ( var yy = 0; yy < height_; yy++)
 					
 					//	if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 150)
 					//	{
-					//		instance_create_layer(exM,eyM,"Enchufes",o_enchufePETAShield); 
+					//		instance_create_layer(exM,eyM,"Enchufes",o_enchufePETALaser); 
 					//		enchufeShield = true;
 					//	}
 					//}

@@ -1,12 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (place_meeting(x+_hpush*1.2,y,o_enchufeStandard_Father))
+if (place_meeting(x+_hpush*1.2,y,o_enchufe_Father))
 {
     _hpush = -_hpush*bnc;
 
 }
-if (place_meeting(x,y+_vpush*1.2,o_enchufeStandard_Father))
+if (place_meeting(x,y+_vpush*1.2,o_enchufe_Father))
 {
     _vpush = -_vpush*bnc;
 	
@@ -14,7 +14,7 @@ if (place_meeting(x,y+_vpush*1.2,o_enchufeStandard_Father))
 
 Move();
 
-_angle += _hpush*2;
+_angle += _hpush*2*global.relativeSpeed;
 
 if (charge >= 200)
 {

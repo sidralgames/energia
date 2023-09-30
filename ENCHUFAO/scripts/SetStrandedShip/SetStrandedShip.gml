@@ -20,8 +20,8 @@ function SetStrandedShip()
 		weight = 1;
 		minSpeed = 1.5;
 		maxSpeed = 2.5;
-		hpMax = 4;
-		hp = hpMax;
+		//hpMax = 4;
+		//hp = hpMax;
 	
 	}
 	else if (sprite = splayer_Blue)
@@ -31,8 +31,8 @@ function SetStrandedShip()
 		weight = 1;
 		minSpeed = 1.95;
 		maxSpeed = 3.25;
-		hpMax = 3;
-		hp = hpMax;
+		//hpMax = 3;
+		//hp = hpMax;
 	}
 	else if (sprite = splayer_Dark)
 	{
@@ -41,8 +41,8 @@ function SetStrandedShip()
 		weight = 1;
 		minSpeed = 1.75;
 		maxSpeed = 2.75;
-		hpMax = 3;
-		hp = hpMax;
+		//hpMax = 3;
+		//hp = hpMax;
 	}
 	else if (sprite = splayer_Red)
 	{
@@ -51,8 +51,8 @@ function SetStrandedShip()
 		weight = 0.5;
 		minSpeed = 1.5;
 		maxSpeed = 2;
-		hpMax = 5;
-		hp = hpMax;
+		//hpMax = 5;
+		//hp = hpMax;
 	}
 	else if (sprite = splayer_Purple)
 	{
@@ -61,8 +61,8 @@ function SetStrandedShip()
 		weight = 1;
 		minSpeed = 1.75;
 		maxSpeed = 2.75;
-		hpMax = 4;
-		hp = hpMax;
+		//hpMax = 4;
+		//hp = hpMax;
 	}
 	else if (sprite = splayer_mp3)
 	{
@@ -71,8 +71,8 @@ function SetStrandedShip()
 		weight = 1;
 		minSpeed = 1.75;
 		maxSpeed = 2.75;
-		hpMax = 4;
-		hp = hpMax;
+		//hpMax = 4;
+		//hp = hpMax;
 	}
 
 	sprite_index = sprite;

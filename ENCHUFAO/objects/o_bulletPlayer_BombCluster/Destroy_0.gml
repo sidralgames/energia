@@ -1,10 +1,21 @@
 /// @description Insert description here
 // You can write your code in this editor
-ebomb = instance_create(x,y,o_exploBomb);
-ebomb.image_xscale = 1.3;
-ebomb.image_yscale = 1.3;
-ebomb.sprite_index = s_explo2;
-instance_create(x,y,o_shockwaveTiles)
+if (hitByLaser = false)
+{
+	ebomb = instance_create(x,y,o_exploBomb);
+	ebomb.image_xscale = 1.3;
+	ebomb.image_yscale = 1.3;
+	ebomb.sprite_index = s_explo2;
+	instance_create(x,y,o_shockwaveTiles)
+}
+else
+{
+	ebomb = instance_create(x,y,o_exploBomb);
+	ebomb.image_xscale = 2;
+	ebomb.image_yscale = 2;
+	ebomb.sprite_index = s_explo2;
+	instance_create(x,y,o_shockwaveTiles)
+}
 
 offsetInitial = irandom(360);
 velo = random_range(2.5, 3)

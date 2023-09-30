@@ -13,6 +13,6 @@ bnc = 0.5;
 hsp_f = 0;
 vsp_f = 0;
 _angle = image_angle;
-
+hitByLaser = false;
 alarm[0] = 10;
 

@@ -7,11 +7,11 @@ part_system_depth(global.repairingPart_sys,-9);
 global.repairingPart = part_type_create();
 part_type_scale(global.repairingPart,1,1);
 part_type_orientation(global.repairingPart,0,0,0,0,0)
-part_type_size(global.repairingPart, 0.5,1,0.005,0);
+part_type_size(global.repairingPart, 0.25,0.85,-0.005,0);
 part_type_alpha2(global.repairingPart, 1,0.6);
 part_type_speed(global.repairingPart,0.5,1,0,0);
 part_type_direction(global.repairingPart,90,90,0,1);
-part_type_life(global.repairingPart, 20,30);
+part_type_life(global.repairingPart, 15,25);
 part_type_sprite(global.repairingPart,s_repairingPart,true,1,false)
 part_type_blend(global.repairingPart,true)
 
