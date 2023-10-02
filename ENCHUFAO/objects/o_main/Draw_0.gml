@@ -11,7 +11,7 @@ rojo = make_color_rgb(228,59, 68)
 
 //draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+80,"SHIELDS: " + string(round(global.laser)) + " / " + string(round(global.laserMax)))
 
-//draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+100,"milisecsSlow: " + string(global.slowmilisecs))
+//draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+150,"cganginttilkes: " + string(global.changingTiles))
 
 //draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+120,"milisecsConnec: " + string(global.connectedmilisecs))
 //if (global.spriteShip = splayer)
@@ -208,6 +208,8 @@ if (!isPaused)
 		draw_sprite_ext(s_bossHealthBar_In, 0,__view_get( e__VW.XView, 0 )+233,__view_get( e__VW.YView, 0 )+35, global.BossBreach_HP/global.BossBreach_HPMax, 1,image_angle, image_blend, image_alpha)
 		draw_sprite_ext(s_bossHealthBar_OutFront, 0,__view_get( e__VW.XView, 0 )+230,__view_get( e__VW.YView, 0 )+35, 1,1,image_angle, image_blend, image_alpha)
 	}
+	
+	BossGarbanzoUI();
 
 
 	if (alarm[2]>0)

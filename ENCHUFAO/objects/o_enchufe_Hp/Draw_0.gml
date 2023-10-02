@@ -8,7 +8,8 @@
 
 // Inherit the parent event
 event_inherited();
-
+if instance_exists(o_playerShip)
+{
 if (global.chargingHp) && (!global.pluggedInHp) && (charging)
 	&& (o_playerShip.pluggedTimer < 200)
 {
@@ -24,5 +25,5 @@ if (charge >= 200)
 {
 	global.pluggedInHp = true;
 }
-
+}
 

@@ -210,7 +210,7 @@ function SetupLevelBasic()
 					
 						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 250)
 						{
-							instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Shield); 
+							instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Laser); 
 							enchufeShield = true;
 						}
 					}

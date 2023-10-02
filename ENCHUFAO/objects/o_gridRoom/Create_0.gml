@@ -8,7 +8,7 @@ width_ = room_width div CELL_WIDTH;
 height_ = room_height div CELL_HEIGHT;
 
 
-if (room = Sala_0)
+if (room = Sala_0) ||  (room = Sala_SecondBoss)
 {
 	for ( var yyW = 0; yyW < height_; yyW++) 
 	{

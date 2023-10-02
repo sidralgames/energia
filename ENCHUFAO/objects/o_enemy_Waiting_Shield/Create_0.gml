@@ -2,6 +2,7 @@
 // You can write your code in this editor
 type = collisionType.custom;
 isShield = false;
+isImmortal = false;
 enemyIsMini = false;
 canBounce = false;
 checkHP = false;

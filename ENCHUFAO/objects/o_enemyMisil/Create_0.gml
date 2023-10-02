@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 isShield = false;
+isImmortal = false
 enemyIsMini = false;
 canBounce = false;
 type = collisionType.custom;

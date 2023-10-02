@@ -9,6 +9,7 @@ function SetupLevelBoss2()
 	enchufeAmmo = false;
 	enchufeFinal = false;
 	hasBoss = false;
+	hasBossPeque = false
 
 	__background_set( e__BG.X, 0, irandom(2000) );
 	__background_set( e__BG.Y, 0, irandom(1000) );
@@ -23,8 +24,10 @@ function SetupLevelBoss2()
 
 	//Set de grid height and width
 	
-	room_width = (CELL_WIDTH/32) *960; //
-	room_height = (CELL_HEIGHT/32) *736;
+	room_width = (CELL_WIDTH/32) *864; //
+	room_height = (CELL_HEIGHT/32) *1296;
+	
+
 	
 	var _wall_map_id = layer_tilemap_get_id("Tiles");
 
@@ -50,7 +53,7 @@ function SetupLevelBoss2()
 	var _controller_y = height_ div 2
 	var _controller_direction = irandom(3);
 
-	var _steps = 2500;
+	var _steps = 3000;
 
 	var _direction_change_odds = 1;
 
@@ -233,21 +236,42 @@ for ( var yy = 0; yy < height_; yy++)
 		{
 		    if (global.wallgrid_[# xx, yy] == FLOOR) 
 			{
-			    var oddsE0 = 300;
+			    var oddsE0 = 100;
 				var oddsEHP = 300;
-				var oddsEA = 300;
+				var oddsEA = 200;
 				var oddsESH = 300;
 				var oddsEF = 300;
-				var oddsBoss = 300;
+				var oddsBoss = 10;
+				var oddsBossPeq = 5;
 			
 			    var exM = xx * CELL_WIDTH+CELL_WIDTH/2;
 			    var eyM = yy * CELL_HEIGHT+CELL_HEIGHT/2;
 				
-				if (irandom(oddsBoss) == oddsBoss) && (hasBoss = false)
+				if (irandom(oddsBoss) == oddsBoss) && (hasBoss = false) &&
+				(global.wallgrid_[# xx+1, yy] == FLOOR) && (global.wallgrid_[# xx-1, yy] == FLOOR) &&
+				(global.wallgrid_[# xx+2, yy] == FLOOR) && (global.wallgrid_[# xx-2, yy] == FLOOR) &&
+				(global.wallgrid_[# xx, yy+1] == FLOOR) && (global.wallgrid_[# xx, yy-1] == FLOOR) &&
+				(global.wallgrid_[# xx, yy+2] == FLOOR) && (global.wallgrid_[# xx, yy-2] == FLOOR)
 				{
-					instance_create_layer(exM,eyM,"Enemies",o_BossLilShip); 
+					instance_create_layer(exM,eyM,"Banners",o_BossMecha); 
 					hasBoss = true;
 				}
+				
+				if instance_exists(o_BossMecha)
+				{
+					
+					if (point_distance(exM, eyM, o_BossMecha.x, o_BossMecha.y) > 300)
+					&& (hasBossPeque = false)
+					&& (point_distance(o_BossMecha.x, eyM, o_BossMecha.x, o_BossMecha.y) > 650)
+					&& (point_distance(exM, o_BossMecha.y, o_BossMecha.x, o_BossMecha.y) < 250)
+					{
+						instance_create_layer(exM,eyM,"Enemies",o_enemyMini_BossMecha); 
+						o_playerShip.x = exM-10;
+						o_playerShip.y = eyM+10;
+						hasBossPeque = true;
+					}
+				}
+			
 				
 				if (irandom(oddsE0) == oddsE0) && (enchufe0 = false)
 				{
@@ -256,35 +280,35 @@ for ( var yy = 0; yy < height_; yy++)
 				}
 				if instance_exists(o_enchufe_Father)
 				{
-					//if (irandom(oddsEHP) == oddsEHP) && (enchufeHP = false)
-					//{
-					//	nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
+					if (irandom(oddsEHP) == oddsEHP) && (enchufeHP = false)
+					{
+						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 
-					//	if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 150)
-					//	{
-					//		instance_create_layer(exM,eyM,"Enchufes",o_enchufePETAHP); 
-					//		enchufeHP = true;
-					//	}
-					//}
+						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 100)
+						{
+							instance_create_layer(exM,eyM,"Enchufes",o_enchufePETAHP); 
+							enchufeHP = true;
+						}
+					}
 			
-					//if (irandom(oddsESH) == oddsESH) && (enchufeShield = false)
-					//{
-					//	nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
+					if (irandom(oddsESH) == oddsESH) && (enchufeShield = false)
+					{
+						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 					
-					//	if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 150)
-					//	{
-					//		instance_create_layer(exM,eyM,"Enchufes",o_enchufePETALaser); 
-					//		enchufeShield = true;
-					//	}
-					//}
+						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 100)
+						{
+							instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Laser); 
+							enchufeShield = true;
+						}
+					}
 			
 					if (irandom(oddsEA) == oddsEA) && (enchufeAmmo = false)
 					{
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 					
-						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 150)
+						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 10)
 						{
-							instance_create_layer(exM,eyM,"Enchufes",o_enchufePETAAmmo); 
+							instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Ammo); 
 							enchufeAmmo = true;
 						}
 					}
@@ -308,9 +332,11 @@ for ( var yy = 0; yy < height_; yy++)
 	    }
 	}
 
-if (!enchufe0) || (!enchufeAmmo) || (hasBoss = false) //|| (!enchufeShield) || (!enchufeHP)
+if (!enchufeAmmo) || (hasBoss = false)  || (hasBossPeque = false) || (!enchufeShield)
+	//|| (!enchufeHP) || (!enchufe0)
 	{
 		room_restart();
+
 	}
 
 

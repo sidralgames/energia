@@ -51,7 +51,14 @@ function Enemy_Chasing()
 
 		if instance_exists(o_playerShip)
 		{
-			EnemyBasicChasingIA();
+			if (room = Sala_SecondBoss) && (instance_exists(o_BossMecha)) && (global.BossGarbanzo_Awaken = false)
+			{
+				EnemyBasicChasingIA_Boss();
+			}
+			else
+			{
+				EnemyBasicChasingIA();
+			}
 		}
 	}
 }

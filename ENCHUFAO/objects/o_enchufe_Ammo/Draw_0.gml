@@ -8,7 +8,8 @@
 
 // Inherit the parent event
 event_inherited();
-
+if instance_exists(o_playerShip)
+{
 if (global.chargingAmmo) && (!global.pluggedInAmmo) && (charging)
 	&& (o_playerShip.pluggedTimer < 200)
 {
@@ -23,6 +24,7 @@ if (global.chargingAmmo) && (!global.pluggedInAmmo) && (charging)
 if (charge >= 200)
 {
 	global.pluggedInAmmo = true;
+}
 }
 
 

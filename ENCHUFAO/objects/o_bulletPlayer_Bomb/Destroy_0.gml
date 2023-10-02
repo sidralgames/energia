@@ -24,4 +24,3 @@ else
 	instance_create(x,y,o_shockwaveTiles)
 }
 
-instance_create(x,y,o_shockwaveTiles)

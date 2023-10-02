@@ -11,7 +11,10 @@
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "o_BossFather",
+    "path": "objects/o_BossFather/o_BossFather.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,

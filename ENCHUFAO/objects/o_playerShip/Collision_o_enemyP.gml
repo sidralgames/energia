@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (global.shields<1)
+if (global.shields<1) && (other.isImmortal = false)
 {
 	if (tocado = false)
 	{
@@ -12,6 +12,7 @@ if (global.shields<1)
 		global.hp -=1;
 		screenShake(4,30)
 		other._hp = 0;
+		
 		global.hitsTaken+=1;
 	}
 }

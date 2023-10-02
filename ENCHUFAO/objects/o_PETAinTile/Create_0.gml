@@ -18,7 +18,7 @@ if (sprite_index = s_petaInTileHP)
 }
 if (sprite_index = s_petaInTileLaser)
 {
-	peta = o_enchufePETALaser;	
+	peta = choose(o_enchufePETALaser, o_enchufeBombs);	
 }
 if collision_circle(x,y,100, o_PETAinTile, false, true)
 {

@@ -8,7 +8,7 @@ if tile_meeting(x,y,"Tiles")
 	instance_destroy()	
 }
 
-part_particles_create(global.naveP_sys, x, y, global.naveP , 5)
+part_particles_create(global.naveP_sys, x, y, global.naveP , 1)
 image_angle = direction-90;
 
 hp--;

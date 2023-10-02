@@ -10,7 +10,7 @@ global.enemyDispXP = 35;
 global.enemyShieldXP = 50;
 global.enemyMothershipXP = 100;
 
-
+global.changingTiles = false
 
 global.amplifyPowerLaser = 0;
 global.amplifyPowerAmmo = 0;
@@ -77,6 +77,9 @@ global.strandedHPUpgrade = 0;
 global.pluggingStrandedShipToEnchufe = false;
 
 
+global.BossGarbanzo_Awaken = false;
+
+
 global.audioEmitter = audio_emitter_create();
 
 global.relativeSpeed = 1.0;
@@ -120,6 +123,7 @@ instance_create(-100,-100,o_partRepairing);
 instance_create(-100,-100,o_partAmmo);
 instance_create(-100,-100,o_partLaser);
 instance_create(-100,-100,o_partEnergy);
+instance_create(-100,-100,o_partBalaBossGarbanzo);
 instance_create(-100,-100,o_partNaveEnemy_Mini);
 
 

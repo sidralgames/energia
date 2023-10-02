@@ -8,6 +8,6 @@ isShield = true;
 canBounce = false;
 enemyIsMini = false;
 isMotherShip = false;
-
+isImmortal = false;
 
 

@@ -1,5 +1,9 @@
 /// @description Insert description here
+
 // You can write your code in this editor
+
+event_inherited();
+
 _hp = global.BossBreach_HP;
 
 imageSpeed = 0.5;

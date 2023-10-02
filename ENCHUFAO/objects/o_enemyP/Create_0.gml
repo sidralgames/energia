@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 isShield = false;
+isImmortal = false;
 _angle = 0;
 alarm[11] = random_range(30,60);
 canBounce = false;

@@ -25,7 +25,7 @@ function PlayerShipLaser(argument0)
 	     var ly = y + lengthdir_y(i, argument0);
 		 
 	     if tile_meeting(lx,ly,"Tiles") || place_meeting(lx, ly, o_enemyP) 
-		 || place_meeting(lx, ly, o_bulletPlayer_Bomb) 
+		 || place_meeting(lx, ly, o_bulletPlayer_Bomb) || place_meeting(lx, ly, o_BossFather) 
 		 {
 			 maxLenght_=i
 			 maxLenght = maxLenght_;
@@ -68,6 +68,19 @@ function PlayerShipLaser(argument0)
 	
 	grappleX = lx;
 	grappleY = ly;
+	
+	
+	boss = collision_line(x,y,x+lengthdir_x(maxLenght_+20, argument0+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,argument0+random_range(2,-2)), o_BossFather,false, true)
+	if (boss)
+	{
+		screenShake(4,10);
+		if (boss.isImmortal == false) 
+		{
+			boss.hp -=(0.95+global.laserDamage+(global.amplifyPowerLaser/2));
+		}
+	}
+	
+	
 	
 	enemy = collision_line(x,y,x+lengthdir_x(maxLenght_+20, argument0+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,argument0+random_range(2,-2)), o_enemyP,false, true)
 	if (enemy)

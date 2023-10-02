@@ -12,7 +12,7 @@ if (alarm[0] <= 0)
 	instance_destroy();
 }
 dir +=33
-global.changingTiles = true;
+
 
 
 var _tilemap_id = layer_tilemap_get_id("Tiles");
@@ -32,6 +32,7 @@ _y3 = y+lengthdir_y(60, dir)
 if (global.wallgrid_[# _x/32, _y/32] != FLOOR) && (_x > 50) && (_x < room_width-50)
 	&& (_y > 50) && (_y < room_height-50)
 {
+	global.changingTiles = true;
 	tilemap_set_at_pixel(_tilemap_id, 0, _x, _y);
 	velo = random_range(1,1.5);
 	global.wallgrid_[# _x/32, _y/32] = FLOOR
@@ -48,6 +49,7 @@ if (global.wallgrid_[# _x/32, _y/32] != FLOOR) && (_x > 50) && (_x < room_width-
 if (global.wallgrid_[# _x2/32, _y2/32] != FLOOR)&& (_x2 > 50) && (_x2 < room_width-50)
 && (_y2 > 50) && (_y2 < room_height-50)
 {
+	global.changingTiles = true;
 	tilemap_set_at_pixel(_tilemap_id, 0, _x2, _y2);
 	velo = random_range(1,1.5);
 	global.wallgrid_[# _x2/32, _y2/32] = FLOOR
@@ -65,6 +67,7 @@ if (global.wallgrid_[# _x2/32, _y2/32] != FLOOR)&& (_x2 > 50) && (_x2 < room_wid
 if (global.wallgrid_[# _x3/32, _y3/32] != FLOOR) && (_x3 > 50) && (_x3 < room_width-50)
 && (_y3 > 50) && (_y3 < room_height-50)
 {
+	global.changingTiles = true;
 	tilemap_set_at_pixel(_tilemap_id, 0, _x3, _y3);
 	velo = random_range(1,1.5);
 	global.wallgrid_[# _x3/32, _y3/32] = FLOOR

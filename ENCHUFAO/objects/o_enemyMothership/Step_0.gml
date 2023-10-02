@@ -28,7 +28,7 @@ if instance_exists(o_playerShip)
 		if (contMinis <= 0)
 		{
 			contMinis = random_range(200, 400)
-			for (var i=0; i < irandom_range(3,5); i++)
+			for (var i=0; i < irandom_range(4,6); i++)
 			{
 				enemyMini = instance_create_layer(x-lengthdir_x(8,direction), y-lengthdir_y(8,direction), "Enemies", o_enemyMini)
 				if instance_exists(enemyMini)
