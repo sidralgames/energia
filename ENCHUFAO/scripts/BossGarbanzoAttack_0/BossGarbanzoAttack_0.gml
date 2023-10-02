@@ -9,9 +9,11 @@ function BossGarbanzoAttack_0()
 		{
 			
 			image_index = 1;
-			speed = lerp(speed, 0, 0.09)
+			bossSpeed = lerp(bossSpeed, 0, 0.09);
 			
-			if (speed <=0.05)
+			speed = bossSpeed*global.relativeSpeed;
+			
+			if (speed  <=( 0.05*global.relativeSpeed ))
 			{
 				stopping = true;
 				
@@ -28,17 +30,19 @@ function BossGarbanzoAttack_0()
 				direction = a;
 				if hp > 200
 				{
-					speed = 4;
+					bossSpeed = 4;
 				}else
 				{
-					speed = 5;
+					bossSpeed = 5;
 				}
 				attackingFast = true;
 			}
 		
-			speed = lerp(speed, 0, 0.005);
-		
-			if (attackingFast) && (speed > 3)
+			bossSpeed = lerp(bossSpeed, 0, 0.005);
+			
+			speed = bossSpeed*global.relativeSpeed;
+			
+			if (attackingFast) && (speed > 3*global.relativeSpeed)
 			{
 				if (alarm[1] <= 0)
 				{

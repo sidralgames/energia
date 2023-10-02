@@ -2,8 +2,8 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function BossGarbanzoState_Idle()
 {
-	bossSpeed = 0.75;
-	speed = lerp(speed,bossSpeed, 0.005);
+	bossSpeed = lerp(bossSpeed,0.75, 0.005);
+	speed = bossSpeed*global.relativeSpeed;
 	
 	if (alarm[4] <= 0)
 	{
@@ -27,13 +27,13 @@ function BossGarbanzoState_Idle()
 	if (contIdl <= 0)
 	{
 		
-		attack = choose(0,0,0,1);
+		attack = choose(0,0,0,0,1,2,3,4,5,6);
 		if (attack = 0)
 		{
 			contStop = 60;
 			contAttack = random_range(200,300)
 		}
-		else if (attack = 1)
+		else 
 		{
 			contAttack = random_range(350,450)
 			creatingEnemies = false;

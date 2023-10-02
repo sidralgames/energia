@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited();
+punch = false;
 isImmortal = true;
 creatingEnemies = false;
 offset = 0;
@@ -22,11 +23,11 @@ t = 6;
 increment = choose(1,2,3); //degrees -- freq = 1 oscillation per second (1Hz)
 amplitude = choose(1,2);
 hp = 0;
-dir1 = choose(90,270)
+dir1 = choose(90,270);
+makeRoom = false;
+laserCreated = false
 
 //clone the x- and y-positions
-xx = x;
-yy = y;
 enum BOSS2STATE
 {
 	START,
@@ -35,11 +36,19 @@ enum BOSS2STATE
 	
 }
 
+blueWidht = 20;
+whiteWidht = 30;
+whiteW = 10;
+blueW = 30;
+		
+contExploTile = 0;
 state = BOSS2STATE.START
 sprite_index = s_bossMecha
 image_speed = 0;
 image_index = 0;
 inside = instance_create_layer(x,y,"Enemies", o_BossMecha_Inside)
-
-
+maxLenght = 800;
+thisLenght = 800;
+drawflash=true;
+alarm[4] = 200;
 

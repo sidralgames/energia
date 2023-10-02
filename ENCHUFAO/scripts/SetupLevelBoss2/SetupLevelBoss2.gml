@@ -241,8 +241,8 @@ for ( var yy = 0; yy < height_; yy++)
 				var oddsEA = 200;
 				var oddsESH = 300;
 				var oddsEF = 300;
-				var oddsBoss = 10;
-				var oddsBossPeq = 5;
+				var oddsBoss = 30;
+				var oddsBossPeq = 120;
 			
 			    var exM = xx * CELL_WIDTH+CELL_WIDTH/2;
 			    var eyM = yy * CELL_HEIGHT+CELL_HEIGHT/2;

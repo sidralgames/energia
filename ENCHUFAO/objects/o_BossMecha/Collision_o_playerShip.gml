@@ -12,8 +12,11 @@ with (o_playerShip)
 		global.hp -=1;
 		screenShake(4,30)
 		global.hitsTaken+=1;
-		_hpush = -_hpush*6;
-		_vpush = -_vpush*6;
+		if (o_BossMecha.attack != 0)
+		{
+			_hpush = -_hpush*6;
+			_vpush = -_vpush*6;
+		}
 	}
 }
 
