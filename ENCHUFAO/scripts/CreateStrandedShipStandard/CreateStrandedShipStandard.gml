@@ -4,7 +4,7 @@ function CreateStrandedShipStandard()
 {
 if (global.strandedShipGreen)
 	{
-		stranded = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Player", o_strandedShip);
+		stranded = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Shield", o_strandedShip);
 		stranded.createdStranded = false;
 		stranded.y+=2;
 		stranded.chargedInEnergy = true;
@@ -17,7 +17,7 @@ if (global.strandedShipGreen)
 	}
 	if (global.strandedShipBlue)
 	{
-		stranded = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Player", o_strandedShip);
+		stranded = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Shield", o_strandedShip);
 		stranded.createdStranded = false;
 		stranded.y-=2;
 		stranded.chargedInEnergy = true;
@@ -29,7 +29,7 @@ if (global.strandedShipGreen)
 	}
 	if (global.strandedShipPurple)
 	{
-		stranded = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Player", o_strandedShip);
+		stranded = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Shield", o_strandedShip);
 		stranded.createdStranded = false;
 		stranded.y+=6;
 		stranded.chargedInEnergy = true;
@@ -41,7 +41,7 @@ if (global.strandedShipGreen)
 	}
 	if (global.strandedShipDark)
 	{
-		stranded = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Player", o_strandedShip);
+		stranded = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Shield", o_strandedShip);
 		stranded.createdStranded = false;
 		stranded.y-=6;
 		stranded.chargedInEnergy = true;
@@ -53,7 +53,7 @@ if (global.strandedShipGreen)
 	}
 	if (global.strandedShipRed)
 	{
-		stranded = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Player", o_strandedShip);
+		stranded = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Shield", o_strandedShip);
 		stranded.createdStranded = false;
 		stranded.chargedInEnergy = true;
 		stranded.x+=6;
@@ -66,7 +66,7 @@ if (global.strandedShipGreen)
 	}
 	if (global.strandedShipMP3)
 	{
-		stranded = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Player", o_strandedShip);
+		stranded = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Shield", o_strandedShip);
 		stranded.createdStranded = false;
 		stranded.chargedInEnergy = true;
 		stranded.x+=8;

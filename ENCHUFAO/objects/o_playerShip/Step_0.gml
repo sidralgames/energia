@@ -10,34 +10,7 @@ if (key_buttonUP)
 	colorPlayer_fx = layer_get_fx("Player");
 	colorPlayer_fx_params = fx_get_parameters(colorPlayer_fx);
 
-if (global.invisibleCloak)
-{
-	
 
-	
-	fx_Player = lerp(fx_Player,0.9,0.03); 
-	colorPlayer_fx_params.g_Intensity = fx_Player;	
-	fx_set_parameters(colorPlayer_fx, colorPlayer_fx_params);
-	
-	global.cloackReal = 2;
-	_alpha = lerp(_alpha, 0.45, 0.03);
-}
-else
-{
-	
-	fx_Player = lerp(fx_Player,0,0.02); 
-	colorPlayer_fx_params.g_Intensity = fx_Player;	
-	fx_set_parameters(colorPlayer_fx, colorPlayer_fx_params);
-	
-	global.cloackReal = 1;
-	_alpha = lerp(_alpha, 1, 0.09);
-	if (_alpha > 0.9)
-	{
-		_alpha = 1;
-	}
-	part_particles_create(global.naveP_sys, x, y, global.naveP , 5);
-
-}
 
 if (partChanged = true) && (!plugged)
 {
@@ -127,6 +100,38 @@ else
 
 PlayerState_Free();
 MovePlayer();
+
+if (global.invisibleCloak)
+{
+	fx_Player = lerp(fx_Player,0.9,0.03); 
+	colorPlayer_fx_params.g_Intensity = fx_Player;	
+	fx_set_parameters(colorPlayer_fx, colorPlayer_fx_params);
+	
+	global.cloackReal = 2;
+	_alpha = lerp(_alpha, 0.45, 0.03);
+	
+	if (abs(_hpush) > 0.1 || abs(_vpush) > 0.1) && (dirH != 0 || dirV !=0)
+	{
+		part_particles_create(global.naveP_cloak_sys, x,y, global.naveP_cloak, 5);
+	}
+}
+else
+{
+	
+	fx_Player = lerp(fx_Player,0,0.02); 
+	colorPlayer_fx_params.g_Intensity = fx_Player;	
+	fx_set_parameters(colorPlayer_fx, colorPlayer_fx_params);
+	
+	global.cloackReal = 1;
+	_alpha = lerp(_alpha, 1, 0.09);
+	if (_alpha > 0.9)
+	{
+		_alpha = 1;
+	}
+	part_particles_create(global.naveP_sys, x, y, global.naveP , 5);
+
+}
+
 
 if (plugged)
 {

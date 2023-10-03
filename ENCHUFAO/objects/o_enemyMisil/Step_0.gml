@@ -53,7 +53,7 @@ if (point_distance(x,y,o_playerShip.x, o_playerShip.y) <= 300)
 	
 	var a = point_direction(xprevious, yprevious, o_playerShip.x, o_playerShip.y);
 	direction += sign(dsin(a - direction)) * precision*global.relativeSpeed;
-	image_angle += _speed*20*global.relativeSpeed;
+	_angle += _speed*20*global.relativeSpeed;
 
 
 }

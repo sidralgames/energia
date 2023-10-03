@@ -69,12 +69,12 @@ global.strandedShipDark = false;
 global.strandedShipPurple = false;
 global.strandedShipMP3 = false;
 
-global.strandedShipGreenHP = 0;
-global.strandedShipBlueHP = 0;
-global.strandedShipRedHP = 0;
-global.strandedShipPurpleHP = 0;
-global.strandedShipDarkHP = 0;
-global.strandedShipMP3HP = 0;
+global.strandedShipGreenHP = 4;
+global.strandedShipBlueHP = 3;
+global.strandedShipRedHP = 5;
+global.strandedShipPurpleHP = 4;
+global.strandedShipDarkHP = 3;
+global.strandedShipMP3HP = 3;
 
 global.strandedHPUpgrade = 0;
 global.pluggingStrandedShipToEnchufe = false;
@@ -128,6 +128,7 @@ instance_create(-100,-100,o_partLaser);
 instance_create(-100,-100,o_partEnergy);
 instance_create(-100,-100,o_partBalaBossGarbanzo);
 instance_create(-100,-100,o_partNaveEnemy_Mini);
+instance_create(-100,-100,o_partNaveP_cloak)
 
 
 global.repairingSprite = s_repairingPart;

@@ -113,7 +113,7 @@ if (hp <= 0) && (goesToNextRoom = true)
 	state = STRANDEDSHIPSTATE.STRANDED;
 	StrandedShip_False();
 	
-	instance_create_layer(x,y,"Player", o_exploBomb);
+	instance_create_layer(x,y,"Shield", o_exploBomb);
 	goesToNextRoom = false;
 	chargeAmmo = 0;
 	chargeEnergy = 0;

@@ -100,7 +100,7 @@ shieldCreated = false
 
 createdFromUnplugged = false;
 instance_create_layer(x,y,"Cable", o_cable)
-instance_create_layer(x,y,"Player", o_crosshair)
+instance_create_layer(x,y,"Shield", o_crosshair)
 _angle = point_direction(x,y,o_crosshair.x, o_crosshair.y)
 
 

@@ -467,6 +467,7 @@
     {"id":{"name":"Sprite45","path":"sprites/Sprite45/Sprite45.yy",},"order":44,},
     {"id":{"name":"spr_lut_light_intensity_linear","path":"sprites/spr_lut_light_intensity_linear/spr_lut_light_intensity_linear.yy",},"order":2,},
     {"id":{"name":"BossGarbanzoChooseAttack","path":"scripts/BossGarbanzoChooseAttack/BossGarbanzoChooseAttack.yy",},"order":65,},
+    {"id":{"name":"o_partNaveP_cloak","path":"objects/o_partNaveP_cloak/o_partNaveP_cloak.yy",},"order":15,},
     {"id":{"name":"s_MP3","path":"sprites/s_MP3/s_MP3.yy",},"order":149,},
     {"id":{"name":"o_partBalaBossGarbanzo","path":"objects/o_partBalaBossGarbanzo/o_partBalaBossGarbanzo.yy",},"order":14,},
     {"id":{"name":"s_ammoBar_in","path":"sprites/s_ammoBar_in/s_ammoBar_in.yy",},"order":12,},

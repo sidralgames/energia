@@ -44,7 +44,7 @@ function BossGarbanzoChooseAttack()
 		if (attack = 0)
 		{
 			contStop = 60;
-			contAttack = random_range(200,300)
+			contAttack = random_range(200,250)
 		}
 		else if (attack = 7)
 		{

@@ -12,7 +12,7 @@ if (cont = true)
 	
 	if (global.level = 7)
 	{
-		room_goto(Sala_FirstBoss)
+		room_goto(Sala_SecondBoss)
 	}
 	else
 	{

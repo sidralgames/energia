@@ -28,7 +28,7 @@ function DrawLevelBasic()
 				
 				if (irandom(oddsStrandedShip) == oddsStrandedShip) && (StrandedShipsInLevel < StrandedShipsInLevelMax) 
 				{
-					var ship = instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Player",o_strandedShip); 
+					var ship = instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Shield",o_strandedShip); 
 					ship.createdStranded = true;
 					StrandedShipsInLevel +=1;
 					strandedShipOK = true;

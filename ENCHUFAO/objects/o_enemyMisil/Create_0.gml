@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+_angle=0;
 isShield = false;
 isImmortal = false
 enemyIsMini = false;
