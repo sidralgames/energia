@@ -24,12 +24,12 @@ function SetupLevelBoss2()
 
 	//Set de grid height and width
 	
-	room_width = (CELL_WIDTH/32) *864; //
-	room_height = (CELL_HEIGHT/32) *1296;
+	room_width = (CELL_WIDTH/32) *800; //
+	room_height = (CELL_HEIGHT/32) *1116;
 	
 
 	
-	var _wall_map_id = layer_tilemap_get_id("Tiles");
+	 _wall_map_id = layer_tilemap_get_id("Tiles");
 
 	//set up grid
 	width_ = room_width div CELL_WIDTH;
@@ -53,7 +53,7 @@ function SetupLevelBoss2()
 	var _controller_y = height_ div 2
 	var _controller_direction = irandom(3);
 
-	var _steps = 3000;
+	var _steps = 2000;
 
 	var _direction_change_odds = 1;
 
@@ -80,157 +80,10 @@ function SetupLevelBoss2()
 		}
 	}
 
-
-	for (var _y = 0; _y < height_; _y++){
-		for (var _x = 0; _x < width_; _x++){
-			if (global.wallgrid_[# _x, _y] != FLOOR) {
-		var w_up = global.wallgrid_[# _x, _y-1] == VOID;
-		var w_left = global.wallgrid_[# _x-1, _y] == VOID;
-		var w_right = global.wallgrid_[# _x+1, _y] == VOID;
-		var w_down = global.wallgrid_[# _x, _y+1] == VOID;
-		var w_upright = global.wallgrid_[# _x+1, _y-1] == VOID;
-		var w_upleft = global.wallgrid_[# _x-1, _y-1] == VOID;
-		var w_downright = global.wallgrid_[# _x+1, _y+1] == VOID;
-		var w_downleft = global.wallgrid_[# _x-1, _y+1] == VOID;
-			
-
-		tile=44
-	if(w_up)
-	{
-	 tile=47
-	 if(w_right)
-	 {
-	  tile=4
-	  if(w_down)
-	  {
-	   tile=12
-	   if(w_left)
-	   {
-	    tile=28
-	    if(w_upright)
-	    {
-	     tile=29
-	     if(w_downright)
-	     {
-	      tile=33
-	      if(w_downleft)
-	      {
-	       tile=39
-	       if(w_upleft)tile=43
-	      }
-	      else if(w_upleft)tile=40
-	     }
-	     else if(w_downleft)
-	     {
-	      tile=37
-	      if(w_upleft)tile=41
-	     }
-	     else if(w_upleft)tile=36
-	    }
-	    else if(w_downright)
-	    {
-	     tile=30
-	     if(w_downleft)
-	     {
-	      tile=34
-	      if(w_upleft)tile=42
-	     }
-	     else if(w_upleft)tile=38
-	    }
-	    else if(w_downleft)
-	    {
-	     tile=31
-	     if(w_upleft)tile=35
-	    }
-	    else if(w_upleft)tile=32
-	   }
-	   else if(w_upright)
-	   {
-	    tile=16
-	    if(w_downright)tile=18
-	   }
-	   else if(w_downright)tile=17
-	  }
-	  else if(w_left)
-	  {
-	   tile=15
-	   if(w_upright)
-	   {
-	    tile=25
-	    if(w_upleft)tile=27
-	   }
-	   else if(w_upleft)tile=26
-	  }
-	  else if(w_upright)tile=8
-	 }
-	 else if(w_down)
-	 {
-	  tile=45
-	  if(w_left)
-	  {
-	   tile=14
-	   if(w_downleft)
-	   {
-	    tile=22
-	    if(w_upleft)tile=24
-	   }
-	   else if(w_upleft)tile=23
-	  }
-	 }
-	 else if(w_left)
-	 {
-	  tile=7
-	  if(w_upleft)tile=11
-	 }
-	}
-	else if(w_right)
-	{
-	 tile=1
-	 if(w_down)
-	 {
-	  tile=5
-	  if(w_left)
-	  {
-	   tile=13
-	   if(w_downright)
-	   {
-	   tile=19
-	    if(w_downleft)tile=21
-	   }
-	   else if(w_downleft)tile=20
-	  }
-	  else if(w_downright)tile=9
-	 }
-	 else if(w_left)
-	 {
-	  tile=46
-	 }
-	}
-	else if(w_down)
-	{
-	 tile=2
-	 if(w_left)
-	 {
-	  tile=6
-	  if(w_downleft)tile=10
-	 }
-	}
-	else if(w_left)
-	{
-	 tile=3
-	}
+	SetTiles();
 
 
-			
-		tilemap_set(_wall_map_id, tile, _x, _y)
-
-			}
-		}
-	}
-
-
-
-for ( var yy = 0; yy < height_; yy++) 
+	for ( var yy = 0; yy < height_; yy++) 
 	{
 	    for (var xx = 0; xx < width_; xx++) 
 		{
@@ -331,7 +184,7 @@ for ( var yy = 0; yy < height_; yy++)
 		    } 
 	    }
 	}
-
+SetVines();
 if (!enchufeAmmo) || (hasBoss = false)  || (hasBossPeque = false) || (!enchufeShield)
 	//|| (!enchufeHP) || (!enchufe0)
 	{
@@ -339,27 +192,10 @@ if (!enchufeAmmo) || (hasBoss = false)  || (hasBossPeque = false) || (!enchufeSh
 
 	}
 
+	
+	SetHUE();
+	
+	PlacePetasInTiles(20);
 
-	for ( var yyW = 0; yyW < height_; yyW++) {
-	    for (var xxW = 0; xxW < width_; xxW++) {
-    
-	var oddsW = 0
-	     var exW = xxW * CELL_WIDTH+CELL_WIDTH/2;
-	     var eyW = yyW * CELL_HEIGHT+CELL_HEIGHT/2;
-     
-	     if (irandom(oddsW) == oddsW){
-	    if (global.wallgrid_[# xxW, yyW] == WALL) 
-				 {
-					instance_create_layer(exW,eyW, "Walls", o_wall);
-			     }
-			     if (global.wallgrid_[# xxW, yyW] == VOID) 
-				 {
-					instance_create_layer(exW,eyW, "Walls", o_wall);
-			     }
- 
-	     }
-     
-	     }
-	     }
-
+	SetTemporaryWalls()
 }

@@ -76,7 +76,7 @@ function PlayerShipLaser(argument0)
 		screenShake(4,10);
 		if (boss.isImmortal == false) 
 		{
-			boss.hp -=(0.55+global.laserDamage+(global.amplifyPowerLaser/2));
+			boss.hp -=(0.25+global.laserDamage+(global.amplifyPowerLaser/2));
 		}
 	}
 	

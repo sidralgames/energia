@@ -23,8 +23,8 @@ function DrawLaserBossGarbanzo(argument0)
 			draw_rectangle(__view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0,__view_get( e__VW.XView, 0 )+640,__view_get( e__VW.YView, 0 )+360,false)
 			drawflash=false;
 		}
-		blueWidht = lerp(blueWidht,global.laserWidth+global.amplifyPowerLaser+ 7, 0.1*global.relativeSpeed);
-		whiteWidht =  lerp(whiteWidht, global.laserWidth+global.amplifyPowerLaser+4, 0.2*global.relativeSpeed);
+		blueWidht = lerp(blueWidht,global.laserWidth+global.amplifyPowerLaser+ 9, 0.1*global.relativeSpeed);
+		whiteWidht =  lerp(whiteWidht, global.laserWidth+global.amplifyPowerLaser+5, 0.2*global.relativeSpeed);
 	
 		draw_set_alpha(0.8+random(0.6))
 		draw_circle_colour(x+lengthdir_x(10,argument0), y-1+lengthdir_y(10, argument0),(height*2)+blueWidht+0.5+global.laserWidth+global.amplifyPowerLaser,colorLaser, colorLaser, false)

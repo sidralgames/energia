@@ -13,13 +13,13 @@
   "bbox_left": 0,
   "bbox_right": 163,
   "bbox_top": 0,
-  "bbox_bottom": 138,
+  "bbox_bottom": 146,
   "HTile": false,
   "VTile": false,
   "For3D": false,
   "DynamicTexturePage": false,
   "width": 164,
-  "height": 139,
+  "height": 147,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -33,6 +33,7 @@
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"da0ba638-b67f-4bfc-9362-0c122c87fe3e",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c4d5b3a8-9bcb-4db4-9844-a8aeb70861ed",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"00fd4fea-d4f9-4783-a4af-6be61474a196",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bbdcdfb6-f0ea-432e-913e-c21912d97de3",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -44,7 +45,7 @@
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 5.0,
+    "length": 6.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
@@ -54,6 +55,7 @@
             {"id":"3f252c1f-2343-40ce-b119-de058677fafb","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"da0ba638-b67f-4bfc-9362-0c122c87fe3e","path":"sprites/s_bossMechaActive/s_bossMechaActive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"f2591cc1-d20c-4fa5-9f35-c8403aaaab1c","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c4d5b3a8-9bcb-4db4-9844-a8aeb70861ed","path":"sprites/s_bossMechaActive/s_bossMechaActive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"9eca7989-1d8c-47b2-9663-f7fb116c8394","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"00fd4fea-d4f9-4783-a4af-6be61474a196","path":"sprites/s_bossMechaActive/s_bossMechaActive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ac4d4c63-7780-479b-82aa-d58928dd1340","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bbdcdfb6-f0ea-432e-913e-c21912d97de3","path":"sprites/s_bossMechaActive/s_bossMechaActive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
@@ -73,6 +75,7 @@
   },
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"1a3be571-1b1b-4aa2-b041-0b2fed7af1a8","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"4848f3e6-4eb5-400e-ae9f-175caf9cf186","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 2",},
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"074d9bcf-726d-4ce0-96b4-88bfe82ea65a","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,

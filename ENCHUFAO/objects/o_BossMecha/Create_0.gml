@@ -1,6 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited();
+
+minBombTime = 60;
+maxBombTime = 120;
+
+recover = false;
+recoverTime = 0;
 punch = false;
 isImmortal = true;
 creatingEnemies = false;

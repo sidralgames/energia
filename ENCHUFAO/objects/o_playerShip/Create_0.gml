@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 type = collisionType.custom;
-
+_alpha = 1;
 if (global.shipGreenBonusUpgraded)
 {
 	global.bombAmmo = global.bombAmmoMax;	
@@ -48,6 +48,7 @@ fx_blackHole = 0;
 inBlackHoleArea = false
 fx_color = 0;
 fx_colorBT = 0;
+fx_Player = 0;
 ripple_fx = 0;
 contRipple = 0;
 ripple = false;
@@ -113,6 +114,7 @@ _angle = point_direction(x,y,o_crosshair.x, o_crosshair.y)
 //{
 //	lightPlayer=-1;
 //}
+_colorWhite = c_white;
 greenO = make_color_rgb(99,199,77)
 green = make_color_rgb(108,242,79)
 red = make_color_rgb(228,59,68)

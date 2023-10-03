@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-alarm[1] = 40;
+alarm[1] = 70;
 oddsLaser = max(10, 30 - global.level);
 oddsTurret = max(5,20 - global.level);
 laserB = 1;

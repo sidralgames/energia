@@ -2,18 +2,18 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PluggedToEnchufe()
 {
-	if alarm[4]>48
-	{
-		gamepad_set_vibration(0,0.05,0.05);
-	}
-	else if (tocado = false)
-	{
-		gamepad_set_vibration(0,0,0);
-	}
-	if alarm[4] <= 0
-	{
-		alarm[4] = 50;
-	}
+	//if alarm[4]>48
+	//{
+	//	gamepad_set_vibration(0,0.05,0.05);
+	//}
+	//else if (tocado = false)
+	//{
+	//	gamepad_set_vibration(0,0,0);
+	//}
+	//if alarm[4] <= 0
+	//{
+	//	alarm[4] = 50;
+	//}
 	pluggedTimer+=max(0.1, 0.38*global.overchargeTime);
 		
 	if (pluggedTimer >= 300)

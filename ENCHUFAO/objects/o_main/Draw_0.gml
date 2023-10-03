@@ -11,7 +11,7 @@ rojo = make_color_rgb(228,59, 68)
 
 //draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+80,"SHIELDS: " + string(round(global.laser)) + " / " + string(round(global.laserMax)))
 
-//draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+150,"cganginttilkes: " + string(global.changingTiles))
+//draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+150,"cloak: " + string(global.invisibleCloak))
 
 //draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+120,"milisecsConnec: " + string(global.connectedmilisecs))
 //if (global.spriteShip = splayer)

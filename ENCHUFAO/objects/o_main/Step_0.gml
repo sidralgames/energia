@@ -28,11 +28,11 @@ if instance_exists(o_playerShip) && (room != Sala_Inicio)
 			{
 				if (abs(o_playerShip._hpush >= 0.1)) || (abs(o_playerShip._vpush >= 0.1))
 				{
-					global.energy-=( 0.1 * (abs(o_playerShip._hpush)+abs(o_playerShip._vpush))) / global.DischargeTime;
+					global.energy-=( (0.11 * global.cloackReal) * ( ( abs(o_playerShip._hpush) + abs(o_playerShip._vpush) ) / 2 )) / global.DischargeTime;
 				}
 				else
 				{
-					global.energy-= (0.1) / global.DischargeTime
+					global.energy-= (0.1 * global.cloackReal ) / global.DischargeTime
 				}
 			}
 		}

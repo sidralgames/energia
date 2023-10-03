@@ -2,6 +2,43 @@
 // You can write your code in this editor
 Controls_Input();
 
+if (key_buttonUP)
+{
+	global.invisibleCloak = !global.invisibleCloak;
+}
+
+	colorPlayer_fx = layer_get_fx("Player");
+	colorPlayer_fx_params = fx_get_parameters(colorPlayer_fx);
+
+if (global.invisibleCloak)
+{
+	
+
+	
+	fx_Player = lerp(fx_Player,0.9,0.03); 
+	colorPlayer_fx_params.g_Intensity = fx_Player;	
+	fx_set_parameters(colorPlayer_fx, colorPlayer_fx_params);
+	
+	global.cloackReal = 2;
+	_alpha = lerp(_alpha, 0.45, 0.03);
+}
+else
+{
+	
+	fx_Player = lerp(fx_Player,0,0.02); 
+	colorPlayer_fx_params.g_Intensity = fx_Player;	
+	fx_set_parameters(colorPlayer_fx, colorPlayer_fx_params);
+	
+	global.cloackReal = 1;
+	_alpha = lerp(_alpha, 1, 0.09);
+	if (_alpha > 0.9)
+	{
+		_alpha = 1;
+	}
+	part_particles_create(global.naveP_sys, x, y, global.naveP , 5);
+
+}
+
 if (partChanged = true) && (!plugged)
 {
 	partChanged = false;
@@ -15,6 +52,7 @@ if (global.infiniteHPIsOn)
 {
 	global.hp = global.hpMax;
 }
+
 colorBT_fx = layer_get_fx("EffectColorBulletTime");
 colorBT_fx_params = fx_get_parameters(colorBT_fx);
 
@@ -86,7 +124,7 @@ else
 	}
 }
 
-part_particles_create(global.naveP_sys, x, y, global.naveP , 5)
+
 PlayerState_Free();
 MovePlayer();
 

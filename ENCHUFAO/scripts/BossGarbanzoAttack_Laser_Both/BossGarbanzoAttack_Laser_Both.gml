@@ -7,7 +7,8 @@ function BossGarbanzoAttack_Laser_Both()
 	if creatingEnemies && (punch = false)
 	{
 		punch = true;
-		vspeed -=2*global.relativeSpeed;
+		vspeed -=0.3*global.relativeSpeed;
+		hspeed += choose(1,-1)
 	}
 	
 	if (alarm[3] >=100) && (alarm[3] <=240)
@@ -25,10 +26,10 @@ function BossGarbanzoAttack_Laser_Both()
 	if (laserCreated = false)
 	{
 		laserCreated = true;
-		laser_r = instance_create(x+42, y+52, o_laserGarbanzo_R)
+		laser_r = instance_create(x+40, y+52, o_laserGarbanzo_R)
 		laser_r.angleLaser = 260;
 		
-		laser_l = instance_create(x-42, y+52, o_laserGarbanzo_L)
+		laser_l = instance_create(x-40, y+52, o_laserGarbanzo_L)
 		laser_l.angleLaser = 280;
 		
 	}
@@ -57,22 +58,6 @@ function BossGarbanzoAttack_Laser_Both()
 	else
 	{
 		speed = bossSpeed*global.relativeSpeed;
-	}
-
-	
-	
-	if (contAttack<=0)
-	{
-		contIdl = random_range(100, 150);
-		state = BOSS2STATE.IDLE;
-		attackingFast = false;
-		stopping = false;
-		creatingEnemies = true;
-		drawflash=true
-		laserCreated = false;
-		punch = false;
-		image_index = 0;	
-		alarm[3] = 0;
 	}
 	
 }

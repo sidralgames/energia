@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(room = Sala_0)
+if(room = Sala_0) || (room = Sala_SecondBoss)
 {
 	if !collision_circle(x,y,18,o_wall,false,true)
 	{

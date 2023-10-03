@@ -2,6 +2,9 @@
 // You can write your code in this editor
 full = false;
 
+global.invisibleCloak = false;
+global.cloackReal = 1;
+
 //---------- ENEMIES XP LIST-----------------//
 global.enemyStandardXP = 20;
 global.enemyFastXP = 20;

@@ -2,6 +2,12 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function BossGarbanzoState_Idle()
 {
+	recoverTime--;
+	if recover = false && recoverTime <= 0
+	{
+		contIdl --;
+		image_index = 0;
+	}
 	bossSpeed = lerp(bossSpeed,0.75, 0.005);
 	speed = bossSpeed*global.relativeSpeed;
 	
@@ -17,28 +23,9 @@ function BossGarbanzoState_Idle()
 		var a = point_direction(x, y, o_playerShip.x+diffX,  o_playerShip.y+diffY);
 		direction += sign(dsin(a - direction)) * (precision * global.relativeSpeed);
 	}
-		
-
 	
-	//_angle = direction;	
-	
-	contIdl --;
-	image_index = 0;
-	if (contIdl <= 0)
+	if instance_exists(o_playerShip)
 	{
-		
-		attack = choose(0,0,0,0,1,2,3,4,5,6);
-		if (attack = 0)
-		{
-			contStop = 60;
-			contAttack = random_range(200,300)
-		}
-		else 
-		{
-			contAttack = random_range(350,450)
-			creatingEnemies = false;
-			alarm[3] = 300	
-		}
-		state = BOSS2STATE.ATTACK;
+		BossGarbanzoChooseAttack()
 	}
 }

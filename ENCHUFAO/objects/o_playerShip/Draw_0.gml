@@ -51,7 +51,7 @@ if (connectedToShip) && (!pluggedShip)
 	draw_circle(connectedToShip.x, connectedToShip.y, 12.3, true)
 }
 
-draw_sprite_ext(global.spriteShip,image_index,x,y,1,1,_angle,image_blend,image_alpha)
+draw_sprite_ext(global.spriteShip,image_index,x,y,1,1,_angle,_colorWhite,_alpha)
 
 if (global.ammo <= global.ammoMax/5)
 {

@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-instance_destroy(other);
+if point_distance(o_BossMecha_Inside.x,o_BossMecha_Inside.y,other.x, other.y) >20
+{
+	instance_destroy(other);
+}
 
 
 
