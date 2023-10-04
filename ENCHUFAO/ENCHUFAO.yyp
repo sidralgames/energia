@@ -545,6 +545,7 @@
     {"id":{"name":"EnemyTakeCover","path":"scripts/EnemyTakeCover/EnemyTakeCover.yy",},"order":96,},
     {"id":{"name":"s_shipstatsPause","path":"sprites/s_shipstatsPause/s_shipstatsPause.yy",},"order":57,},
     {"id":{"name":"Enemy_ChasingFar","path":"scripts/Enemy_ChasingFar/Enemy_ChasingFar.yy",},"order":28,},
+    {"id":{"name":"s_petaALLInTile","path":"sprites/s_petaALLInTile/s_petaALLInTile.yy",},"order":100,},
     {"id":{"name":"o_bulletEnemy_Father","path":"objects/o_bulletEnemy_Father/o_bulletEnemy_Father.yy",},"order":5,},
     {"id":{"name":"light_static_set_array","path":"scripts/light_static_set_array/light_static_set_array.yy",},"order":1,},
     {"id":{"name":"s_enemyEnchufePlugged","path":"sprites/s_enemyEnchufePlugged/s_enemyEnchufePlugged.yy",},"order":31,},

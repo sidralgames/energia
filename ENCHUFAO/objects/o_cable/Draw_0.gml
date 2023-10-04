@@ -1,6 +1,6 @@
 /// @description Draw the simulation
 
-if (global.invisibleCloak)
+if (global.haveInvisibiltyCloak && global.invisibleCloak)
 {
 	_alpha = lerp(_alpha, 0.1, 0.1);
 }

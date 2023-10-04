@@ -6,8 +6,16 @@ function SpawnEnemyFastBreach()
 	{
 		for (var i=0; i<1; i++)
 		{
-			peta =  choose(o_enchufePETA,o_enchufePETAAll,o_enchufePETALaser,
-			o_enchufePETAAmmo,o_enchufePETAAmmo,o_enchufePETAAmmo,o_enchufePETAHP);
+			if (global.allPETAisMulti)
+			{
+				peta = o_enchufePETAAll;
+			}
+			else
+			{
+				peta =  choose(o_enchufePETA,o_enchufePETAAll,o_enchufePETALaser,
+				o_enchufePETAAmmo,o_enchufePETAAmmo,o_enchufePETAAmmo,o_enchufePETAHP);
+			}
+			
 			if (petaCreated = false)
 			{
 				enemy = choose(o_enemyFast,o_enemyFast,o_enemyFast,o_enemyFast,o_enemyFast,o_enemyFast,o_enemyFast,o_enemyFast,o_enemyFast, peta)

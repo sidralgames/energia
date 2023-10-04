@@ -93,9 +93,18 @@ if (!isPaused)
 			}
 		}
 		
+		if (global.allPETAisMulti)
+		{
+			imagePeta = 1;
+		}
+		else
+		{
+			imagePeta = 0;
+		}
+		
 		for (var t=0; t< global.PETAAmmo; t++)
 		{
-			draw_sprite_ext(s_petaUI, 0, __view_get( e__VW.XView, 0 )+53,__view_get( e__VW.YView, 0 )+84 + (t*21), 1,1,0,image_blend, image_alpha)
+			draw_sprite_ext(s_petaUI, imagePeta, __view_get( e__VW.XView, 0 )+53,__view_get( e__VW.YView, 0 )+84 + (t*21), 1,1,0,image_blend, image_alpha)
 		}
 		
 		

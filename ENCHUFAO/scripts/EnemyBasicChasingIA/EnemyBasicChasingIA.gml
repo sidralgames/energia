@@ -3,7 +3,7 @@
 function EnemyBasicChasingIA()
 {
 	
-	if (global.invisibleCloak == true)
+	if (global.haveInvisibiltyCloak && global.invisibleCloak == true)
 	{
 		path_end()
 		var a = point_direction(x, y, x+diffX,y+diffY);

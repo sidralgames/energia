@@ -2,6 +2,15 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PlayerShipPETA()
 {
+	if (global.allPETAisMulti)
+	{
+		petaToLaunch = o_enchufePETAAll;
+	}
+	else
+	{
+		petaToLaunch =  o_enchufePETA;
+	}
+	
 	gamepad_set_vibration(0,0.2,0.2);
 	alarm[4] = 3 ;
 	explo = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
@@ -16,7 +25,7 @@ function PlayerShipPETA()
 		
 	
 		var peta = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
-		"Enchufes", o_enchufePETA);
+		"Enchufes", petaToLaunch);
 		global.petasUsed+=1;
 		global.PETAAmmo-=1;
 		

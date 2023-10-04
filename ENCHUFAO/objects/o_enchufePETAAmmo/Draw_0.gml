@@ -9,7 +9,7 @@
 // Inherit the parent event
 event_inherited();
 
-if (petaActive)
+if (petaActive) && (o_playerShip.pluggedTimer < 200)
 {
 	if (charge <= 300)
 	{

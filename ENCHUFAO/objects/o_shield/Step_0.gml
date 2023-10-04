@@ -12,6 +12,20 @@ if (round(global.shields<=0))
 	instance_destroy();
 }
 
+if (global.haveInvisibiltyCloak && global.invisibleCloak)
+{
+	image_alpha = lerp(image_alpha, 0.25, 0.03);
+}
+else
+{
+	image_alpha = lerp(image_alpha, 0.6, 0.05);
+	
+	if (image_alpha > 0.5)
+	{
+		image_alpha = 0.6;
+	}
+}
+
 
 
 

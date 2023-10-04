@@ -2,8 +2,21 @@
 // You can write your code in this editor
 full = false;
 
+//-------------MEGA UPGRADES-----------------//
+
+//--INVISIBILITY CLOAK--//
+global.haveInvisibiltyCloak = true;
 global.invisibleCloak = false;
 global.cloackReal = 1;
+
+//--PETAS MULTICHARGE--//
+global.allPETAisMulti = false;
+
+
+
+
+
+
 
 //---------- ENEMIES XP LIST-----------------//
 global.enemyStandardXP = 20;

@@ -43,7 +43,7 @@ function Enemy_Chasing()
 		
 		if (alarm[4] <= 0)
 		{
-			if (global.invisibleCloak = true)
+			if (global.haveInvisibiltyCloak && global.invisibleCloak = true)
 			{
 				diffX = choose(random_range(-250, 250));
 				diffY = choose(random_range(-250, 250));

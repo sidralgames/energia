@@ -6,7 +6,15 @@ function SpawnBulletEyeAndPeta()
 	{
 		for (var i=0; i<1; i++)
 		{
-			peta =  choose(o_enchufePETA,o_enchufePETAAll,o_enchufePETALaser,o_enchufePETAAmmo,o_enchufePETAHP)
+			if (global.allPETAisMulti)
+			{
+				peta = o_enchufePETAAll;
+			}
+			else
+			{
+				peta =  choose(o_enchufePETA,o_enchufePETAAll,o_enchufePETALaser,
+				o_enchufePETAAmmo,o_enchufePETAAmmo,o_enchufePETAAmmo,o_enchufePETAHP);
+			}
 			if !instance_exists(peta)
 			{
 				enemy = choose(o_bulletEye,o_bulletEye,o_bulletEye,o_bulletEye,o_bulletEye,peta)
