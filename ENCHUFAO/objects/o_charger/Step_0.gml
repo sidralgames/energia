@@ -11,7 +11,7 @@ if (overcharged)
 
 if (global.invisibleCloak)
 {
-	image_alpha = lerp(image_alpha, 0.2, 0.03);
+	image_alpha = lerp(image_alpha, 0.25, 0.03);
 }
 else
 {

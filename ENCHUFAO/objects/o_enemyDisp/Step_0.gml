@@ -35,7 +35,7 @@ if (_hp <= 0)
 
 if instance_exists(o_playerShip)
 {
-	if (point_distance(x,y,o_playerShip.x, o_playerShip.y) <= 300)
+	if (point_distance(x,y,o_playerShip.x, o_playerShip.y) <= 300) && (global.invisibleCloak == false)
 	{
 		dire = direction;
 		if (alarm[0] <= 0)

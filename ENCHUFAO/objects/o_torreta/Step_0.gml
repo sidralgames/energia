@@ -7,7 +7,7 @@ if !tile_meeting(x,y,"Tiles")
 
 if instance_exists(o_playerShip)
 {
-	if (parado=false)
+	if (global.invisibleCloak == false)
 	{
 		var a = point_direction(x, y, o_playerShip.x, o_playerShip.y);
 		direction += sign(dsin(a - direction)) * precision;
@@ -32,6 +32,12 @@ if instance_exists(o_playerShip)
 			}
 
 		}
+	}
+	else
+	{
+		var a = point_direction(x, y, o_torreta.x, o_torreta.y);
+		direction += sign(dsin(a - direction)) * precision;
+		image_angle = direction;
 	}
 
 current_recoil = max(0,floor(current_recoil*0.8));

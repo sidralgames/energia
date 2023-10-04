@@ -9,11 +9,11 @@ if (global.changingTiles)
 }
 if (canShot)
 {
-	
-	if (collision_rectangle(x-2,y,x+2,y-16-long*image_yscale,o_playerShip,false,true) ||
-	collision_rectangle(x-2,y,x+2,y-16-long*image_yscale,o_enemyP,false,true)) && 
-	(collision_rectangle(x-2,y,x+2,y-26-long*image_yscale,o_laser,false,true))
-	&& (laserActive = false)
+	colPlayer = collision_rectangle(x-2,y,x+2,y-16-long*image_yscale,o_playerShip,false,true)
+	colEnemy = collision_rectangle(x-2,y,x+2,y-16-long*image_yscale,o_enemyP,false,true)
+	colLaser = collision_rectangle(x-2,y,x+2,y-26-long*image_yscale,o_laser,false,true)
+	if ( ( (colPlayer) && (global.invisibleCloak == false) ) || (colEnemy) && (colLaser) )
+	&& (laserActive = false) 
 	{
 		
 		laserActive = true;
@@ -37,24 +37,35 @@ if (canShot)
 		//	}
 		//}
 		
-		if collision_line(x,y,x, y-16-long*image_yscale, o_playerShip,false, true)
+		if collision_line(x,y,x, y-16-long*image_yscale, o_playerShip,false, true) 
 		{
 			if o_playerShip.tocado=false
 			{
 				gamepad_set_vibration(0,0.3,0.3);
 				o_playerShip.alarm[4] = 10;
-				audio_play_sound_on(global.audioEmitter, snd_hit, false, 50)
 				o_playerShip.alarm[1] = 30
 				o_playerShip.tocado = true;
-				global.hp -=1;
+				if (global.shields > 0)
+				{
+					global.shields-=1;	
+				}
+				else
+				{
+					audio_play_sound_on(global.audioEmitter, snd_hit, false, 50)
+					global.hp -=1;
+				}
 				screenShake(4,30)
 			}
 		}
+		
 		enemy = collision_rectangle(x-2,y,x+2, y-16-long*image_yscale, o_enemyP,false, true)
 		bullet = collision_rectangle(x-5,y,x+5, y-16-long*image_yscale, o_bulletFather,false, true)
 		if (enemy)
 		{
-			enemy._hp = 0;
+			if (enemy.isImmortal = false)
+			{
+				enemy._hp = 0;
+			}
 		}
 		if (bullet)
 		{

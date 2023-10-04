@@ -6,7 +6,7 @@ if gamepad_is_connected(0)
 	var axisrh = gamepad_axis_value(0, gp_axisrh); 
 	var axisrv = gamepad_axis_value(0, gp_axisrv);
 
-	if (abs(axisrh) >0.2 || abs(axisrv) >0.2)
+	if (abs(axisrh) >0.4 || abs(axisrv) >0.4) //0.2
 	{
 		alphaP=1
 	}
@@ -22,7 +22,7 @@ if gamepad_is_connected(0)
 		var axisrh = gamepad_axis_value(0, gp_axisrh); 
 		var axisrv = gamepad_axis_value(0, gp_axisrv);
 	
-		if (abs(axisrh) >0.2 || abs(axisrv) >0.2)
+		if (abs(axisrh) >0.4 || abs(axisrv) >0.4) //0.2
 		{
 			x_point_to_move_camera_to= mean(o_playerShip.x,o_playerShip.x,o_playerShip.x,o_playerShip.x+axisrh*400);
 			y_point_to_move_camera_to= mean(o_playerShip.y,o_playerShip.y,o_playerShip.y, o_playerShip.y+axisrv*400); 
