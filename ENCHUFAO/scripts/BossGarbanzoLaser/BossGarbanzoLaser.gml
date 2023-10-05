@@ -52,7 +52,7 @@ function BossGarbanzoLaser(argument0, argument1, argument2)
 	
 	player = collision_line(x+argument1,y+argument2,x+argument1+lengthdir_x(maxLenght_+20, argument0+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,argument0+random_range(2,-2)), o_playerShip,false, true)
 
-	if (player)
+	if (player) && (global.invisibleCloak == false)
 	{
 		with (o_playerShip)
 		{
@@ -60,10 +60,17 @@ function BossGarbanzoLaser(argument0, argument1, argument2)
 			{
 				gamepad_set_vibration(0,0.3,0.3);
 				alarm[4] = 10;
-				audio_play_sound_on(global.audioEmitter, snd_hit, false, 50)
 				alarm[1] = 50
 				tocado = true;
-				global.hp -=1;
+				if (global.shields > 0)
+				{
+					global.shields-=1;	
+				}
+				else
+				{
+					audio_play_sound_on(global.audioEmitter, snd_hit, false, 50)
+					global.hp -=1;
+				}
 				screenShake(4,30)
 				global.hitsTaken+=1;
 			}

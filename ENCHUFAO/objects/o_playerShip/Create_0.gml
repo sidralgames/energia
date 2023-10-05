@@ -2,6 +2,13 @@
 // You can write your code in this editor
 type = collisionType.custom;
 _alpha = 1;
+
+haveUsedCall = false;
+
+haveUsedBattery = false;
+contExternalBattery = 300;
+
+
 if (global.shipGreenBonusUpgraded)
 {
 	global.bombAmmo = global.bombAmmoMax;	
@@ -49,6 +56,7 @@ inBlackHoleArea = false
 fx_color = 0;
 fx_colorBT = 0;
 fx_Player = 0;
+fx_Cloak = 0;
 ripple_fx = 0;
 contRipple = 0;
 ripple = false;

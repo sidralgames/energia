@@ -9,6 +9,7 @@ if (global.changingTiles)
 	
 }
 
+
 checkHPEnemies();
 
 

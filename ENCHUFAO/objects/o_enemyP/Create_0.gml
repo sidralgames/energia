@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 isShield = false;
+bulletDamageCalculated = false;
+bulletDamageTime = 30;
+contBulletDamage = bulletDamageTime;
 isImmortal = false;
 _angle = 0;
 alarm[11] = random_range(30,60);

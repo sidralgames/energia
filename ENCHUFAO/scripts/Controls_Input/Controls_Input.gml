@@ -15,6 +15,9 @@ function Controls_Input()
 	key_downP = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S")) || gamepad_button_check_pressed(0, gp_padd) //|| gamepad_axis_value(0, gp_axislv) > 0.5;
 	
 	key_buttonUP = gamepad_button_check_pressed(0, gp_face4);
+	key_buttonR = gamepad_button_check_pressed(0, gp_face2);
+	key_buttonL = gamepad_button_check_pressed(0, gp_face3);
+	
 	
 	key_r1Down =  gamepad_button_check(0, gp_shoulderr)
 	key_l1Down =  gamepad_button_check(0, gp_shoulderl)

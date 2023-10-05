@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+called = false
 sprite = -1;
 strtandedPrecision = 2;
 disconectedFirstTime = false;
@@ -13,8 +13,10 @@ hpMax = 4;
 hp = hpMax;
 tocado = false;
 cableFake = noone;
-numShip = irandom(global.numberOfShips-1);
 changedSpeed = false;
+
+//bombs called
+alarm[8] = random_range(30, 200);
 
 weight = 0;
 minSpeed = 0;

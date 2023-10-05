@@ -9,7 +9,15 @@ function StrandedShipShoot()
 	explo.image_yscale = 0.15;
 	explo.image_speed = 3;
 	
-	audio_play_sound_on(global.audioEmitter,snd_shoot1, false, 50)
+	if audio_is_playing(snd_shoot1)
+	{	
+		audio_stop_sound(snd_shoot1)
+		audio_play_sound_on(global.audioEmitter,snd_shoot1, false, 50)
+	}
+	else
+	{
+		audio_play_sound_on(global.audioEmitter,snd_shoot1, false, 50)
+	}
 		
 	
 		var bullet1 = instance_create_layer(x +((_hpush*3) * global.relativeSpeed) + lengthdir_x(15, _angle), y +((_vpush*5) * global.relativeSpeed)+ lengthdir_y(15, _angle),

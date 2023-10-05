@@ -13,9 +13,10 @@ if (state = ENEMYSTATE.WAITING)
 			}
 }
 
-_hp -= global.superShot+global.amplifyPowerAmmo;
+BulletDamage();
+
 flashAlpha = 1;
-instance_destroy(other);
+
 
 
 

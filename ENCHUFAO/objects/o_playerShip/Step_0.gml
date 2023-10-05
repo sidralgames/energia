@@ -2,6 +2,9 @@
 // You can write your code in this editor
 Controls_Input();
 
+CheckExternalBattery();
+CheckCalledForHelp();
+
 if (key_buttonUP)
 {
 	global.invisibleCloak = !global.invisibleCloak;
@@ -9,6 +12,9 @@ if (key_buttonUP)
 
 	colorPlayer_fx = layer_get_fx("Player");
 	colorPlayer_fx_params = fx_get_parameters(colorPlayer_fx);
+	
+	colorCloak_fx = layer_get_fx("CLOAK");
+	colorCloak_fx_params = fx_get_parameters(colorCloak_fx);
 
 
 

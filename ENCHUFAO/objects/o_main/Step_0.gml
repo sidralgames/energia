@@ -10,6 +10,7 @@ if (global.enemiesKilledTotalAch >= 500) && (global.ach500Enemies = 0)
 }
 
 
+
 if instance_exists(o_playerShip) && (room != Sala_Inicio)
 {
 

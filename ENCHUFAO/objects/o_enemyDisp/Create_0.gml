@@ -7,7 +7,7 @@ slowMoPickUps = choose(4,5)
 alarm[10] = 30;
 isCounted = false;
 bnc = 0.5;
-_hp = 2;
+_hp = 3;
 cont = 500;
 image_speed = 0.5;
 

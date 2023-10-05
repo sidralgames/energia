@@ -12,7 +12,13 @@ global.cloackReal = 1;
 //--PETAS MULTICHARGE--//
 global.allPETAisMulti = false;
 
+//--EXTERNAL BATTERY--//
+global.haveExternalBattery = true;
+global.externalBatteryOn = false;
 
+global.piercingShot = false;
+
+global.haveCallForHelp = true;
 
 
 

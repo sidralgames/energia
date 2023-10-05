@@ -8,9 +8,15 @@ height = sin(random(1));
 if (global.laser > 0)
 {
 	DrawLaserPlayer(_angle);
-	//DrawLaserPlayer(_angle+offsetLaser,thisLenght);
-	//DrawLaserPlayer(_angle-offsetLaser,thisLenght);
+
 }
+
+if (global.externalBatteryOn)
+{
+	draw_sprite_ext(s_enchufeChargeHP_Out, 0, x-21, y-25, 0.5,1, 0, image_blend, image_alpha)	
+	draw_sprite_ext(s_enchufeChargeHP_In, 0, x-21, y-25, (contExternalBattery/300)/2 ,1, 0, image_blend, image_alpha)	
+}
+
 
 if instance_exists(inEnchufe)
 {
