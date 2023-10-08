@@ -2,14 +2,14 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function CollisionTileBounce()
 {
-	if (tile_meeting(x+_hpush,y,"Tiles"))
+	if (tile_meeting(x+hspeed,y,"Tiles"))
 	{
 		hpBounce -=1;
-	    _hpush = -_hpush*bnc;
+	    hspeed = -hspeed*bnc;
 	}
-	if (tile_meeting(x,y+_vpush,"Tiles"))
+	if (tile_meeting(x,y+vspeed,"Tiles"))
 	{
 		hpBounce -=1;
-	   _vpush = -_vpush*bnc;
+	   vspeed = -vspeed*bnc;
 	}
 }

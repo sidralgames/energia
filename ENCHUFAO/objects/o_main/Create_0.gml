@@ -20,26 +20,33 @@ global.externalBatteryOn = false;
 //--CALL FOR HELP--//
 global.haveCallForHelp = true;
 
-//-------BULLET MODIFICATORS & OTHERS----------//
+//-------BULLET MODIFICATORS----------//
 global.piercingShot = false;
 global.bouncingBulletsIsOn = false;
 global.bulletsPushenemiesIsOn = false;
 global.bulletsAreBombs = false;
-global.bulletsDestroyBulletsIsOn = false;
+global.bulletsDestroyBulletsIsOn = false; ///////// OK
+global.bulletsAeSmartIsOn = true; /////////// OK
+global.bulletsBifurcateIsOn = false; /////// OK
+global.bulletsDanceIsOn = false; ////////////OK movimiento en s
+
+
+//------LASER MODIFICATORS-----------//
+global.laserBurnEnemies = true; /////////// OK
+global.laserSlowEnemies = true;////////////// OK
 
 
 
 //ONLY EN LA HEAD
-global.bulletsAeSmartIsOn = false;
-global.bulletsDanceIsOn = false; //movimiento en s
-global.bulletsBifurcateIsOn = false; // al cabo de un tiempo caa una en ods
 
-global.laserLastLongIsOn = false; //ibujalo mas fames y ue localcule en el step tmb mas clao
-global.laserSlowEnemies = false;
-global.laserBurnEnemies = false;
+
+
+
+global.laserLastLongIsOn = false; //ibujalo mas fames y ue localcule en el step tmb mas clao //cvhungo en favoritos tienes algo
+  
 global.laserAtractEnemies = false;
 global.laserDobleIsOn = false;
-global.laserStunsEnemies = false;
+global.laserStunsEnemies = false; //fLASH AL LANZARLO
 
 
 
@@ -177,6 +184,7 @@ instance_create(-100,-100,o_partBalaBossGarbanzo);
 instance_create(-100,-100,o_partNaveEnemy_Mini);
 instance_create(-100,-100,o_partNaveP_cloak)
 instance_create(-100,-100,o_partNaveFriend)
+instance_create(-100,-100,o_partSmoke)
 
 
 global.repairingSprite = s_repairingPart;

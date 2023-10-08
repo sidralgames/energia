@@ -13,6 +13,7 @@ if (key_laser) && !(laserActive)
 	}
 	if (laserActive) 
 	{
+		
 		if (drawflash=true)
 		{
 			draw_set_alpha(0.1)

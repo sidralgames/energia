@@ -3,5 +3,5 @@
 
 CollisionTileDestroy()
 
-
+speed = bulletSpeed * global.relativeSpeed;
 

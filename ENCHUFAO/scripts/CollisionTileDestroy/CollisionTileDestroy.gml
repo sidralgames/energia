@@ -2,11 +2,11 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function CollisionTileDestroy()
 {
-	if (tile_meeting(x+_hpush,y,"Tiles"))
+	if (tile_meeting(x+hspeed,y,"Tiles"))
 	{
 	    instance_destroy();
 	}
-	if (tile_meeting(x,y+_vpush,"Tiles"))
+	if (tile_meeting(x,y+vspeed,"Tiles"))
 	{
 	   instance_destroy();
 	}

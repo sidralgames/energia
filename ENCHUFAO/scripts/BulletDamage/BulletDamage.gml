@@ -28,8 +28,8 @@ function BulletDamage()
 			
 			dirShoked = _angle;
 	
-			_hpush += other._hpush/3.5;
-			_vpush += other._vpush/3.5;
+			_hpush += other.hspeed/3.5;
+			_vpush += other.vspeed/3.5;
 
 			state = ENEMYSTATE.SHOCKED;
 			takeCover = false;

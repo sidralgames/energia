@@ -8,4 +8,4 @@ image_yscale = 0.5;
 
 hp = 200;
 
-
+bulletSpeed = 0;

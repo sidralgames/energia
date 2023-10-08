@@ -81,10 +81,14 @@ function PlayerShipLaser(argument0)
 	}
 	
 	
-	
 	enemy = collision_line(x,y,x+lengthdir_x(maxLenght_+20, argument0+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,argument0+random_range(2,-2)), o_enemyP,false, true)
 	if (enemy)
 	{
+		if (enemy.isShield == false) && (enemy.state == ENEMYSTATE.WAITING)
+		{
+			enemy.state = ENEMYSTATE.CHASING;
+		}
+		
 		screenShake(4,10);
 		if (enemy.isShield == true) || (enemy.enemyIsMini == true)
 		{
@@ -95,6 +99,25 @@ function PlayerShipLaser(argument0)
 			enemy._hp -= (0.25+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
 		}
 		enemy.flashAlpha = 1;
+		
+		
+		if (global.laserBurnEnemies)
+		{
+			if (enemy.isShield == false) && (enemy.burned == false)
+			{
+				enemy.burned = true;	
+			}
+		}
+		
+		if (global.laserSlowEnemies)
+		{
+			with(enemy)
+			{
+				slowed = true;
+				slowedCont = random_range(30,50);
+			}
+			
+		}
 		//explo = instance_create(enemy.x, enemy.y, o_explo2)
 		//explo.image_xscale = 0.25;
 		//explo.image_yscale = 0.25;

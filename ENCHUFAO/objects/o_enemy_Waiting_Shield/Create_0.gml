@@ -3,6 +3,28 @@
 type = collisionType.custom;
 isShield = false;
 myPath = path_add();
+
+burned = false;
+
+contBurnedTotalMax = 300;
+contBurnedTotal = contBurnedTotalMax;
+contBurnedMax = 100;
+contBurnPartMax = 5;
+contBurnPart = contBurnPartMax;
+contBurned = contBurnedMax;
+
+burnFlash = 0;
+
+rojoosc= make_colour_rgb(255,0,68);
+rojo= make_colour_rgb(228,59,69);
+rojo2= make_colour_rgb(158, 40, 53);
+
+
+slowed = false;
+
+slowedContMax = 30;
+slowedCont = slowedContMax;
+
 repelled = false;
 repelledTimeMax = 20;
 repelledTime = repelledTimeMax;
@@ -30,7 +52,8 @@ shocked = false;
 _hp = 6;
 cont = 500;
 image_speed = 0.5;
-enemySpeed = 1.15;
+enemySpeedInitial = 1.15;
+enemySpeed = enemySpeedInitial;
 precision= 2
 speed=random(1)+1;
 isCounted = false;

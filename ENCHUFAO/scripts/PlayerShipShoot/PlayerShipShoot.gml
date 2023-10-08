@@ -30,8 +30,8 @@ function PlayerShipShoot()
 		}
 		
 		off =  random_range(offRange,-offRange)
-		bullet._hpush = lengthdir_x(9, _angle + off);
-		bullet._vpush = lengthdir_y(9, _angle + off);
+		
+		bullet.bulletSpeed = 9;
 		bullet._angle = dire+off;
 		bullet.direction = dire+off;
 		_hpush += -lengthdir_x(recoil_standard, _angle+off);
@@ -62,14 +62,12 @@ function PlayerShipShoot()
 		off1 = 3;
 		off2 = -3;
 		
-		bullet1._hpush = lengthdir_x(9, _angle + off1);
-		bullet1._vpush = lengthdir_y(9, _angle + off1);
+		bullet1.bulletSpeed = 9;
 		bullet1._angle = dire+off1;
 		bullet1.direction = dire+off1;
 	
 
-		bullet2._hpush = lengthdir_x(9, _angle + off2);
-		bullet2._vpush = lengthdir_y(9, _angle + off2);
+		bullet2.bulletSpeed = 9;
 		bullet2._angle = dire+off2;
 		bullet2.direction = dire+off2;
 			
@@ -105,18 +103,15 @@ function PlayerShipShoot()
 		off1 = 3;
 		off2 = -3;
 		
-		bullet1._hpush = lengthdir_x(9, _angle + off1);
-		bullet1._vpush = lengthdir_y(9, _angle + off1);
+		bullet1.bulletSpeed = 9;
 		bullet1._angle = dire+off1;
 		bullet1.direction = dire+off1;
 		
-		bullet2._hpush = lengthdir_x(9, _angle + off2);
-		bullet2._vpush = lengthdir_y(9, _angle + off2);
+		bullet2.bulletSpeed = 9;
 		bullet2._angle = dire+off2;
 		bullet2.direction = dire+off2;
 		
-		bullet._hpush = lengthdir_x(9, _angle + off);
-		bullet._vpush = lengthdir_y(9, _angle + off);
+		bullet.bulletSpeed = 9;
 		bullet._angle = dire+off;
 		bullet.direction = dire+off;
 			
@@ -154,23 +149,19 @@ function PlayerShipShoot()
 		off2 = -1;
 		off0 = -4
 		
-		bullet2._hpush = lengthdir_x(9, _angle + off2);
-		bullet2._vpush = lengthdir_y(9, _angle + off2);
+		bullet2.bulletSpeed = 9;
 		bullet2._angle = dire+off2;
 		bullet2.direction = dire+off2;
 		
-		bullet._hpush = lengthdir_x(9, _angle + off);
-		bullet._vpush = lengthdir_y(9, _angle + off);
+		bullet.bulletSpeed = 9;
 		bullet._angle = dire+off;
 		bullet.direction = dire+off;
 		
-		bullet3._hpush = lengthdir_x(9, _angle + off0);
-		bullet3._vpush = lengthdir_y(9, _angle + off0);
+		bullet3.bulletSpeed = 9;
 		bullet3._angle = dire+off0;
 		bullet3.direction = dire+off0;
 		
-		bullet1._hpush = lengthdir_x(9, _angle + off1);
-		bullet1._vpush = lengthdir_y(9, _angle + off1);
+		bullet1.bulletSpeed = 9;
 		bullet1._angle = dire+off1;
 		bullet1.direction = dire+off1;
 		

@@ -3,15 +3,11 @@
 
 
 
-
-
-
-
 // Inherit the parent event
 event_inherited();
-
+bulletSpeed = 0;
 hpBullet = 200;
-
+precision = 4;
 if (global.piercingShot)
 {
 	hp = 1;
@@ -30,7 +26,18 @@ else
 	hpBounce = 0;
 }
 
-
+if (global.bulletsBifurcateIsOn)
+{
+	bifurcate = true;
+	alarm[1] = 20;
+}
+else
+{
+	bifurcate = false
+}
+alarm[2] = 5;
+startDancing = false
 collisionIds = ds_list_create();
 tocado = false;
 bnc = 0.7;
+dire = choose(1,-1);

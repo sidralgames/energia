@@ -3,6 +3,6 @@
 type = collisionType.custom;
 
 
-
+bulletSpeed = 0;
 
 

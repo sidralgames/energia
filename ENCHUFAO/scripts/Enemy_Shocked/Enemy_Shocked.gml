@@ -22,4 +22,17 @@ function Enemy_Shocked()
 		_vpush = 0;
 		state = ENEMYSTATE.CHASING;	
 	}
+	
+	if (slowed)
+	{
+		slowedCont--;
+	
+		if (slowedCont <= 0)
+		{
+			slowed = false;
+			_hpush = 0;
+			_vpush = 0;
+			state = ENEMYSTATE.CHASING;	
+		}
+	}
 }

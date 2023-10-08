@@ -1,5 +1,24 @@
 /// @description Insert description here
 // You can write your code in this editor
+burned = false;
+
+contBurnedTotalMax = 300;
+contBurnedTotal = contBurnedTotalMax;
+contBurnedMax = 100;
+contBurned = contBurnedMax;
+contBurnPartMax = 5;
+contBurnPart = contBurnPartMax;
+burnFlash = 0;
+
+rojoosc= make_colour_rgb(255,0,68);
+rojo= make_colour_rgb(228,59,69);
+rojo2= make_colour_rgb(158, 40, 53);
+
+slowed = false;
+
+slowedContMax = 30;
+slowedCont = slowedContMax;
+
 repelled = false;
 repelledTimeMax = 20;
 repelledTime = repelledTimeMax;

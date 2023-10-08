@@ -4,11 +4,10 @@
  
 height = sin(random(1));
 
- 
+
 if (global.laser > 0)
 {
 	DrawLaserPlayer(_angle);
-
 }
 
 if (global.externalBatteryOn)

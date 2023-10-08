@@ -2,6 +2,20 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function EnemyBasicChasingIA()
 {
+	if (slowed)
+	{
+		enemySpeed = lerp(enemySpeed, 0, 0.5);
+		slowedCont--;
+		if (slowedCont <= 0)
+		{
+			slowedCont = slowedContMax;
+			slowed = false;
+		}
+	}
+	else
+	{
+		enemySpeed = lerp(enemySpeed, enemySpeedInitial, 0.1);
+	}
 	
 	if (global.haveInvisibiltyCloak && global.invisibleCloak == true)
 	{
