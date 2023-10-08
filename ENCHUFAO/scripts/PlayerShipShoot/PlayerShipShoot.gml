@@ -2,6 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PlayerShipShoot()
 {
+	
 	gamepad_set_vibration(0,0.001*global.ammo,0.001*global.ammo);
 	alarm[4] = 2 ;
 	explo = instance_create_layer(x + ((_hpush*3) * global.relativeSpeed) + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
@@ -21,6 +22,11 @@ function PlayerShipShoot()
 		if (!global.infiniteAmmoIsOn)
 		{
 			global.ammo-=1;
+		}
+		
+		if (global.shootingRecharges)
+		{
+			global.energy+=1;
 		}
 		
 		off =  random_range(offRange,-offRange)
@@ -45,6 +51,11 @@ function PlayerShipShoot()
 		if (!global.infiniteAmmoIsOn)
 		{
 			global.ammo-=2;
+		}
+		
+		if (global.shootingRecharges)
+		{
+			global.energy+=3
 		}
 		
 		off =  random_range(offRange,-offRange)
@@ -83,6 +94,12 @@ function PlayerShipShoot()
 		{
 			global.ammo-=3;
 		}
+		
+		if (global.shootingRecharges)
+		{
+			global.energy+=3
+		}
+		
 		
 		off = 0;
 		off1 = 3;
@@ -125,6 +142,11 @@ function PlayerShipShoot()
 		if (!global.infiniteAmmoIsOn)
 		{
 			global.ammo-=4;
+		}
+		
+		if (global.shootingRecharges)
+		{
+			global.energy+=4
 		}
 		
 		off = 1;

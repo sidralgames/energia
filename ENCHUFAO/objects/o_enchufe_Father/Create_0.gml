@@ -7,7 +7,7 @@
 
 
 randomize();
-
+scale = 1;
 enchufeBomb = false;
 
 deleteData = false;
@@ -57,6 +57,10 @@ upgradeOvercharge = false;
 upgradeClusterBomb = false;
 upgradeLaserMax = false;
 upgradeBonus = false;
+upgradeFriend = false
+upgradeDobleDoble = false;
+
+
 charge = 0;
 maxCharge = 200;
 _hpush = choose(random_range(0.05, 0.1),-random_range(0.05, 0.1))

@@ -5,7 +5,7 @@ hpMax = 200;
 hp = hpMax;
 contBanner = 60;
 bannerCreated = false;
-
+hittedByBomb = false;
 
 
 

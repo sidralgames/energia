@@ -35,7 +35,7 @@ else
 	}
 	else
 	{
-		part_particles_create(global.naveP_sys, x, y, global.naveP , 5)
+		part_particles_create(global.naveP_sys, x,y, global.naveP, 1);
 	}
 
 

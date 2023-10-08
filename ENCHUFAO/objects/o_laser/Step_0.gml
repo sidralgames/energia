@@ -12,14 +12,14 @@ if (canShot)
 	colPlayer = collision_rectangle(x-2,y,x+2,y-16-long*image_yscale,o_playerShip,false,true)
 	colEnemy = collision_rectangle(x-2,y,x+2,y-16-long*image_yscale,o_enemyP,false,true)
 	colLaser = collision_rectangle(x-2,y,x+2,y-26-long*image_yscale,o_laser,false,true)
-	if ( ( (colPlayer) && (global.invisibleCloak == false) ) || (colEnemy) && (colLaser) )
-	&& (laserActive = false) 
+	if ( ((colPlayer) && (global.invisibleCloak == false)) || (colEnemy) )
+	 && (colLaser) && (laserActive = false) 
 	{
 		
 		laserActive = true;
 		alarm[0] = 25;
 	}
-	if (laserActive = true) && (alarm[1] > 0)
+	if (laserActive = true) && (alarm[1] > 0) && (colLaser)
 	{
 	
 		//if instance_exists(lightLaser)
@@ -52,7 +52,7 @@ if (canShot)
 				else
 				{
 					audio_play_sound_on(global.audioEmitter, snd_hit, false, 50)
-					global.hp -=1;
+					global.hp -=1 * global.damageReceived;
 				}
 				screenShake(4,30)
 			}

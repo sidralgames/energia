@@ -6,8 +6,8 @@ function PlayerStats_MP3()
 	global.spritePart = s_bullet_part_BlueO;
 	global.bulletPart_sprite = s_bullet_part_BlueO;
 		
-	global.energyTotal = 350;
-	global.energy = global.energyTotal;
+	global.energyMax = 350;
+	global.energy = global.energyMax;
 	
 	global.hpMax = 3;
 	global.hp = 3;
@@ -23,7 +23,7 @@ function PlayerStats_MP3()
 	global._speed = 3.35;
 	global.walkAcceleration = 0.2;
 	
-	global.energyStat = global.energyTotal / 50;
+	global.energyStat = global.energyMax / 50;
 	global.speedStat = 6;
 	global.hpStat = global.hpMax;
 	global.ammoStat = global.ammoMax / 50;

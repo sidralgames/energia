@@ -41,8 +41,8 @@ function CheckEnchufeUpgrade()
 		}
 		inEnchufe.charging = true;
 		upgraded = true;
-		global.energyTotal += 50;
-		global.energy = global.energyTotal;
+		global.energyMax += 50;
+		global.energy = global.energyMax;
 		global.energyStat+=1;
 		
 	}
@@ -215,7 +215,7 @@ function CheckEnchufeUpgrade()
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.hp = global.hpMax;
-		global.energy = global.energyTotal;
+		global.energy = global.energyMax;
 		global.ammo = global.ammoMax;
 		global.laser = global.laserMax;
 		if (global.shields <= 8)
@@ -350,6 +350,49 @@ function CheckEnchufeUpgrade()
 		upgraded = true;
 		global.laserDamage+=0.5;
 		global.laserWidth+=2;
+		
+	}
+	else if (inEnchufe.upgradeDobleDoble = true) && (upgraded = false)
+	{
+		if (!global.dobleDobleIsUpgraded)
+		{
+			global.dobleDobleIsUpgraded = true;
+			AddUpgradeDobleDoblePlayer();
+		}
+		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+		{
+			upg = ds_map_find_value(global.PlayerUpgradesList, i)
+			if (upg.obj = o_enchufeUpgadeDobleDoble)
+			{
+				upg.times+=1;
+			}
+		}
+		
+		inEnchufe.charging = true;
+		upgraded = true;
+		
+		global.damageDealt = 2;
+		global.damageReceived = 2;
+		
+	}
+	else if (inEnchufe.upgradeFriend = true) && (upgraded = false)
+	{
+		if (!global.friendIsUpgraded)
+		{
+			global.friendIsUpgraded = true;
+			AddUpgradeFriendPlayer();
+		}
+		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+		{
+			upg = ds_map_find_value(global.PlayerUpgradesList, i)
+			if (upg.obj = o_enchufeUpgadeFriend)
+			{
+				upg.times+=1;
+			}
+		}
+		
+		inEnchufe.charging = true;
+		upgraded = true;
 		
 	}
 	else if (inEnchufe.upgradeBonus = true) && (upgraded = false)

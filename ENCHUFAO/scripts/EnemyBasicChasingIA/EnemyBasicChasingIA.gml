@@ -31,7 +31,7 @@ function EnemyBasicChasingIA()
 	}
 	else
 	{
-		myPath = path_add();
+		
 		mp_grid_path(gridRoom1, myPath, x, y, o_playerShip.x ,o_playerShip.y, true);
 	
 		if tile_meeting(x + lengthdir_x(20, 1), y+ lengthdir_y(20, 1), "Tiles") ||

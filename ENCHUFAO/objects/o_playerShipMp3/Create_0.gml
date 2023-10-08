@@ -42,7 +42,7 @@ layer_set_visible("EffectBreach", false);
 pluggedTimer = 0;
 pluggedShip = false
 global.pitch = 1;
-global.energy = global.energyTotal;
+global.energy = global.energyMax;
 upgraded = false;
 if (room != Sala_Inicio)
 {

@@ -4,7 +4,7 @@ rojoosc= make_colour_rgb(255,0,68);
 rojo= make_colour_rgb(228,59,69);
 rojo2= make_colour_rgb(158, 40, 53);
 
-draw_sprite_ext(sprite_index,image_index, x,y, 1, 1,_angle, image_blend, image_alpha)
+draw_sprite_ext(sprite_index,image_index, x,y, scale, scale,_angle, image_blend, image_alpha)
 
 if instance_exists(o_playerShip)
 {

@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_enchufeUpgade",
+  "name": "o_enchufeUpgadeDobleDoble",
   "spriteId": {
-    "name": "s_enchufeUpgradeLaserMax",
-    "path": "sprites/s_enchufeUpgradeLaserMax/s_enchufeUpgradeLaserMax.yy",
+    "name": "s_enchufeUpgradeDobleDoble",
+    "path": "sprites/s_enchufeUpgradeDobleDoble/s_enchufeUpgradeDobleDoble.yy",
   },
   "solid": false,
   "visible": true,
@@ -29,7 +29,6 @@
   "physicsShapePoints": [],
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
   ],
   "properties": [],

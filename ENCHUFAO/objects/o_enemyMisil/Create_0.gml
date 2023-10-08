@@ -1,5 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
+repelled = false;
+repelledTimeMax = 20;
+repelledTime = repelledTimeMax;
+state =-1;
+myPath = path_add();
 _angle=0;
 isShield = false;
 isImmortal = false

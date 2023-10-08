@@ -9,7 +9,7 @@ if (global.shields<1) && (other.isImmortal = false)
 		audio_play_sound_on(global.audioEmitter, snd_hit, false, 50)
 		alarm[1] = 30
 		tocado = true;
-		global.hp -=1;
+		global.hp -= 1 * global.damageReceived;
 		screenShake(4,30)
 		other._hp = 0;
 		

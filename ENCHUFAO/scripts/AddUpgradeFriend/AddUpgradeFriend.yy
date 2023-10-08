@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "BossGarbanzoLaser",
+  "name": "AddUpgradeFriend",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Objetos",
-    "path": "folders/Objetos.yy",
+    "name": "UPGRADESLIST",
+    "path": "folders/Scripts/GENERAL/UPGRADESLIST.yy",
   },
 }

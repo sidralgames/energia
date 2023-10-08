@@ -1,13 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
 randomize();
+
 SetHUE();
+
 global.Go = false;
 global.enemies = 0;
-global.enemiesMax = 1 + (global.level * 2);
+global.enemiesMax =  min(12, 3 + global.level) //1 + (global.level * 2);
 global.totalEnemiesOnScreen = 0;
 spawners=0;
-randomize();
+
 enemiesMin = min(3,global.level+1);
 enemiesMax = min(7,global.level+2);
 levelType = choose(0,0,0);

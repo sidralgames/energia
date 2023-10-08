@@ -37,8 +37,12 @@ function Enemy_Chasing()
 		}
 		else
 		{
-			part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(8,direction), y-lengthdir_y(8,direction), global.naveEnemy_Waiting , 1)
-
+			contParts --;
+			if (contParts <=0)
+			{
+				part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(8,direction), y-lengthdir_y(8,direction), global.naveEnemy_Waiting , 1)
+				contParts = contPartsInitial;
+			}
 		}
 		
 		if (alarm[4] <= 0)

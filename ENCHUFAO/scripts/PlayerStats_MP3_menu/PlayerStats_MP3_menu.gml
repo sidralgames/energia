@@ -6,8 +6,8 @@ global.spriteShip = splayer_mp3;
 	global.spritePart = s_nave_part;
 	global.bulletPart_sprite = s_nave_part;
 		
-	global.energyTotal = 350000000000000000;
-	global.energy = global.energyTotal;
+	global.energyMax = 350000000000000000;
+	global.energy = global.energyMax;
 	
 	global.hpMax = 3;
 	global.hp = 3;

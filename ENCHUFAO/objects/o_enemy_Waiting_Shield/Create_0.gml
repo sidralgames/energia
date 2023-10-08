@@ -2,6 +2,12 @@
 // You can write your code in this editor
 type = collisionType.custom;
 isShield = false;
+myPath = path_add();
+repelled = false;
+repelledTimeMax = 20;
+repelledTime = repelledTimeMax;
+
+
 isImmortal = false;
 enemyIsMini = false;
 canBounce = false;

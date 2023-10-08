@@ -18,6 +18,7 @@ function UnplugPETA()
 		global.hp = round(global.hp)
 		global.laserDrain = 0.005;
 		o_playerShip.pluggedFinal = false;
+		o_charger.scale = 1;
 	}
 	
 }

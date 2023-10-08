@@ -14,10 +14,10 @@ function StrandedShipIsCalled()
 		}
 		
 		hspeed = dirHspeed;
+		image_blend = c_ltgray;
 		vspeedTurn=0;
 		turnDistanceD = random_range(530,550);
 		turnDistanceI = random_range(90,110);
-		image_blend = c_ltgray;
 		strandedShipCableStat = random_range(1.25,2.25);
 		maxDistance = strandedShipCableStat *35;
 		cable = instance_create_layer(x,y,"Cable", o_cableStrandedShip);
@@ -28,13 +28,13 @@ function StrandedShipIsCalled()
 	_angle = direction;
 	hspeed = dirHspeed * global.relativeSpeed;
 	vspeed = vspeedTurn * global.relativeSpeed;
-	dirHspeed = lerp(dirHspeed, 4*sign(hspeed), 0.005)
-	
+	dirHspeed = lerp(dirHspeed, 3*sign(hspeed), 0.005)
+	part_particles_create(global.naveP_sys, x,y, global.naveP, 1);
 	if (hspeed > 0)
 	{
 		if (x > __view_get( e__VW.XView, 0 )+turnDistanceD)
 		{
-			vspeedTurn = lerp(vspeedTurn, dirVspeed, 0.05);
+			vspeedTurn = lerp(vspeedTurn, dirVspeed, 0.08);
 			dirHspeed = lerp(dirHspeed, 2*sign(hspeed), 0.05);
 		}
 		else
@@ -53,7 +53,7 @@ function StrandedShipIsCalled()
 	{
 		if (x < __view_get( e__VW.XView, 0 )+turnDistanceI)
 		{
-			vspeedTurn = lerp(vspeedTurn, dirVspeed, 0.05);	
+			vspeedTurn = lerp(vspeedTurn, dirVspeed, 0.08);	
 			dirHspeed = lerp(dirHspeed, 2*sign(hspeed), 0.05);
 		}
 		else

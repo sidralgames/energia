@@ -18,6 +18,8 @@ function Enemy_Shocked()
 	
 	if (!shocked) 
 	{
+		_hpush = 0;
+		_vpush = 0;
 		state = ENEMYSTATE.CHASING;	
 	}
 }

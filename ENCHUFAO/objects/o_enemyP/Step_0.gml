@@ -9,6 +9,16 @@ if (global.changingTiles)
 	
 }
 
+if (repelled = true)
+{
+	_angle = -_angle;
+	repelledTime--;
+	if (repelledTime <= 0)
+	{
+		repelled = false;
+		repelledTime = repelledTimeMax;
+	}
+}
 
 checkHPEnemies();
 

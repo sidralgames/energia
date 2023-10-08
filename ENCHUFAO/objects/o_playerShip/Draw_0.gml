@@ -13,8 +13,8 @@ if (global.laser > 0)
 
 if (global.externalBatteryOn)
 {
+	draw_sprite_ext(s_enchufeChargeHP_In, 0, x-21, y-25, (contExternalBattery/300)/2 ,1, 0, image_blend, image_alpha)
 	draw_sprite_ext(s_enchufeChargeHP_Out, 0, x-21, y-25, 0.5,1, 0, image_blend, image_alpha)	
-	draw_sprite_ext(s_enchufeChargeHP_In, 0, x-21, y-25, (contExternalBattery/300)/2 ,1, 0, image_blend, image_alpha)	
 }
 
 
@@ -39,24 +39,26 @@ if instance_exists(inEnchufe)
 	}
 }
 
-if (connectedToShip) && (!pluggedShip)
+if instance_exists(connectedToShip)
 {
-	if (radi > 12)
+	if (connectedToShip) && (!pluggedShip)
 	{
-		radi-=0.15;
-	}
-	else
-	{
-		radi = 16;
-	}
+		if (radi > 12)
+		{
+			radi-=0.15;
+		}
+		else
+		{
+			radi = 16;
+		}
 	
-	draw_set_color(c_white)
-	draw_circle(connectedToShip.x, connectedToShip.y, radi+0.5, true)
-	draw_circle(connectedToShip.x, connectedToShip.y, radi, true)
-	draw_circle(connectedToShip.x, connectedToShip.y, 12, true)
-	draw_circle(connectedToShip.x, connectedToShip.y, 12.3, true)
+		draw_set_color(c_white)
+		draw_circle(connectedToShip.x, connectedToShip.y, radi+0.5, true)
+		draw_circle(connectedToShip.x, connectedToShip.y, radi, true)
+		draw_circle(connectedToShip.x, connectedToShip.y, 12, true)
+		draw_circle(connectedToShip.x, connectedToShip.y, 12.3, true)
+	}
 }
-
 draw_sprite_ext(global.spriteShip,image_index,x,y,1,1,_angle,_colorWhite,_alpha)
 
 if (global.ammo <= global.ammoMax/5)
@@ -71,7 +73,7 @@ if (global.ammo <= global.ammoMax/5)
 		draw_sprite_ext(s_ammoStranded, imageStrandedAmmo, x-12, y-22, 1,1, 0, image_blend, image_alpha)	
 	}
 }
-if (global.hp <=1)
+if (global.hp <= 1*global.damageReceived)
 {
 	imageStrandedHp+=0.05;
 

@@ -6,8 +6,8 @@ function PlayerStats_Blue()
 	global.spritePart = s_bullet_part_Blue;
 	global.bulletPart_sprite = s_bullet_part_Blue;
 		
-	global.energyTotal = 300;
-	global.energy = global.energyTotal;
+	global.energyMax = 300;
+	global.energy = global.energyMax;
 	
 	global.hpMax = 2;
 	global.hp = 2;
@@ -24,7 +24,7 @@ function PlayerStats_Blue()
 	global._speed = 3.5;
 	global.walkAcceleration = 0.2;
 	
-	global.energyStat = global.energyTotal / 50;
+	global.energyStat = global.energyMax / 50;
 	global.speedStat = 7;
 	global.hpStat = global.hpMax;
 	global.ammoStat = global.ammoMax / 50;

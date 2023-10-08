@@ -32,4 +32,6 @@ function Unplug()
 		global.amplifyPowerAmmo = 0;
 	}
 	
+	o_charger.scale = 1;
+	
 }

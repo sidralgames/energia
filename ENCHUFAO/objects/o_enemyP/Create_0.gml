@@ -1,5 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
+repelled = false;
+repelledTimeMax = 20;
+repelledTime = repelledTimeMax;
+myPath = path_add();
+contPartsInitial =3;
+contParts = contPartsInitial;
 isShield = false;
 bulletDamageCalculated = false;
 bulletDamageTime = 30;

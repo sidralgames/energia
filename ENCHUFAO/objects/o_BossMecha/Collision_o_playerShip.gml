@@ -9,7 +9,7 @@ with (o_playerShip)
 		audio_play_sound_on(global.audioEmitter, snd_hit, false, 50)
 		alarm[1] = 50
 		tocado = true;
-		global.hp -=1;
+		global.hp -= 1 * global.damageReceived;
 		screenShake(4,30)
 		global.hitsTaken+=1;
 		if (o_BossMecha.attack != 0)

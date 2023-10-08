@@ -39,7 +39,7 @@ function PlayerShipLaser(argument0)
 			 if (global.wallgrid_[# (_x/32), (_y/32)] != FLOOR) && (_x > 40) && (_x < room_width-40)
 			 && (_y > 40) && (_y < room_height-40)
 			 {
-				contExploTile+=1.3;
+				contExploTile+=1.3 * global.damageDealt;///Trying, maybe too powerfull
 				if (contExploTile >=35)
 				{
 					tilemap_set_at_pixel(_tilemap_id, 0, _x, _y);
@@ -76,7 +76,7 @@ function PlayerShipLaser(argument0)
 		screenShake(4,10);
 		if (boss.isImmortal == false) 
 		{
-			boss.hp -=(0.25+global.laserDamage+(global.amplifyPowerLaser/2));
+			boss.hp -= (0.25+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
 		}
 	}
 	
@@ -88,11 +88,11 @@ function PlayerShipLaser(argument0)
 		screenShake(4,10);
 		if (enemy.isShield == true) || (enemy.enemyIsMini == true)
 		{
-			enemy._hp -=(1.95+global.laserDamage+(global.amplifyPowerLaser/2));
+			enemy._hp -= (1.95+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
 		}
 		else
 		{
-			enemy._hp -=(0.25+global.laserDamage+(global.amplifyPowerLaser/2));
+			enemy._hp -= (0.25+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
 		}
 		enemy.flashAlpha = 1;
 		//explo = instance_create(enemy.x, enemy.y, o_explo2)

@@ -60,7 +60,7 @@ for(var i = 0; i < maxLenght_; i++)
 				audio_play_sound_on(global.audioEmitter, snd_hit, false, 50)
 				alarm[1] = 50
 				tocado = true;
-				global.hp -=1;
+				global.hp -= 1 * global.damageReceived;
 				screenShake(4,30)
 				global.hitsTaken+=1;
 			}

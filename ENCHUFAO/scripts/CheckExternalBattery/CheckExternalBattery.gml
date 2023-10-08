@@ -7,7 +7,10 @@ function CheckExternalBattery()
 		if (key_buttonR) && (haveUsedBattery = false)
 		{
 			haveUsedBattery = true;
-			global.externalBatteryOn = true;	
+			global.externalBatteryOn = true;
+			global.ammo = global.ammoMax;
+			global.laser = global.laserMax;
+			global.energy = global.energyMax;
 		}
 	
 		if (global.externalBatteryOn)

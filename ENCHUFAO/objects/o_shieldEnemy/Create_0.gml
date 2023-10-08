@@ -9,5 +9,8 @@ canBounce = false;
 enemyIsMini = false;
 isMotherShip = false;
 isImmortal = false;
+repelled = false;
+repelledTimeMax = 20;
+repelledTime = repelledTimeMax;
 
-
+state = -1;

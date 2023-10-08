@@ -16,9 +16,37 @@ global.allPETAisMulti = false;
 global.haveExternalBattery = true;
 global.externalBatteryOn = false;
 
-global.piercingShot = false;
 
+//--CALL FOR HELP--//
 global.haveCallForHelp = true;
+
+//-------BULLET MODIFICATORS & OTHERS----------//
+global.piercingShot = false;
+global.bouncingBulletsIsOn = false;
+global.bulletsPushenemiesIsOn = false;
+global.bulletsAreBombs = false;
+global.bulletsDestroyBulletsIsOn = false;
+
+
+
+//ONLY EN LA HEAD
+global.bulletsAeSmartIsOn = false;
+global.bulletsDanceIsOn = false; //movimiento en s
+global.bulletsBifurcateIsOn = false; // al cabo de un tiempo caa una en ods
+
+global.laserLastLongIsOn = false; //ibujalo mas fames y ue localcule en el step tmb mas clao
+global.laserSlowEnemies = false;
+global.laserBurnEnemies = false;
+global.laserAtractEnemies = false;
+global.laserDobleIsOn = false;
+global.laserStunsEnemies = false;
+
+
+
+
+
+global.shootingRecharges = false;
+global.friendIsUpgraded = false;
 
 
 
@@ -148,6 +176,7 @@ instance_create(-100,-100,o_partEnergy);
 instance_create(-100,-100,o_partBalaBossGarbanzo);
 instance_create(-100,-100,o_partNaveEnemy_Mini);
 instance_create(-100,-100,o_partNaveP_cloak)
+instance_create(-100,-100,o_partNaveFriend)
 
 
 global.repairingSprite = s_repairingPart;
@@ -221,6 +250,8 @@ AddUpgradeOvercharge();
 AddUpgradeClusterBomb();//15
 AddUpgradeLaser();
 AddUpgradeBonus();
+AddUpgradeDobleDoble();
+AddUpgradeFriend();
 
 global.ammoIsUpgraded = false;
 global.cableIsUpgraded = false;
@@ -239,12 +270,17 @@ global.overchargeIsUpgraded = false;
 global.clusterIsUpgraded = false;
 global.laserIsUpgraded = false;
 global.bonusIsUpgraded = false;
+global.dobleDobleIsUpgraded = false;
+//global.friendIsUpgraded = true; MOVED UP
 
+//--------UPGRADE RELATED--------//
 global.bombIsClusterBomb = false;
 global.chargerShoots = false;
+global.damageDealt = 1;
+global.damageReceived = 1;
 
 
-//-------BONUS UPGRADE FOR EACH SHIP--------//
+//---BONUS UPGRADE FOR EACH SHIP---//
 global.shipGreenBonusUpgraded = false;
 global.shipRedBonusUpgraded = false;
 global.shipBlueBonusUpgraded = false;

@@ -96,6 +96,6 @@ _hpush = choose(random_range(-1.5,-1),random_range(1.5,1));
 _vpush = choose(random_range(-1.5,-1),random_range(-1.5,-1));
 bnc = 1;
 _angle = image_angle;
-xscale = 0.8;
-yscale = 0.8;
+xscale = 0.7;
+yscale = 0.7;
 

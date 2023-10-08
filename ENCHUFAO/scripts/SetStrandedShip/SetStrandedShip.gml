@@ -15,7 +15,7 @@ function SetStrandedShip()
 
 	if (sprite = splayer)
 	{
-		strandedShipCableStat = 3.5;
+		strandedShipCableStat = 3;
 		strtandedPrecision = 2;
 		weight = 1;
 		minSpeed = 1.5;
@@ -26,7 +26,7 @@ function SetStrandedShip()
 	}
 	else if (sprite = splayer_Blue)
 	{
-		strandedShipCableStat = 2;
+		strandedShipCableStat = 1.5;
 		strtandedPrecision = 2.75;
 		weight = 1;
 		minSpeed = 1.95;
@@ -36,7 +36,7 @@ function SetStrandedShip()
 	}
 	else if (sprite = splayer_Dark)
 	{
-		strandedShipCableStat = 3;	
+		strandedShipCableStat = 2.5;	
 		strtandedPrecision = 2;
 		weight = 1;
 		minSpeed = 1.75;
@@ -46,7 +46,7 @@ function SetStrandedShip()
 	}
 	else if (sprite = splayer_Red)
 	{
-		strandedShipCableStat = 4;
+		strandedShipCableStat = 3.5;
 		strtandedPrecision = 2;
 		weight = 0.5;
 		minSpeed = 1.5;
@@ -56,7 +56,7 @@ function SetStrandedShip()
 	}
 	else if (sprite = splayer_Purple)
 	{
-		strandedShipCableStat = 3;
+		strandedShipCableStat = 2.5;
 		strtandedPrecision = 2;
 		weight = 1;
 		minSpeed = 1.75;
@@ -66,7 +66,7 @@ function SetStrandedShip()
 	}
 	else if (sprite = splayer_mp3)
 	{
-		strandedShipCableStat = 3;
+		strandedShipCableStat = 2.5;
 		strtandedPrecision = 2;
 		weight = 1;
 		minSpeed = 1.75;

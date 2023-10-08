@@ -6,13 +6,15 @@ function StrandedShipShotCalled()
 			
 	if instance_exists(nearestEnemy)
 	{
-		if (point_distance(x, y, nearestEnemy.x, nearestEnemy.y) < 150)
+		if (point_distance(x, y, nearestEnemy.x, nearestEnemy.y) < 100) && (!tile_meeting(x,y,"Tiles"))
 		{
 			_angle = point_direction(x,y,nearestEnemy.x, nearestEnemy.y)
 			if (alarm[1] <= 0)
 			{
 				StrandedShipShoot();
 			}
+			
+			
 		}
 		else
 		{

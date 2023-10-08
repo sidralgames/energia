@@ -5,7 +5,7 @@ draw_set_halign(fa_left)
 azul = make_color_rgb(44,232, 245) 
 azulO = make_color_rgb(0,149,233)
 rojo = make_color_rgb(228,59, 68) 
-//draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+40,"ENERGY: " + string(round(global.energy)) + " / " + string(round(global.energyTotal)))
+//draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+40,"ENERGY: " + string(round(global.energy)) + " / " + string(round(global.energyMax)))
 
 //draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+60,"HP: " + string(round(global.hp)) + " / " + string(round(global.hpMax)))
 
@@ -49,11 +49,11 @@ if (!isPaused)
 		
 		if (global.energy <= global.energyLow+30)
 		{
-			draw_sprite_ext(s_energyBarDanger,0,__view_get( e__VW.XView, 0 )+17,__view_get( e__VW.YView, 0 )+47,(global.energy/global.energyTotal),1,0,image_blend, image_alpha)
+			draw_sprite_ext(s_energyBarDanger,0,__view_get( e__VW.XView, 0 )+17,__view_get( e__VW.YView, 0 )+47,(global.energy/global.energyMax),1,0,image_blend, image_alpha)
 		}
 		else
 		{
-			draw_sprite_ext(s_energyBar_in,0,__view_get( e__VW.XView, 0 )+17,__view_get( e__VW.YView, 0 )+47,(global.energy/global.energyTotal),1,0,image_blend, image_alpha)
+			draw_sprite_ext(s_energyBar_in,0,__view_get( e__VW.XView, 0 )+17,__view_get( e__VW.YView, 0 )+47,(global.energy/global.energyMax),1,0,image_blend, image_alpha)
 			
 		}
 		draw_sprite_ext(s_laserUI,0,__view_get( e__VW.XView, 0 )+13,__view_get( e__VW.YView, 0 )+68,1,(global.laser/global.laserMax),0,image_blend, image_alpha)

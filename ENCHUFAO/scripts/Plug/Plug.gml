@@ -12,6 +12,35 @@ function Plug()
 	enchufe = inEnchufe;
 	global.plugging = true;
 	enchufe.enchufeActive = true;
-	global.xToPlug = enchufe.x;
-	global.yToPlug = enchufe.y;
+	
+	if (enchufe.isPETA)
+	{
+		if (enchufe.fromFriend)
+		{
+			o_charger.scale = 0.75;
+		}
+		else
+		{
+			o_charger.scale = 0.85;
+		}
+		
+		global.xToPlug = enchufe.x;
+		global.yToPlug = enchufe.y;
+	}
+	else
+	{
+		if (enchufe.final)
+		{
+			o_charger.scale = 1.5;
+			global.xToPlug = enchufe.x;
+			global.yToPlug = enchufe.y-15;
+		}
+		else
+		{
+			o_charger.scale = enchufe.scale;
+			global.xToPlug = enchufe.x;
+			global.yToPlug = enchufe.y;
+		}
+	}
+	
 }

@@ -3,7 +3,7 @@
 function PlayerPluggedMainEnchufes()
 {
 	//-----------ALL ENERGY---------//
-	if (global.energy <= global.energyTotal)
+	if (global.energy <= global.energyMax)
 	{
 		if (alarm[4] <=0)
 		{

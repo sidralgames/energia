@@ -1,5 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+repelled = false;
+repelledTimeMax = 20;
+repelledTime = repelledTimeMax;
+
+
 isShield = false;
 isImmortal = false;
 type = collisionType.custom;

@@ -5,7 +5,7 @@ rojo= make_colour_rgb(228,59,69);
 blanco= make_colour_rgb(255,255,255);
 height = sin(random(1));
  
-if (laserActive) && (alarm[1] > 0)
+if (laserActive) && (alarm[1] > 0)  && (colLaser)
 {
 	draw_set_alpha(0.8+random(0.6))
 	draw_circle_colour(x-1,y-7*image_yscale,(height*2)+6,rojoosc, rojoosc, false)

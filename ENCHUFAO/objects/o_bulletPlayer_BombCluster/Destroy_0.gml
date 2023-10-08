@@ -4,16 +4,16 @@ gamepad_set_vibration(0,0.3,0.3);
 if (hitByLaser = false)
 {
 	ebomb = instance_create(x,y,o_exploBomb);
-	ebomb.image_xscale = 1.3;
-	ebomb.image_yscale = 1.3;
+	ebomb.scale = 1.3;
+	ebomb.scale = 1.3;
 	ebomb.sprite_index = s_explo2;
 	instance_create(x,y,o_shockwaveTiles)
 }
 else
 {
 	ebomb = instance_create(x,y,o_exploBomb);
-	ebomb.image_xscale = 2;
-	ebomb.image_yscale = 2;
+	ebomb.scale = 2;
+	ebomb.scale = 2;
 	ebomb.sprite_index = s_explo2;
 	instance_create(x,y,o_shockwaveTiles)
 }
