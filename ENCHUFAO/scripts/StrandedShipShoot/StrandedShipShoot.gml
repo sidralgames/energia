@@ -30,14 +30,12 @@ function StrandedShipShoot()
 		off1 = 3;
 		off2 = -3;
 		
-		bullet1._hpush = lengthdir_x(9, _angle + off1);
-		bullet1._vpush = lengthdir_y(9, _angle + off1);
+		bullet1.bulletSpeed = 8;
 		bullet1._angle = _angle+off1;
 		bullet1.direction = _angle+off1;
 	
 
-		bullet2._hpush = lengthdir_x(9, _angle + off2);
-		bullet2._vpush = lengthdir_y(9, _angle + off2);
+		bullet2.bulletSpeed = 8;
 		bullet2._angle = _angle+off2;
 		bullet2.direction = _angle+off2;
 			

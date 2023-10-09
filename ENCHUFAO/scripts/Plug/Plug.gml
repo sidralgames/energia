@@ -13,6 +13,24 @@ function Plug()
 	global.plugging = true;
 	enchufe.enchufeActive = true;
 	
+	if (enchufe.hp)
+	{
+		CheckForUpgradeEnchufe(global.enchufeHPUpgradesList, global.enchufeHPUpgradesNum)
+	}
+	else if (enchufe.ammo)
+	{
+		CheckForUpgradeEnchufe(global.enchufeAmmoUpgradesList, global.enchufeAmmoUpgradesNum)
+	}
+	else if (enchufe.shield)
+	{
+		CheckForUpgradeEnchufe(global.enchufeLaserUpgradesList, global.enchufeLaserUpgradesNum)
+	}
+	else if (enchufe.energy)
+	{
+		CheckForUpgradeEnchufe(global.enchufeEnergyUpgradesList, global.enchufeEnergyUpgradesNum)
+	}
+	
+	
 	if (enchufe.isPETA)
 	{
 		if (enchufe.fromFriend)

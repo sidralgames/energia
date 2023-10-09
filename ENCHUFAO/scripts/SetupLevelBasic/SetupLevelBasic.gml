@@ -20,6 +20,9 @@ function SetupLevelBasic()
 	
 	PetasInLevelMax = 2;
 	PetasInLevel = 0;
+	
+	UpgradesEnchufesInLevelMax = 3;
+	UpgradesEnchufesInLevel = 0;
 
 	__background_set( e__BG.X, 0, irandom(2000) );
 	__background_set( e__BG.Y, 0, irandom(1000) );
@@ -110,6 +113,7 @@ function SetupLevelBasic()
 	
 	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo)
 	|| (!enchufeShield) || (!enchufeFinal) || (!strandedShipOK) 
+	|| (UpgradesEnchufesInLevel < 1)
 
 	{
 		room_restart();

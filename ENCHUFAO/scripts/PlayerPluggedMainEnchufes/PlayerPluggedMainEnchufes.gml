@@ -3,6 +3,8 @@
 function PlayerPluggedMainEnchufes()
 {
 	//-----------ALL ENERGY---------//
+		
+	
 	if (global.energy <= global.energyMax)
 	{
 		if (alarm[4] <=0)
@@ -13,10 +15,25 @@ function PlayerPluggedMainEnchufes()
 			
 		global.energy+=0.75*global.chargeTime;
 	}
+	//------------ENERGY----------//
+	if (global.chargingEnergy = true)
+	{
+		if (checkUpgradesOfEnchufe = false)
+		{
+			CheckUpgradesOfEnchufe(global.enchufeEnergyUpgradesList, global.enchufeEnergyUpgradesNum);
+			checkUpgradesOfEnchufe = true;
+		}
+	}
 	
 	//------------HP-----------//
 	if (global.chargingHp = true)
 	{
+		if (checkUpgradesOfEnchufe = false)
+		{
+			CheckUpgradesOfEnchufe(global.enchufeHPUpgradesList, global.enchufeHPUpgradesNum);
+			checkUpgradesOfEnchufe = true;
+		}
+		
 		if (global.hp < global.hpMax)
 		{
 			global.hp +=0.007*global.chargeTime;
@@ -31,6 +48,12 @@ function PlayerPluggedMainEnchufes()
 	//------------SHIELD-----------//
 	if (global.chargingLaser = true)
 	{
+		if (checkUpgradesOfEnchufe = false)
+		{
+			CheckUpgradesOfEnchufe(global.enchufeLaserUpgradesList, global.enchufeLaserUpgradesNum);
+			checkUpgradesOfEnchufe = true;
+		}
+		
 		if (global.laser <= global.laserMax)
 		{
 			global.laser +=0.005*global.chargeTime;
@@ -53,6 +76,11 @@ function PlayerPluggedMainEnchufes()
 	//------------AMMO-----------//
 	if (global.chargingAmmo = true)
 	{
+		if (checkUpgradesOfEnchufe = false)
+		{
+			CheckUpgradesOfEnchufe(global.enchufeAmmoUpgradesList, global.enchufeAmmoUpgradesNum);
+			checkUpgradesOfEnchufe = true;
+		}
 		if (global.ammo <= global.ammoMax)
 		{
 			global.ammo +=0.4*global.chargeTime;

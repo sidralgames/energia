@@ -32,6 +32,20 @@ function Unplug()
 		global.amplifyPowerAmmo = 0;
 	}
 	
+	o_main.checkUpgradesOfEnchufe = false;
+	
+	//-------BULLET MODIFICATORS----------//
+	global.piercingShot = false;
+	global.bouncingBulletsIsOn = false;
+	global.bulletsPushenemiesIsOn = false;
+	global.bulletsAreBombs = false;
+	global.bulletsDestroyBulletsIsOn = false; 
+	global.bulletsAeSmartIsOn = false; 
+	global.bulletsBifurcateIsOn = false; 
+	global.bulletsDanceIsOn = false; 
+
+	
+	
 	o_charger.scale = 1;
 	
 }

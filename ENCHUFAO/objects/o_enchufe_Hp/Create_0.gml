@@ -17,3 +17,4 @@ if (global.level > 2)
 			instance_create_layer(x,y, "Enemies",choose(o_enemyEnchufeMisil, o_enemyEnchufeMisil_v2));
 	}
 }
+

@@ -26,10 +26,13 @@ global.bouncingBulletsIsOn = false;
 global.bulletsPushenemiesIsOn = false;
 global.bulletsAreBombs = false;
 global.bulletsDestroyBulletsIsOn = false; ///////// OK
-global.bulletsAeSmartIsOn = true; /////////// OK
+global.bulletsAeSmartIsOn = false; /////////// OK
 global.bulletsBifurcateIsOn = false; /////// OK
 global.bulletsDanceIsOn = false; ////////////OK movimiento en s
 
+
+global.havePickedBouncingBullets = false;
+global.havePickedSmartBullets = false;
 
 //------LASER MODIFICATORS-----------//
 global.laserBurnEnemies = true; /////////// OK
@@ -296,6 +299,26 @@ global.shipPurpleBonusUpgraded = false;
 global.shipDarkBonusUpgraded = false;
 global.shipMP3BonusUpgraded = false;
 
+
+
+
+//----------ENCHUFE UPGRADES -------// EXPERIMENTAL-------///
+checkUpgradesOfEnchufe = false;
+global.enchufeHPUpgradesList = ds_map_create();
+global.enchufeAmmoUpgradesList = ds_map_create();
+global.enchufeLaserUpgradesList = ds_map_create();
+global.enchufeEnergyUpgradesList = ds_map_create();
+
+
+global.enchufeHPUpgradesNum = 0;
+global.enchufeAmmoUpgradesNum = 0;
+global.enchufeLaserUpgradesNum = 0;
+global.enchufeEnergyUpgradesNum = 0;
+
+AddUpgradeEnchufeHP();
+AddUpgradeEnchufeAmmo();
+AddUpgradeEnchufeEnergy();
+AddUpgradeEnchufeLaser();
 
 //---------------- PLAYER SHIPS -----------------//
 global.numberOfShips = 0;

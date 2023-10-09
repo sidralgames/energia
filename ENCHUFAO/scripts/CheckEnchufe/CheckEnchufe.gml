@@ -50,12 +50,12 @@ function CheckEnchufe()
 		}
 		if (inEnchufe.isPETAAmmo = true)
 		{
-			global.chargingEnergy = true;
+			//global.chargingEnergy = true;
 			global.chargingAmmo = true;	
 		}
 		if (inEnchufe.isPETAHP = true)
 		{
-			global.chargingEnergy = true;
+			//global.chargingEnergy = true;
 			global.chargingHp = true;	
 		}
 		if (inEnchufe.isPETAShield = true)
