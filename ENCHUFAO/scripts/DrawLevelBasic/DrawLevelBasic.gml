@@ -43,7 +43,8 @@ function DrawLevelBasic()
 				
 				if (irandom(oddsUpgradeEnchufe) == oddsUpgradeEnchufe) && (UpgradesEnchufesInLevel < UpgradesEnchufesInLevelMax) //&& global.level > 2
 				{
-					upgrade = choose(o_smartBulletsPickUp, o_BouncingBulletsPickUp)
+					upgrade = choose(o_smartBulletsPickUp, o_BouncingBulletsPickUp, o_piercingBulletsPickUp,
+					o_ExploBulletsPickUp, o_PushingBulletsPickUp, o_SplitBulletsPickUp)
 					instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",upgrade); 
 					UpgradesEnchufesInLevel +=1;
 				}

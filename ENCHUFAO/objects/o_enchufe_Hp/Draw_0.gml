@@ -19,6 +19,9 @@ if (global.chargingHp) && (!global.pluggedInHp) && (charging)
 	}
 	draw_sprite_ext(s_enchufeChargeHP_Out,0,x-42,y-30,1,1,0,image_blend, image_alpha)
 	draw_sprite_ext(s_enchufeChargeHP_In,0,x-42,y-30,(charge/maxCharge),1,0,image_blend, image_alpha)
+
+	
+
 }
 
 if (charge >= 200)
@@ -26,4 +29,5 @@ if (charge >= 200)
 	global.pluggedInHp = true;
 }
 }
+//CheckBatteryToDraw(global.enchufeHPUpgradesList, global.enchufeHPUpgradesNum)
 

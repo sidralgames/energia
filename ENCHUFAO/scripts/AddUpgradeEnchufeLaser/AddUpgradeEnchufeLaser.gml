@@ -14,5 +14,5 @@ function AddUpgradeEnchufeLaser()
 		bombBullets: false,
 		
 	})
-	global.enchufeLaserUpgradesNum +=1;
+	
 }

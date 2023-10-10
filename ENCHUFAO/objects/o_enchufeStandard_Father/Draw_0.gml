@@ -15,4 +15,5 @@ if instance_exists(o_playerShip)
 	{
 		draw_sprite_ext(s_activating, 0, x,y-40, 1,1, 0, image_blend, image_alpha)	
 	}
+	
 }

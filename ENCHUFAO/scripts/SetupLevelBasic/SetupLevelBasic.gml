@@ -21,7 +21,7 @@ function SetupLevelBasic()
 	PetasInLevelMax = 2;
 	PetasInLevel = 0;
 	
-	UpgradesEnchufesInLevelMax = 3;
+	UpgradesEnchufesInLevelMax = 7;
 	UpgradesEnchufesInLevel = 0;
 
 	__background_set( e__BG.X, 0, irandom(2000) );

@@ -7,6 +7,8 @@
 
 
 randomize();
+upgradesBattery=0;
+
 scale = 1;
 enchufeBomb = false;
 

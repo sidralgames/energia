@@ -14,5 +14,5 @@ function AddUpgradeEnchufeAmmo()
 		bombBullets: false,
 		
 	})
-	global.enchufeAmmoUpgradesNum +=1;
+	
 }

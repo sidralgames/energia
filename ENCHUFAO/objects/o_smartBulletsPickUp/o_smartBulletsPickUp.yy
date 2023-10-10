@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_smartBulletsPickUp",
   "spriteId": {
-    "name": "s_bulletEYE",
-    "path": "sprites/s_bulletEYE/s_bulletEYE.yy",
+    "name": "s_smartBulletsPicKUp",
+    "path": "sprites/s_smartBulletsPicKUp/s_smartBulletsPicKUp.yy",
   },
   "solid": false,
   "visible": true,

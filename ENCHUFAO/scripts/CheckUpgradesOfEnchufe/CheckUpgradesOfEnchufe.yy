@@ -5,7 +5,7 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Objetos",
-    "path": "folders/Objetos.yy",
+    "name": "Movement",
+    "path": "folders/Scripts/GENERAL/Movement.yy",
   },
 }

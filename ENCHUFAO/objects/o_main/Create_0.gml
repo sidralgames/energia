@@ -33,6 +33,10 @@ global.bulletsDanceIsOn = false; ////////////OK movimiento en s
 
 global.havePickedBouncingBullets = false;
 global.havePickedSmartBullets = false;
+global.havePickedPiercingBullets = false;
+global.havePickedExploBullets = false;
+global.havePickedSplitBullets = false;
+global.havePickedPushingBullets = false;
 
 //------LASER MODIFICATORS-----------//
 global.laserBurnEnemies = true; /////////// OK

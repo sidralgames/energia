@@ -14,5 +14,5 @@ function AddUpgradeEnchufeEnergy()
 		bombBullets: false,
 		
 	})
-	global.enchufeEnergyUpgradesNum +=1;
+
 }

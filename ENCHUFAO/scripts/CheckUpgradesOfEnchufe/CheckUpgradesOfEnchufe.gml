@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function CheckUpgradesOfEnchufe(argument0, argument1)
 {
-	for (var i = 0; i< argument1; i++)
+	for (var i = 0; i< 1; i++)
 	{
 		mods = ds_map_find_value(argument0, i)
 		if (mods.bouncingBullets == true)
@@ -16,6 +16,18 @@ function CheckUpgradesOfEnchufe(argument0, argument1)
 		if (mods.smartBullets == true)
 		{
 			global.bulletsAeSmartIsOn = true;	
+		}
+		if (mods.pushingBullets == true)
+		{
+			global.bulletsPushenemiesIsOn = true;	
+		}
+		if (mods.bombBullets == true)
+		{
+			global.bulletsAreBombs = true;	
+		}
+		if (mods.bifurcateBullets == true)
+		{
+			global.bulletsBifurcateIsOn = true;	
 		}
 	}
 }

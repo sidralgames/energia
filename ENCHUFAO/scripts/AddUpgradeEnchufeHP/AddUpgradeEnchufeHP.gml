@@ -14,5 +14,5 @@ function AddUpgradeEnchufeHP()
 		bombBullets: false,
 		
 	})
-	global.enchufeHPUpgradesNum +=1;
+
 }
