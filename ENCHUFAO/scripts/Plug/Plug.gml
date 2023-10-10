@@ -7,27 +7,28 @@ function Plug()
 	alarm[4] = 10;
 	
 	audio_play_sound_on(global.audioEmitter,choose(snd_plugged, snd_plugged_2, snd_plugged_3),false, 50);
-	
-	plugged = true;
 	enchufe = inEnchufe;
-	global.plugging = true;
 	enchufe.enchufeActive = true;
+	global.plugging = true;
 	
-	if (enchufe.hp)
+	if (enchufe.isPETA_F = false)
 	{
-		CheckForUpgradeEnchufe(global.enchufeHPUpgradesList, global.enchufeHPUpgradesNum)
-	}
-	else if (enchufe.ammo)
-	{
-		CheckForUpgradeEnchufe(global.enchufeAmmoUpgradesList, global.enchufeAmmoUpgradesNum)
-	}
-	else if (enchufe.shield)
-	{
-		CheckForUpgradeEnchufe(global.enchufeLaserUpgradesList, global.enchufeLaserUpgradesNum)
-	}
-	else if (enchufe.energy)
-	{
-		CheckForUpgradeEnchufe(global.enchufeEnergyUpgradesList, global.enchufeEnergyUpgradesNum)
+		if (enchufe.hp)
+		{
+			CheckForUpgradeEnchufe(global.enchufeHPUpgradesList, global.enchufeHPUpgradesNum)
+		}
+		else if (enchufe.ammo)
+		{
+			CheckForUpgradeEnchufe(global.enchufeAmmoUpgradesList, global.enchufeAmmoUpgradesNum)
+		}
+		else if (enchufe.shield)
+		{
+			CheckForUpgradeEnchufe(global.enchufeLaserUpgradesList, global.enchufeLaserUpgradesNum)
+		}
+		else if (enchufe.energy)
+		{
+			CheckForUpgradeEnchufe(global.enchufeEnergyUpgradesList, global.enchufeEnergyUpgradesNum)
+		}
 	}
 	
 	
@@ -60,5 +61,6 @@ function Plug()
 			global.yToPlug = enchufe.y;
 		}
 	}
+	plugged = true;
 	
 }

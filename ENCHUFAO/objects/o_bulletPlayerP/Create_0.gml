@@ -29,7 +29,7 @@ else
 if (global.bulletsBifurcateIsOn)
 {
 	bifurcate = true;
-	alarm[1] = 20;
+	alarm[1] = 13;
 }
 else
 {

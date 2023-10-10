@@ -1,5 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
+burned = false;
+
+contBurnedTotalMax = 300;
+contBurnedTotal = contBurnedTotalMax;
+contBurnedMax = 100;
+contBurned = contBurnedMax;
+contBurnPartMax = 5;
+contBurnPart = contBurnPartMax;
+burnFlash = 0;
 repelled = false;
 repelledTimeMax = 20;
 repelledTime = repelledTimeMax;
