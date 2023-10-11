@@ -26,4 +26,6 @@ if (charge >= 200)
 	global.pluggedInEnergy = true;
 }
 }
+
+
 //CheckBatteryToDraw(global.enchufeEnergyUpgradesList, global.enchufeEnergyUpgradesNum)

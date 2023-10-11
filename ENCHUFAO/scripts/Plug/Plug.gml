@@ -11,7 +11,7 @@ function Plug()
 	enchufe.enchufeActive = true;
 	global.plugging = true;
 	
-	if (enchufe.isPETA_F = false)
+	if (haveBatteryUpgrade) && (enchufe.isPETA_F = false)
 	{
 		if (enchufe.hp)
 		{

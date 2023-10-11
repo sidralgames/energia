@@ -9,7 +9,7 @@
 // Inherit the parent event
 event_inherited();
 shield = true;
-sprite_enchufePluged = s_enchufe_SHIELDS_Charged;
+sprite_enchufePluged = s_enchufe_SHIELDS_Bat_Charged;
 
 if (global.level > 2)
 {

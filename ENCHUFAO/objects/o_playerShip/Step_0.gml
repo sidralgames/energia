@@ -5,6 +5,8 @@ Controls_Input();
 CheckExternalBattery();
 CheckCalledForHelp();
 
+
+
 if (key_buttonUP)
 {
 	global.invisibleCloak = !global.invisibleCloak;

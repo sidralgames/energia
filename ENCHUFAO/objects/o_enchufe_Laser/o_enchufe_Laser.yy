@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_enchufe_Laser",
   "spriteId": {
-    "name": "s_enchufe_SHIELDS",
-    "path": "sprites/s_enchufe_SHIELDS/s_enchufe_SHIELDS.yy",
+    "name": "s_enchufe_SHIELDS288",
+    "path": "sprites/s_enchufe_SHIELDS288/s_enchufe_SHIELDS288.yy",
   },
   "solid": false,
   "visible": true,

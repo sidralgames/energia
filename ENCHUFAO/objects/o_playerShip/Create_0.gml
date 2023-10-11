@@ -3,6 +3,8 @@
 type = collisionType.custom;
 _alpha = 1;
 
+haveBatteryUpgrade = false;
+
 if (global.friendIsUpgraded)
 {
 	instance_create_layer(x,y,"Player", o_friend);
