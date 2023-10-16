@@ -324,6 +324,19 @@ AddUpgradeEnchufeAmmo();
 AddUpgradeEnchufeEnergy();
 AddUpgradeEnchufeLaser();
 
+global.batteryEnchufeListHPnum = 0;
+global.batteryEnchufeListAmmonum = 0;
+global.batteryEnchufeListLasernum = 0;
+global.batteryEnchufeListEnergynum = 0;
+
+
+global.batteryEnchufeListHP = ds_map_create();
+global.batteryEnchufeListAmmo = ds_map_create();
+global.batteryEnchufeListLaser = ds_map_create();
+global.batteryEnchufeListEnergy = ds_map_create();
+
+global.EnchufeLaserUpgradesBattery = 0;
+
 //---------------- PLAYER SHIPS -----------------//
 global.numberOfShips = 0;
 

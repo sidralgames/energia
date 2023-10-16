@@ -75,7 +75,7 @@ function StrandedShip_CheckEnchufe()
 					inst.unlocked = true;
 				}
 			}
-			else if (enchufe.shield == true) && (inst.chargedInAmmo == false)
+			else if (enchufe.laser == true) && (inst.chargedInAmmo == false)
 			{
 				if (inst.chargeAmmo <= inst.maxChargeAmmo+10)
 				{

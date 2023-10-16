@@ -1,8 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-global.havePickedSmartBullets = true;
-other.haveBatteryUpgrade = true;
-instance_destroy();
+global.havePickedPiercingBullets = true;
+o_playerShip.haveBatteryUpgrade = true;
+
 
 ///si tienes la misma en todos se pone para siempre
 

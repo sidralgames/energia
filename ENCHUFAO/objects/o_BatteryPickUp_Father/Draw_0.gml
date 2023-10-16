@@ -1,0 +1,32 @@
+/// @description Insert description here
+// You can write your code in this editor
+draw_sprite_ext(sprite_index, image_index, x,y,image_xscale, image_yscale, _angle, image_blend, image_alpha)
+
+
+if instance_exists(overBattery)
+{
+	if (overBattery) && (o_playerShip.haveBatteryUpgrade == false)
+	{
+		if (radi > 12)
+		{
+			radi-=0.15;
+		}
+		else
+		{
+			radi = 16;
+		}
+	
+		draw_set_color(c_white)
+		draw_circle(x, y, radi+0.5, true)
+		draw_circle(x, y, radi, true)
+		draw_circle(x, y, 12, true)
+		draw_circle(x, y, 12.3, true)
+	}
+}
+
+
+
+
+
+
+

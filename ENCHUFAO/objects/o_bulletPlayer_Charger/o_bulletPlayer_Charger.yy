@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_piercingBulletsPickUp",
+  "name": "o_bulletPlayer_Charger",
   "spriteId": {
-    "name": "s_piercingBulletsPicKUp",
-    "path": "sprites/s_piercingBulletsPicKUp/s_piercingBulletsPicKUp.yy",
+    "name": "s_bulletPlayer",
+    "path": "sprites/s_bulletPlayer/s_bulletPlayer.yy",
   },
   "solid": false,
   "visible": true,
@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "o_BatteryPickUp_Father",
-    "path": "objects/o_BatteryPickUp_Father/o_BatteryPickUp_Father.yy",
+    "name": "o_bulletPlayerP",
+    "path": "objects/o_bulletPlayerP/o_bulletPlayerP.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -28,12 +28,15 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"o_wall","path":"objects/o_wall/o_wall.yy",},},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Enchufes",
-    "path": "folders/Objetos/Enchufes.yy",
+    "name": "Bullets",
+    "path": "folders/Objetos/Bullets.yy",
   },
 }

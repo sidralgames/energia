@@ -2,7 +2,7 @@
 // You can write your code in this editor
 type = collisionType.custom;
 _alpha = 1;
-
+_spriteBattery = -1;
 haveBatteryUpgrade = false;
 
 if (global.friendIsUpgraded)

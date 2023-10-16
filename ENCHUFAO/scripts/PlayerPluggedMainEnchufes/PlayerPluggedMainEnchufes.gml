@@ -55,7 +55,7 @@ function PlayerPluggedMainEnchufes()
 				}
 			}
 	
-			//------------SHIELD-----------//
+			//------------LASER-----------//
 			if (global.chargingLaser = true)
 			{
 				if (checkUpgradesOfEnchufe = false) && (o_playerShip.canModify)

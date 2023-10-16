@@ -1,9 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-
-image_speed = 0.5;
-
+_angle=0;
+radi = 0;
 t = 6;
 increment = choose(1,2,3); //degrees -- freq = 1 oscillation per second (1Hz)
 amplitude = choose(1,2);
@@ -15,4 +13,6 @@ xx = x;
 yy = y;
 
 
-_angle=0
+
+
+

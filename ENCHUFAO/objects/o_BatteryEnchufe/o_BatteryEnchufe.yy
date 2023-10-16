@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_BatteryEnchufe",
   "spriteId": {
-    "name": "s_bouncingBulletsPicKUp",
-    "path": "sprites/s_bouncingBulletsPicKUp/s_bouncingBulletsPicKUp.yy",
+    "name": "s_bouncingBulletsEnchufe",
+    "path": "sprites/s_bouncingBulletsEnchufe/s_bouncingBulletsEnchufe.yy",
   },
   "solid": false,
   "visible": true,

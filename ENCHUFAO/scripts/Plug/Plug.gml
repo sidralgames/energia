@@ -16,12 +16,13 @@ function Plug()
 		if (enchufe.hp)
 		{
 			CheckForUpgradeEnchufe(global.enchufeHPUpgradesList, global.enchufeHPUpgradesNum)
+			
 		}
 		else if (enchufe.ammo)
 		{
 			CheckForUpgradeEnchufe(global.enchufeAmmoUpgradesList, global.enchufeAmmoUpgradesNum)
 		}
-		else if (enchufe.shield)
+		else if (enchufe.laser)
 		{
 			CheckForUpgradeEnchufe(global.enchufeLaserUpgradesList, global.enchufeLaserUpgradesNum)
 		}
@@ -29,6 +30,8 @@ function Plug()
 		{
 			CheckForUpgradeEnchufe(global.enchufeEnergyUpgradesList, global.enchufeEnergyUpgradesNum)
 		}
+		
+		haveBatteryUpgrade = false;
 	}
 	
 	

@@ -22,7 +22,7 @@ function CheckEnchufe()
 	{
 		global.chargingHp = true;	
 	}
-	if (inEnchufe.shield = true)
+	if (inEnchufe.laser = true)
 	{
 		global.chargingLaser= true;	
 	}

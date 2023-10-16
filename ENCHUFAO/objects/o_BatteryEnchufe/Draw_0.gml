@@ -10,7 +10,7 @@ var _s = dsin(enchufe._angle);
 
 var _x = x - xoffset * _c - yoffset * _s;
 var _y = y - xoffset * -_s - yoffset * _c;
-draw_sprite_ext(sprite_index, 1, _x,_y,1, 1, enchufe._angle+off_angle, image_blend, image_alpha)
+draw_sprite_ext(_sprite, image_index, _x,_y,1, 1, enchufe._angle+off_angle, image_blend, image_alpha)
 
 
 
