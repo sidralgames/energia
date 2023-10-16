@@ -9,7 +9,7 @@
 // Inherit the parent event
 event_inherited();
 
-upgradesBattery = global.EnchufeLaserUpgradesBattery;
+upgradesBattery = global.batteryEnchufeListLasernum;
 
 laser = true;
 sprite_enchufePluged = s_enchufe_SHIELDS_Bat_Charged;

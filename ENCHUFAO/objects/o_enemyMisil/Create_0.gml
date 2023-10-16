@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 burned = false;
+rojoosc= make_colour_rgb(255,0,68);
+rojo= make_colour_rgb(228,59,69);
+rojo2= make_colour_rgb(158, 40, 53);
 
 contBurnedTotalMax = 300;
 contBurnedTotal = contBurnedTotalMax;

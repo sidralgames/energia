@@ -11,7 +11,8 @@ function Plug()
 	enchufe.enchufeActive = true;
 	global.plugging = true;
 	
-	if (haveBatteryUpgrade) && (enchufe.isPETA_F = false)
+	if (haveBatteryUpgrade) && (enchufe.isPETA_F = false) 
+	&& (enchufe.enchufeBomb == false) && (enchufe.upgradesBattery < 3)
 	{
 		if (enchufe.hp)
 		{
@@ -31,7 +32,6 @@ function Plug()
 			CheckForUpgradeEnchufe(global.enchufeEnergyUpgradesList, global.enchufeEnergyUpgradesNum)
 		}
 		
-		haveBatteryUpgrade = false;
 	}
 	
 	

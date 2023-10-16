@@ -9,6 +9,7 @@ function PlayerPluggedMainEnchufes()
 			if (inEnchufe)
 			{
 				canModify = (inEnchufe.enchufeActive) && (inEnchufe.isPETA_F == false)
+				&& (inEnchufe.enchufeBomb == false)
 			}
 		}
 		
