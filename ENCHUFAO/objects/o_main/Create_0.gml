@@ -29,7 +29,7 @@ global.bulletsDestroyBulletsIsOn = false; ///////// OK
 global.bulletsAeSmartIsOn = false; /////////// OK
 global.bulletsBifurcateIsOn = false; /////// OK
 global.bulletsDanceIsOn = false; ////////////OK movimiento en s
-
+global.bulletsBurnIsOn = false;
 
 global.havePickedBouncingBullets = false;
 global.havePickedSmartBullets = false;
@@ -37,6 +37,7 @@ global.havePickedPiercingBullets = false;
 global.havePickedExploBullets = false;
 global.havePickedSplitBullets = false;
 global.havePickedPushingBullets = false;
+global.havePickedBurningBullets = false;
 
 //------LASER MODIFICATORS-----------//
 global.laserBurnEnemies = true; /////////// OK

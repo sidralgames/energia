@@ -5,7 +5,7 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Movement",
-    "path": "folders/Scripts/GENERAL/Movement.yy",
+    "name": "UPGRADES ENCHUFES",
+    "path": "folders/Scripts/GENERAL/UPGRADES ENCHUFES.yy",
   },
 }

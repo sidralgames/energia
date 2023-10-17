@@ -12,7 +12,7 @@ function AddUpgradeEnchufeEnergy()
 		bifurcateBullets: false,
 		dancingBullets: false,
 		bombBullets: false,
-		
+		burnBullets: false,
 	})
 
 }

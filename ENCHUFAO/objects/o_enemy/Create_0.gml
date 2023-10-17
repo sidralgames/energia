@@ -36,6 +36,17 @@ waitingSpeed = random_range(0.4,0.7)
 breakDistance = random_range(0.005, 0.05)
 accelDistance = random_range(0.005, 0.05);
 
+isMega = irandom(5);
+
+if (isMega = 0) && (global.MegaEnemiesInLevel < global.MegaEnemiesInLevel_Max)
+{
+	global.MegaEnemiesInLevel+=1;
+	_hp = 15;
+	cable = instance_create_layer(x,y,"Cable", o_enemyCable);
+	sprite_index = s_enemyBasicMega;
+}
+
+
 if tile_meeting(x,y,"Tiles")
 {
 	instance_destroy()

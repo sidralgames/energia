@@ -26,6 +26,10 @@ else if (global.havePickedPushingBullets)
 {
 	draw_sprite_ext(s_pushingBulletsPickup, image_index, x+lengthdir_x(20, image_angle), y+lengthdir_y(20, image_angle), scale, scale, image_angle, image_blend, image_alpha)
 }
+else if (global.havePickedBurningBullets)
+{
+	draw_sprite_ext(s_BurningBulletsPickUp, image_index, x+lengthdir_x(20, image_angle), y+lengthdir_y(20, image_angle), scale, scale, image_angle, image_blend, image_alpha)
+}
 
 
 

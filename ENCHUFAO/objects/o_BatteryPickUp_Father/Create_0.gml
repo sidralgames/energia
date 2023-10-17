@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+inEnemy = false;
+overBattery = -1;
 _angle=0;
 radi = 0;
 t = 6;

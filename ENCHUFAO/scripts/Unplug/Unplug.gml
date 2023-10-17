@@ -43,9 +43,8 @@ function Unplug()
 	global.bulletsAeSmartIsOn = false; 
 	global.bulletsBifurcateIsOn = false; 
 	global.bulletsDanceIsOn = false; 
+	global.bulletsBurnIsOn = false; 
 
-	
-	
 	o_charger.scale = 1;
 	
 }

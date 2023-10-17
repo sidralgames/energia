@@ -29,5 +29,9 @@ function CheckUpgradesOfEnchufe(argument0, argument1)
 		{
 			global.bulletsBifurcateIsOn = true;	
 		}
+		if (mods.burnBullets == true)
+		{
+			global.bulletsBurnIsOn = true;	
+		}
 	}
 }

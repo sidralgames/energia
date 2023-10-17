@@ -5,6 +5,9 @@ function SetupLevelBasic()
 	global.newChargerX = 0;
 	global.newChargerY = 0;
 	
+	global.MegaEnemiesInLevel=0;
+	global.MegaEnemiesInLevel_Max=2;
+	
 	enchufe0 = false;
 	enchufeHP = false;
 	enchufeShield = false;
@@ -113,7 +116,7 @@ function SetupLevelBasic()
 	
 	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo)
 	|| (!enchufeShield) || (!enchufeFinal) || (!strandedShipOK) 
-	|| (UpgradesEnchufesInLevel < 1)
+	//|| (UpgradesEnchufesInLevel < 1)
 
 	{
 		room_restart();

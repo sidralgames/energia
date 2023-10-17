@@ -12,6 +12,7 @@ function AddUpgradeEnchufeAmmo()
 		bifurcateBullets: false,
 		dancingBullets: false,
 		bombBullets: false,
+		burnBullets: false,
 		
 	})
 	

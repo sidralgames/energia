@@ -56,6 +56,17 @@ function Plug()
 			o_charger.scale = 1.5;
 			global.xToPlug = enchufe.x;
 			global.yToPlug = enchufe.y-15;
+			
+			//--DESTROY ANY BATTERYS ATTACHED---//
+			haveBatteryUpgrade = false;
+			global.havePickedBouncingBullets = false;
+			global.havePickedSmartBullets = false;
+			global.havePickedPiercingBullets = false;
+			global.havePickedExploBullets = false;
+			global.havePickedSplitBullets = false;
+			global.havePickedPushingBullets = false;
+			global.havePickedBurningBullets = false;
+			
 		}
 		else
 		{

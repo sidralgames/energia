@@ -41,19 +41,22 @@ function DrawLevelBasic()
 					PetasInLevel +=1;
 				}
 				
-				if (irandom(oddsUpgradeEnchufe) == oddsUpgradeEnchufe) && (UpgradesEnchufesInLevel < UpgradesEnchufesInLevelMax) //&& global.level > 2
-				{
-					upgrade = choose(o_smartBulletsPickUp, o_BouncingBulletsPickUp, o_piercingBulletsPickUp,
-					o_ExploBulletsPickUp, o_PushingBulletsPickUp, o_SplitBulletsPickUp)
-					instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",upgrade); 
-					UpgradesEnchufesInLevel +=1;
-				}
+				//----- CREATE BATTERYS ------//
+				//if (irandom(oddsUpgradeEnchufe) == oddsUpgradeEnchufe) && (UpgradesEnchufesInLevel < UpgradesEnchufesInLevelMax) //&& global.level > 2
+				//{
+				//	upgrade = choose(o_smartBulletsPickUp, o_BouncingBulletsPickUp, o_piercingBulletsPickUp,
+				//	o_ExploBulletsPickUp, o_PushingBulletsPickUp, o_SplitBulletsPickUp, o_BurningBulletsPickUp)
+				//	instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",upgrade); 
+				//	UpgradesEnchufesInLevel +=1;
+				//}
 				
-				if (irandom(oddsBomb) == oddsBomb) && (BombsInLevel < BombsInLevelMax) 
-				{
-					instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_BombpickUp); 
-					BombsInLevel +=1;
-				}
+				
+				//----- CREATE BOMBS ------//
+				//if (irandom(oddsBomb) == oddsBomb) && (BombsInLevel < BombsInLevelMax) 
+				//{
+				//	instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_BombpickUp); 
+				//	BombsInLevel +=1;
+				//}
 				
 				if (irandom(oddsShield) == oddsShield) && (ShieldsInLevel < ShieldsInLevelMax) 
 				{

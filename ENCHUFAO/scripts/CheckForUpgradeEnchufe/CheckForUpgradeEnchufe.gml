@@ -55,6 +55,14 @@ function CheckForUpgradeEnchufe(argument0, argument1)
 			_spriteBattery = s_pushBulletsEnchufe;
 			
 		}
+		if (mods.burnBullets == false) && (global.havePickedBurningBullets)
+		{
+			enchufe.upgradesBattery+=1;
+			mods.burnBullets = true;
+			global.havePickedBurningBullets = false;
+			_spriteBattery = s_burningBulletsEnchufe;
+			
+		}
 	}
 	
 	if (_spriteBattery != -1)
@@ -82,57 +90,10 @@ function CheckForUpgradeEnchufe(argument0, argument1)
 		if (enchufe.energy)
 		{
 			AddBattery(global.batteryEnchufeListEnergy, global.batteryEnchufeListEnergynum,_spriteBattery)
+			global.batteryEnchufeListEnergynum+=1;;
 		}
 	
-	
-		if (enchufe.upgradesBattery = 1)
-		{
-			xoffset = 0;
-			yoffset = 20;
-			var _c = dcos(inEnchufe._angle);
-			var _s = dsin(inEnchufe._angle);
-			var _x = inEnchufe.x - xoffset * _c - yoffset * _s;
-			var _y = inEnchufe.y - xoffset * -_s - yoffset * _c;
-		
-			battery = instance_create_layer(_x,_y, "Enchufes", o_BatteryEnchufe);
-			battery._sprite = _spriteBattery;
-			battery.xoffset = xoffset;
-			battery.yoffset = yoffset;
-		
-		}
-	
-		if (enchufe.upgradesBattery = 2)
-		{
-			xoffset = 11;
-			yoffset = -16;
-			var _c = dcos(inEnchufe._angle);
-			var _s = dsin(inEnchufe._angle);
-			var _x = inEnchufe.x - xoffset * _c - yoffset * _s;
-			var _y = inEnchufe.y - xoffset * -_s - yoffset * _c;
-		
-			battery = instance_create_layer(_x,_y, "Enchufes", o_BatteryEnchufe);
-			battery._sprite = _spriteBattery;
-			battery.xoffset = xoffset;
-			battery.yoffset = yoffset;
-			battery.off_angle = -45;
-		}
-	
-		if (enchufe.upgradesBattery = 3)
-		{
-			xoffset = -11;
-			yoffset = -16;
-			var _c = dcos(inEnchufe._angle);
-			var _s = dsin(inEnchufe._angle);
-			var _x = inEnchufe.x - xoffset * _c - yoffset * _s;
-			var _y = inEnchufe.y - xoffset * -_s - yoffset * _c;
-		
-			battery = instance_create_layer(_x,_y, "Enchufes", o_BatteryEnchufe);
-			battery._sprite = _spriteBattery;
-			battery.xoffset = xoffset;
-			battery.yoffset = yoffset;
-			battery.off_angle = 45;
-		
-		}
+		CreateEnchufeBattery();
 	
 	}
 	
