@@ -35,6 +35,14 @@ waitingSpeed = random_range(0.7,1)
 breakDistance = random_range(0.005, 0.05)
 accelDistance = random_range(0.005, 0.05);
 
+hasShield = irandom(5);
+
+if (hasShield = 0)
+{
+	CreateShieldEnemy(8, 0.6, s_shieldPurple); //hp, scale, sprite
+}
+
+
 if tile_meeting(x,y,"Tiles")
 {
 	instance_destroy()

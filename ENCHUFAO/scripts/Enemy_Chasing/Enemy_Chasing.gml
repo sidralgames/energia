@@ -13,7 +13,7 @@ function Enemy_Chasing()
 	{
 		enemyToBounce = collision_circle(x,y,10,o_enemyP,false,true)
 	}
-		if  enemyToBounce && (enemyToBounce.canBounce) && (!bounced)
+		if  enemyToBounce && (enemyToBounce.canBounce = true) && (!bounced) && (enemyToBounce.isShield = false)
 		{
 			bounced = true;
 			alarm[8] = 10;

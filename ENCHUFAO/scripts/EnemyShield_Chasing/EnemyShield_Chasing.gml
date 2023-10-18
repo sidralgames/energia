@@ -23,6 +23,13 @@ function EnemyShield_Chasing()
 	}
 	else
 	{
-		existsShield = false;	
+		existsShield = false;
+		contNextShield --;
+		if (contNextShield <= 0)
+		{
+			shield = instance_create_layer(x,y,"ShieldEnemy",o_shieldEnemy)
+			existsShield = true;
+			contNextShield = random_range(120, 200);
+		}
 	}
 }

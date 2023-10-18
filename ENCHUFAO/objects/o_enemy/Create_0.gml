@@ -36,10 +36,20 @@ waitingSpeed = random_range(0.4,0.7)
 breakDistance = random_range(0.005, 0.05)
 accelDistance = random_range(0.005, 0.05);
 
+
+
+
+if tile_meeting(x,y,"Tiles")
+{
+	instance_destroy()
+}
+
+isMegaEnemy = false;
 isMega = irandom(5);
 
 if (isMega = 0) && (global.MegaEnemiesInLevel < global.MegaEnemiesInLevel_Max)
 {
+	isMegaEnemy = true;
 	global.MegaEnemiesInLevel+=1;
 	_hp = 15;
 	cable = instance_create_layer(x,y,"Cable", o_enemyCable);
@@ -47,8 +57,11 @@ if (isMega = 0) && (global.MegaEnemiesInLevel < global.MegaEnemiesInLevel_Max)
 }
 
 
-if tile_meeting(x,y,"Tiles")
+hasShield = irandom(5);
+
+if (hasShield = 0)
 {
-	instance_destroy()
+	CreateShieldEnemy(15, 0.75, s_shieldPurple); //hp, scale, sprite
 }
+
 

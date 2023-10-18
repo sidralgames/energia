@@ -5,37 +5,39 @@ randomize();
 if (global.level =1)
 {
 	enemy = choose(o_enemy, o_enemyFast, o_enemyFastMini,
-	o_enemy, o_enemyFast, o_enemyFastMini,
-	o_enemy, o_enemyFast, o_enemyFastMini,
-	o_enemy, o_enemyFast, o_enemyFastMini,
-	o_enemy, o_enemyFast, o_enemyFastMini,
-	o_enemy, o_enemyFast, o_enemyFastMini,
-	o_enemy, o_enemyFast, o_enemyFastMini,
-	o_enemy, o_enemyFast, o_enemyFastMini,
-	o_enemy, o_enemyFast, o_enemyFastMini,
 	o_enemyDisp,
 	o_enemy_Waiting_Shield,
-	o_enemyMothership)
+	o_enemyShield_v2)
 }
 else if (global.level =3)
 {
-	enemy = choose(o_enemy, o_enemyFast, o_enemyFastMini, o_enemyDisp,
-	o_enemy, o_enemyFast, o_enemyDisp,
+	enemy = choose(o_enemy, o_enemyFast, o_enemyFastMini,
+	o_enemy, o_enemyFast, o_enemyFastMini,
+	o_enemy, o_enemyFast,  o_enemyFastMini,
+	o_enemyDisp, o_enemyDisp,
 	o_enemy_Waiting_Shield, o_enemy_Waiting_Shield,
+	o_enemyShield_v2,
 	o_enemyMothership)
 }
 else if (global.level =5)
 {
-	enemy = choose(o_enemy, o_enemyFast, o_enemyFastMini, o_enemyDisp,
-	o_enemy, o_enemyFast, o_enemyFastMini, o_enemyDisp,
+	enemy = choose(o_enemy, o_enemyFast, o_enemyFastMini,
+	o_enemy, o_enemyFast, o_enemyFastMini,
+	o_enemyDisp, o_enemyDisp,
 	o_enemy_Waiting_Shield,
-	o_enemyMisil,o_enemyMothership)
+	o_enemyShield_v2,
+	o_enemyMisil,
+	o_enemyMothership)
 }
 else if (global.level >5)
 {
-	enemy = choose(o_enemy, o_enemyFast, o_enemyFastMini, o_enemyDisp, o_enemyMisil,
-					o_enemy, o_enemyFast, o_enemyDisp, o_enemy_Waiting_Shield,
-					o_enemyMothership, o_enemyTurret)
+	enemy = choose(o_enemy, o_enemyFast, o_enemyFastMini,
+	o_enemyDisp, o_enemyDisp, 
+	o_enemy_Waiting_Shield,
+	o_enemyShield_v2,
+	o_enemyMisil,
+	o_enemyMothership,
+	o_enemyTurret)
 }
 
 image_speed = 0.5;

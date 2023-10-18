@@ -4,7 +4,8 @@ burned = false;
 rojoosc= make_colour_rgb(255,0,68);
 rojo= make_colour_rgb(228,59,69);
 rojo2= make_colour_rgb(158, 40, 53);
-
+haveAShield = false;
+canHaveAShield = true;
 contBurnedTotalMax = 300;
 contBurnedTotal = contBurnedTotalMax;
 contBurnedMax = 100;
@@ -64,4 +65,15 @@ _speed=0;
 off = 90;
 len = 0;
 
+hasShield = irandom(4);
 
+if (hasShield = 0)
+{
+	CreateShieldEnemy(20, 0.7, s_shieldPurple); //hp, scale, sprite
+}
+
+
+if tile_meeting(x,y,"Tiles")
+{
+	instance_destroy()
+}

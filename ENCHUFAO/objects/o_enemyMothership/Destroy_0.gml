@@ -3,11 +3,10 @@
 
 CreateSlowmoParts();
 
-if (isMega = 0)
+if (isMegaEnemy)
 {
 	instance_destroy(cable);
 }
-
 // Inherit the parent event
 event_inherited();
 

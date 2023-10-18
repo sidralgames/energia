@@ -74,7 +74,7 @@ else
 					}
 				
 			}
-		if (!isMotherShip)
+		if (!isMotherShip) && (canHaveAShield)
 		{
 			if (point_distance(x,y,o_playerShip.x, o_playerShip.y) <= 200)
 			{
@@ -87,8 +87,7 @@ else
 				{
 					var bullet = instance_create_layer(x + lengthdir_x(10, _angle), y + lengthdir_y(10, _angle),
 					"Bullets", o_bulletEnemy);
-					bullet._hpush = lengthdir_x(3, _angle);
-					bullet._vpush = lengthdir_y(3, _angle);
+					bullet.bulletSpeed = 3;
 					bullet.image_angle = _angle;
 					bullet.direction = _angle;
 			

@@ -4,12 +4,11 @@ function Enemy_Shocked()
 {
 	part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(8,direction), y-lengthdir_y(8,direction), global.naveEnemy_Waiting , 1)
 	
-	_hpush = lerp(_hpush, 0, 0.02);
-	_vpush = lerp(_vpush, 0, 0.02);
-	
+	speed = lerp(speed, 0, 0.02);
+
 	_angle = dirShoked;
 	
-	MoveZeroGrv();
+	MoveZeroGrv_Speed();
 	
 	if (alarm[9] <= 0)
 	{
@@ -18,8 +17,7 @@ function Enemy_Shocked()
 	
 	if (!shocked) 
 	{
-		_hpush = 0;
-		_vpush = 0;
+		speed = 0;
 		state = ENEMYSTATE.CHASING;	
 	}
 	

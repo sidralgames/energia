@@ -96,27 +96,33 @@ function PlayerShipLaser(argument0)
 		}
 		else
 		{
-			enemy._hp -= (0.25+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
-		}
-		enemy.flashAlpha = 1;
-		
-		
-		if (global.laserBurnEnemies)
-		{
-			if (enemy.isShield == false) && (enemy.burned == false)
+			if (enemy.haveAShield == false)
 			{
-				enemy.burned = true;	
+				enemy._hp -= (0.25+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
 			}
 		}
 		
-		if (global.laserSlowEnemies)
+		if (enemy.haveAShield == false)
 		{
-			with(enemy)
+			enemy.flashAlpha = 1;
+		
+			if (global.laserBurnEnemies)
 			{
-				slowed = true;
-				slowedCont = random_range(30,50);
+				if (enemy.isShield == false) && (enemy.burned == false)
+				{
+					enemy.burned = true;	
+				}
 			}
+		
+			if (global.laserSlowEnemies)
+			{
+				with(enemy)
+				{
+					slowed = true;
+					slowedCont = random_range(30,50);
+				}
 			
+			}
 		}
 		//explo = instance_create(enemy.x, enemy.y, o_explo2)
 		//explo.image_xscale = 0.25;

@@ -4,7 +4,8 @@ repelled = false;
 repelledTimeMax = 20;
 repelledTime = repelledTimeMax;
 burned = false;
-
+haveAShield = false;
+canHaveAShield = true;
 contBurnedTotalMax = 300;
 contBurnedTotal = contBurnedTotalMax;
 contBurnedMax = 100;

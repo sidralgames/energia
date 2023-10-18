@@ -41,11 +41,12 @@ maxDistance = 100;
 waitingSpeed = random_range(0.4,0.7)
 breakDistance = random_range(0.005, 0.05)
 accelDistance = random_range(0.005, 0.05);
-
+isMegaEnemy = false
 isMega = irandom(5);
 
 if (isMega = 0) && (global.MegaEnemiesInLevel < global.MegaEnemiesInLevel_Max+1)
 {
+	isMegaEnemy = true;
 	global.MegaEnemiesInLevel+=1;
 	_hp = 25;
 	cable = instance_create_layer(x,y,"Cable", o_enemyMotherCable);
@@ -54,9 +55,15 @@ if (isMega = 0) && (global.MegaEnemiesInLevel < global.MegaEnemiesInLevel_Max+1)
 	sprite_index = s_enemyMothershipMega;
 }
 
+hasShield = irandom(5);
+
+if (hasShield = 0)
+{
+	CreateShieldEnemy(25, 0.75, s_shieldPurple); //hp, scale, sprite
+}
+
 
 if tile_meeting(x,y,"Tiles")
 {
 	instance_destroy()
 }
-

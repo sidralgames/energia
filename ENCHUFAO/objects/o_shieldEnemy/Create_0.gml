@@ -12,5 +12,6 @@ isImmortal = false;
 repelled = false;
 repelledTimeMax = 20;
 repelledTime = repelledTimeMax;
-
+canHaveAShield = false;
+haveAShield = false;
 state = -1;

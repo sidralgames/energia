@@ -3,9 +3,10 @@
 type = collisionType.custom;
 isShield = false;
 myPath = path_add();
-
+isMegaEnemy = false;
 burned = false;
-
+canHaveAShield = true;
+hasShield = false;
 contBurnedTotalMax = 300;
 contBurnedTotal = contBurnedTotalMax;
 contBurnedMax = 100;
@@ -59,7 +60,7 @@ speed=random(1)+1;
 isCounted = false;
 tocado = false;
 waiting = false;
-
+haveAShield = false;
 direction_ =direction;
 state = ENEMYSTATE.WAITING;
 existsShield = false;
@@ -80,9 +81,14 @@ breakDistance = random_range(0.005, 0.05)
 accelDistance = random_range(0.005, 0.05);
 shield = noone;
 enemyXP = global.enemyShieldXP;
+
+contNextShield = random_range(120, 200);
+
 if tile_meeting(x,y,"Tiles")
 {
 	instance_destroy()
 }
+
+
 
 

@@ -20,7 +20,8 @@ orange = make_color_rgb(255,0,68);
 oranget = make_color_rgb(247,118,34);
 blueO = make_color_rgb(0,149,233)
 blueOO = make_color_rgb(18,78,137)
-cableColor = purpleO;
+gray = make_color_rgb(192,203,220);
+cableColor = gray;
 
 // Create verlet groups
 _segments = 12
