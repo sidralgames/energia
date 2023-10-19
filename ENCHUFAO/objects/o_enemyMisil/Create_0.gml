@@ -69,7 +69,7 @@ hasShield = irandom(4);
 
 if (hasShield = 0)
 {
-	CreateShieldEnemy(20, 0.7, s_shieldPurple); //hp, scale, sprite
+	CreateShieldEnemy(20, 1, s_shieldPurple); //hp, scale, sprite
 }
 
 

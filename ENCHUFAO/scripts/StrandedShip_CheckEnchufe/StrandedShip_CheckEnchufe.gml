@@ -30,8 +30,8 @@ function StrandedShip_CheckEnchufe()
 				{
 					inst.chargeEnergy+=1;
 				}
-				draw_sprite_ext(s_enchufeChargeHP_Out,0,x-14,y-30,1,1,0,image_blend, image_alpha)
-				draw_sprite_ext(s_enchufeChargeHP_In,0,x-14,y-30,(inst.chargeEnergy/inst.maxChargeEnergy),1,0,image_blend, image_alpha)
+				draw_sprite_ext(s_enchufeChargeHP_Out,0,x-14,y-30,0.5,1,0,image_blend, image_alpha)
+				draw_sprite_ext(s_enchufeChargeHP_In,0,x-14,y-30,(inst.chargeEnergy/inst.maxChargeEnergy)*0.5,1,0,image_blend, image_alpha)
 			
 				if (inst.chargeEnergy >= inst.maxChargeEnergy-1)
 				{
@@ -51,8 +51,8 @@ function StrandedShip_CheckEnchufe()
 					
 					inst.chargeHp+=1;
 				}
-				draw_sprite_ext(s_enchufeChargeHP_Out,0,x-14,y-30,1,1,0,image_blend, image_alpha)
-				draw_sprite_ext(s_enchufeChargeHP_In,0,x-14,y-30,(inst.chargeHp/inst.maxChargeHp),1,0,image_blend, image_alpha)
+				draw_sprite_ext(s_enchufeChargeHP_Out,0,x-21,y-30,0.5,1,0,image_blend, image_alpha)
+				draw_sprite_ext(s_enchufeChargeHP_In,0,x-21,y-30,(inst.chargeHp/inst.maxChargeHp)*0.5,1,0,image_blend, image_alpha)
 			
 				if (inst.chargeHp >= inst.maxChargeHp-1)
 				{
@@ -66,8 +66,8 @@ function StrandedShip_CheckEnchufe()
 				{
 					inst.chargeAmmo+=1;
 				}
-				draw_sprite_ext(s_enchufeChargeHP_Out,0,x-14,y-30,1,1,0,image_blend, image_alpha)
-				draw_sprite_ext(s_enchufeChargeHP_In,0,x-14,y-30,(inst.chargeAmmo/inst.maxChargeAmmo),1,0,image_blend, image_alpha)
+				draw_sprite_ext(s_enchufeChargeHP_Out,0,x-21,y-30,0.5,1,0,image_blend, image_alpha)
+				draw_sprite_ext(s_enchufeChargeHP_In,0,x-21,y-30,(inst.chargeAmmo/inst.maxChargeAmmo)*0.5,1,0,image_blend, image_alpha)
 			
 				if (inst.chargeAmmo >= inst.maxChargeAmmo-1)
 				{
@@ -81,8 +81,8 @@ function StrandedShip_CheckEnchufe()
 				{
 					inst.chargeAmmo+=1;
 				}
-				draw_sprite_ext(s_enchufeChargeHP_Out,0,x-14,y-30,1,1,0,image_blend, image_alpha)
-				draw_sprite_ext(s_enchufeChargeHP_In,0,x-14,y-30,(inst.chargeAmmo/inst.maxChargeAmmo),1,0,image_blend, image_alpha)
+				draw_sprite_ext(s_enchufeChargeHP_Out,0,x-21,y-30,0.5,1,0,image_blend, image_alpha)
+				draw_sprite_ext(s_enchufeChargeHP_In,0,x-21,y-30,(inst.chargeAmmo/inst.maxChargeAmmo)*0.5,1,0,image_blend, image_alpha)
 			
 				if (inst.chargeAmmo >= inst.maxChargeAmmo-1)
 				{

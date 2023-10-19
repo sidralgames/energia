@@ -47,7 +47,7 @@ if instance_exists(o_playerShip)
 				global.achNoBump = 1;
 			}
 			cont = true
-			alarm[0] = 120;
+			alarm[0] = 60;
 		}
 	}
 }

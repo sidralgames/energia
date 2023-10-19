@@ -57,7 +57,7 @@ if (isMega = 0) && (global.MegaEnemiesInLevel < global.MegaEnemiesInLevel_Max)
 }
 
 
-hasShield = irandom(5);
+hasShield = irandom(10);
 
 if (hasShield = 0)
 {

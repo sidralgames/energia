@@ -36,7 +36,7 @@ breakDistance = random_range(0.005, 0.05)
 accelDistance = random_range(0.005, 0.05);
 
 
-hasShield = irandom(5);
+hasShield = irandom(10);
 
 if (hasShield = 0)
 {

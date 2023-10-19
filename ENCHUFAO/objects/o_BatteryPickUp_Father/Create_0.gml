@@ -14,6 +14,8 @@ dir1 = choose(90,270)
 xx = x;
 yy = y;
 
+bnc = 0.8;
+
 
 
 

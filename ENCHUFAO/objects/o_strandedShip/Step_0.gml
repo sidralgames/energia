@@ -70,43 +70,21 @@ else
 		}
 		
 		CheckShipToUnlock();
-
-		//-----------------MOVE IT TO NEXT ROOM----------------------//
-		if (sprite = splayer)
-		{
-			global.strandedShipGreen = true;
-			global.strandedShipGreenHP = hp;
-		}
-		else if (sprite = splayer_Blue)
-		{
-			global.strandedShipBlue = true;
-			global.strandedShipBlueHP = hp;
-		}
-		else if (sprite = splayer_Dark)
-		{
-			global.strandedShipDark = true;
-			global.strandedShipDarkHP = hp;
-		}
-		else if (sprite = splayer_Red)
-		{
-			global.strandedShipRed = true;
-			global.strandedShipRedHP = hp;
-		}
-		else if (sprite = splayer_Purple)
-		{
-			global.strandedShipPurple = true;
-			global.strandedShipPurpleHP = hp;
-		}
-		else if (sprite = splayer_mp3)
-		{
-			global.strandedShipMP3 = true;
-			global.strandedShipMP3HP = hp;
-		}
 		//global.posNumberOfShips-=1;
 		//ds_map_delete(global.posNumberOfShips, numShip)
 		goesToNextRoom = true;
 	}
 
+	if instance_exists(o_playerShip)
+	{
+		if (o_playerShip.pluggedFinal = true) && (getFinalHP = false)
+		{
+			GetStrandedShipHP();
+			getFinalHP = true;
+		}
+		
+	}
+	
 	if (hp <= 0) && (goesToNextRoom = true)
 	{
 		shipReady = false;

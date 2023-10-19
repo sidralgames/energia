@@ -11,7 +11,7 @@ if (global.strandedShipGreen)
 		stranded.chargedInHp = true;
 		stranded.chargedInAmmo = true;
 		stranded.sprite = splayer;
-		stranded.hpMax = 4 + global.strandedHPUpgrade;
+		stranded.hpMax = 4;
 		stranded.hp = global.strandedShipGreenHP;
 		
 	}
@@ -24,7 +24,7 @@ if (global.strandedShipGreen)
 		stranded.chargedInHp = true;
 		stranded.chargedInAmmo = true;
 		stranded.sprite = splayer_Blue;
-		stranded.hpMax = 3 + global.strandedHPUpgrade;
+		stranded.hpMax = 3;
 		stranded.hp = global.strandedShipBlueHP;
 	}
 	if (global.strandedShipPurple)
@@ -36,7 +36,7 @@ if (global.strandedShipGreen)
 		stranded.chargedInHp = true;
 		stranded.chargedInAmmo = true;
 		stranded.sprite = splayer_Purple;
-		stranded.hpMax = 4 + global.strandedHPUpgrade;
+		stranded.hpMax = 4;
 		stranded.hp = global.strandedShipPurpleHP;
 	}
 	if (global.strandedShipDark)
@@ -48,7 +48,7 @@ if (global.strandedShipGreen)
 		stranded.chargedInHp = true;
 		stranded.chargedInAmmo = true;
 		stranded.sprite = splayer_Dark;
-		stranded.hpMax = 3 + global.strandedHPUpgrade;
+		stranded.hpMax = 3;
 		stranded.hp = global.strandedShipDarkHP;
 	}
 	if (global.strandedShipRed)
@@ -61,7 +61,7 @@ if (global.strandedShipGreen)
 		stranded.chargedInHp = true;
 		stranded.chargedInAmmo = true;
 		stranded.sprite = splayer_Red;
-		stranded.hpMax = 5 + global.strandedHPUpgrade;
+		stranded.hpMax = 5;
 		stranded.hp = global.strandedShipRedHP;
 	}
 	if (global.strandedShipMP3)
@@ -74,7 +74,7 @@ if (global.strandedShipGreen)
 		stranded.chargedInHp = true;
 		stranded.chargedInAmmo = true;
 		stranded.sprite = splayer_mp3;
-		stranded.hpMax = 3 + global.strandedHPUpgrade;
+		stranded.hpMax = 3;
 		stranded.hp = global.strandedShipMP3HP;
 	}
 }
