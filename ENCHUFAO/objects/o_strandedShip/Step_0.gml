@@ -77,7 +77,7 @@ else
 
 	if instance_exists(o_playerShip)
 	{
-		if (o_playerShip.pluggedFinal = true) && (getFinalHP = false)
+		if (o_playerShip.pluggedFinal = true) && (getFinalHP = false) && (goesToNextRoom = true)
 		{
 			GetStrandedShipHP();
 			getFinalHP = true;

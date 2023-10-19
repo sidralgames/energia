@@ -62,7 +62,7 @@ function StrandedShip_StrandedState()
 	{
 		nearestEnemy = instance_nearest(x, y, o_enemyP);
 			
-		if instance_exists(nearestEnemy)
+		if instance_exists(nearestEnemy) && (nearestEnemy.isImmortal = false)
 		{
 			if (point_distance(x, y, nearestEnemy.x, nearestEnemy.y) < 150)
 			{

@@ -6,7 +6,20 @@ if (global.level =1)
 {
 	enemy = choose(
 	o_enemy, o_enemyFast, o_enemyFastMini,
-	o_enemyMisil)
+	o_enemy, o_enemyFast, o_enemyFastMini,
+	o_enemy, o_enemyFast, o_enemyFastMini,
+	o_enemy, o_enemyFast, o_enemyFastMini,
+	o_enemy, o_enemyFast, o_enemyFastMini,
+	o_enemy, o_enemyFast, o_enemyFastMini,
+	o_enemy, o_enemyFast, o_enemyFastMini,
+	o_enemy, o_enemyFast, o_enemyFastMini,
+	o_enemy, o_enemyFast, o_enemyFastMini,
+	o_enemy, o_enemyFast, o_enemyFastMini,
+	o_enemy, o_enemyFast, o_enemyFastMini,
+	o_enemy, o_enemyFast, o_enemyFastMini,
+	o_enemyDisp,
+	o_enemy_Waiting_Shield,
+	o_enemyMothership)
 }
 else if (global.level =3)
 {

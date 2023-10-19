@@ -80,6 +80,12 @@ function PlayerShipLaser(argument0)
 		}
 	}
 	
+	misil = collision_line(x,y,x+lengthdir_x(maxLenght_+20, argument0+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,argument0+random_range(2,-2)), o_misil,false, true)
+	if (misil)
+	{
+		instance_destroy(misil)	
+	}
+	
 	
 	enemy = collision_line(x,y,x+lengthdir_x(maxLenght_+20, argument0+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,argument0+random_range(2,-2)), o_enemyP,false, true)
 	if (enemy)
