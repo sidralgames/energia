@@ -98,7 +98,7 @@ function StrandedShip_ConnectedEnchufe()
 		state = STRANDEDSHIPSTATE.CONNECTEDSHIP;
 	}
 	
-	if (shipReady) && (disconectedFirstTime == false) 
+	if (shipReady) && (disconectedFirstTime == false) && (hp = hpMax) //LO ULTIMO PARA VER SI SE DESCOPNECTA FULL HP
 	{
 		disconectedFirstTime = true;
 		with(myCable)

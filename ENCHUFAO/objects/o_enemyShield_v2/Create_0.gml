@@ -9,7 +9,7 @@ alarm[10] = 30;
 isCounted=false;
 closeToWall = false
 bnc = 0.5;
-_hp = 10;
+_hp = 8;
 cont = 500;
 image_speed = 0.5;
 changedSpeed = false;
@@ -49,7 +49,7 @@ hasShield = irandom(0);
 
 if (hasShield = 0)
 {
-	CreateShieldEnemy(25, 0.85, s_shieldPurple); //hp, scale, sprite
+	CreateShieldEnemy(15, 0.85, s_shieldPurple); //hp, scale, sprite
 }
 
 

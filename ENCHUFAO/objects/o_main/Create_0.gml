@@ -268,6 +268,7 @@ AddUpgradeLaser();
 AddUpgradeBonus();
 AddUpgradeDobleDoble();
 AddUpgradeFriend();
+AddUpgradeShootingRecharges();//20
 
 global.ammoIsUpgraded = false;
 global.cableIsUpgraded = false;
@@ -288,6 +289,7 @@ global.laserIsUpgraded = false;
 global.bonusIsUpgraded = false;
 global.dobleDobleIsUpgraded = false;
 //global.friendIsUpgraded = true; MOVED UP
+global.shootingRechargesIsUpgraded = false;
 
 //--------UPGRADE RELATED--------//
 global.bombIsClusterBomb = false;

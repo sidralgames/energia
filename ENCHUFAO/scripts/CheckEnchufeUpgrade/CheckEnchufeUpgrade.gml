@@ -380,6 +380,7 @@ function CheckEnchufeUpgrade()
 		if (!global.friendIsUpgraded)
 		{
 			global.friendIsUpgraded = true;
+			instance_create_layer(o_playerShip.x+30, o_playerShip.y-30, "Player", o_friend)
 			AddUpgradeFriendPlayer();
 		}
 		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
@@ -391,6 +392,27 @@ function CheckEnchufeUpgrade()
 			}
 		}
 		
+		inEnchufe.charging = true;
+		upgraded = true;
+		
+	}
+	else if (inEnchufe.upgradeShootingRecharges = true) && (upgraded = false)
+	{
+		if (!global.shootingRechargesIsUpgraded)
+		{
+			global.shootingRechargesIsUpgraded = true;
+			AddUpgradeFriendPlayer();
+		}
+		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+		{
+			upg = ds_map_find_value(global.PlayerUpgradesList, i)
+			if (upg.obj = o_enchufeUpgadeShootingRecharges)
+			{
+				upg.times+=1;
+			}
+		}
+		
+		global.shootingRecharges = true;
 		inEnchufe.charging = true;
 		upgraded = true;
 		

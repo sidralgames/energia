@@ -5,14 +5,16 @@ if (other.canHaveAShield == true) && (other.haveAShield == false)
 {
 	other.haveAShield = true;
 	shield = instance_create_layer(other.x, other.y, "Enemies", o_shieldOfEnemy);
-	shield._hp = 20;
+	
 	if (other.enemyIsMini)
 	{
 		shield.scale = 0.5;
+		shield._hp = 5;
 	}
 	else
 	{
 		shield.scale = 0.8;
+		shield._hp = 10;
 	}
 }
 

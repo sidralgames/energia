@@ -61,7 +61,7 @@ upgradeLaserMax = false;
 upgradeBonus = false;
 upgradeFriend = false
 upgradeDobleDoble = false;
-
+upgradeShootingRecharges = false;
 
 charge = 0;
 maxCharge = 200;

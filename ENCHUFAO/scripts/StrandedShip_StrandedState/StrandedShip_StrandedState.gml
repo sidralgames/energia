@@ -2,6 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function StrandedShip_StrandedState()
 {
+	disconectedFirstTime = false; //PARA DESCONECTARSE CUANDO FULL HP
 	if (connected)
 	{
 		myCharger._hpush = 0;

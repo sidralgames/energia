@@ -2,7 +2,7 @@
 // You can write your code in this editor
 if (!called)
 {
-	if (shipReady)
+	if (shipReady) && (other.isImmortal = false)
 	{
 		if (tocado = false)
 		{
