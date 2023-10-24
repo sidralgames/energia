@@ -31,4 +31,7 @@ function PlayerStats_Blue()
 	global.laserStat = global.laserMax;
 	global.cableStat = 2;
 	
+	//Experimental
+	global.accuracy =-1.5;
+	
 }

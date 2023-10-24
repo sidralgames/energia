@@ -38,4 +38,7 @@ function PlayerStats_Green()
 	global.speedStatInitial = global.speedStat;
 	global.cableStatInitial = global.cableStat;
 	global.laserStatInitial = global.laserStat;
+	
+	//Experimental
+	global.accuracy =0;
 }

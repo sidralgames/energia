@@ -59,8 +59,8 @@ function PlayerShipShoot()
 		}
 		
 		off =  random_range(offRange,-offRange)
-		off1 = 3;
-		off2 = -3;
+		off1 = max(3+global.accuracy, 0.25);
+		off2 = -max(3+global.accuracy, 0.25);
 		
 		bullet1.bulletSpeed = 9;
 		bullet1._angle = dire+off1;
@@ -100,8 +100,8 @@ function PlayerShipShoot()
 		
 		
 		off = 0;
-		off1 = 3;
-		off2 = -3;
+		off1 = max(3+global.accuracy, 0.25);
+		off2 = -max(3+global.accuracy, 0.25);
 		
 		bullet1.bulletSpeed = 9;
 		bullet1._angle = dire+off1;
@@ -144,10 +144,10 @@ function PlayerShipShoot()
 			global.energy+=4
 		}
 		
-		off = 1;
-		off1 = 4;
-		off2 = -1;
-		off0 = -4
+		off = max(1+global.accuracy, 0.25);
+		off1 = max(4+global.accuracy, 1);
+		off2 = -max(1+global.accuracy, 0.25);
+		off0 = -max(4+global.accuracy, 1);
 		
 		bullet2.bulletSpeed = 9;
 		bullet2._angle = dire+off2;

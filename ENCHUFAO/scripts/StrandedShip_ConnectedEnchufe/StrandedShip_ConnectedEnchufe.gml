@@ -98,26 +98,14 @@ function StrandedShip_ConnectedEnchufe()
 		state = STRANDEDSHIPSTATE.CONNECTEDSHIP;
 	}
 	
-	if (shipReady) && (disconectedFirstTime == false) && (hp = hpMax) //LO ULTIMO PARA VER SI SE DESCOPNECTA FULL HP
+	if (shipReady) && (disconectedFirstTime == false) //LO ULTIMO PARA VER SI SE DESCOPNECTA FULL HP
 	{
 		disconectedFirstTime = true;
-		with(myCable)
-		{
-			enchufe.withStrandedShip = false;
-		}
-		if instance_exists(o_playerShip)
-		{
-			o_playerShip.pluggedShip=false;
-		}
-		connectedToEnchufe = false;
-		instance_destroy(myCable);
-		instance_destroy(myCharger);
-		
-		cable = instance_create_layer(x, y, "Enemies", o_cableStrandedShip);
-		
-		//myCable.rope1.vertexDeAttachTo(last)
-		
-		connected = false;
-		state = STRANDEDSHIPSTATE.STRANDED;
+		DisconnectStrandedShip();
+	}
+	
+	if (connectedToEnchufe) && (shipReady) && (hp >= hpMax)
+	{
+		DisconnectStrandedShip();		
 	}
 }

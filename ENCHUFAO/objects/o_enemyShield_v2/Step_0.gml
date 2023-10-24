@@ -28,7 +28,7 @@ if instance_exists(o_playerShip)
 	
 		if (contShield <= 0)
 		{
-			contShield = random_range(120, 300)
+			contShield = random_range(minContShield, maxContShield)
 			instance_create(x,y,o_shieldMaker)
 				
 		}

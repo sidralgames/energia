@@ -56,8 +56,11 @@ if (inside.hp <= 0)
 {
 	instance_destroy();
 	instance_destroy(inside);
-	instance_create(x,y,o_exploBomb);
-	instance_create(x,y,o_enemyMini);
+	instance_create(x-10,y,o_exploBomb);
+	instance_create(x,y-20,o_exploBomb);
+	instance_create(x+10,y,o_exploBomb);
+	instance_create_layer(x,y,"Enemies", o_enemyMini_PostBoss);
+	instance_create_layer(x,y,"Enchufes", o_enchufe_Final)
 	
 }
 

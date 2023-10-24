@@ -29,5 +29,7 @@ function PlayerStats_Purple()
 	global.ammoStat = global.ammoMax / 50;
 	global.laserStat = global.laserMax;
 	global.cableStat = 3;
+	//Experimental
+	global.accuracy =1;
 	
 }

@@ -31,6 +31,7 @@ global.bulletsBifurcateIsOn = false; /////// OK
 global.bulletsDanceIsOn = false; ////////////OK movimiento en s
 global.bulletsBurnIsOn = false;
 
+
 global.havePickedBouncingBullets = false;
 global.havePickedSmartBullets = false;
 global.havePickedPiercingBullets = false;
@@ -47,6 +48,7 @@ global.laserSlowEnemies = true;////////////// OK
 
 //ONLY EN LA HEAD
 
+global.accuracy =0;
 
 
 
@@ -269,6 +271,8 @@ AddUpgradeBonus();
 AddUpgradeDobleDoble();
 AddUpgradeFriend();
 AddUpgradeShootingRecharges();//20
+AddUpgradeRecoverBullet();//20
+
 
 global.ammoIsUpgraded = false;
 global.cableIsUpgraded = false;
@@ -288,8 +292,9 @@ global.clusterIsUpgraded = false;
 global.laserIsUpgraded = false;
 global.bonusIsUpgraded = false;
 global.dobleDobleIsUpgraded = false;
-//global.friendIsUpgraded = true; MOVED UP
+//global.friendIsUpgraded = false; MOVED UP
 global.shootingRechargesIsUpgraded = false;
+global.recoverBulletIsUpgraded = false;
 
 //--------UPGRADE RELATED--------//
 global.bombIsClusterBomb = false;

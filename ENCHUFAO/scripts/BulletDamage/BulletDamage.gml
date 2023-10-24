@@ -16,6 +16,7 @@ function BulletDamage()
 	{
 		_hp -= (global.superShot+global.amplifyPowerAmmo)*global.damageDealt; //--- DO DAMAGE TO ENEMY ---//
 		instance_destroy(other);
+		RecoverBullet();
 	}
 	
 	

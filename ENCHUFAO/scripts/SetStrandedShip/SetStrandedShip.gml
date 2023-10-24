@@ -22,6 +22,7 @@ function SetStrandedShip()
 		maxSpeed = 2.5;
 		hpMax = 4;
 		hp = global.strandedShipGreenHP;
+		standedShipfireRate = 25;
 	
 	}
 	else if (sprite = splayer_Blue)
@@ -33,6 +34,7 @@ function SetStrandedShip()
 		maxSpeed = 3.25;
 		hpMax = 3;
 		hp = global.strandedShipBlueHP;
+		standedShipfireRate = 20;
 	}
 	else if (sprite = splayer_Dark)
 	{
@@ -43,6 +45,7 @@ function SetStrandedShip()
 		maxSpeed = 2.75;
 		hpMax = 3;
 		hp = global.strandedShipDarkHP;
+		standedShipfireRate = 25;
 	}
 	else if (sprite = splayer_Red)
 	{
@@ -53,6 +56,7 @@ function SetStrandedShip()
 		maxSpeed = 2;
 		hpMax = 5;
 		hp = global.strandedShipRedHP;
+		standedShipfireRate = 25;
 	}
 	else if (sprite = splayer_Purple)
 	{
@@ -63,6 +67,7 @@ function SetStrandedShip()
 		maxSpeed = 2.75;
 		hpMax = 4;
 		hp = global.strandedShipPurpleHP;
+		standedShipfireRate = 20;
 	}
 	else if (sprite = splayer_mp3)
 	{
@@ -73,6 +78,7 @@ function SetStrandedShip()
 		maxSpeed = 2.75;
 		hpMax = 3;
 		hp = global.strandedShipMP3HP;
+		standedShipfireRate = 25;
 	}
 
 	sprite_index = sprite;

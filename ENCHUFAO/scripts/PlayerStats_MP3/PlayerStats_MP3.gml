@@ -30,4 +30,7 @@ function PlayerStats_MP3()
 	global.laserStat = global.laserMax;
 	global.cableStat = 4;
 	
+	//Experimental
+	global.accuracy =0.5;
+	
 }

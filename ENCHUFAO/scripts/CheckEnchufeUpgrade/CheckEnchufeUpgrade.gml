@@ -401,7 +401,7 @@ function CheckEnchufeUpgrade()
 		if (!global.shootingRechargesIsUpgraded)
 		{
 			global.shootingRechargesIsUpgraded = true;
-			AddUpgradeFriendPlayer();
+			AddUpgradeShootingRechargesPlayer();
 		}
 		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
 		{
@@ -413,6 +413,26 @@ function CheckEnchufeUpgrade()
 		}
 		
 		global.shootingRecharges = true;
+		inEnchufe.charging = true;
+		upgraded = true;
+		
+	}
+	else if (inEnchufe.upgradeRecoverBullet = true) && (upgraded = false)
+	{
+		if (!global.recoverBulletIsUpgraded)
+		{
+			global.recoverBulletIsUpgraded = true;
+			AddUpgradeRecoverBulletPlayer();
+		}
+		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+		{
+			upg = ds_map_find_value(global.PlayerUpgradesList, i)
+			if (upg.obj = o_enchufeUpgadeRecoverBullet)
+			{
+				upg.times+=1;
+			}
+		}
+		
 		inEnchufe.charging = true;
 		upgraded = true;
 		
