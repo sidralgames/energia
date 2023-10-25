@@ -34,33 +34,33 @@ else
 
 if (shipSelected = false) && (canSelectShip)
 {
-	draw_sprite_ext(spriteToShow,0,x,y+90,2,2,90,image_blend, image_alpha)
+	draw_sprite_ext(spriteToShow,0,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+155,2,2,90,image_blend, image_alpha)
 
 	draw_set_font(customFont);
 	
 	if (ship.unlocked == 1)
 	{
 		draw_set_color(azul)
-		draw_text(x-1,y+245, string("SHIP BONUS: " + ship.stat))
-		draw_text(x-1,y+247, string("SHIP BONUS: "+ ship.stat))
+		draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+320, string("SHIP BONUS: " + ship.stat))
+		draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+322, string("SHIP BONUS: "+ ship.stat))
 	
 		draw_set_color(c_white)
-		draw_text(x,y+245, string("SHIP BONUS: " + ship.stat))
+		draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+322, string("SHIP BONUS: " + ship.stat))
 	}
 	else
 	{
 		draw_set_color(azul)
-		draw_text(x-1,y+245, "BONUS: ???? ??? ?????")
-		draw_text(x-1,y+247, "BONUS: ???? ??? ?????")
+		draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+320, "BONUS: ???? ??? ?????")
+		draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+322, "BONUS: ???? ??? ?????")
 	
 		draw_set_color(c_white)
-		draw_text(x,y+245, "BONUS: ???? ??? ?????")
+		draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+322, "BONUS: ???? ??? ?????")
 	}
 	
 	
 	
-	draw_sprite_ext(s_arrows,0,x-70,y+90,1,1,0,image_blend, image_alpha)
-	draw_sprite_ext(s_arrows,1,x+70,y+90,1,1,0,image_blend, image_alpha)
+	draw_sprite_ext(s_arrows,0,__view_get( e__VW.XView, 0 )+255,__view_get( e__VW.YView, 0 )+155,1,1,0,image_blend, image_alpha)
+	draw_sprite_ext(s_arrows,1,__view_get( e__VW.XView, 0 )+385,__view_get( e__VW.YView, 0 )+155,1,1,0,image_blend, image_alpha)
 }
 
 if (canSelectShip) && (alarm[0] < 60)
