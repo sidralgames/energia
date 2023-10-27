@@ -62,7 +62,7 @@ upgradeBonus = false;
 upgradeFriend = false
 upgradeDobleDoble = false;
 upgradeShootingRecharges = false;
-
+upgradeRecoverBullet = false;
 charge = 0;
 maxCharge = 200;
 _hpush = choose(random_range(0.05, 0.1),-random_range(0.05, 0.1))

@@ -25,7 +25,8 @@ if (inEnemy = false)
 			if (o_playerShip.key_x) && (o_playerShip.haveBatteryUpgrade == false)
 			{
 				audio_play_sound_on(global.audioEmitter,choose(snd_plugged, snd_plugged_2, snd_plugged_3),false, 50);
-				instance_destroy();	
+				instance_destroy();
+				instance_create_layer(o_playerShip.x, o_playerShip.y -30, "Player", o_bannerBullet)
 			}
 		}
 	}

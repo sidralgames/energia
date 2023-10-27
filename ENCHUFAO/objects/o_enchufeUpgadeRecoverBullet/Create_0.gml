@@ -10,5 +10,5 @@
 event_inherited();
 
 energy = true;
-upgradeAmmo = true;
+upgradeRecoverBullet = true;
 charging = false;
