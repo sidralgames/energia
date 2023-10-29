@@ -52,7 +52,6 @@
       ],"visible":true,"depth":600,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Main","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3DA4B377","properties":[],"isDnd":false,"objectId":{"name":"o_main","path":"objects/o_main/o_main.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":160.0,"y":160.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_23DBEBD7","properties":[],"isDnd":false,"objectId":{"name":"o_nextRoom","path":"objects/o_nextRoom/o_nextRoom.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":330.0,"y":69.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_194D792D","properties":[],"isDnd":false,"objectId":{"name":"o_shipSelector","path":"objects/o_shipSelector/o_shipSelector.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":320.0,"y":277.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4C46C414","properties":[],"isDnd":false,"objectId":{"name":"o_shipStats","path":"objects/o_shipStats/o_shipStats.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":272.0,"y":253.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_738C10C4","properties":[],"isDnd":false,"objectId":{"name":"o_statEnergy","path":"objects/o_statEnergy/o_statEnergy.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":336.0,"y":203.0,},
@@ -72,7 +71,9 @@
         {"type":1,"name":"g_TintCol","value":"#FFF5E82C",},
       ],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Bullets","instances":[],"visible":true,"depth":1200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
-    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Enemies","instances":[],"visible":true,"depth":1300,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
+    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Enemies","instances":[
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_23DBEBD7","properties":[],"isDnd":false,"objectId":{"name":"o_nextRoom","path":"objects/o_nextRoom/o_nextRoom.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":320.0,"y":64.0,},
+      ],"visible":true,"depth":1300,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Part","instances":[],"visible":true,"depth":1400,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Cable","instances":[],"visible":true,"depth":1500,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Enchufes","instances":[
@@ -106,9 +107,9 @@
   "inheritCode": false,
   "instanceCreationOrder": [
     {"name":"inst_7D3FBCFD","path":"rooms/Sala_Inicio/Sala_Inicio.yy",},
-    {"name":"inst_23DBEBD7","path":"rooms/Sala_Inicio/Sala_Inicio.yy",},
     {"name":"inst_194D792D","path":"rooms/Sala_Inicio/Sala_Inicio.yy",},
     {"name":"inst_3DA4B377","path":"rooms/Sala_Inicio/Sala_Inicio.yy",},
+    {"name":"inst_23DBEBD7","path":"rooms/Sala_Inicio/Sala_Inicio.yy",},
     {"name":"inst_4C46C414","path":"rooms/Sala_Inicio/Sala_Inicio.yy",},
     {"name":"inst_738C10C4","path":"rooms/Sala_Inicio/Sala_Inicio.yy",},
     {"name":"inst_10E2AB8A","path":"rooms/Sala_Inicio/Sala_Inicio.yy",},

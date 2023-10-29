@@ -4,7 +4,8 @@ function SetupLevelBoss2()
 {
 
 	enchufe0 = false;
-	enchufeHP = false;
+	enchufeHP1 = false;
+	enchufeHP2 = false;
 	enchufeShield = false;
 	enchufeAmmo = false;
 	enchufeFinal = false;
@@ -90,7 +91,8 @@ function SetupLevelBoss2()
 		    if (global.wallgrid_[# xx, yy] == FLOOR) 
 			{
 			    var oddsE0 = 100;
-				var oddsEHP = 300;
+				var oddsEHP = 100;
+				var oddsEHP2 = 100;
 				var oddsEA = 200;
 				var oddsESH = 300;
 				var oddsEF = 300;
@@ -133,16 +135,28 @@ function SetupLevelBoss2()
 				}
 				if instance_exists(o_enchufe_Father)
 				{
-					if (irandom(oddsEHP) == oddsEHP) && (enchufeHP = false)
+					if (irandom(oddsEHP) == oddsEHP) && (enchufeHP1 = false)
 					{
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 
 						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 100)
 						{
 							instance_create_layer(exM,eyM,"Enchufes",o_enchufePETAHP); 
-							enchufeHP = true;
+							enchufeHP1 = true;
 						}
 					}
+					
+					if (irandom(oddsEHP2) == oddsEHP2) && (enchufeHP2 = false)
+					{
+						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
+
+						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 100)
+						{
+							instance_create_layer(exM,eyM,"Enchufes",o_enchufePETAHP); 
+							enchufeHP2 = true;
+						}
+					}
+					
 			
 					if (irandom(oddsESH) == oddsESH) && (enchufeShield = false)
 					{
@@ -184,14 +198,15 @@ function SetupLevelBoss2()
 		    } 
 	    }
 	}
-SetVines();
-if (!enchufeAmmo) || (hasBoss = false)  || (hasBossPeque = false) || (!enchufeShield)
-	//|| (!enchufeHP) || (!enchufe0)
+
+	if (!enchufeAmmo) || (hasBoss = false)  || (hasBossPeque = false) || (!enchufeShield)
+		|| (!enchufeHP1) || (!enchufeHP2)
 	{
 		room_restart();
 
 	}
 
+	SetVines();
 	
 	SetHUE();
 	

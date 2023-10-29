@@ -50,7 +50,7 @@ function BossGarbanzoChooseAttack()
 		{
 			creatingEnemies = false;
 			alarm[3] = 300	
-			contAttack = random_range(200,240)
+			contAttack = random_range(220,260)
 		}
 		else 
 		{

@@ -28,6 +28,6 @@ function BossGarbanzoState_Attack()
 			drawflash=true
 			laserCreated = false
 			recover = false;
-			recoverTime = 120;
+			recoverTime = random_range(120,180);
 		}
 }

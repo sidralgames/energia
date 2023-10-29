@@ -7,8 +7,40 @@ if(room = Sala_0) || (room = Sala_SecondBoss)
 		if  point_distance(x,y,o_playerShip.x,o_playerShip.y)>100 && irandom(oddsTurret) == oddsTurret
 		{
 			instance_create_layer(x,y,"Enemies",o_torreta)
+			
 		}
 	}
+	
+	if !collision_circle(x,y,18,o_wall,false,true)
+	{
+		if  point_distance(x,y,o_playerShip.x,o_playerShip.y)>100 && irandom(oddsEnemyMouth) == oddsEnemyMouth
+		{
+			instance_create_layer(x,y,"Meteors",o_mouthAnchor);
+			instance_create_layer(x+32,y,"Meteors",o_enemy_Mouth);
+			
+		}
+	}
+	if !collision_line(x,y,x,y-28,o_wall,false,true)
+	{
+		if  point_distance(x,y,o_playerShip.x,o_playerShip.y)>100 && irandom(oddsEnemyMouth) == oddsEnemyMouth
+		{
+			instance_create_layer(x,y-12,"Meteors",o_mouthAnchor);
+			instance_create_layer(x,y-32,"Meteors",o_enemy_Mouth);
+			
+		}
+	}
+	
+		if !collision_line(x,y,x,y+28,o_wall,false,true)
+	{
+		if  point_distance(x,y,o_playerShip.x,o_playerShip.y)>100 && irandom(oddsEnemyMouth) == oddsEnemyMouth
+		{
+			instance_create_layer(x,y+12,"Meteors",o_mouthAnchor);
+			instance_create_layer(x,y+32,"Meteors",o_enemy_Mouth);
+			
+		}
+	}
+
+
 	
 	if (!collision_line(x,y,x,y-32, o_wall, false, true)) && (oddsLaser = irandom(oddsLaser))
 	{

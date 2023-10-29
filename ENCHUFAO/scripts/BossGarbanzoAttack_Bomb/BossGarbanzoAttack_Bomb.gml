@@ -32,8 +32,8 @@ function BossGarbanzoAttack_Bomb()
 					{
 						vspeed-=1;
 						hspeed-=1;
-						bulletBomb._hpush= random_range(1,3) + hspeed
-						bulletBomb._vpush= random_range(4,7) + vspeed;
+						bulletBomb._hpush= random_range(1,4) + hspeed
+						bulletBomb._vpush= random_range(4,9) + vspeed;
 						bulletBomb.scale = 0.65;
 				
 					}
@@ -46,8 +46,8 @@ function BossGarbanzoAttack_Bomb()
 					{
 						vspeed-=1;
 						hspeed+=1;
-						bulletBomb._hpush= random_range(-1,-3) + hspeed
-						bulletBomb._vpush= random_range(4,7) + vspeed;
+						bulletBomb._hpush= random_range(-1,-4) + hspeed
+						bulletBomb._vpush= random_range(4,9) + vspeed;
 						bulletBomb.scale = 0.65;
 					
 					}
@@ -59,8 +59,8 @@ function BossGarbanzoAttack_Bomb()
 					if instance_exists(bulletBomb)
 					{
 						vspeed-=1.5;
-						bulletBomb._hpush= random_range(-1,-3) + hspeed
-						bulletBomb._vpush= random_range(4,7) + vspeed;
+						bulletBomb._hpush= random_range(-1,-4) + hspeed
+						bulletBomb._vpush= random_range(4,9) + vspeed;
 						bulletBomb.scale = 0.65;
 					
 					}
@@ -68,8 +68,8 @@ function BossGarbanzoAttack_Bomb()
 					if instance_exists(bulletBomb)
 					{
 				
-						bulletBomb._hpush= random_range(1,3) + hspeed
-						bulletBomb._vpush= random_range(4,7) + vspeed;
+						bulletBomb._hpush= random_range(1,4) + hspeed
+						bulletBomb._vpush= random_range(4,9) + vspeed;
 						bulletBomb.scale = 0.65;
 				
 					}
