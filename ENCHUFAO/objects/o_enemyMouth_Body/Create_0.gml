@@ -25,7 +25,7 @@ gray = make_color_rgb(192,203,220);
 cableColor = gray;
 
 // Create verlet groups
-_segments = random_range(3,5)
+_segments = choose(random_range(3,5),random_range(3,5),random_range(3,8))
 // Create a new rope
 //rope1 = verletGroupCreateRope(verletSystem1, x, y, cableColor, 2, 3, _segments, 2, 100, canCollide);
 rope1 = verletGroupCreateRopeTextured(verletSystem1, x, y, s_enemyMouth_Body, _segments, 1, 10);

@@ -24,11 +24,12 @@ else
 
 if spawn = 4
 {
-	minRate = random_range(2,5)
-	maxRate = random_range(7,10)
+	minRate = random_range(3,7)
+	maxRate = random_range(20,40)
 }
 else
 {
 	minRate = random_range(5,10)
 	maxRate = random_range(30,40)
 }
+enemiesBorn = 0;

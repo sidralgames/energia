@@ -33,7 +33,7 @@ function EnemyBasicChasingIAAnchored()
 		if (global.haveInvisibiltyCloak && global.invisibleCloak == true) || (far = true)
 		{
 			path_end()
-			var a = point_direction(x, y, x+diffX,y);
+			var a = point_direction(x+diffX, y, x,y+diffYFar);
 			if contBounce <=0
 			{
 				direction+= sign(dsin(a - direction)) * (precision * global.relativeSpeed);
@@ -44,7 +44,7 @@ function EnemyBasicChasingIAAnchored()
 			{
 				if (point_distance(x,y,anchor.x, anchor.y) > max(64, 10 * cable._segments) * farDist)
 				{
-					contBounce = random_range(5,10);
+					contBounce = random_range(10,20);
 					
 					dir = point_direction(x,y,anchor.x,anchor.y)
 					
@@ -52,7 +52,7 @@ function EnemyBasicChasingIAAnchored()
 					vspeed = lengthdir_y(0.001,dir)
 		
 					activeDistance = random_range(100, 150);
-					precision= random_range(1,2);
+					precision= random_range(4,6);
 		
 				}
 			}
@@ -86,7 +86,7 @@ function EnemyBasicChasingIAAnchored()
 			}
 			if (instance_exists(anchor))
 			{
-				if (point_distance(x,y,anchor.x, anchor.y) > max(50, 10 * cable._segments) * farDist)
+				if (point_distance(x,y,anchor.x, anchor.y) > max(50, 9 * cable._segments) * farDist)
 				{
 					contBounce = random_range(5,10);
 					

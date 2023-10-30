@@ -22,9 +22,9 @@ if(room = Sala_0) || (room = Sala_SecondBoss)
 			
 		//	}
 		//}
-		if collision_circle(x,y,32, oVinePadre, false, true)
-		{
+		
 			if !collision_line(x,y,x,y-28,o_wall,false,true)
+			&& collision_rectangle(x-20,y,x+20, y-20, oVinePadre, false, true)
 			{
 				if  point_distance(x,y,o_playerShip.x,o_playerShip.y)>100
 				&& irandom(oddsEnemyMouth) == oddsEnemyMouth
@@ -32,12 +32,14 @@ if(room = Sala_0) || (room = Sala_SecondBoss)
 				{
 					instance_create_layer(x,y-14,"EnemiesHUE",o_mouthAnchor);
 					enemy = instance_create_layer(x,y-32,"EnemiesHUE",o_enemy_Mouth);
-					enemy.diffYFar = -1;
+					enemy.diffYFar = -10;
 			
 				}
 			}
 	
-			if !collision_line(x,y,x,y+28,o_wall,false,true)
+			if !collision_line(x,y,x,y+28,o_wall,false,true) 
+			&& collision_rectangle(x-20,y,x+20, y+20, oVinePadre, false, true)
+		
 			{
 				if  point_distance(x,y,o_playerShip.x,o_playerShip.y)>100 
 				&& irandom(oddsEnemyMouth) == oddsEnemyMouth
@@ -45,11 +47,11 @@ if(room = Sala_0) || (room = Sala_SecondBoss)
 				{
 					instance_create_layer(x,y+14,"EnemiesHUE",o_mouthAnchor);
 					enemy = instance_create_layer(x,y+32,"EnemiesHUE",o_enemy_Mouth);
-					enemy.diffYFar = +1;
+					enemy.diffYFar = +10;
 			
 				}
 			}
-		}
+		
 	}
 
 

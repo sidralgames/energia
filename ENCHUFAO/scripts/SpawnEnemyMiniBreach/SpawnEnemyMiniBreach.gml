@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SpawnEnemyMiniBreach()
 {
-	if instance_exists(o_playerShip)
+	if instance_exists(o_playerShip) && (enemiesBorn <= 30) 
 	{
 		for (var i=0; i<1; i++)
 		{
@@ -52,6 +52,7 @@ function SpawnEnemyMiniBreach()
 					enemies.state = ENEMYSTATE.CHASING;
 					enemies._angle = point_direction(x, y, o_playerShip.x, o_playerShip.y)+random_range(-30,30)
 					enemies.direction = enemies._angle;
+					enemiesBorn+=1;
 				}
 			}
 			

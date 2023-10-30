@@ -18,7 +18,7 @@ function Enemy_ChasingAnchored()
 				diffX = choose(random_range(-1, 1));
 				diffY = choose(random_range(-1, 1));
 			}
-			alarm[4] = random_range(100, 160)
+			alarm[4] = random_range(50, 60)
 		}
 
 		if instance_exists(o_playerShip)

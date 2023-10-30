@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 full = false;
-
+global.chargerElectrocutatesIsOn = true
 //-------------MEGA UPGRADES-----------------//
 
 //--INVISIBILITY CLOAK--//

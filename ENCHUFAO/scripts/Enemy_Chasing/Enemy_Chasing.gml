@@ -33,7 +33,12 @@ function Enemy_Chasing()
 		//----------------CHASING MOVENEMT------------------//
 		if (enemyIsMini)
 		{
-			part_particles_create(global.naveEnemy_Mini_sys, x-lengthdir_x(2,direction), y-lengthdir_y(2,direction), global.naveEnemy_Mini , 1)
+			contParts --;
+			if (contParts <=0)
+			{
+				part_particles_create(global.naveEnemy_Mini_sys, x-lengthdir_x(2,direction), y-lengthdir_y(2,direction), global.naveEnemy_Mini , 1)
+				contParts = contPartsInitial;
+			}
 		}
 		else
 		{
