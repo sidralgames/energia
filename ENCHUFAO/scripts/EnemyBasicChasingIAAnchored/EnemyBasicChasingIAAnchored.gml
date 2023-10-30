@@ -4,6 +4,8 @@ function EnemyBasicChasingIAAnchored()
 {
 	if (instance_exists(anchor))
 	{
+		contBounce--;
+	
 		if (tile_meeting(x+hspeed*1.5,y,"Tiles"))
 			{
 			    hspeed = -hspeed*bnc;
@@ -28,23 +30,31 @@ function EnemyBasicChasingIAAnchored()
 			enemySpeed = lerp(enemySpeed, enemySpeedInitial, 0.1);
 		}
 	
-		if (global.haveInvisibiltyCloak && global.invisibleCloak == true) || (farDist = 0.7)
+		if (global.haveInvisibiltyCloak && global.invisibleCloak == true) || (far = true)
 		{
 			path_end()
-			var a = point_direction(x, y, x+diffX,y+diffY);
-			direction+= sign(dsin(a - direction)) * (precision * global.relativeSpeed);
-			_angle = direction;
-		
-		
-			if (point_distance(x,y,anchor.x, anchor.y) > max(50, 13 * cable._segments) * farDist)
+			var a = point_direction(x, y, x+diffX,y);
+			if contBounce <=0
 			{
-				dir = point_direction(x,y,anchor.x,anchor.y)
-				hspeed = lengthdir_x(0.1,dir)
-				vspeed = lengthdir_y(0.1,dir)
+				direction+= sign(dsin(a - direction)) * (precision * global.relativeSpeed);
+				_angle = direction;
+			}
 		
-				contBounce = random_range(1,2);
-				precision= random_range(4,7);
+			if (instance_exists(anchor))
+			{
+				if (point_distance(x,y,anchor.x, anchor.y) > max(64, 10 * cable._segments) * farDist)
+				{
+					contBounce = random_range(5,10);
+					
+					dir = point_direction(x,y,anchor.x,anchor.y)
+					
+					hspeed = lengthdir_x(0.001,dir)
+					vspeed = lengthdir_y(0.001,dir)
 		
+					activeDistance = random_range(100, 150);
+					precision= random_range(1,2);
+		
+				}
 			}
 	
 			speed = enemySpeed * min(1, global.relativeSpeed+0.2);
@@ -66,22 +76,29 @@ function EnemyBasicChasingIAAnchored()
 		{
 		
 			path_end()
-			contBounce--;
+			
 			var a = point_direction(x, y, o_playerShip.x+diffX,  o_playerShip.y+diffY);
-	
-			direction+= sign(dsin(a - direction)) * (precision * global.relativeSpeed);
-			_angle = direction;
-		
-		
-			if (point_distance(x,y,anchor.x, anchor.y) > max(50, 9 * cable._segments) * farDist)
+			
+			if (contBounce <=0)
 			{
-				dir = point_direction(x,y,anchor.x,anchor.y)
-				hspeed = lengthdir_x(0.1,dir)
-				vspeed = lengthdir_y(0.1,dir)
+				direction+= sign(dsin(a - direction)) * (precision * global.relativeSpeed);
+				_angle = direction;
+			}
+			if (instance_exists(anchor))
+			{
+				if (point_distance(x,y,anchor.x, anchor.y) > max(50, 10 * cable._segments) * farDist)
+				{
+					contBounce = random_range(5,10);
+					
+					dir = point_direction(x,y,anchor.x,anchor.y)
+					
+					hspeed = lengthdir_x(0.05,dir)
+					vspeed = lengthdir_y(0.05,dir)
+					
+					activeDistance = random_range(100, 150);
+					precision= random_range(3,4);
 		
-				contBounce = random_range(1,2);
-				precision= random_range(4,7);
-		
+				}
 			}
 	
 			speed = enemySpeed * min(1, global.relativeSpeed+0.2);

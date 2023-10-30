@@ -3,8 +3,9 @@
 // Create a new verlet system
 // You can create multiple systems with different physic properties
 canCollide = false;
-fric = 0.95;
-verletSystem1 = new verletSystem(fric, 0.0);
+fric = 1;
+grv = 0.0;
+verletSystem1 = new verletSystem(fric, grv);
 off = 0;
 
 greenO = make_color_rgb(99,199,77)
@@ -24,7 +25,7 @@ gray = make_color_rgb(192,203,220);
 cableColor = gray;
 
 // Create verlet groups
-_segments = random_range(4,10)
+_segments = random_range(3,5)
 // Create a new rope
 //rope1 = verletGroupCreateRope(verletSystem1, x, y, cableColor, 2, 3, _segments, 2, 100, canCollide);
 rope1 = verletGroupCreateRopeTextured(verletSystem1, x, y, s_enemyMouth_Body, _segments, 1, 10);
@@ -35,7 +36,7 @@ rope1.vertexAttachTo(first, inst);
 
 instAchor = instance_nearest(x,y,o_mouthAnchor)
 rope1.vertexAttachTo(last, instAchor);
-depth = layer_get_depth("Enemies");
+//depth = layer_get_depth("Enemies");
 
 plugged = false;
 

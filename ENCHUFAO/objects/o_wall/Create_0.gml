@@ -4,7 +4,7 @@
 alarm[1] = 70;
 oddsLaser = max(10, 30 - global.level);
 
-oddsEnemyMouth = max(10, 20 - global.level);
+oddsEnemyMouth = max(20, 50 - global.level);
 
 oddsTurret = max(5,20 - global.level);
 laserB = 1;

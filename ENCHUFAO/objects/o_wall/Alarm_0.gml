@@ -11,32 +11,44 @@ if(room = Sala_0) || (room = Sala_SecondBoss)
 		}
 	}
 	
-	if !collision_circle(x,y,18,o_wall,false,true)
+	if (x > 40) && (x < room_width - 40) && (y > 40) && (y < room_height - 40)
 	{
-		if  point_distance(x,y,o_playerShip.x,o_playerShip.y)>100 && irandom(oddsEnemyMouth) == oddsEnemyMouth
-		{
-			instance_create_layer(x,y,"Meteors",o_mouthAnchor);
-			instance_create_layer(x+32,y,"Meteors",o_enemy_Mouth);
+		//if !collision_circle(x,y,18,o_wall,false,true)
+		//{
+		//	if  point_distance(x,y,o_playerShip.x,o_playerShip.y)>100 && irandom(oddsEnemyMouth) == oddsEnemyMouth
+		//	{
+		//		instance_create_layer(x,y+choose(14,-14),"EnemiesHUE",o_mouthAnchor);
+		//		enemy = instance_create_layer(x+32,y,"EnemiesHUE",o_enemy_Mouth);
 			
-		}
-	}
-	if !collision_line(x,y,x,y-28,o_wall,false,true)
-	{
-		if  point_distance(x,y,o_playerShip.x,o_playerShip.y)>100 && irandom(oddsEnemyMouth) == oddsEnemyMouth
+		//	}
+		//}
+		if collision_circle(x,y,32, oVinePadre, false, true)
 		{
-			instance_create_layer(x,y-12,"Meteors",o_mouthAnchor);
-			instance_create_layer(x,y-32,"Meteors",o_enemy_Mouth);
+			if !collision_line(x,y,x,y-28,o_wall,false,true)
+			{
+				if  point_distance(x,y,o_playerShip.x,o_playerShip.y)>100
+				&& irandom(oddsEnemyMouth) == oddsEnemyMouth
+				&& !collision_circle(x,y,16, o_mouthAnchor, false, true)
+				{
+					instance_create_layer(x,y-14,"EnemiesHUE",o_mouthAnchor);
+					enemy = instance_create_layer(x,y-32,"EnemiesHUE",o_enemy_Mouth);
+					enemy.diffYFar = -1;
 			
-		}
-	}
+				}
+			}
 	
-		if !collision_line(x,y,x,y+28,o_wall,false,true)
-	{
-		if  point_distance(x,y,o_playerShip.x,o_playerShip.y)>100 && irandom(oddsEnemyMouth) == oddsEnemyMouth
-		{
-			instance_create_layer(x,y+12,"Meteors",o_mouthAnchor);
-			instance_create_layer(x,y+32,"Meteors",o_enemy_Mouth);
+			if !collision_line(x,y,x,y+28,o_wall,false,true)
+			{
+				if  point_distance(x,y,o_playerShip.x,o_playerShip.y)>100 
+				&& irandom(oddsEnemyMouth) == oddsEnemyMouth
+				&& !collision_circle(x,y,16, o_mouthAnchor, false, true)
+				{
+					instance_create_layer(x,y+14,"EnemiesHUE",o_mouthAnchor);
+					enemy = instance_create_layer(x,y+32,"EnemiesHUE",o_enemy_Mouth);
+					enemy.diffYFar = +1;
 			
+				}
+			}
 		}
 	}
 

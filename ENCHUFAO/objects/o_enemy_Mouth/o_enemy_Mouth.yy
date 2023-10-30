@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_enemy_Mouth",
   "spriteId": {
-    "name": "s_enemyMouth318",
-    "path": "sprites/s_enemyMouth318/s_enemyMouth318.yy",
+    "name": "s_enemyMouth",
+    "path": "sprites/s_enemyMouth/s_enemyMouth.yy",
   },
   "solid": false,
   "visible": true,

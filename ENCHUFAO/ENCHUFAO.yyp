@@ -645,6 +645,7 @@
     {"id":{"name":"s_screenshake_OffMenu","path":"sprites/s_screenshake_OffMenu/s_screenshake_OffMenu.yy",},"order":78,},
     {"id":{"name":"s_breachBoss","path":"sprites/s_breachBoss/s_breachBoss.yy",},"order":12,},
     {"id":{"name":"obj_sc_box","path":"objects/obj_sc_box/obj_sc_box.yy",},"order":6,},
+    {"id":{"name":"s_enemyMouth_Body_2","path":"sprites/s_enemyMouth_Body_2/s_enemyMouth_Body_2.yy",},"order":8,},
     {"id":{"name":"o_chargerStrandedShipFather","path":"objects/o_chargerStrandedShipFather/o_chargerStrandedShipFather.yy",},"order":28,},
     {"id":{"name":"UnplugStrandedShipReady","path":"scripts/UnplugStrandedShipReady/UnplugStrandedShipReady.yy",},"order":32,},
     {"id":{"name":"PlayerStats_Green","path":"scripts/PlayerStats_Green/PlayerStats_Green.yy",},"order":5,},

@@ -8,7 +8,7 @@ function EnemyBasicChasingIAFar()
 		tile_meeting(x + lengthdir_x(20, 270), y+ lengthdir_y(20, 270), "Tiles") || 
 		tile_meeting(x, y, "Tiles");
 		
-	myPath = path_add();
+	//myPath = path_add();
 	mp_grid_path(gridRoom1, myPath, x, y, o_playerShip.x ,o_playerShip.y, true);
 	if (point_distance(x,y,o_playerShip.x, o_playerShip.y) >= 200)
 	{

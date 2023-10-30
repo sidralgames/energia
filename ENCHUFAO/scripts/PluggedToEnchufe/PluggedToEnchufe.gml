@@ -41,11 +41,26 @@ function PluggedToEnchufe()
 	else
 	{
 		dir = point_direction(x,y,global.xToPlug,global.yToPlug)
-		_hpush = lengthdir_x(2,dir)
-		_vpush = lengthdir_y(2,dir)
+		
+		if (enchufe.isPETA_F)
+		{
+			_hpush = lengthdir_x(1,dir)
+			_vpush = lengthdir_y(1,dir)
+		
+			enchufe._hpush -= lengthdir_x(0.18,dir)
+			enchufe._vpush -= lengthdir_y(0.18,dir)
+		}
+		else
+		{
+			_hpush = lengthdir_x(2,dir)
+			_vpush = lengthdir_y(2,dir)
+		
+			enchufe._hpush -= lengthdir_x(0.1,dir)
+			enchufe._vpush -= lengthdir_y(0.1,dir)
+		}
+		
+		
 		alarm[5] = 20;
-		enchufe._hpush -= lengthdir_x(0.1,dir)
-		enchufe._vpush -= lengthdir_y(0.1,dir)
 	}
 
 	

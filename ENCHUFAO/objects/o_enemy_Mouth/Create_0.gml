@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited();
-depth = layer_get_depth("Enemies");
+//depth = layer_get_depth("Enemies");
 slowMoPickUps = choose(3,4);
 contBounce = 60;
 alarm[10] = 30;
@@ -12,8 +12,8 @@ _hp = 3;
 cont = 500;
 image_speed = 0.5;
 
-enemySpeedInitial = 2
-enemySpeedInitialFar = 0.25
+enemySpeedInitial = random_range(1.75,2)
+enemySpeedInitialFar = 0.05
 enemySpeed = enemySpeedInitial;
 
 precision= random_range(3,4);
@@ -36,8 +36,9 @@ maxDistance = 100;
 waitingSpeed = random_range(0.4,0.7)
 breakDistance = random_range(0.005, 0.05)
 accelDistance = random_range(0.005, 0.05);
-
-
+activeDistance = random_range(100, 150);
+far = false;
+diffYFar = 0;
 
 
 if tile_meeting(x,y,"Tiles")
@@ -49,7 +50,7 @@ if tile_meeting(x,y,"Tiles")
 
 isMegaEnemy = false;
 
-cable = instance_create_layer(x,y,"Meteors", o_enemyMouth_Body);
+cable = instance_create_layer(x,y,"EnemiesHUE", o_enemyMouth_Body);
 anchor = cable.instAchor;
 
 
