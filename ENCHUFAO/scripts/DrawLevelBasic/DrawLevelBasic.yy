@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "DrawLevelBasic",
-  "isDnD": false,
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
-    "name": "Enchufes",
-    "path": "folders/Objetos/Enchufes.yy",
+    "name": "CREATE LEVEL",
+    "path": "folders/Scripts/GENERAL/CREATE LEVEL.yy",
   },
 }

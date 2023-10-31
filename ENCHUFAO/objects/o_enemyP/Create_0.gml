@@ -9,7 +9,15 @@ contBurnedMax = 100;
 contBurned = contBurnedMax;
 contBurnPartMax = 5;
 contBurnPart = contBurnPartMax;
+
+electrocutated = false;
+contElectro = contBurnedMax;
+contElectroPart = contBurnPartMax;
+contElectroTotal = contBurnedTotalMax;
+
 burnFlash = 0;
+electroFlash = 0;
+
 isMegaEnemy = false;
 
 rojoosc= make_colour_rgb(255,0,68);
@@ -57,6 +65,7 @@ takeCover = false;
 shocked = false;
 waiting = false;
 bounced = false;
+electrocutated = false;
 shocked = false;
 tocado = false;
 waiting = false;

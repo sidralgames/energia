@@ -20,7 +20,7 @@ function SetHUE()
 	_filter_hue_params.g_HueSaturation =1+random(0.25);
 	
 	_filter_Enemyhue_params.g_HueShift = _filterShift;	
-	_filter_Enemyhue_params.g_HueSaturation =1+random(0.25);
+	_filter_Enemyhue_params.g_HueSaturation =0.65;
 
 	_filter_hueL_params.g_HueShift = _filterShift;	
 	_filter_hueL_params.g_HueSaturation =1+random(0.25);

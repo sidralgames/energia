@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited();
+myTileMap = layer_tilemap_get_id("Tiles")
 //depth = layer_get_depth("Enemies");
 slowMoPickUps = choose(3,4);
 contBounce = 60;
@@ -12,12 +13,14 @@ _hp = 3;
 cont = 500;
 image_speed = 0.5;
 
+enemyIsMini = true;
+
 enemySpeedInitial = random_range(1.75,2)
 enemySpeedInitialFar = 0.05
 enemySpeed = enemySpeedInitial;
 
 precision= random_range(3,4);
-speed=random(1)+2;
+speed=0;
 
 state = ENEMYSTATE.CHASING;
 

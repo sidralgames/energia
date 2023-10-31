@@ -24,6 +24,10 @@ if (burnFlash >0)
 {
 	burnFlash-=0.1
 }
+if (electroFlash >0)
+{
+	electroFlash-=0.1
+}
 
 if (burned = true)
 {
@@ -45,6 +49,30 @@ if (burned = true)
 	{
 		contBurned = contBurnedMax;
 		burnFlash = 1;
+		_hp-=1;
+	}
+}
+
+if (electrocutated = true)
+{
+	contElectroPart--;
+	
+	if (contElectroPart <= 0)
+	{
+		contElectroPart = random_range(1,3) ;
+		part_particles_create(global.overCharged_sys, x+random_range(15,-15), y+random_range(15,-15), global.overChargedPart , 2);
+	}
+	contElectroTotal --;
+	if (contElectroTotal <= 0)
+	{
+		contElectroTotal = contBurnedTotalMax;
+		electrocutated = false;
+	}
+	contElectro --;
+	if (contElectro <= 0)
+	{
+		contElectro = contBurnedMax;
+		electroFlash = 1;
 		_hp-=1;
 	}
 }

@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "GetStrandedShipHP",
-  "isDnD": false,
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
-    "name": "General",
-    "path": "folders/Scripts/GENERAL/General.yy",
+    "name": "STRANDED FRIEND",
+    "path": "folders/Scripts/STRANDED SHIP/STRANDED FRIEND.yy",
   },
 }

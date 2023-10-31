@@ -2,27 +2,8 @@
   "resourceType": "GMTileSet",
   "resourceVersion": "1.0",
   "name": "A_MANO3",
-  "spriteId": {
-    "name": "s_wall_tilesConespacio",
-    "path": "sprites/s_wall_tilesConespacio/s_wall_tilesConespacio.yy",
-  },
-  "tileWidth": 32,
-  "tileHeight": 32,
-  "tilexoff": 0,
-  "tileyoff": 0,
-  "tilehsep": 0,
-  "tilevsep": 0,
-  "spriteNoExport": true,
-  "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
-  },
-  "out_tilehborder": 2,
-  "out_tilevborder": 2,
-  "out_columns": 7,
-  "tile_count": 48,
   "autoTileSets": [
-    {"resourceType":"GMAutoTileSet","resourceVersion":"1.0","name":"autotile_1","tiles":[
+    {"resourceType":"GMAutoTileSet","resourceVersion":"1.0","name":"autotile_1","closed_edge":false,"tiles":[
         47,
         1,
         2,
@@ -70,8 +51,8 @@
         44,
         45,
         46,
-      ],"closed_edge":false,},
-    {"resourceType":"GMAutoTileSet","resourceVersion":"1.0","name":"autotile_2","tiles":[
+      ],},
+    {"resourceType":"GMAutoTileSet","resourceVersion":"1.0","name":"autotile_2","closed_edge":false,"tiles":[
         43,
         11,
         10,
@@ -119,10 +100,34 @@
         0,
         0,
         0,
-      ],"closed_edge":false,},
+      ],},
   ],
-  "tileAnimationFrames": [],
-  "tileAnimationSpeed": 15.0,
+  "macroPageTiles": {
+    "SerialiseHeight": 10,
+    "SerialiseWidth": 7,
+    "TileCompressedData": [
+      -70,
+      0,
+    ],
+    "TileDataFormat": 1,
+  },
+  "out_columns": 7,
+  "out_tilehborder": 2,
+  "out_tilevborder": 2,
+  "parent": {
+    "name": "Conjuntos de casillas",
+    "path": "folders/Conjuntos de casillas.yy",
+  },
+  "spriteId": {
+    "name": "s_wall_tilesConespacio",
+    "path": "sprites/s_wall_tilesConespacio/s_wall_tilesConespacio.yy",
+  },
+  "spriteNoExport": true,
+  "textureGroupId": {
+    "name": "Default",
+    "path": "texturegroups/Default",
+  },
+  "tile_count": 48,
   "tileAnimation": {
     "FrameData": [
       0,
@@ -176,17 +181,12 @@
     ],
     "SerialiseFrameCount": 1,
   },
-  "macroPageTiles": {
-    "TileDataFormat": 1,
-    "SerialiseWidth": 7,
-    "SerialiseHeight": 10,
-    "TileCompressedData": [
-      -70,
-      0,
-    ],
-  },
-  "parent": {
-    "name": "Conjuntos de casillas",
-    "path": "folders/Conjuntos de casillas.yy",
-  },
+  "tileAnimationFrames": [],
+  "tileAnimationSpeed": 15.0,
+  "tileHeight": 32,
+  "tilehsep": 0,
+  "tilevsep": 0,
+  "tileWidth": 32,
+  "tilexoff": 0,
+  "tileyoff": 0,
 }

@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "checkHPEnemies",
-  "isDnD": false,
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
-    "name": "Main",
-    "path": "folders/Objetos/Main.yy",
+    "name": "ENEMIES",
+    "path": "folders/Scripts/ENEMIES.yy",
   },
 }

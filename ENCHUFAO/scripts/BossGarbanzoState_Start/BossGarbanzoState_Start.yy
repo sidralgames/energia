@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "BossGarbanzoState_Start",
-  "isDnD": false,
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "BOSS GARBANZO",
+    "path": "folders/Scripts/BOSS GARBANZO.yy",
   },
 }

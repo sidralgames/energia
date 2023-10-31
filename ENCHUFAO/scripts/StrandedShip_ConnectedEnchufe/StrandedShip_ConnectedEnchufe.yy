@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "StrandedShip_ConnectedEnchufe",
-  "isDnD": false,
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
-    "name": "Objetos",
-    "path": "folders/Objetos.yy",
+    "name": "STRANDED FRIEND",
+    "path": "folders/Scripts/STRANDED SHIP/STRANDED FRIEND.yy",
   },
 }

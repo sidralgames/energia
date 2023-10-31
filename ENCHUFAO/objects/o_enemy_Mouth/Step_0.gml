@@ -8,24 +8,10 @@ if (flashAlpha > 0)
 {
 	flashAlpha -= 0.09;
 }
-if instance_exists(o_playerShip)
-{
-	if (point_distance(x,y,o_playerShip.x, o_playerShip.y) > activeDistance)
-	{
-		enemySpeed = lerp(enemySpeed, enemySpeedInitialFar, 0.5)
-		farDist = 0.4
-		far = true;
-	}
-	else
-	{
-		enemySpeed =  lerp(enemySpeed, enemySpeedInitial, 0.1)
-		farDist = 1;
-		far = false;
-	}
-}
 
 switch(state)
 {
+	case ENEMYSTATE.WAITING: Enemy_WaitingAnchored(); break;	
 	case ENEMYSTATE.CHASING: Enemy_ChasingAnchored(); break;
 	case ENEMYSTATE.SHOCKED: Enemy_Shocked(); break;
 }

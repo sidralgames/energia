@@ -437,6 +437,26 @@ function CheckEnchufeUpgrade()
 		upgraded = true;
 		
 	}
+	else if (inEnchufe.upgradeChargerElectro = true) && (upgraded = false)
+	{
+		if (!global.chargerElectrocutatesIsUpgraded)
+		{
+			global.chargerElectrocutatesIsUpgraded = true;
+			AddUpgradeChargerElectroPlayer();
+		}
+		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+		{
+			upg = ds_map_find_value(global.PlayerUpgradesList, i)
+			if (upg.obj = o_enchufeUpgadeChargerElectrocutate)
+			{
+				upg.times+=1;
+			}
+		}
+		
+		inEnchufe.charging = true;
+		upgraded = true;
+		
+	}
 	else if (inEnchufe.upgradeBonus = true) && (upgraded = false)
 	{
 		if (!global.bonusIsUpgraded)

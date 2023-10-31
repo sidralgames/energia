@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "SimpleStrandedUnplug",
-  "isDnD": false,
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
-    "name": "Movement",
-    "path": "folders/Scripts/GENERAL/Movement.yy",
+    "name": "STRANDED FRIEND",
+    "path": "folders/Scripts/STRANDED SHIP/STRANDED FRIEND.yy",
   },
 }

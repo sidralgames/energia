@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "AddBattery",
-  "isDnD": false,
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
-    "name": "PlayerUpgrades",
-    "path": "folders/Scripts/GENERAL/PlayerUpgrades.yy",
+    "name": "DATA",
+    "path": "folders/Scripts/DATA.yy",
   },
 }

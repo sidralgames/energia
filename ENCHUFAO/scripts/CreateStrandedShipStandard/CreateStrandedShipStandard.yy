@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "CreateStrandedShipStandard",
-  "isDnD": false,
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "STRANDED FRIEND",
+    "path": "folders/Scripts/STRANDED SHIP/STRANDED FRIEND.yy",
   },
 }

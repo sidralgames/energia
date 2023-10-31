@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "BossBreachAttack1",
-  "isDnD": false,
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
-    "name": "General",
-    "path": "folders/Scripts/GENERAL/General.yy",
+    "name": "BOSS BREACH",
+    "path": "folders/Scripts/BOSS BREACH.yy",
   },
 }

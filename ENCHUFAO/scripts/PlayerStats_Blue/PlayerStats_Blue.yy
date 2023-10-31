@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "PlayerStats_Blue",
-  "isDnD": false,
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
-    "name": "Movement",
-    "path": "folders/Scripts/GENERAL/Movement.yy",
+    "name": "STATS",
+    "path": "folders/Scripts/SHIPS/STATS.yy",
   },
 }

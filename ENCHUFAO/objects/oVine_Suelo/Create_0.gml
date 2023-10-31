@@ -33,7 +33,7 @@ simuladoFirstTime = false;
  	_segments = choose(2,2,2,3,3);
 
 
-_sprite = s_vine;
+_sprite = choose(s_vine,s_vine,s_vine, s_vine_2);
 
 image_index = irandom(6)
 

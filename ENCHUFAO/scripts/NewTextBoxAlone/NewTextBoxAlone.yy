@@ -2,8 +2,8 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "NewTextBoxAlone",
-  "isDnD": false,
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
     "name": "TEXTBOX",
     "path": "folders/Scripts/TEXTBOX.yy",

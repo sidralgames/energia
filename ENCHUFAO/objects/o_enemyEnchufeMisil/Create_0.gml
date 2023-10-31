@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-burnFlash=0;
+
+electrocutated = false;
+burnFlash = 0;
+electroFlash = 0;
 repelled = false;
 repelledTimeMax = 20;
 repelledTime = repelledTimeMax;
@@ -13,6 +16,9 @@ contBurnedMax = 100;
 contBurned = contBurnedMax;
 contBurnPartMax = 5;
 contBurnPart = contBurnPartMax;
+contElectro = contBurnedMax;
+contElectroPart = contBurnPartMax;
+contElectroTotal = contBurnedTotalMax;
 burnFlash = 0;
 isShield = false;
 isImmortal = false;

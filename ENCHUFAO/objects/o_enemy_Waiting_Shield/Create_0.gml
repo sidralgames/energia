@@ -14,7 +14,12 @@ contBurnPartMax = 5;
 contBurnPart = contBurnPartMax;
 contBurned = contBurnedMax;
 
+contElectro = contBurnedMax;
+contElectroPart = contBurnPartMax;
+contElectroTotal = contBurnedTotalMax;
+electrocutated = false;
 burnFlash = 0;
+electroFlash = 0;
 
 rojoosc= make_colour_rgb(255,0,68);
 rojo= make_colour_rgb(228,59,69);

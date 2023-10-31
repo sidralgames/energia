@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "StrandedShipBombCalled",
-  "isDnD": false,
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
-    "name": "Objetos",
-    "path": "folders/Objetos.yy",
+    "name": "CALLING FOR HELP",
+    "path": "folders/Scripts/STRANDED SHIP/CALLING FOR HELP.yy",
   },
 }

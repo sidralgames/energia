@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 full = false;
-global.chargerElectrocutatesIsOn = true
+
 //-------------MEGA UPGRADES-----------------//
 
 //--INVISIBILITY CLOAK--//
@@ -271,7 +271,8 @@ AddUpgradeBonus();
 AddUpgradeDobleDoble();
 AddUpgradeFriend();
 AddUpgradeShootingRecharges();//20
-AddUpgradeRecoverBullet();//20
+AddUpgradeRecoverBullet();
+AddUpgradeChargerElectro();
 
 
 global.ammoIsUpgraded = false;
@@ -295,12 +296,14 @@ global.dobleDobleIsUpgraded = false;
 //global.friendIsUpgraded = false; MOVED UP
 global.shootingRechargesIsUpgraded = false;
 global.recoverBulletIsUpgraded = false;
+global.chargerElectrocutatesIsUpgraded = false;
 
 //--------UPGRADE RELATED--------//
 global.bombIsClusterBomb = false;
 global.chargerShoots = false;
 global.damageDealt = 1;
 global.damageReceived = 1;
+
 
 
 //---BONUS UPGRADE FOR EACH SHIP---//

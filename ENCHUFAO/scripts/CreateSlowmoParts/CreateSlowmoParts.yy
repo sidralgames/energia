@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "CreateSlowmoParts",
-  "isDnD": false,
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
-    "name": "General",
-    "path": "folders/Scripts/GENERAL/General.yy",
+    "name": "ENEMIES",
+    "path": "folders/Scripts/ENEMIES.yy",
   },
 }

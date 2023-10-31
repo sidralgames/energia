@@ -30,7 +30,7 @@ if(room = Sala_0) || (room = Sala_SecondBoss)
 				&& irandom(oddsEnemyMouth) == oddsEnemyMouth
 				&& !collision_circle(x,y,16, o_mouthAnchor, false, true)
 				{
-					instance_create_layer(x,y-14,"EnemiesHUE",o_mouthAnchor);
+					instance_create_layer(x,y-15,"EnemiesHUE",o_mouthAnchor);
 					enemy = instance_create_layer(x,y-32,"EnemiesHUE",o_enemy_Mouth);
 					enemy.diffYFar = -10;
 			
@@ -45,7 +45,7 @@ if(room = Sala_0) || (room = Sala_SecondBoss)
 				&& irandom(oddsEnemyMouth) == oddsEnemyMouth
 				&& !collision_circle(x,y,16, o_mouthAnchor, false, true)
 				{
-					instance_create_layer(x,y+14,"EnemiesHUE",o_mouthAnchor);
+					instance_create_layer(x,y+15,"EnemiesHUE",o_mouthAnchor);
 					enemy = instance_create_layer(x,y+32,"EnemiesHUE",o_enemy_Mouth);
 					enemy.diffYFar = +10;
 			

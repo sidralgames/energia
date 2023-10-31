@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "Controls_Input",
-  "isDnD": false,
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
-    "name": "GENERAL",
-    "path": "folders/Scripts/GENERAL.yy",
+    "name": "General",
+    "path": "folders/Scripts/GENERAL/General.yy",
   },
 }
