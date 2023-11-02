@@ -275,6 +275,7 @@ AddUpgradeRecoverBullet();
 AddUpgradeChargerElectro();
 
 
+
 global.ammoIsUpgraded = false;
 global.cableIsUpgraded = false;
 global.chargerShootsIsUpgraded = false;

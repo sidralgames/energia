@@ -6,10 +6,11 @@ function PlayerPluggedMainEnchufes()
 	{
 		with(o_playerShip)
 		{
-			if (inEnchufe) && (inEnchufe.dying == false)
+			if (inEnchufe)
 			{
 				canModify = (inEnchufe.enchufeActive) && (inEnchufe.isPETA_F == false)
-				&& (inEnchufe.enchufeBomb == false)
+				&& (inEnchufe.enchufeBomb == false) && (inEnchufe.dying == false)
+				
 			}
 		}
 		
