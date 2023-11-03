@@ -38,11 +38,13 @@ function Enemy_WaitingAnchored()
 		{
 			speed = lerp(speed, 0, breakDistance) * global.relativeSpeed;
 		}
-
-		if (point_distance(x,y,anchor.x, anchor.y) > max(50, 9 * cable._segments) * farDist)
+		if (instance_exists(anchor))
 		{
-			direction = point_direction(x,y,anchor.x, anchor.y);
-			_angle = direction;
+			if (point_distance(x,y,anchor.x, anchor.y) > max(50, 9 * cable._segments) * farDist)
+			{
+				direction = point_direction(x,y,anchor.x, anchor.y);
+				_angle = direction;
+			}
 		}
 		
 		if tile_meeting(x+lengthdir_x(5,direction), y+lengthdir_y(5,direction), "Tiles")

@@ -1,17 +1,22 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (global.changingTiles)
+if instance_exists(o_playerShip)
 {
-	alarm[0] = 60;
-}
-
-if (alarm[0] > 0)
-{
-	if !tile_meeting(x,y,"Tiles")
+	if (instance_exists(o_shockwaveTiles) || (o_playerShip.laserActive == true) )
 	{
-		instance_destroy();
+		alarm[0] = 10;
+		destroying = true
+	}
+
+	if (destroying)
+	{
+		if !tile_meeting(x,y,"Tiles")
+		{
+			instance_destroy();
+		}
 	}
 }
+
 
 
 
