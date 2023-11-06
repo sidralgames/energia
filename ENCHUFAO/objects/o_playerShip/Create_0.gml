@@ -24,7 +24,7 @@ if (global.shipGreenBonusUpgraded)
 global.amplifyPowerLaser = 0;
 global.amplifyPowerAmmo = 0;
 instance_destroy(o_partBalaP);
-instance_create(-100,-100,o_partBalaP);	
+instance_create_layer(-100,-100, "Part",o_partBalaP);	
 
 partChanged = false;
 Controls_Input();

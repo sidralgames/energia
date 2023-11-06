@@ -26,7 +26,7 @@ if (partChanged = true) && (!plugged)
 	global.amplifyPowerLaser = 0;
 	global.amplifyPowerAmmo = 0;
 	instance_destroy(o_partBalaP);
-	instance_create(-100,-100,o_partBalaP);	
+	instance_create_layer(-100,-100, "Part",o_partBalaP);	
 }
 
 if (global.infiniteHPIsOn)
@@ -320,24 +320,24 @@ if (room = Sala_0) || (room = Sala_FirstBoss)
 	//---------BREACH----------//
 	
 	//------TURN RED----------//
-	if instance_exists(o_breach) || instance_exists(o_breachBoss)
-	{
-		layer_set_visible("EffectColor", true);
-		fx_color = lerp(fx_color,0.2,0.01); 
-		color_fx_params.g_Intensity = fx_color;	
-		fx_set_parameters(color_fx, color_fx_params);
-	}
-	else
-	{
-		fx_color = lerp(fx_color,0,0.03); 
-		color_fx_params.g_Intensity = fx_color;
-		fx_set_parameters(color_fx, color_fx_params);
+	//if instance_exists(o_breach) || instance_exists(o_breachBoss)
+	//{
+	//	layer_set_visible("EffectColor", true);
+	//	fx_color = lerp(fx_color,0.2,0.01); 
+	//	color_fx_params.g_Intensity = fx_color;	
+	//	fx_set_parameters(color_fx, color_fx_params);
+	//}
+	//else
+	//{
+	//	fx_color = lerp(fx_color,0,0.03); 
+	//	color_fx_params.g_Intensity = fx_color;
+	//	fx_set_parameters(color_fx, color_fx_params);
 
-		if (fx_color <=0.1)
-		{
-			layer_set_visible("EffectColor", false);
-		}
-	}
+	//	if (fx_color <=0.1)
+	//	{
+	//		layer_set_visible("EffectColor", false);
+	//	}
+	//}
 	
 	if instance_exists(o_breach)  || instance_exists(o_breachBoss) //&& (!inBlackHoleArea)
 	{

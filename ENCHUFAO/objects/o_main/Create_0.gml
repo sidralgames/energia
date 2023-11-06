@@ -177,7 +177,7 @@ global.coverSpeed = 1.05;
 global.deletingData = false;
 
 //----------PARTICLES----------//
-instance_create(-100,-100,o_partBalaP)
+instance_create_layer(-100,-100, "Part",o_partBalaP)
 instance_create(-100,-100,o_partNaveP)
 instance_create(-100,-100,o_partNaveEnemy1)
 instance_create(-100,-100,o_partNaveEnemy_Waiting)

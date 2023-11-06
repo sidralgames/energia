@@ -11,7 +11,7 @@ part_particles_create(global.naveEnemy1_sys, x, y, global.naveEnemy1 , 3)
 
 if instance_exists(o_playerShip)
 {
-	myPath = path_add();
+	
 	
 	mp_grid_path(gridRoom1, myPath, x, y, o_playerShip.x ,o_playerShip.y, true);
 	

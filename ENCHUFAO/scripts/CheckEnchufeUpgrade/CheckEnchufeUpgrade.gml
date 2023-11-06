@@ -127,7 +127,7 @@ function CheckEnchufeUpgrade()
 		upgraded = true;
 		global.superShot += 0.25;
 		instance_destroy(o_partBalaP)
-		instance_create(-100,-100,o_partBalaP);
+		instance_create_layer(-100,-100, "Part",o_partBalaP);
 		
 	}
 	else if (inEnchufe.upgradeCable = true) && (upgraded = false)

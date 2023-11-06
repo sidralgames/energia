@@ -9,7 +9,7 @@ alarm[10] = 30;
 //lightEnemy= instance_create_layer(x,y,"LightEnemy",o_Light_Enemy);
 isCounted=false;
 bnc = 0.9;
-_hp = 3;
+_hp = choose(1,2);
 cont = 500;
 image_speed = 0.5;
 

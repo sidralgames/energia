@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+contSearchMax = 5
+contSearch = contSearchMax;
+
 burned = false;
 haveAShield = false;
 canHaveAShield = true;

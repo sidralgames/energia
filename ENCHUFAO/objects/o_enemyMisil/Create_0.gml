@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+myPath = path_add();
 burned = false;
 rojoosc= make_colour_rgb(255,0,68);
 rojo= make_colour_rgb(228,59,69);
