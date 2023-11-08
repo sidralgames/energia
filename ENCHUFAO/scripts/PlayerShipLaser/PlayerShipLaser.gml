@@ -70,7 +70,7 @@ function PlayerShipLaser(argument0)
 	grappleY = ly;
 	
 	
-	boss = collision_line(x,y,x+lengthdir_x(maxLenght_+20, argument0+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,argument0+random_range(2,-2)), o_BossFather,false, true)
+	boss = collision_line(x,y,x+lengthdir_x(maxLenght_+20, argument0+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,argument0+random_range(2,-2)), o_BossMecha_Inside,false, true)
 	if (boss)
 	{
 		screenShake(4,10);

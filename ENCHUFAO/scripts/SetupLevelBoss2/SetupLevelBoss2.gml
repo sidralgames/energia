@@ -82,7 +82,7 @@ function SetupLevelBoss2()
 	}
 
 	SetTiles();
-
+	SetVines();
 
 	for ( var yy = 0; yy < height_; yy++) 
 	{
@@ -206,7 +206,7 @@ function SetupLevelBoss2()
 
 	}
 
-	SetVines();
+	
 	
 	SetHUE();
 	

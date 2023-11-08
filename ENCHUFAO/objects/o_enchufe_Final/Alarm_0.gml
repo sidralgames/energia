@@ -10,7 +10,7 @@ if (cont = true)
 		global.bestLevelRun = global.level;
 	}
 	
-	if (global.level = 7)
+	if (global.level = 3)
 	{
 		room_goto(Sala_SecondBoss)
 	}
