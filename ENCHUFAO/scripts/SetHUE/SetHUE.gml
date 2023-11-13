@@ -13,7 +13,7 @@ function SetHUE()
 	_filter_hueL_params = fx_get_parameters(_filter_hueL);
 	
 
-	_filterShift= choose(0.15); 
+	_filterShift= choose(0.15, 0.55, 0.6, 0.7, 0.8, 1);
 	
 	
 	_filter_hue_params.g_HueShift = _filterShift;	
