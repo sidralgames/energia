@@ -33,22 +33,11 @@ if (alarm[0] <= 0)
 			{
 				case 0:
 				{
-					PlayerStats_MP3();
-					shipSelected = true;
-					instance_create_layer(512,269, "Enchufes", o_enchufeInicio)
-					instance_create_layer(112,272, "Enchufes" ,o_enchufeResetSelector)
-					instance_create_layer(50,40, "Enchufes" ,o_enchufeDeleteData)
-		
-					player = instance_create_layer(x,y+100,"Player", o_playerShip)
-					global.ammoStatInitial = global.ammoStat;
-					global.energyStatInitial = global.energyStat;
-					global.HPStatInitial = global.hpStat;
-					global.speedStatInitial = global.speedStat;
-					global.cableStatInitial = global.cableStat;
-					global.laserStatInitial = global.laserStat;
 					_visible = false;
+					instance_create(x,y,o_controlsMenu);
 					instance_destroy();
-				}break;
+				}
+				break;
 				case 1:
 				{
 					global.screenshakeIsOn = !global.screenshakeIsOn;

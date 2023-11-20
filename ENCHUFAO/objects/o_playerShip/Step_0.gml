@@ -394,11 +394,11 @@ if (room = Sala_0) || (room = Sala_FirstBoss)
 		dir = point_direction(x,y,nearestHole.x, nearestHole.y)
 		if !tile_meeting(x+lengthdir_x(5,dir) ,y+lengthdir_y(5,dir),"Tiles")
 		{
-			if point_distance(x,y,nearestHole.x, nearestHole.y) < 300 &&
+			if point_distance(x,y,nearestHole.x, nearestHole.y) < 280 &&
 			point_distance(x,y,nearestHole.x, nearestHole.y) > 5
 			 {
-				_hpush += lengthdir_x(0.08,dir)
-				_vpush += lengthdir_y(0.08,dir)
+				_hpush += lengthdir_x(0.07,dir)
+				_vpush += lengthdir_y(0.07,dir)
 			 }
 		}
 	}

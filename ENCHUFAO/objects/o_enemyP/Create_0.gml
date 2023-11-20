@@ -2,7 +2,7 @@
 // You can write your code in this editor
 contSearchMax = 5
 contSearch = contSearchMax;
-
+isSniper = false;
 burned = false;
 haveAShield = false;
 canHaveAShield = true;

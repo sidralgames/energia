@@ -21,7 +21,7 @@ function PlayerStats_Red()
 	global.ammoMax = 250;
 	
 	global._speed = 2.15;
-	global.walkAcceleration = 0.105;
+	global.walkAcceleration = 0.11;
 	
 	global.energyStat = global.energyMax/50;
 	global.speedStat = 2;

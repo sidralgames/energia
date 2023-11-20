@@ -23,11 +23,11 @@ function Enemy_ChasingFar()
 //----------------CHASING MOVENEMT------------------//
 if (isMotherShip)
 {
-	part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(13,direction), y-lengthdir_y(13,direction), global.naveEnemy_Waiting , 1)
+	part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(13,_angle), y-lengthdir_y(13,_angle), global.naveEnemy_Waiting , 1)
 }
 else
 {
-	part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(12,direction), y-lengthdir_y(12,direction), global.naveEnemy_Waiting , 1)
+	part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(12,_angle), y-lengthdir_y(12,_angle), global.naveEnemy_Waiting , 1)
 }
 
 	if (alarm[4] <= 0)
@@ -93,6 +93,32 @@ else
 			
 					alarm[0] = random_range(60,120)
 				}
+			}
+		}
+		if (isSniper)
+		{
+			if (point_distance(x,y,o_playerShip.x, o_playerShip.y) <= 500)
+			{
+				enemySpeed = lerp(enemySpeed, 0.25, 0.05)
+				dire = point_direction(x,y,o_playerShip.x, o_playerShip.y);
+				if (!closeToWall)
+				{
+					_angle = dire;
+				}
+				if (alarm[0] <= 0)
+				{
+					var bullet = instance_create_layer(x + lengthdir_x(10, _angle), y + lengthdir_y(10, _angle),
+					"Bullets", o_bulletEnemy);
+					bullet.bulletSpeed = 4;
+					bullet.image_angle = _angle;
+					bullet.direction = _angle;
+			
+					alarm[0] = random_range(400,450)
+				}
+			}
+			else
+			{
+				enemySpeed = lerp(enemySpeed, enemySpeedInitial, 0.075)
 			}
 		}
 	

@@ -16,6 +16,11 @@ if (_hp <= 0)
 	instance_destroy();
 }
 
+if !instance_exists(enemy)
+{
+	instance_destroy();	
+}
+
 
 
 
