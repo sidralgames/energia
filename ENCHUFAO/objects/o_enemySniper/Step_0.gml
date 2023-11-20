@@ -10,7 +10,7 @@ if (flashAlpha > 0)
 switch(state)
 {
 	case ENEMYSTATE.WAITING: Enemy_Waiting(); break;
-	case ENEMYSTATE.CHASING: Enemy_ChasingFar(); break;
+	case ENEMYSTATE.CHASING: Enemy_ChasingFarSniper(); break;
 	case ENEMYSTATE.SHOCKED: Enemy_Shocked(); break;
 }
 

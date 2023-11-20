@@ -38,7 +38,7 @@ function Enemy_WaitingAnchored()
 		{
 			speed = lerp(speed, 0, breakDistance) * global.relativeSpeed;
 		}
-		if (instance_exists(anchor))
+		if (instance_exists(anchor)) && instance_exists(cable)
 		{
 			if (point_distance(x,y,anchor.x, anchor.y) > max(50, 9 * cable._segments) * farDist)
 			{

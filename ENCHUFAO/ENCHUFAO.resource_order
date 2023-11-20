@@ -878,5 +878,6 @@
     {"name":"__view_set","order":13,"path":"scripts/__view_set/__view_set.yy",},
     {"name":"LoadDefaultDataIngame","order":3,"path":"scripts/LoadDefaultDataIngame/LoadDefaultDataIngame.yy",},
     {"name":"SpawnEnemyBasicBreach","order":1,"path":"scripts/SpawnEnemyBasicBreach/SpawnEnemyBasicBreach.yy",},
+    {"name":"Enemy_ChasingFarSniper","order":19,"path":"scripts/Enemy_ChasingFarSniper/Enemy_ChasingFarSniper.yy",},
   ],
 }

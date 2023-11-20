@@ -18,8 +18,19 @@ minisMin = 2;
 minisMax = 5;
 enemySpeedInitial = random_range(0.5, 0.75)
 enemySpeed = enemySpeedInitial;
+
+contLaser = 0;
 isSniper = true;
-precision= random_range(2.6,2.75);
+maxLenght =600;
+reloadTime =400;
+precisionInitial = 2
+precisionPlayer = 0.2;
+offBullet = 1.5;
+playerAimed = false;
+precision= precisionInitial;
+
+playerTargeted = false;
+aiming = false;
 speed=enemySpeed;
 
 state = ENEMYSTATE.CHASING;

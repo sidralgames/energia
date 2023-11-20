@@ -1016,6 +1016,7 @@
     {"id":{"name":"__view_set","path":"scripts/__view_set/__view_set.yy",},},
     {"id":{"name":"LoadDefaultDataIngame","path":"scripts/LoadDefaultDataIngame/LoadDefaultDataIngame.yy",},},
     {"id":{"name":"SpawnEnemyBasicBreach","path":"scripts/SpawnEnemyBasicBreach/SpawnEnemyBasicBreach.yy",},},
+    {"id":{"name":"Enemy_ChasingFarSniper","path":"scripts/Enemy_ChasingFarSniper/Enemy_ChasingFarSniper.yy",},},
     {"id":{"name":"Sala1","path":"rooms/Sala1/Sala1.yy",},},
   ],
   "RoomOrderNodes": [
