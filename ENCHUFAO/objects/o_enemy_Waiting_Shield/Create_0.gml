@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+thisEnemyBounce = false;
+leavesTrail = true;
 isWormHitBox = false;
 hurts = true;
 canBeDestroyed = true;

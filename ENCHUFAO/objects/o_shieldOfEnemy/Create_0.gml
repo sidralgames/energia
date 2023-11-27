@@ -13,3 +13,5 @@ enemy = instance_nearest(x,y,o_enemyP)
 isWormHitBox = false;
 hurts = true;
 canBeDestroyed = true;
+thisEnemyBounce = false;
+leavesTrail = false;

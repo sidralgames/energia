@@ -4,9 +4,9 @@ function EnemiesToSpawnLVL1()
 {
 	enemyToSpawn = irandom(15)
 
-	if (enemyToSpawn <=8)
+	if (enemyToSpawn <=15)
 	{
-		enemy = choose(o_enemy, o_enemyFast, o_enemyFastMini, o_enemyMini)
+		enemy = choose(o_enemy, o_enemyFast, o_enemyFastMini, o_enemyMini, o_enemySegment)
 	}
 	else
 	if (enemyToSpawn > 8) && (enemyToSpawn<=12)

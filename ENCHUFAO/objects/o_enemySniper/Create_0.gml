@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited();
+
+thisEnemyBounce = false;
 isMotherShip = true;
 slowMoPickUps = choose(3,4);
 alertDist = 250;

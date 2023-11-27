@@ -1,35 +1,27 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited();
+enemyIsWorm = true;
 thisEnemyBounce = false;
-isMotherShip = false;
 slowMoPickUps = choose(3,4);
-minContShield = 200;
-maxContShield = 400;
-alertDist = 150;
+leavesTrail = false;
 alarm[10] = 30;
 //lightEnemy= instance_create_layer(x,y,"LightEnemy",o_Light_Enemy);
 isCounted=false;
-closeToWall = false
 bnc = 0.5;
-_hp = 8;
+_hp = 3;
 cont = 500;
 image_speed = 0.5;
-changedSpeed = false;
-contShield = 100;
-minisMin = 2;
-minisMax = 5;
-enemySpeedInitial = random_range(1.2, 1.3)
+
+enemySpeedInitial = random_range(1.5,2)
 enemySpeed = enemySpeedInitial;
 
-precision= random_range(1.6,1.75);
-speed=enemySpeed;
+precision= random_range(2,5);
+speed=random(1)+2;
 
 state = ENEMYSTATE.CHASING;
 
-enemyXP = global.enemyMothershipXP;
-
-makeShieldDistance = 350;
+enemyXP = global.enemyStandardXP;
 
 direction_ =direction;
 
@@ -44,19 +36,23 @@ maxDistance = 100;
 waitingSpeed = random_range(0.4,0.7)
 breakDistance = random_range(0.005, 0.05)
 accelDistance = random_range(0.005, 0.05);
-isMegaEnemy = false;
-isMega = irandom(5);
 
-canHaveAShield = false;
-hasShield = irandom(0);
 
-if (hasShield = 0)
-{
-	CreateShieldEnemy(15, 0.85, s_shieldPurple); //hp, scale, sprite
-}
 
 
 if tile_meeting(x,y,"Tiles")
 {
 	instance_destroy()
 }
+
+isMegaEnemy = false;
+isMega = irandom(5);
+oddsBattery = 5;
+
+cable = instance_create_layer(x,y,"Enemies", o_enemySegments_Body);
+_hp = cable._segments*4;
+
+
+hasShield = irandom(10);
+
+

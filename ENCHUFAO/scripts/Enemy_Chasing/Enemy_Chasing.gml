@@ -4,26 +4,31 @@ function Enemy_Chasing()
 {
 	if instance_exists(o_playerShip)
 	{
-	//--------BOUNCE WITH EACH OTHER---------//
-	if (enemyIsMini)
-	{
-		enemyToBounce = collision_circle(x,y,4,o_enemyP,false,true)
-	}
-	else
-	{
-		enemyToBounce = collision_circle(x,y,10,o_enemyP,false,true)
-	}
-		if  enemyToBounce && (enemyToBounce.canBounce = true) && (!bounced) && (enemyToBounce.isShield = false)
+		//--------BOUNCE WITH EACH OTHER---------//
+		if (thisEnemyBounce)
 		{
-			bounced = true;
-			alarm[8] = 10;
-		    direction = direction+choose(random_range(30,50),random_range(-30,-50))
-			_angle = direction;
-		} 
+			if (enemyIsMini)
+			{
+				enemyToBounce = collision_circle(x,y,4,o_enemyP,false,true)
+			}
+			else
+			{
+				enemyToBounce = collision_circle(x,y,10,o_enemyP,false,true)
+			}
+		
+		
+			if  enemyToBounce && (enemyToBounce.canBounce = true) && (!bounced) && (enemyToBounce.isShield = false)
+			{
+				bounced = true;
+				alarm[8] = 10;
+			    direction = direction+choose(random_range(30,50),random_range(-30,-50))
+				_angle = direction;
+			} 
 	
-		if (alarm[8] <= 0)
-		{
-			bounced = false;	
+			if (alarm[8] <= 0)
+			{
+				bounced = false;	
+			}
 		}
 	
 	//-----------TAKE COVER-------------//
@@ -31,22 +36,25 @@ function Enemy_Chasing()
 		EnemyTakeCover();
 	
 		//----------------CHASING MOVENEMT------------------//
-		if (enemyIsMini)
+		if (leavesTrail)
 		{
-			contParts --;
-			if (contParts <=0)
+			if (enemyIsMini)
 			{
-				part_particles_create(global.naveEnemy_Mini_sys, x-lengthdir_x(2,direction), y-lengthdir_y(2,direction), global.naveEnemy_Mini , 1)
-				contParts = contPartsInitial;
+				contParts --;
+				if (contParts <=0)
+				{
+					part_particles_create(global.naveEnemy_Mini_sys, x-lengthdir_x(2,direction), y-lengthdir_y(2,direction), global.naveEnemy_Mini , 1)
+					contParts = contPartsInitial;
+				}
 			}
-		}
-		else
-		{
-			contParts --;
-			if (contParts <=0)
+			else
 			{
-				part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(8,direction), y-lengthdir_y(8,direction), global.naveEnemy_Waiting , 1)
-				contParts = contPartsInitial;
+				contParts --;
+				if (contParts <=0)
+				{
+					part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(8,direction), y-lengthdir_y(8,direction), global.naveEnemy_Waiting , 1)
+					contParts = contPartsInitial;
+				}
 			}
 		}
 		
@@ -59,10 +67,27 @@ function Enemy_Chasing()
 			}
 			else
 			{
-				diffX = choose(random_range(-50, 50));
-				diffY = choose(random_range(-50, 50));
+				if (enemyIsWorm)
+				{
+					diffX = choose(random_range(-150, 150));
+					diffY = choose(random_range(-150, 150));
+				}
+				else
+				{
+					diffX = choose(random_range(-50, 50));
+					diffY = choose(random_range(-50, 50));
+				}
 			}
-			alarm[4] = random_range(30, 60)
+			
+			if (enemyIsWorm)
+			{
+				alarm[4] = random_range(30, 40)
+			}
+			else
+			{
+				alarm[4] = random_range(30, 60)
+			}
+			
 		}
 
 		if instance_exists(o_playerShip)

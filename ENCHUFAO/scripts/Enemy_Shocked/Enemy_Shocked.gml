@@ -2,8 +2,11 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Enemy_Shocked()
 {
-	part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(8,direction), y-lengthdir_y(8,direction), global.naveEnemy_Waiting , 1)
-	
+	if (leavesTrail)
+	{
+		part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(8,direction), y-lengthdir_y(8,direction), global.naveEnemy_Waiting , 1)
+	}
+
 	speed = lerp(speed, 0, 0.02);
 
 	_angle = dirShoked;
