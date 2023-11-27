@@ -3,8 +3,8 @@
 
 alarm[1] = 70;
 
-oddsLaserV = max(10, 40 - global.level);
-oddsLaserH = max(10, 40 - global.level);
+oddsLaserV = max(10, 60 - global.level);
+oddsLaserH = max(10, 60 - global.level);
 
 oddsDisc = max(20, 200 - global.level);
 

@@ -37,11 +37,13 @@ function Enemy_ChasingMouthFree()
 				plugged = false;
 				cable.contPlugBody = 50;
 				enchufe.occupied = false;
+				enchufe.enchufeOvercharged = true;
+				enchufe.contOvercharged = 250;
 				contCanPlug = 120;
 				contPlugged = random_range(contPluggedMin, contPluggedMax)
 			}
 			
-			if (point_distance(x,y,enchufe.x,enchufe.y) <= cable._segments*20)
+			if (point_distance(x,y,enchufe.x,enchufe.y) <= cable._segments*17)
 			{
 				EnemyMouthMoveAndBreak()
 			}

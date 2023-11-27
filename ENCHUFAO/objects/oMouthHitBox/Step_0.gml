@@ -36,7 +36,10 @@ if (burned = true)
 	{
 		contBurned = contBurnedMax;
 		burnFlash = 1;
-		worm._hp-=1;
+		if instance_exists(worm)
+		{
+			worm._hp-=1;
+		}
 	}
 }
 
@@ -60,7 +63,10 @@ if (electrocutated = true)
 	{
 		contElectro = contBurnedMax;
 		electroFlash = 1;
-		worm._hp-=1;
+		if instance_exists(worm)
+		{
+			worm._hp-=1;
+		}
 	}
 }
 
@@ -114,7 +120,13 @@ if (global.inScreen)
 	}
 }
 
-if !instance_exists(worm)
+if !instance_exists(worm) && (dying = false)
+{
+	dying = true;
+	alarm[0] = random_range(5, 15)
+}
+
+if (dying = true) && (alarm[0] <=0)
 {
 	global.XPpoints +=5;
 	

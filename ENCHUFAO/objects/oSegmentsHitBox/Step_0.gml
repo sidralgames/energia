@@ -36,7 +36,10 @@ if (burned = true)
 	{
 		contBurned = contBurnedMax;
 		burnFlash = 1;
-		worm._hp-=1;
+		if instance_exists(worm)
+		{
+			worm._hp-=1;
+		}
 	}
 }
 
@@ -60,7 +63,10 @@ if (electrocutated = true)
 	{
 		contElectro = contBurnedMax;
 		electroFlash = 1;
-		worm._hp-=1;
+		if instance_exists(worm)
+		{
+			worm._hp-=1;
+		}
 	}
 }
 

@@ -6,7 +6,7 @@ dGreen= make_colour_rgb(62,137,72);
 green= make_colour_rgb(99,199,77);
 event_inherited();
 depth = layer_get_depth("Player")-2;
-range = 50;
+range = 70;
 
 scale = 1;
 bnc = 1;

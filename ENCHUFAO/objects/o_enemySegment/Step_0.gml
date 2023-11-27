@@ -2,6 +2,32 @@
 // You can write your code in this editor
 event_inherited();
 
+
+if (megaStated = false)
+{
+	megaStated = true;
+	
+		if (isMega = 0)
+		{
+			sprite_index = s_enemySegments_Mega;
+			isMegaEnemy = true;
+			cable = instance_create_layer(x,y,"Enemies", o_enemySegments_Mega_Body);
+			_hp = cable._segments*5;
+			enemySpeedInitial = random_range(1.15,1.5)
+			enemySpeed = enemySpeedInitial;
+		}
+		else
+		{
+			cable = instance_create_layer(x,y,"Enemies", o_enemySegments_Body);
+			_hp = cable._segments*3;
+			enemySpeedInitial = random_range(1.25,2)
+			enemySpeed = enemySpeedInitial;
+		}
+
+
+}
+
+
 if (flashAlpha > 0) 
 {
 	flashAlpha -= 0.09;

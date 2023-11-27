@@ -71,11 +71,12 @@ if instance_exists(o_playerShip)
 			}
 		}
 		break;
+		
 		case ENEMYSTATE.SHOCKED:
 		{
 			spin = lerp(spin, spinIdle, 0.005);
 			enemySpeed = lerp(enemySpeed, enemySpeedInitial, 0.005)
-			if (enemySpeed <= enemySpeedInitial+0.2) 
+			if (enemySpeed <= enemySpeedInitial+0.4) 
 			{
 				state = 0;	
 			}

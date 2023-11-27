@@ -29,7 +29,7 @@ electroFlash = 0;
 repelled = false;
 repelledTimeMax = 20;
 repelledTime = repelledTimeMax;
-state =-1;
+
 myPath = path_add();
 _angle=0;
 isShield = false;

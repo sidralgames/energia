@@ -8,8 +8,7 @@
 
 	if alarm[3]<=0
 	{
-		if (x > __view_get( e__VW.XView, 0 )-100) && (x < __view_get( e__VW.XView, 0 )+810)
-		&& (y > __view_get( e__VW.YView, 0 )-100) && (y < __view_get( e__VW.YView, 0 )+510)
+		if (global.inScreen)
 		{
 			if (!tile_meeting(x,y,"Tiles"))
 			{

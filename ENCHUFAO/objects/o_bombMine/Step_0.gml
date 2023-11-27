@@ -28,7 +28,7 @@ if (tile_meeting(x,y+vspeed,"Tiles"))
 if instance_exists(o_playerShip)
 {
 	playerInRange = (point_distance(x,y,o_playerShip.x, o_playerShip.y) <= range)
-	&& collision_circle(x,y,range, o_exploBomb, false, true)
+	|| collision_circle(x,y,range, o_exploBomb, false, true)
 	
 	if (playerInRange) && (exploding = false)
 	{

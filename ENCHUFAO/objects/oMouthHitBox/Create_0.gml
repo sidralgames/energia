@@ -17,3 +17,4 @@ slowMoPickUps = choose(3,4);
 die = false;
 state = -1;
 isWormHitBox = true;
+dying = false;

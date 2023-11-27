@@ -19,12 +19,16 @@ function Enemy_Waiting()
 	}
 
 	//------WAITING MOVEMENT--------//
+	if (global.inScreen)
+	{
 		contParts --;
-			if (contParts <=0)
-			{
-				part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(8,direction), y-lengthdir_y(8,direction), global.naveEnemy_Waiting , 1)
-				contParts = contPartsInitial;
-			}
+		if (contParts <=0)
+		{
+			part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(8,direction), y-lengthdir_y(8,direction), global.naveEnemy_Waiting , 1)
+			contParts = contPartsInitial;
+		}
+	}
+	
 	if (alarm[0] <=0)
 	{
 		alarm[0] = random_range(300,700);

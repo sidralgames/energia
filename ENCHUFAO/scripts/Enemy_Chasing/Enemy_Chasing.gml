@@ -36,24 +36,27 @@ function Enemy_Chasing()
 		EnemyTakeCover();
 	
 		//----------------CHASING MOVENEMT------------------//
-		if (leavesTrail)
+		if (global.inScreen)
 		{
-			if (enemyIsMini)
+			if (leavesTrail)
 			{
-				contParts --;
-				if (contParts <=0)
+				if (enemyIsMini)
 				{
-					part_particles_create(global.naveEnemy_Mini_sys, x-lengthdir_x(2,direction), y-lengthdir_y(2,direction), global.naveEnemy_Mini , 1)
-					contParts = contPartsInitial;
+					contParts --;
+					if (contParts <=0)
+					{
+						part_particles_create(global.naveEnemy_Mini_sys, x-lengthdir_x(2,direction), y-lengthdir_y(2,direction), global.naveEnemy_Mini , 1)
+						contParts = contPartsInitial;
+					}
 				}
-			}
-			else
-			{
-				contParts --;
-				if (contParts <=0)
+				else
 				{
-					part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(8,direction), y-lengthdir_y(8,direction), global.naveEnemy_Waiting , 1)
-					contParts = contPartsInitial;
+					contParts --;
+					if (contParts <=0)
+					{
+						part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(8,direction), y-lengthdir_y(8,direction), global.naveEnemy_Waiting , 1)
+						contParts = contPartsInitial;
+					}
 				}
 			}
 		}
@@ -81,7 +84,7 @@ function Enemy_Chasing()
 			
 			if (enemyIsWorm)
 			{
-				alarm[4] = random_range(30, 40)
+				alarm[4] = random_range(15, 40)
 			}
 			else
 			{

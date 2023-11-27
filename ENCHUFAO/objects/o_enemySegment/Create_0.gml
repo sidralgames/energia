@@ -13,10 +13,10 @@ _hp = 3;
 cont = 500;
 image_speed = 0.5;
 
-enemySpeedInitial = random_range(1.5,2)
+enemySpeedInitial = random_range(1.25,2)
 enemySpeed = enemySpeedInitial;
 
-precision= random_range(2,5);
+precision= random_range(2,4);
 speed=random(1)+2;
 
 state = ENEMYSTATE.CHASING;
@@ -47,10 +47,9 @@ if tile_meeting(x,y,"Tiles")
 
 isMegaEnemy = false;
 isMega = irandom(5);
+megaStated = false;
 oddsBattery = 5;
 
-cable = instance_create_layer(x,y,"Enemies", o_enemySegments_Body);
-_hp = cable._segments*4;
 
 
 hasShield = irandom(10);

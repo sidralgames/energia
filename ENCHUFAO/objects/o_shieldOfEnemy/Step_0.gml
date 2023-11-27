@@ -5,6 +5,10 @@ if instance_exists(enemy)
 	x = enemy.x;
 	y = enemy.y;
 }
+else
+{
+	instance_destroy();	
+}
 
 if (_hp <= 0)
 {
@@ -16,10 +20,7 @@ if (_hp <= 0)
 	instance_destroy();
 }
 
-if !instance_exists(enemy)
-{
-	instance_destroy();	
-}
+
 
 
 

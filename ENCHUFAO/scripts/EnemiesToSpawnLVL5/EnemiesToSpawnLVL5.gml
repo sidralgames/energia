@@ -6,12 +6,12 @@ function EnemiesToSpawnLVL5()
 
 	if (enemyToSpawn <=3)
 	{
-		enemy = choose(o_enemy, o_enemyFast, o_enemyFastMini, o_enemyMini)
+		enemy = choose(o_enemy, o_enemyFast, o_enemyFastMini, o_enemyDisc)
 	}
 	else
 	if (enemyToSpawn > 3) && (enemyToSpawn<=6)
 	{
-		enemy = choose(o_enemyDisp,o_enemyMitosis,o_enemy_Waiting_Shield)
+		enemy = choose(o_enemyDisp,o_enemyMitosis,o_enemy_Waiting_Shield, o_enemySegment,o_enemyMouth_Free)
 	}
 	else
 	if (enemyToSpawn > 6) && (enemyToSpawn<=9)

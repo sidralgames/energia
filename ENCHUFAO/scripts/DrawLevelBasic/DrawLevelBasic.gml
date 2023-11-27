@@ -27,7 +27,7 @@ function DrawLevelBasic()
 				var oddsEnchufeFinal = 300;
 				
 				var oddsStrandedShip = 300;
-				var oddsEnchufeMimic = 4000;
+				var oddsEnchufeMimic = 2000;
 
 				var oddsPETAPickUp = 300;
 				var oddsShieldPickUp = 300;
