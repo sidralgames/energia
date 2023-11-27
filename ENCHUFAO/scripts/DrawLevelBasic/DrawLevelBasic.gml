@@ -2,24 +2,38 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function DrawLevelBasic()
 {
+	mimics = 0;
+	mimicsMax = 2;
+	
+	PETAs = 0;
+	PETAsMax = 3;
+	
+	
+	
 	for ( var yy = 0; yy < height_; yy++) 
 	{
 	    for (var xx = 0; xx < width_; xx++) 
 		{
 		    if (global.wallgrid_[# xx, yy] == FLOOR) 
 			{
-			    var oddsE0 = 300;
-				var oddsEHP = 300;
-				var oddsEA = 300;
-				var oddsESH = 300;
-				var oddsEF = 300;
-				var oddsStrandedShip = 300;
-				var oddsEBomb = 300;
+			    var oddsEnchufeEnergy = 300;
+				var oddsEnchufeHP = 300;
+				var oddsEnchufeAmmo = 300;
+				var oddsEnchufeLaser = 300;
 				
-				var oddsPETA = 300;
-				var oddsBomb = 300;
-				var oddsShield = 300;
-				var oddsUpgradeEnchufe = 300;
+				var oddsEnchufeBomb = 300;
+				var oddsEnchufePETA = 1000;
+				
+				var oddsEnchufeFinal = 300;
+				
+				var oddsStrandedShip = 300;
+				var oddsEnchufeMimic = 4000;
+
+				var oddsPETAPickUp = 300;
+				var oddsShieldPickUp = 300;
+				
+				//var oddsBomb = 300;
+				//var oddsUpgradeEnchufe = 300;
 				
 				
 			
@@ -35,7 +49,7 @@ function DrawLevelBasic()
 					strandedShipOK = true;
 				}
 				
-				if (irandom(oddsPETA) == oddsPETA) && (PetasInLevel < PetasInLevelMax) //&& global.level > 2
+				if (irandom(oddsPETAPickUp) == oddsPETAPickUp) && (PetasInLevel < PetasInLevelMax) //&& global.level > 2
 				{
 					instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_PETApickUp); 
 					PetasInLevel +=1;
@@ -58,13 +72,13 @@ function DrawLevelBasic()
 				//	BombsInLevel +=1;
 				//}
 				
-				if (irandom(oddsShield) == oddsShield) && (ShieldsInLevel < ShieldsInLevelMax) 
+				if (irandom(oddsShieldPickUp) == oddsShieldPickUp) && (ShieldsInLevel < ShieldsInLevelMax) 
 				{
 					instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_ShieldpickUp); 
 					ShieldsInLevel +=1;
 				}
 				
-				if (irandom(oddsE0) == oddsE0) && (enchufe0 = false)
+				if (irandom(oddsEnchufeEnergy) == oddsEnchufeEnergy) && (enchufe0 = false)
 				{
 					instance_create_layer(exM,eyM,"Enchufes",o_enchufe); 
 					enchufe0 = true;
@@ -72,7 +86,7 @@ function DrawLevelBasic()
 				
 				if instance_exists(o_enchufe_Father)
 				{
-					if (irandom(oddsEHP) == oddsEHP) && (enchufeHP = false)
+					if (irandom(oddsEnchufeHP) == oddsEnchufeHP) && (enchufeHP = false)
 					{
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 
@@ -83,7 +97,7 @@ function DrawLevelBasic()
 						}
 					}
 			
-					if (irandom(oddsESH) == oddsESH) && (enchufeShield = false)
+					if (irandom(oddsEnchufeLaser) == oddsEnchufeLaser) && (enchufeShield = false)
 					{
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 					
@@ -94,7 +108,7 @@ function DrawLevelBasic()
 						}
 					}
 			
-					if (irandom(oddsEA) == oddsEA) && (enchufeAmmo = false)
+					if (irandom(oddsEnchufeAmmo) == oddsEnchufeAmmo) && (enchufeAmmo = false)
 					{
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 					
@@ -105,7 +119,7 @@ function DrawLevelBasic()
 						}
 					}
 					
-					if (irandom(oddsEBomb) == oddsEBomb) && (enchufeBomb = false)
+					if (irandom(oddsEnchufeBomb) == oddsEnchufeBomb) && (enchufeBomb = false)
 					{
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 					
@@ -115,8 +129,21 @@ function DrawLevelBasic()
 							enchufeBomb = true;
 						}
 					}
+					if (global.level > 1)
+					{
+						if (irandom(oddsEnchufeMimic) == oddsEnchufeMimic) 
+						{
+							nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
+					
+							if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 50) && (mimics < mimicsMax)
+							{
+								instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Mimic); 
+								mimics +=1;
+							}
+						}
+					}
 				
-					if (irandom(oddsEF) == oddsEF) && (enchufeFinal = false)
+					if (irandom(oddsEnchufeFinal) == oddsEnchufeFinal) && (enchufeFinal = false)
 					{
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 						nextwall = instance_nearest(exM, eyM, o_wall)
@@ -130,6 +157,13 @@ function DrawLevelBasic()
 								enchufeFinal = true;
 							}
 						}
+					}
+					
+					if (irandom(oddsEnchufePETA) == oddsEnchufePETA) && (PETAs <= PETAsMax)
+					{
+						peta = choose(o_enchufePETA, o_enchufePETAAmmo, o_enchufePETAHP, o_enchufePETALaser)
+						instance_create_layer(exM,eyM,"Enchufes",peta); 
+						PETAs += 1;
 					}
 				}
 		    } 

@@ -3,7 +3,7 @@
 randomize();
 
 SetHUE();
-
+contTiles = 2;
 global.Go = false;
 global.enemies = 0;
 global.enemiesMax =  min(12, 3 + global.level) //1 + (global.level * 2);

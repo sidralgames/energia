@@ -8,6 +8,9 @@ function SetupLevelBasic()
 	global.MegaEnemiesInLevel=0;
 	global.MegaEnemiesInLevel_Max=2;
 	
+	global.BatteriesInLevel = 0;
+	global.BatteriesInLevel_Max = 2;
+	
 	enchufe0 = false;
 	enchufeHP = false;
 	enchufeShield = false;

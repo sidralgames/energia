@@ -8,15 +8,18 @@ if instance_exists(inst)
 	y=inst.y;
 
 }
-if instance_exists(inst) && instance_exists(instAchor)
+if (global.inScreen)
 {
-	if (verletSystemExists(verletSystem1))
+	if instance_exists(inst) && instance_exists(instAchor)
 	{
-		verletSystem1.simulate();
+		if (verletSystemExists(verletSystem1))
+		{
+			verletSystem1.simulate();
+		}
 	}
-}
-else
-{
-	instance_destroy();	
+	else
+	{
+		instance_destroy();	
+	}
 }
 

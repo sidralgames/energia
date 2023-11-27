@@ -2,7 +2,7 @@
 // You can write your code in this editor
 if (global.shields<1) && (other.isImmortal = false)
 {
-	if (tocado = false)
+	if (tocado = false) && (other.hurts)
 	{
 		gamepad_set_vibration(0,0.3,0.3);
 		alarm[4] = 10;
@@ -11,7 +11,10 @@ if (global.shields<1) && (other.isImmortal = false)
 		tocado = true;
 		global.hp -= 1 * global.damageReceived;
 		screenShake(4,30)
-		other._hp = 0;
+		if (other.canBeDestroyed)
+		{
+			other._hp = 0;
+		}
 		
 		global.hitsTaken+=1;
 	}

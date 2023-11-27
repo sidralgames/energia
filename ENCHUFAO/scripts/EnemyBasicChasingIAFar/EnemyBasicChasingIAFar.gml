@@ -72,14 +72,14 @@ function EnemyBasicChasingIAFar()
 			}
 			
 			if (tile_meeting(x+hspeed,y,"Tiles"))
-					{
-					    hspeed = -hspeed*bnc;
-					} 
+			{
+			    hspeed = -hspeed*bnc;
+			} 
 	
-					if (tile_meeting(x,y+vspeed,"Tiles"))
-					{
-					    vspeed = -vspeed*bnc;
-					}
+			if (tile_meeting(x,y+vspeed,"Tiles"))
+			{
+			    vspeed = -vspeed*bnc;
+			}
 		
 		}
 }

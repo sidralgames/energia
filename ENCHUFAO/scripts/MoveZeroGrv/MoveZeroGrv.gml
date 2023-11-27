@@ -1,20 +1,18 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function MoveZeroGrv_Speed()
+function MoveZeroGrv()
 {
-	if (tile_meeting(x+hspeed,y,"Tiles"))
+	if (tile_meeting(x+_hpush,y,"Tiles"))
 	{
-	    hspeed = -hspeed*bnc;
+	    _hpush = -_hpush*bnc;
 	} 
 	
-	if (tile_meeting(x,y+vspeed,"Tiles"))
+	if (tile_meeting(x,y+_vpush,"Tiles"))
 	{
-	    vspeed = -vspeed*bnc;
+	    _vpush = -_vpush*bnc;
 	}
 	
-	x+=hspeed * global.relativeSpeed;
-	y+=vspeed * global.relativeSpeed;
+	x+=_hpush * global.relativeSpeed;
+	y+=_vpush * global.relativeSpeed;
 }
 	
-
-

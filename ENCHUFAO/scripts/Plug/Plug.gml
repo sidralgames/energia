@@ -9,6 +9,8 @@ function Plug()
 	audio_play_sound_on(global.audioEmitter,choose(snd_plugged, snd_plugged_2, snd_plugged_3),false, 50);
 	enchufe = inEnchufe;
 	enchufe.enchufeActive = true;
+	enchufe.occupied = true;
+	
 	global.plugging = true;
 	
 	if (haveBatteryUpgrade) && (enchufe.isPETA_F = false) 
@@ -16,19 +18,23 @@ function Plug()
 	{
 		if (enchufe.hp)
 		{
+		
 			CheckForUpgradeEnchufe(global.enchufeHPUpgradesList, global.enchufeHPUpgradesNum)
 			
 		}
 		else if (enchufe.ammo)
 		{
+			
 			CheckForUpgradeEnchufe(global.enchufeAmmoUpgradesList, global.enchufeAmmoUpgradesNum)
 		}
 		else if (enchufe.laser)
 		{
+			
 			CheckForUpgradeEnchufe(global.enchufeLaserUpgradesList, global.enchufeLaserUpgradesNum)
 		}
 		else if (enchufe.energy)
 		{
+			
 			CheckForUpgradeEnchufe(global.enchufeEnergyUpgradesList, global.enchufeEnergyUpgradesNum)
 		}
 		

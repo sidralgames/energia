@@ -37,7 +37,7 @@ function EnemyBasicChasingIAAnchored()
 			direction+= sign(dsin(a - direction)) * (precision * global.relativeSpeed);
 			_angle = direction;
 		}
-		if (instance_exists(anchor))
+		if (instance_exists(anchor)) && instance_exists(cable)
 		{
 			if (point_distance(x,y,anchor.x, anchor.y) > max(50, 9 * cable._segments) * farDist) && contBounce < 0
 			{

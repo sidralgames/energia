@@ -3,7 +3,7 @@
 event_inherited();
 isMotherShip = true;
 slowMoPickUps = choose(3,4);
-
+alertDist = 150;
 alarm[10] = 30;
 //lightEnemy= instance_create_layer(x,y,"LightEnemy",o_Light_Enemy);
 isCounted=false;
@@ -43,16 +43,26 @@ breakDistance = random_range(0.005, 0.05)
 accelDistance = random_range(0.005, 0.05);
 isMegaEnemy = false
 isMega = irandom(5);
+oddsBattery = 5;
 
-if (isMega = 0) && (global.MegaEnemiesInLevel < global.MegaEnemiesInLevel_Max+1)
+if (isMega = 0)
 {
 	isMegaEnemy = true;
 	global.MegaEnemiesInLevel+=1;
 	_hp = 25;
-	cable = instance_create_layer(x,y,"Cable", o_enemyMotherCable);
 	minisMin = 3;
 	minisMax = 7;
 	sprite_index = s_enemyMothershipMega;
+	
+	if (global.BatteriesInLevel <= global.BatteriesInLevel_Max)
+	{
+		if irandom(oddsBattery) = oddsBattery
+		{
+			cable = instance_create_layer(x,y,"Cable", o_enemyCable);
+			global.BatteriesInLevel+=1;
+		}
+	}
+
 }
 
 hasShield = irandom(5);

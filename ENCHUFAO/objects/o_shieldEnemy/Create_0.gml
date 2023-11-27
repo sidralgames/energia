@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+isWormHitBox = false;
+hurts = true;
+canBeDestroyed = true;
 type = collisionType.custom;
 _hp = 20;
 image_speed = 0.5;

@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+if !instance_exists(o_partBulletMouth)
+{
+	instance_create_layer(-100,-100,"EnemiesHUE",o_partBulletMouth)
+}
 if (alarm[2] <= 0) && times>0 //Try spawiner 
 {
 	timesTotal-=1;
@@ -35,12 +38,14 @@ if (alarm[1] <= 0)
 
 if (global.changingTiles)
 {
+	contTiles--;
+	
 	SetTiles();
 	
 	width_ = room_width div CELL_WIDTH;
 	height_ = room_height div CELL_HEIGHT;
 
-_wall_map_id = layer_tilemap_get_id("Tiles");
+	_wall_map_id = layer_tilemap_get_id("Tiles");
 
 	for ( var yyW = 0; yyW < height_; yyW++) 
 	{
@@ -57,6 +62,9 @@ _wall_map_id = layer_tilemap_get_id("Tiles");
 		}
 	}
 
-	
-	global.changingTiles = false;
+	if (contTiles <=0)
+	{
+		global.changingTiles = false;
+		contTiles = 2;
+	}
 }

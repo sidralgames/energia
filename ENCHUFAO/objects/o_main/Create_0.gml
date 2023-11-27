@@ -2,6 +2,9 @@
 // You can write your code in this editor
 full = false;
 
+global.inScreen = (x > __view_get( e__VW.XView, 0 )-150 && x < __view_get( e__VW.XView, 0 )+810)
+&& (y > __view_get( e__VW.YView, 0 )-150 && y < __view_get( e__VW.YView, 0 )+510);
+
 //-------------MEGA UPGRADES-----------------//
 
 //--INVISIBILITY CLOAK--//
@@ -179,22 +182,23 @@ global.deletingData = false;
 //----------PARTICLES----------//
 instance_create_layer(-100,-100, "Part",o_partBalaP)
 instance_create_layer(-100,-100,"Part",o_partNaveP)
-instance_create(-100,-100,o_partNaveEnemy1)
-instance_create(-100,-100,o_partNaveEnemy_Waiting)
-instance_create(-100,-100,o_partEnchufe)
-instance_create(-100,-100,o_partBalaTorreta)
-instance_create(-100,-100,o_partMisil)
-instance_create(-100,-100,o_partOverCharged)
-instance_create(-100,-100,o_partBalaTorretaBig);
-instance_create(-100,-100,o_partRepairing);
-instance_create(-100,-100,o_partAmmo);
-instance_create(-100,-100,o_partLaser);
-instance_create(-100,-100,o_partEnergy);
-instance_create(-100,-100,o_partBalaBossGarbanzo);
-instance_create(-100,-100,o_partNaveEnemy_Mini);
-instance_create(-100,-100,o_partNaveP_cloak)
-instance_create(-100,-100,o_partNaveFriend)
-instance_create(-100,-100,o_partSmoke)
+instance_create_layer(-100,-100,"Part",o_partNaveEnemy1)
+instance_create_layer(-100,-100,"Part",o_partNaveEnemy_Waiting)
+instance_create_layer(-100,-100,"Part",o_partEnchufe)
+instance_create_layer(-100,-100,"Part",o_partBalaTorreta)
+instance_create_layer(-100,-100,"Part",o_partMisil)
+instance_create_layer(-100,-100,"Part",o_partOverCharged)
+instance_create_layer(-100,-100,"Part",o_partBalaTorretaBig);
+instance_create_layer(-100,-100,"Part",o_partRepairing);
+instance_create_layer(-100,-100,"Part",o_partAmmo);
+instance_create_layer(-100,-100,"Part",o_partLaser);
+instance_create_layer(-100,-100,"Part",o_partEnergy);
+instance_create_layer(-100,-100,"Part",o_partBalaBossGarbanzo);
+instance_create_layer(-100,-100,"Part",o_partNaveEnemy_Mini);
+instance_create_layer(-100,-100,"Part",o_partNaveP_cloak)
+instance_create_layer(-100,-100,"Part",o_partNaveFriend)
+instance_create_layer(-100,-100,"Part",o_partSmoke)
+instance_create_layer(-100,-100,"Part",o_partGreen);
 
 
 global.repairingSprite = s_repairingPart;

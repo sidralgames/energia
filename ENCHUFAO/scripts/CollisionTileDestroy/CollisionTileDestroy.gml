@@ -10,4 +10,5 @@ function CollisionTileDestroy()
 	{
 	   instance_destroy();
 	}
+	
 }

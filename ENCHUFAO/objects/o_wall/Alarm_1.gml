@@ -4,7 +4,7 @@ if (room != Sala_Inicio)
 {
 	if instance_exists(o_gridRoom)
 	{
-	instance_destroy();
+		instance_destroy();
 	}
 }
 

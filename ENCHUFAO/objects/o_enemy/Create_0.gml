@@ -46,13 +46,23 @@ if tile_meeting(x,y,"Tiles")
 
 isMegaEnemy = false;
 isMega = irandom(5);
+oddsBattery = 5;
 
-if (isMega = 0) && (global.MegaEnemiesInLevel < global.MegaEnemiesInLevel_Max)
+if (isMega = 0) 
 {
 	isMegaEnemy = true;
 	global.MegaEnemiesInLevel+=1;
 	_hp = 15;
-	cable = instance_create_layer(x,y,"Cable", o_enemyCable);
+	
+	if (global.BatteriesInLevel < global.BatteriesInLevel_Max)
+	{
+		if irandom(oddsBattery) = oddsBattery
+		{
+			cable = instance_create_layer(x,y,"Cable", o_enemyCable);
+			global.BatteriesInLevel+=1;
+		}
+	}
+	
 	sprite_index = s_enemyBasicMega;
 }
 

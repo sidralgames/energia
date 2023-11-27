@@ -26,8 +26,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "BulletsBombs",
+    "path": "folders/Sprites/BulletsBombs.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

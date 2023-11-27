@@ -7,70 +7,117 @@ if (global.changingTiles)
 		instance_destroy();
 	}
 }
+
 if (canShot)
 {
-	colPlayer = collision_rectangle(x-2,y,x+2,y-16-long*image_yscale,o_playerShip,false,true)
-	colEnemy = collision_rectangle(x-2,y,x+2,y-16-long*image_yscale,o_enemyP,false,true)
-	colLaser = collision_rectangle(x-2,y,x+2,y-26-long*image_yscale,o_laser,false,true)
-	if ( ((colPlayer) && (global.invisibleCloak == false)) || (colEnemy) )
-	 && (colLaser) && (laserActive = false) 
-	{
-		
-		laserActive = true;
-		alarm[0] = 25;
-	}
-	if (laserActive = true) && (alarm[1] > 0) && (colLaser)
-	{
 	
-		//if instance_exists(lightLaser)
-		//{
-		//	lightLaser.light [| eLight.Direction] = 90;
-		//	lightLaser.light [| eLight.Intensity] = random_range(20,50);
-		//	lightLaser.light [| eLight.Width] = random_range(10,15);
-		//	if (long > 50)
-		//	{
-		//		lightLaser.light [| eLight.Range] = long/1.5;
-		//	}
-		//	else
-		//	{
-		//		lightLaser.light [| eLight.Range] = long;
-		//	}
-		//}
-		
-		if collision_line(x,y,x, y-16-long*image_yscale, o_playerShip,false, true) 
+	switch(face)
+	{
+		case 0:
 		{
-			if o_playerShip.tocado=false
+			colPlayer = collision_rectangle(x-2,y,x+2,y-16-long*image_yscale,o_playerShip,false,true)
+			colEnemy = collision_rectangle(x-2,y,x+2,y-16-long*image_yscale,o_enemyP,false,true)
+			colLaser = collision_rectangle(x-2,y,x+2,y-26-long*image_yscale,o_laser,false,true)
+			
+			if ( ((colPlayer) && (global.invisibleCloak == false)) || (colEnemy) )
+			 && (colLaser) && (laserActive = false) 
 			{
-				gamepad_set_vibration(0,0.3,0.3);
-				o_playerShip.alarm[4] = 10;
-				o_playerShip.alarm[1] = 30
-				o_playerShip.tocado = true;
-				if (global.shields > 0)
+		
+				laserActive = true;
+				alarm[0] = 25;
+			}
+			if (laserActive = true) && (alarm[1] > 0) && (colLaser)
+			{
+				if collision_line(x,y,x, y-16-long*image_yscale, o_playerShip,false, true) 
 				{
-					global.shields-=1;	
+					if o_playerShip.tocado=false
+					{
+						gamepad_set_vibration(0,0.3,0.3);
+						o_playerShip.alarm[4] = 10;
+						o_playerShip.alarm[1] = 30
+						o_playerShip.tocado = true;
+						if (global.shields > 0)
+						{
+							global.shields-=1;	
+						}
+						else
+						{
+							audio_play_sound_on(global.audioEmitter, snd_hit, false, 50)
+							global.hp -=1 * global.damageReceived;
+						}
+						screenShake(4,30)
+					}
 				}
-				else
+		
+				enemy = collision_rectangle(x-2,y,x+2, y-16-long*image_yscale, o_enemyP,false, true)
+				bullet = collision_rectangle(x-5,y,x+5, y-16-long*image_yscale, o_bulletFather,false, true)
+				if (enemy)
 				{
-					audio_play_sound_on(global.audioEmitter, snd_hit, false, 50)
-					global.hp -=1 * global.damageReceived;
+					if (enemy.isImmortal = false)
+					{
+						enemy._hp = 0;
+					}
 				}
-				screenShake(4,30)
+				if (bullet)
+				{
+					instance_destroy(bullet)
+				}
 			}
 		}
-		
-		enemy = collision_rectangle(x-2,y,x+2, y-16-long*image_yscale, o_enemyP,false, true)
-		bullet = collision_rectangle(x-5,y,x+5, y-16-long*image_yscale, o_bulletFather,false, true)
-		if (enemy)
+		break;
+		case 1:
 		{
-			if (enemy.isImmortal = false)
+			colPlayer = collision_rectangle(x+2,y+2,x-16-long,y-2,o_playerShip,false,true)
+			colEnemy = collision_rectangle(x+2,y+2,x-16-long,y-2,o_enemyP,false,true)
+			colLaser = collision_rectangle(x+2,y+2,x-16-long,y-2,o_laser,false,true)
+			
+			if ( ((colPlayer) && (global.invisibleCloak == false)) || (colEnemy) )
+			 && (colLaser) && (laserActive = false) 
 			{
-				enemy._hp = 0;
+		
+				laserActive = true;
+				alarm[0] = 25;
+			}
+			if (laserActive = true) && (alarm[1] > 0) && (colLaser)
+			{
+				if collision_line(x,y,x-16-long,y, o_playerShip,false, true) 
+				{
+					if o_playerShip.tocado=false
+					{
+						gamepad_set_vibration(0,0.3,0.3);
+						o_playerShip.alarm[4] = 10;
+						o_playerShip.alarm[1] = 30
+						o_playerShip.tocado = true;
+						if (global.shields > 0)
+						{
+							global.shields-=1;	
+						}
+						else
+						{
+							audio_play_sound_on(global.audioEmitter, snd_hit, false, 50)
+							global.hp -=1 * global.damageReceived;
+						}
+						screenShake(4,30)
+					}
+				}
+		
+				enemy = collision_rectangle(x+2,y+2,x-16-long,y-2,o_enemyP,false,true)
+				bullet = collision_rectangle(x+2,y+2,x-16-long,y-2,o_bulletFather,false,true)
+				if (enemy)
+				{
+					if (enemy.isImmortal = false)
+					{
+						enemy._hp = 0;
+					}
+				}
+				if (bullet)
+				{
+					instance_destroy(bullet)
+				}
 			}
 		}
-		if (bullet)
-		{
-			instance_destroy(bullet)
-		}
+		break;
+		
 	}
 }
 

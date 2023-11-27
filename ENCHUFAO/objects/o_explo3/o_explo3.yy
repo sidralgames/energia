@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_explo3",
-    "path": "sprites/s_explo3/s_explo3.yy",
+    "name": "s_exploOrange",
+    "path": "sprites/s_exploOrange/s_exploOrange.yy",
   },
   "spriteMaskId": null,
   "visible": true,

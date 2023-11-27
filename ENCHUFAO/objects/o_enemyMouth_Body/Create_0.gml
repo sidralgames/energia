@@ -2,6 +2,7 @@
 
 // Create a new verlet system
 // You can create multiple systems with different physic properties
+mega = false;
 canCollide = false;
 fric = 1;
 grv = 0.0;
@@ -24,14 +25,25 @@ blueOO = make_color_rgb(18,78,137)
 gray = make_color_rgb(192,203,220);
 cableColor = gray;
 
-// Create verlet groups
-_segments = choose(random_range(3,5),random_range(3,5),random_range(3,8))
+_sprite = s_enemyMouth_Body;
+inst = instance_nearest(x,y,o_enemy_Mouth)
+if (inst.fromBullet)
+{
+	_segments = irandom_range(3,5);
+}
+else
+{
+	_segments = choose(irandom_range(3,5),irandom_range(3,5),irandom_range(4,10));
+}
+
+rope1 = verletGroupCreateRopeTextured(verletSystem1, x, y, _sprite, _segments, 1, 10);
+
+
 // Create a new rope
 //rope1 = verletGroupCreateRope(verletSystem1, x, y, cableColor, 2, 3, _segments, 2, 100, canCollide);
-rope1 = verletGroupCreateRopeTextured(verletSystem1, x, y, s_enemyMouth_Body, _segments, 1, 10);
 
  //Attach its first vertex to an object
-inst = instance_nearest(x,y,o_enemy_Mouth)
+
 rope1.vertexAttachTo(first, inst);
 
 instAchor = instance_nearest(x,y,o_mouthAnchor)

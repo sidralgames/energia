@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited();
+fromBullet = false;
 myTileMap = layer_tilemap_get_id("Tiles")
 //depth = layer_get_depth("Enemies");
 slowMoPickUps = choose(3,4);
@@ -22,7 +23,7 @@ enemySpeed = enemySpeedInitial;
 precision= random_range(3,4);
 speed=0;
 
-state = ENEMYSTATE.CHASING;
+state = ENEMYSTATE.WAITING;
 
 enemyXP = global.enemyStandardXP;
 
@@ -43,18 +44,19 @@ activeDistance = random_range(100, 150);
 far = false;
 diffYFar = 0;
 
-
+died = false;
 if tile_meeting(x,y,"Tiles")
 {
 	instance_destroy()
 }
-
-
-
 isMegaEnemy = false;
 
-cable = instance_create_layer(x,y,"EnemiesHUE", o_enemyMouth_Body);
-anchor = cable.instAchor;
+isMega = irandom(5);
+megaStated = false;
+
+
+
+
 
 
 

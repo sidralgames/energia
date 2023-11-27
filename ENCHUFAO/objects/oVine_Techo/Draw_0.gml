@@ -11,3 +11,5 @@ if (x > __view_get( e__VW.XView, 0 )-50 && x < __view_get( e__VW.XView, 0 )+710)
 		}
 	}
 }
+
+

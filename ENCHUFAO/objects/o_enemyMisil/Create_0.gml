@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+isWormHitBox = false;
+hurts = true;
+canBeDestroyed = true;
 myPath = path_add();
 burned = false;
 rojoosc= make_colour_rgb(255,0,68);

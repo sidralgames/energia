@@ -4,8 +4,17 @@ function Enemy_ChasingAnchored()
 {
 	if instance_exists(o_playerShip)
 	{
-		enemySpeed =  lerp(enemySpeed, enemySpeedInitial, 0.1)
-		farDist = 1;
+		enemySpeed =  lerp(enemySpeed, enemySpeedInitial, 0.1);
+		
+		if (isMegaEnemy)
+		{
+			farDist = 1.3;
+		}
+		else
+		{
+			farDist = 1;
+		}
+		
 		far = false;
 	
 		if instance_exists(o_playerShip)

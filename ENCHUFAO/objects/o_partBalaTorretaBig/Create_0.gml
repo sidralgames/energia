@@ -10,12 +10,12 @@ part_system_depth(global.balaPTorretaBig_sys,layer_get_depth("Part"));
 global.balaPTorretaBig = part_type_create();
 part_type_scale(global.balaPTorretaBig,1,1);
 part_type_orientation(global.balaPTorretaBig,0,359,0,0,0)
-part_type_size(global.balaPTorretaBig, 1.5,1.95,-0.075,0);
+part_type_size(global.balaPTorretaBig, 1.5,1.95,-0.025,0);
 part_type_alpha2(global.balaPTorretaBig, 1,1);
 part_type_speed(global.balaPTorretaBig,0,0,0,0);
 part_type_direction(global.balaPTorretaBig,140,160,0,1);
 part_type_life(global.balaPTorretaBig, 20,25);
-part_type_sprite(global.balaPTorretaBig,s_bullet_partTorretaBig,true,1,false)
+part_type_sprite(global.balaPTorretaBig,s_naveEnemy_part,true,1,false)
 
 
 

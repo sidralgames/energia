@@ -4,6 +4,7 @@ type = collisionType.custom;
 _alpha = 1;
 _spriteBattery = -1;
 haveBatteryUpgrade = false;
+trapped = false;
 
 if (global.friendIsUpgraded)
 {

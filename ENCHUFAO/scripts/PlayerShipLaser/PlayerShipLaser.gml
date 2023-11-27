@@ -96,6 +96,7 @@ function PlayerShipLaser(argument0)
 		}
 		
 		screenShake(4,10);
+		
 		if (enemy.isShield == true) || (enemy.enemyIsMini == true)
 		{
 			enemy._hp -= (1.95+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
@@ -104,7 +105,20 @@ function PlayerShipLaser(argument0)
 		{
 			if (enemy.haveAShield == false)
 			{
-				enemy._hp -= (0.25+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
+				if (enemy.isWormHitBox)
+				{
+					with(enemy)
+					{
+						if instance_exists(worm)
+						{
+							worm._hp -= (0.25+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
+						}
+					}
+				}
+				else
+				{
+					enemy._hp -= (0.25+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
+				}
 			}
 		}
 		

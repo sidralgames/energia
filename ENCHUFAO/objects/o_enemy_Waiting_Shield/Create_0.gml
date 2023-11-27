@@ -1,6 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
+isWormHitBox = false;
+hurts = true;
+canBeDestroyed = true;
 type = collisionType.custom;
+alertDist = 150;
 isShield = false;
 myPath = path_add();
 isMegaEnemy = false;

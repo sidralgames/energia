@@ -34,17 +34,22 @@ if (timesTotal > 0)
 							}
 							else
 							{
-								enemyToSpawn = choose(0,1,2,3)
+								enemyToSpawn = irandom(7)
 							}
+							
 							instance_create(exM,eyM,o_enemySpawnerIndicator);
 							spawners+=1;
+							
 							switch (enemyToSpawn)
 							{
 								case 0: SpawnEnemyFast(); break;
 								case 1: SpawnEnemyBasic(); break;
 								case 2: SpawnEnemyFastAndShield(); break;
 								case 3: SpawnEnemyMini(); break;
-								
+								case 4: SpawnEnemyFastAndMore(); break;
+								case 5: SpawnEnemyBasicAndSniper(); break;
+								case 6: SpawnEnemyBomberAndMini(); break;
+								case 7: SpawnEnemyMitosisAndMini(); break;	
 							}
 							
 							times-=1;

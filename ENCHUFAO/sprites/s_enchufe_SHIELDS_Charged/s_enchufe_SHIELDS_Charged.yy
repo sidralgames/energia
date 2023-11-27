@@ -28,8 +28,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Main Enchufes",
+    "path": "folders/Sprites/Enchufes/Main Enchufes.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

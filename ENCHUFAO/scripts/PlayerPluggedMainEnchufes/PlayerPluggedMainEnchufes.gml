@@ -9,13 +9,16 @@ function PlayerPluggedMainEnchufes()
 			if (inEnchufe)
 			{
 				canModify = (inEnchufe.enchufeActive) && (inEnchufe.isPETA_F == false)
-				&& (inEnchufe.enchufeBomb == false) && (inEnchufe.dying == false)
+				&& (inEnchufe.enchufeBomb == false) && (inEnchufe.dying == false);
+				
+				enchufeMimic = (inEnchufe.isMimic);
 				
 			}
 		}
 		
 		//-----------ALL ENERGY---------//
-		
+		if (o_playerShip.enchufeMimic == false)
+		{
 			if (global.energy <= global.energyMax)
 			{
 				if (alarm[4] <=0)
@@ -25,6 +28,7 @@ function PlayerPluggedMainEnchufes()
 				}
 				global.energy+=0.75*global.chargeTime;
 			}
+		
 			
 			
 			//------------ENERGY----------//
@@ -102,6 +106,7 @@ function PlayerPluggedMainEnchufes()
 						alarm[3] = 3;
 					}
 				}
+			}
 			}
 	}
 	//------------BOMBS-----------//

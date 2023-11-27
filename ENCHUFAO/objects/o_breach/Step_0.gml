@@ -68,6 +68,17 @@ switch (spawn)
 	}
 	break;
 	
+	case 6:
+	{
+		if (alarm[0] <= 0) && (image_index > 50)
+		{
+			SpawnEnemyMitosisBreach();
+			alarm[0] = random_range(minRate,maxRate)
+		}
+		
+	}
+	break;
+	
 }
 
 

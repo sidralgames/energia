@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+isWormHitBox = false;
+hurts = true;
+canBeDestroyed = true;
 electrocutated = false;
 burnFlash = 0;
 electroFlash = 0;

@@ -5,6 +5,7 @@ isMotherShip = false;
 slowMoPickUps = choose(3,4);
 minContShield = 200;
 maxContShield = 400;
+alertDist = 150;
 alarm[10] = 30;
 //lightEnemy= instance_create_layer(x,y,"LightEnemy",o_Light_Enemy);
 isCounted=false;

@@ -30,7 +30,7 @@ rope1 = verletGroupCreateRope(verletSystem1, x, y, cableColor, 2, 3, _segments, 
 //rope1 = verletGroupCreateRopeTextured(verletSystem1, x, y, s_tentacle, _segments, 1, 10);
 
  //Attach its first vertex to an object
-inst = instance_nearest(x,y,o_enemy)
+inst = instance_nearest(x,y,o_enemyP)
 rope1.vertexAttachTo(first, inst);
 
 

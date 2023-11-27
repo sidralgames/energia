@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+isWormHitBox = false;
+hurts = true;
+canBeDestroyed = true;
 repelled = false;
 repelledTimeMax = 20;
 repelledTime = repelledTimeMax;

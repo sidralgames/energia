@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "GROUPS",
-    "path": "folders/Scripts/SPAWNERS/GROUPS.yy",
+    "name": "BREACHES",
+    "path": "folders/Scripts/SPAWNERS/BREACHES.yy",
   },
 }

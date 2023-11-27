@@ -4,7 +4,9 @@
 //{
 //	lightEnchufe= instance_create_layer(x,y,"LightPlayer",o_Light_Enchufe);
 //type = collisionType.custom;
+occupied = false;
 
+isMimic = false;
 
 randomize();
 upgradesBattery=0;

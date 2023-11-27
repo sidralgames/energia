@@ -4,6 +4,10 @@
 /// @param {float} radius	The points radius ro check.
 /// @description			Custom collision function. Replace this with whatever fits your game.
 function collide(xx, yy, radius) {
+	
+	var lay_id = layer_get_id("Tiles");
+	var tile_id = layer_tilemap_get_id(lay_id);
+
 	var inst;
 	
 	inst = instance_position(xx - radius, yy, parCollision);

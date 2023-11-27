@@ -35,5 +35,6 @@ for( i = 0; i < bullets; i++ )
 	if instance_exists(inst)
 	{
 	    inst.direction = i * (360 / bullets ) + offset;
+		inst.isBossGarbanzoBomb = true;
 	}
 }

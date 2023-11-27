@@ -43,7 +43,7 @@ function BulletDamage()
 	if (global.bulletsAreBombs)
 	{
 		bomb = instance_create(other.x,other.y,o_exploBomb)
-		bomb.sprite_index = s_explo3;
+		bomb.sprite_index = s_exploOrange;
 		bomb.isFromBullet = true;
 		bomb.scale = 0.7;
 	}

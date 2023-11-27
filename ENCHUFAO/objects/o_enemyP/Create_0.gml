@@ -1,11 +1,20 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+isWormHitBox = false;
+hurts = true;
+canBeDestroyed = true;
+cable = -1;
 contSearchMax = 5
 contSearch = contSearchMax;
 isSniper = false;
 burned = false;
 haveAShield = false;
 canHaveAShield = true;
+
+
+alertDist = 150;
+
 contBurnedTotalMax = 300;
 contBurnedTotal = contBurnedTotalMax;
 contBurnedMax = 100;

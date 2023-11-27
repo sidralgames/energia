@@ -1,5 +1,35 @@
 /// @description Insert description here
 // You can write your code in this editor
+if (megaStated = false)
+{
+	megaStated = true;
+	if (fromBullet = false)
+	{
+		if (isMega = 0)
+		{
+			_hp = 7;
+			sprite_index = s_enemyMouthMega;
+			isMegaEnemy = true;
+			cable = instance_create_layer(x,y,"EnemiesHUE", o_enemyMouth_BodyMega);
+			anchor = cable.instAchor;
+
+	
+		}
+		else
+		{
+			cable = instance_create_layer(x,y,"EnemiesHUE", o_enemyMouth_Body);
+			anchor = cable.instAchor;
+		}
+	}
+	else
+	{
+		cable = instance_create_layer(x,y,"EnemiesHUE", o_enemyMouth_Body);
+		anchor = cable.instAchor;
+	}
+
+}
+
+
 event_inherited();
 
 image_speed = 0.5 * global.relativeSpeed;
