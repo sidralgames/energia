@@ -13,7 +13,7 @@ alarm[10] = 30;
 isCounted=false;
 closeToWall = false
 bnc = 0.5;
-_hp = 10;
+_hp = 5;
 cont = 500;
 image_speed = 0.5;
 changedSpeed = false;
@@ -73,7 +73,7 @@ if (isMega = 0)
 	sprite_index = s_enemySniperMega;
 	bulletVelo = 5.75;
 	isMegaEnemy = true;
-	_hp = 15;
+	_hp = 12;
 	offBullet = 2;
 	precisionInitial = 2.25;
 	precisionPlayer = 0.3;
@@ -100,7 +100,7 @@ hasShield = irandom(5);
 
 if (hasShield = 0)
 {
-	CreateShieldEnemy(25, 0.75, s_shieldPurple); //hp, scale, sprite
+	CreateShieldEnemy(20, 0.75, s_shieldPurple); //hp, scale, sprite
 }
 
 

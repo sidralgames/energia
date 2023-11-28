@@ -80,45 +80,6 @@ if (hurts = false)
 	}
 }
 
-if (global.inScreen)
-{
-	if contBreak>= 0
-	{
-		contBreak --;
-	}
-	if contBreak <=0
-	{
-		canBreak = true;	
-	}
-	
-	if tile_meeting(x,y,"Tiles") && (canBreak)
-	{	
-		if (global.wallgrid_[# (x/32), (y/32)] != FLOOR) && (x > 40) && (x < room_width-40)
-		&& (y > 40) && (y < room_height-40)
-		{
-			tilemap_set_at_pixel(_tilemap_id, 0, x, y);
-			
-			global.changingTiles = true;
-			velo = random_range(2,2.5);
-			global.wallgrid_[# x/32, y/32] = FLOOR
-			mp_grid_clear_rectangle(gridRoom1, x-15,y-15,x,y)
-			
-			met = instance_create_layer(x-lengthdir_x(5, direction),y-lengthdir_y(5, direction),"Meteors", o_meteor)
-			if instance_exists(met)
-			{
-				explo = instance_create(x,y,o_explo3)
-				explo.image_xscale = 0.5;
-				explo.image_yscale = 0.5;
-				explo.image_alpha = 0.8;
-				met._hpush = lengthdir_x(velo,direction)
-				met._vpush = lengthdir_y(velo,direction)
-			}
-			
-			canBreak = false;
-			contBreak = 20;
-		}
-	}
-}
 
 if !instance_exists(worm)
 {

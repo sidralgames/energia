@@ -67,7 +67,7 @@ if instance_exists(worm) & (hurts)
 		}
 	}
 	
-	flashAlpha = 1;
+	flashAlpha = 1.5;
 }
 
 

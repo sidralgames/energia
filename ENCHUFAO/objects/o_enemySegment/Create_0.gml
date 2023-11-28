@@ -37,7 +37,13 @@ waitingSpeed = random_range(0.4,0.7)
 breakDistance = random_range(0.005, 0.05)
 accelDistance = random_range(0.005, 0.05);
 
-
+plugging = false
+unplugging = false;
+plugged = false;
+contPluggedMin = 400;
+contPluggedMax = 800;
+contCanPlug = 60;
+contPlugged = random_range(contPluggedMin, contPluggedMax)
 
 
 if tile_meeting(x,y,"Tiles")
@@ -49,7 +55,11 @@ isMegaEnemy = false;
 isMega = irandom(5);
 megaStated = false;
 oddsBattery = 5;
-
+depth = layer_get_depth("EnemiesHUE")
+cable = instance_create_layer(x,y,"EnemiesHUEsub2", o_enemySegments_Body);
+_hp = cable._segments*3;
+enemySpeedInitial = random_range(1.25,2)
+enemySpeed = enemySpeedInitial;
 
 
 hasShield = irandom(10);

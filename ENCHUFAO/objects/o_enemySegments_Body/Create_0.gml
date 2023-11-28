@@ -30,7 +30,7 @@ counting=false;
 countingNInitial=20
 countingN=countingNInitial;
 _sprite = s_enemySegmets_segment;
-_segments = irandom_range(3,7);
+_segments = irandom_range(4,7);
 rope1 = verletGroupCreateRopeTextured(verletSystem1, x, y, _sprite, _segments, 1, 10);
 
 contPlugBody = -1;
@@ -42,12 +42,12 @@ contPlugBody = -1;
 inst = instance_nearest(x,y,o_enemySegment)
 rope1.vertexAttachTo(first, inst);
 
-instAchor = instance_create_layer(x,y,"Enemies",o_enemySegments_last)
+instAchor = instance_create_layer(x,y,"EnemiesHUE",o_enemySegments_last)
 rope1.vertexAttachObject(last, instAchor,vertexAttachmentType.both);
 
 for (var i=2; i<=_segments-1; i++)
 {
-	instBody[i] = instance_create_layer(x,y,"Enemies",oSegmentsHitBox)
+	instBody[i] = instance_create_layer(x,y,"EnemiesHUEsub",oSegmentsHitBox)
 	rope1.vertexAttachObject(i, instBody[i],vertexAttachmentType.both);
 	instBody[i].worm = inst;
 }

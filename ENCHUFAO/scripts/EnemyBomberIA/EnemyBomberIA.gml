@@ -30,8 +30,16 @@ function EnemyBomberIA()
 		}
 	}
 	
-	part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(12,_angle), y-lengthdir_y(12,_angle), global.naveEnemy_Waiting , 1)
-			
+	if (global.inScreen)
+	{
+		contParts --;
+		if (contParts <=0)
+		{
+			part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(12,direction), y-lengthdir_y(12,direction), global.naveEnemy_Waiting , 1)
+			contParts = contPartsInitial;
+		}
+	}
+	
 	if (point_distance(x,y, o_playerShip.x, o_playerShip.y) <= 350)
 	&& (_angle < point_direction(x,y,o_playerShip.x, o_playerShip.y) + 40)
 	&& (_angle > point_direction(x,y,o_playerShip.x, o_playerShip.y) - 40)

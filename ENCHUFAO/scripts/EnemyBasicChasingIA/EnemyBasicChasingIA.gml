@@ -17,69 +17,69 @@ function EnemyBasicChasingIA()
 		enemySpeed = lerp(enemySpeed, enemySpeedInitial, 0.1);
 	}
 	
-	if (global.haveInvisibiltyCloak && global.invisibleCloak == true)
+	
+	if (enemyIsWorm)
 	{
-		path_end()
-		var a = point_direction(x, y, x+diffX,y+diffY);
-		direction += sign(dsin(a - direction)) * (precision * global.relativeSpeed);
-		_angle = direction;
-		if (alarm[10] <= 0)
+		inEnchufe = collision_circle(x,y,30,o_enchufeStandard_Father,false,true)
+		
+		if (contCanPlug >0)
 		{
-			speed = enemySpeed * min(1, global.relativeSpeed+0.2);
+			contCanPlug--;
+		}
+		
+		if (inEnchufe) && (contCanPlug<=0)
+		{	
+			enchufe = inEnchufe;
+			if (!enchufe.occupied) && (!plugged) && (!enchufe.enchufeBomb)
+			{
+				enchufe.occupied = true;
+				plugging = true;
+				contPlugged = random_range(contPluggedMin, contPluggedMax)
+			}
+		}
+		
+		if (plugged)
+		{
+			if (_hp <= 0)
+			{
+				enchufe.occupied = false;
+			}
+			
+			contPlugged--;
+			
+			if (contPlugged<=0)
+			{
+				plugged = false;
+				cable.contPlugBody = 50;
+				enchufe.occupied = false;
+				enchufe.enchufeOvercharged = true;
+				enchufe.contOvercharged = 250;
+				contCanPlug = 120;
+				contPlugged = random_range(contPluggedMin, contPluggedMax)
+			}
+			
+			if (point_distance(x,y,enchufe.x,enchufe.y) <= cable._segments*7)
+			{
+				BasicEnemyMovement();
+			}
+			else
+			{
+				dir = point_direction(x,y,enchufe.x,enchufe.y)
+				
+				hspeed = lengthdir_x(1,dir)
+				vspeed = lengthdir_y(1,dir)
+		
+				enchufe._hpush -= lengthdir_x(0.1,dir)
+				enchufe._vpush -= lengthdir_y(0.1,dir)
+			}
 		}
 		else
 		{
-			speed = enemySpeed
+			BasicEnemyMovement();
 		}
-		
-		if (tile_meeting(x+hspeed,y,"Tiles"))
-		{
-		    hspeed = -hspeed*bnc;
-		}
-		else if (tile_meeting(x,y+vspeed,"Tiles"))
-		{
-		    vspeed = -vspeed*bnc;
-		}
-				
-		
 	}
 	else
 	{
-		
-		mp_grid_path(gridRoom1, myPath, x, y, o_playerShip.x ,o_playerShip.y, true);
-	
-		if tile_meeting(x + lengthdir_x(20, 1), y+ lengthdir_y(20, 1), "Tiles") ||
-		tile_meeting(x + lengthdir_x(20, 90), y+ lengthdir_y(20, 90), "Tiles") ||
-		tile_meeting(x + lengthdir_x(20, 180), y+ lengthdir_y(20, 180), "Tiles") ||
-		tile_meeting(x + lengthdir_x(20, 270), y+ lengthdir_y(20, 270), "Tiles") || 
-		tile_meeting(x, y, "Tiles")
-		{
-			if (alarm[10] <= 0)
-			{
-				_speed = enemySpeed * min(1, global.relativeSpeed+0.2);
-			}
-			else
-			{
-				_speed = enemySpeed;
-			}
-			path_start(myPath,_speed ,path_action_stop, false)
-			_angle = direction;
-
-		}
-		else
-		{
-			path_end()
-			var a = point_direction(x, y, o_playerShip.x+diffX,  o_playerShip.y+diffY);
-			direction += sign(dsin(a - direction)) * (precision * global.relativeSpeed);
-			_angle = direction;
-			if (alarm[10] <= 0)
-			{
-				speed = enemySpeed * min(1, global.relativeSpeed+0.2);
-			}
-			else
-			{
-				speed = enemySpeed
-			}
-		}
+		BasicEnemyMovement();
 	}
 }
