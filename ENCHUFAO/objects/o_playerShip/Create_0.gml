@@ -1,11 +1,17 @@
 /// @description Insert description here
 // You can write your code in this editor
+pitch = 1;
+SetFxParameters();
+
 type = collisionType.custom;
 _alpha = 1;
 _spriteBattery = -1;
 haveBatteryUpgrade = false;
 trapped = false;
 drawflashCont = 5;
+
+contDeactivate = 60;
+
 if (global.friendIsUpgraded)
 {
 	instance_create_layer(x,y,"Player", o_friend);
@@ -69,7 +75,7 @@ ripple_fx = 0;
 contRipple = 0;
 ripple = false;
 canSlowMotion = true;
-layer_set_visible("EffectBreach", false);
+
 pluggedTimer = 0;
 pluggedShip = false
 global.pitch = 1;

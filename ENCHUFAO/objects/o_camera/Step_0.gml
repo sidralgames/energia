@@ -47,6 +47,12 @@ Controls_Input()
 			shakeRemain = 0;
 		}
 		
+		if (outRemain <= 0.5)
+		{
+			
+			outRemain = 0;
+		}
+		
 		
 		camera_set_view_pos(view_camera[0],clamp(x-viewWidthHalf, -outRemain, room_width-(viewWidthHalf*2)+outRemain),clamp(y-viewHeightHalf, -outRemain, room_height-(viewHeightHalf*2)+outRemain))
 	}

@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SetVines()
 {
-	oddsVine_s = 10;
+	oddsVine_s = 5;
 	
 for ( var yyW = 0; yyW < height_; yyW++) 
 {

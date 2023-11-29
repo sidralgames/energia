@@ -4,7 +4,7 @@ if (image_index >= 19) && (canCreate = false)
 {
 	canCreate = true;
 	
-	if (enemy = o_enemyMouth_Free) || (enemy == o_enemySegment)
+	if (enemy = o_enemyMouth_Free) || (enemy == o_enemySegment) || (enemy ==o_BossWorm_Mouth)
 	{
 		enemyCreated = instance_create_layer(x,y,"EnemiesHUE",enemy);
 	}
