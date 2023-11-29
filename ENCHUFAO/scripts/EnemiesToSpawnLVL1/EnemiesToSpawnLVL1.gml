@@ -4,9 +4,24 @@ function EnemiesToSpawnLVL1()
 {
 	enemyToSpawn = irandom(15)
 
-	if (enemyToSpawn <=18)
+	if (enemyToSpawn <=9)
 	{
-		enemy = choose(o_BossWorm_Mouth)
+		enemy = choose(o_enemy, o_enemyFast, o_enemyFastMini)
+	}
+	else
+	if (enemyToSpawn > 9) && (enemyToSpawn<=13)
+	{
+		enemy = choose(o_enemyDisp,o_enemyMitosis,o_enemy_Waiting_Shield)
+	}
+	else
+	if (enemyToSpawn > 13) && (enemyToSpawn<15)
+	{
+		enemy = choose(o_enemyMothership, o_enemySniper, o_enemyDisc, o_enemySegment)
+	}
+	else
+	if(enemyToSpawn >= 15)
+	{
+		enemy = choose(o_enemyMines,o_enemyBomber,o_enemyMouth_Free, o_BossWorm_Mouth)
 	}
 	
 }

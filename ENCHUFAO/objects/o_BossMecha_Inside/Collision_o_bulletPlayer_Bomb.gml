@@ -4,7 +4,7 @@ hp -= 20*global.damageDealt;
 
 instance_destroy(other);
 
-
+flashAlpha = 1;
 
 
 

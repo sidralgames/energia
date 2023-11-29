@@ -30,7 +30,7 @@ if (room != Sala_Inicio)
 
 
 
-	if (global.wallgrid_[# _x/32, _y/32] == VOID) && (_x > 50) && (_x < room_width-50)
+	if (global.wallgrid_[# _x/32, _y/32] != FLOOR) && (_x > 50) && (_x < room_width-50)
 		&& (_y > 50) && (_y < room_height-50)
 	{
 		global.changingTiles = true;
@@ -47,7 +47,7 @@ if (room != Sala_Inicio)
 	}
 
 
-	if (global.wallgrid_[# _x2/32, _y2/32] == VOID)&& (_x2 > 50) && (_x2 < room_width-50)
+	if (global.wallgrid_[# _x2/32, _y2/32] != FLOOR)&& (_x2 > 50) && (_x2 < room_width-50)
 	&& (_y2 > 50) && (_y2 < room_height-50)
 	{
 		global.changingTiles = true;
@@ -65,7 +65,7 @@ if (room != Sala_Inicio)
 	}
 
 
-	if (global.wallgrid_[# _x3/32, _y3/32] == VOID) && (_x3 > 50) && (_x3 < room_width-50)
+	if (global.wallgrid_[# _x3/32, _y3/32] != FLOOR) && (_x3 > 50) && (_x3 < room_width-50)
 	&& (_y3 > 50) && (_y3 < room_height-50)
 	{
 		global.changingTiles = true;

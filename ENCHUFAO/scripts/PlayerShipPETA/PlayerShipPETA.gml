@@ -39,7 +39,7 @@ function PlayerShipPETA()
 			//_hpush += -lengthdir_x(recoil_standard, _angle+off);
 			//_vpush += -lengthdir_y(recoil_standard, _angle+off);
 			_angle +=off
-			alarm[6]=bombFireRate;
+			alarm[6]=petaFireRate;
 			global.totalPETAS+=1;
 		}
 	

@@ -66,7 +66,8 @@ isMega = irandom(5);
 enemySpeedInitial = random_range(0.5, 0.75);
 precisionInitial = 2;
 precisionPlayer = 0.2;
-oddsBattery = 5;
+
+oddsBattery = 4;
 if (isMega = 0) 
 {
 	global.MegaEnemiesInLevel+=1;

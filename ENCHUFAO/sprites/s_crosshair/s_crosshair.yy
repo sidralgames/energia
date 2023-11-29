@@ -2,10 +2,10 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "s_crosshair",
-  "bbox_bottom": 13,
-  "bbox_left": 2,
-  "bbox_right": 13,
-  "bbox_top": 2,
+  "bbox_bottom": 14,
+  "bbox_left": 1,
+  "bbox_right": 14,
+  "bbox_top": 1,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -14,7 +14,7 @@
   "For3D": false,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fc069bca-0b93-48da-9ae0-0551ac9c46fd",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b0ef05df-9c8c-4645-ad61-713af789ba8c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"91c84370-7e8e-4986-bb1e-fbacb3659db8",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -56,7 +56,7 @@
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fc069bca-0b93-48da-9ae0-0551ac9c46fd","path":"sprites/s_crosshair/s_crosshair.yy",},},},"Disabled":false,"id":"296c539c-0164-49ca-947a-23b553828f78","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b0ef05df-9c8c-4645-ad61-713af789ba8c","path":"sprites/s_crosshair/s_crosshair.yy",},},},"Disabled":false,"id":"489b05e2-982c-417c-81d6-b6d59343d33f","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"91c84370-7e8e-4986-bb1e-fbacb3659db8","path":"sprites/s_crosshair/s_crosshair.yy",},},},"Disabled":false,"id":"268ca4d3-a66b-4076-8e42-9132b2f9f2b7","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

@@ -8,7 +8,7 @@ alarm[10] = 30;
 //lightEnemy= instance_create_layer(x,y,"LightEnemy",o_Light_Enemy);
 isCounted=false;
 bnc = 0.5;
-_hp = 10;
+_hp = 6;
 cont = 500;
 image_speed = 0.5;
 
@@ -42,13 +42,13 @@ if tile_meeting(x,y,"Tiles")
 }
 
 isMega = irandom(5);
-oddsBattery = 5;
+oddsBattery = 4;
 
 if (isMega = 0)
 {
 	isMegaEnemy = true;
 	global.MegaEnemiesInLevel+=1;
-	_hp = 15;
+	_hp = 9;
 	sprite_index = s_enemyMitosis_Mega;
 	
 	if (global.BatteriesInLevel <= global.BatteriesInLevel_Max)

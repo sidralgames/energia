@@ -43,7 +43,8 @@ breakDistance = random_range(0.005, 0.05)
 accelDistance = random_range(0.005, 0.05);
 isMegaEnemy = false
 isMega = irandom(5);
-oddsBattery = 5;
+
+oddsBattery = 3;
 
 if (isMega = 0)
 {

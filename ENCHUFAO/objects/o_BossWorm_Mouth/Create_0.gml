@@ -63,7 +63,7 @@ oddsBattery = 5;
 
 
 cable = instance_create_layer(x,y,"EnemiesHUEsub2", o_BossWorm_Body);
-_hp = 10 + cable._segments*4;
+_hp = 15 + cable._segments*6;
 hasShield = irandom(10);
 
 contBreak = 0;

@@ -3,6 +3,11 @@
 pitch = 1;
 SetFxParameters();
 
+if (room != Sala_Inicio) && (room != Sala_Upgade)
+{
+	SetHUE();
+}
+
 type = collisionType.custom;
 _alpha = 1;
 _spriteBattery = -1;
@@ -115,7 +120,8 @@ recoil_bomb = 1.8;
 
 fireRate = max(5,global.fireRate);
 
-bombFireRate = 120;
+bombFireRate = 30;
+petaFireRate = 60;
 
 tocado = false;
 shieldCreated = false

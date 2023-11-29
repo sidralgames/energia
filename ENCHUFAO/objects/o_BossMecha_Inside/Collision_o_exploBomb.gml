@@ -5,6 +5,7 @@ if (hittedByBomb = false) && (o_BossMecha.state = BOSS2STATE.IDLE) && (o_BossMec
 	hittedByBomb = true;
 	hp-=20;
 	alarm[0] = 30;
+	flashAlpha = 1;
 }
 
 

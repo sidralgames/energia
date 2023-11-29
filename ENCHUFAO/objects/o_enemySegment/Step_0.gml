@@ -25,6 +25,15 @@ switch(state)
 
 if (_hp <= 0)
 {
+	
+	if (plugged)
+	{
+		enchufe.occupied = false;
+		enchufe.occupied = false;
+		enchufe.enchufeOvercharged = true;
+		enchufe.contOvercharged = 250;
+	}
+	
 	EnemyDeathShake();
 	
 	global.XPpoints +=enemyXP;

@@ -2,7 +2,7 @@
 // You can write your code in this editor
 randomize();
 
-SetHUE();
+
 contTiles = 2;
 global.Go = false;
 global.enemies = 0;

@@ -3,6 +3,8 @@
 function SetupLevelBoss2()
 {
 
+	
+	
 	enchufe0 = false;
 	enchufeHP1 = false;
 	enchufeHP2 = false;
@@ -208,7 +210,7 @@ function SetupLevelBoss2()
 
 	
 	
-	SetHUE();
+	
 	
 	PlacePetasInTiles(20);
 

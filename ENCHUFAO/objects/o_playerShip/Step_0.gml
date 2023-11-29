@@ -88,6 +88,7 @@ if (key_shoot) && (!superShot)
 {
 	if (alarm[0] <= 0) && (global.ammo >1 )
 	{
+		
 		PlayerShipShoot();
 		
 		if (!plugged) && (!o_charger.overcharged) && (global.chargerShoots)
@@ -98,18 +99,26 @@ if (key_shoot) && (!superShot)
 }
 
 //-----------------BOMB-----------------//
-if (key_bomb)
+if (global.bombAmmo > 0 )
 {
-	if (alarm[6] <= 0) && (global.bombAmmo > 0 )
+	if (key_bomb)
 	{
-		PlayerShipBomb();
+		if (alarm[6] <= 0)
+		{
+			PlayerShipBomb();
+		}
+	
+	}
+	else
+	{
+		alarm[6] = 0;
 	}
 }
 
 //---------P.E.T.A--------//
 if (key_l3Dowm) && (key_r3Dowm)
 {
-	if (alarm[6] <= 0) && (global.PETAAmmo > 0 )
+	if (alarm[11] <= 0) && (global.PETAAmmo > 0 )
 	{
 		PlayerShipPETA();
 	}
