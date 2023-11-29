@@ -55,7 +55,7 @@ function EnemyMouthMoveAndBreak()
 					met = instance_create_layer(_x-lengthdir_x(5, direction),_y-lengthdir_y(5, direction),"Meteors", o_meteor)
 					if instance_exists(met)
 					{
-						screenShake(2,10)
+						screenShake(1,7)
 						explo = instance_create(_x,_y,o_explo3)
 						explo.image_xscale = 0.5;
 						explo.image_yscale = 0.5;

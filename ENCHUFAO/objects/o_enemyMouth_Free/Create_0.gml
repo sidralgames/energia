@@ -2,7 +2,7 @@
 // You can write your code in this editor
 event_inherited();
 leavesTrail = false;
-
+isBossWorm = false;
 thisEnemyBounce = false;
 offBullet = 7;
 bulletVelo = 2.75;
