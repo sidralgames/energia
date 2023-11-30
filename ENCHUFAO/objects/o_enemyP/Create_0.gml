@@ -10,13 +10,14 @@ cable = -1;
 contSearchMax = 5
 contSearch = contSearchMax;
 isSniper = false;
-burned = false;
+
 haveAShield = false;
 canHaveAShield = true;
 
 
 alertDist = 150;
 
+burned = false;
 contBurnedTotalMax = 300;
 contBurnedTotal = contBurnedTotalMax;
 contBurnedMax = 100;
@@ -34,7 +35,6 @@ electroFlash = 0;
 
 isMegaEnemy = false;
 
-rojoosc= make_colour_rgb(255,0,68);
 rojo= make_colour_rgb(228,59,69);
 rojo2= make_colour_rgb(158, 40, 53);
 

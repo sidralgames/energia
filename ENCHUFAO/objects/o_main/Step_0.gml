@@ -52,21 +52,4 @@ if keyboard_check_pressed(ord("R"))
 }
 
 
-if (global.chargingHp)
-{
-	global.cableColor = green
-}
-else if (global.chargingAmmo)
-{
-	global.cableColor = yellow
-}
-else if (global.chargingLaser)
-{
-	global.cableColor = blue
-}
-else
-{
-	global.cableColor = white
-}
-
 part_type_sprite(global.balaP,global.bulletPart_sprite,true,1,false)

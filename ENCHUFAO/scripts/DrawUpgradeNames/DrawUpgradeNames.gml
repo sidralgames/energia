@@ -16,7 +16,7 @@ function DrawUpgradeNames()
 				draw_set_font(customFont2)
 				draw_set_color(orange)
 				draw_text(__view_get( e__VW.XView, 0 )+26,__view_get( e__VW.YView, 0 )+201+timesToDraw*15, upgrades.nameUpgrade)
-				draw_set_color(yellow)
+				draw_set_color(global.yellow)
 				draw_text(__view_get( e__VW.XView, 0 )+27,__view_get( e__VW.YView, 0 )+200+timesToDraw*15, upgrades.nameUpgrade)
 			}
 			else
@@ -25,7 +25,7 @@ function DrawUpgradeNames()
 				draw_set_font(customFont2)
 				draw_set_color(orange)
 				draw_text(__view_get( e__VW.XView, 0 )+26,__view_get( e__VW.YView, 0 )+201+timesToDraw*15, string(upgrades.nameUpgrade) +" x" + string(upgrades.times))
-				draw_set_color(yellow)
+				draw_set_color(global.yellow)
 				draw_text(__view_get( e__VW.XView, 0 )+27,__view_get( e__VW.YView, 0 )+200+timesToDraw*15, string(upgrades.nameUpgrade) +" x" + string(upgrades.times))
 			}
 		}

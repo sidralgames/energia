@@ -7,7 +7,7 @@ hurts = true;
 canBeDestroyed = true;
 myPath = path_add();
 burned = false;
-rojoosc= make_colour_rgb(255,0,68);
+
 rojo= make_colour_rgb(228,59,69);
 rojo2= make_colour_rgb(158, 40, 53);
 haveAShield = false;

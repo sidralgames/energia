@@ -41,6 +41,24 @@ else if (enchufeToMimic = "Laser")
 }
 
 sprite_index = _sprite;
+checkHP = false;
 
+repelled = false;
+
+burned = false;
+contBurnedTotalMax = 300;
+contBurnedTotal = contBurnedTotalMax;
+contBurnedMax = 100;
+contBurned = contBurnedMax;
+contBurnPartMax = 5;
+contBurnPart = contBurnPartMax;
+
+electrocutated = false;
+contElectro = contBurnedMax;
+contElectroPart = contBurnPartMax;
+contElectroTotal = contBurnedTotalMax;
+
+burnFlash = 0;
+electroFlash = 0;
 
 

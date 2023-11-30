@@ -1,5 +1,8 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+
+StatusConditionEnemy();
+
 if (place_meeting(x+_hpush*1.5,y,o_enchufe_Father))
 {
     _hpush = -_hpush*bnc;
@@ -35,15 +38,17 @@ if instance_exists(o_playerShip)
 		explo.image_xscale = 0.5;
 		explo.image_yscale = 0.5;
 		
+		if (state = 1)
+		{
 			with (o_playerShip)
-				{
-					trapped = false;
-					Unplug();
-				}
+			{
+				trapped = false;
+				Unplug();
+			}
 				
-				o_charger.overcharged = true;
-				o_charger.alarm[0] = 300;
-		
+			o_charger.overcharged = true;
+			o_charger.alarm[0] = 300;
+		}
 		
 		instance_destroy();
 	}
@@ -61,6 +66,7 @@ if instance_exists(o_playerShip)
 				state = 1;	
 				image_index = 0;
 				contClosed = random_range(400, 500);
+				o_playerShip.trapped = true;
 			}
 		
 		}break;
@@ -70,8 +76,6 @@ if instance_exists(o_playerShip)
 			depth = layer_get_depth("Cable")-2;
 			sprite_index = sprite_attack;
 			image_speed = 0.5;
-			
-			o_playerShip.trapped = true;
 		
 			contClosed --;
 		

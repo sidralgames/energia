@@ -123,7 +123,7 @@ if (global.inScreen)
 if !instance_exists(worm) && (dying = false)
 {
 	dying = true;
-	alarm[0] = random_range(5, 15)
+	alarm[0] = random_range(3, 10)
 }
 
 if (dying = true) && (alarm[0] <=0)

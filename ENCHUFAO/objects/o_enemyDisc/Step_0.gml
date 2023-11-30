@@ -44,7 +44,7 @@ if instance_exists(o_playerShip)
 		
 			if (spin >= spinRampage-0.8) && (image_index >= 15)
 			{
-				enemySpeedRampage = random_range(3.5, 4.5);
+				enemySpeedRampage = random_range(3.5, 5);
 				spin = spinRampage;
 				dire = point_direction(x,y,o_playerShip.x, o_playerShip.y);
 				image_speed = 0;

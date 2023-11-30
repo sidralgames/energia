@@ -6,7 +6,7 @@ function EnemiesToSpawnLVL1()
 
 	if (enemyToSpawn <=9)
 	{
-		enemy = choose(o_enemy, o_enemyFast, o_enemyFastMini)
+		enemy = choose(o_enemy, o_enemyFast, o_enemyFastMini, o_BossWorm_Mouth)
 	}
 	else
 	if (enemyToSpawn > 9) && (enemyToSpawn<=13)

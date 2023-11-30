@@ -2,6 +2,12 @@
 // You can write your code in this editor
 full = false;
 
+
+
+//-------COLORS--------//
+global.brightRed = make_colour_rgb(255,0,68);
+global.yellow = make_color_rgb(254,231, 97);
+
 global.inScreen = (x > __view_get( e__VW.XView, 0 )-150 && x < __view_get( e__VW.XView, 0 )+810)
 && (y > __view_get( e__VW.YView, 0 )-150 && y < __view_get( e__VW.YView, 0 )+510);
 
@@ -210,7 +216,7 @@ global.textSpeed =  0.75;
 white = c_white;
 green = make_color_rgb(99,199,77)
 blue = make_color_rgb(44,232,245)
-yellow = make_color_rgb(254,174,52)
+
 
 global.cableColor = white;
 

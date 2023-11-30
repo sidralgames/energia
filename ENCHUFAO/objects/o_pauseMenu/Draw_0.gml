@@ -2,7 +2,7 @@
 // You can write your code in this editor
 azul = make_color_rgb(44,232, 245);
 orange = make_color_rgb(254,174, 52);
-yellow = make_color_rgb(254,231, 97);
+
 
 
 draw_sprite_ext(s_pauseBackground,spriteBack, __view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0,1,1,0,image_blend, image_alpha)
@@ -23,7 +23,7 @@ for (var i = 0; i<global.numberOfUpgradesPlayer; i++)
 			draw_set_font(customFont)
 			draw_set_color(orange)
 			draw_text(__view_get( e__VW.XView, 0 )+13,__view_get( e__VW.YView, 0 )+201+timesToDraw*17, upgrades.nameUpgrade)
-			draw_set_color(yellow)
+			draw_set_color(global.yellow)
 			draw_text(__view_get( e__VW.XView, 0 )+14,__view_get( e__VW.YView, 0 )+200+timesToDraw*17, upgrades.nameUpgrade)
 		}
 		else
@@ -32,7 +32,7 @@ for (var i = 0; i<global.numberOfUpgradesPlayer; i++)
 			draw_set_font(customFont)
 			draw_set_color(orange)
 			draw_text(__view_get( e__VW.XView, 0 )+13,__view_get( e__VW.YView, 0 )+201+timesToDraw*17, string(upgrades.nameUpgrade) +" x" + string(upgrades.times))
-			draw_set_color(yellow)
+			draw_set_color(global.yellow)
 			draw_text(__view_get( e__VW.XView, 0 )+14,__view_get( e__VW.YView, 0 )+200+timesToDraw*17, string(upgrades.nameUpgrade) +" x" + string(upgrades.times))
 		}
 	}

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "EnemyFatherToMouthFree",
+  "name": "StatusConditionEnemy",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

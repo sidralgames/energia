@@ -18,14 +18,18 @@ function PlayerShipLaser(argument0)
 	_hpush += -lengthdir_x(0.13, _angle);
 	_vpush += -lengthdir_y(0.13, _angle);
 	var maxLenght_ = 640;
+	
 	for(var i = 0; i < maxLenght_; i++)
 	{
 		maxLenght = i ;
 	     var lx = x + lengthdir_x(i, argument0);
 	     var ly = y + lengthdir_y(i, argument0);
 		 
-	     if tile_meeting(lx,ly,"Tiles") || place_meeting(lx, ly, o_enemyP) 
-		 || place_meeting(lx, ly, o_bulletPlayer_Bomb) || place_meeting(lx, ly, o_BossFather) 
+		 collision = tile_meeting(lx,ly,"Tiles") || place_meeting(lx, ly, o_enemyP) 
+		 || place_meeting(lx, ly, o_bulletPlayer_Bomb) || place_meeting(lx, ly, o_BossFather)
+		 || place_meeting(lx, ly, o_enchufe_Mimic) || place_meeting(lx, ly, o_bombEnemyFather)
+		 
+	     if (collision)
 		 {
 			 maxLenght_=i
 			 maxLenght = maxLenght_;
@@ -65,11 +69,7 @@ function PlayerShipLaser(argument0)
 			 }
 		}  
 	}
-	
-	grappleX = lx;
-	grappleY = ly;
-	
-	
+
 	boss = collision_line(x,y,x+lengthdir_x(maxLenght_+20, argument0+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,argument0+random_range(2,-2)), o_BossMecha_Inside,false, true)
 	if (boss)
 	{
@@ -87,6 +87,13 @@ function PlayerShipLaser(argument0)
 	if (misil)
 	{
 		instance_destroy(misil)	
+	}
+	
+	mimic = collision_line(x,y,x+lengthdir_x(maxLenght_+20, argument0+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,argument0+random_range(2,-2)), o_enchufe_Mimic,false, true)
+	if (mimic)
+	{
+		mimic._hp -= (0.25+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
+		mimic.burned = true;
 	}
 	
 	
@@ -147,17 +154,21 @@ function PlayerShipLaser(argument0)
 			
 			}
 		}
-		//explo = instance_create(enemy.x, enemy.y, o_explo2)
-		//explo.image_xscale = 0.25;
-		//explo.image_yscale = 0.25;
 	}
 	
-	bomb1 = collision_line(x,y,x+lengthdir_x(maxLenght_+20, argument0+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,argument0+random_range(2,-2)), o_bulletPlayer_Bomb,false, true)
-	
-	if (bomb1)
+	bombPlayer = collision_line(x,y,x+lengthdir_x(maxLenght_+20, argument0+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,argument0+random_range(2,-2)), o_bulletPlayer_Bomb,false, true)
+	if (bombPlayer)
 	{
 		screenShake(4,10);
-		bomb1.hitByLaser = true;
-		instance_destroy(bomb1);
+		bombPlayer.hitByLaser = true;
+		instance_destroy(bombPlayer);
+	}
+	
+	bombEnemy = collision_line(x,y,x+lengthdir_x(maxLenght_+20, argument0+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,argument0+random_range(2,-2)), o_bombEnemyFather,false, true)
+	if (bombEnemy)
+	{
+		screenShake(4,10);
+		bombEnemy.hitByLaser = true;
+		instance_destroy(bombEnemy);
 	}
 }

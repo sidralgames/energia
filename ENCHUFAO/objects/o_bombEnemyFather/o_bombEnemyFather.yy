@@ -1,17 +1,18 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "spawner",
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-  ],
+  "name": "o_bombEnemyFather",
+  "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objetos",
-    "path": "folders/Objetos.yy",
+    "name": "Bullets",
+    "path": "folders/Objetos/Bullets.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "o_bulletEnemy_Father",
+    "path": "objects/o_bulletEnemy_Father/o_bulletEnemy_Father.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

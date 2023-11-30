@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function BossWormChasingLogic()
 {
-	EnemyMouthMoveAndBreak();
+	BossWormMoveAndBreak();
 		
 	inEnchufe = collision_circle(x,y,30,o_enchufeStandard_Father,false,true)
 	if contCanPlug >0
@@ -38,7 +38,7 @@ function BossWormChasingLogic()
 	
 		if (point_distance(x,y,enchufe.x,enchufe.y) <= cable._segments*17)
 		{
-			EnemyMouthMoveAndBreak()
+			BossWormMoveAndBreak()
 		}
 		else
 		{
@@ -51,7 +51,7 @@ function BossWormChasingLogic()
 			enchufe._vpush -= lengthdir_y(0.1,a);
 		}
 		
-		EnemyMouthFree_PluggedAttack();
+		BossWorm_PluggedAttack();
 			
 	}
 }

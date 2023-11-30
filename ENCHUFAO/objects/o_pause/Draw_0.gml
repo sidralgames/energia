@@ -36,7 +36,7 @@ if (pause)
 // You can write your code in this editor
 azul = make_color_rgb(44,232, 245);
 orange = make_color_rgb(254,174, 52);
-yellow = make_color_rgb(254,231, 97);
+
 
 draw_set_alpha(0.5);
 draw_rectangle_color(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ), __view_get( e__VW.XView, 0 )+ 640,__view_get( e__VW.YView, 0 )+360,c_black, c_black, c_black,c_black, false)

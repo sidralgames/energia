@@ -14,7 +14,7 @@ green = make_color_rgb(108,242,79)
 red = make_color_rgb(228,59,68)
 purpleO = make_color_rgb(181,80,136)
 purple = make_color_rgb(246,117,122)
-rojoosc= make_colour_rgb(255,0,68);
+
 rojo= make_colour_rgb(228,59,69);
 blanco= make_colour_rgb(255,255,255);
 blue = make_color_rgb(44,232, 245) ;

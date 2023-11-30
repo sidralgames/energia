@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "ENCHUFAO",
-    "path": "ENCHUFAO.yyp",
+    "name": "BOSS WORM",
+    "path": "folders/Scripts/BOSS WORM.yy",
   },
 }

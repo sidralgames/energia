@@ -16,8 +16,8 @@
     "path": "folders/Objetos/Bullets.yy",
   },
   "parentObjectId": {
-    "name": "o_bulletEnemy_Father",
-    "path": "objects/o_bulletEnemy_Father/o_bulletEnemy_Father.yy",
+    "name": "o_bombEnemyFather",
+    "path": "objects/o_bombEnemyFather/o_bombEnemyFather.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

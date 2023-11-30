@@ -3,7 +3,7 @@
 
 azul = make_color_rgb(44,232, 245);
 orange = make_color_rgb(254,174, 52);
-yellow = make_color_rgb(254,231, 97);
+
 
 achievement = ds_map_find_value(global.achievementList, selected)
 
