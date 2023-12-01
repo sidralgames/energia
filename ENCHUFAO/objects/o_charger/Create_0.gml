@@ -5,3 +5,4 @@ rateAnterior = o_playerShip.fireRate;
 scale = 1;
 
 
+

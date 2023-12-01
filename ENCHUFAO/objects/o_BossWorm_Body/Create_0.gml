@@ -29,8 +29,8 @@ cableColor = gray;
 counting=false;
 countingNInitial=20
 countingN=countingNInitial;
-_sprite = s_BossWorm_Body
-_segments = irandom_range(8,12);
+_sprite = s_BossWorm_Body_Metal;
+_segments = 12;
 rope1 = verletGroupCreateRopeTextured(verletSystem1, x, y, _sprite, _segments, 1, 10);
 
 contPlugBody = -1;
@@ -51,6 +51,17 @@ for (var i=2; i<=_segments-1; i++)
 	rope1.vertexAttachObject(i, instBody[i],vertexAttachmentType.both);
 	instBody[i].worm = inst;
 }
+
+for (var i=0; i<4; i++)
+{
+	instEnchufe[i] = instance_create_layer(x,y,"EnemiesHUEsub",o_EnchufeBossWorm)
+	instEnchufe[i].worm = inst;
+}
+
+rope1.vertexAttachObject(2, instEnchufe[0],vertexAttachmentType.both);
+rope1.vertexAttachObject(5, instEnchufe[1],vertexAttachmentType.both);
+rope1.vertexAttachObject(8, instEnchufe[2],vertexAttachmentType.both);
+rope1.vertexAttachObject(11, instEnchufe[3],vertexAttachmentType.both);
 
 plugged = false;
 

@@ -48,8 +48,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_bossWorm_Mouth",
-    "path": "sprites/s_bossWorm_Mouth/s_bossWorm_Mouth.yy",
+    "name": "s_bossWorm_Mouth_Metal",
+    "path": "sprites/s_bossWorm_Mouth_Metal/s_bossWorm_Mouth_Metal.yy",
   },
   "spriteMaskId": null,
   "visible": true,

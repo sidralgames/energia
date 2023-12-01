@@ -16,8 +16,15 @@ if (global.plugging)
 	
 	if instance_exists(enchufe)
 	{
-
-		rope1.vertexAttachTo(last, enchufe);
+		if (enchufe.IsBoss)
+		{
+			rope1.vertexAttachTo(last, enchufe,lengthdir_x(-30,enchufe.image_angle),lengthdir_y(30,enchufe.image_angle))
+		}
+		else
+		{
+			rope1.vertexAttachTo(last, enchufe);
+		}
+		
 	}
 }
 
@@ -42,7 +49,7 @@ if (global.pluggingShip)
 	
 	if instance_exists(ship)
 	{
-
+		
 		rope1.vertexAttachTo(last, ship);
 	}
 }

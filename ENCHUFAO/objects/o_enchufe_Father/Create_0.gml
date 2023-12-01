@@ -7,7 +7,7 @@
 occupied = false;
 
 isMimic = false;
-
+IsBoss = false;
 randomize();
 upgradesBattery=0;
 

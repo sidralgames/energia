@@ -39,6 +39,12 @@ if instance_exists(inst)
 				instBody[i].hurts = false;
 				instBody[i].contHurt = 20;
 			}
+
+			rope1.vertexAttachObject(2, instEnchufe[0],vertexAttachmentType.both);
+			rope1.vertexAttachObject(5, instEnchufe[1],vertexAttachmentType.both);
+			rope1.vertexAttachObject(8, instEnchufe[2],vertexAttachmentType.both);
+			rope1.vertexAttachObject(11, instEnchufe[3],vertexAttachmentType.both);
+			
 			counting=false;
 			countingN=countingNInitial;
 		}

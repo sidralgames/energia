@@ -75,10 +75,18 @@ function Plug()
 			
 		}
 		else
-		{
-			o_charger.scale = enchufe.scale;
-			global.xToPlug = enchufe.x;
-			global.yToPlug = enchufe.y;
+		{	
+			if (enchufe.IsBoss)
+			{
+				global.xToPlug = x+lengthdir_x(30,enchufe.image_angle)
+				global.yToPlug = y+lengthdir_y(30,enchufe.image_angle)
+			}
+			else
+			{
+				o_charger.scale = enchufe.scale;
+				global.xToPlug = enchufe.x;
+				global.yToPlug = enchufe.y;
+			}
 		}
 	}
 	plugged = true;

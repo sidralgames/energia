@@ -8,8 +8,6 @@ function DrawLevelBasic()
 	PETAs = 0;
 	PETAsMax = 3;
 	
-	
-	
 	for ( var yy = 0; yy < height_; yy++) 
 	{
 	    for (var xx = 0; xx < width_; xx++) 
@@ -27,7 +25,7 @@ function DrawLevelBasic()
 				var oddsEnchufeFinal = 300;
 				
 				var oddsStrandedShip = 300;
-				var oddsEnchufeMimic = 20;
+				var oddsEnchufeMimic = 2000;
 
 				var oddsPETAPickUp = 300;
 				var oddsShieldPickUp = 300;
@@ -129,7 +127,7 @@ function DrawLevelBasic()
 							enchufeBomb = true;
 						}
 					}
-					if (global.level >= 1)
+					if (global.level > 1)
 					{
 						if (irandom(oddsEnchufeMimic) == oddsEnchufeMimic) 
 						{

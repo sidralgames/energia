@@ -4,22 +4,46 @@ function DrawPotentialConnection()
 {
 	if instance_exists(inEnchufe)
 	{
-		if (inEnchufe) && (!inEnchufe.enchufeActive)
-		&& (inEnchufe.abierto) && (!inEnchufe.enchufeOvercharged)
+		if (inEnchufe.IsBoss)
 		{
-			if (radi > 17)
+			if (inEnchufe) && (!inEnchufe.enchufeActive)
+			&& (inEnchufe.abierto) && (!inEnchufe.enchufeOvercharged)
 			{
-				radi-=0.15;
+				if (radi > 17)
+				{
+					radi-=0.15;
+				}
+				else
+				{
+					radi = 21;
+				}
+				draw_set_color(c_white)
+				draw_circle(inEnchufe.x-lengthdir_x(30,inEnchufe.image_angle), inEnchufe.y-lengthdir_y(30,inEnchufe.image_angle), radi+0.5, true)
+				draw_circle(inEnchufe.x-lengthdir_x(30,inEnchufe.image_angle), inEnchufe.y-lengthdir_y(30,inEnchufe.image_angle), radi, true)
+				draw_circle(inEnchufe.x-lengthdir_x(30,inEnchufe.image_angle), inEnchufe.y-lengthdir_y(30,inEnchufe.image_angle), 17, true)
+				draw_circle(inEnchufe.x-lengthdir_x(30,inEnchufe.image_angle), inEnchufe.y-lengthdir_y(30,inEnchufe.image_angle), 17.3, true)
 			}
-			else
+			
+		}
+		else
+		{
+			if (inEnchufe) && (!inEnchufe.enchufeActive)
+			&& (inEnchufe.abierto) && (!inEnchufe.enchufeOvercharged)
 			{
-				radi = 21;
+				if (radi > 17)
+				{
+					radi-=0.15;
+				}
+				else
+				{
+					radi = 21;
+				}
+				draw_set_color(c_white)
+				draw_circle(inEnchufe.x, inEnchufe.y, radi+0.5, true)
+				draw_circle(inEnchufe.x, inEnchufe.y, radi, true)
+				draw_circle(inEnchufe.x, inEnchufe.y, 17, true)
+				draw_circle(inEnchufe.x, inEnchufe.y, 17.3, true)
 			}
-			draw_set_color(c_white)
-			draw_circle(inEnchufe.x, inEnchufe.y, radi+0.5, true)
-			draw_circle(inEnchufe.x, inEnchufe.y, radi, true)
-			draw_circle(inEnchufe.x, inEnchufe.y, 17, true)
-			draw_circle(inEnchufe.x, inEnchufe.y, 17.3, true)
 		}
 	}
 

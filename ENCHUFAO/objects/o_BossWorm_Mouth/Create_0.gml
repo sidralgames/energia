@@ -69,3 +69,4 @@ hasShield = irandom(10);
 contBreak = 0;
 canBreak = false;
 canBeDestroyed = false;
+hurts = true;
