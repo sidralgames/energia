@@ -161,6 +161,7 @@
     {"name":"s_enchufe_SHIELDS71","order":9,"path":"sprites/s_enchufe_SHIELDS71/s_enchufe_SHIELDS71.yy",},
     {"name":"AddUpgradeRecoverBullet","order":24,"path":"scripts/AddUpgradeRecoverBullet/AddUpgradeRecoverBullet.yy",},
     {"name":"obj_statistics","order":10,"path":"objects/obj_statistics/obj_statistics.yy",},
+    {"name":"o_chargerBossWorm","order":54,"path":"objects/o_chargerBossWorm/o_chargerBossWorm.yy",},
     {"name":"s_full","order":4,"path":"sprites/s_full/s_full.yy",},
     {"name":"DoCablePhysicsCharged","order":16,"path":"scripts/DoCablePhysicsCharged/DoCablePhysicsCharged.yy",},
     {"name":"s_bulletPlayer","order":7,"path":"sprites/s_bulletPlayer/s_bulletPlayer.yy",},

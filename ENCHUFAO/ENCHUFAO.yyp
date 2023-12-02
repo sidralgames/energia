@@ -213,6 +213,7 @@
     {"id":{"name":"AddUpgradeRecoverBullet","path":"scripts/AddUpgradeRecoverBullet/AddUpgradeRecoverBullet.yy",},},
     {"id":{"name":"s_spriteAMANO_VERDE","path":"sprites/s_spriteAMANO_VERDE/s_spriteAMANO_VERDE.yy",},},
     {"id":{"name":"obj_statistics","path":"objects/obj_statistics/obj_statistics.yy",},},
+    {"id":{"name":"o_chargerBossWorm","path":"objects/o_chargerBossWorm/o_chargerBossWorm.yy",},},
     {"id":{"name":"s_full","path":"sprites/s_full/s_full.yy",},},
     {"id":{"name":"DoCablePhysicsCharged","path":"scripts/DoCablePhysicsCharged/DoCablePhysicsCharged.yy",},},
     {"id":{"name":"s_bulletPlayer","path":"sprites/s_bulletPlayer/s_bulletPlayer.yy",},},

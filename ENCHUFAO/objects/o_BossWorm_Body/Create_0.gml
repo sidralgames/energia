@@ -42,7 +42,7 @@ contPlugBody = -1;
 inst = instance_nearest(x,y,o_BossWorm_Mouth)
 rope1.vertexAttachTo(first, inst);
 
-instAchor = instance_create_layer(x,y,"EnemiesHUE",o_chargerMouth)
+instAchor = instance_create_layer(x,y,"EnemiesHUE",o_chargerBossWorm)
 rope1.vertexAttachObject(last, instAchor,vertexAttachmentType.both);
 
 
