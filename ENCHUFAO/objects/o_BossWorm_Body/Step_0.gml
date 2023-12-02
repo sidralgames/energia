@@ -33,11 +33,16 @@ if instance_exists(inst)
 		countingN--;
 		if (countingN<=0)
 		{
-			for (var i=2; i<=_segments-1; i++)
+			for (var i=1; i<=_segments; i++)
 			{
 				rope1.vertexAttachObject(i, instBody[i],vertexAttachmentType.both);
 				instBody[i].hurts = false;
 				instBody[i].contHurt = 20;
+			}
+			
+			for (var i=1; i<=_segments; i++)
+			{
+				rope1.vertexAttachObject(i, instMetal[i],vertexAttachmentType.both);
 			}
 
 			rope1.vertexAttachObject(2, instEnchufe[0],vertexAttachmentType.both);

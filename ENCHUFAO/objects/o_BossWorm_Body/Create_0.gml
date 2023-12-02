@@ -4,7 +4,7 @@
 // You can create multiple systems with different physic properties
 mega = false;
 canCollide = false;
-fric = 0.8;
+fric = 0.9;
 grv = 0.0;
 verletSystem1 = new verletSystem(fric, grv);
 off = 0;
@@ -29,7 +29,7 @@ cableColor = gray;
 counting=false;
 countingNInitial=20
 countingN=countingNInitial;
-_sprite = s_BossWorm_Body_Metal;
+_sprite = s_BossWorm_Body;
 _segments = 12;
 rope1 = verletGroupCreateRopeTextured(verletSystem1, x, y, _sprite, _segments, 1, 10);
 
@@ -45,18 +45,41 @@ rope1.vertexAttachTo(first, inst);
 instAchor = instance_create_layer(x,y,"EnemiesHUE",o_chargerMouth)
 rope1.vertexAttachObject(last, instAchor,vertexAttachmentType.both);
 
-for (var i=2; i<=_segments-1; i++)
+
+
+for (var i=1; i<=_segments; i++)
+{
+	instMetal[i] = instance_create_layer(x,y,"EnemiesHUEsub",o_BossWorm_HitBox_Metal)
+	rope1.vertexAttachObject(i, instMetal[i],vertexAttachmentType.both);
+	instMetal[i].worm = inst;
+}
+
+for (var i=1; i<=_segments; i++)
 {
 	instBody[i] = instance_create_layer(x,y,"EnemiesHUEsub",o_BossWorm_HitBox)
 	rope1.vertexAttachObject(i, instBody[i],vertexAttachmentType.both);
 	instBody[i].worm = inst;
+	instBody[i].Metal = instMetal[i];
 }
 
 for (var i=0; i<4; i++)
 {
-	instEnchufe[i] = instance_create_layer(x,y,"EnemiesHUEsub",o_EnchufeBossWorm)
+	instEnchufe[i] = instance_create_layer(x,y,"EnemiesHUE",o_EnchufeBossWorm)
+	instEnchufe[i].enchufeNum = i;
 	instEnchufe[i].worm = inst;
 }
+
+instEnchufe[0].Metal1 = instMetal[1]
+instEnchufe[0].Metal2 = instMetal[3]
+
+instEnchufe[1].Metal1 = instMetal[4]
+instEnchufe[1].Metal2 = instMetal[6]
+
+instEnchufe[2].Metal1 = instMetal[7]
+instEnchufe[2].Metal2 = instMetal[9]
+
+instEnchufe[3].Metal1 = instMetal[10]
+instEnchufe[3].Metal2 = instMetal[12]
 
 rope1.vertexAttachObject(2, instEnchufe[0],vertexAttachmentType.both);
 rope1.vertexAttachObject(5, instEnchufe[1],vertexAttachmentType.both);

@@ -10,16 +10,16 @@ function BossWormChasingLogic()
 		contCanPlug--;
 	}
 		
-	if (inEnchufe) && (contCanPlug<=0)
-	{	
-		enchufe = inEnchufe;
-		if (!enchufe.occupied) && (!plugged) && (!enchufe.enchufeBomb)
-		{
-			enchufe.occupied = true;
-			plugging = true;
-			contPlugged = random_range(contPluggedMin, contPluggedMax)
-		}
-	}
+	//if (inEnchufe) && (contCanPlug<=0)
+	//{	
+	//	enchufe = inEnchufe;
+	//	if (!enchufe.occupied) && (!plugged) && (!enchufe.enchufeBomb)
+	//	{
+	//		enchufe.occupied = true;
+	//		plugging = true;
+	//		contPlugged = random_range(contPluggedMin, contPluggedMax)
+	//	}
+	//}
 		
 	if (plugged)
 	{
@@ -47,8 +47,8 @@ function BossWormChasingLogic()
 			direction += sign(dsin(a - direction)) * (precision * global.relativeSpeed);
 			_angle = direction;
 			speed = enemySpeed * min(1, global.relativeSpeed+0.2);
-			enchufe._hpush -= lengthdir_x(0.1,a);
-			enchufe._vpush -= lengthdir_y(0.1,a);
+			enchufe._hpush -= lengthdir_x(0.2,a);
+			enchufe._vpush -= lengthdir_y(0.2,a);
 		}
 		
 		BossWorm_PluggedAttack();

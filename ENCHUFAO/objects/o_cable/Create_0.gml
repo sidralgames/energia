@@ -3,6 +3,7 @@
 // Create a new verlet system
 // You can create multiple systems with different physic properties
 _alpha = 1;
+haveToUpdate = false;
 canCollide = false;
 fric = 0.85;
 verletSystem1 = new verletSystem(fric, 0.0);

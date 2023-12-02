@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited();
+global.maxWorms+=1;
+
 leavesTrail = false;
 isBossWorm = true;
 thisEnemyBounce = false;
@@ -28,8 +30,8 @@ bnc = 0.5;
 cont = 500;
 image_speed = 0.5;
 
-enemySpeedInitial = random_range(1.2,1.6);
-enemySpeedCrunch = 1;
+enemySpeedInitial = random_range(2.2,2.3);
+enemySpeedCrunch = 1.75;
 enemySpeed = enemySpeedInitial;
 
 precision= random_range(0.5,1);
@@ -63,7 +65,7 @@ oddsBattery = 5;
 
 
 cable = instance_create_layer(x,y,"EnemiesHUEsub2", o_BossWorm_Body);
-_hp = 15 + cable._segments*6;
+_hp = 15 + cable._segments*3;//6
 hasShield = irandom(10);
 
 contBreak = 0;

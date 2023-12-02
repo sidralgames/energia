@@ -17,3 +17,5 @@ if (verletSystemExists(verletSystem1))
 }
 
 draw_set_alpha(1);
+
+//draw_text(x,y-20, string(haveToUpdate))

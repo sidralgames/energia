@@ -6,15 +6,15 @@ function BossWormMoveAndBreak()
 	{
 		if (global.haveInvisibiltyCloak && global.invisibleCloak = true)
 		{
-			diffX = choose(random_range(-250, 250));
-			diffY = choose(random_range(-250, 250));
+			diffX = choose(random_range(-550, 550));
+			diffY = choose(random_range(-550, 550));
 			a = point_direction(x, y, o_playerShip.x + diffX, o_playerShip.y + diffY);
 		}
 		else
 		{
-			diffX = choose(random_range(-150, 150));
-			diffY = choose(random_range(-150, 150));
-			a = point_direction(x, y, o_playerShip.x + diffX, o_playerShip.y + diffY);
+			diffX = choose(random_range(150, room_width-150));
+			diffY = choose(random_range(150, room_height-150));
+			a = point_direction(x, y, diffX, diffY);
 		}
 		alarm[4] = random_range(30, 90)
 	}
@@ -89,7 +89,7 @@ function BossWormMoveAndBreak()
 					met = instance_create_layer(_x2 - lengthdir_x(5, direction), _y2 - lengthdir_y(5, direction), "Meteors", o_meteor)
 					if instance_exists(met)
 					{
-						screenShake(1, 5)
+						//screenShake(1, 5)
 						explo = instance_create(_x2, _y2, o_explo3)
 						explo.image_xscale = 0.5;
 						explo.image_yscale = 0.5;
@@ -117,7 +117,7 @@ function BossWormMoveAndBreak()
 					met = instance_create_layer(_x3 - lengthdir_x(5, direction), _y3 - lengthdir_y(5, direction), "Meteors", o_meteor)
 					if instance_exists(met)
 					{
-						screenShake(1, 5)
+						//screenShake(1, 5)
 						explo = instance_create(_x3, _y3, o_explo3)
 						explo.image_xscale = 0.5;
 						explo.image_yscale = 0.5;

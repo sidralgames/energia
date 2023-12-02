@@ -9,16 +9,16 @@ if instance_exists(inst)
 
 }
 
-if (global.plugging)
+if (global.plugging) && instance_exists(o_playerShip)
 {
 	global.plugging = false;
-	enchufe = instance_nearest(x,y,o_enchufe_Father);
+	enchufe = o_playerShip.enchufe;
 	
 	if instance_exists(enchufe)
 	{
 		if (enchufe.IsBoss)
 		{
-			rope1.vertexAttachTo(last, enchufe,lengthdir_x(-30,enchufe.image_angle),lengthdir_y(30,enchufe.image_angle))
+			haveToUpdate = true;
 		}
 		else
 		{
@@ -28,11 +28,17 @@ if (global.plugging)
 	}
 }
 
+
 if (global.unPlugging)
 {
-
+	if (haveToUpdate = true)
+	{
+		rope1.vertexDeAttachTo(last);
+		haveToUpdate = false;
+		rope1.vertexDeAttachTo(last);
+	}
 	global.unPlugging = false;
-	enchufe = instance_nearest(x,y,o_enchufe_Father);
+	enchufe = o_playerShip.enchufe
 	if instance_exists(enchufe)
 	{
 		rope1.vertexDeAttachTo(last)
@@ -41,7 +47,11 @@ if (global.unPlugging)
 }
 
 
-
+if (haveToUpdate = true)
+{
+	rope1.vertexDeAttachTo(last);
+	rope1.vertexAttachTo(last, enchufe,-lengthdir_x(30,enchufe.image_angle),-lengthdir_y(30,enchufe.image_angle))
+}
 if (global.pluggingShip)
 {
 	global.pluggingShip = false;
