@@ -62,6 +62,8 @@ _tilemap_id = layer_tilemap_get_id("Tiles");
 isMegaEnemy = false;
 isMega = irandom(5);
 oddsBattery = 5;
+boss = true;
+isImmortal = true;
 
 
 cable = instance_create_layer(x,y,"EnemiesHUEsub2", o_BossWorm_Body);
