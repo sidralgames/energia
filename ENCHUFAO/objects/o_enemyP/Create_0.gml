@@ -4,6 +4,7 @@ enemyIsWorm = false;
 leavesTrail = true;
 thisEnemyBounce = true;
 isWormHitBox = false;
+isWormHitBoxBoss = false;
 hurts = true;
 canBeDestroyed = true;
 cable = -1;

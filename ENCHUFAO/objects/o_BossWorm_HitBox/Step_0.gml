@@ -36,9 +36,10 @@ if (burned = true)
 	{
 		contBurned = contBurnedMax;
 		burnFlash = 1;
-		if instance_exists(worm)
+		if instance_exists(worm) && (_hp > 0) && (Metal.isVisible = false)
 		{
-			worm._hp-=1;
+			_hp-=1;
+			global.BossWormHP-=1;
 		}
 	}
 }
@@ -63,9 +64,10 @@ if (electrocutated = true)
 	{
 		contElectro = contBurnedMax;
 		electroFlash = 1;
-		if instance_exists(worm)
+		if instance_exists(worm) && (_hp > 0) && (Metal.isVisible = false)
 		{
-			worm._hp-=1;
+			_hp-=1;
+			global.BossWormHP-=1;
 		}
 	}
 }
@@ -78,6 +80,12 @@ if (hurts = false)
 	{
 		hurts = true;
 	}
+}
+
+if (Metal.isVisible = false)
+{
+	canBeDamaged = true;
+	
 }
 
 if (global.inScreen)
@@ -120,7 +128,7 @@ if (global.inScreen)
 	}
 }
 
-if !instance_exists(worm) && (dying = false)
+if (global.BossWormHP <= 0) && (dying = false)
 {
 	dying = true;
 	alarm[0] = random_range(3, 10)

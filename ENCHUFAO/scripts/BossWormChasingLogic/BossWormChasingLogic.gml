@@ -3,6 +3,11 @@
 function BossWormChasingLogic()
 {
 	BossWormMoveAndBreak();
+	
+	//if !tile_meeting(x+hspeed, y+vspeed, "Tiles")
+	//{
+	//	EnemyMouthFree_PluggedAttack();
+	//}
 		
 	inEnchufe = collision_circle(x,y,30,o_enchufeStandard_Father,false,true)
 	if contCanPlug >0
@@ -21,37 +26,37 @@ function BossWormChasingLogic()
 	//	}
 	//}
 		
-	if (plugged)
-	{
-		contPlugged--;
+	//if (plugged)
+	//{
+	//	contPlugged--;
 			
-		if (contPlugged<=0)
-		{
-			plugged = false;
-			cable.contPlugBody = 50;
-			enchufe.occupied = false;
-			enchufe.enchufeOvercharged = true;
-			enchufe.contOvercharged = 250;
-			contCanPlug = 120;
-			contPlugged = random_range(contPluggedMin, contPluggedMax)
-		}
+	//	if (contPlugged<=0)
+	//	{
+	//		plugged = false;
+	//		cable.contPlugBody = 50;
+	//		enchufe.occupied = false;
+	//		enchufe.enchufeOvercharged = true;
+	//		enchufe.contOvercharged = 250;
+	//		contCanPlug = 120;
+	//		contPlugged = random_range(contPluggedMin, contPluggedMax)
+	//	}
 	
-		if (point_distance(x,y,enchufe.x,enchufe.y) <= cable._segments*17)
-		{
-			BossWormMoveAndBreak()
-		}
-		else
-		{
-			a = point_direction(x,y,enchufe.x,enchufe.y)
+	//	if (point_distance(x,y,enchufe.x,enchufe.y) <= cable._segments*17)
+	//	{
+	//		BossWormMoveAndBreak()
+	//	}
+	//	else
+	//	{
+	//		a = point_direction(x,y,enchufe.x,enchufe.y)
 
-			direction += sign(dsin(a - direction)) * (precision * global.relativeSpeed);
-			_angle = direction;
-			speed = enemySpeed * min(1, global.relativeSpeed+0.2);
-			enchufe._hpush -= lengthdir_x(0.2,a);
-			enchufe._vpush -= lengthdir_y(0.2,a);
-		}
+	//		direction += sign(dsin(a - direction)) * (precision * global.relativeSpeed);
+	//		_angle = direction;
+	//		speed = enemySpeed * min(1, global.relativeSpeed+0.2);
+	//		enchufe._hpush -= lengthdir_x(0.2,a);
+	//		enchufe._vpush -= lengthdir_y(0.2,a);
+	//	}
 		
-		BossWorm_PluggedAttack();
+	//	BossWorm_PluggedAttack();
 			
-	}
+	//}
 }

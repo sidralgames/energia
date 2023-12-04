@@ -54,3 +54,9 @@ speed = bulletSpeed * global.relativeSpeed;
 //	part_particles_create(global.balaMouth_sys, x, y, global.balaMouth , 1);
 //	contPart = 2;
 //}
+
+if (x < 0) || (x > room_width)
+|| (y < 0) || (y > room_height)
+{
+	instance_destroy();
+}

@@ -1,7 +1,14 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
 
-draw_self();
+if (MyHitBox._hp <=0)
+{
+	draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,c_gray,image_alpha);
+}
+else
+{
+	draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+}
 if instance_exists(o_playerShip)
 {
 	if  (charging) && (o_playerShip.pluggedTimer < 200)

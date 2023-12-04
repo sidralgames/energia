@@ -60,7 +60,10 @@ for (var i=1; i<=_segments; i++)
 	rope1.vertexAttachObject(i, instBody[i],vertexAttachmentType.both);
 	instBody[i].worm = inst;
 	instBody[i].Metal = instMetal[i];
+
 }
+
+
 
 for (var i=0; i<4; i++)
 {
@@ -71,15 +74,28 @@ for (var i=0; i<4; i++)
 
 instEnchufe[0].Metal1 = instMetal[1]
 instEnchufe[0].Metal2 = instMetal[3]
+instEnchufe[0].MyMetal = instMetal[2]
+instEnchufe[0].MyHitBox = instBody[2]
+
 
 instEnchufe[1].Metal1 = instMetal[4]
 instEnchufe[1].Metal2 = instMetal[6]
+instEnchufe[1].MyMetal = instMetal[5]
+instEnchufe[1].MyHitBox = instBody[5]
+
+
 
 instEnchufe[2].Metal1 = instMetal[7]
 instEnchufe[2].Metal2 = instMetal[9]
+instEnchufe[2].MyMetal = instMetal[8]
+instEnchufe[2].MyHitBox = instBody[8]
+
 
 instEnchufe[3].Metal1 = instMetal[10]
 instEnchufe[3].Metal2 = instMetal[12]
+instEnchufe[3].MyMetal = instMetal[11]
+instEnchufe[3].MyHitBox = instBody[11]
+
 
 rope1.vertexAttachObject(2, instEnchufe[0],vertexAttachmentType.both);
 rope1.vertexAttachObject(5, instEnchufe[1],vertexAttachmentType.both);

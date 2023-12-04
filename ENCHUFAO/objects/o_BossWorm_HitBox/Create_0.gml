@@ -17,4 +17,10 @@ slowMoPickUps = choose(3,4);
 die = false;
 state = -1;
 isWormHitBox = true;
+isWormHitBoxBoss = true;
 dying = false;
+canBeDamaged = false;
+
+
+_hp = 25;
+global.BossWormHPMax+=_hp;

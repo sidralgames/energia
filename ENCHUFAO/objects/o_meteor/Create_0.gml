@@ -23,3 +23,4 @@ if tile_meeting(x,y,"Tiles")
 {
 	instance_destroy();
 }
+contDie = 300;

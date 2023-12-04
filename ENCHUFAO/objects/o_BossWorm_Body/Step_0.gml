@@ -4,6 +4,7 @@
 // You can also simulate individual groups
 if instance_exists(inst)
 {
+	
 	if (inst.plugging)
 	{
 		fixing = false;
@@ -56,7 +57,7 @@ if instance_exists(inst)
 	}
 	
 }
-if instance_exists(inst) //&& instance_exists(instAchor)
+if (global.BossWormHP > 0) //&& instance_exists(instAchor)
 {
 	if (verletSystemExists(verletSystem1))
 	{

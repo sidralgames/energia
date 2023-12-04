@@ -2,7 +2,8 @@
 // You can write your code in this editor
 full = false;
 
-
+global.BossWormHPMax = 0;
+global.BossWormHP = 10;
 
 //-------COLORS--------//
 global.brightRed = make_colour_rgb(255,0,68);

@@ -219,6 +219,8 @@ if (!isPaused)
 	}
 	
 	BossGarbanzoUI();
+	
+	BossWormUI();
 
 
 	if (alarm[2]>0)

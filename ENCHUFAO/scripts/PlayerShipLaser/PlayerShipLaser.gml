@@ -117,11 +117,20 @@ function PlayerShipLaser(argument0)
 			{
 				if (enemy.isWormHitBox)
 				{
-					with(enemy)
+					if (enemy.isWormHitBoxBoss) && (enemy._hp > 0) && (enemy.canBeDamaged = true)
 					{
-						if instance_exists(worm)
+						enemy._hp -= (0.25+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
+						global.BossWormHP -= (0.25+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
+						
+					}
+					else
+					{
+						with(enemy)
 						{
-							worm._hp -= (0.25+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
+							if instance_exists(worm)
+							{
+								worm._hp -= (0.25+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
+							}
 						}
 					}
 				}

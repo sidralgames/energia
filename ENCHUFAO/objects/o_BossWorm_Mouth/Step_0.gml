@@ -2,6 +2,14 @@
 // You can write your code in this editor
 StatusConditionEnemy();
 
+if (hpCalculated = false)
+{
+	hpCalculated = true;
+	
+	global.BossWormHP = global.BossWormHPMax 
+	_hp = global.BossWormHP;
+}
+
 if (flashAlpha > 0) 
 {
 	flashAlpha -= 0.09;

@@ -44,7 +44,8 @@ _vpush = lerp(_vpush, 0 , 0.001);
 
 _angle += _hpush*3*global.relativeSpeed;
 
-if (hp <= 0)
+if (hp <= 0) || (contDie <=0)
 {
 	instance_destroy();
 }
+contDie --;

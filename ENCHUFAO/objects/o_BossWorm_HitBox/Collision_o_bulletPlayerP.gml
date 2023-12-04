@@ -12,20 +12,23 @@
 //				state = ENEMYSTATE.CHASING;
 //			}
 //}
-if instance_exists(worm) & (hurts) && (Metal.isVisible = false)
+
+if instance_exists(worm) & (hurts) && (Metal.isVisible = false) && (_hp > 0)
 {
 	if (global.piercingShot)
 	{
 		if (ds_list_find_index(other.collisionIds, id) == -1)
 		{
-			worm._hp -= (global.superShot+global.amplifyPowerAmmo)*global.damageDealt; //--- DO DAMAGE TO ENEMY ---//
+			_hp -= (global.superShot+global.amplifyPowerAmmo)*global.damageDealt; //--- DO DAMAGE TO ENEMY ---//
 			ds_list_add(other.collisionIds, id);
 			other.hp -= 1; 
+			global.BossWormHP-= (global.superShot+global.amplifyPowerAmmo)*global.damageDealt;
 		}
 	}
 	else 
 	{
-		worm._hp -= (global.superShot+global.amplifyPowerAmmo)*global.damageDealt; //--- DO DAMAGE TO ENEMY ---//
+		_hp -= (global.superShot+global.amplifyPowerAmmo)*global.damageDealt; //--- DO DAMAGE TO ENEMY ---//
+		global.BossWormHP-= (global.superShot+global.amplifyPowerAmmo)*global.damageDealt;
 		instance_destroy(other);
 		RecoverBullet();
 	}
@@ -61,9 +64,9 @@ if instance_exists(worm) & (hurts) && (Metal.isVisible = false)
 		//--- BURN ---//
 	if (global.bulletsBurnIsOn)
 	{
-		if (worm.isShield == false) && (worm.burned == false)
+		if (isShield == false) && (burned == false)
 		{
-			worm.burned = true;	
+			burned = true;	
 		}
 	}
 	

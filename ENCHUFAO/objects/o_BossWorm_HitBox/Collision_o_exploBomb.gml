@@ -1,8 +1,18 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-if instance_exists(worm) && (Metal.isVisible = false)
+if instance_exists(worm) && (Metal.isVisible = false) && (_hp > 0)
 {
-	worm._hp -= 5*global.damageDealt;
+	if (1*global.damageDealt > _hp )
+	{
+		global.BossWormHP -= _hp;
+		_hp = 0;
+		
+	} else {
+		global.BossWormHP -= 1*global.damageDealt;
+		_hp -= 1*global.damageDealt;
+	}
+	
+	
 }
 
 
