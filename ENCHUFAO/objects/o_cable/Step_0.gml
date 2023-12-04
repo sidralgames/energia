@@ -49,7 +49,7 @@ if (global.unPlugging)
 
 if (haveToUpdate = true)
 {
-	SetHUE();
+	//SetHUE();
 	rope1.vertexDeAttachTo(last);
 	rope1.vertexAttachTo(last, enchufe,-lengthdir_x(30,enchufe.image_angle),-lengthdir_y(30,enchufe.image_angle))
 }

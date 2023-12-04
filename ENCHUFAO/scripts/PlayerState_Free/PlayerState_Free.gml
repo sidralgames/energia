@@ -43,16 +43,18 @@ function PlayerState_Free()
 		if (pluggedTimer >= 0)
 		{
 			pluggedTimer-=0.5;
-		};
-		
-		if (global.energy > 0)
-		{
-				MoveShip()	
 		}
-		else
+		if instance_exists(o_cable)
 		{
-			_hpush = clamp(_hpush, -spaceSpeed, spaceSpeed);
-			_vpush = clamp(_vpush, -spaceSpeed, spaceSpeed);	
+			if (global.energy > 0) || (o_cable.haveToUpdate == false)
+			{
+					MoveShip()	
+			}
+			else
+			{
+				_hpush = clamp(_hpush, -spaceSpeed, spaceSpeed);
+				_vpush = clamp(_vpush, -spaceSpeed, spaceSpeed);	
+			}
 		}
 	}
 	

@@ -26,22 +26,35 @@ function BossWormMoveAndBreak()
 	_x = x + lengthdir_x(30, direction);
 	_y = y + lengthdir_y(30, direction);
 
-	_x2 = x + lengthdir_x(30, direction + 60)
-	_y2 = y + lengthdir_y(30, direction + 60)
+	_x2 = x + lengthdir_x(50, direction + 60)
+	_y2 = y + lengthdir_y(50, direction + 60)
 
-	_x3 = x + lengthdir_x(30, direction - 60)
-	_y3 = y + lengthdir_y(30, direction - 60)
+	_x3 = x + lengthdir_x(50, direction - 60)
+	_y3 = y + lengthdir_y(50, direction - 60)
 
-
-	if contBreak >= 0
+	if instance_exists(o_cable)
 	{
-		enemySpeed = lerp(enemySpeed, enemySpeedCrunch, 0.08);
-		contBreak--;
-	}
-	if contBreak <= 0
-	{
-		enemySpeed = lerp(enemySpeed, enemySpeedInitial, 0.05);
-		canBreak = true;
+		if (o_cable.haveToUpdate == true)
+		{
+			precision = precisionRide;
+			enemySpeed = lerp(enemySpeed, enemySpeedRide, 0.09);
+		}
+		else
+		{	
+			precision = precisionInitial;
+			
+			if (contBreak >= 0)
+			{
+				enemySpeed = lerp(enemySpeed, enemySpeedCrunch, 0.08);
+				contBreak--;
+			}
+	
+			if (contBreak <= 0)
+			{
+				enemySpeed = lerp(enemySpeed, enemySpeedInitial, 0.05);
+				canBreak = true;
+			}
+		}
 	}
 
 	if (global.inScreen)
@@ -66,8 +79,8 @@ function BossWormMoveAndBreak()
 						explo.image_xscale = 0.5;
 						explo.image_yscale = 0.5;
 						explo.image_alpha = 0.8;
-						met._hpush = lengthdir_x(velo, direction)
-						met._vpush = lengthdir_y(velo, direction)
+						met._hpush = lengthdir_x(velo, random(360))
+						met._vpush = lengthdir_y(velo, random(360))
 					}
 					canBreak = false;
 					contBreak = 20;
@@ -94,8 +107,8 @@ function BossWormMoveAndBreak()
 						explo.image_xscale = 0.5;
 						explo.image_yscale = 0.5;
 						explo.image_alpha = 0.8;
-						met._hpush = lengthdir_x(velo, direction)
-						met._vpush = lengthdir_y(velo, direction)
+						met._hpush = lengthdir_x(velo, random(360))
+						met._vpush = lengthdir_y(velo, random(360))
 					}
 					canBreak = false;
 					contBreak = 20;
@@ -122,8 +135,8 @@ function BossWormMoveAndBreak()
 						explo.image_xscale = 0.5;
 						explo.image_yscale = 0.5;
 						explo.image_alpha = 0.8;
-						met._hpush = lengthdir_x(velo, direction)
-						met._vpush = lengthdir_y(velo, direction)
+						met._hpush = lengthdir_x(velo, random(360))
+						met._vpush = lengthdir_y(velo, random(360))
 					}
 					canBreak = false;
 					contBreak = 20;

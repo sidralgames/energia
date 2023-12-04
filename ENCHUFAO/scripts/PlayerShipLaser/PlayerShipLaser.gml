@@ -138,7 +138,7 @@ function PlayerShipLaser(argument0)
 		
 			if (global.laserBurnEnemies)
 			{
-				if (enemy.isShield == false) && (enemy.burned == false)
+				if (enemy.isShield == false) && (enemy.burned == false) && (enemy.isImmortal == false)
 				{
 					enemy.burned = true;	
 				}

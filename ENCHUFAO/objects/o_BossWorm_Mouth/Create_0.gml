@@ -29,12 +29,13 @@ bnc = 0.5;
 
 cont = 500;
 image_speed = 0.5;
-
+enemySpeedRide = 3.5;
 enemySpeedInitial = random_range(2.2,2.3);
 enemySpeedCrunch = 1.75;
 enemySpeed = enemySpeedInitial;
-
-precision= random_range(0.5,1);
+precisionInitial= 0.75;
+precisionRide= 1;
+precision = precisionInitial;
 speed=random(1)+2;
 
 state = ENEMYSTATE.CHASING;

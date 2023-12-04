@@ -110,8 +110,8 @@ if (global.inScreen)
 				explo.image_xscale = 0.5;
 				explo.image_yscale = 0.5;
 				explo.image_alpha = 0.8;
-				met._hpush = lengthdir_x(velo,direction)
-				met._vpush = lengthdir_y(velo,direction)
+				met._hpush = lengthdir_x(velo,random(360))
+				met._vpush = lengthdir_y(velo,random(360))
 			}
 			
 			canBreak = false;

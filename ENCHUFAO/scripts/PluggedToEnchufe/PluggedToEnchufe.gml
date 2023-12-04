@@ -58,6 +58,12 @@ function PluggedToEnchufe()
 			enchufe._hpush -= lengthdir_x(0.05,dir)
 			enchufe._vpush -= lengthdir_y(0.05,dir)
 		}
+		else if (enchufe.IsBoss)
+		{
+			_hpush = lengthdir_x(2.25,dir)
+			_vpush = lengthdir_y(2.25,dir)
+		
+		}
 		else
 		{
 			_hpush = lengthdir_x(2,dir)
@@ -90,6 +96,14 @@ function PluggedToEnchufe()
 			instance_destroy(o_partBalaP)
 			instance_create_layer(-100,-100, "Part",o_partBalaP);
 			partChanged = true;
+		}
+	}
+	
+	if (o_cable.haveToUpdate)
+	{
+		if (point_distance(x,y,global.xToPlug, global.yToPlug) > 200)
+		{
+			Unplug();
 		}
 	}
 			

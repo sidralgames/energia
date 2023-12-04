@@ -13,7 +13,7 @@ if (key_laser) && !(laserActive)
 	}
 	if (laserActive) 
 	{
-		
+		draw_set_alpha(0.01)
 		if (drawflash=true)
 		{
 			drawflashCont --;
