@@ -1,5 +1,5 @@
 /// @description Draw the simulation
-if (global.inScreen)
+if (inScreen)
 {
 	if (verletSystemExists(verletSystem1)) 
 	{

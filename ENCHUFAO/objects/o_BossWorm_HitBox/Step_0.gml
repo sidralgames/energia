@@ -82,13 +82,19 @@ if (hurts = false)
 	}
 }
 
-if (Metal.isVisible = false)
+if instance_exists(Metal)
 {
-	canBeDamaged = true;
+	if (Metal.isVisible = false)
+	{
+		canBeDamaged = true;
 	
+	}
 }
 
-if (global.inScreen)
+inScreen =  (x > __view_get( e__VW.XView, 0 )-50 && x < __view_get( e__VW.XView, 0 )+710) &&
+(y > __view_get( e__VW.YView, 0 )-50 && y < __view_get( e__VW.YView, 0 )+410)
+
+if (inScreen)
 {
 	if contBreak>= 0
 	{
@@ -107,7 +113,7 @@ if (global.inScreen)
 			tilemap_set_at_pixel(_tilemap_id, 0, x, y);
 			
 			global.changingTiles = true;
-			velo = random_range(2,2.5);
+			velo = random_range(1,1.5);
 			global.wallgrid_[# x/32, y/32] = FLOOR
 			mp_grid_clear_rectangle(gridRoom1, x-15,y-15,x,y)
 			
@@ -137,7 +143,7 @@ if (global.BossWormHP <= 0) && (dying = false)
 if (dying = true) && (alarm[0] <=0)
 {
 	global.XPpoints +=5;
-	
+	screenShake(3,10);
 	explo = instance_create(x,y,o_explo2);
 	explo.image_xscale = 0.5;
 	explo.image_yscale = 0.5;

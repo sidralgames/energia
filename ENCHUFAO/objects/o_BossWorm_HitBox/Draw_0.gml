@@ -1,24 +1,26 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+gray = make_color_rgb(58,68,102);
 
 if (_hp <=0)
 {
-	draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,_angle,c_gray,image_alpha);
+	draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,_angle,gray,image_alpha);
 }
 else
 {
 	draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,_angle,image_blend,image_alpha)
-}
-if flashAlpha>0
-{
-	shader_set(shFlash)
-	draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,_angle,c_white,flashAlpha)
-	shader_reset()
+	
+	if (flashAlpha>0)
+	{
+		shader_set(shFlash)
+		draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,_angle,c_white,flashAlpha)
+		shader_reset()
+	}
 }
 
 if instance_exists(Metal)
 {
-	if (Metal.isVisible = false)
+	if (Metal.isVisible = false) && (_hp >0)
 	{
 		if (burned)
 		{
@@ -46,4 +48,4 @@ if instance_exists(Metal)
 	}
 }
 
-draw_text(x,y,string(_hp))
+//draw_text(x+30,y+30,string(_hp))

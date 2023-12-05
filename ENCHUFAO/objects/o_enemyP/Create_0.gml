@@ -12,8 +12,11 @@ contSearchMax = 5
 contSearch = contSearchMax;
 isSniper = false;
 
+affectedByLaserTrap = true;
+
 haveAShield = false;
 canHaveAShield = true;
+
 
 
 alertDist = 150;
@@ -89,3 +92,4 @@ flashAlpha = 0;
 
 global.totalEnemiesOnScreen+=1;
 
+WormBoss = false;

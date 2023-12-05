@@ -4,11 +4,19 @@ image_speed = 0.5;
 canCreate = false;
 randomize();
 global.maxWorms = 0;
-switch(global.level)
+
+if (room = Sala_BossWorm)
 {
-	case 1: EnemiesToSpawnLVL1(); break;
-	case 3: EnemiesToSpawnLVL3(); break;
-	case 5: EnemiesToSpawnLVL5(); break;
+	EnemiesToSpawn_WormBossRoom();
+}
+else
+{
+	switch(global.level)
+	{
+		case 1: EnemiesToSpawnLVL1(); break;
+		case 3: EnemiesToSpawnLVL3(); break;
+		case 5: EnemiesToSpawnLVL5(); break;
+	}
 }
 
 

@@ -53,7 +53,7 @@ if (canShot)
 				bullet = collision_rectangle(x-5,y,x+5, y-16-long*image_yscale, o_bulletFather,false, true)
 				if (enemy)
 				{
-					if (enemy.isImmortal = false)
+					if (enemy.affectedByLaserTrap = true)
 					{
 						enemy._hp = 0;
 					}
@@ -105,7 +105,7 @@ if (canShot)
 				bullet = collision_rectangle(x+2,y+2,x-16-long,y-2,o_bulletFather,false,true)
 				if (enemy)
 				{
-					if (enemy.isImmortal = false)
+					if (enemy.affectedByLaserTrap = true)
 					{
 						enemy._hp = 0;
 					}

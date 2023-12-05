@@ -6,7 +6,7 @@
 // You can create multiple systems with different physic properties
 
 canCollide = true;
-
+inScreen = 0;
 verletSystem1 = new verletSystem(random_range(0.5,0.7), random_range(0.6,0.8));
 
 var _wall_map_id = layer_tilemap_get_id("Tiles");

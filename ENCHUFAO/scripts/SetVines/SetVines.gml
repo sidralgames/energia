@@ -2,7 +2,14 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SetVines()
 {
-	oddsVine_s = 5;
+	if (room = Sala_BossWorm)
+	{
+		oddsVine_s = 2;
+	}
+	else
+	{
+		oddsVine_s = 5;
+	}
 	
 for ( var yyW = 0; yyW < height_; yyW++) 
 {

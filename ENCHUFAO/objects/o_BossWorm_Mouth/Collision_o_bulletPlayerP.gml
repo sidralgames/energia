@@ -13,9 +13,11 @@ if (state = ENEMYSTATE.WAITING)
 			}
 }
 
-//BulletDamage();
-
-//flashAlpha = 1;
+if (onlyHead)
+{
+	BulletDamage();
+	flashAlpha = 1;
+}
 
 
 

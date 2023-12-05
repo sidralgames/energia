@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+affectedByLaserTrap = true;
+
 thisEnemyBounce = false;
 isWormHitBox = false;
 hurts = true;

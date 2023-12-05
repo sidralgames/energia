@@ -6,7 +6,8 @@ if (Metal.isVisible = false) && (_hp > 0)
 		global.BossWormHP -= _hp;
 		_hp = 0;
 	} 
-	else {
+	else 
+	{
 		_hp -= 5+(global.superShot+global.amplifyPowerAmmo)*global.damageDealt;
 		global.BossWormHP -= 5+(global.superShot+global.amplifyPowerAmmo)*global.damageDealt;
 	}

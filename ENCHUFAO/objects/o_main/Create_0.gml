@@ -9,8 +9,6 @@ global.BossWormHP = 10;
 global.brightRed = make_colour_rgb(255,0,68);
 global.yellow = make_color_rgb(254,231, 97);
 
-global.inScreen = (x > __view_get( e__VW.XView, 0 )-150 && x < __view_get( e__VW.XView, 0 )+810)
-&& (y > __view_get( e__VW.YView, 0 )-150 && y < __view_get( e__VW.YView, 0 )+510);
 
 //-------------MEGA UPGRADES-----------------//
 

@@ -2,13 +2,14 @@
 
 // Create a new verlet system
 // You can create multiple systems with different physic properties
+inScreen = 0;
+
 mega = false;
 canCollide = false;
 fric = 1;
 grv = 0.0;
 verletSystem1 = new verletSystem(fric, grv);
 off = 0;
-
 greenO = make_color_rgb(99,199,77)
 green = make_color_rgb(108,242,79)
 red = make_color_rgb(228,59,68)

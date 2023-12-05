@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(room = Sala_0) || (room = Sala_SecondBoss)
+if(room = Sala_0) || (room = Sala_SecondBoss) || (room = Sala_BossWorm)
 {
 	//--- TURRET ---//
 	if !collision_circle(x,y,18,o_wall,false,true)

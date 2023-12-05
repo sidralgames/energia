@@ -19,3 +19,4 @@ state = -1;
 isWormHitBox = true;
 dying = false;
 isVisible = true;
+affectedByLaserTrap = false;

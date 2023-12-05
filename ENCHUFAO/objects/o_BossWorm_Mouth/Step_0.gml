@@ -48,6 +48,12 @@ if (_hp <= 0)
 	
 	if instance_exists(explo)
 	{
+		instance_create(x-10,y,o_exploBomb);
+		instance_create(x,y-20,o_exploBomb);
+		instance_create(x+10,y,o_exploBomb);
+		instance_create_layer(x,y,"Enemies", o_enemyMini_PostBoss);
+		enchufeFinal = instance_create_layer(x,y,"Enchufes", o_enchufe_Final)
+		enchufeFinal.abierto = true;
 		instance_destroy();
 	}
 }

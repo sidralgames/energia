@@ -20,7 +20,7 @@ isWormHitBox = true;
 isWormHitBoxBoss = true;
 dying = false;
 canBeDamaged = false;
+affectedByLaserTrap = false;
 
-
-_hp = 25;
+_hp = 10;
 global.BossWormHPMax+=_hp;

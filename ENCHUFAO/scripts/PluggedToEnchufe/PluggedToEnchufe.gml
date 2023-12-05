@@ -60,8 +60,8 @@ function PluggedToEnchufe()
 		}
 		else if (enchufe.IsBoss)
 		{
-			_hpush = lengthdir_x(2.25,dir)
-			_vpush = lengthdir_y(2.25,dir)
+			_hpush = lengthdir_x(3.25,dir)
+			_vpush = lengthdir_y(3.25,dir)
 		
 		}
 		else

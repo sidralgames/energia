@@ -79,7 +79,18 @@ function PlayerShipLaser(argument0)
 			boss.hp -= (0.25+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
 			boss.flashAlpha = 1;
 			boss.burned = true;
-
+		}
+	}
+	
+	bossWormHead = collision_line(x,y,x+lengthdir_x(maxLenght_+20, argument0+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,argument0+random_range(2,-2)), o_BossWorm_Mouth,false, true)
+	if (bossWormHead)
+	{
+		screenShake(4,10);
+		if (bossWormHead.onlyHead == true) 
+		{
+			bossWormHead._hp -= (0.25+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
+			bossWormHead.flashAlpha = 1;
+			bossWormHead.burned = true;
 		}
 	}
 	
@@ -96,6 +107,11 @@ function PlayerShipLaser(argument0)
 		mimic.burned = true;
 	}
 	
+	enchufeWorm = collision_line(x,y,x+lengthdir_x(maxLenght_+20, argument0+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,argument0+random_range(2,-2)), o_EnchufeBossWorm,false, true)
+	if (enchufeWorm)
+	{
+		enchufeWorm.burned = true;
+	}
 	
 	enemy = collision_line(x,y,x+lengthdir_x(maxLenght_+20, argument0+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,argument0+random_range(2,-2)), o_enemyP,false, true)
 	if (enemy)

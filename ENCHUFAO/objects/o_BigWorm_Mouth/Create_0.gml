@@ -31,8 +31,9 @@ image_speed = 0.5;
 enemySpeedInitial = random_range(1.2,1.6);
 enemySpeedCrunch = 1;
 enemySpeed = enemySpeedInitial;
-
-precision= random_range(0.5,1);
+precisionInitial = random_range(0.5,1);
+precisionRide = random_range(0.5,1);
+precision= precisionInitial;
 speed=random(1)+2;
 
 state = ENEMYSTATE.CHASING;
@@ -70,3 +71,4 @@ contBreak = 0;
 canBreak = false;
 canBeDestroyed = false;
 hurts = true;
+onlyHead=false;

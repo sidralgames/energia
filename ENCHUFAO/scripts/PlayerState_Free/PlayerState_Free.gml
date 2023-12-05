@@ -46,7 +46,7 @@ function PlayerState_Free()
 		}
 		if instance_exists(o_cable)
 		{
-			if (global.energy > 0) || (o_cable.haveToUpdate == false)
+			if (global.energy > 0) && (o_cable.haveToUpdate == false)
 			{
 					MoveShip()	
 			}

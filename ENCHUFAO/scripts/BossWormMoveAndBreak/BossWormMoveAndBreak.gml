@@ -1,4 +1,4 @@
-// Los recursos de Script han cambiado para la v2.3.0 Consulta
+ // Los recursos de Script han cambiado para la v2.3.0 Consulta
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function BossWormMoveAndBreak()
 {
@@ -32,32 +32,38 @@ function BossWormMoveAndBreak()
 	_x3 = x + lengthdir_x(50, direction - 60)
 	_y3 = y + lengthdir_y(50, direction - 60)
 
-	if instance_exists(o_cable)
+	if (WormBoss = true)
 	{
-		if (o_cable.haveToUpdate == true)
+		if instance_exists(o_cable)
 		{
-			precision = precisionRide;
-			enemySpeed = lerp(enemySpeed, enemySpeedRide, 0.09);
-		}
-		else
-		{	
-			precision = precisionInitial;
-			
-			if (contBreak >= 0)
+			if (o_cable.haveToUpdate == true)
 			{
-				enemySpeed = lerp(enemySpeed, enemySpeedCrunch, 0.08);
-				contBreak--;
+				precision = precisionRide;
+				enemySpeed = lerp(enemySpeed, enemySpeedRide, 0.09);
 			}
+			else
+			{	
+				precision = precisionInitial;
+			
+				if (contBreak >= 0)
+				{
+					enemySpeed = lerp(enemySpeed, enemySpeedCrunch, 0.08);
+					contBreak--;
+				}
 	
-			if (contBreak <= 0)
-			{
-				enemySpeed = lerp(enemySpeed, enemySpeedInitial, 0.05);
-				canBreak = true;
+				if (contBreak <= 0)
+				{
+					enemySpeed = lerp(enemySpeed, enemySpeedInitial, 0.05);
+					canBreak = true;
+				}
 			}
 		}
 	}
+	
+	inScreen =  (x > __view_get( e__VW.XView, 0 )-50 && x < __view_get( e__VW.XView, 0 )+710) &&
+	(y > __view_get( e__VW.YView, 0 )-50 && y < __view_get( e__VW.YView, 0 )+410)
 
-	if (global.inScreen)
+	if (inScreen)
 	{
 		if tile_meeting(_x, _y, "Tiles") && (canBreak)
 		{
@@ -67,7 +73,7 @@ function BossWormMoveAndBreak()
 					tilemap_set_at_pixel(_tilemap_id, 0, _x, _y);
 
 					global.changingTiles = true;
-					velo = random_range(2, 2.5);
+					velo = random_range(1, 2.5);
 					global.wallgrid_[# _x / 32, _y / 32] = FLOOR
 					mp_grid_clear_rectangle(gridRoom1, _x - 15, _y - 15, _x, _y)
 
@@ -95,7 +101,7 @@ function BossWormMoveAndBreak()
 					tilemap_set_at_pixel(_tilemap_id, 0, _x2, _y2);
 
 					global.changingTiles = true;
-					velo = random_range(2, 2.5);
+					velo = random_range(1, 2.5);
 					global.wallgrid_[# _x2 / 32, _y2 / 32] = FLOOR
 					mp_grid_clear_rectangle(gridRoom1, _x2 - 15, _y2 - 15, _x2, _y2)
 
@@ -123,7 +129,7 @@ function BossWormMoveAndBreak()
 					tilemap_set_at_pixel(_tilemap_id, 0, _x3, _y3);
 
 					global.changingTiles = true;
-					velo = random_range(2, 2.5);
+					velo = random_range(1, 2.5);
 					global.wallgrid_[# _x3 / 32, _y3 / 32] = FLOOR
 					mp_grid_clear_rectangle(gridRoom1, _x3 - 15, _y3 - 15, _x3, _y3)
 
@@ -143,4 +149,29 @@ function BossWormMoveAndBreak()
 				}
 		}
 	}
+	if (WormBoss)
+	{
+		if !instance_exists(o_BossWorm_Body) && (onlyHead = false)
+		{
+			if (global.BossWormHP <= 100) && (regainHP = false)
+			{
+				global.BossWormHP+=1;
+			}
+			if (global.BossWormHP >= 100)
+			{
+				global.BossWormHP = 100;
+				_hp = headHp;
+				regainHP = true;
+				onlyHead = true;
+			}
+		}
+	
+		if (onlyHead)
+		{
+			global.BossWormHP = _hp;
+			enemySpeed = lerp(enemySpeed, enemySpeedRide, 0.09);
+			part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(18,direction), y-lengthdir_y(18,direction), global.naveEnemy_Waiting , 1)
+		}
+	}
+	
 }

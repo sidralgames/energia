@@ -80,7 +80,10 @@ if (hurts = false)
 	}
 }
 
-if (global.inScreen)
+inScreen =  (x > __view_get( e__VW.XView, 0 )-50 && x < __view_get( e__VW.XView, 0 )+710) &&
+(y > __view_get( e__VW.YView, 0 )-50 && y < __view_get( e__VW.YView, 0 )+410)
+
+if (inScreen)
 {
 	if contBreak>= 0
 	{

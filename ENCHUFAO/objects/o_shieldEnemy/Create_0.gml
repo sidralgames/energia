@@ -19,3 +19,4 @@ repelledTime = repelledTimeMax;
 canHaveAShield = false;
 haveAShield = false;
 state = -1;
+affectedByLaserTrap = true;

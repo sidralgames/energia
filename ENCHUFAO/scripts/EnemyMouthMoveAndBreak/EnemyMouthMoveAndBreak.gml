@@ -36,7 +36,10 @@ function EnemyMouthMoveAndBreak()
 			canBreak = true;	
 		}
 		
-		if (global.inScreen)
+		inScreen =  (x > __view_get( e__VW.XView, 0 )-50 && x < __view_get( e__VW.XView, 0 )+710) &&
+		(y > __view_get( e__VW.YView, 0 )-50 && y < __view_get( e__VW.YView, 0 )+410)
+
+		if (inScreen)
 		{
 			if tile_meeting(_x,_y,"Tiles") && (canBreak)
 			{
@@ -48,7 +51,7 @@ function EnemyMouthMoveAndBreak()
 					tilemap_set_at_pixel(_tilemap_id, 0, _x, _y);
 			
 					global.changingTiles = true;
-					velo = random_range(2,2.5);
+					velo = random_range(0.75,1.5);
 					global.wallgrid_[# _x/32, _y/32] = FLOOR
 					mp_grid_clear_rectangle(gridRoom1, _x-15,_y-15,_x,_y)
 			
@@ -60,8 +63,8 @@ function EnemyMouthMoveAndBreak()
 						explo.image_xscale = 0.5;
 						explo.image_yscale = 0.5;
 						explo.image_alpha = 0.8;
-						met._hpush = lengthdir_x(velo,direction)
-						met._vpush = lengthdir_y(velo,direction)
+						met._hpush = lengthdir_x(velo,irandom(360))
+						met._vpush = lengthdir_y(velo,irandom(360))
 					}
 			
 					canBreak = false;

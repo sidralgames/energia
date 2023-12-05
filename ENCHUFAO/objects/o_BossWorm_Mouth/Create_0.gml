@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited();
-global.maxWorms+=1;
+
 
 leavesTrail = false;
 isBossWorm = true;
@@ -68,10 +68,16 @@ isImmortal = true;
 
 
 cable = instance_create_layer(x,y,"EnemiesHUEsub2", o_BossWorm_Body);
-_hp = 50 //+ cable._segments*15;//6
+_hp = 100 //+ cable._segments*15;//6
 hasShield = irandom(10);
 hpCalculated = false;
 contBreak = 0;
 canBreak = false;
 canBeDestroyed = false;
 hurts = true;
+affectedByLaserTrap = false;
+
+WormBoss = true;
+onlyHead = false;
+headHp = 100;
+regainHP = false;

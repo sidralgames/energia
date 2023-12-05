@@ -31,6 +31,8 @@ if (spawningBreach) && (alarm[4] <= 0)
 	spawningBreach = false;
 }
 
+
+//----------- ENEMY SPAWN TIME ----------//
 if (alarm[1] <= 0)
 {
 	alarm[1] = max(82, random_range(260,300) - (5*global.level));
