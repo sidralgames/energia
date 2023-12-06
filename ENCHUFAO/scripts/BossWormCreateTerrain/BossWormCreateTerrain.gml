@@ -20,8 +20,8 @@ function BossWormCreateTerrain()
 
 	if (global.changingTiles = false)
 	{
-		if (global.wallgrid_[#(_x / 32), (_y / 32)] == FLOOR) && (_x > 40) && (_x < room_width - 40) &&
-		(_y > 40) && (_y < room_height - 40)
+		if (global.wallgrid_[#(_x / 32), (_y / 32)] == FLOOR) && (_x > 60) && (_x < room_width - 60) &&
+		(_y > 60) && (_y < room_height - 60)
 		{
 			tilemap_set_at_pixel(_tilemap_id, 0, _x, _y);
 			global.wallgrid_[# _x / 32, _y / 32] = VOID;
@@ -29,32 +29,32 @@ function BossWormCreateTerrain()
 
 		}
 			
-		if (global.wallgrid_[#(_x1 / 32), (_y1 / 32)] == FLOOR) && (_x1 > 40) && (_x1 < room_width - 40) &&
-		(_y1 > 40) && (_y1 < room_height - 40)
+		if (global.wallgrid_[#(_x1 / 32), (_y1 / 32)] == FLOOR) && (_x1 > 60) && (_x1 < room_width - 60) &&
+		(_y1 > 60) && (_y1 < room_height - 60)
 		{
 			tilemap_set_at_pixel(_tilemap_id, 0, _x1, _y1);
 			global.wallgrid_[# _x1 / 32, _y1 / 32] = VOID;
 			mp_grid_add_rectangle(gridRoom1, _x1 - 15, _y1 - 15, _x1, _y1)
 		}
 	
-		if (global.wallgrid_[#(_x2 / 32), (_y2 / 32)] == FLOOR) && (_x2 > 40) && (_x2 < room_width - 40) &&
-		(_y2 > 40) && (_y2 < room_height - 40)
+		if (global.wallgrid_[#(_x2 / 32), (_y2 / 32)] == FLOOR) && (_x2 > 60) && (_x2 < room_width - 60) &&
+		(_y2 > 60) && (_y2 < room_height - 60)
 		{
 			tilemap_set_at_pixel(_tilemap_id, 0, _x2, _y2);
 			global.wallgrid_[# _x2 / 32, _y2 / 32] = VOID;
 			mp_grid_add_rectangle(gridRoom1, _x2 - 15, _y2 - 15, _x2, _y2)
 		}
 			
-		if (global.wallgrid_[#(_x3 / 32), (_y3 / 32)] == FLOOR) && (_x3 > 40) && (_x3 < room_width - 40) &&
-		(_y3 > 40) && (_y3 < room_height - 40)
+		if (global.wallgrid_[#(_x3 / 32), (_y3 / 32)] == FLOOR) && (_x3 > 60) && (_x3 < room_width - 60) &&
+		(_y3 > 60) && (_y3 < room_height - 60)
 		{
 			tilemap_set_at_pixel(_tilemap_id, 0, _x3, _y3);
 			global.wallgrid_[# _x3 / 32, _y3 / 32] = VOID;
 			mp_grid_add_rectangle(gridRoom1, _x3 - 15, _y3 - 15, _x3, _y3)
 		}
 			
-		if (global.wallgrid_[#(_x4 / 32), (_y4 / 32)] == FLOOR) && (_x4 > 40) && (_x4 < room_width - 40) &&
-		(_y4 > 40) && (_y4 < room_height - 40)
+		if (global.wallgrid_[#(_x4 / 32), (_y4 / 32)] == FLOOR) && (_x4 > 60) && (_x4 < room_width - 60) &&
+		(_y4 > 60) && (_y4 < room_height - 60)
 		{
 			tilemap_set_at_pixel(_tilemap_id, 0, _x4, _y4);
 			global.wallgrid_[# _x4 / 32, _y4 / 32] = VOID;

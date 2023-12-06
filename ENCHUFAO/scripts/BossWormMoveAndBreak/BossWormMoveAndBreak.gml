@@ -2,21 +2,43 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function BossWormMoveAndBreak()
 {
-	if (alarm[4] <= 0)
+	if (onlyHead = false)
 	{
-		if (global.haveInvisibiltyCloak && global.invisibleCloak = true)
+		if (alarm[4] <= 0)
 		{
-			diffX = choose(random_range(-550, 550));
-			diffY = choose(random_range(-550, 550));
-			a = point_direction(x, y, o_playerShip.x + diffX, o_playerShip.y + diffY);
+			if (global.haveInvisibiltyCloak && global.invisibleCloak = true)
+			{
+				diffX = choose(random_range(150, room_width-150));
+				diffY = choose(random_range(150, room_height-150));
+				a = point_direction(x, y, diffX, diffY);
+			}
+			else
+			{
+				diffX = choose(random_range(150, room_width-150));
+				diffY = choose(random_range(150, room_height-150));
+				a = point_direction(x, y, diffX, diffY);
+			}
+			alarm[4] = random_range(30, 90)
 		}
-		else
+	}
+	else
+	{
+		if (alarm[4] <= 0)
 		{
-			diffX = choose(random_range(150, room_width-150));
-			diffY = choose(random_range(150, room_height-150));
-			a = point_direction(x, y, diffX, diffY);
+			if (global.haveInvisibiltyCloak && global.invisibleCloak = true)
+			{
+				diffX = choose(random_range(150, room_width-150));
+				diffY = choose(random_range(150, room_height-150));
+				a = point_direction(x, y, diffX, diffY);
+			}
+			else
+			{
+				diffX = choose(random_range(250, room_width-250));
+				diffY = choose(random_range(250, room_height-250));
+				a = point_direction(x, y, diffX, diffY);
+			}
+			alarm[4] = random_range(30, 90)
 		}
-		alarm[4] = random_range(30, 90)
 	}
 
 	direction += sign(dsin(a - direction)) * (precision * global.relativeSpeed);
@@ -67,8 +89,8 @@ function BossWormMoveAndBreak()
 	{
 		if tile_meeting(_x, _y, "Tiles") && (canBreak)
 		{
-			if (global.wallgrid_[#(_x / 32), (_y / 32)] != FLOOR) && (_x > 40) && (_x < room_width - 40) &&
-				(_y > 40) && (_y < room_height - 40)
+			if (global.wallgrid_[#(_x / 32), (_y / 32)] != FLOOR) && (_x > 60) && (_x < room_width - 60) &&
+				(_y > 60) && (_y < room_height - 60)
 				{
 					tilemap_set_at_pixel(_tilemap_id, 0, _x, _y);
 
@@ -95,8 +117,8 @@ function BossWormMoveAndBreak()
 
 		if tile_meeting(_x2, _y2, "Tiles") && (canBreak)
 		{
-			if (global.wallgrid_[#(_x2 / 32), (_y2 / 32)] != FLOOR) && (_x2 > 40) && (_x2 < room_width - 40) &&
-				(_y2 > 40) && (_y2 < room_height - 40)
+			if (global.wallgrid_[#(_x2 / 32), (_y2 / 32)] != FLOOR) && (_x2 > 60) && (_x2 < room_width - 60) &&
+				(_y2 > 60) && (_y2 < room_height - 60)
 				{
 					tilemap_set_at_pixel(_tilemap_id, 0, _x2, _y2);
 
@@ -123,8 +145,8 @@ function BossWormMoveAndBreak()
 
 		if tile_meeting(_x3, _y3, "Tiles") && (canBreak)
 		{
-			if (global.wallgrid_[#(_x3 / 32), (_y3 / 32)] != FLOOR) && (_x3 > 40) && (_x3 < room_width - 40) &&
-				(_y3 > 40) && (_y3 < room_height - 40)
+			if (global.wallgrid_[#(_x3 / 32), (_y3 / 32)] != FLOOR) && (_x3 > 60) && (_x3 < room_width - 60) &&
+				(_y3 > 60) && (_y3 < room_height - 60)
 				{
 					tilemap_set_at_pixel(_tilemap_id, 0, _x3, _y3);
 
@@ -169,8 +191,13 @@ function BossWormMoveAndBreak()
 		if (onlyHead)
 		{
 			global.BossWormHP = _hp;
-			enemySpeed = lerp(enemySpeed, enemySpeedRide, 0.09);
+			enemySpeed = lerp(enemySpeed, enemySpeedRide+0.5, 0.09);
 			part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(18,direction), y-lengthdir_y(18,direction), global.naveEnemy_Waiting , 1)
+			precision = precisionRide;
+			
+			BossWorm_OnlyHead_Terraform();
+			BossWorm_OnlyHeadAttack_Back();
+		
 		}
 	}
 	

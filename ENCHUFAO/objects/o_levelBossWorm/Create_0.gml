@@ -13,12 +13,6 @@ global.totalEnemiesOnScreen = 0;
 spawners=0;
 
 SetupLevelBossWorm();
-
-_wall_map_id = layer_tilemap_get_id("Tiles");
-
-	//set up grid
-width_ = room_width div CELL_WIDTH;
-height_ = room_height div CELL_HEIGHT;
 	
 if !audio_is_playing(global.song)
 {

@@ -4,14 +4,9 @@ function EnemiesToSpawn_WormBossRoom()
 {
 	enemyToSpawn = irandom(15)
 
-	if (enemyToSpawn <=9)
+	if (enemyToSpawn <=13)
 	{
 		enemy = choose(o_enemySegment, o_enemyMouth_Free)
-	}
-	else
-	if (enemyToSpawn > 9) && (enemyToSpawn<=13)
-	{
-		enemy = choose(o_enemySegment,o_enemyMouth_Free,o_BigWorm_Mouth)
 	}
 	else
 	if (enemyToSpawn > 13) && (enemyToSpawn<15)

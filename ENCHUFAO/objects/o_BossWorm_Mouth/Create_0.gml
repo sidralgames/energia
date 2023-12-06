@@ -81,3 +81,8 @@ WormBoss = true;
 onlyHead = false;
 headHp = 100;
 regainHP = false;
+
+contTerrMin = 60;
+contTerrMax = 120;
+contTerraformingTime = 60;
+contTerraforming = random_range(contTerrMin, contTerrMax)

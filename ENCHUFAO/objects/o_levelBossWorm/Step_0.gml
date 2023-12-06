@@ -4,12 +4,21 @@ if (global.changingTiles)
 {
 	contTiles--;
 	
-	SetTiles();
+	//if instance_exists(o_playerShip)
+	//{
+	//	playerCentered = (o_playerShip.x > 400) && (o_playerShip.x < room_width-400) &&
+	//	(o_playerShip.y > 400) && (o_playerShip.x < room_height-400)
+	//	if (playerCentered)
+	//	{
+	//		SetTiles_Post();
+	//	}
+	//	else
+	//	{
+	//		SetTiles()
+	//	}
+	//}
 	
-	width_ = room_width div CELL_WIDTH;
-	height_ = room_height div CELL_HEIGHT;
-
-	_wall_map_id = layer_tilemap_get_id("Tiles");
+	SetTiles();
 
 	for ( var yyW = 0; yyW < height_; yyW++) 
 	{

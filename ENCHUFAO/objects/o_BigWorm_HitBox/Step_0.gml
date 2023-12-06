@@ -96,8 +96,8 @@ if (inScreen)
 	
 	if tile_meeting(x,y,"Tiles") && (canBreak)
 	{	
-		if (global.wallgrid_[# (x/32), (y/32)] != FLOOR) && (x > 40) && (x < room_width-40)
-		&& (y > 40) && (y < room_height-40)
+		if (global.wallgrid_[# (x/32), (y/32)] != FLOOR) && (x > 60) && (x < room_width-60)
+		&& (y > 60) && (y < room_height-60)
 		{
 			tilemap_set_at_pixel(_tilemap_id, 0, x, y);
 			
