@@ -9,6 +9,25 @@ if instance_exists(inst)
 
 }
 
+
+
+if (global.unPlugging)
+{
+	if (haveToUpdate = true)
+	{
+		rope1.vertexDeAttachTo(last);
+		haveToUpdate = false;
+		//rope1.vertexDeAttachTo(last);
+	}
+	global.unPlugging = false;
+	enchufe = o_playerShip.enchufe
+	if instance_exists(enchufe)
+	{
+		rope1.vertexDeAttachTo(last)
+	}
+	
+}
+
 if (global.plugging) && instance_exists(o_playerShip)
 {
 	global.plugging = false;
@@ -26,24 +45,6 @@ if (global.plugging) && instance_exists(o_playerShip)
 		}
 		
 	}
-}
-
-
-if (global.unPlugging)
-{
-	if (haveToUpdate = true)
-	{
-		rope1.vertexDeAttachTo(last);
-		haveToUpdate = false;
-		rope1.vertexDeAttachTo(last);
-	}
-	global.unPlugging = false;
-	enchufe = o_playerShip.enchufe
-	if instance_exists(enchufe)
-	{
-		rope1.vertexDeAttachTo(last)
-	}
-	
 }
 
 

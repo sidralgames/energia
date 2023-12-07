@@ -19,10 +19,26 @@ function WormChasingLogic()
 			plugging = true;
 			contPlugged = random_range(contPluggedMin, contPluggedMax)
 		}
+		
+		if (_hp <=0)
+		{
+			enchufe.occupied = false;
+			enchufe.occupied = false;
+			enchufe.enchufeOvercharged = true;
+			enchufe.contOvercharged = 250;
+		}
 	}
 		
 	if (plugged)
 	{
+		if (_hp <=0)
+		{
+			enchufe.occupied = false;
+			enchufe.occupied = false;
+			enchufe.enchufeOvercharged = true;
+			enchufe.contOvercharged = 250;
+		}
+		
 		contPlugged--;
 			
 		if (contPlugged<=0)

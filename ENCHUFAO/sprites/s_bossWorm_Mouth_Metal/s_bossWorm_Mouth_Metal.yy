@@ -14,6 +14,7 @@
   "For3D": false,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1f910de3-79aa-4914-b7d4-f5db087326a4",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0051c942-4066-4004-b1cc-44134186a5bb",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -43,7 +44,7 @@
     "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "eventStubScript": null,
     "eventToFunction": {},
-    "length": 1.0,
+    "length": 2.0,
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
@@ -55,12 +56,13 @@
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1f910de3-79aa-4914-b7d4-f5db087326a4","path":"sprites/s_bossWorm_Mouth_Metal/s_bossWorm_Mouth_Metal.yy",},},},"Disabled":false,"id":"e60d204b-4354-4b38-9420-7e3ad13d4a6b","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0051c942-4066-4004-b1cc-44134186a5bb","path":"sprites/s_bossWorm_Mouth_Metal/s_bossWorm_Mouth_Metal.yy",},},},"Disabled":false,"id":"247fc8ac-0a95-43aa-a94d-70797661674c","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 13,
-    "yorigin": 38,
+    "xorigin": 5,
+    "yorigin": 34,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

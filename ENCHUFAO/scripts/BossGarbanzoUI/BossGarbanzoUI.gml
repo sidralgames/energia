@@ -8,6 +8,6 @@ function BossWormUI()
 		draw_sprite_ext(s_bossHealthBar_Out, 0,__view_get( e__VW.XView, 0 )+230,__view_get( e__VW.YView, 0 )+35, 1,1,image_angle, image_blend, image_alpha)
 		draw_sprite_ext(s_bossHealthBar_In, 0,__view_get( e__VW.XView, 0 )+233,__view_get( e__VW.YView, 0 )+35, global.BossWormHP/global.BossWormHPMax, 1,image_angle, image_blend, image_alpha)
 		draw_sprite_ext(s_bossHealthBar_OutFront, 0,__view_get( e__VW.XView, 0 )+230,__view_get( e__VW.YView, 0 )+35, 1,1,image_angle, image_blend, image_alpha)
-		draw_text(__view_get( e__VW.XView, 0 )+480,__view_get( e__VW.YView, 0 )+35, string(global.BossWormHP))
+		//draw_text(__view_get( e__VW.XView, 0 )+480,__view_get( e__VW.YView, 0 )+35, string(global.BossWormHP))
 	}
 }

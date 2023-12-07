@@ -53,4 +53,4 @@ if (global.energy <= global.energyLow)
 	}
 }
 
-//draw_text(x, y-50 ,string(contExploTile));
+//draw_text(x, y-50 ,string(instance_count));

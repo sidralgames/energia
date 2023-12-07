@@ -2,13 +2,12 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function EnemiesToSpawnLVL1()
 {
-	if !instance_exists(o_BossWorm_Mouth)
-	{
+	
 		enemyToSpawn = irandom(15)
 
 		if (enemyToSpawn <=9)
 		{
-			enemy = choose(o_enemy, o_BossWorm_Mouth)
+			enemy = choose(o_enemy, o_enemyFast, o_enemyFastMini)
 		}
 		else
 		if (enemyToSpawn > 9) && (enemyToSpawn<=13)
@@ -23,12 +22,7 @@ function EnemiesToSpawnLVL1()
 		else
 		if(enemyToSpawn >= 15)
 		{
-			enemy = choose(o_enemyMines,o_enemyBomber,o_enemyMouth_Free, o_BossWorm_Mouth)
+			enemy = choose(o_enemyMines,o_enemyBomber,o_enemyMouth_Free, o_BigWorm_Mouth)
 		}
-	}
-	else
-	{
-		enemy=o_enemy;
-	}
 	
 }

@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+if instance_exists(Metal)
+{
 if (other.spin >= other.spinIdle+0.1) && (_hp > 0) && (Metal.isVisible = false)
 {
 	if instance_exists(worm)
@@ -10,5 +12,5 @@ if (other.spin >= other.spinIdle+0.1) && (_hp > 0) && (Metal.isVisible = false)
 	
 	flashAlpha = 1;
 }
-
+}
 

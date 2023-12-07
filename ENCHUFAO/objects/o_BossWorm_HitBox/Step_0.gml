@@ -155,6 +155,14 @@ if (dying = true) && (alarm[0] <=0)
 	}
 }
 
+if (_hp <= 0) && exploded == false
+{
+	exploded = true;
+	explo = instance_create(x-lengthdir_x(30, image_angle),y-lengthdir_x(30, image_angle),o_explo1);
+	explo.image_xscale = 0.7;
+	explo.image_yscale = 0.7;
+}
+
 if (die)
 {
 	instance_destroy()

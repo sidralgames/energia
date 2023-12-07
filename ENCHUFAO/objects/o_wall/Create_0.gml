@@ -10,7 +10,7 @@ oddsDisc = max(20, 200 - global.level);
 
 if (room = Sala_BossWorm)
 {
-	oddsEnemyMouth = 1;
+	oddsEnemyMouth = 5;
 }
 else
 {

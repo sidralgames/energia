@@ -197,6 +197,16 @@ function BossWormMoveAndBreak()
 			
 			BossWorm_OnlyHead_Terraform();
 			BossWorm_OnlyHeadAttack_Back();
+			
+			if exploded = false && (global.BossWormHP <= 30)
+			{
+				image_speed = 0;
+				image_index = 1;
+				exploded = true;
+				explo = instance_create(x-lengthdir_x(30, image_angle),y-lengthdir_x(30, image_angle),o_explo1);
+				explo.image_xscale = 0.7;
+				explo.image_yscale = 0.7;
+			}
 		
 		}
 	}

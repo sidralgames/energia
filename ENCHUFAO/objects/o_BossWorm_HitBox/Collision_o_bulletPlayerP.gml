@@ -12,7 +12,8 @@
 //				state = ENEMYSTATE.CHASING;
 //			}
 //}
-
+if instance_exists(Metal)
+{
 if instance_exists(worm) & (hurts) && (Metal.isVisible = false) && (_hp > 0)
 {
 	if (global.piercingShot)
@@ -75,6 +76,7 @@ if instance_exists(worm) & (hurts) && (Metal.isVisible = false) && (_hp > 0)
 else
 {
 	instance_destroy(other)
+}
 }
 
 

@@ -2,20 +2,33 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SetTiles()
 {
+	var w_left = 0;
+	var w_downleft = 0;
+	var w_up = 0;
+	var w_upright = 0;
+	var w_upleft = 0;
 	for (var _y = 0; _y < height_; _y++)
 	{
 		for (var _x = 0; _x < width_; _x++)
 		{
-			if (global.wallgrid_[# _x, _y] != FLOOR)
+			if (global.wallgrid_[# _x, _y] != FLOOR) 
 			{
-				var w_up = global.wallgrid_[# _x, _y-1] == VOID;
-				var w_left = global.wallgrid_[# _x-1, _y] == VOID;
+				if (_x - 1 >= 0) {
+					var w_left = global.wallgrid_[# _x-1, _y] == VOID;	
+					var w_downleft = global.wallgrid_[# _x-1, _y+1] == VOID;
+				}
+				if (_y - 1 >= 0) {
+					var w_up = global.wallgrid_[# _x, _y-1] == VOID;
+					var w_upright = global.wallgrid_[# _x+1, _y-1] == VOID;
+				}
+				if (_x - 1 >= 0 && _y - 1 >= 0 ) { 
+					var w_upleft = global.wallgrid_[# _x-1, _y-1] == VOID;
+				}
+				
 				var w_right = global.wallgrid_[# _x+1, _y] == VOID;
-				var w_down = global.wallgrid_[# _x, _y+1] == VOID;
-				var w_upright = global.wallgrid_[# _x+1, _y-1] == VOID;
-				var w_upleft = global.wallgrid_[# _x-1, _y-1] == VOID;
+				var w_down = global.wallgrid_[# _x, _y+1] == VOID;				
 				var w_downright = global.wallgrid_[# _x+1, _y+1] == VOID;
-				var w_downleft = global.wallgrid_[# _x-1, _y+1] == VOID;
+				
 			
 				tile=44
 				if(w_up)

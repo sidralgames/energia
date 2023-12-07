@@ -1,5 +1,7 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+if instance_exists(Metal)
+{
 if (Metal.isVisible = false) && (_hp > 0)
 {
 	if (5+(global.superShot+global.amplifyPowerAmmo)*global.damageDealt) > _hp {
@@ -18,4 +20,4 @@ else
 {
 	instance_destroy(other)
 }
-
+}

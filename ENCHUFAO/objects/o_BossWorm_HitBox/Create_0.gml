@@ -22,5 +22,6 @@ dying = false;
 canBeDamaged = false;
 affectedByLaserTrap = false;
 
-_hp = 10;
+_hp = 20;
 global.BossWormHPMax+=_hp;
+exploded = false

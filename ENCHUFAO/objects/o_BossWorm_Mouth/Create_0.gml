@@ -16,7 +16,7 @@ contPluggedMin = 400;
 contPluggedMax = 800;
 contCanPlug = 60;
 contPlugged = random_range(contPluggedMin, contPluggedMax)
-contDispInitial = 60;
+contDispInitial = 240;
 contDisp = contDispInitial;
 contDispTotalMax = 240
 contDispTotal = contDispTotalMax;
@@ -28,7 +28,7 @@ isCounted=false;
 bnc = 0.5;
 
 cont = 500;
-image_speed = 0.5;
+image_speed = 0;
 enemySpeedRide = 3.5;
 enemySpeedInitial = random_range(2.2,2.3);
 enemySpeedCrunch = 1.75;
@@ -55,7 +55,7 @@ maxDistance = 100;
 waitingSpeed = random_range(0.4,0.7)
 breakDistance = random_range(0.005, 0.05)
 accelDistance = random_range(0.005, 0.05);
-
+exploded = false;
 
 _tilemap_id = layer_tilemap_get_id("Tiles");
 
