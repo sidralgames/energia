@@ -18,6 +18,10 @@ if (onlyHead)
 	BulletDamage();
 	flashAlpha = 1;
 }
+else
+{
+	instance_destroy(other)
+}
 
 
 

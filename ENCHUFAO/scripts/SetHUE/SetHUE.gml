@@ -13,6 +13,15 @@ function SetHUE()
 	
 	_filter_EnemyhueSub2 = layer_get_fx("EnemiesHUESub2");
 	_filter_EnemyhueSub2_params = fx_get_parameters(_filter_EnemyhueSub2);
+	
+	_filter_EnemyhueSub3 = layer_get_fx("EnemiesHUESub3");
+	_filter_EnemyhueSub3_params = fx_get_parameters(_filter_EnemyhueSub3);
+	
+	_filter_EnemyhueSub4 = layer_get_fx("EnemiesHUESub4");
+	_filter_EnemyhueSub4_params = fx_get_parameters(_filter_EnemyhueSub4);
+	
+	_filter_EnemyhueSub5 = layer_get_fx("EnemiesHUESub5");
+	_filter_EnemyhueSub5_params = fx_get_parameters(_filter_EnemyhueSub5);
 
 
 	_filter_hueL = layer_get_fx("Laser");
@@ -33,6 +42,15 @@ function SetHUE()
 	
 	_filter_EnemyhueSub2_params.g_HueShift = _filterShift;	
 	_filter_EnemyhueSub2_params.g_HueSaturation = 0.75
+	
+	_filter_EnemyhueSub3_params.g_HueShift = _filterShift;	
+	_filter_EnemyhueSub3_params.g_HueSaturation = 0.75
+	
+	_filter_EnemyhueSub4_params.g_HueShift = _filterShift;	
+	_filter_EnemyhueSub4_params.g_HueSaturation = 0.75
+	
+	_filter_EnemyhueSub5_params.g_HueShift = _filterShift;	
+	_filter_EnemyhueSub5_params.g_HueSaturation = 0.75
 
 	_filter_hueL_params.g_HueShift = _filterShift;	
 	_filter_hueL_params.g_HueSaturation =1+random(0.25);
@@ -43,6 +61,9 @@ function SetHUE()
 	fx_set_parameters(_filter_Enemyhue, _filter_Enemyhue_params);
 	fx_set_parameters(_filter_EnemyhueSub, _filter_EnemyhueSub_params);
 	fx_set_parameters(_filter_EnemyhueSub2, _filter_EnemyhueSub2_params);
+	fx_set_parameters(_filter_EnemyhueSub3, _filter_EnemyhueSub3_params);
+	fx_set_parameters(_filter_EnemyhueSub4, _filter_EnemyhueSub4_params);
+	fx_set_parameters(_filter_EnemyhueSub5, _filter_EnemyhueSub5_params);
 	
 	fx_set_parameters(_filter_hueL, _filter_hueL_params);
 	

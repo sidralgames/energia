@@ -62,7 +62,7 @@ isMega = irandom(5);
 oddsBattery = 5;
 
 
-cable = instance_create_layer(x,y,"EnemiesHUEsub2", o_enemyMouth_Body_Free);
+cable = instance_create_layer(x,y,"EnemiesHUEsub5", o_enemyMouth_Body_Free);
 _hp = 10 + cable._segments*4;
 hasShield = irandom(10);
 

@@ -10,7 +10,7 @@
 event_inherited();
 if instance_exists(o_playerShip)
 {
-if (petaActive) && (o_playerShip.pluggedTimer < 200)
+if (petaActive) //&& (o_playerShip.pluggedTimer < 200)
 {
 	if (charge <= 300)
 	{

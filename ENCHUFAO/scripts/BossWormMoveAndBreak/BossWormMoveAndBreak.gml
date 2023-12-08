@@ -187,13 +187,13 @@ function BossWormMoveAndBreak()
 	{
 		if !instance_exists(o_BossWorm_Body) && (onlyHead = false)
 		{
-			if (global.BossWormHP <= 100) && (regainHP = false)
+			if (global.BossWormHP <= headHp) && (regainHP = false)
 			{
 				global.BossWormHP+=1;
 			}
-			if (global.BossWormHP >= 100)
+			if (global.BossWormHP >= headHp)
 			{
-				global.BossWormHP = 100;
+				global.BossWormHP = headHp;
 				_hp = headHp;
 				regainHP = true;
 				onlyHead = true;

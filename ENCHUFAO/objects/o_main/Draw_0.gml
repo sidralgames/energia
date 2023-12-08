@@ -185,15 +185,7 @@ if (!isPaused)
 		{
 			if (alarm[0] <30)
 			{
-				draw_set_halign(fa_center)
-				draw_set_font(Font2)
-				draw_set_color(c_white)
-				draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+281, "L3 + R3" )
-				draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+306, "TRHOW P.E.T.A")
-
-				draw_set_color(azul)
-				draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+280, "L3 + R3" )
-				draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+305, "TRHOW P.E.T.A")
+				draw_sprite_ext(s_throwPeta, 0,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+310, 0.9, 0.9,image_angle, image_blend, 0.8)
 			}
 	
 			if (alarm[0] <= 0)

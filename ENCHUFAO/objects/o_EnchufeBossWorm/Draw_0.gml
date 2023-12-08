@@ -53,16 +53,27 @@ if (instance_exists(MyMetal) && instance_exists(MyHitBox))
 
 if instance_exists(o_playerShip)
 {
-	if  (charging) && (o_playerShip.pluggedTimer < 200)
+	xx = x-lengthdir_x(30, image_angle);
+	yy = y-lengthdir_y(30, image_angle);
+	
+	if  (charging) //&& (o_playerShip.pluggedTimer < 200)
 	{
 		if (charge <= 200)
 		{
 			charge+=1;
 		}
 		
-		draw_sprite_ext(s_enchufeChargeHP_Out,0,x-42,y-30,1,1,0,image_blend, image_alpha)
-		draw_sprite_ext(s_enchufeChargeHP_In,0,x-42,y-30,(charge/maxCharge),1,0,image_blend, image_alpha)
+		draw_sprite_ext(s_enchufeChargeHP_Out,0,xx-21,yy-30,0.5,1,0,image_blend, image_alpha)
+		draw_sprite_ext(s_enchufeChargeHP_In,0,xx-21,yy-30,(charge/maxCharge)/2,1,0,image_blend, image_alpha)
 	}
+	else
+	{
+		if (charge > 0)
+		{
+			charge  --;
+		}
+	}
+	
 }
 
 //draw_text(x,y-30, string(Metal1))

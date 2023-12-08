@@ -42,12 +42,12 @@ contPlugBody = -1;
 inst = instance_nearest(x,y,o_BigWorm_Mouth)
 rope1.vertexAttachTo(first, inst);
 
-instAchor = instance_create_layer(x,y,"EnemiesHUE",o_chargerMouth)
+instAchor = instance_create_layer(x,y,"EnemiesHUESub3",o_chargerMouth)
 rope1.vertexAttachObject(last, instAchor,vertexAttachmentType.both);
 
 for (var i=2; i<=_segments-1; i++)
 {
-	instBody[i] = instance_create_layer(x,y,"EnemiesHUEsub",o_BigWorm_HitBox)
+	instBody[i] = instance_create_layer(x,y,"EnemiesHUESub4",o_BigWorm_HitBox)
 	rope1.vertexAttachObject(i, instBody[i],vertexAttachmentType.both);
 	instBody[i].worm = inst;
 }

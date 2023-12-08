@@ -132,9 +132,9 @@ if (global.bombAmmo > 0 )
 }
 
 //---------P.E.T.A--------//
-if (key_l3Dowm) && (key_r3Dowm)
+if (key_l3Dowm) && (key_r3Dowm) && (global.PETAAmmo > 0 )
 {
-	if (alarm[11] <= 0) && (global.PETAAmmo > 0 )
+	if (alarm[11] <= 0) 
 	{
 		PlayerShipPETA();
 	}

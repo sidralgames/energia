@@ -2,5 +2,6 @@
 // Puede escribir su código en este editor
 
 flashAlpha = 1;
+instance_destroy(other)
 
 

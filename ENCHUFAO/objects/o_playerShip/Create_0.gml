@@ -87,6 +87,10 @@ ripple = false;
 canSlowMotion = true;
 
 pluggedTimer = 0;
+
+pluggedTimerMax = 300;
+pluggedTimerAlert = 200;
+
 pluggedShip = false
 global.pitch = 1;
 global.energy = global.energyMax;

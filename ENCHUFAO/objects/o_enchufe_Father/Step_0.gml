@@ -29,7 +29,7 @@ if (charge >= 200)
 
 if (enchufeOvercharged)
 {
-	part_particles_create(global.overCharged_sys, x+random_range(-25,25), y+random_range(-25,25), global.overChargedPart , 2)	
+	part_particles_create(global.overCharged_sys, x+random_range(-30,30), y+random_range(-30,30), global.overChargedPart , 3)	
 	
 	contOvercharged -= 0.75;
 	if (contOvercharged <= 0)

@@ -30,7 +30,14 @@ if (global.changingTiles)
 //----------- ENEMY SPAWN TIME ----------//
 if (alarm[1] <= 0)
 {
-	alarm[1] = random_range(300,400)
+	if global.BossWormHP > (global.BossWormHPMax/2)
+	{
+		alarm[1] = random_range(400,500)+global.BossWormHP
+	}
+	else
+	{
+		alarm[1] = random_range(300,400)+global.BossWormHP
+	}
 }
 
 

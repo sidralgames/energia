@@ -11,7 +11,7 @@ event_inherited();
 if instance_exists(o_playerShip)
 {
 if (global.chargingBombs) && (charging) && (global.bombAmmo < global.bombAmmoMax)
-	&& (o_playerShip.pluggedTimer < 200)
+	//&& (o_playerShip.pluggedTimer < 200)
 {
 	if (charge <= 180)
 	{

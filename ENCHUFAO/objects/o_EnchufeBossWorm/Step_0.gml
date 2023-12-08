@@ -20,6 +20,7 @@ if (changedMetal = true)
 	image_speed = 0;
 }
 
+
 if (flashAlpha > 0) 
 {
 	flashAlpha -= 0.09;
