@@ -21,6 +21,14 @@ if instance_exists(o_playerShip)
 	{
 		instance_destroy();
 	}
+	
+	if (alarm[1] > 0)
+	{
+		if !tile_meeting(x,y,"Tiles")
+		{
+			instance_destroy();
+		}
+	}
 }
 
 

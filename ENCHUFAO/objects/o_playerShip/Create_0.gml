@@ -1,6 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 pitch = 1;
+maxConectRadStandard = 26;
+maxConectRad = maxConectRadStandard;
+maxConectRadBoss = 40;
+minConectRadStandard  = 17;
+minConectRadBoss  = 23;
 SetFxParameters();
 
 if (room != Sala_Inicio) && (room != Sala_Upgade)

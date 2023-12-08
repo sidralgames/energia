@@ -67,6 +67,6 @@ if (global.changingTiles)
 	if (contTiles <=0)
 	{
 		global.changingTiles = false;
-		contTiles = 2;
+		contTiles = 1;
 	}
 }

@@ -114,6 +114,10 @@ if (inScreen)
 			tilemap_set_at_pixel(_tilemap_id, 0, x, y);
 			
 			global.changingTiles = true;
+			if instance_exists(o_mouthAnchor)
+			{
+				o_mouthAnchor.alarm[1] = 10;
+			}
 			velo = random_range(1,1.5);
 			global.wallgrid_[# x/32, y/32] = FLOOR
 			mp_grid_clear_rectangle(gridRoom1, x-15,y-15,x,y)

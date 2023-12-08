@@ -37,88 +37,107 @@ if (pause)
 	{
 		selected+=1;
 	}
-
-	if (spriteBack = 0)
+	
+	if (showControls)
 	{
-		if (selected > 2)
-		{
-			selected = 0;	
-		}
-
-		if (selected < 0)
-		{
-			selected = 2;	
-		}
-		
 		if (key_x)
 		{
-			switch(selected)
-			{
-				case 0: 
-				{
-					o_pause.alarm[0] = 5;
-					selected = 0;
-				}
-				break;
-			
-				case 1:
-				{
-					goToMenu = true;
-				}
-				break;
-			
-				case 2:
-				{
-					SaveGame();
-					game_restart();
-				}
-				break;
-			}
+			showControls = false;
 		}
+			
 	}
 	else
 	{
-		if (selected > 3)
-		{
-			selected = 0;	
-		}
 
-		if (selected < 0)
+		if (spriteBack = 0)
 		{
-			selected = 3;	
-		}
-		
-		if (key_x)
-		{
-			switch(selected)
+			if (selected > 3)
 			{
-				case 0: 
+				selected = 0;	
+			}
+
+			if (selected < 0)
+			{
+				selected = 3;	
+			}
+		
+			if (key_x)
+			{
+			
+				switch(selected)
 				{
-					o_pause.alarm[0] = 5; 
-					selected = 0;
+					case 0: 
+					{
+						o_pause.alarm[0] = 5;
+						selected = 0;
+					}
+					break;
+			
+					case 1:
+					{
+						goToMenu = true;
+					}
+					break;
+			
+					case 2:
+					{
+						showControls  = true;
+					}
+					break;
 				
+					case 3:
+					{
+						SaveGame();
+						game_restart();
+					}
+					break;
 				}
-				break;
-			
-				case 1: 
+			}
+		}
+		else
+		{
+			if (selected > 3)
+			{
+				selected = 0;	
+			}
+
+			if (selected < 0)
+			{
+				selected = 3;	
+			}
+		
+			if (key_x)
+			{
+				switch(selected)
 				{
-					global.screenshakeIsOn = !global.screenshakeIsOn;
-				}
-				break;
+					case 0: 
+					{
+						o_pause.alarm[0] = 5; 
+						selected = 0;
+				
+					}
+					break;
 			
-				case 2:
-				{
-					goToMenu = false;
+					case 1: 
+					{
+						global.screenshakeIsOn = !global.screenshakeIsOn;
+					}
+					break;
+			
+					case 2:
+					{
+						goToMenu = false;
 					
-				}
-				break;
+					}
+					break;
 				
-				case 3:
-				{
-					SaveGame();
-					game_restart();
+					case 3:
+					{
+						SaveGame();
+						game_restart();
+					}
+					break;
 				}
-				break;
 			}
 		}
 	}

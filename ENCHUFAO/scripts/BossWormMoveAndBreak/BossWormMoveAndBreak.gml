@@ -95,6 +95,10 @@ function BossWormMoveAndBreak()
 					tilemap_set_at_pixel(_tilemap_id, 0, _x, _y);
 
 					global.changingTiles = true;
+					if instance_exists(o_mouthAnchor)
+					{
+						o_mouthAnchor.alarm[1] = 10;
+					}
 					velo = random_range(1, 2.5);
 					global.wallgrid_[# _x / 32, _y / 32] = FLOOR
 					mp_grid_clear_rectangle(gridRoom1, _x - 15, _y - 15, _x, _y)
@@ -123,6 +127,10 @@ function BossWormMoveAndBreak()
 					tilemap_set_at_pixel(_tilemap_id, 0, _x2, _y2);
 
 					global.changingTiles = true;
+					if instance_exists(o_mouthAnchor)
+					{
+						o_mouthAnchor.alarm[1] = 10;
+					}
 					velo = random_range(1, 2.5);
 					global.wallgrid_[# _x2 / 32, _y2 / 32] = FLOOR
 					mp_grid_clear_rectangle(gridRoom1, _x2 - 15, _y2 - 15, _x2, _y2)
@@ -151,6 +159,10 @@ function BossWormMoveAndBreak()
 					tilemap_set_at_pixel(_tilemap_id, 0, _x3, _y3);
 
 					global.changingTiles = true;
+					if instance_exists(o_mouthAnchor)
+					{
+						o_mouthAnchor.alarm[1] = 10;
+					}
 					velo = random_range(1, 2.5);
 					global.wallgrid_[# _x3 / 32, _y3 / 32] = FLOOR
 					mp_grid_clear_rectangle(gridRoom1, _x3 - 15, _y3 - 15, _x3, _y3)

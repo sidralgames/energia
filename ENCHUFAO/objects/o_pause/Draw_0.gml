@@ -42,10 +42,15 @@ draw_set_alpha(0.5);
 draw_rectangle_color(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ), __view_get( e__VW.XView, 0 )+ 640,__view_get( e__VW.YView, 0 )+360,c_black, c_black, c_black,c_black, false)
 draw_set_alpha(1);
 
-draw_sprite_ext(s_pauseBackground,spriteBack, __view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0,1,1,0,image_blend, image_alpha)
+draw_sprite_ext(s_pauseBackground,spriteBack, __view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0,1,1,0,image_blend, 0.7)
 draw_sprite_ext(s_pause,0, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+50,1,1,0,image_blend, image_alpha)
 
-
+if (showControls)
+{
+	draw_sprite_ext(s_controlsAll, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+210,1,1,0,image_blend, image_alpha)
+}
+else
+{
 	if (spriteBack < 1)
 	{
 		timesToDraw = 0;
@@ -73,21 +78,32 @@ draw_sprite_ext(s_pause,0, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YV
 			{
 				draw_sprite_ext(s_resume, 0,  __view_get( e__VW.XView, 0 )+ 510,__view_get( e__VW.YView, 0 )+140,1.2,1.2,0,image_blend, image_alpha)	
 				draw_sprite_ext(s_options, 0,  __view_get( e__VW.XView, 0 )+ 510,__view_get( e__VW.YView, 0 )+180,1,1,0,image_blend, image_alpha)	
-				draw_sprite_ext(s_mainMenu, 0,  __view_get( e__VW.XView, 0 )+ 510,__view_get( e__VW.YView, 0 )+220,1,1,0,image_blend, image_alpha)	
+				draw_sprite_ext(s_controlsHome, 0,  __view_get( e__VW.XView, 0 )+ 510,__view_get( e__VW.YView, 0 )+220,0.65,0.65,0,image_blend, image_alpha)	
+				draw_sprite_ext(s_mainMenu, 0,  __view_get( e__VW.XView, 0 )+ 510,__view_get( e__VW.YView, 0 )+260,1,1,0,image_blend, image_alpha)	
 			}break;
 	
 			case 1:
 			{
 				draw_sprite_ext(s_resume, 0,  __view_get( e__VW.XView, 0 )+ 510,__view_get( e__VW.YView, 0 )+140,1,1,0,image_blend, image_alpha)	
 				draw_sprite_ext(s_options, 0,  __view_get( e__VW.XView, 0 )+ 510,__view_get( e__VW.YView, 0 )+180,1.2,1.2,0,image_blend, image_alpha)	
-				draw_sprite_ext(s_mainMenu, 0,  __view_get( e__VW.XView, 0 )+ 510,__view_get( e__VW.YView, 0 )+220,1,1,0,image_blend, image_alpha)	
+					draw_sprite_ext(s_controlsHome, 0,  __view_get( e__VW.XView, 0 )+ 510,__view_get( e__VW.YView, 0 )+220,0.65,0.65,0,image_blend, image_alpha)	
+				draw_sprite_ext(s_mainMenu, 0,  __view_get( e__VW.XView, 0 )+ 510,__view_get( e__VW.YView, 0 )+260,1,1,0,image_blend, image_alpha)	
 			}break;
 	
 			case 2:
 			{
 				draw_sprite_ext(s_resume, 0,  __view_get( e__VW.XView, 0 )+ 510,__view_get( e__VW.YView, 0 )+140,1,1,0,image_blend, image_alpha)	
 				draw_sprite_ext(s_options, 0,  __view_get( e__VW.XView, 0 )+ 510,__view_get( e__VW.YView, 0 )+180,1,1,0,image_blend, image_alpha)	
-				draw_sprite_ext(s_mainMenu, 0,  __view_get( e__VW.XView, 0 )+ 510,__view_get( e__VW.YView, 0 )+220,1.2,1.2,0,image_blend, image_alpha)	
+					draw_sprite_ext(s_controlsHome, 0,  __view_get( e__VW.XView, 0 )+ 510,__view_get( e__VW.YView, 0 )+220,0.8,0.8,0,image_blend, image_alpha)	
+				draw_sprite_ext(s_mainMenu, 0,  __view_get( e__VW.XView, 0 )+ 510,__view_get( e__VW.YView, 0 )+260,1,1,0,image_blend, image_alpha)		
+			}break;
+			
+			case 3:
+			{
+				draw_sprite_ext(s_resume, 0,  __view_get( e__VW.XView, 0 )+ 510,__view_get( e__VW.YView, 0 )+140,1,1,0,image_blend, image_alpha)	
+				draw_sprite_ext(s_options, 0,  __view_get( e__VW.XView, 0 )+ 510,__view_get( e__VW.YView, 0 )+180,1,1,0,image_blend, image_alpha)	
+				draw_sprite_ext(s_controlsHome, 0,  __view_get( e__VW.XView, 0 )+ 510,__view_get( e__VW.YView, 0 )+220,0.65,0.65,0,image_blend, image_alpha)	
+				draw_sprite_ext(s_mainMenu, 0,  __view_get( e__VW.XView, 0 )+ 510,__view_get( e__VW.YView, 0 )+260,1.2,1.2,0,image_blend, image_alpha)		
 			}break;
 
 		}
@@ -164,5 +180,6 @@ draw_sprite_ext(s_pause,0, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YV
 			}
 		}
 	}
+}
 }
 

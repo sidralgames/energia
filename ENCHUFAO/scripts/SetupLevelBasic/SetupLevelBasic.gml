@@ -52,7 +52,7 @@ function SetupLevelBasic()
 	//set up grid
 	width_ = room_width div CELL_WIDTH;
 	height_ = room_height div CELL_HEIGHT;
-	global.wallgrid_ = ds_grid_create(width_,height_);
+	global.wallgrid_ = ds_grid_create(width_+1,height_+1);
 	ds_grid_set_region(global.wallgrid_, 0, 0, width_-1, height_-1, VOID);
 
 	//Create the controller in the center of the grid

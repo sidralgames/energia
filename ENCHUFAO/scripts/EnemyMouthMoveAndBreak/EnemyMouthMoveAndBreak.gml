@@ -51,6 +51,10 @@ function EnemyMouthMoveAndBreak()
 					tilemap_set_at_pixel(_tilemap_id, 0, _x, _y);
 			
 					global.changingTiles = true;
+					if instance_exists(o_mouthAnchor)
+					{
+						o_mouthAnchor.alarm[1] = 10;
+					}
 					velo = random_range(0.75,1.5);
 					global.wallgrid_[# _x/32, _y/32] = FLOOR
 					mp_grid_clear_rectangle(gridRoom1, _x-15,_y-15,_x,_y)

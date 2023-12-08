@@ -141,7 +141,7 @@ if (key_l3Dowm) && (key_r3Dowm)
 }
 
 //--------- PLUG -----------//
-inEnchufe = collision_circle(x,y,20,o_enchufe_Father,false,true)
+inEnchufe = collision_circle(x,y,maxConectRad,o_enchufe_Father,false,true)
 if (inEnchufe) 
 {	
 	if (pluggedShip)

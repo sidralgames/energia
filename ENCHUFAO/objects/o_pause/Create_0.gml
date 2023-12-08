@@ -12,7 +12,7 @@ image_speed = 0.25;
 resW = display_get_width();
 resH = display_get_height();
 alarm[1] = 20;
-
+showControls = false;
 
 
 
