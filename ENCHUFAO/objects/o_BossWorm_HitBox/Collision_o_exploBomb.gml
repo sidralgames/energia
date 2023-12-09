@@ -11,7 +11,9 @@ if instance_exists(worm)
 				global.BossWormHP -= _hp;
 				_hp = 0;
 		
-			} else {
+			} 
+			else 
+			{
 				global.BossWormHP -= 1*global.damageDealt;
 				_hp -= 1*global.damageDealt;
 			}

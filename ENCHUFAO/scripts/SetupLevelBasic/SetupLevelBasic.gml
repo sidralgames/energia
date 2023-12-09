@@ -61,25 +61,25 @@ function SetupLevelBasic()
 	var cy = 1*height_ div 2;
 
 	//Create the player
-
-
 	instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Player", o_playerShip);
 	if (global.level = 1) && (global.spriteShip = splayer_Red) && (creadaStrandedRed = false)
 	{
 		creadaStrandedRed = true;
 		global.strandedShipGreen = true;
+		//global.strandedShipBlue = true;
 	}
-
 	
+	//--Fake Worm Boss--//
+	if (global.level = 5)
+	{
+		instance_create_layer(choose(-100, room_width+100),room_height+50, "Back", o_FakeBoss_Worm);
+	}
 
 
 	//Create the controller
 	var _controller_x = width_ div 2
 	var _controller_y = height_ div 2
 	var _controller_direction = irandom(3);
-
-
-
 
 	var _steps = 3500;
 

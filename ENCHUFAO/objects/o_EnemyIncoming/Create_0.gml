@@ -11,12 +11,19 @@ if (room = Sala_BossWorm)
 }
 else
 {
-	switch(global.level)
+	if (global.level = 1)
 	{
-		case 1: EnemiesToSpawnLVL1(); break;
-		case 3: EnemiesToSpawnLVL3(); break;
-		case 5: EnemiesToSpawnLVL5(); break;
+		EnemiesToSpawnLVL1();
 	}
+	else if (global.level = 3)
+	{
+		EnemiesToSpawnLVL3();
+	}
+	else if (global.level >= 5)
+	{
+		EnemiesToSpawnLVL5();
+	}
+
 }
 
 

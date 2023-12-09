@@ -10,8 +10,9 @@ if (Metal.isVisible = false) && (_hp > 0)
 	} 
 	else 
 	{
-		_hp -= 5+(global.superShot+global.amplifyPowerAmmo)*global.damageDealt;
 		global.BossWormHP -= 5+(global.superShot+global.amplifyPowerAmmo)*global.damageDealt;
+		_hp -= 5+(global.superShot+global.amplifyPowerAmmo)*global.damageDealt;
+		
 	}
 	
 	instance_destroy(other)

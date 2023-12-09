@@ -20,16 +20,18 @@ if instance_exists(worm) & (hurts) && (Metal.isVisible = false) && (_hp > 0)
 	{
 		if (ds_list_find_index(other.collisionIds, id) == -1)
 		{
+			global.BossWormHP-= (global.superShot+global.amplifyPowerAmmo)*global.damageDealt;
 			_hp -= (global.superShot+global.amplifyPowerAmmo)*global.damageDealt; //--- DO DAMAGE TO ENEMY ---//
 			ds_list_add(other.collisionIds, id);
 			other.hp -= 1; 
-			global.BossWormHP-= (global.superShot+global.amplifyPowerAmmo)*global.damageDealt;
+			
 		}
 	}
 	else 
 	{
-		_hp -= (global.superShot+global.amplifyPowerAmmo)*global.damageDealt; //--- DO DAMAGE TO ENEMY ---//
 		global.BossWormHP-= (global.superShot+global.amplifyPowerAmmo)*global.damageDealt;
+		_hp -= (global.superShot+global.amplifyPowerAmmo)*global.damageDealt; //--- DO DAMAGE TO ENEMY ---//
+		
 		instance_destroy(other);
 		RecoverBullet();
 	}
