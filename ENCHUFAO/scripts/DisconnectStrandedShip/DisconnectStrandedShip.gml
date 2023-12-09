@@ -14,7 +14,7 @@ function DisconnectStrandedShip()
 	instance_destroy(myCable);
 	instance_destroy(myCharger);
 	
-	cable = instance_create_layer(x, y, "Enemies", o_cableStrandedShip);
+	cable = instance_create_layer(x, y, "Cable", o_cableStrandedShip);
 		
 	//myCable.rope1.vertexDeAttachTo(last)
 		

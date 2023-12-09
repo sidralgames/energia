@@ -12,17 +12,17 @@ function EnemiesToSpawnLVL1()
 		else
 		if (enemyToSpawn > 9) && (enemyToSpawn<=13)
 		{
-			enemy = choose(o_enemyDisp,o_enemyMitosis,o_enemy_Waiting_Shield)
+			enemy = choose(o_enemy,o_enemyDisp,o_enemy_Waiting_Shield)
 		}
 		else
 		if (enemyToSpawn > 13) && (enemyToSpawn<15)
 		{
-			enemy = choose(o_enemyMothership, o_enemySniper, o_enemyDisc, o_enemySegment)
+			enemy = choose(o_enemyMothership, o_enemySniper, o_enemyDisc,o_enemyMitosis)
 		}
 		else
 		if(enemyToSpawn >= 15)
 		{
-			enemy = choose(o_enemyMines,o_enemyBomber,o_enemyMouth_Free, o_BigWorm_Mouth)
+			enemy = choose(o_enemyMines,o_enemyBomber,o_enemyBomber)
 		}
 	
 }

@@ -189,8 +189,11 @@ if (inEnchufe)
 						}
 						else
 						{
-							PlugToShip();
-							inEnchufe.withStrandedShip = false;
+							if (inEnchufe.isMimic == false)
+							{
+								PlugToShip();
+								inEnchufe.withStrandedShip = false;
+							}
 						}
 					}
 				}
@@ -205,7 +208,7 @@ if (connectedToShip)
 {
 	if (key_x)
 	{
-		if (pluggedShip = false) && (o_charger.overcharged = false) && alarm[4] <=0
+		if (connectedToShip.trapped = false) && (pluggedShip = false) && (o_charger.overcharged = false) && alarm[4] <=0
 		{
 			PlugToShip();
 		}

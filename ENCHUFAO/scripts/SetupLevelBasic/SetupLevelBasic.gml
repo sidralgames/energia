@@ -70,10 +70,10 @@ function SetupLevelBasic()
 	}
 	
 	//--Fake Worm Boss--//
-	if (global.level = 5)
-	{
-		instance_create_layer(choose(-100, room_width+100),room_height+50, "Back", o_FakeBoss_Worm);
-	}
+	//if (global.level = 5)
+	//{
+	//	instance_create_layer(choose(-100, room_width+100),room_height+50, "Back", o_FakeBoss_Worm);
+	//}
 
 
 	//Create the controller

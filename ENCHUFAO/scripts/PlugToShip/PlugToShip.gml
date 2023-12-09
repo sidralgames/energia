@@ -15,7 +15,7 @@ function PlugToShip()
 	instance_destroy(thisStrandedShip.myCable);
 	with (thisStrandedShip)
 	{
-		cableFake = instance_create_layer(x,y, "Enemies", o_cableStrandedShipFake);
+		cableFake = instance_create_layer(x,y, "Cable", o_cableStrandedShipFake);
 		path_end();
 	}
 	//ship._hpush = thisStrandedShip._hpush;

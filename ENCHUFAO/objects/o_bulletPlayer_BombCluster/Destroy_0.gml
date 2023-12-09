@@ -19,10 +19,11 @@ else
 }
 
 offsetInitial = irandom(360);
-velo = random_range(2.5, 3)
+
 
 for (var i = 0; i<=4; i++)
 {
+	velo = random_range(2.5, 3)
 	bomb = instance_create(x,y,o_bulletPlayer_Bomb)
 	bomb._hpush = lengthdir_x(velo, offsetInitial+90*i)
 	bomb._vpush = lengthdir_y(velo, offsetInitial+90*i)

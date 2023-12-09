@@ -38,19 +38,43 @@ if instance_exists(o_playerShip)
 		explo.image_xscale = 0.5;
 		explo.image_yscale = 0.5;
 		
-		if (state = 1)
+		if (state = 1) && canDie = false
 		{
-			with (o_playerShip)
+			if (withStrandedShip)
 			{
-				trapped = false;
-				Unplug();
-			}
+				charger.trapped = false;
+				with (o_strandedShip)
+				{
+					if (state = STRANDEDSHIPSTATE.CONNECTEDENCHUFE)
+					{
+						DisconnectStrandedShip();
+					}
+				}
 				
-			o_charger.overcharged = true;
-			o_charger.alarm[0] = 300;
+				contDie = 5;
+				canDie = true;
+			}
+			else
+			{
+				with (o_playerShip)
+				{
+					trapped = false;
+					Unplug();
+					o_charger.overcharged = true;
+					o_charger.alarm[0] = 300;
+				}
+				
+				contDie = 5;
+				canDie = true;
+			}
+			
+		}
+		else
+		{
+			instance_destroy();
 		}
 		
-		instance_destroy();
+		
 	}
 	
 	switch (state)
@@ -68,6 +92,15 @@ if instance_exists(o_playerShip)
 				contClosed = random_range(400, 500);
 				o_playerShip.trapped = true;
 			}
+			
+			if (withStrandedShip)
+			{
+				state = 1;	
+				image_index = 0;
+				contClosed = random_range(400, 500);
+				charger = instance_nearest(x,y,o_chargerStrandedShip);
+				charger.trapped = true;
+			}
 		
 		}break;
 	
@@ -77,7 +110,10 @@ if instance_exists(o_playerShip)
 			sprite_index = sprite_attack;
 			image_speed = 0.5;
 		
-			contClosed --;
+			if !withStrandedShip
+			{
+				contClosed --;
+			}
 		
 			if (image_index >= 8)
 			{
@@ -86,7 +122,7 @@ if instance_exists(o_playerShip)
 		
 			if (contClosed <= 0)
 			{
-				state = 0;
+				
 			
 				with (o_playerShip)
 				{
@@ -96,8 +132,19 @@ if instance_exists(o_playerShip)
 				
 				o_charger.overcharged = true;
 				o_charger.alarm[0] = 300;
+				
+				state = 0;
 			}
 		
 		}break;
+	}
+	
+	if (canDie)
+	{
+		contDie--;
+		if (contDie <=0)
+		{
+			instance_destroy();	
+		}
 	}
 }

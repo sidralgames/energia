@@ -12,11 +12,11 @@ if (cont = true)
 	
 	if (global.level = 7)
 	{
-		room_goto(Sala_BossWorm)
+		room_goto(Sala_SecondBoss)
 	}
 	else if (global.level = 14)
 	{
-		room_goto(Sala_SecondBoss)
+		room_goto(Sala_BossWorm)
 	}
 	else
 	{

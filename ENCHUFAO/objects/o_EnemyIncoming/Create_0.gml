@@ -19,10 +19,15 @@ else
 	{
 		EnemiesToSpawnLVL3();
 	}
-	else if (global.level >= 5)
+	else if (global.level = 5)
 	{
 		EnemiesToSpawnLVL5();
 	}
+	else if (global.level >= 7)
+	{
+		EnemiesToSpawnLVL7To9();
+	}
+	
 
 }
 

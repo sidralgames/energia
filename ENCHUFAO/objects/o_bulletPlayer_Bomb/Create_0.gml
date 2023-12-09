@@ -12,5 +12,5 @@ vsp_f = 0;
 _angle = image_angle;
 
 alarm[0] = 10;
-
+alarm[1] = 30;
 hitByLaser = false;

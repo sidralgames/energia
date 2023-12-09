@@ -8,6 +8,8 @@
 
 // Inherit the parent event
 event_inherited();
+contDie = 5;
+canDie = false;
 flashAlpha = 0;
 isMimic = true;
 upgradesBattery = global.batteryEnchufeListAmmonum;
