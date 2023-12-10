@@ -1017,6 +1017,7 @@
     {"id":{"name":"PlayerStats_Red","path":"scripts/PlayerStats_Red/PlayerStats_Red.yy",},},
     {"id":{"name":"s_enchufeChargeHP_OutEXTERNAL","path":"sprites/s_enchufeChargeHP_OutEXTERNAL/s_enchufeChargeHP_OutEXTERNAL.yy",},},
     {"id":{"name":"s_enchufe_HP","path":"sprites/s_enchufe_HP/s_enchufe_HP.yy",},},
+    {"id":{"name":"AddHighScoreStat","path":"scripts/AddHighScoreStat/AddHighScoreStat.yy",},},
     {"id":{"name":"o_partEnergy","path":"objects/o_partEnergy/o_partEnergy.yy",},},
     {"id":{"name":"o_strandedShip","path":"objects/o_strandedShip/o_strandedShip.yy",},},
     {"id":{"name":"s_shieldBar_out32","path":"sprites/s_shieldBar_out32/s_shieldBar_out32.yy",},},

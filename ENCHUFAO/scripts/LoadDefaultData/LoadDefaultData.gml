@@ -17,6 +17,7 @@ function LoadDefaultData()
 	
 	//stats
 	global.bestLevelRun = 0;
+	global.HighScore = 0;
 	global.totalDeaths = 0;
 	global.totalBullets = 0;
 	global.totalBombs = 0;

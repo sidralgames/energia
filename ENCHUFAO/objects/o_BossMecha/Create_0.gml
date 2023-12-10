@@ -4,7 +4,7 @@ event_inherited();
 
 minBombTime = 60;
 maxBombTime = 120;
-
+clearWall = false;
 recover = false;
 recoverTime = 0;
 punch = false;

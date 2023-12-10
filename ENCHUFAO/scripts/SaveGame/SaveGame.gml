@@ -15,6 +15,7 @@ function SaveGame()
 	ini_write_real("ach","EnemiesKilledTotal", global.enemiesKilledTotalAch);
 	
 	ini_write_real("stats","BestRun", global.bestLevelRun);
+	ini_write_real("stats","HighScore", global.HighScore);
 	ini_write_real("stats","TotalDeaths", global.totalDeaths);
 	ini_write_real("stats","TotalBullets", global.totalBullets);
 	ini_write_real("stats","TotalBombs", global.totalBombs);
@@ -25,9 +26,6 @@ function SaveGame()
 	ini_write_real("stats","slowmilisecs", global.slowmilisecs);
 	ini_write_real("stats","connectedmilisecs", global.connectedmilisecs);
 	ini_write_real("stats","TotalBumps", global.totalBumps);
-	
-
-	
 	
 	
 	ini_close();

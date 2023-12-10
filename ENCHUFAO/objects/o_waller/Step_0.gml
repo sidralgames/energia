@@ -33,9 +33,19 @@ if (spawningBreach) && (alarm[4] <= 0)
 
 
 //----------- ENEMY SPAWN TIME ----------//
-if (alarm[1] <= 0)
+if (global.level <=5)
 {
-	alarm[1] = max(82, random_range(260,300) - (5*global.level));
+	if (alarm[1] <= 0)
+	{
+		alarm[1] = max(90, random_range(260,300) - (5*global.level));
+	}
+}
+else if (global.level >5)
+{
+	if (alarm[1] <= 0)
+	{
+		alarm[1] = max(90, random_range(300,360) - (5*global.level));
+	}
 }
 
 if (global.changingTiles)

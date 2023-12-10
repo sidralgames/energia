@@ -24,8 +24,8 @@ for (var i = 0; i< global.numberOfStats; i++)
 	draw_set_halign(fa_left)
 	draw_set_font(customFont2)
 	draw_set_color(azul)
-	draw_text(__view_get( e__VW.XView, 0 )+359,__view_get( e__VW.YView, 0 )+161+i*16, string(stat.textStat))
+	draw_text(__view_get( e__VW.XView, 0 )+359,__view_get( e__VW.YView, 0 )+153+i*16, string(stat.textStat))
 	draw_set_color(c_white)
-	draw_text(__view_get( e__VW.XView, 0 )+360,__view_get( e__VW.YView, 0 )+160+i*16, string(stat.textStat))
+	draw_text(__view_get( e__VW.XView, 0 )+360,__view_get( e__VW.YView, 0 )+152+i*16, string(stat.textStat))
 
 }

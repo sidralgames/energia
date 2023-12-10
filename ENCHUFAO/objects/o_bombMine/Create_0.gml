@@ -12,7 +12,7 @@ scale = 1;
 bnc = 1;
 rangeV = 0;
 
-_hp = 5;
+_hp = 1;
 
 _angle = image_angle;
 image_index = 0;

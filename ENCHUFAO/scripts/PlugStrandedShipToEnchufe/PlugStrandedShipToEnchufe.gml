@@ -9,7 +9,7 @@ function PlugStrandedShipToEnchufe()
 	global.pluggingStrandedShipToEnchufe = true;
 	pluggedShip = false;
 	instance_destroy(thisStrandedShip.myCableFake);
-	instance_destroy(ship);
+	instance_destroy(chargerStrandedShip);
 	o_cable.pluggedShip = false;
 	global.unPluggingShip = true;
 	thisStrandedShip.connected = false;

@@ -4,7 +4,7 @@ if (global.shields<1) && (other.isImmortal = false)
 {
 	if (tocado = false) && (other.hurts)
 	{
-		gamepad_set_vibration(0,0.3,0.3);
+		gamepad_set_vibration(0,0.5,0.5);
 		alarm[4] = 10;
 		audio_play_sound_on(global.audioEmitter, snd_hit, false, 50)
 		alarm[1] = 30

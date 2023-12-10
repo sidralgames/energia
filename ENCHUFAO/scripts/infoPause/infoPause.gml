@@ -13,6 +13,11 @@ function infoPause()
 		case 6: text = "Tip: Do not get hit"; break;
 		case 7: text = "Remember: L2 to slowmotion"; break;
 		case 8: text = "Tip: Contain the breach"; break;
-		case 9: text = "Tip: Keep an eye on you energy"; break;
+		case 9: text = "Tip: Keep an eye on your energy"; break;
+		case 10: text = "Tip: Beware of lasers"; break;
+		case 11: text = "Remember: L1 to bomb"; break;
+		case 12: text = "Pick up batteries"; break;
+		case 13: text = "Destroy everything"; break;
+		case 14: text = "Tip: Do not waste P.E.T.As"; break;
 	}
 }

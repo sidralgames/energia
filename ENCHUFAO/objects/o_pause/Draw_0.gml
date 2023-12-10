@@ -60,9 +60,11 @@ else
 		draw_set_halign(fa_center)
 		draw_set_font(customFont2)
 		draw_set_color(azul)
-		draw_text(__view_get( e__VW.XView, 0 )+499,__view_get( e__VW.YView, 0 )+321, string(text))
+		draw_text(__view_get( e__VW.XView, 0 )+499,__view_get( e__VW.YView, 0 )+326, string(text))
+		draw_text(__view_get( e__VW.XView, 0 )+510,__view_get( e__VW.YView, 0 )+311, "Level: " + string(global.level))
 		draw_set_color(c_white)
-		draw_text(__view_get( e__VW.XView, 0 )+500,__view_get( e__VW.YView, 0 )+320, string(text))
+		draw_text(__view_get( e__VW.XView, 0 )+500,__view_get( e__VW.YView, 0 )+325, string(text))
+		draw_text(__view_get( e__VW.XView, 0 )+510,__view_get( e__VW.YView, 0 )+310, "Level: " + string(global.level))
 	
 			
 		DrawUpgradeNames();

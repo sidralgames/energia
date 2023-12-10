@@ -105,7 +105,7 @@ function CheckEnchufeUpgrade()
 		}
 		inEnchufe.charging = true;
 		upgraded = true;
-		global.DischargeTime += 2;
+		global.DischargeTime += 0.75;
 		
 	}
 	else if (inEnchufe.upgradeSuperShot = true) && (upgraded = false)

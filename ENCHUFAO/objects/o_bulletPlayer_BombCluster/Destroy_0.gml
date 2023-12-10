@@ -21,7 +21,7 @@ else
 offsetInitial = irandom(360);
 
 
-for (var i = 0; i<=4; i++)
+for (var i = 0; i<=3; i++)
 {
 	velo = random_range(2.5, 3)
 	bomb = instance_create(x,y,o_bulletPlayer_Bomb)

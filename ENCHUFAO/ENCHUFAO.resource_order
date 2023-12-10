@@ -916,6 +916,7 @@
     {"name":"PlayerStats_Red","order":6,"path":"scripts/PlayerStats_Red/PlayerStats_Red.yy",},
     {"name":"s_enchufeChargeHP_OutEXTERNAL","order":22,"path":"sprites/s_enchufeChargeHP_OutEXTERNAL/s_enchufeChargeHP_OutEXTERNAL.yy",},
     {"name":"s_enchufe_HP","order":3,"path":"sprites/s_enchufe_HP/s_enchufe_HP.yy",},
+    {"name":"AddHighScoreStat","order":11,"path":"scripts/AddHighScoreStat/AddHighScoreStat.yy",},
     {"name":"o_partEnergy","order":12,"path":"objects/o_partEnergy/o_partEnergy.yy",},
     {"name":"o_strandedShip","order":22,"path":"objects/o_strandedShip/o_strandedShip.yy",},
     {"name":"s_shieldBar_out32","order":11,"path":"sprites/s_shieldBar_out32/s_shieldBar_out32.yy",},

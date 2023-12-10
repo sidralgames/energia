@@ -4,7 +4,7 @@
 if (!pause)
 	{
 		
-		info = irandom(9);
+		info = irandom(14);
 		pause = true;
 		spriteBack=0;
 		selected=0;

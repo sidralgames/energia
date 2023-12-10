@@ -6,7 +6,8 @@ function SpawnEnemyBasicAndSniper()
 	{
 		obj = choose(o_enemy, o_enemy, o_enemy, o_enemy, o_enemySniper)
 		
-		enemies = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2+random_range(-28,28), cy*CELL_HEIGHT+CELL_HEIGHT/2+random_range(-10,10), "Enemies", o_enemy)
+		enemies = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2+random_range(-28,28), 
+		cy*CELL_HEIGHT+CELL_HEIGHT/2+random_range(-10,10), "Enemies", obj)
 		if instance_exists(enemies)
 		{
 

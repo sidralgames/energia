@@ -29,5 +29,6 @@ function BossGarbanzoState_Attack()
 			laserCreated = false
 			recover = false;
 			recoverTime = random_range(120,180);
+			clearWall = false;
 		}
 }

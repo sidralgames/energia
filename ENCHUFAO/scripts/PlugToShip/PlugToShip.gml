@@ -9,8 +9,8 @@ function PlugToShip()
 	
 	pluggedShip = true;
 	
-	ship = instance_nearest(x,y,o_chargerStrandedShip);
-	thisStrandedShip = ship.myShip;
+	chargerStrandedShip = instance_nearest(x,y,o_chargerStrandedShip);
+	thisStrandedShip = chargerStrandedShip.myShip;
 	
 	instance_destroy(thisStrandedShip.myCable);
 	with (thisStrandedShip)
@@ -22,13 +22,13 @@ function PlugToShip()
 	//ship._vpush = thisStrandedShip._vpush;
 	global.pluggingShip = true;
 	thisStrandedShip.connected = true;
-	ship.connected = true;
+	chargerStrandedShip.connected = true;
 	thisStrandedShip.connectedToEnchufe = false;
 	thisStrandedShip.speed = 0;
 	thisStrandedShip._hpush = 0;
 	thisStrandedShip._vpush = 0;
 	thisStrandedShip.hspeed = 0;
 	thisStrandedShip.vspeed = 0;
-	global.xToPlug = ship.x;
-	global.yToPlug = ship.y;
+	global.xToPlug = chargerStrandedShip.x;
+	global.yToPlug = chargerStrandedShip.y;
 }

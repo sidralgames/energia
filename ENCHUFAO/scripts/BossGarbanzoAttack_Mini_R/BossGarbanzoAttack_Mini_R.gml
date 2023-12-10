@@ -1,9 +1,14 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function BossGarbanzoAttack_1b()
+function BossGarbanzoAttack_Mini_R()
 {
 	image_index = 3;
 	
+	if (clearWall = false)
+	{
+		instance_create(x+40, y+57,o_exploBomb);
+		clearWall = true;
+	}
 	if (alarm[4] <= 0)
 	{
 		diffX = choose(random_range(-250, 250));

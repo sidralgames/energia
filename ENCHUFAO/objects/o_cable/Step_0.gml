@@ -57,12 +57,12 @@ if (haveToUpdate = true)
 if (global.pluggingShip)
 {
 	global.pluggingShip = false;
-	ship = instance_nearest(x,y,o_chargerStrandedShip);
+	chargerStrandedShip = instance_nearest(x,y,o_chargerStrandedShip);
 	
-	if instance_exists(ship)
+	if instance_exists(chargerStrandedShip)
 	{
 		
-		rope1.vertexAttachTo(last, ship);
+		rope1.vertexAttachTo(last, chargerStrandedShip);
 	}
 }
 
@@ -70,8 +70,8 @@ if (global.unPluggingShip)
 {
 
 	global.unPluggingShip = false;
-	ship = instance_nearest(x,y,o_chargerStrandedShip);
-	if instance_exists(ship)
+	chargerStrandedShip = instance_nearest(x,y,o_chargerStrandedShip);
+	if instance_exists(chargerStrandedShip)
 	{
 		rope1.vertexDeAttachTo(last)
 	}

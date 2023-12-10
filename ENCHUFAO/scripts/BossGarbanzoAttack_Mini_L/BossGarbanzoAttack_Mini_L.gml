@@ -2,6 +2,11 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function BossGarbanzoAttack_Mini_L()
 {
+	if (clearWall = false)
+	{
+		instance_create(x-40, y+57,o_exploBomb);
+		clearWall = true;
+	}
 	image_index = 2;
 	
 	//bossSpeed = lerp(bossSpeed, 0, 0.09)

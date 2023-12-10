@@ -19,5 +19,5 @@ hitByLaser = false;
 
 offset = irandom(360)
 
-_hp = 5;
+_hp = 3;
 flashAlpha = 0;

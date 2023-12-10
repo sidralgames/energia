@@ -16,8 +16,8 @@ function PluggedToShip()
 	}
 	
 		
-	global.xToPlug = ship.x;
-	global.yToPlug = ship.y;
+	global.xToPlug = chargerStrandedShip.x;
+	global.yToPlug = chargerStrandedShip.y;
 		
 	part_particles_create(global.enchufe_sys, global.xToPlug+random_range(-18,18), global.yToPlug+random_range(-18,18), global.enchufePart , 10)
 	
@@ -34,8 +34,8 @@ function PluggedToShip()
 		_hpush = lengthdir_x(1,dir)
 		_vpush = lengthdir_y(1,dir)
 		alarm[5] = 20;
-		ship._hpush -= lengthdir_x(1.5,dir)
-		ship._vpush -= lengthdir_y(1.5,dir)
+		chargerStrandedShip._hpush -= lengthdir_x(1.5,dir)
+		chargerStrandedShip._vpush -= lengthdir_y(1.5,dir)
 	}
 	
 	if (key_x) 

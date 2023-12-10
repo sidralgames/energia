@@ -8,8 +8,8 @@ if (timesTotal > 0)
 	{
 		if instance_exists(o_playerShip)
 		{
-			 cx = 1*(irandom(width_)+1)//;
-			 cy = 1*(irandom(height_)+1);//height div 2;
+			 cx = 1*(irandom(width_))//;
+			 cy = 1*(irandom(height_));//height div 2;
 			
 			 exM = cx * CELL_WIDTH+CELL_WIDTH/2;
 			 eyM = cy * CELL_HEIGHT+CELL_HEIGHT/2;
@@ -26,7 +26,7 @@ if (timesTotal > 0)
 					if (spawners >= 1) 
 					{
 						padreNear = instance_nearest(exM, eyM,o_enemySpawnerIndicator_F)
-						if point_distance(exM,eyM,padreNear.x, padreNear.y) > 400
+						if point_distance(exM,eyM,padreNear.x, padreNear.y) > 300
 						{
 							if (global.level = 1)
 							{

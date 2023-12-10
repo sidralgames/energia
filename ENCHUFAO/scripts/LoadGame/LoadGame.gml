@@ -16,6 +16,7 @@ function LoadGame()
 	global.enemiesKilledTotalAch = ini_read_real("ach","EnemiesKilledTotal", 0);
 	
 	global.bestLevelRun = ini_read_real("stats","BestRun", 0);
+	global.HighScore = ini_read_real("stats","HighScore", 0);
 	global.totalDeaths = ini_read_real("stats","TotalDeaths", 0);
 	global.totalBullets = ini_read_real("stats","TotalBullets", 0);
 	global.totalBombs = ini_read_real("stats","TotalBombs", 0);

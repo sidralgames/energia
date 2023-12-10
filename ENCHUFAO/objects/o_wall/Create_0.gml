@@ -10,11 +10,18 @@ oddsDisc = max(20, 200 - global.level);
 
 if (room = Sala_BossWorm)
 {
-	oddsEnemyMouth = 5;
+	oddsEnemyMouth = 4;
 }
 else
 {
-	oddsEnemyMouth = max(5, 10 - global.level);
+	if (global.level <=5)
+	{
+		oddsEnemyMouth = 20 - global.level;
+	}
+	else
+	{
+		oddsEnemyMouth = max(5, 10 - global.level);
+	}
 }
 
 oddsTurret = max(5,20 - global.level);

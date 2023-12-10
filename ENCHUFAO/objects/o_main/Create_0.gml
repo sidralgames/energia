@@ -380,6 +380,7 @@ AddAch500Enemies();
 global.statsList = ds_map_create();
 global.numberOfStats = 0;
 AddBestRunStat();
+AddHighScoreStat();
 AddTotalDeathsStat();
 AddTotalTimesPlugStat();
 AddTotalConnectedTimeStat();

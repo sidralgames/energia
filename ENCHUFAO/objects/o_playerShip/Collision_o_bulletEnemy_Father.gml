@@ -4,7 +4,7 @@ if (global.shields<1)
 {
 	if (tocado = false)
 	{
-		gamepad_set_vibration(0,0.3,0.3);
+		gamepad_set_vibration(0,0.5,0.5);
 		alarm[4] = 10;
 		instance_destroy(other)
 		audio_play_sound_on(global.audioEmitter, snd_hit, false, 50)

@@ -208,7 +208,8 @@ if (connectedToShip)
 {
 	if (key_x)
 	{
-		if (connectedToShip.trapped = false) && (pluggedShip = false) && (o_charger.overcharged = false) && alarm[4] <=0
+		chargerStrandedShip = connectedToShip;
+		if (chargerStrandedShip.trapped = false) && (pluggedShip = false) && (o_charger.overcharged = false) && alarm[4] <=0
 		{
 			PlugToShip();
 		}
