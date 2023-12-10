@@ -21,6 +21,6 @@ function EnemiesToSpawnLVL5()
 	else
 	if(enemyToSpawn > 8)
 	{
-		enemy = choose(o_enemyMines,o_enemyBomber,o_enemyMines,o_enemyBomber,o_enemyMouth_Free, o_enemySegment)
+		enemy = choose(o_enemyMines,o_enemyBomber,o_enemyMines,o_enemyBomber,o_enemyMouth_Free, o_enemySegment,o_enemyShield_v2)
 	}
 }

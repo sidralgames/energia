@@ -26,6 +26,6 @@ function EnemiesToSpawnLVL11()
 	else
 	if(enemyToSpawn > 12)
 	{
-		enemy = choose(o_enemyMouth_Free, o_BigWorm_Mouth)
+		enemy = choose(o_enemyMouth_Free, o_BigWorm_Mouth,)
 	}
 }

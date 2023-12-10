@@ -23,6 +23,7 @@ if instance_exists(inst)
 		enchufe = inst.enchufe;
 		if instance_exists(enchufe)
 		{
+			enchufe.occupied = false;
 			rope1.vertexDeAttachTo(last);
 			counting=true;
 		}

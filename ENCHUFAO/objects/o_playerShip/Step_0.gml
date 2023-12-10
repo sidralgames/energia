@@ -34,8 +34,6 @@ if (global.hp<=1)
 	{
 		contBurnPart = random_range(5,7) ;
 		part_particles_create(global.partSmoke_sys, x+lengthdir_x(random_range(((sprite_height-4)/2),((sprite_height-6)/2))*side, _angle+90),y+lengthdir_y(random_range(((sprite_height-4)/2),((sprite_height-6)/2))*side, _angle+90), global.partSmoke, 1);
-		
-		
 	}
 	
 }

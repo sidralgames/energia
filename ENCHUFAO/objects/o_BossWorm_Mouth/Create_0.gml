@@ -79,7 +79,7 @@ affectedByLaserTrap = false;
 
 WormBoss = true;
 onlyHead = false;
-headHp = 50;
+headHp = 70;
 regainHP = false;
 
 contTerrMin = 60;

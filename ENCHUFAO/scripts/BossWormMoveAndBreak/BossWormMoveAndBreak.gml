@@ -189,7 +189,7 @@ function BossWormMoveAndBreak()
 		{
 			if (global.BossWormHP <= headHp) && (regainHP = false)
 			{
-				global.BossWormHP+=1;
+				global.BossWormHP+=5;
 			}
 			if (global.BossWormHP >= headHp)
 			{

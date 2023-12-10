@@ -45,8 +45,8 @@ if tile_meeting(x,y,"Tiles")
 }
 
 isMegaEnemy = false;
-isMega = irandom(5);
-oddsBattery = 5;
+isMega = irandom(4);
+oddsBattery = 2;
 
 if (isMega = 0) 
 {

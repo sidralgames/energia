@@ -42,7 +42,7 @@ if tile_meeting(x,y,"Tiles")
 }
 
 isMega = irandom(5);
-oddsBattery = 4;
+oddsBattery = 2;
 
 if (isMega = 0)
 {

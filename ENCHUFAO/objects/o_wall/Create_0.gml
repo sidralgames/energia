@@ -3,8 +3,8 @@
 
 alarm[1] = 70;
 
-oddsLaserV = max(10, 60 - global.level);
-oddsLaserH = max(10, 60 - global.level);
+oddsLaserV = max(10, 65 - global.level);
+oddsLaserH = max(10, 65 - global.level);
 
 oddsDisc = max(20, 200 - global.level);
 
@@ -16,7 +16,7 @@ else
 {
 	if (global.level <=5)
 	{
-		oddsEnemyMouth = 20 - global.level;
+		oddsEnemyMouth = 25 - global.level;
 	}
 	else
 	{

@@ -42,9 +42,9 @@ waitingSpeed = random_range(0.4,0.7)
 breakDistance = random_range(0.005, 0.05)
 accelDistance = random_range(0.005, 0.05);
 isMegaEnemy = false
-isMega = irandom(5);
+isMega = irandom(4);
 
-oddsBattery = 3;
+oddsBattery = 2;
 
 if (isMega = 0)
 {

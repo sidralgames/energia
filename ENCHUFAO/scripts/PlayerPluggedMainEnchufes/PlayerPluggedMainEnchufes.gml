@@ -8,8 +8,8 @@ function PlayerPluggedMainEnchufes()
 		{
 			if (inEnchufe)
 			{
-				canModify = (inEnchufe.enchufeActive) && (inEnchufe.isPETA_F == false)
-				&& (inEnchufe.enchufeBomb == false) && (inEnchufe.dying == false);
+				canModify = (inEnchufe.dying == false) && (inEnchufe.enchufeActive) && (inEnchufe.isPETA_F == false)
+				&& (inEnchufe.enchufeBomb == false) ;
 				
 				enchufeMimic = (inEnchufe.isMimic);
 				
