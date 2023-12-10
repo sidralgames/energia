@@ -36,7 +36,8 @@ function Enemy_ChasingFarSniper()
 		{
 		    hspeed = -hspeed*bnc;
 		}
-		else if (tile_meeting(x,y+vspeed,"Tiles"))
+		
+		if (tile_meeting(x,y+vspeed,"Tiles"))
 		{
 		    vspeed = -vspeed*bnc;
 		}
@@ -50,5 +51,6 @@ function Enemy_ChasingFarSniper()
 		{
 			EnemyBomberIA();
 		}
+		
 	}
 }

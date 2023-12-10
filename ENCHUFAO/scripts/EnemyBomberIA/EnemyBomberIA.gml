@@ -23,11 +23,11 @@ function EnemyBomberIA()
 		hspeed = lerp(hspeed, 0, 0.09)
 		vspeed = lerp(vspeed, 0, 0.09)
 		
-		if (abs(speed) <= 0.1)
-		{
-			direction = _angle;
-			recoil = 0;
-		}
+		//if (abs(speed) <= 0.1)
+		//{
+		//	direction = _angle;
+		//	recoil = 0;
+		//}
 	}
 	
 	inScreen =  (x > __view_get( e__VW.XView, 0 )-50 && x < __view_get( e__VW.XView, 0 )+710) &&

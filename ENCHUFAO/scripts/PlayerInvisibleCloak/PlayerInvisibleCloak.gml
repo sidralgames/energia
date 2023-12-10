@@ -35,7 +35,7 @@ function PlayerInvisibleCloak()
 	
 		if (abs(_hpush) > 0.1 || abs(_vpush) > 0.1) && (dirH != 0 || dirV !=0)
 		{
-			part_particles_create(global.naveP_cloak_sys, x,y, global.naveP_cloak, 3);
+			part_particles_create(global.naveP_cloak_sys, x,y, global.naveP_cloak, 2);
 		}
 	}
 	else
@@ -57,6 +57,6 @@ function PlayerInvisibleCloak()
 			_alpha = 1;
 			layer_set_visible("CLOAK", false);
 		}
-		part_particles_create(global.naveP_sys, x, y, global.naveP , 5);
+		part_particles_create(global.naveP_sys, x, y, global.naveP , 4);
 	}
 }

@@ -71,27 +71,16 @@ oddsBattery = 4;
 if (isMega = 0) 
 {
 	global.MegaEnemiesInLevel+=1;
-	sprite_index = s_enemySniperMega;
+	sprite_index = s_enemyLaserGreen;
 	bulletVelo = 5.75;
 	isMegaEnemy = true;
 	_hp = 12;
 	offBullet = 2;
 	precisionInitial = 2.25;
 	precisionPlayer = 0.3;
-	
-	if (global.BatteriesInLevel <= global.BatteriesInLevel_Max)
-	{
-		if irandom(oddsBattery) = oddsBattery
-		{
-			cable = instance_create_layer(x,y,"Cable", o_enemyCable);
-			global.BatteriesInLevel+=1;
-		}
-		else
-		{
-			cable = -1;
-		}
-	}
 }
+
+cable = instance_create_layer(x,y,"Cable", o_enemyCableCharger);
 
 enemySpeed = enemySpeedInitial;
 precision= precisionInitial;

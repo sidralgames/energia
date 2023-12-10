@@ -8,6 +8,7 @@ if (other.damagePlayer == true)
 		{
 			gamepad_set_vibration(0,0.5,0.5);
 			alarm[4] = 10;
+			flashAlpha = 1;
 			audio_play_sound_on(global.audioEmitter, snd_hit, false, 50)
 			alarm[1] = 30
 			tocado = true;
@@ -22,6 +23,7 @@ if (other.damagePlayer == true)
 		{
 			gamepad_set_vibration(0,0.5,0.5);
 			alarm[4] = 10;
+			flashAlpha = 1;
 			alarm[1] = 30
 			tocado = true;
 			global.shields-=1;

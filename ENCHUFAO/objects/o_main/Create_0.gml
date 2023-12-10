@@ -202,7 +202,7 @@ instance_create_layer(-100,-100,"Part",o_partBalaBossGarbanzo);
 instance_create_layer(-100,-100,"Part",o_partNaveEnemy_Mini);
 instance_create_layer(-100,-100,"Part",o_partNaveP_cloak)
 instance_create_layer(-100,-100,"Part",o_partNaveFriend)
-instance_create_layer(-100,-100,"Part",o_partSmoke)
+instance_create_layer(-100,-100,"ShieldEnemy",o_partSmoke)
 instance_create_layer(-100,-100,"Part",o_partGreen);
 
 

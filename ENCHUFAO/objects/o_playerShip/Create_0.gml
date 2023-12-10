@@ -7,6 +7,12 @@ maxConectRadBoss = 40;
 minConectRadStandard  = 17;
 minConectRadBoss  = 23;
 SetFxParameters();
+flashAlpha = 0;
+side=0;
+creatingSmoke = false;
+contSmoke = 0;
+contBurnPartMax = 8;
+contBurnPart = random_range(contBurnPartMax-1,contBurnPartMax+2) ;
 
 if (room != Sala_Inicio) && (room != Sala_Upgade)
 {

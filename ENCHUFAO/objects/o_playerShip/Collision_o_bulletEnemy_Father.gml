@@ -6,6 +6,7 @@ if (global.shields<1)
 	{
 		gamepad_set_vibration(0,0.5,0.5);
 		alarm[4] = 10;
+		flashAlpha = 1;
 		instance_destroy(other)
 		audio_play_sound_on(global.audioEmitter, snd_hit, false, 50)
 		alarm[1] = 30

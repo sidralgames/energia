@@ -3,7 +3,7 @@
 
 global.partSmoke_sys = part_system_create();
 
-part_system_depth(global.partSmoke_sys,layer_get_depth("Part"));	
+part_system_depth(global.partSmoke_sys,layer_get_depth("ShieldEnemy"));	
 
 
 //Particle
@@ -15,7 +15,7 @@ part_type_alpha2(global.partSmoke, 1,1);
 part_type_sprite(global.partSmoke,s_partSmoke,true,true,false)
 part_type_speed(global.partSmoke,0,0,0,0);
 part_type_direction(global.partSmoke,0,0,0,1);
-part_type_life(global.partSmoke, 20,30);
+part_type_life(global.partSmoke, 25,35);
 
 
 

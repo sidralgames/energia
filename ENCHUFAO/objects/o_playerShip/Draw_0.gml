@@ -19,8 +19,16 @@ if (global.externalBatteryOn)
 
 DrawPotentialConnection();
 
-
-draw_sprite_ext(global.spriteShip,image_index,x,y,1,1,_angle,_colorWhite,_alpha)
+if (tocado) && (alarm[4] > 2)
+{
+	shader_set(shFlash)
+	draw_sprite_ext(global.spriteShip,image_index,x,y,1,1,_angle,c_white,flashAlpha)
+	shader_reset()
+}
+else
+{
+	draw_sprite_ext(global.spriteShip,image_index,x,y,1,1,_angle,_colorWhite,_alpha)
+}
 
 if (global.ammo <= global.ammoMax/5)
 {
