@@ -7,7 +7,6 @@ if (global.allPETAisMulti)
 {
 	sprite_index = s_petaALLInTile;
 	peta = o_enchufePETAAll;
-	
 }
 else
 {
@@ -29,6 +28,7 @@ else
 	{
 		peta = choose(o_enchufePETALaser, o_enchufeBombs);	
 	}
+	
 }
 
 if collision_circle(x,y,70, o_PETAinTile, false, true)

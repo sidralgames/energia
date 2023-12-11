@@ -81,12 +81,11 @@ vsp_f =0;
 _hp=3;
 takeCover = false;
 shocked = false;
-waiting = false;
+waiting = true;
 bounced = false;
 electrocutated = false;
 shocked = false;
 tocado = false;
-waiting = false;
 flashAlpha = 0;
 
 

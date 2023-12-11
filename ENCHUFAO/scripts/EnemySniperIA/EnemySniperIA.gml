@@ -2,44 +2,98 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function EnemySniperIA()
 {
-	
 	if (recoil <=0)
 	{
-		if (tile_meeting(x+hspeed,y,"Tiles"))
+		if (aiming)
 		{
-		    hspeed = -hspeed*bnc;
-		}
+			var a = point_direction(x, y, o_playerShip.x,o_playerShip.y);
+			direction += sign(dsin(a - direction)) * (precision * global.relativeSpeed);
+			_angle = direction;
+			
+			if (tile_meeting(x+hspeed,y,"Tiles"))
+			{
+			    hspeed = -hspeed*bnc;
+			}
+			else if (tile_meeting(x,y+vspeed,"Tiles"))
+			{
+			    vspeed = -vspeed*bnc;
+			}
+			
+		} 
+		else if (global.haveInvisibiltyCloak && global.invisibleCloak == true)
+		{
+			path_end()
+			var a = point_direction(x, y, x+diffX,y+diffY);
+			direction += sign(dsin(a - direction)) * (precision * global.relativeSpeed);
+			_angle = direction;
+			if (alarm[10] <= 0)
+			{
+				speed = enemySpeed * min(1, global.relativeSpeed+0.2);
+			}
+			else
+			{
+				speed = enemySpeed
+			}
 		
-		if (tile_meeting(x,y+vspeed,"Tiles"))
-		{
-		    vspeed = -vspeed*bnc;
+			if (tile_meeting(x+hspeed,y,"Tiles"))
+			{
+			    hspeed = -hspeed*bnc;
+			}
+			else if (tile_meeting(x,y+vspeed,"Tiles"))
+			{
+			    vspeed = -vspeed*bnc;
+			}
+				
+		
 		}
-		speed = lerp(speed, enemySpeed * min(1, global.relativeSpeed+0.2), 0.05);
-		var a = point_direction(x, y, o_playerShip.x,  o_playerShip.y);
-		direction += sign(dsin(a - direction)) * (precision * global.relativeSpeed);
-		_angle = direction;
+		else
+		{
+		
+			mp_grid_path(gridRoom1, myPath, x, y, o_playerShip.x ,o_playerShip.y, true);
+	
+			if tile_meeting(x + lengthdir_x(25, 1), y+ lengthdir_y(25, 1), "Tiles") ||
+			tile_meeting(x + lengthdir_x(25, 90), y+ lengthdir_y(25, 90), "Tiles") ||
+			tile_meeting(x + lengthdir_x(25, 180), y+ lengthdir_y(25, 180), "Tiles") ||
+			tile_meeting(x + lengthdir_x(25, 270), y+ lengthdir_y(25, 270), "Tiles") || 
+			tile_meeting(x, y, "Tiles")
+			{
+				if (alarm[10] <= 0)
+				{
+					_speed = enemySpeed * min(1, global.relativeSpeed+0.2);
+				}
+				else
+				{
+					_speed = enemySpeed;
+				}
+				path_start(myPath,_speed ,path_action_stop, false)
+				_angle = direction;
+
+			}
+			else
+			{
+				path_end()
+				var a = point_direction(x, y, o_playerShip.x+diffX,  o_playerShip.y+diffY);
+				direction += sign(dsin(a - direction)) * (precision * global.relativeSpeed);
+				_angle = direction;
+				if (alarm[10] <= 0)
+				{
+					speed = enemySpeed * min(1, global.relativeSpeed+0.2);
+				}
+				else
+				{
+					speed = enemySpeed
+				}
+			}
+		}
 	}
 	else
 	{
-		if (tile_meeting(x+hspeed,y,"Tiles"))
-		{
-		    hspeed = -hspeed*bnc;
-		}
-		
-		if (tile_meeting(x,y+vspeed,"Tiles"))
-		{
-		    vspeed = -vspeed*bnc;
-		}
 		hspeed = lerp(hspeed, 0, 0.09)
 		vspeed = lerp(vspeed, 0, 0.09)
 		
-		//if (abs(speed) <= 0.1)
-		//{
-		//	direction = _angle;
-		//	recoil = 0;
-		//}
 	}
 	
+	speed = lerp(speed, enemySpeed * min(1, global.relativeSpeed+0.2), 0.05);
 	inScreen =  (x > __view_get( e__VW.XView, 0 )-50 && x < __view_get( e__VW.XView, 0 )+710) &&
 	(y > __view_get( e__VW.YView, 0 )-50 && y < __view_get( e__VW.YView, 0 )+410)
 

@@ -2,20 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Enemy_ChasingFar()
 {
-//--------BOUNCE WITH EACH OTHER---------//
-	//enemyToBounce = collision_circle(x,y,10,o_enemyP,false,true)
-	//if  enemyToBounce && (enemyToBounce.canBounce) && (!bounced)
-	//{
-	//	bounced = true;
-	//	alarm[8] = 10;
-	//    direction = direction+choose(random_range(30,50),random_range(-30,-50))
-	//	_angle = direction;
-	//} 
-	
-	//if (alarm[8] <= 0)
-	//{
-	//	bounced = false;	
-	//}
+
 	
 //-----------TAKE COVER-------------//
 	EnemyTakeCover();
@@ -25,10 +12,6 @@ if (isMotherShip)
 {
 	part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(13,_angle), y-lengthdir_y(13,_angle), global.naveEnemy_Waiting , 1)
 }
-else if (isSniper)
-{
-	part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(5,_angle), y-lengthdir_y(5,_angle), global.naveEnemy_Waiting , 1)
-}
 else
 {
 	part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(12,_angle), y-lengthdir_y(12,_angle), global.naveEnemy_Waiting , 1)
@@ -37,47 +20,78 @@ else
 	if (alarm[4] <= 0)
 	{
 	
-		diffX = choose(random_range(-250, -200), random_range(200,250));
-		diffY = choose(random_range(-250, -200), random_range(200,250));
+		diffX = choose(random_range(-10, -20), random_range(20,10));
+		diffY = choose(random_range(-10, -20), random_range(20,10));
 		alarm[4] = random_range(30, 60)
 	}
 
 	if instance_exists(o_playerShip)
 	{
-			if (point_distance(x,y,o_playerShip.x, o_playerShip.y) <= 200)
+			if (global.haveInvisibiltyCloak && global.invisibleCloak == true)
+		{
+			path_end()
+			var a = point_direction(x, y, x+diffX,y+diffY);
+			direction += sign(dsin(a - direction)) * (precision * global.relativeSpeed);
+			_angle = direction;
+			if (alarm[10] <= 0)
 			{
-					myPath = path_add();
-					mp_grid_path(gridRoom1, myPath, x, y, o_playerShip.x,  o_playerShip.y, true);
-					changedSpeed = false;
-					EnemyBasicChasingIAFar();
-			
+				speed = enemySpeed * min(1, global.relativeSpeed+0.2);
 			}
 			else
 			{
-				if (changedSpeed = false)
+				speed = enemySpeed
+			}
+		
+			if (tile_meeting(x+hspeed,y,"Tiles"))
+			{
+			    hspeed = -hspeed*bnc;
+			}
+			else if (tile_meeting(x,y+vspeed,"Tiles"))
+			{
+			    vspeed = -vspeed*bnc;
+			}
+				
+		
+		}
+		else
+		{
+		
+			mp_grid_path(gridRoom1, myPath, x, y, o_playerShip.x ,o_playerShip.y, true);
+	
+			if tile_meeting(x + lengthdir_x(20, 1), y+ lengthdir_y(20, 1), "Tiles") ||
+			tile_meeting(x + lengthdir_x(20, 90), y+ lengthdir_y(20, 90), "Tiles") ||
+			tile_meeting(x + lengthdir_x(20, 180), y+ lengthdir_y(20, 180), "Tiles") ||
+			tile_meeting(x + lengthdir_x(20, 270), y+ lengthdir_y(20, 270), "Tiles") || 
+			tile_meeting(x, y, "Tiles")
+			{
+				if (alarm[10] <= 0)
 				{
-					changedSpeed = true;
-					//_hpush = hspeed;
-					//_vpush = vspeed;
-					speed = 0;	
+					_speed = enemySpeed * min(1, global.relativeSpeed+0.2);
 				}
-				path_end();
+				else
+				{
+					_speed = enemySpeed;
+				}
+				path_start(myPath,_speed ,path_action_stop, false)
+				_angle = direction;
+
+			}
+			else
+			{
+				path_end()
 				var a = point_direction(x, y, o_playerShip.x+diffX,  o_playerShip.y+diffY);
 				direction += sign(dsin(a - direction)) * (precision * global.relativeSpeed);
 				_angle = direction;
-				speed = enemySpeed * min(1, global.relativeSpeed+0.2);
-				
-				
-					if (tile_meeting(x+hspeed,y,"Tiles"))
-					{
-					    hspeed = -hspeed*bnc;
-					}
-					else if (tile_meeting(x,y+vspeed,"Tiles"))
-					{
-					    vspeed = -vspeed*bnc;
-					}
-				
+				if (alarm[10] <= 0)
+				{
+					speed = enemySpeed * min(1, global.relativeSpeed+0.2);
+				}
+				else
+				{
+					speed = enemySpeed
+				}
 			}
+		}
 			
 		if (!isMotherShip) && (canHaveAShield)
 		{

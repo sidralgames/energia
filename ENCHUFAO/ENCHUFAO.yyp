@@ -105,6 +105,8 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Parts","folderPath":"folders/Sprites/Parts.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Player","folderPath":"folders/Sprites/Player.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"UI","folderPath":"folders/Sprites/UI.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Worm","folderPath":"folders/Objetos/Enemies/Bosses/Worm.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Garbanzo","folderPath":"folders/Objetos/Enemies/Bosses/Garbanzo.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"ChubbyChoo-SemiBold.ttf","CopyToMask":3035426170322551022,"filePath":"datafiles",},

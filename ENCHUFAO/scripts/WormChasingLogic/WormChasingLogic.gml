@@ -9,28 +9,9 @@ function WormChasingLogic()
 	{
 		contCanPlug--;
 	}
-		
-	if (inEnchufe) && (contCanPlug<=0)
-	{	
-		enchufe = inEnchufe;
-		if (!enchufe.occupied) && (!plugged) && (!enchufe.enchufeBomb)
+	
+		if (plugged)
 		{
-			enchufe.occupied = true;
-			plugging = true;
-			contPlugged = random_range(contPluggedMin, contPluggedMax)
-		}
-		
-		if (_hp <=0)
-		{
-			enchufe.occupied = false;
-			enchufe.occupied = false;
-			enchufe.enchufeOvercharged = true;
-			enchufe.contOvercharged = 250;
-		}
-	}
-		
-	if (plugged)
-	{
 		if (_hp <=0)
 		{
 			enchufe.occupied = false;
@@ -70,4 +51,25 @@ function WormChasingLogic()
 		EnemyMouthFree_PluggedAttack();
 			
 	}
+	
+	if (inEnchufe) && (contCanPlug<=0)
+	{	
+		enchufe = inEnchufe;
+		if (!enchufe.occupied) && (!plugged) && (!enchufe.enchufeBomb)
+		{
+			enchufe.occupied = true;
+			plugging = true;
+			contPlugged = random_range(contPluggedMin, contPluggedMax)
+		}
+		
+		if (_hp <=0)
+		{
+			enchufe.occupied = false;
+			enchufe.occupied = false;
+			enchufe.enchufeOvercharged = true;
+			enchufe.contOvercharged = 250;
+		}
+	}
+		
+
 }

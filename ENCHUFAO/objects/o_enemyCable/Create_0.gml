@@ -35,8 +35,14 @@ rope1.vertexAttachTo(first, inst);
 
 
 plugged = false;
-battery = choose(o_smartBulletsPickUp, o_BouncingBulletsPickUp, o_piercingBulletsPickUp,
-					o_ExploBulletsPickUp, o_PushingBulletsPickUp, o_SplitBulletsPickUp, o_BurningBulletsPickUp)
+battery = choose(
+o_smartBulletsPickUp, o_smartBulletsPickUp,
+o_BouncingBulletsPickUp, o_BouncingBulletsPickUp,
+o_piercingBulletsPickUp, o_piercingBulletsPickUp,
+o_PushingBulletsPickUp, o_PushingBulletsPickUp,
+o_SplitBulletsPickUp, o_SplitBulletsPickUp,
+o_BurningBulletsPickUp, o_BurningBulletsPickUp,
+o_ExploBulletsPickUp)
 		//// Attach an object to its last vertex
 instTope = instance_create_layer(x,y,"Enemies", battery);
 instTope.inEnemy = true;

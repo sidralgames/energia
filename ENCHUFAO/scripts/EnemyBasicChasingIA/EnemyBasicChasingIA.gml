@@ -22,22 +22,6 @@ function EnemyBasicChasingIA()
 	{
 		inEnchufe = collision_circle(x,y,30,o_enchufeStandard_Father,false,true)
 		
-		if (contCanPlug >0)
-		{
-			contCanPlug--;
-		}
-		
-		if (inEnchufe) && (contCanPlug<=0)
-		{	
-			enchufe = inEnchufe;
-			if (!enchufe.occupied) && (!plugged) && (!enchufe.enchufeBomb)
-			{
-				enchufe.occupied = true;
-				plugging = true;
-				contPlugged = random_range(contPluggedMin, contPluggedMax)
-			}
-		}
-		
 		if (plugged)
 		{
 			if (_hp <= 0)
@@ -77,6 +61,24 @@ function EnemyBasicChasingIA()
 		{
 			BasicEnemyMovement();
 		}
+		
+		if (contCanPlug >0)
+		{
+			contCanPlug--;
+		}
+		
+		if (inEnchufe) && (contCanPlug<=0)
+		{	
+			enchufe = inEnchufe;
+			if (!enchufe.occupied) && (!plugged) && (!enchufe.enchufeBomb)
+			{
+				enchufe.occupied = true;
+				plugging = true;
+				contPlugged = random_range(contPluggedMin, contPluggedMax)
+			}
+		}
+		
+		
 	}
 	else
 	{

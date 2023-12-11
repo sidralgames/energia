@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Bosses",
-    "path": "folders/Objetos/Enemies/Bosses.yy",
+    "name": "Garbanzo",
+    "path": "folders/Objetos/Enemies/Bosses/Garbanzo.yy",
   },
   "parentObjectId": null,
   "persistent": false,

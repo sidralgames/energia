@@ -28,7 +28,7 @@ isBomber = false;
 maxLenght =600;
 reloadTime =400;
 
-offBullet = 1.5;
+
 playerAimed = false;
 
 
@@ -58,7 +58,7 @@ maxDistance = 100;
 waitingSpeed = random_range(0.4,0.7)
 breakDistance = random_range(0.005, 0.05)
 accelDistance = random_range(0.005, 0.05);
-bulletVelo = 5.25;
+bulletVelo = 5.75;
 
 isMegaEnemy = false
 isMega = irandom(4);
@@ -67,15 +67,17 @@ enemySpeedInitial = random_range(0.5, 0.75);
 precisionInitial = 2;
 precisionPlayer = 0.2;
 
+offBullet = 1.75;
+
 oddsBattery = 2;
 if (isMega = 0) 
 {
 	global.MegaEnemiesInLevel+=1;
 	sprite_index = s_enemySniperMega;
-	bulletVelo = 5.75;
+	bulletVelo = 6.5;
 	isMegaEnemy = true;
 	_hp = 12;
-	offBullet = 2;
+	offBullet = 2.5;
 	precisionInitial = 2.25;
 	precisionPlayer = 0.3;
 	
