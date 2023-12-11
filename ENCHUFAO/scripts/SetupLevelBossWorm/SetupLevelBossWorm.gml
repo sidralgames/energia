@@ -142,33 +142,33 @@ function SetupLevelBossWorm()
 					}
 					
 			
-					if (irandom(oddsEnchufeLaser) == oddsEnchufeLaser) && (enchufeLaser = false)
-					{
-						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
+					//if (irandom(oddsEnchufeLaser) == oddsEnchufeLaser) && (enchufeLaser = false)
+					//{
+					//	nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 					
-						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 100)
-						{
-							instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Laser); 
-							enchufeLaser = true;
-						}
-					}
+					//	if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 100)
+					//	{
+					//		instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Laser); 
+					//		enchufeLaser = true;
+					//	}
+					//}
 			
-					if (irandom(oddsEnchufeAmmo) == oddsEnchufeAmmo) && (enchufeAmmo = false)
-					{
-						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
+					//if (irandom(oddsEnchufeAmmo) == oddsEnchufeAmmo) && (enchufeAmmo = false)
+					//{
+					//	nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 					
-						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 10)
-						{
-							instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Ammo); 
-							enchufeAmmo = true;
-						}
-					}
+					//	if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 10)
+					//	{
+					//		instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Ammo); 
+					//		enchufeAmmo = true;
+					//	}
+					//}
 				}
 		    } 
 	    }
 	}
 
-	if (!enchufeAmmo) || (hasBoss = false) || (!enchufeLaser)
+	if  (hasBoss = false) //|| (!enchufeLaser) || (!enchufeAmmo) ||
 		|| (!enchufeHP1) || (!enchufeHP2)
 	{
 		room_restart();

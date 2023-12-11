@@ -29,4 +29,5 @@ for (var i = 0; i<=3; i++)
 	bomb._vpush = lengthdir_y(velo, offsetInitial+90*i)
 	bomb.sprite_index = s_bombCluster;
 	bomb.scale = 0.8;
+	bomb.alarm[0] = random_range(5,10)
 }

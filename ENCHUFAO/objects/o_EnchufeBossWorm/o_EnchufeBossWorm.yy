@@ -12,8 +12,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Worm",
-    "path": "folders/Objetos/Enemies/Bosses/Worm.yy",
+    "name": "Enemies",
+    "path": "folders/Objetos/Enemies.yy",
   },
   "parentObjectId": {
     "name": "o_enchufe_Father",

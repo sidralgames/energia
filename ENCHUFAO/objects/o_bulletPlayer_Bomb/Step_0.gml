@@ -8,7 +8,7 @@ _angle += max(0.5*sign(_hpush), 5*(abs(_hpush)),0.5*sign(_vpush), 5*(abs(_vpush)
 MoveZeroGrv_Bomb();
 
 
-if (alarm[0] <=0) && (abs(_hpush) <= 0.05 && abs(_vpush) <= 0.05)
+if (alarm[0] <=0) && (abs(_hpush) <= 0.1 && abs(_vpush) <= 0.1)
 {
 	instance_destroy();	
 }

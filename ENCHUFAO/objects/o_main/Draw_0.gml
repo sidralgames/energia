@@ -210,9 +210,9 @@ if (!isPaused)
 		draw_sprite_ext(s_bossHealthBar_OutFront, 0,__view_get( e__VW.XView, 0 )+230,__view_get( e__VW.YView, 0 )+35, 1,1,image_angle, image_blend, image_alpha)
 	}
 	
-	BossGarbanzoUI();
+	UIBossGarbanzo();
 	
-	BossWormUI();
+	UIBossWorm();
 
 
 	if (alarm[2]>0)

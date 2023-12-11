@@ -5,7 +5,7 @@
 
 // Inherit the parent event
 event_inherited();
-
+open = false;
 flashAlpha = 1;
 burned = false;
 contBurnedTotalMax = 300;
@@ -24,7 +24,7 @@ burnFlash = 0;
 electroFlash = 0;
 
 image_speed = 0;
-image_index = 0;
+
 IsBoss = true;
 changedMetal = false
 

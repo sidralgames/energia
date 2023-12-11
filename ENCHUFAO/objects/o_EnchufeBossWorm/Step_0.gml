@@ -16,7 +16,8 @@ if (charge>=200) && (changedMetal = false)
 
 if (changedMetal = true)
 {
-	image_index = 1;
+	depth = layer_get_depth("HUE")
+	image_index = 4;
 	image_speed = 0;
 }
 

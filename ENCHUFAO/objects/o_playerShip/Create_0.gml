@@ -3,9 +3,9 @@
 pitch = 1;
 maxConectRadStandard = 26;
 maxConectRad = maxConectRadStandard;
-maxConectRadBoss = 40;
+maxConectRadBoss = 43;
 minConectRadStandard  = 17;
-minConectRadBoss  = 23;
+minConectRadBoss  = 28;
 SetFxParameters();
 flashAlpha = 0;
 side=0;

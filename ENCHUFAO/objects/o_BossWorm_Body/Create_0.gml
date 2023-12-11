@@ -63,11 +63,15 @@ for (var i=1; i<=_segments; i++)
 
 }
 
+instBody[2].image_index = 1;
+instBody[5].image_index = 1;
+instBody[8].image_index = 1;
+instBody[11].image_index = 1;
 
 
 for (var i=0; i<4; i++)
 {
-	instEnchufe[i] = instance_create_layer(x,y,"EnemiesHUE",o_EnchufeBossWorm)
+	instEnchufe[i] = instance_create_layer(x,y,"EnemiesNoHUE",o_EnchufeBossWorm)
 	instEnchufe[i].enchufeNum = i;
 	instEnchufe[i].worm = inst;
 }
@@ -76,12 +80,16 @@ instEnchufe[0].Metal1 = instMetal[1]
 instEnchufe[0].Metal2 = instMetal[3]
 instEnchufe[0].MyMetal = instMetal[2]
 instEnchufe[0].MyHitBox = instBody[2]
+instEnchufe[0].hp = true;
+instEnchufe[0].image_index = 0;
 
 
 instEnchufe[1].Metal1 = instMetal[4]
 instEnchufe[1].Metal2 = instMetal[6]
 instEnchufe[1].MyMetal = instMetal[5]
 instEnchufe[1].MyHitBox = instBody[5]
+instEnchufe[1].ammo = true;
+instEnchufe[1].image_index = 1;
 
 
 
@@ -89,12 +97,16 @@ instEnchufe[2].Metal1 = instMetal[7]
 instEnchufe[2].Metal2 = instMetal[9]
 instEnchufe[2].MyMetal = instMetal[8]
 instEnchufe[2].MyHitBox = instBody[8]
+instEnchufe[2].laser = true;
+instEnchufe[2].image_index = 2;
 
 
 instEnchufe[3].Metal1 = instMetal[10]
 instEnchufe[3].Metal2 = instMetal[12]
 instEnchufe[3].MyMetal = instMetal[11]
 instEnchufe[3].MyHitBox = instBody[11]
+instEnchufe[3].energy = true;
+instEnchufe[3].image_index = 3;
 
 
 rope1.vertexAttachObject(2, instEnchufe[0],vertexAttachmentType.both);

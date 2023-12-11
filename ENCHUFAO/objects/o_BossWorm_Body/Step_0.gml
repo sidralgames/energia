@@ -57,6 +57,15 @@ if instance_exists(inst)
 	}
 	
 }
+
+for (var i=0; i<4; i++)
+{
+	if (instEnchufe[i].changedMetal = false)
+	{
+		instEnchufe[i].depth = layer_get_depth("EnemiesHUE")
+	}
+
+}
 if (global.BossWormHP > 0) //&& instance_exists(instAchor)
 {
 	if (verletSystemExists(verletSystem1))
