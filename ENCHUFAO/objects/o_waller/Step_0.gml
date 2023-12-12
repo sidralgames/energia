@@ -37,14 +37,14 @@ if (global.level <=5)
 {
 	if (alarm[1] <= 0)
 	{
-		alarm[1] = max(90, random_range(260,300) - (5*global.level));
+		alarm[1] = max(90, random_range(260,300) - (3*global.level));
 	}
 }
 else if (global.level >5)
 {
 	if (alarm[1] <= 0)
 	{
-		alarm[1] = max(90, random_range(300,360) - (5*global.level));
+		alarm[1] = max(90, random_range(300,360) - (4*global.level));
 	}
 }
 

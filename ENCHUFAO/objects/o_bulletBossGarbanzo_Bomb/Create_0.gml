@@ -14,7 +14,7 @@ image_index = 0;
 exploding = false;
 contExplo = 70;
 alarm[0] = 10;
-
+_hp = 6;
 hitByLaser = false;
-
+flashAlpha = 0;
 offset = irandom(360)

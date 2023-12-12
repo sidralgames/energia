@@ -4,7 +4,7 @@ function RecoverBullet()
 {
 	if (global.recoverBulletIsUpgraded)
 	{
-		if (0 == irandom(2))
+		if (0 == irandom(1))
 		{
 			global.ammo+=1;
 		}

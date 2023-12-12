@@ -8,6 +8,10 @@ if (global.changingTiles)
 	}
 }
 
+inScreen =  (x > __view_get( e__VW.XView, 0 )-50 && x < __view_get( e__VW.XView, 0 )+710) &&
+(y > __view_get( e__VW.YView, 0 )-50 && y < __view_get( e__VW.YView, 0 )+410)
+
+
 if (canShot)
 {
 	
@@ -24,7 +28,10 @@ if (canShot)
 			{
 		
 				laserActive = true;
-				audio_play_sound_on(global.audioEmitter, snd_laserActivating, false, 50)
+				if (inScreen)
+				{
+					audio_play_sound_on(global.audioEmitter, snd_laserActivating, false, 50)
+				}
 				alarm[0] = 25;
 			}
 			if (laserActive = true) && (alarm[1] > 0) && (colLaser)
@@ -77,7 +84,10 @@ if (canShot)
 			{
 		
 				laserActive = true;
-				audio_play_sound_on(global.audioEmitter, snd_laserActivating, false, 50)
+				if (inScreen)
+				{
+					audio_play_sound_on(global.audioEmitter, snd_laserActivating, false, 50)
+				}
 				alarm[0] = 25;
 			}
 			if (laserActive = true) && (alarm[1] > 0) && (colLaser)

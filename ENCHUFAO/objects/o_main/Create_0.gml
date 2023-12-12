@@ -282,6 +282,7 @@ AddUpgradeFriend();
 AddUpgradeShootingRecharges();//20
 AddUpgradeRecoverBullet();
 AddUpgradeChargerElectro();
+AddUpgradeExploHit();
 
 
 
@@ -307,7 +308,7 @@ global.dobleDobleIsUpgraded = false;
 global.shootingRechargesIsUpgraded = false;
 global.recoverBulletIsUpgraded = false;
 global.chargerElectrocutatesIsUpgraded = false;
-
+global.exploHitIsUpgraded = false;
 //--------UPGRADE RELATED--------//
 global.bombIsClusterBomb = false;
 global.chargerShoots = false;

@@ -16,6 +16,11 @@ function LaserLogicPlayer()
 	
 		if (key_laser) && (cooldownLaser <=0)
 		{
+			if (soundLaser = false)
+			{
+				soundLaser = true;
+				audio_play_sound_on(global.audioEmitter, snd_laserPlayer, false, 50)
+			}
 			laserAborted = false;
 			gamepad_set_vibration(0,0.05*laserCont,0.05*laserCont)
 			laserCont+=1.5;
@@ -38,6 +43,8 @@ function LaserLogicPlayer()
 		{
 			if (laserAborted = false)
 			{
+				soundLaser = false;
+				audio_stop_sound(snd_laserPlayer);
 				laserAborted = true;
 				alarm[4] = 10;
 			}

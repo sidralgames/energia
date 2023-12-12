@@ -17,6 +17,10 @@ if (place_meeting(x+_hpush,y,o_bulletBossGarbanzo_Bomb))
 	}
 
 MoveZeroGrv_Bomb();
+if (flashAlpha >0)
+{
+	flashAlpha-=0.09;	
+}
 
 
 if (alarm[0] <=0) && (abs(_hpush) <= 0.4 && abs(_vpush) <= 0.4) && exploding = false
@@ -26,6 +30,10 @@ if (alarm[0] <=0) && (abs(_hpush) <= 0.4 && abs(_vpush) <= 0.4) && exploding = f
 	image_index = 1;
 }
 
+if (_hp = 0)
+{
+	exploding = true;
+}
 if (exploding = true)
 {
 	contExplo --;

@@ -13,6 +13,13 @@ if (flashAlpha > 0)
 
 if (tocado) && (creatingSmoke = false)
 {
+	if (global.exploHitIsUpgraded = true)
+	{
+		shock = instance_create(x,y,o_shockwaveTiles)
+		ebomb = instance_create(x,y,o_exploBomb);
+		ebomb.scale = 1.4;
+		ebomb.scale = 1.4;
+	}
 	creatingSmoke = true;
 	contSmoke = 440 / global.hp
 	side = choose(1,-1)

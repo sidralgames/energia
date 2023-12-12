@@ -45,7 +45,7 @@ if instance_exists(o_BossMecha)
 	y = o_BossMecha.y;
 }
 
-if instance_exists(o_enemyMini_BossMecha)
+if instance_exists(o_enemyMini_BossMecha) && instance_exists(o_BossMecha)
 {
 	if point_distance(x,y,o_enemyMini_BossMecha.x, o_enemyMini_BossMecha.y) <10
 	{

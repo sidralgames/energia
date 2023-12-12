@@ -26,7 +26,7 @@ function PlayerShipShoot()
 		
 		if (global.shootingRecharges)
 		{
-			global.energy+=1;
+			global.energy+=2;
 		}
 		
 		off =  random_range(offRange,-offRange)
@@ -55,7 +55,7 @@ function PlayerShipShoot()
 		
 		if (global.shootingRecharges)
 		{
-			global.energy+=3
+			global.energy+=4
 		}
 		
 		off =  random_range(offRange,-offRange)
@@ -95,7 +95,7 @@ function PlayerShipShoot()
 		
 		if (global.shootingRecharges)
 		{
-			global.energy+=3
+			global.energy+=6
 		}
 		
 		
@@ -141,7 +141,7 @@ function PlayerShipShoot()
 		
 		if (global.shootingRecharges)
 		{
-			global.energy+=4
+			global.energy+=8
 		}
 		
 		off = max(1+global.accuracy, 0.25);

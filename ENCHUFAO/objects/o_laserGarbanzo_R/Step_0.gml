@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+if instance_exists(o_BossMecha)
+{
 if (o_BossMecha.creatingEnemies)
 {
 var maxLenght_ = 1040;
@@ -66,6 +68,7 @@ for(var i = 0; i < maxLenght_; i++)
 			}
 		}
 	}
+}
 }
 
 

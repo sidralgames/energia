@@ -457,6 +457,26 @@ function CheckEnchufeUpgrade()
 		upgraded = true;
 		
 	}
+	else if (inEnchufe.upgradeExploHit = true) && (upgraded = false)
+	{
+		if (!global.exploHitIsUpgraded)
+		{
+			global.exploHitIsUpgraded = true;
+			AddUpgradeExploHitPlayer();
+		}
+		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+		{
+			upg = ds_map_find_value(global.PlayerUpgradesList, i)
+			if (upg.obj = o_enchufeUpgadeExploHit)
+			{
+				upg.times+=1;
+			}
+		}
+		
+		inEnchufe.charging = true;
+		upgraded = true;
+		
+	}
 	else if (inEnchufe.upgradeBonus = true) && (upgraded = false)
 	{
 		if (!global.bonusIsUpgraded)
