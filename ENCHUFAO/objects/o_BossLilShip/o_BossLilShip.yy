@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Garbanzo",
-    "path": "folders/Objetos/Enemies/Bosses/Garbanzo.yy",
+    "name": "ENCHUFAO",
+    "path": "ENCHUFAO.yyp",
   },
   "parentObjectId": null,
   "persistent": false,

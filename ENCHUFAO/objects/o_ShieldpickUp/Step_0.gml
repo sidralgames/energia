@@ -10,14 +10,43 @@ shift = amplitude * dsin(t);
 
 if instance_exists(o_playerShip)
 {
-	if (point_distance(x,y, o_playerShip.x, o_playerShip.y) < 30) && (global.bombAmmo < global.bombAmmoMax)
+	if (point_distance(x,y, o_playerShip.x, o_playerShip.y) < 30)
 	{
 		direction = point_direction(x,y, o_playerShip.x, o_playerShip.y)
-		speed = 4;
+		speed = 5;
+		picked = true;
 	}
 	else
 	{
 		x = xx + lengthdir_x(shift, direction +dir1);
 		y = yy + lengthdir_y(shift, direction + dir1);	
+	}
+}
+
+if (picked = true)
+{
+	contPicked --;
+	if (contPicked <= 0)
+	{
+		if (global.shields < global.shieldsMax)
+		{
+			if (global.spriteShip = splayer_Blue)
+			{
+				if (global.bonusIsUpgraded)
+				{
+					global.shields +=3;
+				}
+				else
+				{
+					global.shields +=2;
+				}
+			}
+			else
+			{
+				global.shields +=1;
+			}
+			
+			instance_destroy();
+		}
 	}
 }

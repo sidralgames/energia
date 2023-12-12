@@ -31,6 +31,7 @@ function DrawPotentialConnection()
 		{
 			maxConectRad = maxConectRadStandard;
 			minConectRad = minConectRadStandard;
+			
 			if (inEnchufe) && (!inEnchufe.enchufeActive)
 			&& (inEnchufe.abierto) && (!inEnchufe.enchufeOvercharged)
 			{

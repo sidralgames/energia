@@ -14,5 +14,7 @@ dir1 = choose(90,270)
 //clone the x- and y-positions
 xx = x;
 yy = y;
+picked = false;
+contPicked = 20;
 
 

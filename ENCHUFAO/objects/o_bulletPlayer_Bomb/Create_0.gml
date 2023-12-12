@@ -6,7 +6,7 @@ _hpush = 0;
 _vpush = 0;
 scale = 1;
 bnc = 0.5;
-
+minVel = 0.1;
 hsp_f = 0;
 vsp_f = 0;
 _angle = image_angle;

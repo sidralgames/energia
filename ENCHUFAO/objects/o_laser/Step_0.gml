@@ -24,6 +24,7 @@ if (canShot)
 			{
 		
 				laserActive = true;
+				audio_play_sound_on(global.audioEmitter, snd_laserActivating, false, 50)
 				alarm[0] = 25;
 			}
 			if (laserActive = true) && (alarm[1] > 0) && (colLaser)
@@ -76,6 +77,7 @@ if (canShot)
 			{
 		
 				laserActive = true;
+				audio_play_sound_on(global.audioEmitter, snd_laserActivating, false, 50)
 				alarm[0] = 25;
 			}
 			if (laserActive = true) && (alarm[1] > 0) && (colLaser)

@@ -41,6 +41,15 @@ if (enchufeOvercharged)
 _hpush = clamp(_hpush, -1.5, 1.5)
 _vpush = clamp(_vpush, -1.5, 1.5)
 
+
+if (canBeEnchufatedCont > 0)
+{
+	canBeEnchufatedCont --;
+}
+if (canBeEnchufatedCont <=0)
+{
+	canBeEnchufated = true;
+}
 //if room != Sala_Inicio
 //{
 //	if instance_exists(lightEnchufe)

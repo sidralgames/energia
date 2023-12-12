@@ -6,6 +6,9 @@
 //type = collisionType.custom;
 occupied = false;
 
+
+canBeEnchufated = true;
+canBeEnchufatedCont = 0;
 isMimic = false;
 IsBoss = false;
 randomize();

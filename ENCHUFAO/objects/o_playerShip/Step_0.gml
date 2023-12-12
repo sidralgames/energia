@@ -222,7 +222,7 @@ if (inEnchufe)
 				{
 					if (plugged = false) && (o_charger.overcharged = false) && (inEnchufe.dying == false)
 					{
-						if (inEnchufe.withStrandedShip == false)
+						if (inEnchufe.withStrandedShip == false) && (inEnchufe.canBeEnchufated == true)
 						{
 							Plug();
 		
@@ -233,7 +233,7 @@ if (inEnchufe)
 								CheckEnchufeUpgrade()
 							}
 						}
-						else
+						else if (inEnchufe.withStrandedShip == true)
 						{
 							if (inEnchufe.isMimic == false)
 							{
@@ -262,6 +262,10 @@ if (connectedToShip)
 	}
 }
 
+if (!connectedToShip) && (!inEnchufe)
+{
+	radi = minConectRad;
+}
 if (contDeactivate>=0)
 {
 	contDeactivate--;

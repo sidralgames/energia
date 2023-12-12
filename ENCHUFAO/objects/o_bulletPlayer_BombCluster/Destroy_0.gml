@@ -23,11 +23,12 @@ offsetInitial = irandom(360);
 
 for (var i = 0; i<=3; i++)
 {
-	velo = random_range(2.5, 3)
+	velo = random_range(2, 4)
 	bomb = instance_create(x,y,o_bulletPlayer_Bomb)
 	bomb._hpush = lengthdir_x(velo, offsetInitial+90*i)
 	bomb._vpush = lengthdir_y(velo, offsetInitial+90*i)
 	bomb.sprite_index = s_bombCluster;
 	bomb.scale = 0.8;
 	bomb.alarm[0] = random_range(5,10)
+	bomb.minVel = 0.2
 }

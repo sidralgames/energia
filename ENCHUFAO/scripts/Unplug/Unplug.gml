@@ -2,7 +2,10 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Unplug()
 {
-	thisEnchufe = instance_nearest(global.xToPlug, global.yToPlug, o_enchufe_Father)
+	
+	thisEnchufe = instance_nearest(global.xToPlug, global.yToPlug, o_enchufe_Father);
+	thisEnchufe.canBeEnchufated = false;
+	thisEnchufe.canBeEnchufatedCont = 20;
 	o_enchufe_Father.enchufeActive = false;
 	if (thisEnchufe.isPETA_F == true)
 	{
