@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 pitch = 1;
+explocreated = false
 maxConectRadStandard = 26;
 maxConectRad = maxConectRadStandard;
 maxConectRadBoss = 45;
@@ -75,6 +76,8 @@ radi = 17;
 bumpsAchievement = true;
 maxLenght = 0;
 laserActive = true;
+soundLaserShoot = false
+soundLaser = false
 
 hsp_final = 0
 hsp_f = 0

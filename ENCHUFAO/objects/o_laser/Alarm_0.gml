@@ -1,9 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-audio_stop_sound(snd_laserActivating)
+audio_stop_sound(sndActivating)
 if (inScreen)
 {
-	audio_play_sound_on(global.audioEmitter, snd_laserActive, true, 50)
+	soundLaser = audio_play_sound_on(global.audioEmitter, snd, true, 50)
 	audio_play_sound_on(global.audioEmitter, snd_laserShoot, false, 50)
 }
 alarm[1] = 120;

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "snd_explo_old",
+  "name": "snd_shoot_2",
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 4.091338,
+  "duration": 2.504172,
   "parent": {
     "name": "Sonidos",
     "path": "folders/Sonidos.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_explo_old.wav",
-  "type": 0,
-  "volume": 0.33,
+  "soundFile": "snd_shoot_2.wav",
+  "type": 1,
+  "volume": 0.13,
 }

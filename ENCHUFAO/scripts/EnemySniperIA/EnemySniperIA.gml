@@ -171,6 +171,8 @@ function EnemySniperIA()
 			
 	if (contDisp <= 0) 
 	{
+		audio_play_sound_on(global.audioEmitter,snd_shoot1, false, 80,,,random_range(0.8,1))
+		
 		if (isMegaEnemy)
 		{
 			var bullet = instance_create_layer(x + lengthdir_x(10, _angle), y + lengthdir_y(10, _angle),

@@ -30,7 +30,7 @@ if (canShot)
 				laserActive = true;
 				if (inScreen)
 				{
-					audio_play_sound_on(global.audioEmitter, snd_laserActivating, false, 50)
+					sndActivating = audio_play_sound_on(global.audioEmitter, snd_laserActivating, false, 50)
 				}
 				alarm[0] = 25;
 			}
@@ -84,9 +84,10 @@ if (canShot)
 			{
 		
 				laserActive = true;
+			
 				if (inScreen)
 				{
-					audio_play_sound_on(global.audioEmitter, snd_laserActivating, false, 50)
+					sndActivating = audio_play_sound_on(global.audioEmitter, snd_laserActivating, false, 50)
 				}
 				alarm[0] = 25;
 			}

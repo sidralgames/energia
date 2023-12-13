@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "snd_song.wav",
   "type": 0,
-  "volume": 0.34,
+  "volume": 0.52,
 }

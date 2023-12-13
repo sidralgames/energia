@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 tocado = false;
+explocreated = false;
 
 
 

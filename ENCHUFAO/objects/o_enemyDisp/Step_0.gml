@@ -40,6 +40,7 @@ if instance_exists(o_playerShip)
 		dire = direction;
 		if (alarm[0] <= 0)
 		{
+			audio_play_sound_on(global.audioEmitter,snd_shoot1, false, 80,,,random_range(0.8,1))
 			var bullet = instance_create_layer(x + lengthdir_x(20, dire), y + lengthdir_y(20, dire),
 			"Bullets", o_bulletEnemy);
 			off =  random_range(5,-5)

@@ -3,6 +3,8 @@
 
 if (cont = true)
 {
+	StopSounds();
+	
 	global.level+=1;
 	
 	if (global.bestLevelRun <= global.level)

@@ -44,10 +44,19 @@ function EnemyBasicChasingIA()
 			
 			if (point_distance(x,y,enchufe.x,enchufe.y) <= cable._segments*7)
 			{
+				if (_hp <= 0)
+				{
+					enchufe.occupied = false;
+				}
 				BasicEnemyMovement();
 			}
 			else
 			{
+				path_end();
+				if (_hp <= 0)
+				{
+					enchufe.occupied = false;
+				}
 				dir = point_direction(x,y,enchufe.x,enchufe.y)
 				
 				hspeed = lengthdir_x(1,dir)
@@ -67,7 +76,7 @@ function EnemyBasicChasingIA()
 			contCanPlug--;
 		}
 		
-		if (inEnchufe) && (contCanPlug<=0)
+		if (inEnchufe) && (contCanPlug<=0) && (!plugged)
 		{	
 			enchufe = inEnchufe;
 			if (!enchufe.occupied) && (!plugged) && (!enchufe.enchufeBomb)

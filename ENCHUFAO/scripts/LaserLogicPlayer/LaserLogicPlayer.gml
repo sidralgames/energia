@@ -20,15 +20,23 @@ function LaserLogicPlayer()
 			if (soundLaser = false)
 			{
 				soundLaser = true;
-				audio_sound_gain(snd_laserPlayer, 1,0)
-				audio_play_sound_on(global.audioEmitter, snd_laserPlayer, false, 50)
+				audio_sound_gain(snd_laserPlayerCharge, 1,0)
+				audio_play_sound_on(global.audioEmitter, snd_laserPlayerCharge, false, 50)
 			}
+			
 			laserAborted = false;
 			gamepad_set_vibration(0,0.05*laserCont,0.05*laserCont)
 			laserCont+=1.5;
 			
 			if (laserCont >= 60) && (laserActive = false) 
 			{
+				if (soundLaserShoot = false)
+				{
+					soundLaserShoot = true;
+					audio_sound_gain(snd_laserPlayerShooting, 1,0)
+					audio_play_sound_on(global.audioEmitter, snd_laserPlayerShooting, true, 50)
+				}
+				
 				impulse = false;
 				if (cooldownLaser<=0)
 				{
@@ -46,16 +54,15 @@ function LaserLogicPlayer()
 			if (laserAborted = false)
 			{
 				soundLaser = false;
-				audio_sound_gain(snd_laserPlayer, 0,600)
+				audio_sound_gain(snd_laserPlayerCharge, 0,10)
 				laserAborted = true;
 				alarm[4] = 10;
 			}
 			else
 			{
-				soundLaser = false;
-				audio_sound_gain(snd_laserPlayer, 0,600)
+				audio_sound_gain(snd_laserPlayerShooting, 0,300)
 			}
-			
+			soundLaserShoot = false
 			contExploTile = 0;
 			laserCont = 0;
 			laserActive = false;
@@ -85,15 +92,20 @@ function LaserLogicPlayer()
 		if (laserActive)
 		{
 			soundLaser = false;
-			audio_sound_gain(snd_laserPlayer, 0,600)
+			audio_sound_gain(snd_laserPlayerShooting, 0,400)
 			laserActive = false
+			soundLaserShoot = false
 			alarm[4] = 10
 		}
 	}
 	
-	if (audio_sound_get_gain(snd_laserPlayer) <= 0)
+	if (audio_sound_get_gain(snd_laserPlayerShooting) <= 0)
 	{
-		audio_stop_sound(snd_laserPlayer)
+		audio_stop_sound(snd_laserPlayerShooting)
+	}
+	if (audio_sound_get_gain(snd_laserPlayerCharge) <= 0)
+	{
+		audio_stop_sound(snd_laserPlayerCharge)
 	}
 	
 }

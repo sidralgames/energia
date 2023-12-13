@@ -38,6 +38,8 @@ rojo = make_color_rgb(228,59, 68)
 //{
 //	ship = 5;
 //}
+//val = audio_sound_get_gain(snd_songMaster)
+//draw_text(__view_get( e__VW.XView, 0 )+100,__view_get( e__VW.YView, 0 )+100,string(val))
 
 if (!isPaused)
 {
