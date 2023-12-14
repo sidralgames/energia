@@ -171,7 +171,7 @@ function EnemySniperIA()
 			
 	if (contDisp <= 0) 
 	{
-		audio_play_sound_on(global.audioEmitter,snd_shoot1, false, 80,,,random_range(0.8,1))
+		audio_play_sound_on(global.audioEmitter,snd_shoot_2, false, 80,,,random_range(0.8,1))
 		
 		if (isMegaEnemy)
 		{

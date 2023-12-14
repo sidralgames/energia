@@ -1,6 +1,8 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-
-instance_destroy(other);
+if (!isFromEnemy)
+{
+	instance_destroy(other);
+}
 
 

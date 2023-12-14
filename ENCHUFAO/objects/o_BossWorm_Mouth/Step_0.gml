@@ -27,33 +27,35 @@ switch(state)
 //		lightEnemy.light [| eLight.X] = x
 //		lightEnemy.light [| eLight.Y] = y
 //	}
-
-if (_hp <= 0)
+if (onlyHead)
 {
-	if (plugged)
+	if (_hp <= 0)
 	{
-		enchufe.occupied = false;
-		enchufe.occupied = false;
-		enchufe.enchufeOvercharged = true;
-		enchufe.contOvercharged = 250;
-	}
+		if (plugged)
+		{
+			enchufe.occupied = false;
+			enchufe.occupied = false;
+			enchufe.enchufeOvercharged = true;
+			enchufe.contOvercharged = 250;
+		}
 
-	EnemyDeathShake();
+		EnemyDeathShake();
 	
-	global.XPpoints +=enemyXP;
+		global.XPpoints +=enemyXP;
 	
-	explo = instance_create(x,y,o_explo2);
-	explo.image_xscale = 0.5;
-	explo.image_yscale = 0.5;
+		explo = instance_create(x,y,o_explo2);
+		explo.image_xscale = 0.5;
+		explo.image_yscale = 0.5;
 	
-	if instance_exists(explo)
-	{
-		instance_create(x-10,y,o_exploBomb);
-		instance_create(x,y-20,o_exploBomb);
-		instance_create(x+10,y,o_exploBomb);
-		instance_create_layer(x,y,"Enemies", o_enemyMini_PostBoss);
-		enchufeFinal = instance_create_layer(x,y,"Enchufes", o_enchufe_Final)
-		enchufeFinal.abierto = true;
-		instance_destroy();
+		if instance_exists(explo)
+		{
+			instance_create(x-10,y,o_exploBomb);
+			instance_create(x,y-20,o_exploBomb);
+			instance_create(x+10,y,o_exploBomb);
+			instance_create_layer(x,y,"Enemies", o_enemyMini_PostBoss);
+			enchufeFinal = instance_create_layer(x,y,"Enchufes", o_enchufe_Final)
+			enchufeFinal.abierto = true;
+			instance_destroy();
+		}
 	}
 }

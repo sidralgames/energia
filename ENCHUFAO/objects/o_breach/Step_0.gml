@@ -1,6 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if (image_index >=39) && (image_index <=42)
+{
+	if (soundOpen = false)
+	{
+		soundOpen = true;
+		audio_play_sound_on(global.audioEmitter, snd_breachOpen, false, 50);
+	}
+}
 if (image_index >= 53)
 {
 	image_speed = 0;
@@ -98,6 +106,11 @@ if (alarm[1] <= 0)
 	if (room = Sala_0)
 	{
 		o_waller.breachRetryTime = 40;
+	}
+	if (soundClose = false)
+	{
+		soundClose = true;
+		audio_play_sound_on(global.audioEmitter, snd_breachClose, false, 50);
 	}
 	image_speed = -1;
 	

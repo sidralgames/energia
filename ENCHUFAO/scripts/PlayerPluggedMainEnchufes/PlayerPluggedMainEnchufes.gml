@@ -6,7 +6,7 @@ function PlayerPluggedMainEnchufes()
 	{
 		with(o_playerShip)
 		{
-			if (inEnchufe)
+			if instance_exists(inEnchufe) && (inEnchufe)
 			{
 				canModify = (inEnchufe.dying == false) && (inEnchufe.enchufeActive) && (inEnchufe.isPETA_F == false)
 				&& (inEnchufe.enchufeBomb == false) ;

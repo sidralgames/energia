@@ -18,4 +18,4 @@ if instance_exists(o_playerShip)
 	
 }
 
-draw_text(x, y-30, string(occupied))
+//draw_text(x, y-30, string(occupied))

@@ -10,7 +10,7 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 2.764422,
+  "duration": 2.312494,
   "parent": {
     "name": "Sonidos",
     "path": "folders/Sonidos.yy",

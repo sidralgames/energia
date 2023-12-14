@@ -10,5 +10,8 @@ whiteWidht = 4
 calculated = false
 
 angleLaser = 275;
-
+soundLaser = -1;
+soundCharge = -1;
+lasersounding = false;
+chargingLaser = false;
 

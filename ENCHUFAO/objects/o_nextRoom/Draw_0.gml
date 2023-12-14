@@ -67,6 +67,7 @@ if (canSelectShip) && (alarm[0] < 60)
 {
 	if (key_x) && (shipSelected = false) && (ship.unlocked == 1)
 	{
+		audio_play_sound_on(global.audioEmitter,snd_playMenu,false, 50);
 		shipSelected = true;
 		instance_create_layer(512,269, "Enchufes", o_enchufeInicio)
 		instance_create_layer(112,272, "Enchufes" ,o_enchufeResetSelector)

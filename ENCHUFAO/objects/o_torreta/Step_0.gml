@@ -24,6 +24,7 @@ if instance_exists(o_playerShip)
 			//part_particles_create(global.misil_sys, random_range(x+lengthdir_x(length,direction-10),x+lengthdir_x(length,direction+10)),random_range(y+lengthdir_y(length,direction-10),y+lengthdir_y(length,direction+10)), global.misil , 15)
 			//}
 				current_recoil=7;
+				audio_play_sound_on(global.audioEmitter,snd_shoot1, false, 80,,,random_range(0.8,1))
 				var bala = instance_create (x+lengthdir_x(length,direction),y+lengthdir_y(length,direction),o_bulletTorreta);
 				bala.direction = direction;
 

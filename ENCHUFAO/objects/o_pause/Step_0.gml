@@ -31,10 +31,12 @@ if (pause)
 {
 	if (key_upP)
 	{
+		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 		selected -=1;
 	}
 	if (key_downP)
 	{
+		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 		selected+=1;
 	}
 	
@@ -42,6 +44,7 @@ if (pause)
 	{
 		if (key_x)
 		{
+			audio_play_sound_on(global.audioEmitter,snd_acceptMenu,false, 50);
 			showControls = false;
 		}
 			
@@ -63,7 +66,7 @@ if (pause)
 		
 			if (key_x)
 			{
-			
+				audio_play_sound_on(global.audioEmitter,snd_acceptMenu,false, 50);
 				switch(selected)
 				{
 					case 0: 
@@ -108,6 +111,7 @@ if (pause)
 		
 			if (key_x)
 			{
+				audio_play_sound_on(global.audioEmitter,snd_acceptMenu,false, 50);
 				switch(selected)
 				{
 					case 0: 

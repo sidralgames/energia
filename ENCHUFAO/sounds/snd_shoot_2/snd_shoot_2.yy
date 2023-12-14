@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "snd_shoot_2.wav",
   "type": 1,
-  "volume": 0.13,
+  "volume": 0.3,
 }

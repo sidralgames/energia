@@ -7,6 +7,9 @@ if (hitByLaser = false)
 	ebomb = instance_create(x,y,o_exploBomb);
 	ebomb.scale = 1.4;
 	ebomb.scale = 1.4;
+	ebomb.isFromEnemy = true;
+	ebomb.damagePlayer = true;
+	
 	if (sprite_index = s_bombCluster)
 	{
 		ebomb.sprite_index = s_explo2;	
@@ -19,6 +22,8 @@ else
 	ebomb = instance_create(x,y,o_exploBomb);
 	ebomb.scale = 1.8;
 	ebomb.scale = 1.8;
+	ebomb.isFromEnemy = true;
+	ebomb.damagePlayer = true;
 	if (sprite_index = s_bombCluster)
 	{
 		ebomb.sprite_index = s_explo2;	

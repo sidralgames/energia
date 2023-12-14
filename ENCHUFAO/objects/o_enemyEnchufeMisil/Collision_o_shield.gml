@@ -16,5 +16,7 @@ else
 	}
 }
 
+audio_play_sound_on(global.audioEmitter, snd_shieldImpact, false, 50);
+
 
 

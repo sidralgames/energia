@@ -9,3 +9,4 @@
 event_inherited();
 
 occupied = false;
+soundActive = false;

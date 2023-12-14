@@ -25,6 +25,8 @@ if instance_exists(o_playerShip)
 
 if (picked = true)
 {
+	audio_play_sound_on(global.audioEmitter, snd_shieldUp, false, 50,,,1.5);
+	
 	contPicked --;
 	if (contPicked <= 0)
 	{
@@ -45,6 +47,8 @@ if (picked = true)
 			{
 				global.shields +=1;
 			}
+			
+			
 			
 			instance_destroy();
 		}

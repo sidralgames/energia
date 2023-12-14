@@ -1,4 +1,4 @@
-// Script assets have changed for v2.3.0 see
+ // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PlayerShipShoot()
 {
@@ -12,7 +12,8 @@ function PlayerShipShoot()
 	explo.image_speed = 3;
 	
 	screenShake(2,30)
-	audio_play_sound_on(global.audioEmitter,snd_shoot_2, false, 80,,,random_range(0.8,1))
+	audio_play_sound_on(global.audioEmitter,snd_shoot_2, false, 80,,,random_range(0.85,1))
+	audio_play_sound_on(global.audioEmitter,snd_shoot_5, false, 80,,,random_range(0.85,1))
 		
 	if (global.ammo > 0) && (global.ammo <= 50)
 	{

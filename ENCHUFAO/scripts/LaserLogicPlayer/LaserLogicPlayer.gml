@@ -20,7 +20,7 @@ function LaserLogicPlayer()
 			if (soundLaser = false)
 			{
 				soundLaser = true;
-				audio_sound_gain(snd_laserPlayerCharge, 1,0)
+				audio_sound_gain(snd_laserPlayerCharge, 0.45,0)
 				audio_play_sound_on(global.audioEmitter, snd_laserPlayerCharge, false, 50)
 			}
 			
@@ -33,8 +33,8 @@ function LaserLogicPlayer()
 				if (soundLaserShoot = false)
 				{
 					soundLaserShoot = true;
-					audio_sound_gain(snd_laserPlayerShooting, 1,0)
-					audio_play_sound_on(global.audioEmitter, snd_laserPlayerShooting, true, 50)
+					audio_sound_gain(snd_laserPlayerShooting, 0.55,0)
+					audio_play_sound_on(global.audioEmitter, snd_laserPlayerShooting, true, 50,,,random_range(0.8,1.2))
 				}
 				
 				impulse = false;

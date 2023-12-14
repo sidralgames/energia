@@ -21,6 +21,7 @@ function PlayerShipBomb()
 	screenShake(2,5)
 	
 	audio_play_sound_on(global.audioEmitter, snd_shootBombPlayer, false, 50)
+	audio_play_sound_on(global.audioEmitter, snd_shoot_3, false, 50)
 		
 	
 		var bullet = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),

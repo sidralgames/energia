@@ -47,11 +47,11 @@ alarm[1] = 220;
 alarm[2] = 50;
 alarm[3] = 100;
 
-times = min(4, choose(0,1,2,3,4)+global.level-1)
+times = min(5, choose(0,1,2,3,4)+global.level-1)
 
 
 timesTotal = 500;
-timesBreach = global.level-2;
+timesBreach = max(8, global.level-2);
 breachRetryTime = 40;
 breachDuration = 3000;
 spawningBreach = false;

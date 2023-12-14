@@ -9,11 +9,13 @@ if (alarm[0] <= 0)
 	{
 		if (key_downP)
 		{
+			audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 			selected +=1;	
 		}
 
 		if (key_upP)
 		{
+			audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 			selected -=1;	
 		}
 
@@ -29,6 +31,7 @@ if (alarm[0] <= 0)
 
 		if (key_x)
 		{
+			audio_play_sound_on(global.audioEmitter,snd_acceptMenu,false, 50);
 			switch(selected)
 			{
 				case 0:
