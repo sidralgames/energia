@@ -51,14 +51,10 @@ if (global.hp <= 1*global.damageReceived)
 if (global.energy <= global.energyLow)
 {
 	imageStrandedEnergy+=0.05;
-	if (global.energy >0)
-	{
-		draw_sprite_ext(s_energyPlayer, imageStrandedEnergy, x+12, y-22,  1,1, 0, image_blend, image_alpha)	
-	}
-	else
-	{
-		draw_sprite_ext(s_energyStranded, imageStrandedEnergy, x+12, y-22,  1,1, 0, image_blend, image_alpha)	
-	}
+}
+else
+{
+	imageStrandedEnergy = 0;	
 }
 
 
@@ -66,11 +62,34 @@ if (pluggedTimer >= pluggedTimerAlert)
 {
 	if (plugged) 
 	{
-		draw_sprite_ext(s_overcharge, 0, x, y-40,1,1.1,0,image_blend, image_alpha) 
+		draw_sprite_ext(s_overcharge, 0, x, y-43,1,1.1,0,image_blend, image_alpha) 
 	}
 	
-	draw_sprite_ext(s_enchufeChargeHP_Out_Red,0,x-21,y-30,0.5,1.1,0,image_blend, image_alpha)
-	draw_sprite_ext(s_enchufeChargeHP_In_Red,0,x-21,y-30,((o_playerShip.pluggedTimer-o_playerShip.pluggedTimerAlert)/100)/2,1.1,0,image_blend, image_alpha)	
+	draw_sprite_ext(s_enchufeChargeHP_Out_Red,0,x-21,y-33,0.5,1.1,0,image_blend, image_alpha)
+	draw_sprite_ext(s_enchufeChargeHP_In_Red,0,x-21,y-33,((o_playerShip.pluggedTimer-o_playerShip.pluggedTimerAlert)/100)/2,1.1,0,image_blend, image_alpha)	
 }
+
+//showEnergy = true;
+
+if (global.energy > 0) && (showEnergy)
+{
+	draw_sprite_ext(s_energyPlayer, imageStrandedEnergy, x+12, y-22,  1,1, 0, image_blend, image_alpha)
+}
+if (global.energy<=0)
+{
+
+	draw_sprite_ext(s_energyStranded, imageStrandedEnergy, x+12, y-22,  1,1, 0, image_blend, image_alpha)	
+}	
+
+if (global.energy <= global.energyMax/2 + global.energyMax/5)
+{	
+	showEnergy = true;
+}
+
+if (global.energy >= global.energyMax)
+{
+	showEnergy = false;
+}
+
 
 //draw_text(x, y-50 ,string(instance_count));

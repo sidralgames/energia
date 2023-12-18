@@ -16,7 +16,7 @@ creatingSmoke = false;
 contSmoke = 0;
 contBurnPartMax = 8;
 contBurnPart = random_range(contBurnPartMax-1,contBurnPartMax+2) ;
-
+showEnergy = false;
 if (room != Sala_Inicio) && (room != Sala_Upgade)
 {
 	SetHUE();
@@ -134,7 +134,7 @@ plugged = false
 diagSpeed = round(global._speed * ((sqrt(2)) / 2));
 
 offRange = 2;
-spaceSpeed = 4;
+spaceSpeed = 3;
 recoil_standard = 0.8;
 recoil_bomb = 1.8;
 

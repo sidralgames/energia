@@ -6,7 +6,7 @@ function PlayerStats_Red()
 	global.spritePart = s_bullet_part_Orange;
 	global.bulletPart_sprite = s_bullet_part_Orange;
 		
-	global.energyMax = 250;
+	global.energyMax = 400;
 	global.energy = global.energyMax;
 	
 	global.hpMax = 5;

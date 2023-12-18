@@ -6,7 +6,7 @@ function PlayerStats_Dark()
 	global.spritePart = s_bullet_part_Red;
 	global.bulletPart_sprite = s_bullet_part_Red;
 		
-	global.energyMax = 300;
+	global.energyMax = 400;
 	global.energy = global.energyMax;
 	
 	global.hpMax = 3;

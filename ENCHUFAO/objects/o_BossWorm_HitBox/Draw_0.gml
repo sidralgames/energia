@@ -48,4 +48,4 @@ if instance_exists(Metal)
 	}
 }
 
-draw_text(x+30,y+30,string(_hp))
+//draw_text(x+30,y+30,string(_hp))

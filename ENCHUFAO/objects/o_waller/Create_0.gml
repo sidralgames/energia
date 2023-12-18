@@ -51,7 +51,7 @@ times = min(5, choose(0,1,2,3,4)+global.level-1)
 
 
 timesTotal = 500;
-timesBreach = max(8, global.level-2);
+timesBreach = min(8, global.level-2);
 breachRetryTime = 40;
 breachDuration = 3000;
 spawningBreach = false;

@@ -5,7 +5,23 @@ draw_set_halign(fa_left)
 azul = make_color_rgb(44,232, 245) 
 azulO = make_color_rgb(0,149,233)
 rojo = make_color_rgb(228,59, 68) 
-//draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+40,"ENERGY: " + string(round(global.energy)) + " / " + string(round(global.energyMax)))
+
+if instance_exists(o_playerShip)
+{
+
+	
+	if (o_playerShip.showEnergy)
+	{
+		draw_circular_bar(o_playerShip.x+23, o_playerShip.y-22, global.energy, global.energyMax, azul, 6,1, 2);
+		draw_circular_bar(o_playerShip.x+23, o_playerShip.y-22, global.energy, global.energyMax, c_white, 5,1, 2);
+		//draw_sprite_ext(s_energyPlayer, 0, o_playerShip.x+12, o_playerShip.y-22,  1,1, 0, image_blend, image_alpha)	
+		
+	//	draw_sprite_ext(s_enchufeChargeHP_Out,1,x+21,y+10,0.4,1,90,image_blend, image_alpha)
+	//	draw_sprite_ext(s_enchufeChargeHP_In,1,x+21,y+10,(global.energy/global.energyMax)*0.4,1,90,image_blend, image_alpha)
+	}
+	
+
+}//draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+40,"ENERGY: " + string(round(global.energy)) + " / " + string(round(global.energyMax)))
 
 //draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+60,"HP: " + string(round(global.hp)) + " / " + string(round(global.hpMax)))
 
