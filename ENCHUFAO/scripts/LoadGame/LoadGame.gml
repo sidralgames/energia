@@ -27,6 +27,8 @@ function LoadGame()
 	global.slowmilisecs = ini_read_real("stats","slowmilisecs", 0);
 	global.connectedmilisecs = ini_read_real("stats","connectedmilisecs", 0);
 	
+	global.playTimes = ini_read_real("main","playTimes", 0);
+	
 	
 	global.godModeIsOn = false;
 	global.infiniteEnergyIsOn = false;

@@ -26,6 +26,8 @@ function SaveGame()
 	ini_write_real("stats","slowmilisecs", global.slowmilisecs);
 	ini_write_real("stats","connectedmilisecs", global.connectedmilisecs);
 	ini_write_real("stats","TotalBumps", global.totalBumps);
+		
+	ini_write_real("main","playTimes", global.playTimes);
 	
 	
 	ini_close();

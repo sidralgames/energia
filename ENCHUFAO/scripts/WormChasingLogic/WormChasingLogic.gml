@@ -39,6 +39,7 @@ function WormChasingLogic()
 		}
 		else
 		{
+			path_end();
 			dir = point_direction(x,y,enchufe.x,enchufe.y)
 			
 			hspeed = lengthdir_x(1,dir);
@@ -52,7 +53,7 @@ function WormChasingLogic()
 			
 	}
 	
-	if (inEnchufe) && (contCanPlug<=0)
+	if (inEnchufe) && (contCanPlug<=0) && (!plugged)
 	{	
 		enchufe = inEnchufe;
 		if (!enchufe.occupied) && (!plugged) && (!enchufe.enchufeBomb)

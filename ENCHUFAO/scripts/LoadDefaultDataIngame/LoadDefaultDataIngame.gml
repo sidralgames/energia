@@ -34,6 +34,9 @@ function LoadDefaultDataIngame()
 	global.infiniteLaserIsOn = false;
 	
 	
+	//stats
+	global.playTimes = 0;
+	
 	for (var i = 0; i <global.numberOfShips; i++)
 	{
 		ship = ds_map_find_value(global.shipList, i)

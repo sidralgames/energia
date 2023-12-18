@@ -48,7 +48,7 @@ isMegaEnemy = false;
 isMega = irandom(4);
 oddsBattery = 2;
 
-if (isMega = 0) 
+if (isMega = 0) && (room != Sala_Inicio)
 {
 	isMegaEnemy = true;
 	global.MegaEnemiesInLevel+=1;

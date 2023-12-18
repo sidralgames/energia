@@ -12,8 +12,8 @@ if instance_exists(o_playerShip)
 	
 	if (o_playerShip.showEnergy)
 	{
-		draw_circular_bar(o_playerShip.x+23, o_playerShip.y-22, global.energy, global.energyMax, azul, 6,1, 2);
-		draw_circular_bar(o_playerShip.x+23, o_playerShip.y-22, global.energy, global.energyMax, c_white, 5,1, 2);
+		draw_circular_bar(o_playerShip.x+23, o_playerShip.y-23, global.energy, global.energyMax, azul, 7,1, 2);
+		draw_circular_bar(o_playerShip.x+23, o_playerShip.y-23, global.energy, global.energyMax, c_white, 6,1, 2);
 		//draw_sprite_ext(s_energyPlayer, 0, o_playerShip.x+12, o_playerShip.y-22,  1,1, 0, image_blend, image_alpha)	
 		
 	//	draw_sprite_ext(s_enchufeChargeHP_Out,1,x+21,y+10,0.4,1,90,image_blend, image_alpha)
@@ -60,7 +60,7 @@ if instance_exists(o_playerShip)
 if (!isPaused)
 {
 
-	if (room != Sala_Inicio)
+	if (room != Sala_Inicio) || ((room = Sala_Inicio) && instance_exists(o_tutorialText))
 	{
 		
 		//draw_sprite_ext(s_hpNewUIEnergScreen,0,__view_get( e__VW.XView, 0 )+43,__view_get( e__VW.YView, 0 )+35,1,1,0,image_blend, image_alpha)
@@ -196,28 +196,31 @@ if (!isPaused)
 	//	}
 	
 	//}
-	draw_set_font(customFont)
-	if (global.energy <=global.energyLow)
+	if room != Sala_Inicio
 	{
-		if global.PETAAmmo > 0
+		draw_set_font(customFont)
+		if (global.energy <=global.energyLow)
 		{
-			if (alarm[0] <30)
+			if global.PETAAmmo > 0
 			{
-				draw_sprite_ext(s_throwPeta, 0,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+310, 0.9, 0.9,image_angle, image_blend, 0.8)
-			}
+				if (alarm[0] <30)
+				{
+					draw_sprite_ext(s_throwPeta, 0,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+310, 0.9, 0.9,image_angle, image_blend, 0.8)
+				}
 	
-			if (alarm[0] <= 0)
-			{
-				alarm[0] = 40;	
+				if (alarm[0] <= 0)
+				{
+					alarm[0] = 40;	
+				}
 			}
+			draw_set_color(rojo)
+			draw_set_alpha(0.05)
+			draw_rectangle(__view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0,__view_get( e__VW.XView, 0 )+640,__view_get( e__VW.YView, 0 )+360,false)
+			draw_set_color(c_white)
 		}
-		draw_set_color(rojo)
-		draw_set_alpha(0.05)
-		draw_rectangle(__view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0,__view_get( e__VW.XView, 0 )+640,__view_get( e__VW.YView, 0 )+360,false)
-		draw_set_color(c_white)
-	}
 
-	draw_set_alpha(1)
+		draw_set_alpha(1)
+	}
 
 
 	if (room = Sala_FirstBoss) && (global.BossBreach_awaken = true) && !instance_exists(o_BreachBossBanner)

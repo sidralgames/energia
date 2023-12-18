@@ -4,13 +4,20 @@ function PluggedToEnchufe()
 {
 	if instance_exists(enchufe)
 	{
-		if (enchufe.IsBoss)
+		if (room != Sala_Inicio)
 		{
-			pluggedTimer+=max(0.15, 0.43*global.overchargeTime);
+			if (enchufe.IsBoss)
+			{
+				pluggedTimer+=max(0.15, 0.43*global.overchargeTime);
+			}
+			else
+			{
+				pluggedTimer+=max(0.1, 0.38*global.overchargeTime);
+			}
 		}
 		else
 		{
-			pluggedTimer+=max(0.1, 0.38*global.overchargeTime);
+			pluggedTimer+=max(0.1, 0.08*global.overchargeTime);
 		}
 	}
 	

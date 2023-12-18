@@ -9,6 +9,11 @@ if (room = Sala_BossWorm)
 {
 	EnemiesToSpawn_WormBossRoom();
 }
+else if (room = Sala_Inicio)
+{
+	enemy = choose(o_enemy, o_enemyFast)
+	
+}
 else
 {
 	if (global.level = 1)

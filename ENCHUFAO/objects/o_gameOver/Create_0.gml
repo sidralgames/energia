@@ -11,4 +11,4 @@ if (global.HighScore < global.XPpoints)
 	global.HighScore = global.XPpoints;
 }
 
-
+global.playTimes +=1;

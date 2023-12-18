@@ -34,4 +34,7 @@ function LoadDefaultData()
 	global.infiniteHPIsOn = false;
 	global.infiniteLaserIsOn = false;
 	
+	//main
+	global.playTimes = 0;
+	
 }

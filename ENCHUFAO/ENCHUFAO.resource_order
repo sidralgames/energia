@@ -681,6 +681,7 @@
     {"name":"o_partBalaBossGarbanzo","order":14,"path":"objects/o_partBalaBossGarbanzo/o_partBalaBossGarbanzo.yy",},
     {"name":"s_ammoBar_in","order":4,"path":"sprites/s_ammoBar_in/s_ammoBar_in.yy",},
     {"name":"s_titleBack","order":10,"path":"sprites/s_titleBack/s_titleBack.yy",},
+    {"name":"o_tutorialText","order":58,"path":"objects/o_tutorialText/o_tutorialText.yy",},
     {"name":"PlayerShipSlowMo","order":20,"path":"scripts/PlayerShipSlowMo/PlayerShipSlowMo.yy",},
     {"name":"AddUpgradeReReRePlayer","order":6,"path":"scripts/AddUpgradeReReRePlayer/AddUpgradeReReRePlayer.yy",},
     {"name":"s_blackHole","order":53,"path":"sprites/s_blackHole/s_blackHole.yy",},

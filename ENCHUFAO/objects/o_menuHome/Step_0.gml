@@ -36,10 +36,27 @@ if (alarm[0] <= 0)
 			{
 				case 0:
 				{
-					o_nextRoom.alarm[0] = 60;
-					o_nextRoom.canSelectShip = true;
-					Stats._visible = true;
-					_visible = false;
+					if (global.playTimes > 0)
+					{
+						o_nextRoom.alarm[0] = 60;
+						o_nextRoom.canSelectShip = true;
+						Stats._visible = true;
+						_visible = false;
+					}
+					else
+					{
+						instance_create(x,y,o_tutorialText)
+						audio_play_sound_on(global.audioEmitter,snd_playMenu,false, 50);
+						shipSelected = true;
+						_visible = false;
+						o_nextRoom._visible = false;
+						instance_create_layer(__view_get( e__VW.XView, 0 )+420,__view_get( e__VW.YView, 0 )+180, "Enchufes", o_enchufe)
+						player = instance_create_layer(x,y+100,"Player", o_playerShip)
+						global.hp = 1;
+						global.ammo = 0;
+						global.energy = 100;
+						global.laser = 0;
+					}
 		
 				}break;
 				case 1:

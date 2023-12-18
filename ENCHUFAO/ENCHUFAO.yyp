@@ -760,6 +760,7 @@
     {"id":{"name":"o_partBalaBossGarbanzo","path":"objects/o_partBalaBossGarbanzo/o_partBalaBossGarbanzo.yy",},},
     {"id":{"name":"s_ammoBar_in","path":"sprites/s_ammoBar_in/s_ammoBar_in.yy",},},
     {"id":{"name":"s_titleBack","path":"sprites/s_titleBack/s_titleBack.yy",},},
+    {"id":{"name":"o_tutorialText","path":"objects/o_tutorialText/o_tutorialText.yy",},},
     {"id":{"name":"PlayerShipSlowMo","path":"scripts/PlayerShipSlowMo/PlayerShipSlowMo.yy",},},
     {"id":{"name":"AddUpgradeReReRePlayer","path":"scripts/AddUpgradeReReRePlayer/AddUpgradeReReRePlayer.yy",},},
     {"id":{"name":"s_blackHole","path":"sprites/s_blackHole/s_blackHole.yy",},},
