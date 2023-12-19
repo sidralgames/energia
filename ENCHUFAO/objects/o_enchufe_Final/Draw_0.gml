@@ -9,7 +9,7 @@
 // Inherit the parent event
 event_inherited();
 
-if (room = Sala_0) && (abierto = false)
+if ((room = Sala_0) || (room = Sala_Tutorial)) && (abierto = false)
 {
 	
 	if (global.pluggedInEnergy)

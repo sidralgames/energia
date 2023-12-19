@@ -60,7 +60,7 @@ if instance_exists(o_playerShip)
 if (!isPaused)
 {
 
-	if (room != Sala_Inicio) || ((room = Sala_Inicio) && instance_exists(o_tutorialText))
+	if (room != Sala_Inicio)
 	{
 		
 		//draw_sprite_ext(s_hpNewUIEnergScreen,0,__view_get( e__VW.XView, 0 )+43,__view_get( e__VW.YView, 0 )+35,1,1,0,image_blend, image_alpha)
@@ -128,7 +128,7 @@ if (!isPaused)
 		
 	}
 	//draw_text(__view_get( e__VW.XView, 0 )+30,__view_get( e__VW.YView, 0 )+20, "existe " + string(global.EXISTE))
-	if (room != Sala_Inicio)
+	if (room != Sala_Inicio) 
 	{
 	draw_set_alpha(1);
 	draw_set_halign(fa_left)
@@ -196,7 +196,7 @@ if (!isPaused)
 	//	}
 	
 	//}
-	if room != Sala_Inicio
+	if (room != Sala_Inicio) && (room != Sala_Tutorial) 
 	{
 		draw_set_font(customFont)
 		if (global.energy <=global.energyLow)

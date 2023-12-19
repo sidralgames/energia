@@ -1,5 +1,20 @@
 /// @description Insert description here
 // You can write your code in this editor
+if (room = Sala_Tutorial)
+{
+	global.hp = 1;
+	global.ammo = 0;
+	global.energy = 200;
+	global.laser = 0;
+	global.bombAmmo = 0;
+	global.PETAAmmo = 0;
+	global.slowMoTime = 0;
+}
+else
+{
+	global.energy = global.energyMax;
+}
+
 pithDisp = 0.8
 pitch = 1;
 explocreated = false
@@ -11,7 +26,7 @@ minConectRadBoss  = 28;
 minConectRad = minConectRadStandard;
 SetFxParameters();
 flashAlpha = 0;
-side=0;
+side=choose(1,-1);
 creatingSmoke = false;
 contSmoke = 0;
 contBurnPartMax = 8;
@@ -104,7 +119,7 @@ pluggedTimerAlert = 200;
 
 pluggedShip = false
 global.pitch = 1;
-global.energy = global.energyMax;
+
 upgraded = false;
 if (room != Sala_Inicio)
 {

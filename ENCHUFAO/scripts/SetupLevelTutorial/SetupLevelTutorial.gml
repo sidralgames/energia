@@ -1,7 +1,9 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function SetupLevelBasic()
+function SetupLevelTutorial()
 {
+	instance_create(x,y,o_tutorialText);
+	
 	global.newChargerX = 0;
 	global.newChargerY = 0;
 	
@@ -34,8 +36,8 @@ function SetupLevelBasic()
 	__background_set( e__BG.Y, 0, irandom(1000) );
 
 
-	room_width = (CELL_WIDTH/32) *(320*4); //
-	room_height = (CELL_HEIGHT/32) *(320*4);
+	room_width = (CELL_WIDTH *31); //
+	room_height = (CELL_HEIGHT * 21);
 
 
 	__view_set( e__VW.HView, 0, __view_get( e__VW.HPort, 0 ) );
@@ -62,8 +64,6 @@ function SetupLevelBasic()
 
 	//Create the player
 	instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Player", o_playerShip);
-	
-	
 	if (global.level = 1) && (global.spriteShip = splayer_Red) && (creadaStrandedRed = false)
 	{
 		creadaStrandedRed = true;
@@ -83,7 +83,7 @@ function SetupLevelBasic()
 	var _controller_y = height_ div 2
 	var _controller_direction = irandom(3);
 
-	var _steps = 3500;
+	var _steps = 1800;
 
 	var _direction_change_odds = 1;
 
@@ -117,19 +117,13 @@ function SetupLevelBasic()
 	SetTemporaryWalls();
 	
 	//Draw the level
-	DrawLevelBasic();
+	DrawLevelTutorial();
 	
-	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo)
-	|| (!enchufeShield) || (!enchufeFinal) || (!strandedShipOK) 
-	//|| (UpgradesEnchufesInLevel < 1)
-
+	if (!enchufe0) || (!enchufeFinal)
 	{
 		room_restart();
 	}
 	
-	
-	
 	PlacePetasInTiles(60);
-
 	
 }

@@ -22,10 +22,15 @@ creadaStrandedRed = false;
 alarm[6] = 50 
 global.changingTiles = false;
 
-if (levelType = 0)
+if (room = Sala_0) //(levelType = 0)
 {
 	SetupLevelBasic()
 	levelType="Basic"
+}
+else if (room = Sala_Tutorial)
+{
+	SetupLevelTutorial()
+	levelType="Tutorial"
 }
 //else if (levelType = 1)
 //{

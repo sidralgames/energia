@@ -1,5 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
+if (room = Sala_Tutorial)
+{
+	global.bombsTutorial +=1;
+}
 image_speed = 0.5;
 _hpush = 0;
 _vpush = 0;

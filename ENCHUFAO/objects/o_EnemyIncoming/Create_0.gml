@@ -9,7 +9,7 @@ if (room = Sala_BossWorm)
 {
 	EnemiesToSpawn_WormBossRoom();
 }
-else if (room = Sala_Inicio)
+else if (room = Sala_Tutorial)
 {
 	enemy = choose(o_enemy, o_enemyFast)
 	

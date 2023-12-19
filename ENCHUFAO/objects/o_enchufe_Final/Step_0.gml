@@ -26,7 +26,7 @@ else
 	image_index = 0;	
 }
 
-if (room = Sala_0)
+if (room = Sala_0) 
 {
 	if (global.pluggedInEnergy) && (global.pluggedInHp) &&
 	(global.pluggedInAmmo) && (global.pluggedInLaser)
@@ -34,6 +34,15 @@ if (room = Sala_0)
 		abierto = true;	
 	}
 }
+
+if (room = Sala_Tutorial)
+{
+	if (global.pluggedInEnergy) && (global.pluggedInHp) &&
+	(global.pluggedInAmmo) && (global.pluggedInLaser)
+	{
+		abierto = true;	
+	}
+} 
 
 
 if instance_exists(o_playerShip)
