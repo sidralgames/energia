@@ -92,8 +92,8 @@ if (LaserCreated) //&& (global.laserTutorial < 300)
 	if (o_playerShip.key_BulletTime && !o_playerShip.canSlowMotion)
 	|| o_main.alarm[1] <=0
 	{
-		draw_sprite_ext(s_moveTutorial, 2, __view_get( e__VW.XView, 0 )+420,__view_get( e__VW.YView, 0 )+345,0.4,0.4,0,image_blend, image_alpha)
-		draw_sprite_ext(s_moveTutorial, 3, __view_get( e__VW.XView, 0 )+220,__view_get( e__VW.YView, 0 )+345,0.4,0.4,0,image_blend, image_alpha)				
+		draw_sprite_ext(s_moveTutorial, 2, __view_get( e__VW.XView, 0 )+380,__view_get( e__VW.YView, 0 )+345,0.4,0.4,0,image_blend, image_alpha)
+		draw_sprite_ext(s_moveTutorial, 3, __view_get( e__VW.XView, 0 )+260,__view_get( e__VW.YView, 0 )+345,0.4,0.4,0,image_blend, image_alpha)				
 	}
 }
 
