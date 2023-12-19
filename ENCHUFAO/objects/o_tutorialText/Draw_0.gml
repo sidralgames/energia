@@ -9,27 +9,27 @@ if !instance_exists(o_enchufeBombs)
 	o_playerShip.canSlowMotion = false;
 	o_main.alarm[1] = 0;
 }
-if instance_exists(o_enchufe) 
+if instance_exists(o_enchufe) && (global.energy <= global.energyMax/2)
 {
 	draw_sprite_ext(s_energyText, 0, o_enchufe.x,o_enchufe.y-50,1,1,0,image_blend, image_alpha)	
 }
 
-if instance_exists(o_enchufe_Hp) && (global.hp <= global.hpMax)
+if instance_exists(o_enchufe_Hp) && (global.hp <= global.hpMax/2)
 {
 	draw_sprite_ext(s_energyText, 1, o_enchufe_Hp.x,o_enchufe_Hp.y-50,1,1,0,image_blend, image_alpha)	
 }
 
-if instance_exists(o_enchufe_Ammo) && (global.ammo <= global.ammoMax)
+if instance_exists(o_enchufe_Ammo) && (global.ammo <= global.ammoMax/2)
 {
 	draw_sprite_ext(s_energyText, 2, o_enchufe_Ammo.x,o_enchufe_Ammo.y-50,1,1,0,image_blend, image_alpha)	
 }
 
-if instance_exists(o_enchufe_Laser) && (global.laser <= global.laserMax)
+if instance_exists(o_enchufe_Laser) && (global.laser <= global.laserMax/2)
 {
 	draw_sprite_ext(s_energyText, 3, o_enchufe_Laser.x,o_enchufe_Laser.y-50,1,1,0,image_blend, image_alpha)	
 }
 
-if instance_exists(o_enchufeBombs) && (global.bombAmmo <= global.bombAmmoMax)
+if instance_exists(o_enchufeBombs) && (global.bombAmmo <= global.bombAmmoMax/2)
 {
 	draw_sprite_ext(s_energyText, 4, o_enchufeBombs.x,o_enchufeBombs.y-50,1,1,0,image_blend, image_alpha)	
 }
@@ -55,33 +55,31 @@ if (Ammocreated) && !instance_exists(o_enchufeBombs)
 
 if (bombCreated) && (global.bombsTutorial < 2)
 {
-	if (global.slowMoTime > global.slowMoTime > 105)
-	{
-		draw_sprite_ext(s_moveTutorial, 5, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+30,0.7,0.7,0,image_blend, image_alpha)		
-	}
+	draw_sprite_ext(s_destroySomething, 0, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+40,0.7,0.7,0,image_blend, image_alpha)
+	draw_sprite_ext(s_moveTutorial, 2, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+345,0.4,0.4,0,image_blend, image_alpha)
+	draw_sprite_ext(s_moveTutorial, 3, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+315,0.7,0.7,0,image_blend, image_alpha)
 	
-	if (o_playerShip.key_BulletTime = false)
-	{
-		draw_sprite_ext(s_moveTutorial, 2, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+325,0.4,0.4,0,image_blend, image_alpha)
-		draw_sprite_ext(s_moveTutorial, 3, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+295,0.7,0.7,0,image_blend, image_alpha)
-	}
 }
 
 if (LaserCreated) && (global.laserTutorial < 300)
 {
-	if (global.slowMoTime > global.slowMoTime > 105)
-	{
-		draw_sprite_ext(s_moveTutorial, 5, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+30,0.7,0.7,0,image_blend, image_alpha)		
-	}
 	
 	if (o_playerShip.key_BulletTime = false)
 	{
-		draw_sprite_ext(s_moveTutorial, 2, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+335,0.4,0.4,0,image_blend, image_alpha)
-		draw_sprite_ext(s_moveTutorial, 3, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+310,0.4,0.4,0,image_blend, image_alpha)		
-		draw_sprite_ext(s_moveTutorial, 4, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+290,0.7,0.7,0,image_blend, image_alpha)	
+		draw_sprite_ext(s_moveTutorial, 2, __view_get( e__VW.XView, 0 )+420,__view_get( e__VW.YView, 0 )+345,0.4,0.4,0,image_blend, image_alpha)
+		draw_sprite_ext(s_moveTutorial, 3, __view_get( e__VW.XView, 0 )+220,__view_get( e__VW.YView, 0 )+345,0.4,0.4,0,image_blend, image_alpha)		
+		draw_sprite_ext(s_moveTutorial, 4, __view_get( e__VW.XView, 0 )+420,__view_get( e__VW.YView, 0 )+320,0.7,0.7,0,image_blend, image_alpha)	
+		draw_sprite_ext(s_moveTutorial, 5, __view_get( e__VW.XView, 0 )+220,__view_get( e__VW.YView, 0 )+320,0.7,0.7,0,image_blend, image_alpha)		
 	}
 }
 
+if (global.changingTiles) && (bomb = false)
+{
+	global.bombsTutorial +=1;
+	bomb = true;
+	alarm[0] = 30;
+}
+//draw_text( __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+105, string(global.bombsTutorial))
 if (global.energy <=2)
 {
 	global.energy =2;
@@ -239,10 +237,10 @@ if (CanCreateEnemies)
 	contEnemies--;
 	if (contEnemies <= 0)
 	{
-		contEnemies = random_range(250, 380);
+		contEnemies = random_range(100, 150);
 		xx = irandom(30);
-		yy = irandom(24);
-		if (global.wallgrid_[# xx, yy] == FLOOR) 
+		yy = irandom(20);
+		if (global.wallgrid_[# xx, yy] == FLOOR) && (global.totalEnemiesOnScreen <=1)
 		{	
 			var exM = xx * CELL_WIDTH+CELL_WIDTH/2;
 			var eyM = yy * CELL_HEIGHT+CELL_HEIGHT/2;
@@ -251,4 +249,6 @@ if (CanCreateEnemies)
 	
 	}
 }
+
+
 

@@ -636,6 +636,7 @@
     {"id":{"name":"o_enemyMisil","path":"objects/o_enemyMisil/o_enemyMisil.yy",},},
     {"id":{"name":"polygon_get_area","path":"scripts/polygon_get_area/polygon_get_area.yy",},},
     {"id":{"name":"o_ExploBulletsPickUp","path":"objects/o_ExploBulletsPickUp/o_ExploBulletsPickUp.yy",},},
+    {"id":{"name":"s_destroySomething","path":"sprites/s_destroySomething/s_destroySomething.yy",},},
     {"id":{"name":"MoveShip","path":"scripts/MoveShip/MoveShip.yy",},},
     {"id":{"name":"BossGarbanzoState_Start","path":"scripts/BossGarbanzoState_Start/BossGarbanzoState_Start.yy",},},
     {"id":{"name":"s_enemyMouth","path":"sprites/s_enemyMouth/s_enemyMouth.yy",},},

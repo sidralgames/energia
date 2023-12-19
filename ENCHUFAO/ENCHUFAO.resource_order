@@ -565,6 +565,7 @@
     {"name":"o_enemyMisil","order":7,"path":"objects/o_enemyMisil/o_enemyMisil.yy",},
     {"name":"polygon_get_area","order":7,"path":"scripts/polygon_get_area/polygon_get_area.yy",},
     {"name":"o_ExploBulletsPickUp","order":61,"path":"objects/o_ExploBulletsPickUp/o_ExploBulletsPickUp.yy",},
+    {"name":"s_destroySomething","order":68,"path":"sprites/s_destroySomething/s_destroySomething.yy",},
     {"name":"MoveShip","order":3,"path":"scripts/MoveShip/MoveShip.yy",},
     {"name":"BossGarbanzoState_Start","order":13,"path":"scripts/BossGarbanzoState_Start/BossGarbanzoState_Start.yy",},
     {"name":"s_enemyMouth","order":41,"path":"sprites/s_enemyMouth/s_enemyMouth.yy",},

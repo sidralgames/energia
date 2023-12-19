@@ -1,7 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
+if (global.totalEnemiesOnScreen <= 0)
+{
+	global.totalEnemiesOnScreen = 0;
+}
 ///-------------ACHIEVEMENTS-----////
 
 if (global.enemiesKilledTotalAch >= 500) && (global.ach500Enemies = 0)

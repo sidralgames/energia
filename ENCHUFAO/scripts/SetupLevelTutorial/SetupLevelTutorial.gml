@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SetupLevelTutorial()
 {
-	instance_create(x,y,o_tutorialText);
+	instance_create_layer(x,y,"Banners",o_tutorialText);
 	
 	global.newChargerX = 0;
 	global.newChargerY = 0;
@@ -36,7 +36,7 @@ function SetupLevelTutorial()
 	__background_set( e__BG.Y, 0, irandom(1000) );
 
 
-	room_width = (CELL_WIDTH *31); //
+	room_width = (CELL_WIDTH *33); //
 	room_height = (CELL_HEIGHT * 21);
 
 
