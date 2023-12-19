@@ -22,8 +22,8 @@ if instance_exists(o_gridRoom)
 	//	}
 
 
-	if (_hp <= 0)
-	{
-		instance_destroy();
-	}
+	//if (_hp <= 0)
+	//{
+	//	instance_destroy();
+	//}
 }

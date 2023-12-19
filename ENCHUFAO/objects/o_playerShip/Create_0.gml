@@ -4,7 +4,7 @@ if (room = Sala_Tutorial)
 {
 	global.hp = 1;
 	global.ammo = 0;
-	global.energy = 200;
+	global.energy = 250;
 	global.laser = 0;
 	global.bombAmmo = 0;
 	global.PETAAmmo = 0;

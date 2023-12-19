@@ -36,8 +36,8 @@ function SetupLevelTutorial()
 	__background_set( e__BG.Y, 0, irandom(1000) );
 
 
-	room_width = (CELL_WIDTH *33); //
-	room_height = (CELL_HEIGHT * 21);
+	room_width = (CELL_WIDTH *35); //
+	room_height = (CELL_HEIGHT * 23);
 
 
 	__view_set( e__VW.HView, 0, __view_get( e__VW.HPort, 0 ) );
@@ -83,7 +83,7 @@ function SetupLevelTutorial()
 	var _controller_y = height_ div 2
 	var _controller_direction = irandom(3);
 
-	var _steps = 1800;
+	var _steps = 2100;
 
 	var _direction_change_odds = 1;
 

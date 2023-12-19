@@ -3,11 +3,11 @@
 global.bombsTutorial = 0;
 global.laserTutorial = 0;
 
-customFont2 = font_add("ChubbyChoo-SemiBold.ttf", 14, false, false, 32, 128);
+customFont2 = font_add("ChubbyChoo-SemiBold.ttf", 13, false, false, 32, 128);
 bomb = false;
 contEnemies =160;
 CanCreateEnemies = false;
-
+minenemies = 1;
 HPcreated = false;
 oddsEnchufeHP = 2;
 EnchufeHPcreated = false;

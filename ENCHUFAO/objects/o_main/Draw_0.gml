@@ -155,15 +155,31 @@ if (!isPaused)
 	}
 	if instance_exists(o_playerShip) && (room != Sala_Inicio)
 	{
-		if (o_playerShip.key_BulletTime) && (o_playerShip.canSlowMotion)
+		if (room = Sala_0)
 		{
-			draw_sprite_ext(s_bulletTimeIndicator,1,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+345,1,1,0,image_blend, image_alpha)
-			draw_sprite_ext(s_bulletTimeIndicator,0,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+345,(global.slowMoTime/global.slowMoTimeMax),1,0,image_blend, image_alpha)
+			if (o_playerShip.key_BulletTime) && (o_playerShip.canSlowMotion)
+			{
+				draw_sprite_ext(s_bulletTimeIndicator,1,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+345,1,1,0,image_blend, image_alpha)
+				draw_sprite_ext(s_bulletTimeIndicator,0,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+345,(global.slowMoTime/global.slowMoTimeMax),1,0,image_blend, image_alpha)
+			}
+			if (alarm[1] >0)
+			{
+				draw_sprite_ext(s_bulletTimeIndicator,1,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+345,1,1,0,image_blend, 0.6)
+				draw_sprite_ext(s_bulletTimeIndicator,0,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+345,(global.slowMoTime/global.slowMoTimeMax),1,0,image_blend, 0.6)
+			}
 		}
-		if (alarm[1] >0)
+		else if (room = Sala_Tutorial)
 		{
-			draw_sprite_ext(s_bulletTimeIndicator,1,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+345,1,1,0,image_blend, 0.6)
-			draw_sprite_ext(s_bulletTimeIndicator,0,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+345,(global.slowMoTime/global.slowMoTimeMax),1,0,image_blend, 0.6)
+			if (o_playerShip.key_BulletTime) && (o_playerShip.canSlowMotion) && (o_tutorialText.LaserCreated)
+			{
+				draw_sprite_ext(s_bulletTimeIndicator,1,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+345,1,1,0,image_blend, image_alpha)
+				draw_sprite_ext(s_bulletTimeIndicator,0,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+345,(global.slowMoTime/global.slowMoTimeMax),1,0,image_blend, image_alpha)
+			}
+			if (alarm[1] >0) && (o_tutorialText.LaserCreated)
+			{
+				draw_sprite_ext(s_bulletTimeIndicator,1,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+345,1,1,0,image_blend, 0.6)
+				draw_sprite_ext(s_bulletTimeIndicator,0,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+345,(global.slowMoTime/global.slowMoTimeMax),1,0,image_blend, 0.6)
+			}
 		}
 		
 		
@@ -247,7 +263,7 @@ if (!isPaused)
 		if (o_playerShip.tocado) && (o_playerShip.alarm[4] > 4)
 		{
 			draw_set_color(rojo)
-			draw_set_alpha(0.25)
+			draw_set_alpha(0.35)
 			draw_rectangle(__view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0,__view_get( e__VW.XView, 0 )+640,__view_get( e__VW.YView, 0 )+360,false)
 			draw_set_color(c_white)
 			draw_set_alpha(1)

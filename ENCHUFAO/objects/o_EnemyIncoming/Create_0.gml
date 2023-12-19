@@ -11,7 +11,16 @@ if (room = Sala_BossWorm)
 }
 else if (room = Sala_Tutorial)
 {
-	enemy = choose(o_enemy, o_enemyFast)
+	
+	
+	if (o_tutorialText.bombCreated)
+	{
+		enemy = choose(o_enemySniper,o_enemy, o_enemyFast, o_enemy, o_enemyFast)
+	}
+	else
+	{
+		enemy = choose(o_enemy, o_enemyFast)
+	}
 	
 }
 else
