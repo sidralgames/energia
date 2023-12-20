@@ -90,5 +90,5 @@ flashAlpha = 0;
 
 
 global.totalEnemiesOnScreen+=1;
-
+global.totalEnemies +=1;
 WormBoss = false;

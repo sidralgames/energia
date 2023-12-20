@@ -523,6 +523,7 @@
     {"name":"tile_meeting_precise","order":2,"path":"scripts/tile_meeting_precise/tile_meeting_precise.yy",},
     {"name":"s_enchufeUpgradeDischarge","order":6,"path":"sprites/s_enchufeUpgradeDischarge/s_enchufeUpgradeDischarge.yy",},
     {"name":"grid_line_collision","order":8,"path":"scripts/grid_line_collision/grid_line_collision.yy",},
+    {"name":"s_tutorialText","order":59,"path":"sprites/s_tutorialText/s_tutorialText.yy",},
     {"name":"s_bulletMouth","order":52,"path":"sprites/s_bulletMouth/s_bulletMouth.yy",},
     {"name":"oTest","order":6,"path":"objects/oTest/oTest.yy",},
     {"name":"AddUpgradeChargerElectro","order":25,"path":"scripts/AddUpgradeChargerElectro/AddUpgradeChargerElectro.yy",},

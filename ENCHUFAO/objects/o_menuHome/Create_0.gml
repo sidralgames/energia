@@ -3,6 +3,7 @@
 
 selected = 0;
 _visible = true;
+global.playTimes =1;
 
 
 

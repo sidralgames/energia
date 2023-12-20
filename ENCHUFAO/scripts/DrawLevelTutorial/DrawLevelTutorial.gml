@@ -6,7 +6,10 @@ function DrawLevelTutorial()
 	mimicsMax = 2;
 	
 	PETAs = 0;
-	PETAsMax = 3;
+	PETAsMax = 1;
+	
+	ShieldsInLevel = 0;
+	ShieldsInLevelMax = 1;
 	
 	for ( var yy = 0; yy < height_; yy++) 
 	{
@@ -70,11 +73,11 @@ function DrawLevelTutorial()
 				//	BombsInLevel +=1;
 				//}
 				
-				//if (irandom(oddsShieldPickUp) == oddsShieldPickUp) && (ShieldsInLevel < ShieldsInLevelMax) 
-				//{
-				//	instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_ShieldpickUp); 
-				//	ShieldsInLevel +=1;
-				//}
+				if (irandom(oddsShieldPickUp) == oddsShieldPickUp) && (ShieldsInLevel < ShieldsInLevelMax) 
+				{
+					instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_ShieldpickUp); 
+					ShieldsInLevel +=1;
+				}
 				
 				if (irandom(oddsEnchufeEnergy) == oddsEnchufeEnergy) && (enchufe0 = false)
 				{

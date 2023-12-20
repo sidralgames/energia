@@ -16,7 +16,7 @@ enemySpeedInitial = 1.25
 enemySpeed = enemySpeedInitial;
 
 precision= random_range(1,2);
-speed=random(1)+2;
+speed=0;
 
 state = ENEMYSTATE.CHASING;
 
@@ -48,7 +48,7 @@ isMegaEnemy = false;
 isMega = irandom(4);
 oddsBattery = 2;
 
-if (isMega = 0) && (room != Sala_Inicio)
+if (isMega = 0) && (room != Sala_Tutorial)
 {
 	isMegaEnemy = true;
 	global.MegaEnemiesInLevel+=1;

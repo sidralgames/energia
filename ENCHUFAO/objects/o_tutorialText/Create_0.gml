@@ -2,10 +2,17 @@
 // Puede escribir su código en este editor
 global.bombsTutorial = 0;
 global.laserTutorial = 0;
-
+azul = make_color_rgb(44,232, 245) 
+azulO = make_color_rgb(0,149,233)
+rojo = make_color_rgb(228,59, 68) 
 customFont2 = font_add("ChubbyChoo-SemiBold.ttf", 13, false, false, 32, 128);
 bomb = false;
-contEnemies =160;
+contEnemies =260;
+global.assistedSlowmo = false;
+contAssist = 120;
+canAssist = false;
+contToAssist = 120;
+
 CanCreateEnemies = false;
 minenemies = 1;
 HPcreated = false;
@@ -27,6 +34,8 @@ EnchufeLasercreated = false;
 bombCreated = false;
 oddsEnchufebomb = 2;
 EnchufeBombcreated = false;
+
+showBomb = false;
 
 instance_create(x,y,o_gridRoom)
 width_ = room_width div CELL_WIDTH;

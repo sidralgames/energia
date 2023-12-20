@@ -590,6 +590,7 @@
     {"id":{"name":"tile_meeting_precise","path":"scripts/tile_meeting_precise/tile_meeting_precise.yy",},},
     {"id":{"name":"s_enchufeUpgradeDischarge","path":"sprites/s_enchufeUpgradeDischarge/s_enchufeUpgradeDischarge.yy",},},
     {"id":{"name":"grid_line_collision","path":"scripts/grid_line_collision/grid_line_collision.yy",},},
+    {"id":{"name":"s_tutorialText","path":"sprites/s_tutorialText/s_tutorialText.yy",},},
     {"id":{"name":"s_bulletMouth","path":"sprites/s_bulletMouth/s_bulletMouth.yy",},},
     {"id":{"name":"oTest","path":"objects/oTest/oTest.yy",},},
     {"id":{"name":"AddUpgradeChargerElectro","path":"scripts/AddUpgradeChargerElectro/AddUpgradeChargerElectro.yy",},},

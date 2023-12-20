@@ -20,3 +20,4 @@ if (global.bombIsClusterBomb)
 
 sprite_enchufePluged = sprite_index;
 
+maxCharge = 120;

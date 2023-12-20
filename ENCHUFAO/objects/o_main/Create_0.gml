@@ -1,10 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 full = false;
-
+global.totalEnemies = 0;
 global.BossWormHPMax = 0;
 global.BossWormHP = 10;
 
+global.assistedSlowmo = false;
+global.assistSlowmoIsOn = true;
 //-------COLORS--------//
 global.brightRed = make_colour_rgb(255,0,68);
 global.yellow = make_color_rgb(254,231, 97);

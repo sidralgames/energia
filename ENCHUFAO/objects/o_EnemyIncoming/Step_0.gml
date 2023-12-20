@@ -18,6 +18,10 @@ if (image_index >= 19) && (canCreate = false)
 		enemyCreated.isCounted = true;
 		instance_destroy();
 	}
+	else
+	{
+		instance_destroy();
+	}
 }
 
 

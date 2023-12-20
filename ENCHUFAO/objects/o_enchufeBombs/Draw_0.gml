@@ -13,7 +13,7 @@ if instance_exists(o_playerShip)
 if (global.chargingBombs) && (charging) && (global.bombAmmo < global.bombAmmoMax)
 	//&& (o_playerShip.pluggedTimer < 200)
 {
-	if (charge <= 180)
+	if (charge <= 120)
 	{
 		charge+=1;
 	}
@@ -21,7 +21,7 @@ if (global.chargingBombs) && (charging) && (global.bombAmmo < global.bombAmmoMax
 	draw_sprite_ext(s_enchufeChargeHP_In,0,x-21,y-30,(charge/maxCharge)*0.5,1,0,image_blend, image_alpha)
 }
 
-if (charge >= 180)
+if (charge >= 120)
 {
 	charge = 0;
 	if (global.bombAmmo < global.bombAmmoMax)

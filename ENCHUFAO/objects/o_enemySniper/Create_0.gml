@@ -70,7 +70,7 @@ precisionPlayer = 0.2;
 offBullet = 1.75;
 
 oddsBattery = 2;
-if (isMega = 0) 
+if (isMega = 0) && (room != Sala_Tutorial)
 {
 	global.MegaEnemiesInLevel+=1;
 	sprite_index = s_enemySniperMega;

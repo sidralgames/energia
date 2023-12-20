@@ -11,4 +11,7 @@ if (global.HighScore < global.XPpoints)
 	global.HighScore = global.XPpoints;
 }
 
-global.playTimes +=1;
+if (room != Sala_Tutorial)
+{
+	global.playTimes +=1;
+}

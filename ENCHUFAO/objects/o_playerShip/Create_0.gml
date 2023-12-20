@@ -4,24 +4,26 @@ if (room = Sala_Tutorial)
 {
 	global.hp = 1;
 	global.ammo = 0;
-	global.energy = 250;
+	global.energy = 180;
 	global.laser = 0;
 	global.bombAmmo = 0;
-	global.PETAAmmo = 0;
+	global.PETAAmmo = 3;
 	global.slowMoTime = 0;
 }
 else
 {
 	global.energy = global.energyMax;
 }
-
+slowmoAssistedTrue = false
+contAssist = 0;
+assistedFactor = 0;
 pithDisp = 0.8
 pitch = 1;
 explocreated = false
-maxConectRadStandard = 26;
+maxConectRadStandard = 30;
 maxConectRad = maxConectRadStandard;
 maxConectRadBoss = 45;
-minConectRadStandard  = 17;
+minConectRadStandard  = 18;
 minConectRadBoss  = 28;
 minConectRad = minConectRadStandard;
 SetFxParameters();
