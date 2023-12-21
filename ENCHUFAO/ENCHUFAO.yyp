@@ -360,6 +360,7 @@
     {"id":{"name":"spr_lut_light_intensity_spot","path":"sprites/spr_lut_light_intensity_spot/spr_lut_light_intensity_spot.yy",},},
     {"id":{"name":"o_enemySpawnerIndicator","path":"objects/o_enemySpawnerIndicator/o_enemySpawnerIndicator.yy",},},
     {"id":{"name":"AddUpgradeBonusPlayer","path":"scripts/AddUpgradeBonusPlayer/AddUpgradeBonusPlayer.yy",},},
+    {"id":{"name":"o_partEnemyKilledBy","path":"objects/o_partEnemyKilledBy/o_partEnemyKilledBy.yy",},},
     {"id":{"name":"s_enchufeSelect","path":"sprites/s_enchufeSelect/s_enchufeSelect.yy",},},
     {"id":{"name":"s_infiniteLaser_MenuOn","path":"sprites/s_infiniteLaser_MenuOn/s_infiniteLaser_MenuOn.yy",},},
     {"id":{"name":"o_discTrap","path":"objects/o_discTrap/o_discTrap.yy",},},

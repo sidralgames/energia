@@ -303,6 +303,7 @@
     {"name":"spr_lut_light_intensity_spot","order":3,"path":"sprites/spr_lut_light_intensity_spot/spr_lut_light_intensity_spot.yy",},
     {"name":"o_enemySpawnerIndicator","order":13,"path":"objects/o_enemySpawnerIndicator/o_enemySpawnerIndicator.yy",},
     {"name":"AddUpgradeBonusPlayer","order":19,"path":"scripts/AddUpgradeBonusPlayer/AddUpgradeBonusPlayer.yy",},
+    {"name":"o_partEnemyKilledBy","order":20,"path":"objects/o_partEnemyKilledBy/o_partEnemyKilledBy.yy",},
     {"name":"s_enchufeSelect","order":27,"path":"sprites/s_enchufeSelect/s_enchufeSelect.yy",},
     {"name":"s_infiniteLaser_MenuOn","order":63,"path":"sprites/s_infiniteLaser_MenuOn/s_infiniteLaser_MenuOn.yy",},
     {"name":"o_discTrap","order":51,"path":"objects/o_discTrap/o_discTrap.yy",},

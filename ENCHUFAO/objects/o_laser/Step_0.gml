@@ -52,6 +52,11 @@ if (canShot)
 						{
 							audio_play_sound_on(global.audioEmitter, snd_hit, false, 50)
 							global.hp -=1 * global.damageReceived;
+							if (global.hp <= 0)
+							{
+								global.spriteKilledBy = s_killedBy;
+								global.imageKilledBy = 1;
+							}
 						}
 						screenShake(4,30)
 					}
@@ -109,6 +114,11 @@ if (canShot)
 						{
 							audio_play_sound_on(global.audioEmitter, snd_hit, false, 50)
 							global.hp -=1 * global.damageReceived;
+							if (global.hp <= 0)
+							{
+								global.spriteKilledBy = s_killedBy;
+								global.imageKilledBy = 1;
+							}
 						}
 						screenShake(4,30)
 					}

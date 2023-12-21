@@ -15,6 +15,7 @@ if (global.shields<1)
 		if (global.hp <= 0)
 		{
 			global.spriteKilledBy = s_killedBy;
+			global.imageKilledBy = 0;
 		}
 		screenShake(4,30);
 		global.hitsTaken+=1;

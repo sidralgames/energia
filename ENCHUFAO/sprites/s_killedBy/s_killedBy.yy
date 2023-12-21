@@ -14,6 +14,8 @@
   "For3D": false,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"35e6e536-c5f6-439a-8d39-27375ff0e14f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"acd14bc5-5ac3-4d36-b602-c516b64de977",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f5ec58b1-c4cc-45a2-aac6-0d4fdea3bc8a",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -43,7 +45,7 @@
     "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "eventStubScript": null,
     "eventToFunction": {},
-    "length": 1.0,
+    "length": 3.0,
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
@@ -55,6 +57,8 @@
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"35e6e536-c5f6-439a-8d39-27375ff0e14f","path":"sprites/s_killedBy/s_killedBy.yy",},},},"Disabled":false,"id":"bf2435b2-acfe-4446-8883-fffb4f10dc77","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"acd14bc5-5ac3-4d36-b602-c516b64de977","path":"sprites/s_killedBy/s_killedBy.yy",},},},"Disabled":false,"id":"a64d07af-c44e-465a-9d7e-7fac509be5ec","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f5ec58b1-c4cc-45a2-aac6-0d4fdea3bc8a","path":"sprites/s_killedBy/s_killedBy.yy",},},},"Disabled":false,"id":"64d78e82-6fc2-4bf1-8915-e082f939709c","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

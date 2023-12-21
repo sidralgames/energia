@@ -16,16 +16,16 @@ draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+210,"Kil
 
 draw_sprite_ext(global.spriteKilledBy, image_index, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+265,1,1, image_angle, image_blend, image_alpha)
 
+
 if (image_alpha>=0.5)
 {
 	contParts --;
 	if (contParts <=0)
 	{
-		part_particles_create(global.naveEnemy_Waiting_sys, __view_get( e__VW.XView, 0 )+315, __view_get( e__VW.YView, 0 )+265, global.naveEnemy_Waiting , 1)
+		part_particles_create(global.EnemyKilledBy_sys, __view_get( e__VW.XView, 0 )+320 - (sprite_width/1.5), __view_get( e__VW.YView, 0 )+265, global.EnemyKilledBy_part , 1)
 		contParts = contPartsInitial;
 	}
 }
-
 
 
 

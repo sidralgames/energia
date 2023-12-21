@@ -1,8 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-killedBy = instance_create(x,y,o_killedBy);
-killedBy.depth = depth-1;
-
+killedBy = instance_create_layer(x,y,"Pause", o_killedBy);
+contPartsInitial = 3;
+contParts = contPartsInitial;
+depth = layer_get_depth("Main") -1;
 x = __view_get( e__VW.XView, 0 )+320;
 y = __view_get( e__VW.YView, 0 )+70;
 image_alpha = 0;

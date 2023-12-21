@@ -316,5 +316,5 @@ if (global.hp < 1)
 	instance_destroy(o_cable)
 	instance_destroy(o_charger)
 	global.totalDeaths+=1;
-	instance_create(x, y, o_gameOver)
+	instance_create_layer(x, y, "Text", o_gameOver)
 }

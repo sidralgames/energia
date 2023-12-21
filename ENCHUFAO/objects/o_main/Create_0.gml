@@ -217,6 +217,7 @@ instance_create_layer(-100,-100,"Part",o_partNaveP_cloak)
 instance_create_layer(-100,-100,"Part",o_partNaveFriend)
 instance_create_layer(-100,-100,"ShieldEnemy",o_partSmoke)
 instance_create_layer(-100,-100,"Part",o_partGreen);
+instance_create_layer(-100,-100,"Pause",o_partEnemyKilledBy)
 
 
 global.repairingSprite = s_repairingPart;
