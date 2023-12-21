@@ -33,11 +33,53 @@ if gamepad_is_connected(0)
 	
 		if (abs(axisrh) >0.4 || abs(axisrv) >0.4) //0.2
 		{
-			x_point_to_move_camera_to= mean(o_playerShip.x,o_playerShip.x,o_playerShip.x,o_playerShip.x+axisrh*400);
-			y_point_to_move_camera_to= mean(o_playerShip.y,o_playerShip.y,o_playerShip.y, o_playerShip.y+axisrv*400); 
+			if (global.assistedAim)
+			{
+				direCross = point_direction(o_playerShip.x,o_playerShip.y,o_playerShip.x+axisrh*100,o_playerShip.y+axisrv*100)
+				direLine = point_direction(o_playerShip.x,o_playerShip.y,x,y);
+				nextEnemy = instance_nearest(x,y,o_enemyP);
+				if instance_exists(nextEnemy) 
+				{
+					direEnemy = point_direction(o_playerShip.x,o_playerShip.y,nextEnemy.x,nextEnemy.y);
+				}
+				
+				if instance_exists(nextEnemy) 
+				&& (point_distance(o_playerShip.x,o_playerShip.y,nextEnemy.x, nextEnemy.y) <=150)
+				&& ((direCross-30 < direLine) && (direLine < direCross+30)) && (checkAssist = false)
+				&& ((direEnemy-20 < direLine) && (direLine < direEnemy+20))
+				{
+					x_point_to_move_camera_to = lerp(x_point_to_move_camera_to,nextEnemy.x, 0.5);
+					y_point_to_move_camera_to = lerp(y_point_to_move_camera_to,nextEnemy.y, 0.5);
 
-			x=lerp(x,x_point_to_move_camera_to,0.15);
-			y=lerp(y,y_point_to_move_camera_to,0.15);
+					x=lerp(x,x_point_to_move_camera_to,0.15);
+					y=lerp(y,y_point_to_move_camera_to,0.15);
+					
+					assistCont--;
+					if (assistCont <=0)
+					{
+						checkAssist = true;
+					}
+					
+				}
+				else
+				{
+					checkAssist = false;
+					assistCont = 60;
+					x_point_to_move_camera_to= mean(o_playerShip.x,o_playerShip.x,o_playerShip.x,o_playerShip.x+axisrh*400);
+					y_point_to_move_camera_to= mean(o_playerShip.y,o_playerShip.y,o_playerShip.y, o_playerShip.y+axisrv*400); 
+
+					x=lerp(x,x_point_to_move_camera_to,0.15);
+					y=lerp(y,y_point_to_move_camera_to,0.15);
+				}
+			}
+			else
+			{
+				x_point_to_move_camera_to= mean(o_playerShip.x,o_playerShip.x,o_playerShip.x,o_playerShip.x+axisrh*400);
+				y_point_to_move_camera_to= mean(o_playerShip.y,o_playerShip.y,o_playerShip.y, o_playerShip.y+axisrv*400); 
+
+				x=lerp(x,x_point_to_move_camera_to,0.15);
+				y=lerp(y,y_point_to_move_camera_to,0.15);
+			}
 		}
 		else
 		{

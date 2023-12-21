@@ -57,6 +57,7 @@ if instance_exists(o_playerShip) && instance_exists(o_charger)
 			}
 			if (HPcreated) && !instance_exists(o_enchufe_Ammo)
 			{
+				draw_sprite_ext(s_arrows,0,__view_get( e__VW.XView, 0 )+75,__view_get( e__VW.YView, 0 )+55,1,1,0,image_blend, image_alpha)
 				draw_sprite_ext(s_destroySomething, 0, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+40,0.6,0.6,0,image_blend, image_alpha)
 			}
 			if (Energycreated) && !instance_exists(o_enchufe_Ammo)

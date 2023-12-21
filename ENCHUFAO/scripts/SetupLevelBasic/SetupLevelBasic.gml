@@ -67,8 +67,12 @@ function SetupLevelBasic()
 	if (global.level = 1) && (global.spriteShip = splayer_Red) && (creadaStrandedRed = false)
 	{
 		creadaStrandedRed = true;
-		global.strandedShipGreen = true;
+		//global.strandedShipGreen = true;
+		global.strandedShipRed = true;
 		//global.strandedShipBlue = true;
+		//global.strandedShipPurple = true;
+		//global.strandedShipDark = true;
+		//global.strandedShipMP3 = true;
 	}
 	
 	//--Fake Worm Boss--//

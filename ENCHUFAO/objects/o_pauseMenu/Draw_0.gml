@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-azul = make_color_rgb(44,232, 245);
+
 orange = make_color_rgb(254,174, 52);
 
 

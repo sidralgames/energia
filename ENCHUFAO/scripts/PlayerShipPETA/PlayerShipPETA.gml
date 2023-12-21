@@ -24,7 +24,7 @@ function PlayerShipPETA()
 	audio_play_sound_on(global.audioEmitter,snd_shoot1, false, 50)
 		
 	
-		var peta = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
+		var peta = instance_create_layer(x + _hpush*3 + lengthdir_x(5, _angle), y +_vpush*5 + lengthdir_y(5, _angle),
 		"Enchufes", petaToLaunch);
 		global.petasUsed+=1;
 		global.PETAAmmo-=1;

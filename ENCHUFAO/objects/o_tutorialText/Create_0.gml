@@ -2,7 +2,7 @@
 // Puede escribir su código en este editor
 global.bombsTutorial = 0;
 global.laserTutorial = 0;
-azul = make_color_rgb(44,232, 245) 
+
 azulO = make_color_rgb(0,149,233)
 rojo = make_color_rgb(228,59, 68) 
 customFont2 = font_add("ChubbyChoo-SemiBold.ttf", 13, false, false, 32, 128);

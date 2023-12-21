@@ -99,26 +99,26 @@ if (pause)
 		}
 		else
 		{
-			if (selected > 3)
+			if (selected > 5)
 			{
 				selected = 0;	
 			}
 
 			if (selected < 0)
 			{
-				selected = 3;	
+				selected = 5;	
 			}
 		
 			if (key_x)
 			{
 				audio_play_sound_on(global.audioEmitter,snd_acceptMenu,false, 50);
+				
 				switch(selected)
 				{
 					case 0: 
 					{
 						o_pause.alarm[0] = 5; 
 						selected = 0;
-				
 					}
 					break;
 			
@@ -127,15 +127,26 @@ if (pause)
 						global.screenshakeIsOn = !global.screenshakeIsOn;
 					}
 					break;
+					
+					case 2: 
+					{
+						global.assistedAim = !global.assistedAim;
+					}
+					break;
+					
+					case 3: 
+					{
+						global.assistSlowmoIsOn = !global.assistSlowmoIsOn;
+					}
+					break;
 			
-					case 2:
+					case 4:
 					{
 						goToMenu = false;
-					
 					}
 					break;
 				
-					case 3:
+					case 5:
 					{
 						SaveGame();
 						game_restart();

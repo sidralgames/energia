@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-azul = make_color_rgb(44,232, 245);
+
 orange = make_color_rgb(254,174, 52);
 
 
@@ -23,7 +23,7 @@ for (var i = 0; i< global.numberOfStats; i++)
 
 	draw_set_halign(fa_left)
 	draw_set_font(customFont2)
-	draw_set_color(azul)
+	draw_set_color(global.lightBlue)
 	draw_text(__view_get( e__VW.XView, 0 )+359,__view_get( e__VW.YView, 0 )+153+i*16, string(stat.textStat))
 	draw_set_color(c_white)
 	draw_text(__view_get( e__VW.XView, 0 )+360,__view_get( e__VW.YView, 0 )+152+i*16, string(stat.textStat))

@@ -6,10 +6,14 @@ global.BossWormHPMax = 0;
 global.BossWormHP = 10;
 
 global.assistedSlowmo = false;
-global.assistSlowmoIsOn = true;
+global.assistSlowmoIsOn = false;
+
+global.assistedAim = false;
+
 //-------COLORS--------//
 global.brightRed = make_colour_rgb(255,0,68);
 global.yellow = make_color_rgb(254,231, 97);
+global.lightBlue = make_color_rgb(44,232, 245);
 
 
 //-------------MEGA UPGRADES-----------------//

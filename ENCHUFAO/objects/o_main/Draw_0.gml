@@ -2,7 +2,7 @@
 // You can write your code in this editor
 draw_set_halign(fa_left)
 
-azul = make_color_rgb(44,232, 245) 
+
 azulO = make_color_rgb(0,149,233)
 rojo = make_color_rgb(228,59, 68) 
 
@@ -12,7 +12,7 @@ if instance_exists(o_playerShip)
 	
 	if (o_playerShip.showEnergy)
 	{
-		draw_circular_bar(o_playerShip.x+23, o_playerShip.y-23, global.energy, global.energyMax, azul, 7,1, 2);
+		draw_circular_bar(o_playerShip.x+23, o_playerShip.y-23, global.energy, global.energyMax, global.lightBlue, 7,1, 2);
 		draw_circular_bar(o_playerShip.x+23, o_playerShip.y-23, global.energy, global.energyMax, c_white, 6,1, 2);
 		//draw_sprite_ext(s_energyPlayer, 0, o_playerShip.x+12, o_playerShip.y-22,  1,1, 0, image_blend, image_alpha)	
 		
@@ -153,7 +153,7 @@ if (!isPaused)
 	//}
 
 	}
-	if instance_exists(o_playerShip) && (room != Sala_Inicio)
+	if instance_exists(o_playerShip) && (room != Sala_Inicio) && (global.assistedSlowmo == false)
 	{
 		if (room = Sala_0)
 		{
@@ -184,7 +184,7 @@ if (!isPaused)
 		
 		
 		//draw_set_halign(fa_left)
-		//draw_set_color(azul)
+		//draw_set_color(global.lightBlue)
 		
 		//draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+125, "x " + string(global.PETAAmmo))
 	

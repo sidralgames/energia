@@ -19,7 +19,7 @@ if (_visible = true)
 	//	draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+150,"Boton Raton Derecho para enchufarte/desenchufarte")
 	//	draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+180,"Enchufate para empezar")
 	//}
-	azul = make_color_rgb(44,232, 245) 
+	
 
 	if instance_exists(o_shipSelector)
 	{
@@ -43,7 +43,7 @@ if (_visible = true)
 	
 		if (ship.unlocked == 1)
 		{
-			draw_set_color(azul)
+			draw_set_color(global.lightBlue)
 			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+320, string("SHIP BONUS: " + ship.stat))
 			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+322, string("SHIP BONUS: "+ ship.stat))
 	
@@ -52,16 +52,14 @@ if (_visible = true)
 		}
 		else
 		{
-			draw_set_color(azul)
+			draw_set_color(global.lightBlue)
 			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+320, "BONUS: ???? ??? ?????")
 			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+322, "BONUS: ???? ??? ?????")
 	
 			draw_set_color(c_white)
 			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+322, "BONUS: ???? ??? ?????")
 		}
-	
-	
-	
+
 		draw_sprite_ext(s_arrows,0,__view_get( e__VW.XView, 0 )+255,__view_get( e__VW.YView, 0 )+155,1,1,0,image_blend, image_alpha)
 		draw_sprite_ext(s_arrows,1,__view_get( e__VW.XView, 0 )+385,__view_get( e__VW.YView, 0 )+155,1,1,0,image_blend, image_alpha)
 	}
@@ -73,6 +71,8 @@ if (_visible = true)
 			audio_play_sound_on(global.audioEmitter,snd_playMenu,false, 50);
 			shipSelected = true;
 			instance_create_layer(512,269, "Enchufes", o_enchufeInicio)
+			instance_create_layer(520,50, "Enchufes", o_enchufeInicioGarbanzo)
+			instance_create_layer(580,50, "Enchufes", o_enchufeInicioWorm)
 			instance_create_layer(112,272, "Enchufes" ,o_enchufeResetSelector)
 			instance_create_layer(50,40, "Enchufes" ,o_enchufeDeleteData)
 			Stats._visible = false;

@@ -3,9 +3,10 @@
 function PlayerShipSlowMo()
 {
 	//------- ASSISTED SLOWMO ------//
-	if (global.assistSlowmoIsOn)
+	if (global.assistSlowmoIsOn) && (global.hp <= 1)
 	{
-		nextBullet = instance_nearest(x,y,o_bulletEnemy_Father);
+		nextBullet = instance_nearest(x,y,o_bulletEnemy_Father) 
+		nextEnemy =  instance_nearest(x,y,o_enemyP);
 		
 		if instance_exists(nextBullet)
 		{
@@ -14,8 +15,20 @@ function PlayerShipSlowMo()
 			{
 				slowmoAssistedTrue = true;
 				global.assistedSlowmo = true;
-				assistedFactor = 0.3;
-				contAssist = 5;
+				assistFactor = 0.3;
+				contAssist = 50;
+			}
+		}
+		
+		if instance_exists(nextEnemy)
+		{
+			if (point_distance(x,y,nextEnemy.x, nextEnemy.y) <=40) 
+			&& (global.slowMoTime >=0) && (slowmoAssistedTrue = false)
+			{
+				slowmoAssistedTrue = true;
+				global.assistedSlowmo = true;
+				assistFactor = 0.3;
+				contAssist = 50;
 			}
 		}
 	
@@ -27,7 +40,7 @@ function PlayerShipSlowMo()
 		if (global.assistedSlowmo) && ( (contAssist <=0) || (key_BulletTime) || (global.slowMoTime <=0) )
 		{
 			global.assistedSlowmo = false;
-			assistedFactor = 0;
+			assistFactor = 0;
 			slowmoAssistedTrue = false;
 		}
 	}
@@ -64,7 +77,7 @@ function PlayerShipSlowMo()
 			}
 		}
 
-		global.relativeSpeed = lerp(global.relativeSpeed,0.3, 0.05+assistedFactor);
+		global.relativeSpeed = lerp(global.relativeSpeed,0.3, 0.05+assistFactor);
 		pitch = min(1,global.relativeSpeed+0.5);
 		audio_emitter_pitch(global.audioEmitter, pitch);
 		

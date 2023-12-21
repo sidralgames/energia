@@ -14,9 +14,12 @@ else
 {
 	global.energy = global.energyMax;
 }
+checkAssist = false;
+assistCont = 60;
+
 slowmoAssistedTrue = false
 contAssist = 0;
-assistedFactor = 0;
+assistFactor = 0;
 pithDisp = 0.8
 pitch = 1;
 explocreated = false
@@ -169,16 +172,6 @@ instance_create_layer(x,y,"Shield", o_crosshair)
 _angle = point_direction(x,y,o_crosshair.x, o_crosshair.y)
 
 
-
-//---Light-----//??
-//if (room != Sala_Inicio)
-//{
-//	lightPlayer= instance_create_layer(x,y,"LightPlayer",o_Light_Player);
-//}
-//else
-//{
-//	lightPlayer=-1;
-//}
 _colorWhite = c_white;
 greenO = make_color_rgb(99,199,77)
 green = make_color_rgb(108,242,79)
@@ -191,8 +184,10 @@ blanco= make_colour_rgb(255,255,255);
 blue = make_color_rgb(44,232, 245) ;
 orange = make_color_rgb(255,0,68);
 oranget = make_color_rgb(247,118,34);
-blueO = make_color_rgb(0,149,233)
-blueOO = make_color_rgb(18,78,137)
+blueO = make_color_rgb(0,149,233);
+blueOO = make_color_rgb(18,78,137);
+
+
 if (global.spriteShip = splayer)
 {
 	colorLaser = green;

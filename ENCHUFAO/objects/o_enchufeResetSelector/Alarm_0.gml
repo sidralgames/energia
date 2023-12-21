@@ -10,6 +10,8 @@ if (cont = true)
 	o_nextRoom.shipSelected = false
 	_visible = false;
 	o_enchufeInicio._visible = false;
+	o_enchufeInicioGarbanzo._visible = false;
+	o_enchufeInicioWorm._visible = false;
 	
 	o_enchufeDeleteData._visible = false;
 }
