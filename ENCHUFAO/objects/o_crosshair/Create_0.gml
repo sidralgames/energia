@@ -7,3 +7,4 @@ image_index=0
 dist = 200;
 alphaP = 0;
 checkAssist = false;
+assistCont = 60;

@@ -120,67 +120,70 @@ function PlayerShipLaser(argument0)
 	enemy = collision_line(x,y,x+lengthdir_x(maxLenght_+20, argument0+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,argument0+random_range(2,-2)), o_enemyP,false, true)
 	if (enemy)
 	{
-		if (enemy.isShield == false) && (enemy.state == ENEMYSTATE.WAITING)
+		if (enemy.canBeHittedByPlayerLaser = true)
 		{
-			enemy.state = ENEMYSTATE.CHASING;
-		}
-		
-		screenShake(4,10);
-		
-		if (enemy.isShield == true) || (enemy.enemyIsMini == true)
-		{
-			enemy._hp -= (1.95+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
-		}
-		else
-		{
-			if (enemy.haveAShield == false)
+			if (enemy.isShield == false) && (enemy.state == ENEMYSTATE.WAITING)
 			{
-				if (enemy.isWormHitBox)
+				enemy.state = ENEMYSTATE.CHASING;
+			}
+		
+			screenShake(4,10);
+		
+			if (enemy.isShield == true) || (enemy.enemyIsMini == true)
+			{
+				enemy._hp -= (1.95+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
+			}
+			else
+			{
+				if (enemy.haveAShield == false)
 				{
-					if (enemy.isWormHitBoxBoss) && (enemy._hp > 0) && (enemy.canBeDamaged = true)
+					if (enemy.isWormHitBox)
 					{
-						enemy._hp -= (0.25+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
-						global.BossWormHP -= (0.25+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
-						
-					}
-					else
-					{
-						with(enemy)
+						if (enemy.isWormHitBoxBoss) && (enemy._hp > 0) && (enemy.canBeDamaged = true)
 						{
-							if instance_exists(worm)
+							enemy._hp -= (0.25+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
+							global.BossWormHP -= (0.25+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
+						
+						}
+						else
+						{
+							with(enemy)
 							{
-								worm._hp -= (0.25+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
+								if instance_exists(worm)
+								{
+									worm._hp -= (0.25+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
+								}
 							}
 						}
 					}
-				}
-				else
-				{
-					enemy._hp -= (0.25+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
-				}
-			}
-		}
-		
-		if (enemy.haveAShield == false)
-		{
-			enemy.flashAlpha = 1;
-		
-			if (global.laserBurnEnemies)
-			{
-				if (enemy.isShield == false) && (enemy.burned == false) && (enemy.isImmortal == false)
-				{
-					enemy.burned = true;	
+					else
+					{
+						enemy._hp -= (0.25+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
+					}
 				}
 			}
 		
-			if (global.laserSlowEnemies)
+			if (enemy.haveAShield == false)
 			{
-				with(enemy)
+				enemy.flashAlpha = 1;
+		
+				if (global.laserBurnEnemies)
 				{
-					slowed = true;
-					slowedCont = random_range(30,50);
+					if (enemy.isShield == false) && (enemy.burned == false) && (enemy.isImmortal == false)
+					{
+						enemy.burned = true;	
+					}
 				}
+		
+				if (global.laserSlowEnemies)
+				{
+					with(enemy)
+					{
+						slowed = true;
+						slowedCont = random_range(30,50);
+					}
 			
+				}
 			}
 		}
 	}

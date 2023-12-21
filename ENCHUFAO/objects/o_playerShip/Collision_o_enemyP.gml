@@ -14,6 +14,14 @@ if (global.shields<1) && (other.isImmortal = false)
 		if (global.hp <= 0)
 		{
 			global.spriteKilledBy = other.sprite_index;
+			if (other.finalTrail)
+			{
+				global.killedByTrail = true;
+			}
+			if (global.spriteKilledBy = s_enemyDisc)
+			{
+				global.rotationKilledBy = true;
+			}
 		}
 		screenShake(4,30)
 		if (other.canBeDestroyed)

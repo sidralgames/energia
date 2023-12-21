@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+canBeHittedByPlayerLaser = true;
 event_inherited();
 scale = 1;
 depth = layer_get_depth("Enemies")-1;
@@ -15,3 +15,4 @@ hurts = true;
 canBeDestroyed = true;
 thisEnemyBounce = false;
 leavesTrail = false;
+finalTrail = false;

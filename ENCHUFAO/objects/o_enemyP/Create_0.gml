@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 enemyIsWorm = false;
+canBeHittedByPlayerLaser = true;
 leavesTrail = true;
 thisEnemyBounce = true;
 isWormHitBox = false;
@@ -16,8 +17,7 @@ affectedByLaserTrap = true;
 
 haveAShield = false;
 canHaveAShield = true;
-
-
+finalTrail = true;
 
 alertDist = 150;
 

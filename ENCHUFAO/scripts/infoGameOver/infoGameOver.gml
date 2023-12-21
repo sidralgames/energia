@@ -23,5 +23,7 @@ function infoGameOver(argument0)
 		case 16: text = "Another one"; break;
 		case 17: text = "Noooooooooo!!"; break;
 		case 18: text = "Try another ship"; break;
+		case 19: text = "..."; break;
+		case 20: text = "Remember: Remember to"; break;
 	}
 }

@@ -4,6 +4,9 @@ full = false;
 global.totalEnemies = 0;
 global.BossWormHPMax = 0;
 global.BossWormHP = 10;
+global.killedByTrail = false;
+global.rotationKilledBy = false;
+
 
 global.assistedSlowmo = false;
 global.assistSlowmoIsOn = false;
