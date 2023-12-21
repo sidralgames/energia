@@ -1006,6 +1006,7 @@
     {"id":{"name":"s_discTrap","path":"sprites/s_discTrap/s_discTrap.yy",},},
     {"id":{"name":"NewTextBoxAlone","path":"scripts/NewTextBoxAlone/NewTextBoxAlone.yy",},},
     {"id":{"name":"o_LilCrusherBossBanner","path":"objects/o_LilCrusherBossBanner/o_LilCrusherBossBanner.yy",},},
+    {"id":{"name":"snd_laserActive_old","path":"sounds/snd_laserActive_old/snd_laserActive_old.yy",},},
     {"id":{"name":"o_BurningBulletsPickUp","path":"objects/o_BurningBulletsPickUp/o_BurningBulletsPickUp.yy",},},
     {"id":{"name":"PlugStrandedShipToEnchufe","path":"scripts/PlugStrandedShipToEnchufe/PlugStrandedShipToEnchufe.yy",},},
     {"id":{"name":"o_BigWorm_Mouth","path":"objects/o_BigWorm_Mouth/o_BigWorm_Mouth.yy",},},
