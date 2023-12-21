@@ -13,36 +13,37 @@ if instance_exists(o_playerShip) && instance_exists(o_charger)
 	}
 	if instance_exists(o_enchufePETA) 
 	{
+		draw_sprite_ext(s_tutorialText, 6, o_enchufePETA.x,o_enchufePETA.y+40,1,1,0,image_blend, image_alpha)
 		draw_sprite_ext(s_energyText, 0, o_enchufePETA.x,o_enchufePETA.y-40,1,1,0,image_blend, image_alpha)	
 	}
 	if (global.energy >=global.energyLow)
 	{	
 		if (global.energy <= global.energyMax/2) && !instance_exists(o_enchufe_Hp) && instance_exists(o_enchufe_Hp)
 		{
-			draw_sprite_ext(s_destroySomething, 3, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+40,0.6,0.6,0,image_blend, image_alpha)
+			draw_sprite_ext(s_destroySomething, 3, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+300,0.6,0.6,0,image_blend, image_alpha)
 		}
 	
 		if (o_charger.overcharged = false)
 		{
 		
-			if instance_exists(o_enchufe) && ((global.energy <= global.energyMax/2) || (o_enchufe.charge <200))
+			if instance_exists(o_enchufe) && ((global.energy <= global.energyMax/2))
 			{
-				draw_sprite_ext(s_energyText, 0, o_enchufe.x,o_enchufe.y-50,1,1,0,image_blend, image_alpha)	
+				draw_sprite_ext(s_energyText, 0, o_enchufe.x,o_enchufe.y-53,1,1,0,image_blend, image_alpha)	
 			}
 
 			if instance_exists(o_enchufe_Hp) && (global.hp < global.hpMax/2)
 			{
-				draw_sprite_ext(s_energyText, 1, o_enchufe_Hp.x,o_enchufe_Hp.y-50,1,1,0,image_blend, image_alpha)	
+				draw_sprite_ext(s_energyText, 1, o_enchufe_Hp.x,o_enchufe_Hp.y-53,1,1,0,image_blend, image_alpha)	
 			}
 
 			if instance_exists(o_enchufe_Ammo) && (global.ammo <= global.ammoMax/3)
 			{
-				draw_sprite_ext(s_energyText, 2, o_enchufe_Ammo.x,o_enchufe_Ammo.y-50,1,1,0,image_blend, image_alpha)	
+				draw_sprite_ext(s_energyText, 2, o_enchufe_Ammo.x,o_enchufe_Ammo.y-53,1,1,0,image_blend, image_alpha)	
 			}
 
 			if instance_exists(o_enchufe_Laser) && (global.laser <= global.laserMax/3)
 			{
-				draw_sprite_ext(s_energyText, 3, o_enchufe_Laser.x,o_enchufe_Laser.y-50,1,1,0,image_blend, image_alpha)	
+				draw_sprite_ext(s_energyText, 3, o_enchufe_Laser.x,o_enchufe_Laser.y-53,1,1,0,image_blend, image_alpha)	
 			}
 
 			if instance_exists(o_enchufeBombs) && (global.bombAmmo <= global.bombAmmoMax/4)
@@ -52,76 +53,106 @@ if instance_exists(o_playerShip) && instance_exists(o_charger)
 
 			if (Energycreated = false)
 			{
-				draw_sprite_ext(s_moveTutorial, 0, __view_get( e__VW.XView, 0 )+260,__view_get( e__VW.YView, 0 )+325,0.7,0.7,0,image_blend, image_alpha)
-				draw_sprite_ext(s_moveTutorial, 1, __view_get( e__VW.XView, 0 )+380,__view_get( e__VW.YView, 0 )+325,0.7,0.7,0,image_blend, image_alpha)		
+				
+				draw_sprite_ext(s_moveTutorial, 0, __view_get( e__VW.XView, 0 )+260,__view_get( e__VW.YView, 0 )+320,0.7,0.7,0,image_blend, image_alpha)
+				draw_sprite_ext(s_moveTutorial, 1, __view_get( e__VW.XView, 0 )+380,__view_get( e__VW.YView, 0 )+320,0.7,0.7,0,image_blend, image_alpha)		
 			}
 			if (HPcreated) && !instance_exists(o_enchufe_Ammo)
 			{
-				draw_sprite_ext(s_arrows,0,__view_get( e__VW.XView, 0 )+75,__view_get( e__VW.YView, 0 )+55,1,1,0,image_blend, image_alpha)
-				draw_sprite_ext(s_destroySomething, 0, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+40,0.6,0.6,0,image_blend, image_alpha)
+				//draw_sprite_ext(s_arrows,0,__view_get( e__VW.XView, 0 )+75,__view_get( e__VW.YView, 0 )+55,1,1,0,image_blend, image_alpha)
+				if (alarm[2] <= 55)
+				{
+					draw_sprite_ext(s_destroySomething, 0, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+305,0.6,0.6,0,image_blend, image_alpha)
+				}
+				draw_sprite_ext(s_moveTutorial, 0, __view_get( e__VW.XView, 0 )+260,__view_get( e__VW.YView, 0 )+335,0.5,0.5,0,image_blend, image_alpha)
+				draw_sprite_ext(s_moveTutorial, 1, __view_get( e__VW.XView, 0 )+370,__view_get( e__VW.YView, 0 )+335,0.5,0.5,0,image_blend, image_alpha)		
 			}
-			if (Energycreated) && !instance_exists(o_enchufe_Ammo)
-			{
-	
-				draw_sprite_ext(s_moveTutorial, 0, __view_get( e__VW.XView, 0 )+260,__view_get( e__VW.YView, 0 )+325,0.7,0.7,0,image_blend, image_alpha)		
-				draw_sprite_ext(s_moveTutorial, 1, __view_get( e__VW.XView, 0 )+380,__view_get( e__VW.YView, 0 )+325,0.7,0.7,0,image_blend, image_alpha)		
-			}
+			
 
 			if (Ammocreated) && !instance_exists(o_enchufeBombs)
 			{
 				if (global.totalEnemies > 0)
 				{
-					draw_sprite_ext(s_destroySomething, 1, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+40,0.6,0.6,0,image_blend, image_alpha)
+					draw_sprite_ext(s_destroySomething, 1, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+30,0.6,0.6,0,image_blend, image_alpha)
 				}
 				else
 				{
 					if (global.ammo<=0)
 					{
-						draw_sprite_ext(s_tutorialText, 5, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+40,1,1,0,image_blend, image_alpha)
+						if (alarm[2] <= 55)
+						{
+							draw_sprite_ext(s_tutorialText, 5, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+30,1,1,0,image_blend, image_alpha)
+						}
 					}
 				}
 				//draw_sprite_ext(s_moveTutorial, 0, __view_get( e__VW.XView, 0 )+200,__view_get( e__VW.YView, 0 )+330,0.4,0.4,0,image_blend, image_alpha)		
 				//draw_sprite_ext(s_moveTutorial, 1, __view_get( e__VW.XView, 0 )+445,__view_get( e__VW.YView, 0 )+330,0.4,0.4,0,image_blend, image_alpha)
-				draw_sprite_ext(s_moveTutorial, 2, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+315,0.7,0.7,0,image_blend, image_alpha)		
+				if (global.ammo<=0)
+				{
+					draw_sprite_ext(s_moveTutorial, 2, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+330,0.7,0.7,0,image_blend, image_alpha)		
+				}
+				else
+				{
+					if (alarm[2] <= 55)
+					{
+						draw_sprite_ext(s_moveTutorial, 2, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+330,0.7,0.7,0,image_blend, image_alpha)
+					}
+				}
 			}
 
-			if (bombCreated) && (global.bombsTutorial < 2)
+			if (bombCreated) && (global.bombsTutorial < 1)
 			{
 				if (global.bombAmmo >=1)
 				{
 					showBomb = true;
 				}
-				if (showBomb)
+				if (alarm[2] <= 55)
 				{
-					draw_sprite_ext(s_destroySomething, 2, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+40,0.6,0.6,0,image_blend, image_alpha)
-				}
-				else
-				{
-					draw_sprite_ext(s_tutorialText, 3, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+40,1,1,0,image_blend, image_alpha)
+					if (showBomb)
+					{
+						draw_sprite_ext(s_destroySomething, 2, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+40,0.6,0.6,0,image_blend, image_alpha)
+					}
+					else
+					{
+						draw_sprite_ext(s_tutorialText, 3, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+30,1,1,0,image_blend, image_alpha)
+					}
 				}
 				
 				draw_sprite_ext(s_moveTutorial, 2, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+338,0.4,0.4,0,image_blend, image_alpha)
-				draw_sprite_ext(s_moveTutorial, 3, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+310,0.7,0.7,0,image_blend, image_alpha)
-	
+				if (global.bombAmmo >=1)
+				{
+					if (alarm[2] <= 55)
+					{
+						draw_sprite_ext(s_moveTutorial, 3, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+310,0.7,0.7,0,image_blend, image_alpha)
+					}
+				}
+				else
+				{
+					draw_sprite_ext(s_moveTutorial, 3, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+310,0.7,0.7,0,image_blend, image_alpha)
+				}
 			}
 
 			if (LaserCreated) && (!canAssist)
 			{
-			
-				draw_sprite_ext(s_moveTutorial, 5, __view_get( e__VW.XView, 0 )+220,__view_get( e__VW.YView, 0 )+320,0.7,0.7,0,image_blend, image_alpha)
-
-				if (global.slowMoTime <= 125)
-				{	
-					draw_sprite_ext(s_tutorialText, 0, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+30,1,1,0,image_blend, image_alpha)
+				if (global.laser > 0)
+				{
+					if (alarm[2] <= 55)
+					{
+						draw_sprite_ext(s_moveTutorial, 4, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+320,0.7,0.7,0,image_blend, image_alpha)	
+					}
 				}
 				else
 				{
-					draw_sprite_ext(s_tutorialText, 4, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+30,1,1,0,image_blend, image_alpha)
+					draw_sprite_ext(s_moveTutorial, 4, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+320,0.7,0.7,0,image_blend, image_alpha)	
 				}
 				
-				draw_sprite_ext(s_moveTutorial, 4, __view_get( e__VW.XView, 0 )+420,__view_get( e__VW.YView, 0 )+320,0.7,0.7,0,image_blend, image_alpha)	
-	
-	
+				draw_sprite_ext(s_moveTutorial, 5, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+30,0.7,0.7,0,image_blend, image_alpha)		
+				
+				if (global.slowMoTime <= 125)
+				{	
+					draw_sprite_ext(s_tutorialText, 0, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+50,1,1,0,image_blend, image_alpha)
+				}
+				
 				if (o_playerShip.key_BulletTime && !o_playerShip.canSlowMotion)
 				|| o_main.alarm[1] <=0
 				{
@@ -134,12 +165,17 @@ if instance_exists(o_playerShip) && instance_exists(o_charger)
 		{
 			draw_sprite_ext(s_tutorialText, 1, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+40,1,1,0,image_blend, image_alpha)
 		}
+		
+		if (LaserCreated) && (o_enchufe_Final.abierto = false)
+		{
+			draw_sprite_ext(s_tutorialText, 4, o_enchufe_Final.x,o_enchufe_Final.y-50,1,1,0,image_blend, image_alpha)
+		}
 	}
 	else
 	{
 		if (global.energy <= global.energyMax/2) && !instance_exists(o_enchufe_Hp) && instance_exists(o_enchufe)
 		{
-			draw_sprite_ext(s_destroySomething, 3, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+40,0.6,0.6,0,image_blend, image_alpha)
+			draw_sprite_ext(s_destroySomething, 3, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+300,0.6,0.6,0,image_blend, image_alpha)
 		}
 		if instance_exists(o_enchufe) && ((global.energy <= global.energyMax/2) || (o_enchufe.charge <200))
 		{
@@ -151,8 +187,8 @@ if instance_exists(o_playerShip) && instance_exists(o_charger)
 		draw_set_color(c_white)
 		draw_set_alpha(1)
 	
-		draw_sprite_ext(s_moveTutorial, 0, __view_get( e__VW.XView, 0 )+260,__view_get( e__VW.YView, 0 )+325,0.7,0.7,0,image_blend, image_alpha)		
-		draw_sprite_ext(s_moveTutorial, 1, __view_get( e__VW.XView, 0 )+380,__view_get( e__VW.YView, 0 )+325,0.7,0.7,0,image_blend, image_alpha)
+		draw_sprite_ext(s_moveTutorial, 0, __view_get( e__VW.XView, 0 )+260,__view_get( e__VW.YView, 0 )+320,0.7,0.7,0,image_blend, image_alpha)		
+		draw_sprite_ext(s_moveTutorial, 1, __view_get( e__VW.XView, 0 )+380,__view_get( e__VW.YView, 0 )+320,0.7,0.7,0,image_blend, image_alpha)
 	
 		if global.PETAAmmo > 0
 		{
@@ -304,7 +340,7 @@ if instance_exists(o_playerShip) && instance_exists(o_charger)
 		}
 	}
 
-	if (global.bombsTutorial >= 2)
+	if (global.bombsTutorial >= 1) && (o_playerShip.plugged == false)
 	{
 	
 		if (LaserCreated = false)
@@ -328,6 +364,7 @@ if instance_exists(o_playerShip) && instance_exists(o_charger)
 						LaserCreated = true;
 						minenemies = 2;
 						global.slowMoTime = global.slowMoTimeMax;
+						global.laser = global.laserMax;
 						instance_create_layer(o_playerShip.x,o_playerShip.y,"Enchufes",o_EnemyIncoming); 
 						instance_create_layer(o_playerShip.x+40,o_playerShip.y,"Enchufes",o_EnemyIncoming); 
 						instance_create_layer(o_playerShip.x-40,o_playerShip.y,"Enchufes",o_EnemyIncoming); 
@@ -335,7 +372,7 @@ if instance_exists(o_playerShip) && instance_exists(o_charger)
 						instance_create_layer(o_playerShip.x,o_playerShip.y-40,"Enchufes",o_EnemyIncoming); 
 						canAssist = true;
 						contAssist = 180;
-						contToAssist = 60;
+						contToAssist = 40;
 					}
 				}
 			}
@@ -353,8 +390,10 @@ if instance_exists(o_playerShip) && instance_exists(o_charger)
 	
 	if (canAssist)
 	{
-		draw_sprite_ext(s_moveTutorial, 5, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+70,1,1,0,image_blend, image_alpha)	
-		
+		if (alarm[2] <= 55)
+		{
+			draw_sprite_ext(s_moveTutorial, 5, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+310,1,1,0,image_blend, image_alpha)	
+		}
 		contToAssist--;
 		if (contToAssist <= 0)
 		{
@@ -396,6 +435,11 @@ if instance_exists(o_playerShip) && instance_exists(o_charger)
 		draw_sprite_ext(s_tutorialText, 2,o_enchufe_Final.x,o_enchufe_Final.y-50,1,1,0,image_blend, image_alpha)	
 		}
 	
+	}
+	
+	if (alarm[2] <= 0)
+	{
+		alarm[2] = 60;
 	}
 }
 

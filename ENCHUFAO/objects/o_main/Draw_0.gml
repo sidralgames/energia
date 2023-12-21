@@ -212,7 +212,7 @@ if (!isPaused)
 	//	}
 	
 	//}
-	if (room != Sala_Inicio) && (room != Sala_Tutorial) 
+	if (room != Sala_Inicio) && (room != Sala_Tutorial) && !instance_exists(o_gameOver)
 	{
 		draw_set_font(customFont)
 		if (global.energy <=global.energyLow)

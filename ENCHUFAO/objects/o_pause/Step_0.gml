@@ -79,6 +79,7 @@ if (pause)
 					case 1:
 					{
 						goToMenu = true;
+						
 					}
 					break;
 			

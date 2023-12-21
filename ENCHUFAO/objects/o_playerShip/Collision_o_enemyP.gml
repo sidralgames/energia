@@ -11,6 +11,10 @@ if (global.shields<1) && (other.isImmortal = false)
 		alarm[1] = 30
 		tocado = true;
 		global.hp -= 1 * global.damageReceived;
+		if (global.hp <= 0)
+		{
+			global.spriteKilledBy = other.sprite_index;
+		}
 		screenShake(4,30)
 		if (other.canBeDestroyed)
 		{

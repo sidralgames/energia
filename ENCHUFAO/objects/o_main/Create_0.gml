@@ -10,12 +10,19 @@ global.assistSlowmoIsOn = false;
 
 global.assistedAim = false;
 
+global.spriteKilledBy = noone;
+
 //-------COLORS--------//
 global.brightRed = make_colour_rgb(255,0,68);
 global.yellow = make_color_rgb(254,231, 97);
 global.lightBlue = make_color_rgb(44,232, 245);
+global.dark = make_color_rgb(38,43,68)
 
-
+//---- FONTS ---//
+global.customFont20 = font_add("ChubbyChoo-SemiBold.ttf", 20, false, false, 32, 128);
+global.customFont16= font_add("ChubbyChoo-SemiBold.ttf", 16, false, false, 32, 128);
+global.customFont14 = font_add("ChubbyChoo-SemiBold.ttf", 14, false, false, 32, 128);
+global.customFont12 = font_add("ChubbyChoo-SemiBold.ttf", 12, false, false, 32, 128);
 //-------------MEGA UPGRADES-----------------//
 
 //--INVISIBILITY CLOAK--//
@@ -27,12 +34,12 @@ global.cloackReal = 1;
 global.allPETAisMulti = false;
 
 //--EXTERNAL BATTERY--//
-global.haveExternalBattery = true;
+global.haveExternalBattery = false;
 global.externalBatteryOn = false;
 
 
 //--CALL FOR HELP--//
-global.haveCallForHelp = true;
+global.haveCallForHelp = false;
 
 //-------BULLET MODIFICATORS----------//
 global.piercingShot = false;

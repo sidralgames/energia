@@ -12,6 +12,10 @@ if (global.shields<1)
 		alarm[1] = 30
 		tocado = true;
 		global.hp -= 1 * global.damageReceived;
+		if (global.hp <= 0)
+		{
+			global.spriteKilledBy = s_killedBy;
+		}
 		screenShake(4,30);
 		global.hitsTaken+=1;
 	}
