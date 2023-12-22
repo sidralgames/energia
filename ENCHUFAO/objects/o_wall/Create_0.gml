@@ -16,7 +16,7 @@ else
 {
 	if (global.level <=5)
 	{
-		oddsEnemyMouth = 25 - global.level;
+		oddsEnemyMouth = 5 - global.level;
 	}
 	else
 	{

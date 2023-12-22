@@ -2,7 +2,9 @@
 // You can write your code in this editor
 
 type = collisionType.custom;
-
+enemy = instance_nearest(x,y,o_BossMecha)
+enemyShooter = enemy.sprite_index;
+shooterTrail = false;
 if (tile_meeting(x,y, "Tiles"))
 {
    instance_destroy();

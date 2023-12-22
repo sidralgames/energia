@@ -1,32 +1,35 @@
 /// @description Insert description here
 // You can write your code in this editor
-if instance_exists(o_playerShip)
+if !instance_exists(o_gameOver)
 {
-	if ( (instance_exists(o_shockwaveTiles)) || (o_playerShip.laserActive == true)
-	|| (global.changingTiles) )
+	if instance_exists(o_playerShip)
 	{
-		alarm[0] = 10;
-		destroying = true
-	}
+		if ( (instance_exists(o_shockwaveTiles)) || (o_playerShip.laserActive == true)
+		|| (global.changingTiles) )
+		{
+			alarm[0] = 10;
+			destroying = true
+		}
 
-	if (destroying)
-	{
-		if !tile_meeting(x,y,"Tiles")
+		if (destroying)
+		{
+			if !tile_meeting(x,y,"Tiles")
+			{
+				instance_destroy();
+			}
+		}
+	
+		if !instance_exists(enemyBelong)
 		{
 			instance_destroy();
 		}
-	}
 	
-	if !instance_exists(enemyBelong)
-	{
-		instance_destroy();
-	}
-	
-	if (alarm[1] > 0)
-	{
-		if !tile_meeting(x,y,"Tiles")
+		if (alarm[1] > 0)
 		{
-			instance_destroy();
+			if !tile_meeting(x,y,"Tiles")
+			{
+				instance_destroy();
+			}
 		}
 	}
 }

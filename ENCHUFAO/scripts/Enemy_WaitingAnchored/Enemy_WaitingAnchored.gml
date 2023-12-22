@@ -8,8 +8,7 @@ function Enemy_WaitingAnchored()
 	farDist = 0.8
 	far = true;
 		
-	if instance_exists(o_playerShip)
-	{
+	
 		if (alarm[0] <=0)
 		{
 			alarm[0] = random_range(300,700);
@@ -47,14 +46,27 @@ function Enemy_WaitingAnchored()
 			}
 		}
 		
-		if tile_meeting(x+lengthdir_x(5,direction), y+lengthdir_y(5,direction), "Tiles")
+		if !instance_exists(o_gameOver)
 		{
-			direction = (direction + random_range(140,220)) mod 360
-			_angle = direction
-			alarm[0] = random_range(50,60);
+			if tile_meeting(x+lengthdir_x(5,direction), y+lengthdir_y(5,direction), "Tiles")
+			{
+				direction = (direction + random_range(140,220)) mod 360
+				_angle = direction
+				alarm[0] = random_range(50,60);
+			}
+		}
+		else
+		{
+			if place_meeting(x+lengthdir_x(5,direction), y+lengthdir_y(5,direction), o_wallGameOver)
+			{
+				direction = (direction + random_range(140,220)) mod 360
+				_angle = direction
+				alarm[0] = random_range(50,60);
+			}
 		}
 	
-	
+	if instance_exists(o_playerShip)
+	{
 		if (point_distance(x, y, o_playerShip.x, o_playerShip.y) <= activeDistance) 
 		{
 			if !grid_line_collision(x, y, o_playerShip.x, o_playerShip.y, 10)

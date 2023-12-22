@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (global.shields<1) && (other.isImmortal = false)
+if (global.shields<1) //&& (other.isImmortal = false)
 {
 	if (tocado = false) && (other.hurts)
 	{

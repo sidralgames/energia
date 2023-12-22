@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited();
+finalTrail = false;
 fromBullet = false;
 myTileMap = layer_tilemap_get_id("Tiles")
 //depth = layer_get_depth("Enemies");
@@ -45,14 +46,18 @@ far = false;
 diffYFar = 0;
 
 died = false;
-if tile_meeting(x,y,"Tiles")
+if !instance_exists(o_gameOver)
 {
-	instance_destroy()
+	if tile_meeting(x,y,"Tiles")
+	{
+		instance_destroy()
+	}
 }
 isMegaEnemy = false;
 
 isMega = irandom(5);
 megaStated = false;
+canBeMega = true;
 
 
 

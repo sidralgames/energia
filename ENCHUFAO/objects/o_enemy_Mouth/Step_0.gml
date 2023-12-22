@@ -5,26 +5,51 @@ if (megaStated = false)
 	megaStated = true;
 	if (fromBullet = false)
 	{
-		if (isMega = 0)
+		if (canBeMega)
 		{
-			_hp = 7;
-			sprite_index = s_enemyMouthMega;
-			isMegaEnemy = true;
-			cable = instance_create_layer(x,y,"EnemiesHUE", o_enemyMouth_BodyMega);
-			anchor = cable.instAchor;
-
-	
+			if (isMega = 0) 
+			{
+				_hp = 7;
+				sprite_index = s_enemyMouthMega;
+				isMegaEnemy = true;
+				if instance_exists(o_gameOver)
+				{
+					cable = instance_create_layer(x,y,"PauseHUE", o_enemyMouth_BodyMega);
+				}
+				else
+				{
+					cable = instance_create_layer(x,y,"EnemiesHUE", o_enemyMouth_BodyMega);
+				}
+			}
+			else
+			{
+				if instance_exists(o_gameOver)
+				{
+					cable = instance_create_layer(x,y,"PauseHUE", o_enemyMouth_Body);
+				}
+				else
+				{
+					cable = instance_create_layer(x,y,"EnemiesHUE", o_enemyMouth_Body);
+				}
+			}
 		}
 		else
 		{
-			cable = instance_create_layer(x,y,"EnemiesHUE", o_enemyMouth_Body);
-			anchor = cable.instAchor;
+			if instance_exists(o_gameOver)
+			{
+				cable = instance_create_layer(x,y,"PauseHUE", o_enemyMouth_Body);
+			}
+			else
+			{
+				cable = instance_create_layer(x,y,"EnemiesHUE", o_enemyMouth_Body);
+			}
+			
 		}
 	}
 	else
 	{
 		cable = instance_create_layer(x,y,"EnemiesHUE", o_enemyMouth_Body);
-		anchor = cable.instAchor;
+		
 	}
 
 }

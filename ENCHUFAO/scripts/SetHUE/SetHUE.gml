@@ -4,6 +4,12 @@ function SetHUE()
 {
 	_filter_hue = layer_get_fx("HUE");
 	_filter_hue_params = fx_get_parameters(_filter_hue);
+	
+	_filter_huePause = layer_get_fx("PauseHUE");
+	_filter_huePause_params = fx_get_parameters(_filter_huePause);
+	
+	_filter_huePause_Sub = layer_get_fx("PauseHUE_Sub");
+	_filter_huePause_Sub_params = fx_get_parameters(_filter_huePause_Sub);
 
 	_filter_Enemyhue = layer_get_fx("EnemiesHUE");
 	_filter_Enemyhue_params = fx_get_parameters(_filter_Enemyhue);
@@ -34,6 +40,12 @@ function SetHUE()
 	_filter_hue_params.g_HueShift = _filterShift;	
 	_filter_hue_params.g_HueSaturation =1+random(0.25);
 	
+	_filter_huePause_params.g_HueShift = _filterShift;	
+	_filter_huePause_params.g_HueSaturation =1;
+	
+	_filter_huePause_Sub_params.g_HueShift = _filterShift;	
+	_filter_huePause_Sub_params.g_HueSaturation =1;
+	
 	_filter_Enemyhue_params.g_HueShift = _filterShift;	
 	_filter_Enemyhue_params.g_HueSaturation = 0.75
 	
@@ -57,6 +69,9 @@ function SetHUE()
 	
 
 	fx_set_parameters(_filter_hue, _filter_hue_params);
+	
+	fx_set_parameters(_filter_huePause, _filter_huePause_params);
+	fx_set_parameters(_filter_huePause_Sub, _filter_huePause_Sub_params);
 	
 	fx_set_parameters(_filter_Enemyhue, _filter_Enemyhue_params);
 	fx_set_parameters(_filter_EnemyhueSub, _filter_EnemyhueSub_params);

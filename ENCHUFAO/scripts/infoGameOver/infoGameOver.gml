@@ -7,7 +7,7 @@ function infoGameOver(argument0)
 		case 0: text = "You have killed " + string(global.enemiesKilled) + " enemies"; break;
 		case 1: text = string(global.playerBumps) + " Bumps on the wall"; break;
 		case 2: text = string(global.shootsFired) + " Bullets fired"; break;
-		case 3: text = "You have dropped " + string(global.bombsFired) + " bombs"; break;
+		case 3: text = "You dropped " + string(global.bombsFired) + " bombs"; break;
 		case 4: text = "Saved " + string(global.shieldsUsed) + " times by a shield"; break;
 		case 5: text = string(global.hitsTaken) + " Hits taken"; break;
 		case 6: text = "Tip: Do not get hit"; break;

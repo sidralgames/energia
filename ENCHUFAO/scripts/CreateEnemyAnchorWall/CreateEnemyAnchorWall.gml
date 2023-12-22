@@ -12,9 +12,13 @@ function CreateEnemyAnchorWall()
 			&& !collision_circle(x,y,16, o_mouthAnchor, false, true)
 			{
 				anchor = instance_create_layer(x,y-15,"EnemiesHUE",o_mouthAnchor);
+				if instance_exists(anchor)
+				{
 				enemy = instance_create_layer(x,y-32,"EnemiesHUE",o_enemy_Mouth);
+				enemy.anchor = anchor;
 				anchor.enemyBelong = enemy;
 				enemy.diffYFar = -10;
+				}
 			}
 		}
 	
@@ -26,9 +30,13 @@ function CreateEnemyAnchorWall()
 			&& !collision_circle(x,y,16, o_mouthAnchor, false, true)
 			{
 				anchor = instance_create_layer(x,y+15,"EnemiesHUE",o_mouthAnchor);	
+					if instance_exists(anchor){
 				enemy = instance_create_layer(x,y+32,"EnemiesHUE",o_enemy_Mouth);
+			
+				enemy.anchor = anchor;
 				anchor.enemyBelong = enemy;
 				enemy.diffYFar = +10;
+				}
 			}
 		}
 	}
