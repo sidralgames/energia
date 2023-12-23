@@ -16,3 +16,5 @@ canBeHittedByPlayerLaser = false;
 isImmortal = false;
 hurts = false;
 canBounce = false;
+
+canHaveAShield = false;

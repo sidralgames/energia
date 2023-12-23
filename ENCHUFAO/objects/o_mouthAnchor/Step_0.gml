@@ -34,6 +34,11 @@ if !instance_exists(o_gameOver)
 	}
 }
 
+if !instance_exists(enemyBelong)
+{
+	instance_destroy();
+}
+
 
 
 

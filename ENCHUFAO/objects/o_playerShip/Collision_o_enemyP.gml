@@ -18,10 +18,6 @@ if (global.shields<1) //&& (other.isImmortal = false)
 			{
 				global.killedByTrail = true;
 			}
-			if (global.spriteKilledBy = s_enemyDisc)
-			{
-				global.rotationKilledBy = true;
-			}
 		}
 		screenShake(4,30)
 		if (other.canBeDestroyed)

@@ -8,6 +8,7 @@ if (hitByLaser = false)
 	ebomb.scale = 1.4;
 	ebomb.scale = 1.4;
 	ebomb.damagePlayer = true;
+	ebomb.isFromEnemy = true;
 	ebomb.sprite_index = s_exploOrange;
 	ebomb.scaleShockwave = 0.15;
 	ebomb.scaleShake = 0.5;
@@ -20,6 +21,7 @@ else
 	ebomb.scale = 1.8;
 	ebomb.scale = 1.8;
 	ebomb.damagePlayer = true;
+	ebomb.isFromEnemy = true;
 	ebomb.sprite_index = s_exploOrange;
 	ebomb.scaleShockwave = 0.25;
 	ebomb.scaleShake = 0.7;

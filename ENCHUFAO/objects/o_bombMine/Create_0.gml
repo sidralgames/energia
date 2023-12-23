@@ -22,4 +22,7 @@ alarm[0] = 10;
 
 hitByLaser = false;
 flashAlpha = 0;
-offset = irandom(360)
+offset = irandom(360);
+
+enemyShooter = s_enemyMines;
+shooterTrail = true;

@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 canBeHittedByPlayerLaser = true;
-finalTrail = false;
+finalTrail = true;
 thisEnemyBounce = false;
 isWormHitBox = false;
 hurts = true;

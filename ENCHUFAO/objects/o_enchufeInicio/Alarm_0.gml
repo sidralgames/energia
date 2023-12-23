@@ -5,7 +5,7 @@ if (cont = true)
 	//Set to false run upgrades like this
 	//global.bombIsClusterBomb = true;
 	room_goto(Sala_0)
-	global.level = 1;
+	global.level = 5;
 }
 
 

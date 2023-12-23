@@ -39,7 +39,7 @@ function Enemy_WaitingAnchored()
 		}
 		if (instance_exists(anchor)) && instance_exists(cable)
 		{
-			if (point_distance(x,y,anchor.x, anchor.y) > max(50, 9 * cable._segments) * farDist)
+			if (point_distance(x,y,anchor.x, anchor.y) > max(50, 7.5 * cable._segments) * farDist)
 			{
 				direction = point_direction(x,y,anchor.x, anchor.y);
 				_angle = direction;

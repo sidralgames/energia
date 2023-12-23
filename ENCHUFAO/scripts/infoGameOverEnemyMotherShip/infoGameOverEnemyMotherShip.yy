@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "infoGameOverEnemy",
+  "name": "infoGameOverEnemyMotherShip",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

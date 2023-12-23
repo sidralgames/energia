@@ -54,7 +54,7 @@ if !instance_exists(o_gameOver)
 	}
 }
 isMegaEnemy = false;
-
+anchor = -1;
 isMega = irandom(5);
 megaStated = false;
 canBeMega = true;

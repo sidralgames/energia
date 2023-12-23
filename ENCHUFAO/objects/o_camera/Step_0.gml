@@ -28,7 +28,7 @@ Controls_Input()
 		
 	}
 	
-	if (global.screenshakeIsOn)
+	if (global.screenshakeIsOn) && (!instance_exists(o_gameOver))
 	{
 	//shake
 		if (shakeRemain >0)

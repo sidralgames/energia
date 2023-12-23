@@ -10,5 +10,5 @@ discSpeed = 0;
 contPartsInitial = 3;
 contParts = contPartsInitial;
 flashAlpha = 0;
-
+canBeHittedByPlayerLaser = true;
 

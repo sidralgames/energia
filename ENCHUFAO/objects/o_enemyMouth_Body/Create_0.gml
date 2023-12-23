@@ -34,7 +34,7 @@ if (inst.fromBullet)
 }
 else
 {
-	_segments = choose(irandom_range(3,5),irandom_range(3,5),irandom_range(4,10));
+	_segments = choose(irandom_range(4,6),irandom_range(4,6),irandom_range(4,10));
 }
 
 rope1 = verletGroupCreateRopeTextured(verletSystem1, x, y, _sprite, _segments, 1, 10);

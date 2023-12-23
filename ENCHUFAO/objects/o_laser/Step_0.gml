@@ -54,8 +54,7 @@ if (canShot)
 							global.hp -=1 * global.damageReceived;
 							if (global.hp <= 0)
 							{
-								global.spriteKilledBy = s_killedBy;
-								global.imageKilledBy = 1;
+								global.spriteKilledBy = s_laserEnemy;
 							}
 						}
 						screenShake(4,30)
@@ -116,8 +115,7 @@ if (canShot)
 							global.hp -=1 * global.damageReceived;
 							if (global.hp <= 0)
 							{
-								global.spriteKilledBy = s_killedBy;
-								global.imageKilledBy = 1;
+								global.spriteKilledBy = s_laserEnemy;
 							}
 						}
 						screenShake(4,30)

@@ -3,9 +3,7 @@
 type = collisionType.custom;
 part = 0;
 
-enemy = instance_nearest(x,y,o_BossMecha)
-enemyShooter = enemy.sprite_index;
-shooterTrail = false;
+
 
 
 
