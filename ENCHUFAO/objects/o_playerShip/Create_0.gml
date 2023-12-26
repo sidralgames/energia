@@ -14,6 +14,8 @@ else
 {
 	global.energy = global.energyMax;
 }
+
+slowmoSound = false;
 checkAssist = false;
 assistCont = 60;
 

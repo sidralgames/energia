@@ -22,7 +22,7 @@ DrawPotentialConnection();
 if (tocado) && (alarm[4] > 2)
 {
 	shader_set(shFlash)
-	draw_sprite_ext(global.spriteShip,image_index,x,y,1,1,_angle,c_white,flashAlpha)
+	draw_sprite_ext(global.spriteShip,image_index,x,y,1,1,_angle,c_white,1)
 	shader_reset()
 }
 else

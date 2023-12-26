@@ -12,6 +12,7 @@ if (tile_meeting(x-lengthdir_x(bulletSpeed, direction),y-lengthdir_y(bulletSpeed
 		anchor.enemyBelong = enemy;
 		enemy.diffYFar = -10;
 		enemy.fromBullet=true;
+		enemy.anchor = anchor;
 	}
 	else
 	{

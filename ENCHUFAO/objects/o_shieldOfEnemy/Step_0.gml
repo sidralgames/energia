@@ -12,7 +12,6 @@ else
 
 if (_hp <= 0)
 {
-	enemy = instance_nearest(x,y,o_enemyP);
 	if instance_exists(enemy)
 	{
 		enemy.haveAShield = false;

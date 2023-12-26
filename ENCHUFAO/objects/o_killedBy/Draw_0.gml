@@ -40,6 +40,10 @@ if (global.killedByTrail = true)
 	}
 }
 
+//DrawUpgradeNames();	
+		
+//DrawStatsUpgrades();
+
 DrawKilledByEnemy();
 
 

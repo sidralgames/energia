@@ -16,7 +16,7 @@ function DrawKilledByEnemy()
 			if (tipChoosed = false)
 			{
 				tipChoosed = true;
-				tip = irandom_range(0,7)
+				tip = irandom_range(0,12)
 			}
 			infoGameOverEnemyBasic(tip);
 			draw_set_color(global.lightBlue)
@@ -38,7 +38,7 @@ function DrawKilledByEnemy()
 			if (tipChoosed = false)
 			{
 				tipChoosed = true;
-				tip = irandom_range(0,7)
+				tip = irandom_range(0,12)
 			}
 			infoGameOverEnemyBasic(tip);
 			draw_set_color(global.lightBlue)
@@ -60,7 +60,7 @@ function DrawKilledByEnemy()
 			if (tipChoosed = false)
 			{
 				tipChoosed = true;
-				tip = irandom_range(0,7)
+				tip = irandom_range(0,12)
 			}
 			infoGameOverEnemyBasic(tip);
 			draw_set_color(global.lightBlue)
@@ -392,9 +392,9 @@ function DrawKilledByEnemy()
 	
 		case (s_enemyDisc):
 		{
-			image_angle+=15;
+			image_angle+=10;
 	
-			draw_sprite_ext(s_enemyDiscEye, image_index, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+245,1,1, image_angle, image_blend, image_alpha)
+			draw_sprite_ext(s_enemyDiscEye, image_index, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+245,1,1, 0, image_blend, image_alpha)
 
 			draw_set_color(global.brightRed);
 			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+261,"Spinblade");

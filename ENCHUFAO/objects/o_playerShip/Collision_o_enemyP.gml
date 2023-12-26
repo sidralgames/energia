@@ -13,19 +13,29 @@ if (global.shields<1) //&& (other.isImmortal = false)
 		global.hp -= 1 * global.damageReceived;
 		if (global.hp <= 0)
 		{
-			global.spriteKilledBy = other.sprite_index;
-			if (other.finalTrail)
+			if (other.sprite_index != s_shieldPurple)
 			{
-				global.killedByTrail = true;
+				global.spriteKilledBy = other.sprite_index;
+				
+				if (other.finalTrail)
+				{
+					global.killedByTrail = true;
+				}
+			}
+			else
+			{
+				global.spriteKilledBy = other.enemyShooter;
+				global.killedByTrail = other.shooterTrail;
+				
 			}
 		}
 		screenShake(4,30)
-		if (other.canBeDestroyed)
-		{
-			other._hp = 0;
-		}
-		
 		global.hitsTaken+=1;
+	}
+	
+	if (other.canBeDestroyed)
+	{
+		other._hp = 0;
 	}
 }
 

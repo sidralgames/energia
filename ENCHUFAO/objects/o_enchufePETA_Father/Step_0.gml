@@ -25,6 +25,11 @@ _angle += _hpush*2*global.relativeSpeed;
 
 if (charge >= 295)
 {
+	if (soundDie = false)
+	{
+		soundDie = true;
+		audio_play_sound_on(global.audioEmitter,snd_diePeta, false, 50)
+	}
 	image_speed = -imageSpeed*1.5;
 	
 	if (playerUnplugged == false)
@@ -41,6 +46,11 @@ if (charge >= 295)
 
 if (dying == true)
 {
+	if (soundDie = false)
+	{
+		soundDie = true;
+		audio_play_sound_on(global.audioEmitter,snd_diePeta, false, 50)
+	}
 	image_speed = -imageSpeed*1.5;
 	if (image_index <=1)
 	{

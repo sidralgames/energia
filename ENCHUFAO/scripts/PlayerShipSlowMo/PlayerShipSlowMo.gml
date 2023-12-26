@@ -64,7 +64,7 @@ function PlayerShipSlowMo()
 
 	if ((key_BulletTime) && (canSlowMotion = true)) || 	(global.assistedSlowmo = true)
 	{
-	
+		
 		SetTimeSlow();
 	
 		o_main.alarm[1] = 90;

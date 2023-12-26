@@ -16,3 +16,15 @@ canBeDestroyed = true;
 thisEnemyBounce = false;
 leavesTrail = false;
 finalTrail = false;
+
+
+if instance_exists(enemy)
+{
+	enemyShooter = enemy.sprite_index;
+	shooterTrail = enemy.finalTrail;
+	bulletSpeed = 0;
+}
+else
+{
+	instance_destroy();	
+}

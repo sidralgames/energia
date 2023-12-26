@@ -12,5 +12,9 @@ function infoGameOverEnemyBasic(argument0)
 		case 5: text = "They chase you"; break;
 		case 6: text = "They will find you"; break;
 		case 7: text = "Maybe shoot them next time"; break;
+		case 8: text = "They never give up"; break;
+		case 9: text = "Keep the distance"; break;
+		case 10: text = "The final touch"; break;
+		case 11: text = "They now where you are"; break;
 	}
 }

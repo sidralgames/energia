@@ -3,12 +3,12 @@
 // Inherit the parent event
 if (isBossGarbanzoBomb)
 {
-	enemyShooter = s_enemyMines;
+	enemyShooter = s_bossMechaActive;
 	shooterTrail = true;
 }
 else
 {
-	enemyShooter = s_bossMechaActive
+	enemyShooter = s_enemyMines
 	shooterTrail = false;	
 }
 

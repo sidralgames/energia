@@ -18,3 +18,4 @@ hurts = false;
 canBounce = false;
 
 canHaveAShield = false;
+canBeDestroyed = false;

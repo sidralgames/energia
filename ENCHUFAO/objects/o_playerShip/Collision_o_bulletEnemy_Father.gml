@@ -16,10 +16,6 @@ if (global.shields<1)
 		{
 			global.spriteKilledBy = other.enemyShooter;
 			global.killedByTrail = other.shooterTrail;
-			if (global.spriteKilledBy = s_enemyDisc)
-			{
-				global.rotationKilledBy = true;
-			}
 		}
 		instance_destroy(other);
 		screenShake(4,30);

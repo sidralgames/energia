@@ -21,7 +21,7 @@ function PlayerShipPETA()
 	
 	screenShake(2,5)
 	
-	audio_play_sound_on(global.audioEmitter,snd_shoot1, false, 50)
+	audio_play_sound_on(global.audioEmitter,snd_launchPeta, false, 50)
 		
 	
 		var peta = instance_create_layer(x + _hpush*3 + lengthdir_x(5, _angle), y +_vpush*5 + lengthdir_y(5, _angle),

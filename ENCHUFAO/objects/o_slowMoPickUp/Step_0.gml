@@ -25,6 +25,7 @@ if instance_exists(o_playerShip)
 			o_main.alarm[1] = 90;
 		}
 		global.XPpoints+=1;
+		audio_play_sound_on(global.audioEmitter,choose(snd_pickDrop_1,snd_pickDrop_2,snd_pickDrop_3), false, 50)
 		instance_destroy();
 	}
 }

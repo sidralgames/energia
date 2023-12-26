@@ -16,7 +16,7 @@ if (other.damagePlayer == true)
 			if (global.hp <= 0)
 			{
 				global.spriteKilledBy = s_killedBy;
-				global.imageKilledBy = 2;
+				global.imageKilledBy = 0;
 			}
 			screenShake(4,30);
 			global.hitsTaken+=1;

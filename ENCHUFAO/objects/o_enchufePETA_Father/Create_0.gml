@@ -6,7 +6,8 @@
 
 // Inherit the parent event
 event_inherited();
-fromFriend = false
+fromFriend = false;
+soundDie = false;
 //if room = Sala_0
 //{
 //	if (global.PETAsActive >= 3) && (bornFromBreach)
