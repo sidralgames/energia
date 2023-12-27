@@ -606,7 +606,7 @@ function DrawKilledByEnemy()
 			if (wallMouth = false)
 			{
 				wallMouth = true;
-				enemy = instance_create_layer(__view_get( e__VW.XView, 0 )+340,__view_get( e__VW.YView, 0 )+245,"PauseHUE",o_enemySegmentsGameOver);
+				enemy = instance_create_layer(__view_get( e__VW.XView, 0 )+350,__view_get( e__VW.YView, 0 )+245,"PauseHUE",o_enemySegmentsGameOver);
 			}
 			
 			draw_set_color(global.brightRed);
@@ -633,6 +633,44 @@ function DrawKilledByEnemy()
 			drawsprite = false;
 			global.FinalTrail = false;
 			global.spriteKilledBy = s_enemySegments;
+		}
+		break;
+		
+		case (s_bigWorm_Mouth):
+		{
+			drawsprite = false;
+			global.FinalTrail = false;
+			
+			if (wallMouth = false)
+			{
+				wallMouth = true;
+				enemy = instance_create_layer(__view_get( e__VW.XView, 0 )+400,__view_get( e__VW.YView, 0 )+245,"PauseHUE",o_BigWormGameOver);
+			}
+			
+			draw_set_color(global.brightRed);
+			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+261,"Wormageddon");
+
+			draw_set_color(c_white)
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+260,"Wormageddon");
+			draw_set_font(global.customFont12);
+			if (tipChoosed = false)
+			{
+				tipChoosed = true;
+				tip = irandom_range(0,10)
+			}
+			infoGameOverEnemyWorm(tip);
+			draw_set_color(global.lightBlue)
+			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+286, string(text))
+			draw_set_color(c_white)
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+285, string(text))
+		}
+		break;
+		
+		case (s_enemyBigWorm_HitBox):
+		{
+			drawsprite = false;
+			global.FinalTrail = false;
+			global.spriteKilledBy = s_bigWorm_Mouth;
 		}
 		break;
 	}

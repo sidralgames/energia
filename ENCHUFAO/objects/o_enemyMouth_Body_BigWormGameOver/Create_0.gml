@@ -4,7 +4,7 @@
 // You can create multiple systems with different physic properties
 mega = false;
 canCollide = false;
-fric = 0.4;
+fric = 0.9;
 grv = 0.0;
 verletSystem1 = new verletSystem(fric, grv);
 off = 0;
@@ -29,8 +29,8 @@ cableColor = gray;
 counting=false;
 countingNInitial=20
 countingN=countingNInitial;
-_sprite = s_enemySegmets_segment;
-_segments = 6;
+_sprite = s_BigWorm_Body;
+_segments = 8;
 rope1 = verletGroupCreateRopeTextured(verletSystem1, x, y, _sprite, _segments, 1, 10);
 
 contPlugBody = -1;
@@ -39,19 +39,26 @@ contPlugBody = -1;
 //rope1 = verletGroupCreateRope(verletSystem1, x, y, cableColor, 2, 3, _segments, 2, 100, canCollide);
 
  //Attach its first vertex to an object
-inst = instance_nearest(x,y,o_enemySegmentsGameOver)
-rope1.vertexAttachTo(first, inst);
+inst = instance_nearest(x,y,o_BigWormGameOver)
+rope1.vertexAttachTo(first, inst, 20);
+rope1.vertexChangeData(last, inst.x-100,,false)
 
-instAchor = instance_create_layer(x,y,"PauseHUE_Sub",o_enemySegments_last)
+instAchor = instance_create_layer(x,y,"PauseHUE_Sub",o_chargerMouth)
 rope1.vertexAttachObject(last, instAchor,vertexAttachmentType.both);
 
-rope1.vertexChangeData(first, x-40,y-20,,false)
-rope1.vertexChangeData(last, x-100,y-20,,false)
 
-force = verletSystem1.addForceField(x-200, y-80, x+30, y+260,180, 1, false);
+
+
+
+plugged = false;
+
+force = verletSystem1.addForceField(x-400, y-80, x+50, y+260,180, 0.8, false);
 
 //instTope = instance_create(x, y, o_coco);
 //rope1.vertexAttachObject(last, instTope, vertexAttachmentType.positionOnly);
-
-alarm[0] = 30;
+osc = 1
+min_ = 160;
+max_ = 200;
+dire = 180;
+alarm[0] = random_range(10,95);
 

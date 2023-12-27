@@ -5,7 +5,7 @@
 t = (t + increment) mod 360;
 shift = amplitude * dsin(t);
 
-image_angle= 0+(shift/1.5);
+image_angle= 0+(shift/4);
 
 //apply the shift
 

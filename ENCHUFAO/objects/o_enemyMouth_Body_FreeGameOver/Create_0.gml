@@ -30,7 +30,7 @@ counting=false;
 countingNInitial=20
 countingN=countingNInitial;
 _sprite = s_enemyMouth_Body_Free;
-_segments = irandom_range(8,9);
+_segments = 7;
 rope1 = verletGroupCreateRopeTextured(verletSystem1, x, y, _sprite, _segments, 1, 10);
 
 contPlugBody = -1;
@@ -46,19 +46,12 @@ rope1.vertexAttachTo(first, inst);
 instAchor = instance_create_layer(x,y,"PauseHUE_Sub",o_chargerMouth)
 rope1.vertexAttachObject(last, instAchor,vertexAttachmentType.both);
 
-rope1.vertexChangeData(first, x-40,y,,false)
-rope1.vertexChangeData(last, x-200,y,,false)
+rope1.vertexChangeData(first, x-40,y-20,,false)
+rope1.vertexChangeData(last, x-200,y-20,,false)
 
-for (var i=2; i<=_segments-1; i++)
-{
-	instBody[i] = instance_create_layer(x,y,"PauseHUE_Sub",oMouthHitBox)
-	rope1.vertexAttachObject(i, instBody[i],vertexAttachmentType.both);
-	instBody[i].worm = inst;
-}
 
-plugged = false;
+force = verletSystem1.addForceField(x-200, y-80, x+30, y+260,180, 1, false);
 
-force = verletSystem1.addForceField(x-200, y-80, x+30, y+260,180, 0.3, false);
 //instTope = instance_create(x, y, o_coco);
 //rope1.vertexAttachObject(last, instTope, vertexAttachmentType.positionOnly);
 osc = 1
