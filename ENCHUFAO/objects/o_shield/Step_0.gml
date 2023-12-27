@@ -8,7 +8,10 @@ if instance_exists(o_playerShip)
 
 if (round(global.shields<=0))
 {
-	o_playerShip.shieldCreated = false;
+	if instance_exists(o_playerShip)
+	{
+		o_playerShip.shieldCreated = false;
+	}
 	instance_destroy();
 }
 

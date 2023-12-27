@@ -19,13 +19,13 @@ if (global.shields<1) //&& (other.isImmortal = false)
 				
 				if (other.finalTrail)
 				{
-					global.killedByTrail = true;
+					global.FinalTrail = true;
 				}
 			}
 			else
 			{
 				global.spriteKilledBy = other.enemyShooter;
-				global.killedByTrail = other.shooterTrail;
+				global.FinalTrail = other.shooterTrail;
 				
 			}
 		}

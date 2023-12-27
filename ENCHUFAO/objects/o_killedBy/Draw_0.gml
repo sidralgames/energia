@@ -27,7 +27,7 @@ if (drawsprite)
 }
 
 // ----- PARTICLES?----//
-if (global.killedByTrail = true)
+if (global.FinalTrail = true)
 {
 	if (image_alpha>=0.5)
 	{

@@ -111,8 +111,6 @@ function DrawKilledByEnemy()
 			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+286, string(text))
 			draw_set_color(c_white)
 			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+285, string(text))
-		
-			draw_sprite_ext(s_bombEnemy, image_index, __view_get( e__VW.XView, 0 )+360,__view_get( e__VW.YView, 0 )+242,1,1, image_angle, image_blend, o_gameOver.image_alpha)
 	
 		}
 		break;
@@ -358,24 +356,6 @@ function DrawKilledByEnemy()
 		case (s_shieldEnemy):
 		{
 			global.spriteKilledBy = s_enemyShield;
-			draw_sprite_ext(s_shieldEnemy, 10, __view_get( e__VW.XView, 0 )+332,__view_get( e__VW.YView, 0 )+245,1,1, image_angle, image_blend, 0.9)
-			draw_set_color(global.brightRed);
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+281,"The Barrier");
-
-			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+280,"The Barrier");
-		
-			draw_set_font(global.customFont12);
-			if (tipChoosed = false)
-			{
-				tipChoosed = true;
-				tip = irandom_range(0,8)
-			}
-			infoGameOverEnemyShield(tip);
-			draw_set_color(global.lightBlue)
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+306, string(text))
-			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+305, string(text))
 		}
 		break;
 	
@@ -394,7 +374,7 @@ function DrawKilledByEnemy()
 		{
 			image_angle+=10;
 	
-			draw_sprite_ext(s_enemyDiscEye, image_index, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+245,1,1, 0, image_blend, image_alpha)
+			draw_sprite_ext(s_enemyDiscEye, 16, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+245,1,1, 0, image_blend, image_alpha)
 
 			draw_set_color(global.brightRed);
 			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+261,"Spinblade");
@@ -410,9 +390,9 @@ function DrawKilledByEnemy()
 			}
 			infoGameOverEnemyDisc(tip);
 			draw_set_color(global.lightBlue)
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+306, string(text))
+			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+286, string(text))
 			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+305, string(text))
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+285, string(text))
 	
 		}
 		break;
@@ -577,6 +557,82 @@ function DrawKilledByEnemy()
 			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+291, string(text))
 			draw_set_color(c_white)
 			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+290, string(text))
+		}
+		break;
+		
+		case (s_enemyMouthFree):
+		{
+			drawsprite = false;
+			global.FinalTrail = false;
+			
+			if (wallMouth = false)
+			{
+				wallMouth = true;
+				enemy = instance_create_layer(__view_get( e__VW.XView, 0 )+390,__view_get( e__VW.YView, 0 )+245,"PauseHUE",o_enemyMouth_FreeGameOver);
+			}
+			
+			draw_set_color(global.brightRed);
+			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+261,"Freeworm");
+
+			draw_set_color(c_white)
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+260,"Freeworm");
+			draw_set_font(global.customFont12);
+			if (tipChoosed = false)
+			{
+				tipChoosed = true;
+				tip = irandom_range(0,10)
+			}
+			infoGameOverEnemyWorm(tip);
+			draw_set_color(global.lightBlue)
+			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+286, string(text))
+			draw_set_color(c_white)
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+285, string(text))
+		}
+		break;
+		
+		case (s_enemyMouth_Body_FreeHit):
+		{
+			drawsprite = false;
+			global.FinalTrail = false;
+			global.spriteKilledBy = s_enemyMouthFree;
+		}
+		break;
+		
+		case (s_enemySegments):
+		{
+			drawsprite = false;
+			global.FinalTrail = false;
+			
+			if (wallMouth = false)
+			{
+				wallMouth = true;
+				enemy = instance_create_layer(__view_get( e__VW.XView, 0 )+340,__view_get( e__VW.YView, 0 )+245,"PauseHUE",o_enemySegmentsGameOver);
+			}
+			
+			draw_set_color(global.brightRed);
+			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+261,"Gripper");
+
+			draw_set_color(c_white)
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+260,"Gripper");
+			draw_set_font(global.customFont12);
+			if (tipChoosed = false)
+			{
+				tipChoosed = true;
+				tip = irandom_range(0,10)
+			}
+			infoGameOverEnemyWorm(tip);
+			draw_set_color(global.lightBlue)
+			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+286, string(text))
+			draw_set_color(c_white)
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+285, string(text))
+		}
+		break;
+		
+		case (s_enemySegmets_segmentHitBox):
+		{
+			drawsprite = false;
+			global.FinalTrail = false;
+			global.spriteKilledBy = s_enemySegments;
 		}
 		break;
 	}

@@ -15,7 +15,7 @@ if (global.shields<1)
 		if (global.hp <= 0)
 		{
 			global.spriteKilledBy = other.enemyShooter;
-			global.killedByTrail = other.shooterTrail;
+			global.FinalTrail = other.shooterTrail;
 		}
 		instance_destroy(other);
 		screenShake(4,30);

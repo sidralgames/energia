@@ -4,7 +4,7 @@ full = false;
 global.totalEnemies = 0;
 global.BossWormHPMax = 0;
 global.BossWormHP = 10;
-global.killedByTrail = false;
+global.FinalTrail = false;
 global.rotationKilledBy = false;
 
 global.spriteKilledBy = noone;

@@ -10,4 +10,5 @@ enum collisionType {
 };
 
 #macro first -4
+#macro scnd -5
 #macro last -3

@@ -184,7 +184,10 @@ function verletGroup() constructor {
 	vertexAttachObject = function(index, object, type, xoff, yoff) {
 		if (index == first) {
 			index = 0;
-		} else if (index == last) {
+		}
+		else if (index == scnd) {
+			index = 1;
+		}else if (index == last) {
 			index = ds_list_size(vertexList) - 1;
 		}
 		if (xoff == undefined) xoff = 0;
