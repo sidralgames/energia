@@ -12,17 +12,12 @@ if global.spriteKilledBy = s_torreta
 draw_set_font(global.customFont16);
 draw_set_halign(fa_center);
 
-draw_set_color(global.lightBlue);
-draw_text(__view_get( e__VW.XView, 0 )+329,__view_get( e__VW.YView, 0 )+181,"Killed by: ");
-
-draw_set_color(c_white)
-draw_text(__view_get( e__VW.XView, 0 )+330,__view_get( e__VW.YView, 0 )+180,"Killed by: ");
 
 if (drawsprite)
 {
 	if (global.spriteKilledBy != noone)
 	{
-		draw_sprite_ext(global.spriteKilledBy, image_index, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+245,1,1, image_angle, image_blend, o_gameOver.image_alpha)
+		draw_sprite_ext(global.spriteKilledBy, image_index, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+245+off,1,1, image_angle, image_blend, o_gameOver.image_alpha)
 	}
 }
 
@@ -46,4 +41,12 @@ if (global.FinalTrail = true)
 
 DrawKilledByEnemy();
 
+draw_set_font(global.customFont16);
+draw_set_halign(fa_center);
+
+draw_set_color(global.lightBlue);
+draw_text(__view_get( e__VW.XView, 0 )+329,__view_get( e__VW.YView, 0 )+181,"Killed by: ");
+
+draw_set_color(c_white)
+draw_text(__view_get( e__VW.XView, 0 )+330,__view_get( e__VW.YView, 0 )+180,"Killed by: ");
 

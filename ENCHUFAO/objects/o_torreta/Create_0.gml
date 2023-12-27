@@ -19,3 +19,6 @@ canBounce = false;
 
 canHaveAShield = false;
 canBeDestroyed = false;
+isShield = false;
+enemyIsMini = false;
+_hp = 0;

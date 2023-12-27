@@ -8,3 +8,6 @@ dist = 200;
 alphaP = 0;
 checkAssist = false;
 assistCont = 60;
+
+x_point_to_move_camera_to = 0;
+y_point_to_move_camera_to = 0;

@@ -22,7 +22,7 @@ image_speed = 0;
 sprite_index = global.spriteKilledBy;
 
 
-
+off = 0;
 
 
 

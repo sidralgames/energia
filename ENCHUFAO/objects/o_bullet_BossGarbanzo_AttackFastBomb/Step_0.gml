@@ -4,12 +4,12 @@
 if (isBossGarbanzoBomb)
 {
 	enemyShooter = s_bossMechaActive;
-	shooterTrail = true;
+	shooterTrail = false;
 }
 else
 {
 	enemyShooter = s_enemyMines
-	shooterTrail = false;	
+	shooterTrail = true;	
 }
 
 if tile_meeting(x,y,"Tiles")

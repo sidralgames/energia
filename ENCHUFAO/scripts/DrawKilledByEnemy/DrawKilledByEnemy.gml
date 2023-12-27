@@ -327,6 +327,20 @@ function DrawKilledByEnemy()
 
 			draw_set_color(c_white)
 			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+260,"O.V.N.I");
+		
+		draw_set_font(global.customFont12);
+			if (tipChoosed = false)
+			{
+				tipChoosed = true;
+				tip = irandom_range(0,0)
+			}
+			infoGameOverEnemyOVNI(tip);
+			draw_set_color(global.lightBlue)
+			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+286, string(text))
+			draw_set_color(c_white)
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+285, string(text))
+		
+		
 		}
 		break;
 	
@@ -671,6 +685,29 @@ function DrawKilledByEnemy()
 			drawsprite = false;
 			global.FinalTrail = false;
 			global.spriteKilledBy = s_bigWorm_Mouth;
+		}
+		break;
+		
+		case (s_bossMechaActive):
+		{
+			off = 10;
+			draw_set_color(global.brightRed);
+			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+281,"Lil Crusher");
+
+			draw_set_color(c_white)
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+280,"Lil Crusher");
+		
+			draw_set_font(global.customFont12);
+			if (tipChoosed = false)
+			{
+				tipChoosed = true;
+				tip = irandom_range(0,5)
+			}
+			infoGameOverLilCrusher(tip);
+			draw_set_color(global.lightBlue)
+			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+306, string(text))
+			draw_set_color(c_white)
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+305, string(text))
 		}
 		break;
 	}

@@ -10,6 +10,12 @@ with (o_playerShip)
 		alarm[1] = 50
 		tocado = true;
 		global.hp -= 1 * global.damageReceived;
+		if (global.hp <= 0)
+		{
+			global.FinalTrail = false;
+			global.spriteKilledBy = s_bossMechaActive;
+		}
+			
 		screenShake(4,30)
 		global.hitsTaken+=1;
 		if (o_BossMecha.attack != 0)

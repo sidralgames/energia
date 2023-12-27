@@ -39,50 +39,57 @@ if (o_BossMecha.creatingEnemies)
 		bomb = collision_line(x,y,x+lengthdir_x(maxLenght_+20, angleLaser+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,angleLaser+random_range(2,-2)), o_bulletPlayer_Bomb,false, true)
 		enemy = collision_line(x,y,x+lengthdir_x(maxLenght_+20, angleLaser+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,angleLaser+random_range(2,-2)), o_enemyP,false, true)
 	
-	
-		if (enemy)
+		if instance_exists(enemy)
 		{
-			screenShake(4,10);
-			if (enemy.isShield == true) || (enemy.enemyIsMini == true)
+			if (enemy)
 			{
-				enemy._hp -=(1.95+global.laserDamage+(global.amplifyPowerLaser/2));
-			}
-			else
-			{
-				enemy._hp -=(0.25+global.laserDamage+(global.amplifyPowerLaser/2));
-			}
-			enemy.flashAlpha = 1;
-			//explo = instance_create(enemy.x, enemy.y, o_explo2)
-			//explo.image_xscale = 0.25;
-			//explo.image_yscale = 0.25;
-		}
-	
-		if (bomb)
-		{	
-			bomb.hitByLaser = true;
-			instance_destroy(other)
-		}
-	
-	
-		if (player)
-		{
-			with (o_playerShip)
-			{
-				if (tocado = false)
+				screenShake(4,10);
+				if (enemy.isShield == true) || (enemy.enemyIsMini == true)
 				{
-					gamepad_set_vibration(0,0.3,0.3);
-					alarm[4] = 10;
-					audio_play_sound_on(global.audioEmitter, snd_hit, false, 50)
-					alarm[1] = 50
-					tocado = true;
-					global.hp -=1 * global.damageReceived;
-					if (global.hp <= 0)
+					enemy._hp -=(1.95+global.laserDamage+(global.amplifyPowerLaser/2));
+				}
+				else
+				{
+					enemy._hp -=(0.25+global.laserDamage+(global.amplifyPowerLaser/2));
+				}
+				enemy.flashAlpha = 1;
+				//explo = instance_create(enemy.x, enemy.y, o_explo2)
+				//explo.image_xscale = 0.25;
+				//explo.image_yscale = 0.25;
+			}
+		}
+		
+		if instance_exists(bomb)
+		{
+			if (bomb)
+			{	
+				bomb.hitByLaser = true;
+				instance_destroy(other)
+			}
+		}
+	
+		if instance_exists(player)
+		{
+			if (player)
+			{
+				with (o_playerShip)
+				{
+					if (tocado = false)
 					{
-						global.spriteKilledBy =s_killedBy;
-						global.imageKilledBy = 0;
+						gamepad_set_vibration(0,0.3,0.3);
+						alarm[4] = 10;
+						audio_play_sound_on(global.audioEmitter, snd_hit, false, 50)
+						alarm[1] = 50
+						tocado = true;
+						global.hp -=1 * global.damageReceived;
+						if (global.hp <= 0)
+						{
+							global.spriteKilledBy =s_killedBy;
+							global.imageKilledBy = 0;
+						}
+						screenShake(4,30)
+						global.hitsTaken+=1;
 					}
-					screenShake(4,30)
-					global.hitsTaken+=1;
 				}
 			}
 		}

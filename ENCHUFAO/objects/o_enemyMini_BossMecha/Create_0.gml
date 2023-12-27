@@ -45,3 +45,4 @@ if tile_meeting(x,y,"Tiles")
 	instance_destroy()
 }
 isImmortal = true;
+hurts = false;

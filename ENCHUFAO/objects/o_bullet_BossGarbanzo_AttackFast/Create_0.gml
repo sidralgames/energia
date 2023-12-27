@@ -12,3 +12,5 @@ event_inherited();
 
 hp = 220;
 dire = 1;
+enemyShooter = s_bossMechaActive;
+shooterTrail = false;
