@@ -4,6 +4,7 @@ function DrawKilledByEnemy()
 {
 	switch(global.spriteKilledBy)
 	{
+		// ------- BASIC ENEMIES --------//
 		case (s_enemyBasic):
 		{
 			draw_set_font(global.customFont14);
@@ -69,7 +70,7 @@ function DrawKilledByEnemy()
 			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+285, string(text))
 		}
 		break;
-	
+		// ------- MINI ENEMIES --------//
 		case (s_enemyMini_2):
 		{
 			draw_set_color(global.brightRed);
@@ -91,7 +92,7 @@ function DrawKilledByEnemy()
 			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+285, string(text))
 		}
 		break;
-	
+		// -------BOMB ENEMIES --------//
 		case (s_enemyBomber):
 		{
 			draw_set_color(global.brightRed);
@@ -114,7 +115,7 @@ function DrawKilledByEnemy()
 	
 		}
 		break;
-	
+		// ------- SHOOTER ENEMIES --------//	
 		case (s_enemyDisp):
 		{
 			draw_set_color(global.brightRed);
@@ -185,7 +186,7 @@ function DrawKilledByEnemy()
 
 		}
 		break;
-	
+		// ------- BOMB MINES ENEMIES --------//
 		case (s_enemyMines):
 		{
 			draw_set_color(global.brightRed);
@@ -209,7 +210,7 @@ function DrawKilledByEnemy()
 	
 		}
 		break;
-	
+		// ------- MITOSIS ENEMIES --------//
 		case (s_enemyMitosis):
 		{
 			draw_set_color(global.brightRed);
@@ -273,7 +274,7 @@ function DrawKilledByEnemy()
 			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+285, string(text))
 		}
 		break;
-	
+		// ------- MOTHERSHIP ENEMIES --------//	
 		case (s_enemyMothership):
 		{
 			draw_set_color(global.brightRed);
@@ -318,7 +319,7 @@ function DrawKilledByEnemy()
 			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+285, string(text))
 		}
 		break;
-	
+		// ------- OVNI ENEMIES --------//
 		case (s_enemyMisil):
 		{
 			image_angle+=0.1;
@@ -332,7 +333,7 @@ function DrawKilledByEnemy()
 			if (tipChoosed = false)
 			{
 				tipChoosed = true;
-				tip = irandom_range(0,0)
+				tip = irandom_range(0,3)
 			}
 			infoGameOverEnemyOVNI(tip);
 			draw_set_color(global.lightBlue)
@@ -343,7 +344,7 @@ function DrawKilledByEnemy()
 		
 		}
 		break;
-	
+		// ------- SHIELD ENEMIES --------//
 		case (s_enemyShield):
 		{
 			draw_sprite_ext(s_shieldEnemy, 10, __view_get( e__VW.XView, 0 )+332,__view_get( e__VW.YView, 0 )+245,1,1, image_angle, image_blend, 0.9)
@@ -383,7 +384,7 @@ function DrawKilledByEnemy()
 			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+280,"The Shielder");
 		}
 		break;
-	
+		// ------- DISC ENEMIES --------//
 		case (s_enemyDisc):
 		{
 			image_angle+=10;
@@ -410,7 +411,7 @@ function DrawKilledByEnemy()
 	
 		}
 		break;
-	
+		// ------- WALL ENEMIES --------//	
 		case (s_enemyMouth):
 		{
 			drawsprite = false;
@@ -503,7 +504,7 @@ function DrawKilledByEnemy()
 			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+300, string(text))
 		}
 		break;
-	
+		// ------- TURRET TRAP --------//
 		case (s_torreta):
 		{
 			depth = layer_get_depth("PauseHUE")-1;
@@ -534,7 +535,7 @@ function DrawKilledByEnemy()
 			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+280, string(text))
 		}
 		break;
-	
+		// ------- LASER TRAP --------//
 		case (s_laserEnemy):
 		{
 			drawsprite = false;
@@ -573,7 +574,7 @@ function DrawKilledByEnemy()
 			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+290, string(text))
 		}
 		break;
-		
+		// ------- WORM ENEMIES --------//
 		case (s_enemyMouthFree):
 		{
 			drawsprite = false;
@@ -688,6 +689,7 @@ function DrawKilledByEnemy()
 		}
 		break;
 		
+		// ------- BOSSES --------//
 		case (s_bossMechaActive):
 		{
 			off = 10;
@@ -710,5 +712,45 @@ function DrawKilledByEnemy()
 			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+305, string(text))
 		}
 		break;
+		
+		case (s_bossWorm_Mouth_Metal):
+		{
+			
+			drawsprite = false;
+			global.FinalTrail = false;
+			
+			if (wallMouth = false)
+			{
+				wallMouth = true;
+				enemy = instance_create_layer(__view_get( e__VW.XView, 0 )+560,__view_get( e__VW.YView, 0 )+245,"PauseHUE",o_BossWorm_MouthGameOver)
+			}
+			
+			draw_set_color(global.brightRed);
+			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+261,"Gusanene");
+
+			draw_set_color(c_white)
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+260,"Gusanene");
+			draw_set_font(global.customFont12);
+			if (tipChoosed = false)
+			{
+				tipChoosed = true;
+				tip = irandom_range(0,7);
+			}
+			infoGameOverGusanene(tip);
+			draw_set_color(global.lightBlue)
+			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+286, string(text))
+			draw_set_color(c_white)
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+285, string(text))
+		}
+		break;
+		
+		case (s_enemyBossWorm_HitBox):
+		{
+			drawsprite = false;
+			global.FinalTrail = false;
+			global.spriteKilledBy = s_bossWorm_Mouth_Metal;
+		}
+		break;
+		
 	}
 }

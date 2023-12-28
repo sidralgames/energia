@@ -7,7 +7,7 @@
 
 // Inherit the parent event
 event_inherited();
-hurts = true;
+hurts = false;
 contHurt=10;
 canBreak = false;
 contBreak = 20;

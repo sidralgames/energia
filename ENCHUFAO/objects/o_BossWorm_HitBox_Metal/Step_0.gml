@@ -63,17 +63,6 @@ if (electrocutated = true)
 }
 
 
-
-if (hurts = false)
-{
-	contHurt--;
-	if (contHurt <=0)
-	{
-		hurts = true;
-	}
-}
-
-
 if (global.BossWormHP <= 0) && (dying = false)
 {
 	dying = true;
