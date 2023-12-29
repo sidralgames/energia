@@ -28,6 +28,7 @@ function LoadGame()
 	global.connectedmilisecs = ini_read_real("stats","connectedmilisecs", 0);
 	
 	global.playTimes = ini_read_real("main","playTimes", 0);
+	global.mandatoryTutorial = ini_read_real("main","mandatoryTutorial", 0);
 	
 	
 	global.godModeIsOn = false;

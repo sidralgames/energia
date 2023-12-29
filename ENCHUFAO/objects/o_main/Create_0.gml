@@ -196,7 +196,8 @@ global.slowMoTime = 300;
 
 global.overchargeTime = 1;
 
-global.totalEnemiesOnScreen = 0;
+global.totalEnemiesOnLevel = 0;
+global.totalEnemiesOnLevelMax = 20;
 
 global.coverSpeed = 1.05;
 
@@ -226,7 +227,7 @@ instance_create_layer(-100,-100,"Pause",o_partEnemyKilledBy)
 
 
 global.repairingSprite = s_repairingPart;
-global.enemies = 0;
+
 speaking = false;
 contSuperShotMain = 0;
 global.textSpeed =  0.75;

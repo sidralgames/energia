@@ -1,9 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (global.totalEnemiesOnScreen <= 0)
+if (global.totalEnemiesOnLevel < 0)
 {
-	global.totalEnemiesOnScreen = 0;
+	global.totalEnemiesOnLevel = 0;
 }
 ///-------------ACHIEVEMENTS-----////
 

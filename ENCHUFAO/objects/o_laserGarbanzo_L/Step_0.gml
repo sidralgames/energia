@@ -84,7 +84,7 @@ if (o_BossMecha.creatingEnemies)
 						global.hp -=1 * global.damageReceived;
 						if (global.hp <= 0)
 						{
-							global.spriteKilledBy =s_killedBy;
+							global.spriteKilledBy =s_bossMechaActive;
 							global.imageKilledBy = 0;
 						}
 						screenShake(4,30)

@@ -392,6 +392,7 @@
     {"id":{"name":"SpawnBulletEyeAndPeta","path":"scripts/SpawnBulletEyeAndPeta/SpawnBulletEyeAndPeta.yy",},},
     {"id":{"name":"s_enchufeChargeHP_Out_Red","path":"sprites/s_enchufeChargeHP_Out_Red/s_enchufeChargeHP_Out_Red.yy",},},
     {"id":{"name":"s_bullet_part_Green2","path":"sprites/s_bullet_part_Green2/s_bullet_part_Green2.yy",},},
+    {"id":{"name":"s_TutorialHome","path":"sprites/s_TutorialHome/s_TutorialHome.yy",},},
     {"id":{"name":"PluggedToShip","path":"scripts/PluggedToShip/PluggedToShip.yy",},},
     {"id":{"name":"MoveZeroGrv_Disc","path":"scripts/MoveZeroGrv_Disc/MoveZeroGrv_Disc.yy",},},
     {"id":{"name":"DrawLaserPlayer","path":"scripts/DrawLaserPlayer/DrawLaserPlayer.yy",},},

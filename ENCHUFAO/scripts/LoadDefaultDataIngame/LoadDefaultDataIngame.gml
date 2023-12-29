@@ -36,6 +36,7 @@ function LoadDefaultDataIngame()
 	
 	//stats
 	global.playTimes = 0;
+	global.mandatoryTutorial = 0;
 	
 	for (var i = 0; i <global.numberOfShips; i++)
 	{

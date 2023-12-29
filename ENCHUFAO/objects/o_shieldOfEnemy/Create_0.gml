@@ -1,7 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-canBeHittedByPlayerLaser = true;
+
+discounted = false;
 event_inherited();
+canBeHittedByPlayerLaser = true;
 scale = 1;
 depth = layer_get_depth("Enemies")-1;
 isShield = true;

@@ -3,7 +3,8 @@
 
 
 
-
+contDiscount = random_range(30,60)
+discounted = false;
 
 // Inherit the parent event
 event_inherited();

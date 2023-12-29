@@ -95,7 +95,7 @@ if (global.breachBanner)
 	contBanner +=1;
 }
 
-if (contBanner >= 100)
+if (contBanner >= 60)
 {
 	global.breachBanner = false;
 	contBanner = 0;

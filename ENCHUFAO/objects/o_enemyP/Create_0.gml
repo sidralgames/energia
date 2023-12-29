@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+discounted = false;
+
 enemyIsWorm = false;
 canBeHittedByPlayerLaser = true;
 leavesTrail = true;
@@ -89,6 +92,6 @@ tocado = false;
 flashAlpha = 0;
 
 
-global.totalEnemiesOnScreen+=1;
+global.totalEnemiesOnLevel+=1;
 global.totalEnemies +=1;
 WormBoss = false;

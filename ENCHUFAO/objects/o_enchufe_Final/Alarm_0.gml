@@ -3,6 +3,11 @@
 
 if (cont = true)
 {
+	if (room = Sala_Tutorial)
+	{
+		global.mandatoryTutorial = 1;	
+	}
+	
 	StopSounds();
 	
 	global.level+=1;

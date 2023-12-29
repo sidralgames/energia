@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (global.BossBreach_HP > 0) && (global.totalEnemiesOnScreen < 40) && !instance_exists(o_breachBoss)
+if (global.BossBreach_HP > 0) && (global.totalEnemiesOnLevel < global.totalEnemiesOnLevelMax) && !instance_exists(o_breachBoss)
 {
 	if instance_exists(o_playerShip)
 	{

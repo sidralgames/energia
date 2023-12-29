@@ -1,5 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+global.totalEnemiesOnLevelMax = min(40, 20+global.level);
+
+
 if (room = Sala_Tutorial)
 {
 	global.hp = 1;

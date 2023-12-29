@@ -2,7 +2,7 @@
 // You can write your code in this editor
 if (canBreach)
 {
-	if (global.BossBreach_HP > 0) && (global.totalEnemiesOnScreen < 40)
+	if (global.BossBreach_HP > 0) && (global.totalEnemiesOnLevel < global.totalEnemiesOnLevelMax)
 	{
 		if instance_exists(o_playerShip)
 		{

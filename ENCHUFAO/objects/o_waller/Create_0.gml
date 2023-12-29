@@ -5,9 +5,9 @@ randomize();
 
 contTiles = 2;
 global.Go = false;
-global.enemies = 0;
+
 global.enemiesMax =  min(12, 3 + global.level) //1 + (global.level * 2);
-global.totalEnemiesOnScreen = 0;
+global.totalEnemiesOnLevel = 0;
 spawners=0;
 
 enemiesMin = min(3,global.level+1);

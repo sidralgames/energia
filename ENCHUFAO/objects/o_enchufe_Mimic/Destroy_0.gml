@@ -8,6 +8,6 @@ if instance_exists(o_playerShip)
 }
 CreateSlowmoParts();
 
-global.totalEnemiesOnScreen-=1;
+global.totalEnemiesOnLevel-=1;
 global.enemiesKilled+=1;
 global.enemiesKilledTotalAch+=1;

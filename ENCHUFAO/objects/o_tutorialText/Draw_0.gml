@@ -418,7 +418,7 @@ if instance_exists(o_playerShip) && instance_exists(o_charger)
 			contEnemies = random_range(200, 250);
 			xx = irandom(30);
 			yy = irandom(20);
-			if (global.wallgrid_[# xx, yy] == FLOOR) && (global.totalEnemiesOnScreen <=minenemies)
+			if (global.wallgrid_[# xx, yy] == FLOOR) && (global.totalEnemiesOnLevel <=minenemies)
 			{	
 				var exM = xx * CELL_WIDTH+CELL_WIDTH/2;
 				var eyM = yy * CELL_HEIGHT+CELL_HEIGHT/2;

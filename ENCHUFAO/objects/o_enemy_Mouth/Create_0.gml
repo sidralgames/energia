@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited();
+
 finalTrail = false;
 fromBullet = false;
 myTileMap = layer_tilemap_get_id("Tiles")
@@ -14,7 +15,8 @@ bnc = 0.9;
 _hp = choose(1,2);
 cont = 500;
 image_speed = 0.5;
-
+contDiscount =random_range(30,60)
+discounted = false;
 enemyIsMini = true;
 
 enemySpeedInitial = random_range(1.75,2)

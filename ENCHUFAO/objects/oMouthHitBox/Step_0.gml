@@ -1,5 +1,18 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+
+if (contDiscount > 0)
+{
+	contDiscount --;
+}
+if (contDiscount <= 0)
+{
+	if (!discounted)
+	{
+		discounted = true;
+		global.totalEnemiesOnLevel-=1;
+	}
+}
 _angle = image_angle;
 
 if (flashAlpha > 0) 

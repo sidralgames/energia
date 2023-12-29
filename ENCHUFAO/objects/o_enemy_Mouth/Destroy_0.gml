@@ -9,13 +9,7 @@ if (died = false)
 
 instance_destroy(cable);
 
-
-if (isCounted == true)
-{
-	global.enemies -=1;
-}
-
-global.totalEnemiesOnScreen-=1;
+global.totalEnemiesOnLevel-=1;
 
 // Inherit the parent event
 

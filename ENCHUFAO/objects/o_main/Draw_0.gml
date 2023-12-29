@@ -137,18 +137,16 @@ if (!isPaused)
 	//draw_text(__view_get( e__VW.XView, 0 )+564,__view_get( e__VW.YView, 0 )+7, string(global.level))
 	
 	draw_text(__view_get( e__VW.XView, 0 )+581,__view_get( e__VW.YView, 0 )-3, string(global.XPpoints))
-	//draw_text(__view_get( e__VW.XView, 0 )+630,__view_get( e__VW.YView, 0 )+61, "Enemies: " + string(global.enemies))
-	//draw_text(__view_get( e__VW.XView, 0 )+630,__view_get( e__VW.YView, 0 )+81, "Enemies max: " + string(global.enemiesMax))
+	
 	draw_set_color(c_white)
 	//draw_text(__view_get( e__VW.XView, 0 )+565,__view_get( e__VW.YView, 0 )+6, string(global.level))
 	
 	draw_text(__view_get( e__VW.XView, 0 )+582,__view_get( e__VW.YView, 0 )-4, string(global.XPpoints))
-	//draw_text(__view_get( e__VW.XView, 0 )+630,__view_get( e__VW.YView, 0 )+60, "Enemies: " + string(global.enemies))
-	//draw_text(__view_get( e__VW.XView, 0 )+630,__view_get( e__VW.YView, 0 )+80, "Enemies max: " + string(global.enemiesMax))
 
 	//if instance_exists(o_waller)
 	//{
-	//draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+60, "LEVEL TYPE: " + string(o_waller.levelType))
+	draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+30, "ENEMIES: " + string(global.totalEnemiesOnLevel))
+	draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+50, "ENEMIES MAX: " + string(global.totalEnemiesOnLevelMax))
 
 	//}
 

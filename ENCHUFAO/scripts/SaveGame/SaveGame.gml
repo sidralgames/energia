@@ -28,6 +28,7 @@ function SaveGame()
 	ini_write_real("stats","TotalBumps", global.totalBumps);
 		
 	ini_write_real("main","playTimes", global.playTimes);
+	ini_write_real("main","mandatoryTutorial", global.mandatoryTutorial);
 	
 	
 	ini_close();

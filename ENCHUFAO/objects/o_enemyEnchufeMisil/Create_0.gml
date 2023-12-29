@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+discounted = false;
 canBeHittedByPlayerLaser = true;
 affectedByLaserTrap = true;
 finalTrail = false;

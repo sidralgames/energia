@@ -2,6 +2,19 @@
 // Puede escribir su código en este editor
 _angle = image_angle;
 
+if (contDiscount > 0)
+{
+	contDiscount --;
+}
+if (contDiscount <= 0)
+{
+	if (!discounted)
+	{
+		discounted = true;
+		global.totalEnemiesOnLevel-=1;
+	}
+}
+
 if (flashAlpha > 0) 
 {
 	flashAlpha -= 0.09;

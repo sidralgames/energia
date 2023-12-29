@@ -335,6 +335,7 @@
     {"name":"SpawnBulletEyeAndPeta","order":5,"path":"scripts/SpawnBulletEyeAndPeta/SpawnBulletEyeAndPeta.yy",},
     {"name":"s_enchufeChargeHP_Out_Red","order":21,"path":"sprites/s_enchufeChargeHP_Out_Red/s_enchufeChargeHP_Out_Red.yy",},
     {"name":"s_bullet_part_Green2","order":4,"path":"sprites/s_bullet_part_Green2/s_bullet_part_Green2.yy",},
+    {"name":"s_TutorialHome","order":91,"path":"sprites/s_TutorialHome/s_TutorialHome.yy",},
     {"name":"PluggedToShip","order":12,"path":"scripts/PluggedToShip/PluggedToShip.yy",},
     {"name":"MoveZeroGrv_Disc","order":50,"path":"scripts/MoveZeroGrv_Disc/MoveZeroGrv_Disc.yy",},
     {"name":"DrawLaserPlayer","order":1,"path":"scripts/DrawLaserPlayer/DrawLaserPlayer.yy",},

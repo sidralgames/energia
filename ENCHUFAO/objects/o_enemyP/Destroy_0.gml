@@ -1,10 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (isCounted == true)
+if (discounted == false)
 {
-	global.enemies -=1;
+	global.totalEnemiesOnLevel-=1;
 }
-
-global.totalEnemiesOnScreen-=1;
 global.enemiesKilled+=1;
 global.enemiesKilledTotalAch+=1;

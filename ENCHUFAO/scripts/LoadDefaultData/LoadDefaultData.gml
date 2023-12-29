@@ -36,5 +36,6 @@ function LoadDefaultData()
 	
 	//main
 	global.playTimes = 0;
+	global.mandatoryTutorial = 0;
 	
 }
