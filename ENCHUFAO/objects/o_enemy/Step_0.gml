@@ -29,7 +29,13 @@ if (_hp <= 0)
 	explo = instance_create(x,y,o_explo2);
 	explo.image_xscale = 0.5;
 	explo.image_yscale = 0.5;
-	
+	if (isMegaEnemy)
+	{
+		if instance_exists(cable)
+		{
+			instance_destroy(cable);
+		}
+	}
 	if instance_exists(explo)
 	{
 		instance_destroy();

@@ -24,7 +24,7 @@ function PlayerStats_Green()
 	global._speed = 2.75;
 	global.walkAcceleration = 0.2;
 	
-	global.energyStat = global.energyMax/50;
+	global.energyStat = (global.energyMax / 50)-2;;
 	global.speedStat = 4;
 	global.hpStat = global.hpMax;
 	global.ammoStat = global.ammoMax / 50;

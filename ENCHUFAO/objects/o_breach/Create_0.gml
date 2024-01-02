@@ -2,12 +2,6 @@
 // You can write your code in this editor
 
 
-if (global.totalEnemiesOnLevel > global.totalEnemiesOnLevelMax)
-{
-	instance_destroy();	
-}
-else
-{
 	hp = random_range(300,600);
 	petaCreated = false;
 	soundClose = false;
@@ -44,6 +38,6 @@ else
 		maxRate = random_range(30,40)
 	}
 	enemiesBorn = 0;
-}
+
 
 

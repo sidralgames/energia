@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+contDiscount =random_range(30,60)
 discounted = false;
 event_inherited();
 canBeHittedByPlayerLaser = true;

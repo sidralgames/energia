@@ -33,7 +33,7 @@ rope1 = verletGroupCreateRope(verletSystem1, x, y, cableColor, 2, 3, _segments, 
 inst = instance_nearest(x,y,o_enemyP)
 rope1.vertexAttachTo(first, inst);
 
-
+cont = 50
 plugged = false;
 battery = choose(
 o_smartBulletsPickUp, o_smartBulletsPickUp,

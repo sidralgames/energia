@@ -6,7 +6,7 @@ function PlayerStats_Dark()
 	global.spritePart = s_bullet_part_Red;
 	global.bulletPart_sprite = s_bullet_part_Red;
 		
-	global.energyMax = 400;
+	global.energyMax = 450;
 	global.energy = global.energyMax;
 	
 	global.hpMax = 3;
@@ -23,7 +23,7 @@ function PlayerStats_Dark()
 	global._speed = 3.5;
 	global.walkAcceleration = 0.15;
 	
-	global.energyStat = global.energyMax / 50;
+	global.energyStat = (global.energyMax / 50)-2;
 	global.speedStat = 6;
 	global.hpStat = global.hpMax;
 	global.ammoStat = global.ammoMax / 50;

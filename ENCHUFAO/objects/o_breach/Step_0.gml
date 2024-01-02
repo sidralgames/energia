@@ -119,3 +119,8 @@ if (alarm[1] <= 0)
 		instance_destroy();	
 	}
 }
+
+if (global.totalEnemiesOnLevel >= global.totalEnemiesOnLevelMax + 10)
+{
+	alarm[1] = 0;	
+}

@@ -6,7 +6,7 @@ function PlayerStats_Purple()
 	global.spritePart = s_playerShip_purple_part;
 	global.bulletPart_sprite = s_bullet_part_Purple;
 		
-	global.energyMax = 550;
+	global.energyMax = 350;
 	global.energy = global.energyMax;
 	
 	global.hpMax = 4;
@@ -23,7 +23,7 @@ function PlayerStats_Purple()
 	global._speed = 3.15;
 	global.walkAcceleration = 0.2;
 	
-	global.energyStat = global.energyMax/50;
+	global.energyStat = (global.energyMax / 50)-2;;
 	global.speedStat = 5;
 	global.hpStat = global.hpMax;
 	global.ammoStat = global.ammoMax / 50;
