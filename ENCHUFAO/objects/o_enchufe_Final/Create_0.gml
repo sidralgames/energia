@@ -21,3 +21,8 @@ else
 
 bnc = 1;
 _angle = 0;
+
+if (room = Sala_Tutorial)
+{
+	global.level = -1;
+}

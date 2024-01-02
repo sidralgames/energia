@@ -1,7 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
+if instance_exists(o_playerShip)
+{
+	draw_sprite_ext(s_bosses, 1,  __view_get( e__VW.XView, 0 )+ 550,__view_get( e__VW.YView, 0 )+20,1.2,1.2,0,image_blend, image_alpha)
+}
 if (_visible)
 {
 	if (global.mandatoryTutorial = 0)
@@ -43,6 +46,7 @@ if (_visible)
 	}
 	else
 	{
+		
 		switch(selected)
 		{
 			case 0:

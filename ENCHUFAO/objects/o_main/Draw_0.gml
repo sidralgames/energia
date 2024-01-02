@@ -145,8 +145,8 @@ if (!isPaused)
 
 	//if instance_exists(o_waller)
 	//{
-	draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+30, "ENEMIES: " + string(global.totalEnemiesOnLevel))
-	draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+50, "ENEMIES MAX: " + string(global.totalEnemiesOnLevelMax))
+	//draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+30, "ENEMIES: " + string(global.totalEnemiesOnLevel))
+	//draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+50, "ENEMIES MAX: " + string(global.totalEnemiesOnLevelMax))
 
 	//}
 

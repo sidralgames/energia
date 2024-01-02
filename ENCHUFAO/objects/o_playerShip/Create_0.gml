@@ -17,6 +17,7 @@ if (room = Sala_Tutorial)
 else
 {
 	global.energy = global.energyMax;
+	global.slowMoTime = global.slowMoTimeMax;
 }
 
 slowmoSound = false;

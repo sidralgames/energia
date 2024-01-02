@@ -460,6 +460,7 @@
     {"id":{"name":"s_activating","path":"sprites/s_activating/s_activating.yy",},},
     {"id":{"name":"s_splitBulletsEnchufe","path":"sprites/s_splitBulletsEnchufe/s_splitBulletsEnchufe.yy",},},
     {"id":{"name":"o_partBulletMouth","path":"objects/o_partBulletMouth/o_partBulletMouth.yy",},},
+    {"id":{"name":"s_bosses","path":"sprites/s_bosses/s_bosses.yy",},},
     {"id":{"name":"o_bulletDisc","path":"objects/o_bulletDisc/o_bulletDisc.yy",},},
     {"id":{"name":"o_ShieldpickUp","path":"objects/o_ShieldpickUp/o_ShieldpickUp.yy",},},
     {"id":{"name":"CollisionTileBounce","path":"scripts/CollisionTileBounce/CollisionTileBounce.yy",},},

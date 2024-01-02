@@ -17,6 +17,7 @@ if (cont = true)
 	o_enchufeInicioWorm._visible = false;
 	
 	o_enchufeResetSelector._visible = false;
+	game_restart();
 }
 
 

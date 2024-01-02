@@ -400,6 +400,7 @@
     {"name":"s_activating","order":3,"path":"sprites/s_activating/s_activating.yy",},
     {"name":"s_splitBulletsEnchufe","order":64,"path":"sprites/s_splitBulletsEnchufe/s_splitBulletsEnchufe.yy",},
     {"name":"o_partBulletMouth","order":19,"path":"objects/o_partBulletMouth/o_partBulletMouth.yy",},
+    {"name":"s_bosses","order":92,"path":"sprites/s_bosses/s_bosses.yy",},
     {"name":"o_bulletDisc","order":20,"path":"objects/o_bulletDisc/o_bulletDisc.yy",},
     {"name":"o_ShieldpickUp","order":42,"path":"objects/o_ShieldpickUp/o_ShieldpickUp.yy",},
     {"name":"CollisionTileBounce","order":3,"path":"scripts/CollisionTileBounce/CollisionTileBounce.yy",},

@@ -5,7 +5,6 @@ draw_set_font(customFont2)
 draw_set_halign(fa_center)
 if instance_exists(o_playerShip) && instance_exists(o_charger)
 {
-
 	if !instance_exists(o_enchufeBombs)
 	{
 		o_playerShip.canSlowMotion = false;
