@@ -12,8 +12,8 @@ function PlayerStats_Dark()
 	global.hpMax = 3;
 	global.hp = 3;
 	
-	global.laserMax = 3;
-	global.laser = 3;
+	global.laserMax = 2;
+	global.laser = 2;
 	
 	global.ammo = 350;
 	global.ammoMax = 350;

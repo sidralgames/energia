@@ -10,8 +10,8 @@ function PlayerStats_Green()
 	global.energyMax = 400;
 	global.energy = global.energyMax;
 	
-	global.hpMax = 5;
-	global.hp = 5;
+	global.hpMax = 4;
+	global.hp = 4;
 	
 	global.laserMax = 2;
 	global.laser = 2;

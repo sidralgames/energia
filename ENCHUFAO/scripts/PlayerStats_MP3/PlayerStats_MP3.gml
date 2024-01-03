@@ -6,7 +6,7 @@ function PlayerStats_MP3()
 	global.spritePart = s_bullet_part_BlueO;
 	global.bulletPart_sprite = s_bullet_part_BlueO;
 		
-	global.energyMax = 500;
+	global.energyMax = 450;
 	global.energy = global.energyMax;
 	
 	global.hpMax = 3;

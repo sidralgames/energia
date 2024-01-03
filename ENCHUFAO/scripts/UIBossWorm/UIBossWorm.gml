@@ -12,8 +12,8 @@ function UIBossWorm()
 		draw_set_font(global.customFont16)
 		draw_set_halign(fa_right)
 		draw_set_color(global.brightRed)
-		draw_text(__view_get( e__VW.XView, 0 )+224,__view_get( e__VW.YView, 0 )+4,string(round(global.BossWormHP)))
+		draw_text(__view_get( e__VW.XView, 0 )+324,__view_get( e__VW.YView, 0 )+4,string(round(global.BossWormHP)))
 		draw_set_color(c_white)
-		draw_text(__view_get( e__VW.XView, 0 )+225,__view_get( e__VW.YView, 0 )+3,string(round(global.BossWormHP)))
+		draw_text(__view_get( e__VW.XView, 0 )+325,__view_get( e__VW.YView, 0 )+3,string(round(global.BossWormHP)))
 	}
 }
