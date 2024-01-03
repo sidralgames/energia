@@ -3,6 +3,12 @@
 function SetupLevelBossWorm()
 {
 
+	global.MegaEnemiesInLevel=0;
+	global.MegaEnemiesInLevel_Max=2;
+	
+	global.BatteriesInLevel = 0;
+	global.BatteriesInLevel_Max = 2;
+	
 	enchufe0 = false;
 	enchufeHP1 = false;
 	enchufeHP2 = false;

@@ -10,7 +10,7 @@ off = 0;
 cableColor = c_white;
 inst = instance_nearest(x,y, o_chargerStrandedShip);
 
-instTope = instance_nearest(x,y,o_strandedShip)
+instTope = inst.myShip; //instance_nearest(x,y,o_strandedShip)
 
 // Create verlet groups
 _segments = 5 * instTope.strandedShipCableStat;

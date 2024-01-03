@@ -5,7 +5,7 @@ event_inherited();
 _hpush = 0;
 _vpush = 0;
 scale = 1;
-bnc = 1;
+bnc = 0.8;
 
 hsp_f = 0;
 vsp_f = 0;
@@ -17,4 +17,6 @@ alarm[0] = 10;
 _hp = 6;
 hitByLaser = false;
 flashAlpha = 0;
-offset = irandom(360)
+offset = irandom(360);
+
+touched = false;

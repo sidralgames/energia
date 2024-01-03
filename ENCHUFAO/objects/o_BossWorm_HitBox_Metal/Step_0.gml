@@ -63,7 +63,7 @@ if (electrocutated = true)
 }
 
 
-if (global.BossWormHP <= 0) && (dying = false)
+if (global.BossWormHP <= 1) && (dying = false)
 {
 	dying = true;
 	alarm[0] = random_range(3, 10)

@@ -32,7 +32,7 @@ function SetStrandedShip()
 		weight = 1;
 		minSpeed = 1.95;
 		maxSpeed = 3.25;
-		hpMax = 3;
+		hpMax = 4;
 		hp = global.strandedShipBlueHP;
 		standedShipfireRate = 20;
 	}
@@ -43,7 +43,7 @@ function SetStrandedShip()
 		weight = 1;
 		minSpeed = 1.75;
 		maxSpeed = 2.75;
-		hpMax = 3;
+		hpMax = 4;
 		hp = global.strandedShipDarkHP;
 		standedShipfireRate = 25;
 	}
@@ -54,7 +54,7 @@ function SetStrandedShip()
 		weight = 0.5;
 		minSpeed = 1.5;
 		maxSpeed = 2;
-		hpMax = 5;
+		hpMax = 4;
 		hp = global.strandedShipRedHP;
 		standedShipfireRate = 25;
 	}
@@ -76,7 +76,7 @@ function SetStrandedShip()
 		weight = 1;
 		minSpeed = 1.75;
 		maxSpeed = 2.75;
-		hpMax = 3;
+		hpMax = 4;
 		hp = global.strandedShipMP3HP;
 		standedShipfireRate = 25;
 	}

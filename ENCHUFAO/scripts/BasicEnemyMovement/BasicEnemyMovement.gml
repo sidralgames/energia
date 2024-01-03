@@ -33,10 +33,10 @@ if (global.haveInvisibiltyCloak && global.invisibleCloak == true)
 		
 		mp_grid_path(gridRoom1, myPath, x, y, o_playerShip.x ,o_playerShip.y, true);
 	
-		if tile_meeting(x + lengthdir_x(20, 1), y+ lengthdir_y(20, 1), "Tiles") ||
-		tile_meeting(x + lengthdir_x(20, 90), y+ lengthdir_y(20, 90), "Tiles") ||
-		tile_meeting(x + lengthdir_x(20, 180), y+ lengthdir_y(20, 180), "Tiles") ||
-		tile_meeting(x + lengthdir_x(20, 270), y+ lengthdir_y(20, 270), "Tiles") || 
+		if tile_meeting(x + lengthdir_x(30, 1), y+ lengthdir_y(30, 1), "Tiles") ||
+		tile_meeting(x + lengthdir_x(30, 90), y+ lengthdir_y(30, 90), "Tiles") ||
+		tile_meeting(x + lengthdir_x(30, 180), y+ lengthdir_y(30, 180), "Tiles") ||
+		tile_meeting(x + lengthdir_x(30, 270), y+ lengthdir_y(30, 270), "Tiles") || 
 		tile_meeting(x, y, "Tiles")
 		{
 			if (alarm[10] <= 0)
@@ -48,7 +48,7 @@ if (global.haveInvisibiltyCloak && global.invisibleCloak == true)
 				_speed = enemySpeed;
 			}
 			path_start(myPath,_speed ,path_action_stop, false)
-			_angle = direction;
+			_angle = lerp(_angle, direction, 1);
 
 		}
 		else
@@ -56,7 +56,7 @@ if (global.haveInvisibiltyCloak && global.invisibleCloak == true)
 			path_end()
 			var a = point_direction(x, y, o_playerShip.x+diffX,  o_playerShip.y+diffY);
 			direction += sign(dsin(a - direction)) * (precision * global.relativeSpeed);
-			_angle = direction;
+			_angle = lerp(_angle, direction, 1);
 			if (alarm[10] <= 0)
 			{
 				speed = enemySpeed * min(1, global.relativeSpeed+0.2);

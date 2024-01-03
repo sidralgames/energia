@@ -2,7 +2,11 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function BossWormCreateTerrain()
 {
-	
+	if (circleTile = false)
+	{
+		circleTile = true;
+		instance_create(x,y,o_circleTile);
+	}
 	_x = x;
 	_y = y;
 		

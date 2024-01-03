@@ -22,4 +22,10 @@ offset = irandom(360)
 _hp = 5;
 flashAlpha = 0;
 
+
+enemyShooter = s_bossWorm_Mouth_Metal;
+shooterTrail = false;
+
+circleTile = false;
+
 _tilemap_id = layer_tilemap_get_id("Tiles");

@@ -25,7 +25,10 @@ if (_hp <= 0)
 {
 	EnemyDeathShake();
 	
-	global.XPpoints +=enemyXP;
+	if instance_exists(o_playerShip)
+	{
+		global.XPpoints +=enemyXP;
+	}
 	
 	explo = instance_create(x,y,o_explo2);
 	explo.image_xscale = 0.5;

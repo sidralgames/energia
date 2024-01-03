@@ -7,7 +7,7 @@ part_system_depth(global.overCharged_sys,layer_get_depth("Player"));
 global.overChargedPart = part_type_create();
 part_type_scale(global.overChargedPart,1,1);
 part_type_orientation(global.overChargedPart,0,359,0,0,0)
-part_type_size(global.overChargedPart, 0.25,0.75,-0.05,0);
+part_type_size(global.overChargedPart, 0.35,0.95,-0.05,0);
 part_type_alpha2(global.overChargedPart, 1,1);
 part_type_speed(global.overChargedPart,0,0,0,0);
 part_type_direction(global.overChargedPart,140,160,0,1);

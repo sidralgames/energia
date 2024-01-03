@@ -21,7 +21,7 @@ if (cont = true)
 	{
 		room_goto(Sala_SecondBoss)
 	}
-	else if (global.level = 14)
+	else if (global.level = 15)
 	{
 		room_goto(Sala_BossWorm)
 	}

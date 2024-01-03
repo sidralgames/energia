@@ -746,11 +746,20 @@ function DrawKilledByEnemy()
 		
 		case (s_enemyBossWorm_HitBox):
 		{
+			global.spriteKilledBy = s_bossWorm_Mouth_Metal;
 			drawsprite = false;
 			global.FinalTrail = false;
-			global.spriteKilledBy = s_bossWorm_Mouth_Metal;
 		}
 		break;
+		
+		case (s_BossWorm_Body_Metal_hitbox):
+		{
+			global.spriteKilledBy = s_bossWorm_Mouth_Metal;
+			drawsprite = false;
+			global.FinalTrail = false;
+		}
+		break;
+		
 		
 	}
 }

@@ -45,19 +45,19 @@ if (_visible = true)
 		{
 			draw_set_color(global.lightBlue)
 			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+320, string("SHIP BONUS: " + ship.stat))
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+322, string("SHIP BONUS: "+ ship.stat))
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+319, string("SHIP BONUS: "+ ship.stat))
 	
 			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+322, string("SHIP BONUS: " + ship.stat))
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+319, string("SHIP BONUS: " + ship.stat))
 		}
 		else
 		{
 			draw_set_color(global.lightBlue)
 			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+320, "BONUS: ???? ??? ?????")
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+322, "BONUS: ???? ??? ?????")
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+319, "BONUS: ???? ??? ?????")
 	
 			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+322, "BONUS: ???? ??? ?????")
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+319, "BONUS: ???? ??? ?????")
 		}
 
 		draw_sprite_ext(s_arrows,0,__view_get( e__VW.XView, 0 )+255,__view_get( e__VW.YView, 0 )+155,1,1,0,image_blend, image_alpha)

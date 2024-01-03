@@ -21,11 +21,12 @@ if instance_exists(o_playerShip)
 if (_hp <= 0)
 {
 	EnemyDeathShake();
-	if instance_exists(cross)
+	
+	if instance_exists(o_playerShip)
 	{
-		instance_destroy(cross)
+		global.XPpoints +=enemyXP;
 	}
-	global.XPpoints += enemyXP;
+	
 	explo = instance_create(x,y,o_explo2)
 	explo.image_xscale = 0.5;
 	explo.image_yscale = 0.5;

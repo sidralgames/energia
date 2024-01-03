@@ -51,10 +51,10 @@ function EnemySniperIA()
 		
 			mp_grid_path(gridRoom1, myPath, x, y, o_playerShip.x ,o_playerShip.y, true);
 	
-			if tile_meeting(x + lengthdir_x(25, 1), y+ lengthdir_y(25, 1), "Tiles") ||
-			tile_meeting(x + lengthdir_x(25, 90), y+ lengthdir_y(25, 90), "Tiles") ||
-			tile_meeting(x + lengthdir_x(25, 180), y+ lengthdir_y(25, 180), "Tiles") ||
-			tile_meeting(x + lengthdir_x(25, 270), y+ lengthdir_y(25, 270), "Tiles") || 
+			if tile_meeting(x + lengthdir_x(45, 1), y+ lengthdir_y(45, 1), "Tiles") ||
+			tile_meeting(x + lengthdir_x(45, 90), y+ lengthdir_y(45, 90), "Tiles") ||
+			tile_meeting(x + lengthdir_x(45, 180), y+ lengthdir_y(45, 180), "Tiles") ||
+			tile_meeting(x + lengthdir_x(45, 270), y+ lengthdir_y(45, 270), "Tiles") || 
 			tile_meeting(x, y, "Tiles")
 			{
 				if (alarm[10] <= 0)

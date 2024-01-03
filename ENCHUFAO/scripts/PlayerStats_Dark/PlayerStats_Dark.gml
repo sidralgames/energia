@@ -24,7 +24,7 @@ function PlayerStats_Dark()
 	global.walkAcceleration = 0.15;
 	
 	global.energyStat = (global.energyMax / 50)-2;
-	global.speedStat = 6;
+	global.speedStat = 5;
 	global.hpStat = global.hpMax;
 	global.ammoStat = global.ammoMax / 50;
 	global.laserStat = global.laserMax;

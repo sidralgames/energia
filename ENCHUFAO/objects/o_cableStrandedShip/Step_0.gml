@@ -25,9 +25,10 @@ if (global.pluggingStrandedShipToEnchufe)
 	}
 }
 
-
-if (verletSystemExists(verletSystem1))
+if instance_exists(instTope)
 {
-	verletSystem1.simulate();
+	if (verletSystemExists(verletSystem1))
+	{
+		verletSystem1.simulate();
+	}
 }
-

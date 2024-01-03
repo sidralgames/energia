@@ -28,7 +28,7 @@ if (canShot)
 			{
 		
 				laserActive = true;
-				if (inScreen)
+				if (inScreen) || (colLaser.inScreen)
 				{
 					sndActivating = audio_play_sound_on(global.audioEmitter, snd_laserActivating, false, 50)
 				}
@@ -89,7 +89,7 @@ if (canShot)
 		
 				laserActive = true;
 			
-				if (inScreen)
+				if (inScreen) || (colLaser.inScreen)
 				{
 					sndActivating = audio_play_sound_on(global.audioEmitter, snd_laserActivating, false, 50)
 				}

@@ -37,8 +37,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_BossWorm_Body_Metal367",
-    "path": "sprites/s_BossWorm_Body_Metal367/s_BossWorm_Body_Metal367.yy",
+    "name": "s_BossWorm_Body_Metal_hitbox",
+    "path": "sprites/s_BossWorm_Body_Metal_hitbox/s_BossWorm_Body_Metal_hitbox.yy",
   },
   "spriteMaskId": null,
   "visible": true,

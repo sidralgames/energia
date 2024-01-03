@@ -4,7 +4,7 @@ if (cont = true)
 {
 	//Set to false run upgrades like this
 	room_goto(Sala_BossWorm)
-	global.level = 14;
+	global.level = 15;
 }
 
 

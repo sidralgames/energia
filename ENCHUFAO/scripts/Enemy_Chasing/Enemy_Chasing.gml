@@ -20,7 +20,7 @@ function Enemy_Chasing()
 			if  enemyToBounce && (enemyToBounce.canBounce = true) && (!bounced) && (enemyToBounce.isShield = false)
 			{
 				bounced = true;
-				alarm[8] = 10;
+				alarm[8] = 20;
 			    direction = direction+choose(random_range(30,50),random_range(-30,-50))
 				_angle = direction;
 			} 
@@ -91,7 +91,7 @@ function Enemy_Chasing()
 			}
 			else
 			{
-				alarm[4] = random_range(30, 60)
+				alarm[4] = random_range(60, 100)
 			}
 			
 		}
