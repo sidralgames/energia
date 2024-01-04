@@ -48,6 +48,7 @@ instTope = instance_create_layer(x,y,"Enemies", battery);
 instTope.inEnemy = true;
 instTope.depth = depth-1;
 instTope.enemy = inst;
+instTope.cable = self;
 rope1.vertexAttachObject(last, instTope, vertexAttachmentType.both);
 
 //instTope = instance_create(x, y, o_coco);

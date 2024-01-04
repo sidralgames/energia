@@ -153,7 +153,7 @@ if (!isPaused)
 	}
 	if instance_exists(o_playerShip) && (room != Sala_Inicio) && (global.assistedSlowmo == false)
 	{
-		if (room = Sala_0)
+		if (room = Sala_0) || (room = Sala_SecondBoss) || (room = Sala_BossWorm) || (room = Sala_Upgade) 
 		{
 			if (o_playerShip.key_BulletTime) && (o_playerShip.canSlowMotion)
 			{

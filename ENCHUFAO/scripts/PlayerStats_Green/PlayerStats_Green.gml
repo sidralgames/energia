@@ -31,6 +31,7 @@ function PlayerStats_Green()
 	global.laserStat = global.laserMax;
 	global.cableStat = 4;
 	
+	global.PETAAmmo = 3;
 	
 	global.ammoStatInitial = global.ammoStat;
 	global.energyStatInitial = global.energyStat;

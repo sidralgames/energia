@@ -8,7 +8,7 @@ function AddShipGreen()
 		sprite: splayer,
 		spriteLocked: splayer_Blue_Locked,
 		position: 0,
-		stat: "FULL BOMBS"
+		stat: "FULL EQUIPMENT"
 		
 	})
 	global.numberOfShips +=1;

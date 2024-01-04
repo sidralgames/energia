@@ -160,11 +160,11 @@ global.strandedShipPurple = false;
 global.strandedShipMP3 = false;
 
 global.strandedShipGreenHP = 4;
-global.strandedShipBlueHP = 3;
-global.strandedShipRedHP = 5;
+global.strandedShipBlueHP = 4;
+global.strandedShipRedHP = 4;
 global.strandedShipPurpleHP = 4;
-global.strandedShipDarkHP = 3;
-global.strandedShipMP3HP = 3;
+global.strandedShipDarkHP = 4;
+global.strandedShipMP3HP = 4;
 
 global.strandedHPUpgrade = 0;
 global.pluggingStrandedShipToEnchufe = false;

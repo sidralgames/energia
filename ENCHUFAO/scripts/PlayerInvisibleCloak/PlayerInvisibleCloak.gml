@@ -57,19 +57,20 @@ function PlayerInvisibleCloak()
 			_alpha = 1;
 			layer_set_visible("CLOAK", false);
 		}
+		
 		switch(global.spriteShip)
 		{
 			case (splayer):
 			{
-				part_particles_create(global.naveP_sys, x+lengthdir_x(-5, _angle+15), y+lengthdir_y(-5, _angle+15), global.naveP , 3);
-				part_particles_create(global.naveP_sys, x+lengthdir_x(-5, _angle-15), y+lengthdir_y(-5, _angle-15), global.naveP , 3);
+				part_particles_create(global.naveP_sys, x+lengthdir_x(-5, _angle+25), y+lengthdir_y(-5, _angle+25), global.naveP , 3);
+				part_particles_create(global.naveP_sys, x+lengthdir_x(-5, _angle-25), y+lengthdir_y(-5, _angle-25), global.naveP , 3);
 			}
 			break;
 			
 			case (splayer_Blue):
 			{
-				part_particles_create(global.naveP_sys, x+lengthdir_x(-7, _angle+10), y+lengthdir_y(-7, _angle+10), global.naveP , 3);
-				part_particles_create(global.naveP_sys, x+lengthdir_x(-7, _angle-10), y+lengthdir_y(-7, _angle-10), global.naveP , 3);
+				part_particles_create(global.naveP_sys, x+lengthdir_x(-4, _angle+35), y+lengthdir_y(-4, _angle+35), global.naveP , 2);
+				part_particles_create(global.naveP_sys, x+lengthdir_x(-4, _angle-35), y+lengthdir_y(-4, _angle-35), global.naveP , 2);
 			}
 			break;
 			

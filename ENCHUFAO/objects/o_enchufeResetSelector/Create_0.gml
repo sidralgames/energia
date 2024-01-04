@@ -11,3 +11,4 @@ event_inherited();
 cont = false
 reset = true;
 _visible = true;
+occupied = false;

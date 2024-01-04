@@ -35,3 +35,8 @@ else
 {
 	yy = y;	
 }
+
+if !instance_exists(cable)
+{
+	inEnemy = false;	
+}
