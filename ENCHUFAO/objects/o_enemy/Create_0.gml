@@ -45,8 +45,8 @@ if tile_meeting(x,y,"Tiles")
 }
 
 isMegaEnemy = false;
-isMega = irandom(4);
-oddsBattery = 2;
+isMega = irandom(0);
+oddsBattery = 0;
 
 if (isMega = 0) && (room != Sala_Tutorial)
 {

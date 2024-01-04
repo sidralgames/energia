@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if instance_exists(instTope)
+if instance_exists(instTope) && instance_exists(inst)
 {
 	instTope.inEnemy = false;
 	instTope.speed = inst.enemySpeed/2;

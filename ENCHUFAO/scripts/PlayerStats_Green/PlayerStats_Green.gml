@@ -6,7 +6,7 @@ function PlayerStats_Green()
 	global.spritePart = s_bullet_part_Green;
 	global.bulletPart_sprite = s_bullet_part_Green;
 	
-		
+	
 	global.energyMax = 400;
 	global.energy = global.energyMax;
 	

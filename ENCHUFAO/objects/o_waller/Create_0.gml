@@ -50,13 +50,13 @@ else if (room = Sala_Tutorial)
 alarm[0] = 20;
 alarm[1] = 220;
 alarm[2] = 50;
-alarm[3] = 100;
+alarm[3] = 300;
 
-times = min(5, choose(0,1,2,3,4)+global.level-1)
+timesSpawner = min(5, choose(0,1,2,3,4)+global.level-1)
 
 
 timesTotal = 500;
 timesBreach = min(8, global.level-2);
-breachRetryTime = 40;
+breachRetryTime = 60;
 breachDuration = 3000;
 spawningBreach = false;

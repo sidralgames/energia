@@ -5,7 +5,7 @@ if (room != Sala_Tutorial)
 {
 	if (timesTotal > 0)
 	{
-		if times >0 
+		if timesSpawner >0 
 		{
 			if instance_exists(o_playerShip)
 			{
@@ -53,7 +53,7 @@ if (room != Sala_Tutorial)
 									case 7: SpawnEnemyMitosisAndMini(); break;	
 								}
 							
-								times-=1;
+								timesSpawner-=1;
 							}
 						}
 						else
@@ -61,7 +61,7 @@ if (room != Sala_Tutorial)
 							instance_create(exM,eyM,o_enemySpawnerIndicator);
 							SpawnBlackHole();
 							SpawnEnemyFast();
-							times-=1;
+							timesSpawner-=1;
 							spawners+=1;
 						}
 					}

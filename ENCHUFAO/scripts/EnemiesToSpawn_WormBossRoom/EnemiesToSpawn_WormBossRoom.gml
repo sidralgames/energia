@@ -6,7 +6,7 @@ function EnemiesToSpawn_WormBossRoom()
 
 	if (enemyToSpawn <=13)
 	{
-		enemy = choose(o_enemySegment, o_enemy, o_enemyFast)
+		enemy = choose(o_enemySegment, o_enemy, o_enemyFast, o_enemySegment, o_enemyFast, o_enemyMouth_Free)
 	}
 	else
 	if (enemyToSpawn > 13) && (enemyToSpawn<15)

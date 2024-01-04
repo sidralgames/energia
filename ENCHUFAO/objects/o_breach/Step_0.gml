@@ -103,10 +103,7 @@ if (contBanner >= 60)
 
 if (alarm[1] <= 0)
 {
-	if (room = Sala_0)
-	{
-		o_waller.breachRetryTime = 40;
-	}
+	
 	if (soundClose = false)
 	{
 		soundClose = true;
@@ -116,6 +113,10 @@ if (alarm[1] <= 0)
 	
 	if (image_index <=10)
 	{
+		if (room = Sala_0)
+		{
+			o_waller.alarm[3] = random_range(800,1000);
+		}
 		instance_destroy();	
 	}
 }

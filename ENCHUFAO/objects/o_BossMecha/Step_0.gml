@@ -53,7 +53,7 @@ if (tile_meeting(x+hspeed,y,"Tiles"))
 
 
 	
-if (inside.hp <= 0)
+if (inside.hp < 1)
 {
 	instance_destroy();
 	instance_destroy(inside);

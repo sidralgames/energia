@@ -4,22 +4,21 @@ if !instance_exists(o_partBulletMouth)
 {
 	instance_create_layer(-100,-100,"EnemiesHUE",o_partBulletMouth)
 }
-if (alarm[2] <= 0) && times>0 //Try spawiner 
+if (alarm[2] <= 0) && timesSpawner>0 //Try spawner 
 {
 	timesTotal-=1;
 	alarm[2] = 2;
 }
 
-if (alarm[3] <= 0) //Time to try a new breach again
+if (global.level > 2) && (timesBreach> 0)
 {
-	alarm[3] = breachRetryTime
+	if (alarm[3] <= 0) //Time to try a new breach again
+	{
+		alarm[3] = breachRetryTime
+	}
 }
 
-//if (times = 0) || (timesTotal = 0)
-//{
-//	times = 0;
-//	timesTotal = 0;
-//}
+
 if (timesBreach <= 0)
 {
 	spawningBreach = false;

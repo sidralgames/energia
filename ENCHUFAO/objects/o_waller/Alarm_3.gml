@@ -24,7 +24,7 @@ if (timesBreach >0) && (global.totalEnemiesOnLevel < global.totalEnemiesOnLevelM
 				timesBreach-=1;
 				//breachObj = instance_create_layer(breachX, breachY, "Breach", o_blackHole)
 				alarm[4] = breachDuration; 
-				breachRetryTime = 600;
+				alarm[3] = random_range(800,1000);
 				
 			}
 		}

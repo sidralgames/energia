@@ -9,11 +9,24 @@ function UIBossWorm()
 		draw_sprite_ext(s_bossHealthBar_In, 0,__view_get( e__VW.XView, 0 )+233,__view_get( e__VW.YView, 0 )+20, global.BossWormHP/global.BossWormHPMax, 1,image_angle, image_blend, image_alpha)
 		draw_sprite_ext(s_bossHealthBar_OutFront, 0,__view_get( e__VW.XView, 0 )+230,__view_get( e__VW.YView, 0 )+20, 1,1,image_angle, image_blend, image_alpha)
 	
-		draw_set_font(global.customFont16)
-		draw_set_halign(fa_right)
-		draw_set_color(global.brightRed)
-		draw_text(__view_get( e__VW.XView, 0 )+324,__view_get( e__VW.YView, 0 )+4,string(round(global.BossWormHP)))
-		draw_set_color(c_white)
-		draw_text(__view_get( e__VW.XView, 0 )+325,__view_get( e__VW.YView, 0 )+3,string(round(global.BossWormHP)))
+		if (global.BossWormHP >= 120)
+		{
+			draw_set_font(global.customFont14)
+			draw_set_halign(fa_center)
+			draw_set_color(global.dark)
+			draw_text(__view_get( e__VW.XView, 0 )+324,__view_get( e__VW.YView, 0 )+5,string(round(global.BossWormHP)))
+			draw_set_color(c_white)
+			draw_text(__view_get( e__VW.XView, 0 )+325,__view_get( e__VW.YView, 0 )+4,string(round(global.BossWormHP)))
+		}
+		else
+		{
+			draw_set_font(global.customFont14)
+			draw_set_halign(fa_center)
+			draw_set_color(global.dark)
+			draw_text(__view_get( e__VW.XView, 0 )+324,__view_get( e__VW.YView, 0 )+5,string(round(global.BossWormHP)))
+			draw_set_color(global.brightRed)
+			draw_text(__view_get( e__VW.XView, 0 )+325,__view_get( e__VW.YView, 0 )+4,string(round(global.BossWormHP)))
+		}
 	}
+	draw_set_color(c_white)
 }

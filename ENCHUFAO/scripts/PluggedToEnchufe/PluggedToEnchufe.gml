@@ -88,12 +88,12 @@ function PluggedToEnchufe()
 	{
 		if (global.bonusIsUpgraded)
 		{
-			global.amplifyPowerLaser = 3.5;
+			global.amplifyPowerLaser = 2;
 			global.amplifyPowerAmmo = 1;
 		}
 		else
 		{
-			global.amplifyPowerLaser = 2.5;
+			global.amplifyPowerLaser = 1;
 			global.amplifyPowerAmmo = 0.5;
 		}
 		
