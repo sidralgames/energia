@@ -15,6 +15,8 @@ function Controls_Input()
 	key_bomb_pressed = mouse_check_button_pressed(mb_middle) || gamepad_button_check_pressed(0, gp_shoulderl)
 	key_bomb_released = mouse_check_button_released(mb_middle) || gamepad_button_check_released(0, gp_shoulderl)
 	
+	key_objectUp = gamepad_button_check_pressed(0, gp_padu);
+	
 	key_upP = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W")) || gamepad_button_check_pressed(0, gp_padu)// || gamepad_axis_value(0, gp_axislv) < -0.5;
 	key_downP = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S")) || gamepad_button_check_pressed(0, gp_padd) //|| gamepad_axis_value(0, gp_axislv) > 0.5;
 	

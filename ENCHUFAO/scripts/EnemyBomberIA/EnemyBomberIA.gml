@@ -20,7 +20,7 @@ function EnemyBomberIA()
 			}
 			
 		} 
-		else if (global.haveInvisibiltyCloak && global.invisibleCloak == true)
+		else if (global.haveInvisibiltyCloak && global.invisibleCloak == true) || (global.inSmokeArea = true)
 		{
 			path_end()
 			var a = point_direction(x, y, x+diffX,y+diffY);

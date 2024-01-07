@@ -4,10 +4,10 @@ function PlugStrandedShipToEnchufe()
 {
 	gamepad_set_vibration(0,0.2,0.2);
 	alarm[4] = 10;
-	o_cable.pluggedShip = false;
+	o_cable.pluggedToStrandedShip = false;
 	audio_play_sound_on(global.audioEmitter,choose(snd_plugged, snd_plugged_2, snd_plugged_3),false, 50);
 	global.pluggingStrandedShipToEnchufe = true;
-	pluggedShip = false;
+	pluggedToStrandedShip = false;
 	instance_destroy(thisStrandedShip.myCableFake);
 	instance_destroy(chargerStrandedShip);
 	

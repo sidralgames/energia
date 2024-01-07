@@ -23,7 +23,7 @@ if instance_exists(o_playerShip)
 			image_speed = 0;
 			image_index = 0;
 		
-			if (point_distance(x,y,o_playerShip.x, o_playerShip.y) <= 150) && (global.invisibleCloak == false) 
+			if (point_distance(x,y,o_playerShip.x, o_playerShip.y) <= 150) && ((global.invisibleCloak == false) && (global.inSmokeArea == false))
 			{
 				state = 1;
 			}

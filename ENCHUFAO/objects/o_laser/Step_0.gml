@@ -23,7 +23,7 @@ if (canShot)
 			colEnemy = collision_rectangle(x-2,y,x+2,y-16-long*image_yscale,o_enemyP,false,true)
 			colLaser = collision_rectangle(x-2,y,x+2,y-26-long*image_yscale,o_laser,false,true)
 			
-			if ( ((colPlayer) && (global.invisibleCloak == false)) || (colEnemy) )
+			if ( ((colPlayer) && (global.invisibleCloak == false) && (global.inSmokeArea == false)) || (colEnemy) )
 			 && (colLaser) && (laserActive = false) 
 			{
 		
@@ -83,7 +83,7 @@ if (canShot)
 			colEnemy = collision_rectangle(x+2,y+2,x-16-long,y-2,o_enemyP,false,true)
 			colLaser = collision_rectangle(x+2,y+2,x-16-long,y-2,o_laser,false,true)
 			
-			if ( ((colPlayer) && (global.invisibleCloak == false)) || (colEnemy) )
+			if ( ((colPlayer) && (global.invisibleCloak == false) && (global.inSmokeArea == false)) || (colEnemy) )
 			 && (colLaser) && (laserActive = false) 
 			{
 		

@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function LaserEnemyMovement()
 {
-	if (global.haveInvisibiltyCloak && global.invisibleCloak == true)
+	if (global.haveInvisibiltyCloak && global.invisibleCloak == true) || (global.inSmokeArea = true)
 	{
 		path_end()
 		var a = point_direction(x, y, x+diffX,y+diffY);

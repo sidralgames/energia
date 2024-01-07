@@ -7,7 +7,7 @@ if !tile_meeting(x,y,"Tiles")
 
 if instance_exists(o_playerShip)
 {
-	if (global.invisibleCloak == false)
+	if (global.invisibleCloak == false) && (global.inSmokeArea = false)
 	{
 		var a = point_direction(x, y, o_playerShip.x, o_playerShip.y);
 		direction += sign(dsin(a - direction)) * precision;

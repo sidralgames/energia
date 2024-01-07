@@ -40,7 +40,7 @@ ripple = false;
 canSlowMotion = true;
 layer_set_visible("EffectBreach", false);
 pluggedTimer = 0;
-pluggedShip = false
+pluggedToStrandedShip = false
 global.pitch = 1;
 global.energy = global.energyMax;
 upgraded = false;

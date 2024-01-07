@@ -151,7 +151,7 @@ function CheckEnchufeUpgrade()
 		global.cableStat+=1;
 		instance_destroy(o_cable);
 		instance_destroy(o_charger);
-		instance_create(x,y,o_cable)
+		instance_create_layer(x, y, "Cable", o_cable)
 		
 
 	}

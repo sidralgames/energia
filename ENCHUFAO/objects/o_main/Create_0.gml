@@ -35,6 +35,8 @@ global.haveInvisibiltyCloak = true;
 global.invisibleCloak = false;
 global.cloackReal = 1;
 
+global.inSmokeArea = false;
+
 //--PETAS MULTICHARGE--//
 global.allPETAisMulti = false;
 
@@ -71,14 +73,15 @@ global.laserBurnEnemies = true; /////////// OK
 global.laserSlowEnemies = true;////////////// OK
 
 
+//---- EXPERIMENTAL ----//
+global.haveSmokeBomb = true;
 
-//ONLY EN LA HEAD
+
+// ---ONLY EN LA HEAD ---//
 
 global.accuracy =0;
 
-
-
-global.laserLastLongIsOn = false; //ibujalo mas fames y ue localcule en el step tmb mas clao //cvhungo en favoritos tienes algo
+global.laserLastLongIsOn = false; //Dibujalo mas fames y ue localcule en el step tmb mas clao //cvhungo en favoritos tienes algo
   
 global.laserAtractEnemies = false;
 global.laserDobleIsOn = false;
@@ -224,6 +227,7 @@ instance_create_layer(-100,-100,"Part",o_partNaveFriend)
 instance_create_layer(-100,-100,"ShieldEnemy",o_partSmoke)
 instance_create_layer(-100,-100,"Part",o_partGreen);
 instance_create_layer(-100,-100,"Pause",o_partEnemyKilledBy)
+instance_create_layer(-100,-100,"Text",o_partSmokeBomb)
 
 
 global.repairingSprite = s_repairingPart;

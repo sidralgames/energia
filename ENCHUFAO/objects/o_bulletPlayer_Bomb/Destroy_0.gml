@@ -1,6 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 gamepad_set_vibration(0,0.3,0.3);
+if (global.haveSmokeBomb)
+{
+	instance_create_layer(x,y,"Text",o_smokeFromBomb);
+}
 if (hitByLaser = false)
 {
 	ebomb = instance_create(x,y,o_exploBomb);

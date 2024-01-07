@@ -27,7 +27,7 @@ if instance_exists(o_playerShip)
 		Move()	
 	}	
 
-if (point_distance(x,y,o_playerShip.x, o_playerShip.y) <= 300) && (global.invisibleCloak == false)
+if (point_distance(x,y,o_playerShip.x, o_playerShip.y) <= 300) && ((global.invisibleCloak == false) && (global.inSmokeArea = false))
 	{
 		dire = direction;
 		if (alarm[0] <= 0)

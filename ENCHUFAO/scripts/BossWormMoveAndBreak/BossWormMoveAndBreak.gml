@@ -6,7 +6,7 @@ function BossWormMoveAndBreak()
 	{
 		if (alarm[4] <= 0)
 		{
-			if (global.haveInvisibiltyCloak && global.invisibleCloak = true)
+			if (global.haveInvisibiltyCloak && global.invisibleCloak = true) || (global.inSmokeArea = true)
 			{
 				diffX = choose(random_range(150, room_width-150));
 				diffY = choose(random_range(150, room_height-150));
@@ -25,7 +25,7 @@ function BossWormMoveAndBreak()
 	{
 		if (alarm[4] <= 0)
 		{
-			if (global.haveInvisibiltyCloak && global.invisibleCloak = true)
+			if (global.haveInvisibiltyCloak && global.invisibleCloak = true) || (global.inSmokeArea = true)
 			{
 				diffX = choose(random_range(150, room_width-150));
 				diffY = choose(random_range(150, room_height-150));

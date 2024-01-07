@@ -34,7 +34,7 @@ if instance_exists(inEnchufe)
 	}
 }
 
-if (connectedToShip) && (!pluggedShip)
+if (connectedToShip) && (!pluggedToStrandedShip)
 {
 	if (radi > 12)
 	{

@@ -29,7 +29,7 @@ rope1.vertexAttachTo(first, inst);
 
 
 plugged = false;
-pluggedShip = false;
+pluggedToStrandedShip = false;
 
 		//// Attach an object to its last vertex
 instTope = instance_create_layer(x,y,"Player", o_charger);

@@ -6,12 +6,12 @@ function SimpleStrandedUnplug()
 	gamepad_set_vibration(0,0.15,0.15);
 	alarm[4] = 5;
 	audio_play_sound_on(global.audioEmitter,choose(snd_unPlugged, snd_unPlugged_2, snd_unPlugged_3),false,50)
-	pluggedShip = false;
+	pluggedToStrandedShip = false;
 	plugged = false;
 	o_cable.plugged = false;
 	instance_destroy(thisStrandedShip.myCableFake);
 	instance_destroy(chargerStrandedShip);
-	o_cable.pluggedShip = false;
+	o_cable.pluggedToStrandedShip = false;
 	global.unPluggingShip = true;
 	//global.unPlugging = true;
 	thisStrandedShip.connected = false;

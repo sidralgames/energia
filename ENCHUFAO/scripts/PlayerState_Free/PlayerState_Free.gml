@@ -30,7 +30,7 @@ function PlayerState_Free()
 	
 	mask_index = splayer;
 	
-	if (pluggedShip == true)
+	if (pluggedToStrandedShip == true)
 	{
 		PluggedToShip();
 	}

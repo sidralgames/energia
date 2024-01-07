@@ -47,7 +47,7 @@ inScreen =  (x > __view_get( e__VW.XView, 0 )-50 && x < __view_get( e__VW.XView,
 
 if (inScreen)
 {
-	if ( ((colPlayer) && (global.invisibleCloak == false)) || (colEnemy) ) && (trapActive = false) 
+	if ( ((colPlayer) && ((global.invisibleCloak == false) && (global.inSmokeArea == false))) || (colEnemy) ) && (trapActive = false) 
 	{
 		trapActive = true;
 		alarm[1] = 30;

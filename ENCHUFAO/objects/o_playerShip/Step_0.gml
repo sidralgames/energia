@@ -2,6 +2,16 @@
 // You can write your code in this editor
 Controls_Input();
 
+if (contSmokeArea > 0)
+{
+	global.inSmokeArea = true;
+	contSmokeArea --;
+	
+	if (contSmokeArea <= 0)
+	{
+		global.inSmokeArea = false;
+	}
+}
 CheckExternalBattery();
 
 CheckCalledForHelp();
@@ -185,7 +195,7 @@ if (key_l3Dowm) && (key_r3Dowm) && (global.PETAAmmo > 0 )
 inEnchufe = collision_circle(x,y,maxConectRad,o_enchufe_Father,false,true)
 if (inEnchufe) 
 {	
-	if (pluggedShip)
+	if (pluggedToStrandedShip)
 	{
 		if (inEnchufe.abierto = true) && (inEnchufe.contOvercharged <=0)
 		&& (inEnchufe.dying == false) && (inEnchufe.occupied = false)
@@ -211,7 +221,7 @@ if (inEnchufe)
 		if (alarm[8] <= 0)
 		{
 			if (inEnchufe.abierto = true) && (inEnchufe.contOvercharged <=0)
-			&& (inEnchufe.dying == false) && (!pluggedShip) && (inEnchufe.occupied = false)
+			&& (inEnchufe.dying == false) && (!pluggedToStrandedShip) && (inEnchufe.occupied = false)
 			{
 				if (key_x)
 				{
@@ -250,7 +260,7 @@ if (connectedToShip)
 	if (key_x)
 	{
 		chargerStrandedShip = connectedToShip;
-		if (chargerStrandedShip.trapped = false) && (pluggedShip = false) && (o_charger.overcharged = false) && alarm[4] <=0
+		if (chargerStrandedShip.trapped = false) && (pluggedToStrandedShip = false) && (o_charger.overcharged = false) && alarm[4] <=0
 		{
 			PlugToShip();
 		}

@@ -1,8 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+global.bombIsClusterBomb = true;
 global.totalEnemiesOnLevelMax = min(35, 20+global.level);
 
+contSmokeArea = 0;
 
 if (room = Sala_Tutorial)
 {
@@ -129,7 +130,7 @@ pluggedTimer = 0;
 pluggedTimerMax = 300;
 pluggedTimerAlert = 200;
 
-pluggedShip = false
+pluggedToStrandedShip = false
 global.pitch = 1;
 
 upgraded = false;

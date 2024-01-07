@@ -23,6 +23,7 @@ function Enemy_ChasingAnchored()
 			
 			if (point_distance(x,y,o_playerShip.x, o_playerShip.y) > activeDistance)
 			|| (global.haveInvisibiltyCloak && global.invisibleCloak == true)
+			|| (global.inSmokeArea = true)
 			|| grid_line_collision(x, y, o_playerShip.x, o_playerShip.y, 10)
 			{
 				contBounce = 0;

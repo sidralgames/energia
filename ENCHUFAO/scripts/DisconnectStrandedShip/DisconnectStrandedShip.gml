@@ -8,7 +8,7 @@ function DisconnectStrandedShip()
 	}
 	if instance_exists(o_playerShip)
 	{
-		o_playerShip.pluggedShip=false;
+		o_playerShip.pluggedToStrandedShip=false;
 	}
 	connectedToEnchufe = false;
 	instance_destroy(myCable);

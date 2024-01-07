@@ -26,8 +26,8 @@ else
 	}
 
 	if instance_exists(o_playerShip)
-	{
-			if (global.haveInvisibiltyCloak && global.invisibleCloak == true)
+	{ 
+		if (global.haveInvisibiltyCloak && global.invisibleCloak == true) || (global.inSmokeArea = true)
 		{
 			path_end()
 			var a = point_direction(x, y, x+diffX,y+diffY);

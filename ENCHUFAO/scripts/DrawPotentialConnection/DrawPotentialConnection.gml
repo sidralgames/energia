@@ -54,7 +54,7 @@ function DrawPotentialConnection()
 
 	if instance_exists(connectedToShip)
 	{
-		if (connectedToShip) && (!pluggedShip)
+		if (connectedToShip) && (!pluggedToStrandedShip)
 		{
 			if (radi > 12)
 			{

@@ -190,7 +190,7 @@ inEnchufe = collision_circle(x,y,20,o_enchufe_Father,false,true)
 
 if (inEnchufe) 
 {	
-	if (pluggedShip)
+	if (pluggedToStrandedShip)
 	{
 		if (inEnchufe.abierto = true) && (inEnchufe.contOvercharged <=0) && (inEnchufe.dying == false)
 		{
@@ -215,7 +215,7 @@ if (inEnchufe)
 		if (alarm[8] <= 0)
 		{
 			if (inEnchufe.abierto = true) && (inEnchufe.contOvercharged <=0)
-			&& (inEnchufe.dying == false) && (!pluggedShip)
+			&& (inEnchufe.dying == false) && (!pluggedToStrandedShip)
 			{
 				if (key_x)
 				{
@@ -250,7 +250,7 @@ if (connectedToShip)
 {
 	if (key_x)
 	{
-		if (pluggedShip = false) && (o_charger.overcharged = false) && alarm[4] <=0
+		if (pluggedToStrandedShip = false) && (o_charger.overcharged = false) && alarm[4] <=0
 		{
 			PlugToShip();
 		}
