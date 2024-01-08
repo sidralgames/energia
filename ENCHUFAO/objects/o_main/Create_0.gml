@@ -14,6 +14,7 @@ global.assistSlowmoIsOn = false;
 
 global.assistedAim = false;
 
+global.bombIsHomingBomb = true;
 
 
 //-------COLORS--------//
@@ -74,7 +75,7 @@ global.laserSlowEnemies = true;////////////// OK
 
 
 //---- EXPERIMENTAL ----//
-global.haveSmokeBomb = true;
+global.haveSmokeBomb = false;
 
 
 // ---ONLY EN LA HEAD ---//

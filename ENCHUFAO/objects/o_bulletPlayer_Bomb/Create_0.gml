@@ -9,8 +9,20 @@ bnc = 0.5;
 minVel = 0.1;
 hsp_f = 0;
 vsp_f = 0;
-_angle = image_angle;
+scaleEnd = 1;
 
 alarm[0] = 10;
 alarm[1] = 30;
 hitByLaser = false;
+_angle = direction;
+
+if (global.bombIsHomingBomb)
+{
+	scaleEnd = 0.5;
+	correctedTime = 60;
+	corrected = false;
+	dist = random_range(120,150);
+	precision = random_range(2.5,2.75);
+	sprite_index = s_friend
+}
+

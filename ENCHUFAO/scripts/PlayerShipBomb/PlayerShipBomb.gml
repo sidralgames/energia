@@ -23,10 +23,35 @@ function PlayerShipBomb()
 	
 	audio_play_sound_on(global.audioEmitter, snd_shootBombPlayer, false, 50)
 	audio_play_sound_on(global.audioEmitter, snd_shoot_3, false, 50)
-		
-	var bullet = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
+	if (global.bombIsHomingBomb)
+	{	
+		for (var i = 0; i<4; i++)
+		{
+			var bullet = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
+		"Bullets", bombToFire);
+		off =  choose(random_range(70,90),-random_range(70,90));
+		bullet.directionOriginal = _angle;
+		bullet._speed = random_range(2,3)
+		bullet._angle = dire+off;
+		bullet.direction = dire+off;
+		}
+		_hpush += -lengthdir_x(recoil_bomb, _angle);
+		_vpush += -lengthdir_y(recoil_bomb, _angle);
+	}
+	else
+	{
+		var bullet = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
 	"Bullets", bombToFire);
-		
+	off =  random_range(offRange,-offRange)
+		bullet._hpush = lengthdir_x(5, _angle + off);
+		bullet._vpush = lengthdir_y(5, _angle + off);
+		bullet._angle = dire+off;
+		bullet.direction = dire+off;
+		_hpush += -lengthdir_x(recoil_bomb, _angle+off);
+		_vpush += -lengthdir_y(recoil_bomb, _angle+off);
+		_angle +=off
+	}
+	
 	if (!global.godModeIsOn)
 	{
 		global.bombAmmo-=1;
@@ -34,13 +59,5 @@ function PlayerShipBomb()
 		
 	global.bombsFired+=1;
 	global.totalBombs+=1;
-	off =  random_range(offRange,-offRange)
-	bullet._hpush = lengthdir_x(5, _angle + off);
-	bullet._vpush = lengthdir_y(5, _angle + off);
-	bullet._angle = dire+off;
-	bullet.direction = dire+off;
-	_hpush += -lengthdir_x(recoil_bomb, _angle+off);
-	_vpush += -lengthdir_y(recoil_bomb, _angle+off);
-	_angle +=off
 	alarm[6]=bombFireRate;
 }

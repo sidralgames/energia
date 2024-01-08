@@ -866,6 +866,7 @@
     {"name":"s_shipstats","order":75,"path":"sprites/s_shipstats/s_shipstats.yy",},
     {"name":"s_enemyLaserGreen","order":60,"path":"sprites/s_enemyLaserGreen/s_enemyLaserGreen.yy",},
     {"name":"s_enemyTurret","order":15,"path":"sprites/s_enemyTurret/s_enemyTurret.yy",},
+    {"name":"o_bulletPlayer_BombHoming","order":28,"path":"objects/o_bulletPlayer_BombHoming/o_bulletPlayer_BombHoming.yy",},
     {"name":"o_partBalaTorretaBig","order":8,"path":"objects/o_partBalaTorretaBig/o_partBalaTorretaBig.yy",},
     {"name":"o_enemyFastMini","order":24,"path":"objects/o_enemyFastMini/o_enemyFastMini.yy",},
     {"name":"o_enchufeUpgadeSuperShot","order":16,"path":"objects/o_enchufeUpgadeSuperShot/o_enchufeUpgadeSuperShot.yy",},

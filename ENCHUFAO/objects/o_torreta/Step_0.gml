@@ -36,8 +36,11 @@ if instance_exists(o_playerShip)
 	}
 	else
 	{
-		var a = point_direction(x, y, o_torreta.x, o_torreta.y);
-		direction += sign(dsin(a - direction)) * precision;
+		if instance_exists(o_torreta)
+		{
+			var a = point_direction(x, y, o_torreta.x, o_torreta.y);
+			direction += sign(dsin(a - direction)) * precision;
+		}
 		image_angle = direction;
 	}
 
