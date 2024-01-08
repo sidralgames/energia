@@ -2,27 +2,58 @@
 // You can write your code in this editor
 drawflash = false;
 
-screenShake(min(8*scaleShake),min(60*scaleShake));
-
-
-if (isFromBullet)
+switch(isFrom)
 {
-	shockwave1 = instance_create(x,y,o_shockwave);
-	shockwave1.scale = 0.5;
-	
-	shockwave2 = instance_create(x,y,o_shockwaveTiles2)
-	shockwave2.scale = 0.3;
-	
-}
-else
-{
-	shockwave1 = instance_create(x,y,o_shockwave);
-	shockwave1.scale = scaleShockwave;
-	
-	shockwave2 = instance_create(x,y,o_shockwaveTiles2)
-	shockwave2.scale = 1;
-}
+	case "PlayerBomb":
+	{
+		if (global.bombIsHomingBomb)
+		{
+			screenShake(3,40);
+			shockwave1 = instance_create(x,y,o_shockwave);
+			shockwave1.scale = scaleShockwave;
 
-shockwave1.depth = depth+1;
-shockwave2.depth = depth+1;
+			shockwave2 = instance_create(x,y,o_shockwaveTiles2)
+			shockwave2.scale = scale-0.2;
+		}
+		else
+		{
+			screenShake(5,60);
+			shockwave1 = instance_create(x,y,o_shockwave);
+			shockwave1.scale = scaleShockwave;
+
+			shockwave2 = instance_create(x,y,o_shockwaveTiles2)
+			shockwave2.scale = scale-0.2;
+		}
+	}break;
+	
+	case "BulletBomb":
+	{
+		screenShake(2,30);
+		shockwave1 = instance_create(x,y,o_shockwave);
+		shockwave1.scale = 0.5;
+
+		shockwave2 = instance_create(x,y,o_shockwaveTiles2)
+		shockwave2.scale = 0.3;
+	}break;
+	
+	case "EnemyBomb":
+	{
+		screenShake(3,40);
+		shockwave1 = instance_create(x,y,o_shockwave);
+		shockwave1.scale = scaleShockwave;
+
+		shockwave2 = instance_create(x,y,o_shockwaveTiles2)
+		shockwave2.scale = scale-0.2;
+	}break;
+	
+	case "BossBomb":
+	{
+		screenShake(4,50);
+		shockwave1 = instance_create(x,y,o_shockwave);
+		shockwave1.scale = scaleShockwave;
+
+		shockwave2 = instance_create(x,y,o_shockwaveTiles2)
+		shockwave2.scale = scale-0.2;
+	}break;
+}
 

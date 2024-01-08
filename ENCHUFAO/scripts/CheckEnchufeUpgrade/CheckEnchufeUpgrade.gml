@@ -330,6 +330,46 @@ function CheckEnchufeUpgrade()
 		global.bombIsClusterBomb=true;
 		
 	}
+	else if (inEnchufe.upgradeHomingBomb = true) && (upgraded = false)
+	{
+		if (!global.homingIsUpgraded)
+		{
+			global.homingIsUpgraded = true;
+			AddUpgradeHomingBombPlayer();
+		}
+		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+		{
+			upg = ds_map_find_value(global.PlayerUpgradesList, i)
+			if (upg.obj = o_enchufeUpgadeHomingBomb)
+			{
+				upg.times+=1;
+			}
+		}
+		inEnchufe.charging = true;
+		upgraded = true;
+		global.bombIsHomingBomb=true;
+		
+	}
+	else if (inEnchufe.upgradeSmokeBomb = true) && (upgraded = false)
+	{
+		if (!global.smokeIsUpgraded)
+		{
+			global.smokeIsUpgraded = true;
+			AddUpgradeSmokeBombPlayer();
+		}
+		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+		{
+			upg = ds_map_find_value(global.PlayerUpgradesList, i)
+			if (upg.obj = o_enchufeUpgadeSmokeBomb)
+			{
+				upg.times+=1;
+			}
+		}
+		inEnchufe.charging = true;
+		upgraded = true;
+		global.haveSmokeBomb=true;
+		
+	}
 	else if (inEnchufe.upgradeLaser = true) && (upgraded = false)
 	{
 		if (!global.laserIsUpgraded)

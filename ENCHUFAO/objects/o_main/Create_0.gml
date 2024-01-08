@@ -14,7 +14,7 @@ global.assistSlowmoIsOn = false;
 
 global.assistedAim = false;
 
-global.bombIsHomingBomb = true;
+
 
 
 //-------COLORS--------//
@@ -75,7 +75,7 @@ global.laserSlowEnemies = true;////////////// OK
 
 
 //---- EXPERIMENTAL ----//
-global.haveSmokeBomb = false;
+
 
 
 // ---ONLY EN LA HEAD ---//
@@ -308,6 +308,7 @@ AddUpgradeShootingRecharges();//20
 AddUpgradeRecoverBullet();
 AddUpgradeChargerElectro();
 AddUpgradeExploHit();
+AddUpgradeHomingBomb()();
 
 
 
@@ -326,6 +327,8 @@ global.speedIsUpgraded = false;
 global.superShotIsUpgraded = false;
 global.overchargeIsUpgraded = false;
 global.clusterIsUpgraded = false;
+global.homingIsUpgraded = false;
+global.smokeIsUpgraded = false;
 global.laserIsUpgraded = false;
 global.bonusIsUpgraded = false;
 global.dobleDobleIsUpgraded = false;
@@ -334,8 +337,13 @@ global.shootingRechargesIsUpgraded = false;
 global.recoverBulletIsUpgraded = false;
 global.chargerElectrocutatesIsUpgraded = false;
 global.exploHitIsUpgraded = false;
+
 //--------UPGRADE RELATED--------//
+//--BOMBS--//
+global.haveSmokeBomb = false;
 global.bombIsClusterBomb = false;
+global.bombIsHomingBomb = false;
+
 global.chargerShoots = false;
 global.damageDealt = 1;
 global.damageReceived = 1;

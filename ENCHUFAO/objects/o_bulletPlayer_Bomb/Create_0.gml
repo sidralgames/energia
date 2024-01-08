@@ -18,7 +18,7 @@ _angle = direction;
 
 if (global.bombIsHomingBomb)
 {
-	scaleEnd = 0.5;
+	scaleEnd = 0.4;
 	correctedTime = 60;
 	corrected = false;
 	dist = random_range(120,150);

@@ -1,6 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+
 //global.bombIsClusterBomb = true;
+//global.haveSmokeBomb = true;
+//global.bombIsHomingBomb = true;
+
 global.totalEnemiesOnLevelMax = min(35, 20+global.level);
 
 contSmokeArea = 0;
