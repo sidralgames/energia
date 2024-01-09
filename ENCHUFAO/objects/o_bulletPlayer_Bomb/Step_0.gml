@@ -16,7 +16,16 @@ if (global.bombIsHomingBomb)
 		
 		
 		enemyNear = instance_nearest(x,y,o_enemyP);
-		if (instance_exists(enemyNear)) && (point_distance(x,y, enemyNear.x, enemyNear.y) < dist/1.5)
+		bossNear = instance_nearest(x,y,o_BossFather);
+	
+		if (instance_exists(bossNear)) && (bossNear.isBombable) && (point_distance(x,y, bossNear.x, bossNear.y) < dist/1.5)
+		{
+			var a = point_direction(x,y, bossNear.x, bossNear.y);
+			direction += sign(dsin(a - direction)) * (precision * min(1, global.relativeSpeed+0.2));
+			_angle = direction;
+		}
+		else
+		if (instance_exists(enemyNear)) && (point_distance(x,y, enemyNear.x, enemyNear.y) <  dist/1.5)
 		{
 			var a = point_direction(x,y, enemyNear.x, enemyNear.y);
 			direction += sign(dsin(a - direction)) * (precision * min(1, global.relativeSpeed+0.2));
@@ -31,7 +40,16 @@ if (global.bombIsHomingBomb)
 	else
 	{
 		enemyNear = instance_nearest(x,y,o_enemyP);
-		if (instance_exists(enemyNear)) && (point_distance(x,y, enemyNear.x, enemyNear.y) < dist)
+		bossNear = instance_nearest(x,y,o_BossFather);
+	
+		if (instance_exists(bossNear)) && (bossNear.isBombable) && (point_distance(x,y, bossNear.x, bossNear.y) < dist)
+		{
+			var a = point_direction(x,y, bossNear.x, bossNear.y);
+			direction += sign(dsin(a - direction)) * (precision * min(1, global.relativeSpeed+0.2));
+			_angle = direction;
+		}
+		else
+		if (instance_exists(enemyNear)) && (point_distance(x,y, enemyNear.x, enemyNear.y) <  dist)
 		{
 			var a = point_direction(x,y, enemyNear.x, enemyNear.y);
 			direction += sign(dsin(a - direction)) * (precision * min(1, global.relativeSpeed+0.2));

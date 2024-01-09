@@ -22,10 +22,10 @@ if (tile_meeting(x,y,"Tiles")) && instance_exists(o_gridRoom) && (alarm[4] <= 0)
 {
 	if (abs(speed) < 0.5*global.relativeSpeed)
 	{
-		b1 = instance_create(x+30,y+30,o_exploBomb)
-		b2 = instance_create(x+30,y-30,o_exploBomb)
-		b3 = instance_create(x-30,y+30,o_exploBomb)
-		b4 = instance_create(x-30,y-30,o_exploBomb)
+		b1 = instance_create(x+50,y+50,o_exploBomb)
+		b2 = instance_create(x+50,y-50,o_exploBomb)
+		b3 = instance_create(x-50,y+50,o_exploBomb)
+		b4 = instance_create(x-50,y-50,o_exploBomb)
 		b1.isExploFromBoss = true;
 		b2.isExploFromBoss = true;
 		b3.isExploFromBoss = true;
