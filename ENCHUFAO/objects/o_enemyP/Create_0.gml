@@ -46,6 +46,7 @@ rojo= make_colour_rgb(228,59,69);
 rojo2= make_colour_rgb(158, 40, 53);
 
 slowed = false;
+slowedPeta = 0;
 
 slowedContMax = 30;
 slowedCont = slowedContMax;

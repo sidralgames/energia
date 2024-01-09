@@ -10,18 +10,20 @@ if (global.haveSmokeBomb)
 if (hitByLaser = false)
 {
 	ebomb = instance_create(x,y,o_exploBomb);
-	ebomb.scale = 1.3;
-	ebomb.scale = 1.3;
+	ebomb.scale = 1.3*scaleEnd;
 	ebomb.sprite_index = s_explo2;
-	instance_create(x,y,o_shockwaveTiles)
+	
+	shock = instance_create(x,y,o_shockwaveTiles)
+	shock.scale = scaleEnd;
 }
 else
 {
 	ebomb = instance_create(x,y,o_exploBomb);
-	ebomb.scale = 2;
-	ebomb.scale = 2;
+	ebomb.scale = 1.9*scaleEnd;
 	ebomb.sprite_index = s_explo2;
-	instance_create(x,y,o_shockwaveTiles)
+	
+	shock = instance_create(x,y,o_shockwaveTiles)
+	shock.scale = scaleEnd;
 }
 
 offsetInitial = irandom(360);
@@ -35,6 +37,7 @@ for (var i = 0; i<=3; i++)
 	bomb._vpush = lengthdir_y(velo, offsetInitial+90*i)
 	if (global.bombIsHomingBomb)
 	{
+		bomb.scaleEnd = 0.2;
 		bomb.correctedTime = 60;
 		bomb.corrected = false;
 		bomb.dist = random_range(120,150);

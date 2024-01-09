@@ -229,6 +229,7 @@ instance_create_layer(-100,-100,"ShieldEnemy",o_partSmoke)
 instance_create_layer(-100,-100,"Part",o_partGreen);
 instance_create_layer(-100,-100,"Pause",o_partEnemyKilledBy)
 instance_create_layer(-100,-100,"Text",o_partSmokeBomb)
+instance_create_layer(-100,-100,"Part",o_partSmokeBombBack)
 
 
 global.repairingSprite = s_repairingPart;
@@ -308,7 +309,9 @@ AddUpgradeShootingRecharges();//20
 AddUpgradeRecoverBullet();
 AddUpgradeChargerElectro();
 AddUpgradeExploHit();
-AddUpgradeHomingBomb()();
+AddUpgradeHomingBomb();
+AddUpgradeSmokeBomb();
+AddUpgradeShockingPETAS();
 
 
 
@@ -337,6 +340,7 @@ global.shootingRechargesIsUpgraded = false;
 global.recoverBulletIsUpgraded = false;
 global.chargerElectrocutatesIsUpgraded = false;
 global.exploHitIsUpgraded = false;
+global.shockingPetasIsUpgraded = false;
 
 //--------UPGRADE RELATED--------//
 //--BOMBS--//

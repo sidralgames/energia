@@ -9,22 +9,23 @@ if (hitByLaser = false)
 {
 	ebomb = instance_create(x,y,o_exploBomb);
 	ebomb.scale = 1.4*scaleEnd;
-	ebomb.scale = 1.4*scaleEnd;
 	if (sprite_index = s_bombCluster)
 	{
 		ebomb.sprite_index = s_explo2;	
 	}
-	instance_create(x,y,o_shockwaveTiles)
+	shock = instance_create(x,y,o_shockwaveTiles)
+	shock.scale = scaleEnd;
 }
 else
 {
 	ebomb = instance_create(x,y,o_exploBomb);
 	ebomb.scale = 1.8*scaleEnd;
-	ebomb.scale = 1.8*scaleEnd;
 	if (sprite_index = s_bombCluster)
 	{
 		ebomb.sprite_index = s_explo2;	
 	}
 	instance_create(x,y,o_shockwaveTiles)
+	shock = instance_create(x,y,o_shockwaveTiles)
+	shock.scale = scaleEnd;
 }
 

@@ -25,23 +25,23 @@ function PlayerShipBomb()
 	audio_play_sound_on(global.audioEmitter, snd_shoot_3, false, 50)
 	if (global.bombIsHomingBomb)
 	{	
-		for (var i = 0; i<2; i++)
+		for (var i = 0; i<3; i++)
 		{
 			var bullet = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
 			"Bullets", bombToFire);
-			off =  random_range(60,90);
-			bullet.directionOriginal = _angle;
-			bullet._speed = random_range(2,3)
+			off =  70+(i*20);
+			bullet.directionOriginal = _angle-15;
+			bullet._speed = random_range(1.5,2)
 			bullet._angle = dire+off;
 			bullet.direction = dire+off;
 		}
-		for (var i = 0; i<2; i++)
+		for (var i = 0; i<3; i++)
 		{
 			var bullet = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
 			"Bullets", bombToFire);
-			off =  -random_range(60,90)
-			bullet.directionOriginal = _angle;
-			bullet._speed = random_range(2,3)
+			off =  -(70+(i*20))
+			bullet.directionOriginal = _angle+15;
+			bullet._speed = random_range(1.5,2)
 			bullet._angle = dire+off;
 			bullet.direction = dire+off;
 		}

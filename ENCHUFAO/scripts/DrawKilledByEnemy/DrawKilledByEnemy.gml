@@ -387,7 +387,7 @@ function DrawKilledByEnemy()
 		// ------- DISC ENEMIES --------//
 		case (s_enemyDisc):
 		{
-			image_angle+=10;
+			image_angle+=8;
 	
 			draw_sprite_ext(s_enemyDiscEye, 16, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+245,1,1, 0, image_blend, image_alpha)
 

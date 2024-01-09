@@ -3,6 +3,8 @@
 
 if (global.bombIsHomingBomb)
 {
+	_speed = lerp(_speed, 4.5, 0.05);
+	
 	part_particles_create(global.naveFriend_sys, x,y, global.naveFriend, 1);
 	if (corrected = false)
 	{

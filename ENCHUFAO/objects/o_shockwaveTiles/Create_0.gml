@@ -4,3 +4,4 @@ radius = 10;
 //lightBomb = instance_create_layer(x,y,"LightEnemy", o_Light_PlayerBomb)
 alarm[0] = 22;
 dir = 0;
+scale = 1;

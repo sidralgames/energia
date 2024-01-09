@@ -18,14 +18,14 @@ if (room != Sala_Inicio)
 {
 	var _tilemap_id = layer_tilemap_get_id("Tiles");
 
-	_x = x+lengthdir_x(10, dir)
-	_y = y+lengthdir_y(10, dir)
+	_x = x+lengthdir_x(10*scale, dir)
+	_y = y+lengthdir_y(10*scale, dir)
 
-	_x2 = x+lengthdir_x(20, dir)
-	_y2 = y+lengthdir_y(20, dir)
+	_x2 = x+lengthdir_x(20*scale, dir)
+	_y2 = y+lengthdir_y(20*scale, dir)
 
-	_x3 = x+lengthdir_x(40, dir)
-	_y3 = y+lengthdir_y(40, dir)
+	_x3 = x+lengthdir_x(40*scale, dir)
+	_y3 = y+lengthdir_y(40*scale, dir)
 
 
 

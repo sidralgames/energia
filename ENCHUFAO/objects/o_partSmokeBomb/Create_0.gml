@@ -11,7 +11,7 @@ global.partSmokeBomb = part_type_create();
 part_type_scale(global.partSmokeBomb,1,1);
 part_type_orientation(global.partSmokeBomb,0,0,0,0,0)
 part_type_size(global.partSmokeBomb, 0.85,1.35,-0.005,0);
-part_type_alpha2(global.partSmokeBomb, 0.8,0.5);
+part_type_alpha2(global.partSmokeBomb, 0.3,0.1);
 part_type_sprite(global.partSmokeBomb,s_partSmokeBomb,true,true,false)
 part_type_speed(global.partSmokeBomb,0,0,0,0);
 part_type_direction(global.partSmokeBomb,0,0,0,1);

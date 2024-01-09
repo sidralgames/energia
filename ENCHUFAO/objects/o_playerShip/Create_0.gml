@@ -9,6 +9,7 @@
 global.totalEnemiesOnLevelMax = min(35, 20+global.level);
 
 contSmokeArea = 0;
+drawingShockPeta = false;
 
 if (room = Sala_Tutorial)
 {

@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+slowedPeta = 0;
+
 discounted = false;
 canBeHittedByPlayerLaser = true;
 finalTrail = true;

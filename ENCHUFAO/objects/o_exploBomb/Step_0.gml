@@ -14,9 +14,9 @@ if (sounded = false)
 			{
 				if (global.bombIsHomingBomb)
 				{
-					audio_stop_sound(snd_explo_1);
+					//audio_stop_sound(snd_explo_1);
 					audio_stop_sound(snd_shoot_6);
-					audio_play_sound_on(global.audioEmitter, snd_explo_1, false, 5,,,random_range(0.8,1))
+					//audio_play_sound_on(global.audioEmitter, snd_explo_1, false, 5,,,random_range(0.8,1))
 					audio_play_sound_on(global.audioEmitter, snd_shoot_6, false, 5,,,random_range(0.8,1))
 				}
 				else

@@ -477,6 +477,26 @@ function CheckEnchufeUpgrade()
 		upgraded = true;
 		
 	}
+	else if (inEnchufe.upgradeShockingPETAS = true) && (upgraded = false)
+	{
+		if (!global.shockingPetasIsUpgraded)
+		{
+			global.shockingPetasIsUpgraded = true;
+			AddUpgradeShockingPETASPlayer();
+		}
+		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+		{
+			upg = ds_map_find_value(global.PlayerUpgradesList, i)
+			if (upg.obj = o_enchufeUpgadeShockingPETAS)
+			{
+				upg.times+=1;
+			}
+		}
+		
+		inEnchufe.charging = true;
+		upgraded = true;
+		
+	}
 	else if (inEnchufe.upgradeChargerElectro = true) && (upgraded = false)
 	{
 		if (!global.chargerElectrocutatesIsUpgraded)

@@ -18,7 +18,7 @@ if (inEnemy = false)
 	{
 		y = yy + lengthdir_y(shift, direction + dir1);	
 	
-		overBattery = collision_circle(x,y,20,o_playerShip,false,true);
+		overBattery = collision_circle(x,y,30,o_playerShip,false,true);
 
 		if (overBattery)
 		{

@@ -11,6 +11,33 @@ function PlayerShipPETA()
 		petaToLaunch =  o_enchufePETA;
 	}
 	
+	if (global.shockingPetasIsUpgraded)
+	{
+		drawingShockPeta = true;
+		
+		if instance_exists(o_enemyP)
+		{
+			var _list = ds_list_create();
+			var _num = collision_rectangle_list(__view_get( e__VW.XView, 0 ), __view_get( e__VW.YView, 0 ),
+			__view_get( e__VW.XView, 0 )+640,__view_get( e__VW.YView, 0 )+360, o_enemyP, false, true, _list, false);
+			if _num > 0
+			{
+			    for (var i = 0; i < _num; ++i;)
+			    {
+					_list[| i].slowedCont = random_range(300,500);
+					_list[| i].slowedPeta = 0.5;
+			        _list[| i].electrocutated = true;
+					_list[| i].slowed = true;
+					
+					shokExplo = instance_create(_list[| i].x, _list[| i].y, o_explo2);
+					shokExplo.image_xscale = 0.5;
+					shokExplo.image_yscale = 0.5;
+			    }
+			}
+			ds_list_destroy(_list);
+		}
+	}
+	
 	gamepad_set_vibration(0,0.2,0.2);
 	alarm[4] = 3 ;
 	explo = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),

@@ -10,6 +10,8 @@ function EnemyShield_Chasing()
 		alarm[4] = random_range(30, 60)
 	}
 	
+	enemySpeed = enemySpeedInitial * min(1, global.relativeSpeed+0.2);
+	
 	if instance_exists(o_playerShip)
 	{
 		EnemyBasicChasingIA();

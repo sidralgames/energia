@@ -4,10 +4,11 @@ function EnemyBasicChasingIA()
 {
 	if (slowed)
 	{
-		enemySpeed = lerp(enemySpeed, 0, 0.1);
+		enemySpeed = lerp(enemySpeed, 0, 0.1+slowedPeta);
 		slowedCont--;
 		if (slowedCont <= 0)
 		{
+			slowedPeta = 0;
 			slowedCont = slowedContMax;
 			slowed = false;
 		}

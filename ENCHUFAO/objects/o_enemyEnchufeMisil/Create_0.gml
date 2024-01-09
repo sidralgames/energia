@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+slowedPeta = 0;
+slowed = false;
 discounted = false;
 canBeHittedByPlayerLaser = true;
 affectedByLaserTrap = true;

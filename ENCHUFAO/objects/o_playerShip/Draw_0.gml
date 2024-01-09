@@ -91,5 +91,15 @@ if (global.energy >= global.energyMax)
 	showEnergy = false;
 }
 
+if (global.shockingPetasIsUpgraded)
+{
+	if (drawingShockPeta = true)
+	{
+		draw_set_alpha(0.01)
+		draw_set_color(c_white)
+		draw_rectangle(__view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0,__view_get( e__VW.XView, 0 )+640,__view_get( e__VW.YView, 0 )+360,false);
+		drawingShockPeta = false;	
+	}
+}
 
 //draw_text(x, y-50 ,string(instance_count));

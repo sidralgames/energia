@@ -12,7 +12,9 @@ precision= choose(0.75,1,1.25,1.5,1.75,2);
 image_speed=0;
 finalTrail = false;
 canBeHittedByPlayerLaser = false;
-
+burned = false;
+electrocutated = false;
+slowed = false;
 isImmortal = false;
 hurts = false;
 canBounce = false;
