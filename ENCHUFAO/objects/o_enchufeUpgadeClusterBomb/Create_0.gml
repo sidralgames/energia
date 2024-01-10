@@ -10,5 +10,5 @@
 event_inherited();
 
 energy = true;
-upgradeClusterBomb = true;
+thisUpgrade = "upgradeClusterBomb";
 charging = false;

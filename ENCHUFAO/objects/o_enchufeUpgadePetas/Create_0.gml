@@ -10,6 +10,6 @@
 event_inherited();
 
 energy = true;
-upgradePetas = true;
+thisUpgrade = "upgradePetas";
 charging = false;
 petaToBe = choose("Laser", "HP", "Ammo")

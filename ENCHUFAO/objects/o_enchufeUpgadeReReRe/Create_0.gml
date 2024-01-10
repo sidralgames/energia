@@ -10,5 +10,5 @@
 event_inherited();
 
 energy = true;
-upgradeReReRe = true;
+thisUpgrade = "upgradeReReRe";
 charging = false;

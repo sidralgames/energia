@@ -10,5 +10,5 @@
 event_inherited();
 
 energy = true;
-upgradeChargerShoots = true;
+thisUpgrade = "upgradeChargerShoots";
 charging = false;

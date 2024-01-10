@@ -10,5 +10,5 @@
 event_inherited();
 
 energy = true;
-upgradeFireRate = true;
+thisUpgrade = "upgradeFireRate";
 charging = false;

@@ -10,5 +10,5 @@
 event_inherited();
 
 energy = true;
-upgradeRecoverBullet = true;
+thisUpgrade = "upgradeRecoverBullet";
 charging = false;

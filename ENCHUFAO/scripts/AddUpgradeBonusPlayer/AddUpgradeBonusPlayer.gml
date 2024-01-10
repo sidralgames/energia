@@ -8,7 +8,7 @@ ds_map_add(global.PlayerUpgradesList, global.numberOfUpgradesPlayer,
 		times: 0,
 		inStat: false,
 		unique: true,
-		nameUpgrade: "Bonus upgraded",
+		nameUpgrade: string(global.textBonus),
 		obj: o_enchufeUpgadeBonus,
 		
 	})

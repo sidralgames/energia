@@ -10,5 +10,5 @@
 event_inherited();
 
 energy = true;
-upgradeCable = true;
+thisUpgrade = "upgradeCable";
 charging = false;

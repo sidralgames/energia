@@ -47,34 +47,9 @@ abierto = true;
 final = false;
 go = false;
 reset = false;
-upgradeAmmo = false;
-upgradeEnergy = false;
-upgradeHP = false;
-upgradeCharge = false;
-upgradeDischarge = false;
-upgradeSuperShot = false;
-upgradeCable = false;
-upgradeFireRate = false;
-upgradeLaser = false;
-upgradeReReRe = false;
-upgradeSpeed = false;
-upgradeChargerShoots = false;
-upgradeSlowMo = false;
-upgradeOvercharge = false;
-upgradeClusterBomb = false;
-upgradeLaserMax = false;
-upgradeBonus = false;
-upgradeFriend = false
-upgradeDobleDoble = false;
-upgradeShootingRecharges = false;
-upgradeRecoverBullet = false;
-upgradeChargerElectro = false;
-upgradeExploHit = false;
-upgradeHomingBomb = false;
-upgradeHomingBomb_Plus = false;
-upgradeSmokeBomb = false;
-upgradeShockingPETAS = false;
-upgradePetas = false;
+
+thisUpgrade = "";
+
 
 
 

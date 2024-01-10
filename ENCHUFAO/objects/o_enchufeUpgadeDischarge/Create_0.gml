@@ -10,5 +10,5 @@
 event_inherited();
 
 energy = true;
-upgradeDischarge = true;
+thisUpgrade = "upgradeDischarge";
 charging = false;

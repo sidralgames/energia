@@ -10,5 +10,5 @@
 event_inherited();
 
 energy = true;
-upgradeShockingPETAS = true;
+thisUpgrade = "upgradeShockingPETAS";
 charging = false;

@@ -10,5 +10,5 @@
 event_inherited();
 
 energy = true;
-upgradeHomingBomb = true;
+thisUpgrade = "upgradeHomingBomb";
 charging = false;

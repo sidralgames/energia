@@ -10,5 +10,5 @@
 event_inherited();
 
 energy = true;
-upgradeSmokeBomb = true;
+thisUpgrade = "upgradeSmokeBomb";
 charging = false;

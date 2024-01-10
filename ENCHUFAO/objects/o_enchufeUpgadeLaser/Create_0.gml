@@ -10,5 +10,5 @@
 event_inherited();
 
 energy = true;
-upgradeLaser = true;
+thisUpgrade = "upgradeLaser";
 charging = false;

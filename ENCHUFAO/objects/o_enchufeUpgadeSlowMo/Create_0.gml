@@ -10,5 +10,5 @@
 event_inherited();
 
 energy = true;
-upgradeSlowMo = true;
+thisUpgrade = "upgradeSlowMo";
 charging = false;

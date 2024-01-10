@@ -10,5 +10,5 @@
 event_inherited();
 
 energy = true;
-upgradeSuperShot = true;
+thisUpgrade = "upgradeSuperShot";
 charging = false;

@@ -7,6 +7,8 @@ global.BossWormHP = 10;
 global.FinalTrail = false;
 global.rotationKilledBy = false;
 
+global.shieldsMax = 18
+
 global.spriteKilledBy = noone;
 
 global.assistedSlowmo = false;
@@ -286,33 +288,33 @@ global.numberOfUpgradesPlayer = 0;
 global.PlayerUpgradesList = ds_map_create();
 
 global.upgradesList = ds_map_create();
-//AddUpgradeAmmo();
-//AddUpgradeEnergy();
-//AddUpgradeHP();
-//AddUpgradeFasterCharge();
-//AddUpgradeSlowerDischarge();//5
-//AddUpgradeLongerCable();
-//AddUpgradeFireRate();
-//AddUpgradeSuperShot();
-//AddUpgradeLaserMax();
-//AddUpgradeReReRe();//10
-//AddUpgradeSpeedUp();
-//AddUpgradeChargerShoots();
+AddUpgradeAmmo();
+AddUpgradeEnergy();
+AddUpgradeHP();
+AddUpgradeFasterCharge();
+AddUpgradeSlowerDischarge();//5
+AddUpgradeLongerCable();
+AddUpgradeFireRate();
+AddUpgradeSuperShot();
+AddUpgradeLaserMax();
+AddUpgradeReReRe();//10
+AddUpgradeSpeedUp();
+AddUpgradeChargerShoots();
 AddUpgradeSlowMo();
 AddUpgradeOvercharge();
 AddUpgradeClusterBomb();//15
 AddUpgradeLaser();
 AddUpgradeBonus();
-//AddUpgradeDobleDoble();
-//AddUpgradeFriend();
-//AddUpgradeShootingRecharges();//20
-//AddUpgradeRecoverBullet();
-//AddUpgradeChargerElectro();
-//AddUpgradeExploHit();
-//AddUpgradeHomingBomb();
-//AddUpgradeSmokeBomb(); //25
-//AddUpgradeShockingPETAS();
-//AddUpgradeHomingBombPlus();
+AddUpgradeDobleDoble();
+AddUpgradeFriend();
+AddUpgradeShootingRecharges();//20
+AddUpgradeRecoverBullet();
+AddUpgradeChargerElectro();
+AddUpgradeExploHit();
+AddUpgradeHomingBomb();
+AddUpgradeSmokeBomb(); //25
+AddUpgradeShockingPETAS();
+AddUpgradeHomingBombPlus();
 
 
 
@@ -349,7 +351,7 @@ global.shockingPetasIsUpgraded = false;
 global.haveSmokeBomb = false;
 global.bombIsClusterBomb = false;
 global.bombIsHomingBomb = false;
-global.homingMissilesExtra = 0;
+global.homingMissilesExtra = 3;
 
 global.chargerShoots = false;
 global.damageDealt = 1;
