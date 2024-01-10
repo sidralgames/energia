@@ -8,7 +8,7 @@ ds_map_add(global.PlayerUpgradesList, global.numberOfUpgradesPlayer,
 		times: 0,
 		inStat: false,
 		unique: true,
-		nameUpgrade: "Hitting Enemies Regenerate Ammo",
+		nameUpgrade: "Hitting Enemies Regenerates Ammo",
 		obj: o_enchufeUpgadeRecoverBullet,
 		
 	})

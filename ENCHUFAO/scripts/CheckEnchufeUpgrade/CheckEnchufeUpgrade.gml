@@ -83,6 +83,16 @@ function CheckEnchufeUpgrade()
 				upg.times+=1;
 			}
 		}
+		//-- DISCARD UPGRADE --//
+		for (var i= 0; i< global.numberOfUpgrades; i++)
+		{
+			thisUpg = ds_map_find_value(global.upgradesList, i)
+			if (thisUpg.obj = o_enchufeUpgadeCharge)
+			{
+				thisUpg.canShowUp = false;
+			}
+		}
+		
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.chargeTime += 0.5;
@@ -103,6 +113,16 @@ function CheckEnchufeUpgrade()
 				upg.times+=1;
 			}
 		}
+		//-- DISCARD UPGRADE --//
+		for (var i= 0; i< global.numberOfUpgrades; i++)
+		{
+			thisUpg = ds_map_find_value(global.upgradesList, i)
+			if (thisUpg.obj = o_enchufeUpgadeDischarge)
+			{
+				thisUpg.canShowUp = false;
+			}
+		}
+		
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.DischargeTime += 0.75;
@@ -168,6 +188,18 @@ function CheckEnchufeUpgrade()
 			if (upg.obj = o_enchufeUpgadeFireRate)
 			{
 				upg.times+=1;
+				//-- LOCK UPGRADE AFTER 3 TIMES --//
+				if (upg.times = 3)
+				{
+					for (var i= 0; i< global.numberOfUpgrades; i++)
+					{
+						thisUpg = ds_map_find_value(global.upgradesList, i)
+						if (thisUpg.obj = o_enchufeUpgadeFireRate)
+						{
+							thisUpg.canShowUp = false;
+						}
+					}
+				}
 			}
 		}
 		inEnchufe.charging = true;
@@ -212,6 +244,17 @@ function CheckEnchufeUpgrade()
 				upg.times+=1;
 			}
 		}
+		
+		//-- DISCARD UPGRADE --//
+		for (var i= 0; i< global.numberOfUpgrades; i++)
+		{
+			thisUpg = ds_map_find_value(global.upgradesList, i)
+			if (thisUpg.obj = o_enchufeUpgadeReReRe)
+			{
+				thisUpg.canShowUp = false;
+			}
+		}
+		
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.hp = global.hpMax;
@@ -264,6 +307,16 @@ function CheckEnchufeUpgrade()
 				upg.times+=1;
 			}
 		}
+		
+		//-- DISCARD UPGRADE --//
+		for (var i= 0; i< global.numberOfUpgrades; i++)
+		{
+			thisUpg = ds_map_find_value(global.upgradesList, i)
+			if (thisUpg.obj = o_enchufeUpgadeChargerShoots)
+			{
+				thisUpg.canShowUp = false;
+			}
+		}
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.chargerShoots = true;
@@ -305,6 +358,16 @@ function CheckEnchufeUpgrade()
 				upg.times+=1;
 			}
 		}
+		
+		//-- DISCARD UPGRADE --//
+		for (var i= 0; i< global.numberOfUpgrades; i++)
+		{
+			thisUpg = ds_map_find_value(global.upgradesList, i)
+			if (thisUpg.obj = o_enchufeUpgadeOvercharge)
+			{
+				thisUpg.canShowUp = false;
+			}
+		}
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.overchargeTime-=0.1;
@@ -325,6 +388,16 @@ function CheckEnchufeUpgrade()
 				upg.times+=1;
 			}
 		}
+		
+		//-- DISCARD UPGRADE --//
+		for (var i= 0; i< global.numberOfUpgrades; i++)
+		{
+			thisUpg = ds_map_find_value(global.upgradesList, i)
+			if (thisUpg.obj = o_enchufeUpgadeClusterBomb)
+			{
+				thisUpg.canShowUp = false;
+			}
+		}
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.bombIsClusterBomb=true;
@@ -343,11 +416,49 @@ function CheckEnchufeUpgrade()
 			if (upg.obj = o_enchufeUpgadeHomingBomb)
 			{
 				upg.times+=1;
+				//-- NEW UPGRADE CAN APPEAR AFTER --//
+				for (var i= 0; i< global.numberOfUpgrades; i++)
+				{
+					thisUpg = ds_map_find_value(global.upgradesList, i)
+					if (thisUpg.obj = o_enchufeUpgadeHomingBomb_Plus)
+					{
+						thisUpg.canShowUp = true;
+					}
+				}
+			}
+		}
+			//-- DISCARD UPGRADE --//
+		for (var i= 0; i< global.numberOfUpgrades; i++)
+		{
+			thisUpg = ds_map_find_value(global.upgradesList, i)
+			if (thisUpg.obj = o_enchufeUpgadeHomingBomb)
+			{
+				thisUpg.canShowUp = false;
 			}
 		}
 		inEnchufe.charging = true;
 		upgraded = true;
 		global.bombIsHomingBomb=true;
+		
+	}
+	else if (inEnchufe.upgradeHomingBomb_Plus = true) && (upgraded = false)
+	{
+		if (!global.homingPlusIsUpgraded)
+		{
+			global.homingPlusIsUpgraded = true;
+			AddUpgradeHomingPlusBombPlayer();
+		}
+		for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+		{
+			upg = ds_map_find_value(global.PlayerUpgradesList, i)
+			if (upg.obj = o_enchufeUpgadeHomingBomb_Plus)
+			{
+				upg.times+=1;
+			}
+		}
+		inEnchufe.charging = true;
+		upgraded = true;
+		global.homingMissilesExtra+=2;
 		
 	}
 	else if (inEnchufe.upgradeSmokeBomb = true) && (upgraded = false)
@@ -363,6 +474,15 @@ function CheckEnchufeUpgrade()
 			if (upg.obj = o_enchufeUpgadeSmokeBomb)
 			{
 				upg.times+=1;
+			}
+		}
+			//-- DISCARD UPGRADE --//
+		for (var i= 0; i< global.numberOfUpgrades; i++)
+		{
+			thisUpg = ds_map_find_value(global.upgradesList, i)
+			if (thisUpg.obj = o_enchufeUpgadeSmokeBomb)
+			{
+				thisUpg.canShowUp = false;
 			}
 		}
 		inEnchufe.charging = true;
@@ -383,6 +503,18 @@ function CheckEnchufeUpgrade()
 			if (upg.obj = o_enchufeUpgadeLaser)
 			{
 				upg.times+=1;
+				//-- LOCK UPGRADE AFTER 2 TIMES --//
+				if (upg.times = 2)
+				{
+					for (var i= 0; i< global.numberOfUpgrades; i++)
+					{
+						thisUpg = ds_map_find_value(global.upgradesList, i)
+						if (thisUpg.obj = o_enchufeUpgadeLaser)
+						{
+							thisUpg.canShowUp = false;
+						}
+					}
+				}
 			}
 		}
 		
@@ -405,6 +537,15 @@ function CheckEnchufeUpgrade()
 			if (upg.obj = o_enchufeUpgadeDobleDoble)
 			{
 				upg.times+=1;
+			}
+		}
+			//-- DISCARD UPGRADE --//
+		for (var i= 0; i< global.numberOfUpgrades; i++)
+		{
+			thisUpg = ds_map_find_value(global.upgradesList, i)
+			if (thisUpg.obj = o_enchufeUpgadeDobleDoble)
+			{
+				thisUpg.canShowUp = false;
 			}
 		}
 		
@@ -431,6 +572,15 @@ function CheckEnchufeUpgrade()
 				upg.times+=1;
 			}
 		}
+			//-- DISCARD UPGRADE --//
+		for (var i= 0; i< global.numberOfUpgrades; i++)
+		{
+			thisUpg = ds_map_find_value(global.upgradesList, i)
+			if (thisUpg.obj = o_enchufeUpgadeFriend)
+			{
+				thisUpg.canShowUp = false;
+			}
+		}
 		
 		inEnchufe.charging = true;
 		upgraded = true;
@@ -449,6 +599,15 @@ function CheckEnchufeUpgrade()
 			if (upg.obj = o_enchufeUpgadeShootingRecharges)
 			{
 				upg.times+=1;
+			}
+		}
+			//-- DISCARD UPGRADE --//
+		for (var i= 0; i< global.numberOfUpgrades; i++)
+		{
+			thisUpg = ds_map_find_value(global.upgradesList, i)
+			if (thisUpg.obj = o_enchufeUpgadeShootingRecharges)
+			{
+				thisUpg.canShowUp = false;
 			}
 		}
 		
@@ -472,6 +631,15 @@ function CheckEnchufeUpgrade()
 				upg.times+=1;
 			}
 		}
+			//-- DISCARD UPGRADE --//
+		for (var i= 0; i< global.numberOfUpgrades; i++)
+		{
+			thisUpg = ds_map_find_value(global.upgradesList, i)
+			if (thisUpg.obj = o_enchufeUpgadeRecoverBullet)
+			{
+				thisUpg.canShowUp = false;
+			}
+		}
 		
 		inEnchufe.charging = true;
 		upgraded = true;
@@ -490,6 +658,15 @@ function CheckEnchufeUpgrade()
 			if (upg.obj = o_enchufeUpgadeShockingPETAS)
 			{
 				upg.times+=1;
+			}
+		}
+		//-- DISCARD UPGRADE --//
+		for (var i= 0; i< global.numberOfUpgrades; i++)
+		{
+			thisUpg = ds_map_find_value(global.upgradesList, i)
+			if (thisUpg.obj = o_enchufeUpgadeShockingPETAS)
+			{
+				thisUpg.canShowUp = false;
 			}
 		}
 		
@@ -513,6 +690,16 @@ function CheckEnchufeUpgrade()
 			}
 		}
 		
+		//-- DISCARD UPGRADE --//
+		for (var i= 0; i< global.numberOfUpgrades; i++)
+		{
+			thisUpg = ds_map_find_value(global.upgradesList, i)
+			if (thisUpg.obj = o_enchufeUpgadeChargerElectrocutate)
+			{
+				thisUpg.canShowUp = false;
+			}
+		}
+		
 		inEnchufe.charging = true;
 		upgraded = true;
 		
@@ -530,6 +717,15 @@ function CheckEnchufeUpgrade()
 			if (upg.obj = o_enchufeUpgadeExploHit)
 			{
 				upg.times+=1;
+			}
+		}
+		//-- DISCARD UPGRADE --//
+		for (var i= 0; i< global.numberOfUpgrades; i++)
+		{
+			thisUpg = ds_map_find_value(global.upgradesList, i)
+			if (thisUpg.obj = o_enchufeUpgadeExploHit)
+			{
+				thisUpg.canShowUp = false;
 			}
 		}
 		
@@ -550,6 +746,16 @@ function CheckEnchufeUpgrade()
 			if (upg.obj = o_enchufeUpgadeBonus)
 			{
 				upg.times+=1;
+			}
+		}
+		
+		//-- DISCARD UPGRADE --//
+		for (var i= 0; i< global.numberOfUpgrades; i++)
+		{
+			thisUpg = ds_map_find_value(global.upgradesList, i)
+			if (thisUpg.obj = o_enchufeUpgadeBonus)
+			{
+				thisUpg.canShowUp = false;
 			}
 		}
 	

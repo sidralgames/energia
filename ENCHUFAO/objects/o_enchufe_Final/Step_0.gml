@@ -55,6 +55,20 @@ if instance_exists(o_playerShip)
 			{
 				global.achNoBump = 1;
 			}
+			
+			//RESET UPGRADES
+			if (room = Sala_Upgade)
+			{
+				for (var i = 0; i < global.numberOfUpgrades-1; i++)
+				{
+					upgrades = ds_map_find_value(global.upgradesList,i);
+					if (upgrades.canShowUp == true)
+					{
+						upgrades.isPicked = false;
+					}
+				}
+			}
+			
 			cont = true
 			alarm[0] = 60;
 		}

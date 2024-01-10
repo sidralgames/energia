@@ -9,6 +9,8 @@ function PlayerStats_Purple()
 	global.energyMax = 400;
 	global.energy = global.energyMax;
 	
+	global.textBonus = "Even Faster During SlowMo";
+	
 	global.hpMax = 4;
 	global.hp = 4;
 	

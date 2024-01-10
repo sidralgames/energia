@@ -4,3 +4,6 @@ upgradesToChoose = global.numberOfUpgrades;
 upgradesTotal = 0;
 alarm[0] = 0;
 reset = false;
+textToDraw = "";
+
+drawText = false;

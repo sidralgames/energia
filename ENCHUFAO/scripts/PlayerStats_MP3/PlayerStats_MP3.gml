@@ -5,6 +5,8 @@ function PlayerStats_MP3()
 	global.spriteShip = splayer_mp3;
 	global.spritePart = s_bullet_part_BlueO;
 	global.bulletPart_sprite = s_bullet_part_BlueO;
+	
+	global.textBonus = "More Powerful Amplifier Power";
 		
 	global.energyMax = 450;
 	global.energy = global.energyMax;

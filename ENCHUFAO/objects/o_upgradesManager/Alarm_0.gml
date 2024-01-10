@@ -4,7 +4,7 @@ if (upgradesTotal < 5)
 {
 	upgradeChosen = ds_map_find_value(global.upgradesList,irandom(global.numberOfUpgrades-1));
 		
-	if (upgradeChosen.isPicked == false)
+	if (upgradeChosen.canShowUp == true) && (upgradeChosen.isPicked == false)
 	{
 		upgradeChosen.isPicked = true;
 		upgradeChosen.timesPicked += 1;

@@ -12,8 +12,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "ENCHUFAO",
-    "path": "ENCHUFAO.yyp",
+    "name": "Objetos",
+    "path": "folders/Objetos.yy",
   },
   "parentObjectId": null,
   "persistent": false,

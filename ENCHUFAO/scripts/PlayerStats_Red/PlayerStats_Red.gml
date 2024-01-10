@@ -5,6 +5,8 @@ function PlayerStats_Red()
 	global.spriteShip = splayer_Red;
 	global.spritePart = s_bullet_part_Orange;
 	global.bulletPart_sprite = s_bullet_part_Orange;
+	
+	global.textBonus = "Your Sidekick Ships Start Levels At Full HP";
 		
 	global.energyMax = 350;
 	global.energy = global.energyMax;

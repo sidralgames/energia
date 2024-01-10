@@ -61,8 +61,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "ENCHUFAO",
-    "path": "ENCHUFAO.yyp",
+    "name": "Sprites",
+    "path": "folders/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

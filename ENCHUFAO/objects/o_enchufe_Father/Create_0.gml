@@ -71,8 +71,11 @@ upgradeRecoverBullet = false;
 upgradeChargerElectro = false;
 upgradeExploHit = false;
 upgradeHomingBomb = false;
+upgradeHomingBomb_Plus = false;
 upgradeSmokeBomb = false;
 upgradeShockingPETAS = false;
+upgradePetas = false;
+
 
 
 charge = 0;

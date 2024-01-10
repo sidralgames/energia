@@ -5,7 +5,9 @@ function PlayerStats_Dark()
 	global.spriteShip = splayer_Dark;
 	global.spritePart = s_bullet_part_Red;
 	global.bulletPart_sprite = s_bullet_part_Red;
-		
+	
+	global.textBonus = "All Enemies Have -3 HP";
+	
 	global.energyMax = 450;
 	global.energy = global.energyMax;
 	
