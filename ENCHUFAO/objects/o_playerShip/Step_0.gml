@@ -2,76 +2,20 @@
 // You can write your code in this editor
 Controls_Input();
 
-if (contSmokeArea > 0)
-{
-	global.inSmokeArea = true;
-	contSmokeArea --;
-	
-	if (contSmokeArea <= 0)
-	{
-		global.inSmokeArea = false;
-	}
-}
-CheckExternalBattery();
-
-CheckCalledForHelp();
-
 if (flashAlpha > 0)
 {
 	flashAlpha--;
 }
 
-if (tocado) && (creatingSmoke = false)
-{
-	creatingSmoke = true;
-	contSmoke = 440 / global.hp
-	side = choose(1,-1)
-}
+CheckSmokeToHide();
 
-if (global.exploHitIsUpgraded = true)
-{
-	if (tocado) && (explocreated = false)
-	{
-		explocreated = true;
-		shock = instance_create(x,y,o_shockwaveTiles)
-		ebomb = instance_create(x,y,o_exploBomb);
-		ebomb.scale = 1.4;
-		ebomb.scale = 1.4;
-	}
-}
+CheckExternalBattery();
 
-if (contSmoke<=0)
-{
-	creatingSmoke = false
-}
+CheckCalledForHelp();
 
-if (global.hp<=1)
-{
-	contSmoke = 0;
-	contBurnPart--;
-	
-	if (contBurnPart <= 0)
-	{
-		contBurnPart = random_range(5,7) ;
-		part_particles_create(global.partSmoke_sys, x+lengthdir_x(random_range(((sprite_height-4)/2),((sprite_height-6)/2))*side, _angle+90),y+lengthdir_y(random_range(((sprite_height-4)/2),((sprite_height-6)/2))*side, _angle+90), global.partSmoke, 1);
-	}
-	
-}
-else
-{
-	if (contSmoke > 0) 
-	{
-		contSmoke--;
-		contBurnPart--;
-	
-		if (contBurnPart <= 0)
-		{
-			contBurnPart = random_range(global.hp+2,global.hp+3) ;
-			part_particles_create(global.partSmoke_sys, x+lengthdir_x(((sprite_height-5)/2)*side, _angle+90),y+lengthdir_y(((sprite_height-5)/2)*side, _angle+90), global.partSmoke, 1);
-		}
-	
-	}
-}
+CheckExploHitIsUpgraded();
+
+PlayerCreateSmoke();
 
 if (partChanged = true) && (!plugged)
 {
@@ -86,12 +30,16 @@ if (global.infiniteHPIsOn)
 {
 	global.hp = global.hpMax;
 }
+
 //------ SLOW MOTION ------//
 PlayerShipSlowMo();
+
+
 
 PlayerState_Free();
 
 MovePlayer();
+
 
 //------- INVISIBLE CLOAK ----//
 PlayerInvisibleCloak();
@@ -131,27 +79,13 @@ if (alarm[5] <= 0)
 }
 
 
-if (global.shields >= 1)
-{
-	if (shieldCreated = false)
-	{
-		shieldCreated = true;
-		instance_create_layer(x,y,"Shield",o_shield);
-	}
-	
-	if instance_exists(o_shield)
-	{
-		o_shield.x = x;
-		o_shield.y = y;
-	}
-	
-}
+CheckShields();
 
 //----------- LOW BATTERY --------//
 LowBatterySounds();
 
 //-----------------NORMAL SHOOT-----------------//
-if (key_shoot) && (!superShot) 
+if (key_shoot)
 {
 	if (alarm[0] <= 0) && (global.ammo >1 )
 	{
@@ -192,7 +126,8 @@ if (key_l3Dowm) && (key_r3Dowm) && (global.PETAAmmo > 0 )
 }
 
 //--------- PLUG -----------//
-inEnchufe = collision_circle(x,y,maxConectRad,o_enchufe_Father,false,true)
+inEnchufe = collision_circle(x,y,maxConectRad,o_enchufe_Father,false,true);
+
 if (inEnchufe) 
 {	
 	if (pluggedToStrandedShip)
@@ -287,8 +222,6 @@ if (contDeactivate<=0)
 	instance_activate_region(_vx - 64, _vy - 64, _vw + 128, _vh + 128, true);
 }
 
-//instance_activate_region(_vx - 164, _vy - 164, _vw + 228, _vh + 228, true);
-	
 
 //------------EFFECTS FILTERS----------------//
 CheckFilters();
@@ -299,7 +232,6 @@ LaserLogicPlayer();
 //---------DIE---------//
 if (global.hp < 1)
 {
-
 	global.relativeSpeed = 1;
 	screenShake(3,60)
 	instance_create(x,y,o_explo1)

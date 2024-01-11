@@ -2,9 +2,9 @@
 // You can write your code in this editor
 
 
-global.bombIsClusterBomb = true;
+//global.bombIsClusterBomb = true;
 //global.haveSmokeBomb = true;
-global.bombIsHomingBomb = true;
+//global.bombIsHomingBomb = true;
 
 global.totalEnemiesOnLevelMax = min(35, 20+global.level);
 
@@ -196,38 +196,40 @@ purple = make_color_rgb(246,117,122)
 rojo= make_colour_rgb(228,59,69);
 blanco= make_colour_rgb(255,255,255);
 blue = make_color_rgb(44,232, 245) ;
-orange = make_color_rgb(255,0,68);
+
 oranget = make_color_rgb(247,118,34);
 blueO = make_color_rgb(0,149,233);
 blueOO = make_color_rgb(18,78,137);
 
-
-if (global.spriteShip = splayer)
+switch (global.spriteShip)
 {
-	colorLaser = green;
-}
-
-if (global.spriteShip = splayer_Blue)
-{
-	colorLaser = blue;
-}
-
-if (global.spriteShip = splayer_Red)
-{
-	colorLaser = oranget;
-}
-
-if (global.spriteShip = splayer_Purple)
-{
-	colorLaser = purpleO;
-}
-
-if (global.spriteShip = splayer_Dark)
-{
-	colorLaser = orange;
-}
-
-if (global.spriteShip = splayer_mp3)
-{
-	colorLaser = blueO;
+	case splayer:
+	{
+		colorLaser = green;
+	}break;
+	
+	case splayer_Blue:
+	{
+		colorLaser = blue;
+	}break;
+	
+	case splayer_Red:
+	{
+		colorLaser = oranget;
+	}break;
+	
+	case splayer_Purple:
+	{
+		colorLaser = purpleO;
+	}break;
+	
+	case splayer_Dark:
+	{
+		colorLaser = global.brightRed; 
+	}break; 
+	
+	case splayer_mp3:
+	{
+		colorLaser = blueO;
+	}break;
 }

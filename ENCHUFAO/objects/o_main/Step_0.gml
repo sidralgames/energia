@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-	
+Controls_Input();
+
 if (global.totalEnemiesOnLevel < 0)
 {
 	global.totalEnemiesOnLevel = 0;
@@ -48,7 +49,7 @@ if instance_exists(o_playerShip) //&& (room != Sala_Inicio)
 }
 
 
-if keyboard_check_pressed(ord("R"))
+if (key_select)
 {
 	SaveGame();
 	game_restart()

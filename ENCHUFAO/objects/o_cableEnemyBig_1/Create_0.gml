@@ -5,7 +5,7 @@
 fric = 0.85;
 verletSystem1 = new verletSystem(fric, 0.0);
 off = 0;
-cableColor = make_color_rgb(228,59, 68) ;
+cableColor = global.red;
 // Create verlet groups
 _segments = 12
 // Create a new rope

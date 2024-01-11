@@ -2,32 +2,6 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PlayerState_Free()
 {
-	
-	superShot = (key_r1Down && key_r2Down && key_l1Down && key_l2Down)
-	
-	
-	
-	//----------------SUPER SHOOT---------------//
-	if (superShot) && (canSuperShot)
-	{
-		if (contSuperShot <=40)
-		{
-			contSuperShot +=1;
-		}
-		screenShake(contSuperShot/30, 30)
-		if (contSuperShot = 20) && (crosshairSuper = false)
-		{
-			crosshairSuper = true;
-		}
-			
-	}
-	else
-	{
-		crosshairSuper = false;
-		contSuperShot = 0;
-	}
-		
-	
 	mask_index = splayer;
 	
 	if (pluggedToStrandedShip == true)

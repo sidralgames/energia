@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-rojo= make_colour_rgb(228,59,69);
+
 blanco= make_colour_rgb(255,255,255);
 height = sin(random(1));
  

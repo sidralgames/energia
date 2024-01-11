@@ -6,7 +6,6 @@ if instance_exists(o_playerShip)
 	y = o_playerShip.y
 }
 
-InputMenu();
 Controls_Input();
 
 if (goToMenu)

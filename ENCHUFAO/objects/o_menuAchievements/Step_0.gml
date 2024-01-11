@@ -12,12 +12,12 @@ if (key_x)
 }
 
 
-if (key_right_p)
+if (key_rightP)
 {
 	selected+=1;
 	
 }
-if (key_left_p)
+if (key_leftP)
 {
 	selected-=1;
 	

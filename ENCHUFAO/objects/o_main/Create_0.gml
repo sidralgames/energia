@@ -17,12 +17,12 @@ global.assistSlowmoIsOn = false;
 global.assistedAim = false;
 
 
-
-
 //-------COLORS--------//
+global.red = make_color_rgb(228, 59, 68); 
 global.brightRed = make_colour_rgb(255,0,68);
 global.yellow = make_color_rgb(254,231, 97);
 global.lightBlue = make_color_rgb(44,232, 245);
+global.blue = make_color_rgb(0,149,233);
 global.dark = make_color_rgb(38,43,68)
 
 //---- FONTS ---//
@@ -141,8 +141,6 @@ global.petasUsed = 0;
 
 font_add_enable_aa(false);
 
-customFont = font_add("ChubbyChoo-SemiBold.ttf", 16, false, false, 32, 128);
-customFont2 = font_add("ChubbyChoo-SemiBold.ttf", 12, false, false, 32, 128);
 
 global.screenshakeIsOn = true;
 enum ENEMYSTATE
@@ -351,7 +349,7 @@ global.shockingPetasIsUpgraded = false;
 global.haveSmokeBomb = false;
 global.bombIsClusterBomb = false;
 global.bombIsHomingBomb = false;
-global.homingMissilesExtra = 3;
+global.homingMissilesExtra = 0;
 
 global.chargerShoots = false;
 global.damageDealt = 1;

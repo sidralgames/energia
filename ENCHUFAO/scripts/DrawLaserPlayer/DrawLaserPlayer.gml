@@ -39,9 +39,8 @@ if (key_laser) && !(laserActive)
 		draw_line_width( x+lengthdir_x(13,_angle), y-1+lengthdir_y(13, _angle), x+lengthdir_x(maxLenght,argument0), y-1+lengthdir_y(maxLenght, argument0),(height * 5) + blueWidht+2+global.laserWidth+global.amplifyPowerLaser);
 		draw_set_alpha(0.8+random(0.6))
 		draw_line_width(x+lengthdir_x(13,_angle), y-1+lengthdir_y(13, _angle), x+lengthdir_x(maxLenght,argument0), y-1+lengthdir_y(maxLenght, argument0), (height * 3) + blueWidht+global.laserWidth+global.amplifyPowerLaser);
-		//draw_set_color(rojo);
-		//draw_line_width(x-1, y-7*image_yscale, x-1, y-16-long*image_yscale, (height * 3) + 4);
-		draw_set_color(blanco);
+		
+		draw_set_color(c_white);
 		draw_line_width( x+lengthdir_x(13,_angle), y-1+lengthdir_y(13, _angle), x+lengthdir_x(maxLenght,argument0), y-1+lengthdir_y(maxLenght, argument0),(height * 1) + whiteWidht+global.laserWidth+global.amplifyPowerLaser);
 		draw_set_alpha(1);
 

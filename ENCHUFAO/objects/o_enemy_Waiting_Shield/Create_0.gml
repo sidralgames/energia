@@ -35,7 +35,7 @@ burnFlash = 0;
 electroFlash = 0;
 
 
-rojo= make_colour_rgb(228,59,69);
+
 rojo2= make_colour_rgb(158, 40, 53);
 
 

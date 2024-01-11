@@ -3,13 +3,13 @@
 Controls_Input()
 if !instance_exists(o_playerShip) && (o_nextRoom.canSelectShip)
 {
-	if (key_right_p) 
+	if (key_rightP) 
 	{
 		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 		selected +=1;
 	}
 	
-	if (key_left_p)
+	if (key_leftP)
 	{
 		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 		selected -=1;

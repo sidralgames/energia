@@ -21,10 +21,6 @@ if (charge >= 200)
 	sprite_index = sprite_enchufePluged;
 	image_speed = 0.2;
 	
-	//if room != Sala_Inicio
-	//{
-	//	lightEnchufe.full = true;
-	//}
 }
 
 if (enchufeOvercharged)

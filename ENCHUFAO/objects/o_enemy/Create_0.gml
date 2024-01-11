@@ -8,7 +8,7 @@ alarm[10] = 30;
 //lightEnemy= instance_create_layer(x,y,"LightEnemy",o_Light_Enemy);
 isCounted=false;
 bnc = 0.5;
-_hp = 3;
+
 cont = 500;
 image_speed = 0.5;
 
@@ -42,6 +42,15 @@ accelDistance = random_range(0.005, 0.05);
 if tile_meeting(x,y,"Tiles")
 {
 	instance_destroy()
+}
+
+if (global.level <=5)
+{
+	_hp = 3;
+}
+else
+{
+	_hp = 4;
 }
 
 isMegaEnemy = false;
