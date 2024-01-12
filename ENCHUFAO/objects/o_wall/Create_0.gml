@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 alarm[1] = 70;
-
+alarm[2] = 20;
 oddsLaserV = max(10, 65 - global.level);
 oddsLaserH = max(10, 65 - global.level);
 
@@ -40,4 +40,4 @@ xxR = x+20;
 // Inherit the parent event
 event_inherited();
 
-alarm[0] = 30;
+alarm[0] = 50;

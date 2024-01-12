@@ -148,7 +148,7 @@ function DrawLevelBasic()
 					
 						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 200)
 						{
-							if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 80)
+							if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 60)
 							{
 								finalE = instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Final); 
 								finalE.depth = layer_get_depth("Enchufes")+20;

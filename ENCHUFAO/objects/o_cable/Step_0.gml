@@ -13,6 +13,7 @@ if instance_exists(inst)
 
 if (global.unPlugging)
 {
+	instTope.depth = depth-1;
 	if (haveToUpdate = true)
 	{
 		rope1.vertexDeAttachTo(last);
@@ -30,6 +31,7 @@ if (global.unPlugging)
 
 if (global.plugging) && instance_exists(o_playerShip)
 {
+	instTope.depth = depth+1;
 	global.plugging = false;
 	enchufe = o_playerShip.enchufe;
 	

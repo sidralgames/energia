@@ -12,7 +12,7 @@ spawners=0;
 
 enemiesMin = min(3,global.level+1);
 enemiesMax = min(7,global.level+2);
-levelType = choose(0,0,0);
+levelType = choose("Big");
 
 StrandedShipsInLevel = 0;
 StrandedShipsInLevelMax = 1;
@@ -24,12 +24,30 @@ global.changingTiles = false;
 
 if (room = Sala_0) //(levelType = 0)
 {
-	SetupLevelBasic()
-	levelType="Basic"
+	switch (levelType)
+	{
+		case "Basic":
+		{
+			SetupLevelBasic();
+		}
+		break;
+		
+		case "Corridor":
+		{
+			SetupLevelCorridor();
+		}
+		break;
+		
+		case "Big":
+		{
+			SetupLevelBig();
+		}
+		break;
+	}
 }
 else if (room = Sala_Tutorial)
 {
-	SetupLevelTutorial()
+	SetupLevelTutorial();
 	levelType="Tutorial"
 }
 //else if (levelType = 1)
@@ -47,7 +65,7 @@ else if (room = Sala_Tutorial)
 //	SetupLevelCorridor()
 //	levelType="Corridor"
 //}
-alarm[0] = 20;
+alarm[0] = 15;
 alarm[1] = 220;
 alarm[2] = 50;
 alarm[3] = 300;

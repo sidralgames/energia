@@ -5,19 +5,20 @@
 _alpha = 1;
 haveToUpdate = false;
 canCollide = false;
-fric = 0.85;
+fric = 0.84;
 verletSystem1 = new verletSystem(fric, 0.0);
 off = 0;
 cableColor = c_white;
 // Create verlet groups
-_segments = 5 * global.cableStat
+_segments = (5 * global.cableStat)+3;
+
 if (global.cableStat>6 && room = Sala_Inicio)
 {
-_widhtCable = 5
+	_widhtCable = 5
 }
 else
 {
-_widhtCable = 2	
+	_widhtCable = 2	
 }
 // Create a new rope
 rope1 = verletGroupCreateRope(verletSystem1, x, y, cableColor, _widhtCable, 3, _segments, 2, 100,canCollide);
@@ -34,7 +35,7 @@ pluggedToStrandedShip = false;
 		//// Attach an object to its last vertex
 instTope = instance_create_layer(x,y,"Player", o_charger);
 instTope.depth = depth-1;
-rope1.vertexAttachObject(last, instTope, vertexAttachmentType.both);
+rope1.vertexAttachObject(antelast, instTope, vertexAttachmentType.both);
 
 //instTope = instance_create(x, y, o_coco);
 //rope1.vertexAttachObject(last, instTope, vertexAttachmentType.positionOnly);

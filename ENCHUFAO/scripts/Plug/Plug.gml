@@ -40,11 +40,11 @@ function Plug()
 	{
 		if (enchufe.fromFriend)
 		{
-			o_charger.scale = 0.75;
+			o_charger.scale = 0.65;
 		}
 		else
 		{
-			o_charger.scale = 0.85;
+			o_charger.scale = 0.75;
 		}
 		
 		global.xToPlug = enchufe.x;
@@ -73,6 +73,7 @@ function Plug()
 		{	
 			if (enchufe.IsBoss)
 			{
+				o_charger.scale = 1.4;
 				global.xToPlug = x+lengthdir_x(30,enchufe.image_angle)
 				global.yToPlug = y+lengthdir_y(30,enchufe.image_angle)
 			}

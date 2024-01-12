@@ -166,6 +166,9 @@ function verletGroup() constructor {
 		} else if (index == last) {
 			index = ds_list_size(vertexList) - 1;
 		}
+		else if (index == antelast) {
+			index = ds_list_size(vertexList) - 2;
+		}
 		
 		var thisVertex = vertexList[| index];
 		if (xx != undefined) thisVertex.x = xx;
@@ -190,6 +193,9 @@ function verletGroup() constructor {
 		}else if (index == last) {
 			index = ds_list_size(vertexList) - 1;
 		}
+		else if (index == antelast) {
+			index = ds_list_size(vertexList) - 2;
+		}
 		if (xoff == undefined) xoff = 0;
 		if (yoff == undefined) yoff = 0;
 		
@@ -208,6 +214,9 @@ function verletGroup() constructor {
 		} else if (index == last) {
 			index = ds_list_size(vertexList) - 1;
 		}
+		else if (index == antelast) {
+			index = ds_list_size(vertexList) - 2;
+		}
 		if (xoff == undefined) xoff = 0;
 		if (yoff == undefined) yoff = 0;
 		
@@ -225,6 +234,9 @@ function verletGroup() constructor {
 			index = 0;
 		} else if (index == last) {
 			index = ds_list_size(vertexList) - 1;
+		}
+		else if (index == antelast) {
+			index = ds_list_size(vertexList) - 2;
 		}
 		if (ds_list_size(attachmentList) > 0)
 		{

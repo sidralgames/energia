@@ -1,7 +1,28 @@
 /// @description Insert description here
 // You can write your code in this editor
-draw_sprite_ext(sprite_index, image_index, x, y, scale, scale, image_angle, image_blend, image_alpha)
-
+if instance_exists(o_playerShip)
+{
+	if (o_playerShip.plugged == false)
+	{
+		draw_sprite_ext(sprite_index, image_index, x, y, scale, scale, image_angle, image_blend, image_alpha)
+	}
+	else
+	{
+		with (o_playerShip)
+		{
+			if (enchufe.IsBoss)
+			{
+				xToPlug = enchufe.x-lengthdir_x(30,enchufe.image_angle)
+				yToPlug = enchufe.y-lengthdir_y(30,enchufe.image_angle)
+				draw_sprite_ext(s_chargerPlugged, 0, xToPlug, yToPlug, o_charger.scale, o_charger.scale, enchufe.image_angle-90, image_blend, image_alpha)
+			}
+			else
+			{
+				draw_sprite_ext(s_chargerPlugged, 0, enchufe.x, enchufe.y, o_charger.scale, o_charger.scale, enchufe._angle-90, image_blend, image_alpha)
+			}
+		}
+	}
+}
 if (global.havePickedBouncingBullets)
 {
 	draw_sprite_ext(s_bouncingBulletsPicKUp, image_index, x+lengthdir_x(20, image_angle), y+lengthdir_y(20, image_angle), scale, scale, image_angle, image_blend, image_alpha)

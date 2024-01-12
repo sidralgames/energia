@@ -37,7 +37,7 @@ function PluggedToEnchufe()
 		
 	part_particles_create(global.enchufe_sys, global.xToPlug+random_range(-18,18), global.yToPlug+random_range(-18,18), global.enchufePart , 10)
 	
-	if (point_distance(x,y,global.xToPlug,global.yToPlug) <= global.cableStat*40)
+	if (point_distance(x,y,global.xToPlug,global.yToPlug) <= global.cableStat*38)
 	{
 		if (global.energy > 0)
 		{
