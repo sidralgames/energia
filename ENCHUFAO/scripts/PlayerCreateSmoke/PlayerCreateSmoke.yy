@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "BOSS GARBANZO",
-    "path": "folders/Scripts/BOSS GARBANZO.yy",
+    "name": "PLAYERSHIP",
+    "path": "folders/Scripts/PLAYERSHIP.yy",
   },
 }

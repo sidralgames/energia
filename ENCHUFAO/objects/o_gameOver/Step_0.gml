@@ -1,6 +1,8 @@
 
 /// @description Insert description here
 // You can write your code in this editor
+Controls_Input();
+
 if (alarm[0] <= 0)
 {
 	if (killedByCreated = false)
@@ -14,7 +16,7 @@ if (alarm[0] <= 0)
 	{
 		image_alpha = 1;
 		gamepad_set_vibration(0, 0, 0);
-		if keyboard_check_pressed(ord("X")) || gamepad_button_check_pressed(0, gp_face1)
+		if (key_x)
 		{
 			//room_instance_clear(Sala_0)
 			SaveGame();

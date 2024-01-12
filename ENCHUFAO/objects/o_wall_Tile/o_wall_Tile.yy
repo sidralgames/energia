@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Main",
-    "path": "folders/Objetos/Lagarto/Main.yy",
+    "name": "Walls",
+    "path": "folders/Objetos/Walls.yy",
   },
   "parentObjectId": null,
   "persistent": false,

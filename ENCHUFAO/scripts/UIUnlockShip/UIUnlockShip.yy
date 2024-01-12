@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "BOSS GARBANZO",
-    "path": "folders/Scripts/BOSS GARBANZO.yy",
+    "name": "STRANDED SHIP",
+    "path": "folders/Scripts/STRANDED SHIP.yy",
   },
 }

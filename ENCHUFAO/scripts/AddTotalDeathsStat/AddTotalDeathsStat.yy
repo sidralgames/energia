@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "STATS",
-    "path": "folders/Scripts/GENERAL/UPGRADESLIST/STATS.yy",
+    "path": "folders/Scripts/GENERAL/STATS.yy",
   },
 }

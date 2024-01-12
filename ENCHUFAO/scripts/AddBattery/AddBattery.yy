@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "DATA",
-    "path": "folders/Scripts/DATA.yy",
+    "name": "GENERAL",
+    "path": "folders/Scripts/GENERAL.yy",
   },
 }

@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Enchufes",
-    "path": "folders/Objetos/Enchufes.yy",
+    "name": "Sprites",
+    "path": "folders/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
