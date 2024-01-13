@@ -38,8 +38,8 @@ function SetupLevelBasic()
 	__background_set( e__BG.Y, 0, irandom(1000) );
 
 
-	room_width = (CELL_WIDTH/32) *1344; //
-	room_height = (CELL_HEIGHT/32) *(320*4);
+	room_width = (CELL_WIDTH/32) *1344; // = 42 celdas
+	room_height = (CELL_HEIGHT/32) *(320*4); // = 1280 = 40 celdas
 
 
 	__view_set( e__VW.HView, 0, __view_get( e__VW.HPort, 0 ) );
