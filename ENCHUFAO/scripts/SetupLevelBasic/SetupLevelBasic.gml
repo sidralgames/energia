@@ -2,6 +2,10 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SetupLevelBasic()
 {
+	totalFloor = 0;
+	maxFloor = 800;
+	minFloor = 600;
+	realSteps = 0;
 	global.newChargerX = 0;
 	global.newChargerY = 0;
 	
@@ -34,7 +38,7 @@ function SetupLevelBasic()
 	__background_set( e__BG.Y, 0, irandom(1000) );
 
 
-	room_width = (CELL_WIDTH/32) *(320*4); //
+	room_width = (CELL_WIDTH/32) *1344; //
 	room_height = (CELL_HEIGHT/32) *(320*4);
 
 
@@ -90,17 +94,28 @@ function SetupLevelBasic()
 	var _steps = 3000;
 
 	var _direction_change_odds = 0;
-
+	
+	
 	repeat (_steps)
 	{
+		realSteps +=1;
+		if global.wallgrid_[# _controller_x, _controller_y] != FLOOR
+		{
+			totalFloor +=1;;	
+		}
+		
+		if (totalFloor > maxFloor)
+		{
+			break;
+		}
+				
 		global.wallgrid_[# _controller_x, _controller_y] = FLOOR;
-	
+		
 		//Randomize the direction
 		if (irandom(_direction_change_odds) == _direction_change_odds){
 			_controller_direction = irandom(3);
 		}
-	
-		//Move the controller
+				//Move the controller
 		var _x_direction = lengthdir_x(1,_controller_direction*90);
 		var _y_direction = lengthdir_y(1,_controller_direction*90);
 		_controller_x += _x_direction;
@@ -124,7 +139,7 @@ function SetupLevelBasic()
 	DrawLevelBasic();
 	
 	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo)
-	|| (!enchufeShield) || (!enchufeFinal) || (!strandedShipOK) 
+	|| (!enchufeShield) || (!enchufeFinal) || (!strandedShipOK) || (totalFloor < minFloor)
 	//|| (UpgradesEnchufesInLevel < 1)
 
 	{
