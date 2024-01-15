@@ -91,7 +91,7 @@ function SetupLevelBasic()
 	var _controller_y = height_ div 2
 	var _controller_direction = irandom(3);
 
-	var _steps = 3000;
+	var _steps = 4000;
 
 	var _direction_change_odds = 0;
 	
@@ -99,7 +99,8 @@ function SetupLevelBasic()
 	repeat (_steps)
 	{
 		realSteps +=1;
-		if global.wallgrid_[# _controller_x, _controller_y] != FLOOR
+		
+		if (global.wallgrid_[# _controller_x, _controller_y] != FLOOR)
 		{
 			totalFloor +=1;;	
 		}

@@ -45,7 +45,7 @@ function BossGarbanzoAttack_Laser_Both()
 		laser_r.y = y+52;
 	}
 	
-	if instance_exists(laser_r) && (creatingEnemies)
+	if instance_exists(laser_r) && instance_exists(laser_l) && (creatingEnemies)
 	{
 	
 		bossSpeed = clamp(bossSpeed, 0, 3)

@@ -12,7 +12,24 @@ spawners=0;
 
 enemiesMin = min(3,global.level+1);
 enemiesMax = min(7,global.level+2);
-levelType = choose("Basic");
+
+
+if (global.level = 1) || (global.level = 9)
+{
+	levelType = "Basic";
+}
+else if (global.level = 3) || (global.level = 11)
+{
+	levelType = "Corridor";
+}
+else if (global.level = 5) || (global.level = 13)
+{
+	levelType = "Big";
+}
+else
+{
+	levelType = choose("Basic", "Big","Corridor");
+}
 
 StrandedShipsInLevel = 0;
 StrandedShipsInLevelMax = 1;

@@ -1170,6 +1170,7 @@
     {"id":{"name":"o_enemyMouth_Body","path":"objects/o_enemyMouth_Body/o_enemyMouth_Body.yy",},},
     {"id":{"name":"o_BossWorm_HitBox","path":"objects/o_BossWorm_HitBox/o_BossWorm_HitBox.yy",},},
     {"id":{"name":"o_BigWorm_Body","path":"objects/o_BigWorm_Body/o_BigWorm_Body.yy",},},
+    {"id":{"name":"DrawLevelCorridor","path":"scripts/DrawLevelCorridor/DrawLevelCorridor.yy",},},
     {"id":{"name":"AddUpgradeBonus","path":"scripts/AddUpgradeBonus/AddUpgradeBonus.yy",},},
     {"id":{"name":"o_shieldOfEnemy","path":"objects/o_shieldOfEnemy/o_shieldOfEnemy.yy",},},
     {"id":{"name":"s_bulletCharger","path":"sprites/s_bulletCharger/s_bulletCharger.yy",},},

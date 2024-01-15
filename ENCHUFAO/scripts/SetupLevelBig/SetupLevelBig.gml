@@ -2,6 +2,11 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SetupLevelBig()
 {
+	totalFloor = 0;
+	maxFloor = 1300;
+	minFloor = 800;
+	realSteps = 0;
+	
 	global.newChargerX = 0;
 	global.newChargerY = 0;
 	
@@ -87,12 +92,24 @@ function SetupLevelBig()
 	var _controller_y = height_ div 2
 	var _controller_direction = irandom(3);
 
-	var _steps = 3500;
+	var _steps = 4500;
 
 	var _direction_change_odds = 0;
 
 	repeat (_steps)
 	{
+			realSteps +=1;
+		
+		if (global.wallgrid_[# _controller_x, _controller_y] != FLOOR)
+		{
+			totalFloor +=1;;	
+		}
+		
+		if (totalFloor > maxFloor)
+		{
+			break;
+		}
+		
 		global.wallgrid_[# _controller_x, _controller_y] = FLOOR;
 	
 		//Randomize the direction
@@ -124,7 +141,7 @@ function SetupLevelBig()
 	DrawLevelBasic();
 	
 	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo)
-	|| (!enchufeShield) || (!enchufeFinal) || (!strandedShipOK) 
+	|| (!enchufeShield) || (!enchufeFinal) || (!strandedShipOK) || (totalFloor < minFloor)
 	//|| (UpgradesEnchufesInLevel < 1)
 
 	{

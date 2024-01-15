@@ -4,10 +4,10 @@
 if instance_exists(o_gridRoom) && (makeRoom = false) && (alarm[4] <= 0)
 {	
 	instance_create(x,y,o_shockwaveTiles2)
-	instance_create(x+50,y+50,o_shockwaveTiles2)
-	instance_create(x-50,y-50,o_shockwaveTiles2)
-	instance_create(x+50,y-50,o_shockwaveTiles2)
-	instance_create(x-50,y+50,o_shockwaveTiles2)
+	instance_create(x+60,y+60,o_shockwaveTiles2)
+	instance_create(x-60,y-60,o_shockwaveTiles2)
+	instance_create(x+60,y-60,o_shockwaveTiles2)
+	instance_create(x-60,y+60,o_shockwaveTiles2)
 	makeRoom = true;
 }
 
@@ -26,6 +26,10 @@ if (tile_meeting(x,y,"Tiles")) && instance_exists(o_gridRoom) && (alarm[4] <= 0)
 		b2 = instance_create(x+50,y-50,o_exploBomb)
 		b3 = instance_create(x-50,y+50,o_exploBomb)
 		b4 = instance_create(x-50,y-50,o_exploBomb)
+		b1.isFrom = "BossBomb";
+		b2.isFrom = "BossBomb";
+		b3.isFrom = "BossBomb";
+		b4.isFrom = "BossBomb";
 		b1.isExploFromBoss = true;
 		b2.isExploFromBoss = true;
 		b3.isExploFromBoss = true;

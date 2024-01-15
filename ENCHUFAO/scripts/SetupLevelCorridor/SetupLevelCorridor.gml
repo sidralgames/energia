@@ -2,6 +2,11 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SetupLevelCorridor()
 {
+	totalFloor = 0;
+	maxFloor = 750;
+	minFloor = 600;
+	realSteps = 0;
+	
 	global.newChargerX = 0;
 	global.newChargerY = 0;
 	
@@ -34,8 +39,9 @@ function SetupLevelCorridor()
 	__background_set( e__BG.Y, 0, irandom(1000) );
 
 
-	room_width = (CELL_WIDTH/32) *(320*4.5); //
-	room_height = (CELL_HEIGHT/32) *(320*4);
+	room_width = (CELL_WIDTH/32) *1344; // = 42 celdas
+	room_height = (CELL_HEIGHT/32) *(320*4); // = 1280 = 40 celdas
+
 
 
 	__view_set( e__VW.HView, 0, __view_get( e__VW.HPort, 0 ) );
@@ -87,12 +93,24 @@ function SetupLevelCorridor()
 	var _controller_y = height_ div 2
 	var _controller_direction = irandom(3);
 
-	var _steps = 2500;
+	var _steps = 3000;
 
 	var _direction_change_odds = 3;
 
 	repeat (_steps)
 	{
+			realSteps +=1;
+		
+		if (global.wallgrid_[# _controller_x, _controller_y] != FLOOR)
+		{
+			totalFloor +=1;;	
+		}
+		
+		if (totalFloor > maxFloor)
+		{
+			break;
+		}
+		
 		global.wallgrid_[# _controller_x, _controller_y] = FLOOR;
 	
 		//Randomize the direction
@@ -124,7 +142,7 @@ function SetupLevelCorridor()
 	DrawLevelBasic();
 	
 	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo)
-	|| (!enchufeShield) || (!enchufeFinal) || (!strandedShipOK) 
+	|| (!enchufeShield) || (!enchufeFinal) || (!strandedShipOK) || (totalFloor < minFloor)
 	//|| (UpgradesEnchufesInLevel < 1)
 
 	{

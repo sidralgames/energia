@@ -1070,6 +1070,7 @@
     {"name":"o_enemyMouth_Body","order":46,"path":"objects/o_enemyMouth_Body/o_enemyMouth_Body.yy",},
     {"name":"o_BossWorm_HitBox","order":45,"path":"objects/o_BossWorm_HitBox/o_BossWorm_HitBox.yy",},
     {"name":"o_BigWorm_Body","order":53,"path":"objects/o_BigWorm_Body/o_BigWorm_Body.yy",},
+    {"name":"DrawLevelCorridor","order":26,"path":"scripts/DrawLevelCorridor/DrawLevelCorridor.yy",},
     {"name":"AddUpgradeBonus","order":18,"path":"scripts/AddUpgradeBonus/AddUpgradeBonus.yy",},
     {"name":"o_shieldOfEnemy","order":45,"path":"objects/o_shieldOfEnemy/o_shieldOfEnemy.yy",},
     {"name":"s_bulletCharger","order":5,"path":"sprites/s_bulletCharger/s_bulletCharger.yy",},

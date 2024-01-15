@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function DrawLevelBasic()
+function DrawLevelCorridor()
 {
 	mimics = 0;
 	mimicsMax = 2;
@@ -88,7 +88,7 @@ function DrawLevelBasic()
 					{
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 
-						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 300)
+						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 250)
 						{
 							instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Hp); 
 							enchufeHP = true;
@@ -99,7 +99,7 @@ function DrawLevelBasic()
 					{
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 					
-						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 300)
+						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 250)
 						{
 							instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Laser); 
 							enchufeShield = true;
@@ -110,7 +110,7 @@ function DrawLevelBasic()
 					{
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 					
-						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 300)
+						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 250)
 						{
 							instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Ammo); 
 							enchufeAmmo = true;
@@ -121,7 +121,7 @@ function DrawLevelBasic()
 					{
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 					
-						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 200)
+						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 150)
 						{
 							instance_create_layer(exM,eyM,"Enchufes",o_enchufeBombs); 
 							enchufeBomb = true;
