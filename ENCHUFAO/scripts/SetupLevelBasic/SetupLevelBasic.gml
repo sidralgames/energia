@@ -3,7 +3,7 @@
 function SetupLevelBasic()
 {
 	totalFloor = 0;
-	maxFloor = 800;
+	maxFloor = 1000;
 	minFloor = 600;
 	realSteps = 0;
 	global.newChargerX = 0;

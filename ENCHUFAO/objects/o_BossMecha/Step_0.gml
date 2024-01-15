@@ -20,7 +20,7 @@ switch(state)
 
 if (tile_meeting(x,y,"Tiles")) && instance_exists(o_gridRoom) && (alarm[4] <= 0) && (alarm[5] <= 0)
 {
-	if (abs(speed) < 0.5*global.relativeSpeed)
+	if (abs(speed) > 0.5*global.relativeSpeed)
 	{
 		b1 = instance_create(x+50,y+50,o_exploBomb)
 		b2 = instance_create(x+50,y-50,o_exploBomb)

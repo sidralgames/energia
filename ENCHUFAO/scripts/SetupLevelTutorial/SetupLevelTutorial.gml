@@ -83,9 +83,9 @@ function SetupLevelTutorial()
 	var _controller_y = height_ div 2
 	var _controller_direction = irandom(3);
 
-	var _steps = 2100;
+	var _steps = 2500;
 
-	var _direction_change_odds = 1;
+	var _direction_change_odds = 0;
 
 	repeat (_steps)
 	{

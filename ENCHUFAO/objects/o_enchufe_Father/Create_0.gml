@@ -10,7 +10,7 @@ occupied = false;
 canBeEnchufated = true;
 canBeEnchufatedCont = 0;
 isMimic = false;
-IsBoss = false;
+IsEnchufeBoss = false;
 randomize();
 upgradesBattery=0;
 

@@ -13,8 +13,8 @@ function Plug()
 	
 	global.plugging = true;
 	
-	if (haveBatteryUpgrade) && (enchufe.isPETA_F = false) 
-	&& (enchufe.enchufeBomb == false) && (enchufe.upgradesBattery < 3)
+	if (haveBatteryUpgrade) && (enchufe.isPETA_F == false) 
+	&& (enchufe.enchufeBomb == false) && (enchufe.upgradesBattery < 3) && (enchufe.IsEnchufeBoss == false)
 	{
 		if (enchufe.hp)
 		{
@@ -71,7 +71,7 @@ function Plug()
 		}
 		else
 		{	
-			if (enchufe.IsBoss)
+			if (enchufe.IsEnchufeBoss)
 			{
 				o_charger.scale = 1.4;
 				global.xToPlug = x+lengthdir_x(30,enchufe.image_angle)

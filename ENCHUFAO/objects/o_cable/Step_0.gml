@@ -37,7 +37,7 @@ if (global.plugging) && instance_exists(o_playerShip)
 	
 	if instance_exists(enchufe)
 	{
-		if (enchufe.IsBoss)
+		if (enchufe.IsEnchufeBoss)
 		{
 			haveToUpdate = true;
 		}

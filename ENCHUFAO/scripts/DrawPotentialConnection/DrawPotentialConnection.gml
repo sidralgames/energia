@@ -4,7 +4,7 @@ function DrawPotentialConnection()
 {
 	if instance_exists(inEnchufe)
 	{
-		if (inEnchufe.IsBoss)
+		if (inEnchufe.IsEnchufeBoss)
 		{
 			maxConectRad = maxConectRadBoss;
 			minConectRad = minConectRadBoss;

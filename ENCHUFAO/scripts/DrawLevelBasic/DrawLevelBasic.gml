@@ -88,7 +88,7 @@ function DrawLevelBasic()
 					{
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 
-						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 250)
+						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 300)
 						{
 							instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Hp); 
 							enchufeHP = true;
@@ -99,7 +99,7 @@ function DrawLevelBasic()
 					{
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 					
-						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 250)
+						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 350)
 						{
 							instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Laser); 
 							enchufeShield = true;
@@ -110,7 +110,7 @@ function DrawLevelBasic()
 					{
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 					
-						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 250)
+						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 350)
 						{
 							instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Ammo); 
 							enchufeAmmo = true;
@@ -146,7 +146,7 @@ function DrawLevelBasic()
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 						nextwall = instance_nearest(exM, eyM, o_wall)
 					
-						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 200)
+						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 150)
 						{
 							if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 60)
 							{

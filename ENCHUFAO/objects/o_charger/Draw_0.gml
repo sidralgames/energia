@@ -10,7 +10,7 @@ if instance_exists(o_playerShip)
 	{
 		with (o_playerShip)
 		{
-			if (enchufe.IsBoss)
+			if (enchufe.IsEnchufeBoss)
 			{
 				xToPlug = enchufe.x-lengthdir_x(30,enchufe.image_angle)
 				yToPlug = enchufe.y-lengthdir_y(30,enchufe.image_angle)

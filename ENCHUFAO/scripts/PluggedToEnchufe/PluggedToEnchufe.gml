@@ -6,7 +6,7 @@ function PluggedToEnchufe()
 	{
 		if (room != Sala_Tutorial)
 		{
-			if (enchufe.IsBoss)
+			if (enchufe.IsEnchufeBoss)
 			{
 				pluggedTimer+=max(0.15, 0.43*global.overchargeTime);
 			}
@@ -64,7 +64,7 @@ function PluggedToEnchufe()
 			enchufe._hpush -= lengthdir_x(0.05,dir)
 			enchufe._vpush -= lengthdir_y(0.05,dir)
 		}
-		else if (enchufe.IsBoss)
+		else if (enchufe.IsEnchufeBoss)
 		{
 			_hpush = lengthdir_x(3.25,dir)
 			_vpush = lengthdir_y(3.25,dir)

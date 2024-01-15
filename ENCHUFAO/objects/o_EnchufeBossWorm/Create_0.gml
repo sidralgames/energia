@@ -25,7 +25,7 @@ electroFlash = 0;
 
 image_speed = 0;
 
-IsBoss = true;
+IsEnchufeBoss = true;
 changedMetal = false
 
 sprite_enchufePluged = s_enchufeBossWorm;
