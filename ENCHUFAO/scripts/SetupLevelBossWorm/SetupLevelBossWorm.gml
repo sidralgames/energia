@@ -64,7 +64,7 @@ function SetupLevelBossWorm()
 
 	var _steps = 3000;
 
-	var _direction_change_odds = 1;
+	var _direction_change_odds = 0;
 
 	repeat (_steps) 
 	{

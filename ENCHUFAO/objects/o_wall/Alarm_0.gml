@@ -19,8 +19,13 @@ if(room = Sala_0) || (room = Sala_SecondBoss) || (room = Sala_BossWorm)
 	
 	
 	//-- SMASHER TRAP --//
-	
-	CreateSmashTrap();
+	//if instance_exists(o_waller)
+	//{
+	//	if (o_waller.levelType = "Corridor")
+	//	{
+	//		CreateSmashTrap();
+	//	}
+	//}
 	
 	//--- DISC TRAP---//
 	//if (global.level>=1)

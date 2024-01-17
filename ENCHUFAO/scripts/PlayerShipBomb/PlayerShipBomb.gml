@@ -25,7 +25,7 @@ function PlayerShipBomb()
 	audio_play_sound_on(global.audioEmitter, snd_shoot_3, false, 50)
 	if (global.bombIsHomingBomb)
 	{	
-		for (var i = 0; i < 3+global.homingMissilesExtra; i++)
+		for (var i = 0; i < 2+global.homingMissilesExtra; i++)
 		{
 			var bullet = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
 			"Bullets", bombToFire);
@@ -35,7 +35,7 @@ function PlayerShipBomb()
 			bullet._angle = dire+off;
 			bullet.direction = dire+off;
 		}
-		for (var i = 0; i < 3+global.homingMissilesExtra; i++)
+		for (var i = 0; i < 2+global.homingMissilesExtra; i++)
 		{
 			var bullet = instance_create_layer(x + _hpush*3 + lengthdir_x(15, _angle), y +_vpush*5 + lengthdir_y(15, _angle),
 			"Bullets", bombToFire);

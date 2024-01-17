@@ -1,8 +1,8 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-if (image_index > 2) && (image_index < 8)
+if (image_index > 2) && (image_index < 6)
 {
-	if collision_rectangle(x-12, y+2, x+12, y+32, o_playerShip, false, true)
+	if collision_rectangle(x-11, y+2, x+11, y+32, o_playerShip, false, true)
 	{
 		if (playerRepelled = false)
 		{

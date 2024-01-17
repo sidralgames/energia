@@ -3,7 +3,7 @@
 function SetupLevelCorridor()
 {
 	totalFloor = 0;
-	maxFloor = 750;
+	maxFloor = 950;
 	minFloor = 600;
 	realSteps = 0;
 	
@@ -93,9 +93,9 @@ function SetupLevelCorridor()
 	var _controller_y = height_ div 2
 	var _controller_direction = irandom(3);
 
-	var _steps = 3000;
+	var _steps = 4000;
 
-	var _direction_change_odds = 3;
+	var _direction_change_odds = 2;
 
 	repeat (_steps)
 	{
@@ -139,7 +139,7 @@ function SetupLevelCorridor()
 	SetTemporaryWalls();
 	
 	//Draw the level
-	DrawLevelBasic();
+	DrawLevelCorridor();
 	
 	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo)
 	|| (!enchufeShield) || (!enchufeFinal) || (!strandedShipOK) || (totalFloor < minFloor)

@@ -98,7 +98,8 @@ function SetupLevelBig()
 
 	repeat (_steps)
 	{
-			realSteps +=1;
+		
+		realSteps +=1;
 		
 		if (global.wallgrid_[# _controller_x, _controller_y] != FLOOR)
 		{

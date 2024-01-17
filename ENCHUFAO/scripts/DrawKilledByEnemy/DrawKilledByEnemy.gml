@@ -17,7 +17,7 @@ function DrawKilledByEnemy()
 			if (tipChoosed = false)
 			{
 				tipChoosed = true;
-				tip = irandom_range(0,12)
+				tip = irandom_range(0,11)
 			}
 			infoGameOverEnemyBasic(tip);
 			draw_set_color(global.lightBlue)

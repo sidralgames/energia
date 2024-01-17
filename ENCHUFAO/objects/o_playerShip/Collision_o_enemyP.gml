@@ -11,7 +11,7 @@ if (global.shields<1) //&& (other.isImmortal = false)
 		alarm[1] = 30
 		tocado = true;
 		global.hp -= 1 * global.damageReceived;
-		if (global.hp <= 0)
+		if (global.hp <1)
 		{
 			if (other.sprite_index != s_shieldPurple)
 			{
