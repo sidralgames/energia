@@ -8,6 +8,8 @@ oddsLaserH = max(10, 65 - global.level);
 
 oddsDisc = max(20, 200 - global.level);
 
+oddsSmasher = 1;
+
 if (room = Sala_BossWorm)
 {
 	oddsEnemyMouth = 7;

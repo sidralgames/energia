@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function MovePlayer()
 {
-	if (tile_meeting(x+_hpush*1.25,y,"Tiles"))
+	if (tile_meeting(x+_hpush*1.25,y,"Tiles")) //|| place_meeting(x+_hpush*1.25,y,o_wallCol)
 	{
 		gamepad_set_vibration(0,0.3,0.3)
 		alarm[4] = 4;
@@ -13,7 +13,7 @@ function MovePlayer()
 		bumpsAchievement = false;
 	}
 	
-	if (tile_meeting(x,y+_vpush*1.25,"Tiles"))
+	if (tile_meeting(x,y+_vpush*1.25,"Tiles")) //|| place_meeting(x,y+_vpush*1.25,o_wallCol)
 	{
 		gamepad_set_vibration(0,0.3,0.3)
 		alarm[4] = 4;

@@ -17,6 +17,11 @@ if(room = Sala_0) || (room = Sala_SecondBoss) || (room = Sala_BossWorm)
 	//--- LASER TRAP ---//
 	CreateLaserTrapWall();
 	
+	
+	//-- SMASHER TRAP --//
+	
+	CreateSmashTrap();
+	
 	//--- DISC TRAP---//
 	//if (global.level>=1)
 	//{
