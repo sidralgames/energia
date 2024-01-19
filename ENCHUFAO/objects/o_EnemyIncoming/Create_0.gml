@@ -2,6 +2,7 @@
 // You can write your code in this editor
 image_speed = 0.5;
 canCreate = false;
+canCreateBreach = false;
 randomize();
 global.maxWorms = 0;
 

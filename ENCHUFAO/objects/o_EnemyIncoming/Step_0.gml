@@ -25,4 +25,10 @@ if (image_index >= 19) && (canCreate = false)
 }
 
 
-
+if (image_index >= 14) && (canCreateBreach = false)
+{
+	canCreateBreach = true;
+	breachCreated = instance_create_layer(x,y,"Breach",o_miniBreach);
+	
+}
+	
