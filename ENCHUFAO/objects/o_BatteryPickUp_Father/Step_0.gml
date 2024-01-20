@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (inEnemy = false)
+if (inEnemy = false)  && (inCapsule = false)
 {
 	speed = lerp(speed, 0, 0.01);
 	_angle += hspeed;

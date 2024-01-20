@@ -21,6 +21,7 @@ function DrawLevelBasic()
 				
 				var oddsEnchufeBomb = 300;
 				var oddsEnchufePETA = 1000;
+				var oddsCapsule = 500;
 				
 				var oddsEnchufeFinal = 300;
 				
@@ -51,6 +52,12 @@ function DrawLevelBasic()
 				{
 					instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_PETApickUp); 
 					PetasInLevel +=1;
+				}
+				
+				if (irandom(oddsCapsule) == oddsCapsule) && (capsulesInLevel < capsulesInLevelMax) //&& global.level > 2
+				{
+					instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_capsule); 
+					capsulesInLevel +=1;
 				}
 				
 				//----- CREATE BATTERYS ------//

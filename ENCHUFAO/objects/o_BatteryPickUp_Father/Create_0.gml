@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+cable = -1;
 inEnemy = false;
+inCapsule = false;
 overBattery = -1;
 _angle=0;
 radi = 0;

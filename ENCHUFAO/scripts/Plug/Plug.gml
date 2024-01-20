@@ -14,7 +14,8 @@ function Plug()
 	global.plugging = true;
 	
 	if (haveBatteryUpgrade) && (enchufe.isPETA_F == false) 
-	&& (enchufe.enchufeBomb == false) && (enchufe.upgradesBattery < 3) && (enchufe.IsEnchufeBoss == false)
+	&& (enchufe.enchufeBomb == false) && (enchufe.upgradesBattery < 3)
+	&& (enchufe.IsEnchufeBoss == false) && (enchufe.IsEnchufeCapsule == false) 
 	{
 		if (enchufe.hp)
 		{
@@ -74,8 +75,14 @@ function Plug()
 			if (enchufe.IsEnchufeBoss)
 			{
 				o_charger.scale = 1.4;
-				global.xToPlug = x+lengthdir_x(30,enchufe.image_angle)
-				global.yToPlug = y+lengthdir_y(30,enchufe.image_angle)
+				global.xToPlug = enchufe.x+lengthdir_x(30,enchufe.image_angle)
+				global.yToPlug = enchufe.y+lengthdir_y(30,enchufe.image_angle)
+			}
+			else if (enchufe.IsEnchufeCapsule) && (enchufe.capsuleHaveBattery)
+			{
+				o_charger.scale = 0.8;
+				global.xToPlug = x+lengthdir_y(15,enchufe.image_angle)
+				global.yToPlug = y+lengthdir_y(15,enchufe.image_angle)
 			}
 			else
 			{

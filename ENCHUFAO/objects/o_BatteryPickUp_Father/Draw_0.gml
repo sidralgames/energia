@@ -4,6 +4,10 @@ if (inEnemy)
 {
 	draw_sprite_ext(sprite_index, image_index, x,y,0.6, 0.6, image_angle-90, image_blend, image_alpha)
 }
+else if (inCapsule)
+{
+	draw_sprite_ext(sprite_index, image_index, x,y,0.7, 0.7, image_angle, image_blend, image_alpha)
+}
 else
 {
 	draw_sprite_ext(sprite_index, image_index, x,y,image_xscale, image_yscale, _angle, image_blend, image_alpha)

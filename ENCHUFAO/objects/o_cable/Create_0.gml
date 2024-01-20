@@ -4,6 +4,7 @@
 // You can create multiple systems with different physic properties
 _alpha = 1;
 haveToUpdate = false;
+haveToUpdateCapsule = false;
 canCollide = false;
 fric = 0.84;
 verletSystem1 = new verletSystem(fric, 0.0);

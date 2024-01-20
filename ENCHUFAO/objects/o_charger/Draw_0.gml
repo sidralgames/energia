@@ -16,6 +16,12 @@ if instance_exists(o_playerShip)
 				yToPlug = enchufe.y-lengthdir_y(30,enchufe.image_angle)
 				draw_sprite_ext(s_chargerPlugged, 0, xToPlug, yToPlug, o_charger.scale, o_charger.scale, enchufe.image_angle-90, image_blend, image_alpha)
 			}
+			else if (enchufe.IsEnchufeCapsule) && (enchufe.capsuleHaveBattery)
+			{
+				xToPlug = enchufe.x+lengthdir_x(12,enchufe._angle-90)
+				yToPlug = enchufe.y+lengthdir_y(12,enchufe._angle-90)
+				draw_sprite_ext(s_chargerPlugged, 0, xToPlug, yToPlug, o_charger.scale, o_charger.scale, enchufe._angle-90, image_blend, image_alpha)
+			}
 			else
 			{
 				draw_sprite_ext(s_chargerPlugged, 0, enchufe.x, enchufe.y, o_charger.scale, o_charger.scale, enchufe._angle-90, image_blend, image_alpha)

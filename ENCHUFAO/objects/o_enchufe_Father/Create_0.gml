@@ -11,6 +11,8 @@ canBeEnchufated = true;
 canBeEnchufatedCont = 0;
 isMimic = false;
 IsEnchufeBoss = false;
+IsEnchufeCapsule = false;
+capsuleHaveBattery = false;
 randomize();
 upgradesBattery=0;
 
