@@ -10,17 +10,50 @@
 event_inherited();
 
 IsEnchufeCapsule = true;
-capsuleHaveBattery = true;
-maxCharge = 400;
-energy = true;
-sprite_enchufePluged = s_capsuleOpen
-battery = choose(o_smartBulletsPickUp, o_BouncingBulletsPickUp, o_piercingBulletsPickUp,
-o_ExploBulletsPickUp, o_PushingBulletsPickUp, o_SplitBulletsPickUp, o_BurningBulletsPickUp)
+capsuleHaveSomething = true;
 
-batteryCreated = instance_create(x,y,battery);
-batteryCreated.inCapsule = true;
-batteryCreated.depth = depth+1;
-scale = 0.7;
-_hpMax = 10;
+maxCharge = 200;
+energy = true;
+sprite_enchufePluged = s_capsuleOpen;
+
+inside = choose(
+"Battery","Battery","Battery",
+"Enemy", "Enemy",
+"Sidekick");
+
+switch(inside)
+{
+	case "Battery":
+	{
+		capsuleHaveBattery = true;
+		battery = choose(o_smartBulletsPickUp, o_BouncingBulletsPickUp, o_piercingBulletsPickUp,
+		o_PushingBulletsPickUp, o_SplitBulletsPickUp, o_BurningBulletsPickUp)
+
+		batteryCreated = instance_create(x,y,battery);
+		batteryCreated.inCapsule = true;
+		batteryCreated.depth = depth+1;
+		
+	}break;
+	
+	case "Sidekick":
+	{
+		capsuleHaveStranded = true;
+		strandedFake = instance_create(x,y,o_strandedFake);
+		strandedFake.depth = depth+1;
+		
+	}break;	
+	
+	case "Enemy":
+	{
+		capsuleHaveEnemy = true;
+		enemyFake = instance_create(x,y,o_strandedFake);
+		enemyFake.depth = depth+1;
+	
+	}break;
+	
+}
+
+scale = 1;
+_hpMax = 8;
 _hp = _hpMax;
 image_speed =0;

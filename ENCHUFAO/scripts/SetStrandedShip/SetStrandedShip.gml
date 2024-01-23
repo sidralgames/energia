@@ -9,8 +9,10 @@ function SetStrandedShip()
 		while (ship.sprite = global.spriteShip) || ((otherShip.createdStranded == false) && (ship.sprite = otherShip.sprite))
 		{
 			ship = ds_map_find_value(global.shipList, irandom(global.numberOfShips-1))
+			sprite = ship.sprite
 		}
 		sprite = ship.sprite
+		
 	}
 
 	if (sprite = splayer)

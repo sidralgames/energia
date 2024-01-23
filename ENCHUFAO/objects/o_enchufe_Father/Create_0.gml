@@ -13,6 +13,8 @@ isMimic = false;
 IsEnchufeBoss = false;
 IsEnchufeCapsule = false;
 capsuleHaveBattery = false;
+capsuleHaveSomething = false;
+capsuleHaveStranded = false;
 randomize();
 upgradesBattery=0;
 

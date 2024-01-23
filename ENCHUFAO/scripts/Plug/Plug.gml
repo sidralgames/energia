@@ -78,7 +78,7 @@ function Plug()
 				global.xToPlug = enchufe.x+lengthdir_x(30,enchufe.image_angle)
 				global.yToPlug = enchufe.y+lengthdir_y(30,enchufe.image_angle)
 			}
-			else if (enchufe.IsEnchufeCapsule) && (enchufe.capsuleHaveBattery)
+			else if (enchufe.IsEnchufeCapsule) && (enchufe.capsuleHaveSomething)
 			{
 				o_charger.scale = 0.8;
 				global.xToPlug = x+lengthdir_y(15,enchufe.image_angle)

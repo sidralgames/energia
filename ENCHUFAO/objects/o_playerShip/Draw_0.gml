@@ -19,6 +19,11 @@ if (global.externalBatteryOn)
 
 DrawPotentialConnection();
 
+if (global.radarIsOn = true)
+{
+	DrawRadar();
+}
+
 if (tocado) && (alarm[4] > 2)
 {
 	shader_set(shFlash)

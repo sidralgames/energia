@@ -32,7 +32,7 @@ function SetupLevelBasic()
 	PetasInLevel = 0;
 	
 	capsulesInLevel = 0;
-	capsulesInLevelMax = 3;
+	capsulesInLevelMax = 2;
 	
 	UpgradesEnchufesInLevelMax = 7;
 	UpgradesEnchufesInLevel = 0;

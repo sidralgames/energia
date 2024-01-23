@@ -27,6 +27,52 @@ function DrawPotentialConnection()
 			}
 			
 		}
+		else if (inEnchufe.IsEnchufeCapsule) && (inEnchufe.capsuleHaveSomething) 
+		{
+			maxConectRad = maxConectRadStandard-8;
+			minConectRad = minConectRadStandard-8;
+			
+			if (inEnchufe) && (!inEnchufe.enchufeActive)
+			&& (inEnchufe.abierto) && (!inEnchufe.enchufeOvercharged)
+			{
+				if (radi > minConectRad)
+				{
+					radi-=0.25;
+				}
+				else
+				{
+					radi = maxConectRad;
+				}
+				draw_set_color(c_white)
+				draw_circle(inEnchufe.x-lengthdir_x(10,inEnchufe._angle+90), inEnchufe.y-lengthdir_y(10,inEnchufe._angle+90), radi+0.5, true)
+				draw_circle(inEnchufe.x-lengthdir_x(10,inEnchufe._angle+90), inEnchufe.y-lengthdir_y(10,inEnchufe._angle+90), radi, true)
+				draw_circle(inEnchufe.x-lengthdir_x(10,inEnchufe._angle+90), inEnchufe.y-lengthdir_y(10,inEnchufe._angle+90), minConectRad, true)
+				draw_circle(inEnchufe.x-lengthdir_x(10,inEnchufe._angle+90), inEnchufe.y-lengthdir_y(10,inEnchufe._angle+90), minConectRad+0.3, true)
+			}
+		}
+		else if (inEnchufe.isPETA_F) 
+		{
+			maxConectRad = maxConectRadStandard-10;
+			minConectRad = minConectRadStandard-10;
+			
+			if (inEnchufe) && (!inEnchufe.enchufeActive)
+			&& (inEnchufe.abierto) && (!inEnchufe.enchufeOvercharged)
+			{
+				if (radi > minConectRad)
+				{
+					radi-=0.25;
+				}
+				else
+				{
+					radi = maxConectRad;
+				}
+				draw_set_color(c_white)
+				draw_circle(inEnchufe.x, inEnchufe.y, radi+0.5, true)
+				draw_circle(inEnchufe.x, inEnchufe.y, radi, true)
+				draw_circle(inEnchufe.x, inEnchufe.y, minConectRad, true)
+				draw_circle(inEnchufe.x, inEnchufe.y, minConectRad + 0.3, true)
+			}
+		}
 		else
 		{
 			maxConectRad = maxConectRadStandard;
