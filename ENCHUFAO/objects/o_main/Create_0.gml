@@ -14,11 +14,11 @@ global.spriteKilledBy = noone;
 global.assistedSlowmo = false;
 global.assistSlowmoIsOn = false;
 
-global.radarIsOn = true;
-global.energyRadar = true;
-global.laserRadar = true;
-global.hpRadar = true;
-global.ammoRadar = true;
+global.radarIsOn = false;
+global.energyRadar = false;
+global.laserRadar = false;
+global.hpRadar = false;
+global.ammoRadar = false;
 
 global.assistedAim = false;
 

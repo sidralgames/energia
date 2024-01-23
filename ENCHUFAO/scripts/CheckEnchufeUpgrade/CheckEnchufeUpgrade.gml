@@ -524,7 +524,7 @@ function CheckEnchufeUpgrade()
 					}
 				}
 		
-				global.laserDamage+=0.5;
+				global.laserDamage+=0.35;
 				global.laserWidth+=2;
 				
 			}break;

@@ -1,5 +1,7 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+inScreen =  (x > __view_get( e__VW.XView, 0 )-50 && x < __view_get( e__VW.XView, 0 )+710) &&
+(y > __view_get( e__VW.YView, 0 )-50 && y < __view_get( e__VW.YView, 0 )+410)
 
 switch(inside)
 {
@@ -136,6 +138,147 @@ switch(inside)
 		if (_hp <= 0) && (capsuleHaveSomething)
 		{
 			instance_destroy(enemyFake);
+			if (o_playerShip.plugged) && (charging)
+			{
+				with (o_playerShip)
+				{
+					Unplug();
+				}
+			}
+			instance_destroy();
+			instance_create(x,y,o_explo2);
+		}
+		
+	}break;
+	
+	case "Bomb":
+	{
+		if instance_exists(bombFake)
+		{
+			bombFake.image_angle = _angle;
+			bombFake.x = x;
+			bombFake.y = y;
+		}
+		
+		if (charge >= maxCharge)
+		{
+			if (capsuleHaveBomb)
+			{
+				instance_destroy(bombFake);
+				bomb = choose(o_BombpickUp, o_bombMine, o_bombEnemy);
+				newBomb = instance_create_layer(x,y, "Enemies", bomb);
+
+				capsuleHaveBomb = false;
+				capsuleHaveSomething = false;
+				
+				with (o_playerShip)
+				{
+					Unplug();
+				}
+
+				instance_destroy();
+			}
+		}
+		
+		if (_hp <= 0) && (capsuleHaveSomething)
+		{
+			instance_destroy(bombFake);
+			if (o_playerShip.plugged) && (charging)
+			{
+				with (o_playerShip)
+				{
+					Unplug();
+				}
+			}
+			instance_destroy();
+			instance_create(x,y,o_explo2);
+		}
+		
+	}break;
+	
+	case "Radar":
+	{
+		if instance_exists(radarFake)
+		{
+			radarFake.image_angle = _angle;
+			radarFake.x = x;
+			radarFake.y = y;
+		}
+		
+		if (charge >= maxCharge)
+		{
+			if (capsuleHaveRadar)
+			{
+				instance_destroy(radarFake);
+				
+				newRadar= instance_create_layer(x,y, "Enemies", o_radarPickup);
+
+				capsuleHaveRadar = false;
+				capsuleHaveSomething = false;
+				
+				with (o_playerShip)
+				{
+					Unplug();
+				}
+
+				instance_destroy();
+			}
+		}
+		
+		if (_hp <= 0) && (capsuleHaveSomething)
+		{
+			instance_destroy(radarFake);
+			if (o_playerShip.plugged) && (charging)
+			{
+				with (o_playerShip)
+				{
+					Unplug();
+				}
+			}
+			instance_destroy();
+			instance_create(x,y,o_explo2);
+		}
+		
+	}break;
+	
+	case "SlowMo":
+	{
+		if instance_exists(slowFake)
+		{
+			slowFake.image_angle = _angle;
+			slowFake.x = x;
+			slowFake.y = y;
+		}
+		
+		if (charge >= maxCharge)
+		{
+			if (capsuleHaveSlowMo)
+			{
+				slowMoPickUps = random_range(50,70)
+				instance_destroy(slowFake);
+				
+				for (i = 0; i < slowMoPickUps; i++)
+				{
+					slowmoPart = instance_create_layer(x,y,"Enchufes", o_slowMoPickUp)
+					slowmoPart._hpush = random_range(-1.5,1.5);
+					slowmoPart._vpush = random_range(-1.5,1.5);
+				}
+
+				capsuleHaveSlowMo = false;
+				capsuleHaveSomething = false;
+				
+				with (o_playerShip)
+				{
+					Unplug();
+				}
+
+				instance_destroy();
+			}
+		}
+		
+		if (_hp <= 0) && (capsuleHaveSomething)
+		{
+			instance_destroy(slowFake);
 			if (o_playerShip.plugged) && (charging)
 			{
 				with (o_playerShip)

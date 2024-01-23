@@ -30,7 +30,7 @@ function DrawLevelCorridor()
 				var oddsPETAPickUp = 300;
 				var oddsShieldPickUp = 300;
 				
-				var oddsCapsule = 700;
+				var oddsCapsule = 500;
 				
 				//var oddsBomb = 300;
 				//var oddsUpgradeEnchufe = 300;
@@ -49,10 +49,23 @@ function DrawLevelCorridor()
 					strandedShipOK = true;
 				}
 				
-				if (irandom(oddsPETAPickUp) == oddsPETAPickUp) && (PetasInLevel < PetasInLevelMax) //&& global.level > 2
+				if (irandom(oddsPETAPickUp) == oddsPETAPickUp) && (PetasInLevel < PetasInLevelMax)//&& global.level > 2
 				{
-					instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_PETApickUp); 
-					PetasInLevel +=1;
+					nextPetaPU= instance_nearest(exM, eyM, o_PETApickUp)
+					
+					if instance_exists(o_PETApickUp)
+					{
+						if (point_distance(exM,eyM, nextPetaPU.x, nextPetaPU.y) > 500)
+						{
+							instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_PETApickUp); 
+							PetasInLevel +=1;
+						}
+					}
+					else
+					{
+						instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_PETApickUp); 
+						PetasInLevel +=1;
+					}
 				}
 				
 				//----- CREATE BATTERYS ------//
@@ -71,16 +84,25 @@ function DrawLevelCorridor()
 				//	instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_BombpickUp); 
 				//	BombsInLevel +=1;
 				//}
-				if (irandom(oddsCapsule) == oddsCapsule) && (capsulesInLevel < capsulesInLevelMax) //&& global.level > 2
-				{
-					instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_capsule); 
-					capsulesInLevel +=1;
-				}
+				
 				
 				if (irandom(oddsShieldPickUp) == oddsShieldPickUp) && (ShieldsInLevel < ShieldsInLevelMax) 
 				{
-					instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_ShieldpickUp); 
-					ShieldsInLevel +=1;
+					nextShieldPU = instance_nearest(exM, eyM, o_ShieldpickUp)
+					
+					if instance_exists(o_ShieldpickUp)
+					{
+						if (point_distance(exM,eyM, nextShieldPU.x, nextShieldPU.y) > 500)
+						{
+							instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_ShieldpickUp); 
+							ShieldsInLevel +=1;
+						}
+					}
+					else
+					{
+						instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_ShieldpickUp); 
+						ShieldsInLevel +=1;
+					}
 				}
 				
 				if (irandom(oddsEnchufeEnergy) == oddsEnchufeEnergy) && (enchufe0 = false)
@@ -169,6 +191,28 @@ function DrawLevelCorridor()
 						peta = choose(o_enchufePETA, o_enchufePETAAmmo, o_enchufePETAHP, o_enchufePETALaser)
 						instance_create_layer(exM,eyM,"Enchufes",peta); 
 						PETAs += 1;
+					}
+					
+					if (irandom(oddsCapsule) == oddsCapsule) && (capsulesInLevel < capsulesInLevelMax) //&& global.level > 2
+					{
+						nextCapsule= instance_nearest(exM, eyM, o_capsule)
+						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
+						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 80)
+						{
+							if instance_exists(o_capsule)
+							{
+								if (point_distance(exM,eyM, nextCapsule.x, nextCapsule.y) > 500)
+								{
+									instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_capsule); 
+									capsulesInLevel +=1;
+								}
+							}
+							else
+							{
+								instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_capsule); 
+								capsulesInLevel +=1;
+							}
+						}
 					}
 				}
 		    } 

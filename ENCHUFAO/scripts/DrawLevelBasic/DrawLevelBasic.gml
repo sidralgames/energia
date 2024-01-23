@@ -67,25 +67,6 @@ function DrawLevelBasic()
 					}
 				}
 				
-				if (irandom(oddsCapsule) == oddsCapsule) && (capsulesInLevel < capsulesInLevelMax) //&& global.level > 2
-				{
-					nextCapsule= instance_nearest(exM, eyM, o_capsule)
-					
-					if instance_exists(o_capsule)
-					{
-						if (point_distance(exM,eyM, nextCapsule.x, nextCapsule.y) > 500)
-						{
-							instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_capsule); 
-							capsulesInLevel +=1;
-						}
-					}
-					else
-					{
-						instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_capsule); 
-						capsulesInLevel +=1;
-					}
-				}
-				
 				//----- CREATE BATTERYS ------//
 				//if (irandom(oddsUpgradeEnchufe) == oddsUpgradeEnchufe) && (UpgradesEnchufesInLevel < UpgradesEnchufesInLevelMax) //&& global.level > 2
 				//{
@@ -208,6 +189,28 @@ function DrawLevelBasic()
 						peta = choose(o_enchufePETA, o_enchufePETAAmmo, o_enchufePETAHP, o_enchufePETALaser)
 						instance_create_layer(exM,eyM,"Enchufes",peta); 
 						PETAs += 1;
+					}
+					
+					if (irandom(oddsCapsule) == oddsCapsule) && (capsulesInLevel < capsulesInLevelMax) //&& global.level > 2
+					{
+						nextCapsule= instance_nearest(exM, eyM, o_capsule)
+						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
+						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 80)
+						{
+							if instance_exists(o_capsule)
+							{
+								if (point_distance(exM,eyM, nextCapsule.x, nextCapsule.y) > 500)
+								{
+									instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_capsule); 
+									capsulesInLevel +=1;
+								}
+							}
+							else
+							{
+								instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_capsule); 
+								capsulesInLevel +=1;
+							}
+						}
 					}
 				}
 		    } 

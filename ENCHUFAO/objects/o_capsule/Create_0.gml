@@ -18,6 +18,9 @@ sprite_enchufePluged = s_capsuleOpen;
 
 inside = choose(
 "Battery","Battery","Battery",
+"Bomb","Bomb","Bomb",
+"SlowMo", "SlowMo", "SlowMo",
+"Radar","Radar",
 "Enemy", "Enemy",
 "Sidekick");
 
@@ -48,6 +51,30 @@ switch(inside)
 		capsuleHaveEnemy = true;
 		enemyFake = instance_create(x,y,o_strandedFake);
 		enemyFake.depth = depth+1;
+	
+	}break;
+	
+	case "Bomb":
+	{
+		capsuleHaveBomb = true;
+		bombFake = instance_create(x,y,o_bombFake);
+		bombFake.depth = depth+1;
+	
+	}break;
+	
+	case "Radar":
+	{
+		capsuleHaveRadar = true;
+		radarFake = instance_create(x,y,o_bombFake);
+		radarFake.depth = depth+1;
+	
+	}break;
+	
+	case "SlowMo":
+	{
+		capsuleHaveSlowMo = true;
+		slowFake = instance_create(x,y,o_slowMoFake);
+		slowFake.depth = depth+1;
 	
 	}break;
 	
