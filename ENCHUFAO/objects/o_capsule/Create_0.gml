@@ -20,4 +20,7 @@ o_ExploBulletsPickUp, o_PushingBulletsPickUp, o_SplitBulletsPickUp, o_BurningBul
 batteryCreated = instance_create(x,y,battery);
 batteryCreated.inCapsule = true;
 batteryCreated.depth = depth+1;
-scale = 0.8;
+scale = 0.7;
+_hpMax = 10;
+_hp = _hpMax;
+image_speed =0;

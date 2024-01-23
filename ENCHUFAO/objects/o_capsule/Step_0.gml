@@ -29,6 +29,9 @@ if (charge >= maxCharge)
 {
 	if (capsuleHaveBattery)
 	{
+		batteryCreated.vspeed = _vpush;
+		batteryCreated.hspeed = _hpush;
+		batteryCreated.depth = depth-1;
 		batteryCreated.inCapsule = false;
 		batteryCreated.image_angle = _angle;
 		x = x+lengthdir_x(15,_angle-90);
@@ -74,6 +77,31 @@ if (canBeEnchufatedCont <=0)
 //		lightEnchufe.light [| eLight.Y] = y
 //	}
 //}
+if (_hp > (_hpMax/2 + _hpMax/3))
+{
+	image_index = 0;
+}
+else if (_hp > (_hpMax/3)) && (_hp <=(_hpMax/2 + _hpMax/3))
+{
+	image_index = 1;
+}
+else
+{
+	image_index = 2;
+}
 
+if (_hp <= 0)
+{
+	instance_destroy(batteryCreated);
+	if (o_playerShip.plugged) && (charging)
+	{
+		with (o_playerShip)
+		{
+			Unplug();
+		}
+	}
+	instance_destroy();
+	instance_create(x,y,o_explo2);
+}
 
 

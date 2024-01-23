@@ -2,6 +2,10 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SetupLevelCorridor()
 {
+	
+	capsulesInLevel = 0;
+	capsulesInLevelMax = 3;
+	
 	totalFloor = 0;
 	maxFloor = 950;
 	minFloor = 600;

@@ -16,7 +16,7 @@ if (inEnemy = false)  && (inCapsule = false)
 
 	if instance_exists(o_playerShip)
 	{
-		y = yy + lengthdir_y(shift, direction + dir1);	
+		//y = yy + lengthdir_y(shift, direction + dir1);	
 	
 		overBattery = collision_circle(x,y,30,o_playerShip,false,true);
 

@@ -21,7 +21,7 @@ function DrawLevelBasic()
 				
 				var oddsEnchufeBomb = 300;
 				var oddsEnchufePETA = 1000;
-				var oddsCapsule = 500;
+				var oddsCapsule = 700;
 				
 				var oddsEnchufeFinal = 300;
 				

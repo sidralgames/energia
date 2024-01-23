@@ -30,6 +30,8 @@ function DrawLevelCorridor()
 				var oddsPETAPickUp = 300;
 				var oddsShieldPickUp = 300;
 				
+				var oddsCapsule = 700;
+				
 				//var oddsBomb = 300;
 				//var oddsUpgradeEnchufe = 300;
 				
@@ -69,6 +71,11 @@ function DrawLevelCorridor()
 				//	instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_BombpickUp); 
 				//	BombsInLevel +=1;
 				//}
+				if (irandom(oddsCapsule) == oddsCapsule) && (capsulesInLevel < capsulesInLevelMax) //&& global.level > 2
+				{
+					instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_capsule); 
+					capsulesInLevel +=1;
+				}
 				
 				if (irandom(oddsShieldPickUp) == oddsShieldPickUp) && (ShieldsInLevel < ShieldsInLevelMax) 
 				{
