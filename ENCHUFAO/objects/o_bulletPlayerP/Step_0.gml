@@ -3,13 +3,16 @@
 
 hpBullet--;
 
-if (hpBounce > 0)
+if (global.bulletsGhostIsOn == false)
 {
-	CollisionTileBounce()
-}
-else
-{
-	CollisionTileDestroy();
+	if (hpBounce > 0)
+	{
+		CollisionTileBounce()
+	}
+	else
+	{
+		CollisionTileDestroy();
+	}
 }
 if (hpBullet <= 0) || (hp < 0)
 {

@@ -56,4 +56,13 @@ function BulletDamage()
 			burned = true;	
 		}
 	}
+	
+		//--- BURN ---//
+	if (global.bulletsElectroIsOn)
+	{
+		if (isShield == false) && (electrocutated == false)
+		{
+			electrocutated = true;	
+		}
+	}
 }

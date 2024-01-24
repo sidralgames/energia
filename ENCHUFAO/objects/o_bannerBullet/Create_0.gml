@@ -30,6 +30,14 @@ else if (global.havePickedPiercingBullets)
 {
 	sprite_index = s_banner_Piercing;
 }
+else if (global.havePickedElectroBullets)
+{
+	sprite_index = s_banner_Electro;
+}
+else if (global.havePickedGhostBullets)
+{
+	sprite_index = s_banner_Ghost;
+}
 
 
 

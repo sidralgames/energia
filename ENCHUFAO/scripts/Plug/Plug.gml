@@ -68,6 +68,8 @@ function Plug()
 			global.havePickedSplitBullets = false;
 			global.havePickedPushingBullets = false;
 			global.havePickedBurningBullets = false;
+			global.havePickedElectroBullets = false;
+			global.havePickedGhostBullets = false;
 			
 		}
 		else

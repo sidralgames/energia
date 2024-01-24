@@ -18,10 +18,11 @@ else
 	part_type_size(global.balaP, global.superShot+(global.amplifyPowerAmmo/2), 0.75+global.superShot+(global.amplifyPowerAmmo/2),-0.075,0);
 }
 part_type_orientation(global.balaP,0,359,0,0,0)
-part_type_alpha2(global.balaP, 1,0.5);
+part_type_alpha2(global.balaP, 1*global.alhpaGhost ,0.5);
 part_type_speed(global.balaP,0,0,0,0);
 part_type_direction(global.balaP,140,160,0,1);
 part_type_life(global.balaP, 5,10);
+
 
 
 

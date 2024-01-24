@@ -13,6 +13,8 @@ function AddUpgradeEnchufeLaser()
 		dancingBullets: false,
 		bombBullets: false,
 		burnBullets: false,
+		electroBullets: false,
+		ghostBullets: false,
 		
 	})
 	

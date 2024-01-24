@@ -73,6 +73,14 @@ if instance_exists(worm) & (hurts) && (Metal.isVisible = false) && (_hp > 0)
 		}
 	}
 	
+	if (global.bulletsElectroIsOn)
+	{
+		if (worm.isShield == false) && (worm.electrocutated == false)
+		{
+			worm.electrocutated = true;	
+		}
+	}
+	
 	flashAlpha = 1;
 }
 else

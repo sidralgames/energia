@@ -15,6 +15,14 @@ if (global.enemiesKilledTotalAch >= 500) && (global.ach500Enemies = 0)
 
 
 
+if (global.bulletsGhostIsOn = true)
+{
+	global.alhpaGhost = 0.8;
+}
+else
+{
+	global.alhpaGhost = 1;
+}
 if instance_exists(o_playerShip) //&& (room != Sala_Inicio)
 {
 	if (global.energy >= global.energyMax)

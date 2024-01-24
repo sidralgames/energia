@@ -48,6 +48,8 @@ function Unplug()
 	global.bulletsBifurcateIsOn = false; 
 	global.bulletsDanceIsOn = false; 
 	global.bulletsBurnIsOn = false; 
+	global.bulletsElectroIsOn = false;
+	global.bulletsGhostIsOn = false;
 
 	o_charger.scale = 1;
 	

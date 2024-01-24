@@ -33,5 +33,13 @@ function CheckUpgradesOfEnchufe(argument0, argument1)
 		{
 			global.bulletsBurnIsOn = true;	
 		}
+		if (mods.electroBullets == true)
+		{
+			global.bulletsElectroIsOn = true;	
+		}
+		if (mods.ghostBullets == true)
+		{
+			global.bulletsGhostIsOn = true;	
+		}
 	}
 }

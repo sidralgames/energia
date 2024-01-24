@@ -67,7 +67,11 @@ global.bulletsAeSmartIsOn = false; /////////// OK
 global.bulletsBifurcateIsOn = false; /////// OK
 global.bulletsDanceIsOn = false; ////////////OK movimiento en s
 global.bulletsBurnIsOn = false;
+global.bulletsElectroIsOn = false;
+global.bulletsGhostIsOn = false;
 
+
+global.alhpaGhost = 1;
 
 global.havePickedBouncingBullets = false;
 global.havePickedSmartBullets = false;
@@ -76,6 +80,8 @@ global.havePickedExploBullets = false;
 global.havePickedSplitBullets = false;
 global.havePickedPushingBullets = false;
 global.havePickedBurningBullets = false;
+global.havePickedElectroBullets = false;
+global.havePickedGhostBullets = false;
 
 //------LASER MODIFICATORS-----------//
 global.laserBurnEnemies = true; /////////// OK

@@ -17,20 +17,18 @@ energy = true;
 sprite_enchufePluged = s_capsuleOpen;
 
 inside = choose(
-"Battery","Battery","Battery",
-"Bomb","Bomb","Bomb",
-"SlowMo", "SlowMo", "SlowMo",
-"Radar","Radar",
-"Enemy", "Enemy",
-"Sidekick");
+"Battery","Battery","Battery");
 
 switch(inside)
 {
 	case "Battery":
 	{
 		capsuleHaveBattery = true;
-		battery = choose(o_smartBulletsPickUp, o_BouncingBulletsPickUp, o_piercingBulletsPickUp,
-		o_PushingBulletsPickUp, o_SplitBulletsPickUp, o_BurningBulletsPickUp)
+		battery = choose(
+		o_smartBulletsPickUp, o_BouncingBulletsPickUp, 
+		o_piercingBulletsPickUp, o_PushingBulletsPickUp,
+		o_SplitBulletsPickUp, o_BurningBulletsPickUp,
+		o_ElectroBulletsPickUp, o_GhostBulletsPickUp)
 
 		batteryCreated = instance_create(x,y,battery);
 		batteryCreated.inCapsule = true;
