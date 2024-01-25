@@ -16,5 +16,5 @@ image_yscale = 0.5;
 hp = 200;
 _vpush = 0;
 _hpush= 0;
-
+precisionHole = 1;
 

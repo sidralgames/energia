@@ -8,6 +8,9 @@ event_inherited();
 bulletSpeed = 0;
 hpBullet = 200;
 precision = 4;
+
+precisionHole = 1;
+
 if (global.piercingShot)
 {
 	hp = 1;

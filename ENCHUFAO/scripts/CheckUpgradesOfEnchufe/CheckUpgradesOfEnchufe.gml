@@ -15,7 +15,7 @@ function CheckUpgradesOfEnchufe(argument0, argument1)
 		}
 		if (mods.smartBullets == true)
 		{
-			global.bulletsAeSmartIsOn = true;	
+			global.bulletsAreSmartIsOn = true;	
 		}
 		if (mods.pushingBullets == true)
 		{

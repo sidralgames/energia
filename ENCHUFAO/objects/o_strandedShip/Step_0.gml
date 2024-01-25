@@ -49,7 +49,6 @@ else
 
 	if (alarm[6] <= 0)
 	{
-		strandedSpeed = random_range(minSpeed,maxSpeed)	
 		alarm[6] = random_range(120,400)
 	}
 

@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+randomize();
 
 
 
@@ -9,15 +9,29 @@
 // Inherit the parent event
 event_inherited();
 
+energy = false;
+ammo = false;
+hp = false;
+laser = false;
+
+_sprite = irandom(3)
+
+
+
 IsEnchufeCapsule = true;
 capsuleHaveSomething = true;
 
 maxCharge = 200;
-energy = true;
+
 sprite_enchufePluged = s_capsuleOpen;
 
 inside = choose(
-"Battery","Battery","Battery");
+"Battery","Battery","Battery",
+"Bomb","Bomb","Bomb",
+"SlowMo","SlowMo","SlowMo",
+"Enemy","Enemy",
+"Radar",
+"Sidekick");
 
 switch(inside)
 {
@@ -77,6 +91,38 @@ switch(inside)
 	}break;
 	
 }
+
+switch(_sprite)
+{
+	case 0:
+	{
+		sprite_index = s_capsule
+		energy = true;
+		
+	}break;
+	
+	case 1:
+	{
+		sprite_index = s_capsuleAmmo
+		ammo = true;
+		
+	}break;
+	
+	case 2:
+	{
+		sprite_index = s_capsuleHP
+		hp = true;
+		
+	}break;
+	
+	case 3:
+	{
+		sprite_index = s_capsuleLaser
+		laser = true;
+		
+	}break;
+}
+
 
 scale = 1;
 _hpMax = 8;

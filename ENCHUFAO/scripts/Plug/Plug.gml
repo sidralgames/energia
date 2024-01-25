@@ -8,8 +8,12 @@ function Plug()
 	
 	audio_play_sound_on(global.audioEmitter,choose(snd_plugged, snd_plugged_2, snd_plugged_3),false, 50);
 	enchufe = inEnchufe;
-	enchufe.enchufeActive = true;
-	enchufe.occupied = true;
+	
+	if (enchufe.enchufeTrapper == false)
+	{
+		enchufe.enchufeActive = true;
+		enchufe.occupied = true;
+	}
 	
 	global.plugging = true;
 	

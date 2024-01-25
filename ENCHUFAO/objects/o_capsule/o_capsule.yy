@@ -40,6 +40,9 @@
     "name": "s_capsule",
     "path": "sprites/s_capsule/s_capsule.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "s_capsule",
+    "path": "sprites/s_capsule/s_capsule.yy",
+  },
   "visible": true,
 }

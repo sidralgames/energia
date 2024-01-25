@@ -19,7 +19,7 @@ if (hpBullet <= 0) || (hp < 0)
 	instance_destroy();	
 }
 
-if (global.bulletsAeSmartIsOn)
+if (global.bulletsAreSmartIsOn)
 {
 	enemyNear = instance_nearest(x,y,o_enemyP);
 	if (instance_exists(enemyNear)) && (point_distance(x,y, enemyNear.x, enemyNear.y) < 100)
@@ -29,6 +29,17 @@ if (global.bulletsAeSmartIsOn)
 	}
 	
 }
+
+
+blackHoleNear = instance_nearest(x,y,o_blackHole);
+if (instance_exists(blackHoleNear)) && (point_distance(x,y, blackHoleNear.x, blackHoleNear.y) < 150)
+{
+	var a = point_direction(x,y, blackHoleNear.x, blackHoleNear.y);
+	direction += sign(dsin(a - direction)) * (precisionHole * min(1, global.relativeSpeed+0.2));
+}
+	
+
+
 
  if (global.bulletsDanceIsOn)
  {

@@ -30,7 +30,7 @@ function DrawLevelCorridor()
 				var oddsPETAPickUp = 300;
 				var oddsShieldPickUp = 300;
 				
-				var oddsCapsule = 500;
+				var oddsCapsule = 200;
 				
 				//var oddsBomb = 300;
 				//var oddsUpgradeEnchufe = 300;

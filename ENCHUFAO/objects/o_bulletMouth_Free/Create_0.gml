@@ -10,5 +10,7 @@ if tile_meeting(x,y,"Tiles")
 {
 	instance_destroy();
 }
+
+precisionHole = 1;
 enemyShooter = s_enemyMouth;
 shooterTrail = false;

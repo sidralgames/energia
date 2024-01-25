@@ -8,29 +8,29 @@ image_angle += max(0.5*sign(_hpush), 5*(abs(_hpush)),0.5*sign(_vpush), 5*(abs(_v
 
 MoveZeroGrv();
 
-
-if instance_exists(o_playerShip)
+if alarm[1] <= 0
 {
-	if (point_distance(x,y, o_playerShip.x, o_playerShip.y) <= 30)
+	if instance_exists(o_playerShip)
 	{
-		direction = point_direction(x,y, o_playerShip.x, o_playerShip.y)
-		speed = 4;
-	}
-	
-	if (point_distance(x,y, o_playerShip.x, o_playerShip.y) <= 5)
-	{
-		if (global.slowMoTime < (global.slowMoTimeMax - 5))
+		if (point_distance(x,y, o_playerShip.x, o_playerShip.y) <= 30)
 		{
-			global.slowMoTime +=5;
-			o_main.alarm[1] = 90;
+			direction = point_direction(x,y, o_playerShip.x, o_playerShip.y)
+			speed = 4;
 		}
-		global.XPpoints+=1;
-		audio_play_sound_on(global.audioEmitter,choose(snd_pickDrop_1,snd_pickDrop_2,snd_pickDrop_3), false, 50)
-		instance_destroy();
+	
+		if (point_distance(x,y, o_playerShip.x, o_playerShip.y) <= 5)
+		{
+			if (global.slowMoTime < (global.slowMoTimeMax - 5))
+			{
+				global.slowMoTime +=5;
+				o_main.alarm[1] = 90;
+			}
+			global.XPpoints+=1;
+			audio_play_sound_on(global.audioEmitter,choose(snd_pickDrop_1,snd_pickDrop_2,snd_pickDrop_3), false, 50)
+			instance_destroy();
+		}
 	}
 }
-
-
 
 hp --;
 

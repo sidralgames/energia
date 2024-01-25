@@ -32,8 +32,8 @@ function SetStrandedShip()
 		strandedShipCableStat = 1.5;
 		strtandedPrecision = 2.75;
 		weight = 1;
-		minSpeed = 1.95;
-		maxSpeed = 3.25;
+		minSpeed = 1.5;
+		maxSpeed = 3;
 		hpMax = 4;
 		hp = global.strandedShipBlueHP;
 		standedShipfireRate = 20;
@@ -43,7 +43,7 @@ function SetStrandedShip()
 		strandedShipCableStat = 2.5;	
 		strtandedPrecision = 2;
 		weight = 1;
-		minSpeed = 1.75;
+		minSpeed = 1.5;
 		maxSpeed = 2.75;
 		hpMax = 4;
 		hp = global.strandedShipDarkHP;
@@ -59,13 +59,14 @@ function SetStrandedShip()
 		hpMax = 4;
 		hp = global.strandedShipRedHP;
 		standedShipfireRate = 25;
+
 	}
 	else if (sprite = splayer_Purple)
 	{
 		strandedShipCableStat = 2.5;
 		strtandedPrecision = 2;
 		weight = 1;
-		minSpeed = 1.75;
+		minSpeed = 1.5;
 		maxSpeed = 2.75;
 		hpMax = 4;
 		hp = global.strandedShipPurpleHP;
@@ -76,7 +77,7 @@ function SetStrandedShip()
 		strandedShipCableStat = 2.5;
 		strtandedPrecision = 2;
 		weight = 1;
-		minSpeed = 1.75;
+		minSpeed = 1.5;
 		maxSpeed = 2.75;
 		hpMax = 4;
 		hp = global.strandedShipMP3HP;

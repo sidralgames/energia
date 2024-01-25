@@ -3,6 +3,9 @@
 inScreen =  (x > __view_get( e__VW.XView, 0 )-50 && x < __view_get( e__VW.XView, 0 )+710) &&
 (y > __view_get( e__VW.YView, 0 )-50 && y < __view_get( e__VW.YView, 0 )+410)
 
+
+
+
 switch(inside)
 {
 	case "Battery":
@@ -167,6 +170,11 @@ switch(inside)
 				instance_destroy(bombFake);
 				bomb = choose(o_BombpickUp, o_bombMine, o_bombEnemy);
 				newBomb = instance_create_layer(x,y, "Enemies", bomb);
+				
+				if (bomb=o_bombMine)
+				{
+					newBomb.bulletSpeed = 0;
+				}
 
 				capsuleHaveBomb = false;
 				capsuleHaveSomething = false;

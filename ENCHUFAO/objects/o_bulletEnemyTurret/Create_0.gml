@@ -16,3 +16,4 @@ _vpush = 0;
 _hpush= 0;
 
 
+precisionHole = 1;

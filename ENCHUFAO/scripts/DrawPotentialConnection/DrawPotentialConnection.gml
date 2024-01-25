@@ -4,7 +4,7 @@ function DrawPotentialConnection()
 {
 	if instance_exists(inEnchufe)
 	{
-		if (inEnchufe.IsEnchufeBoss)
+		if (inEnchufe.IsEnchufeBoss) && (inEnchufe.isPluggable == true)
 		{
 			maxConectRad = maxConectRadBoss;
 			minConectRad = minConectRadBoss;
@@ -27,7 +27,7 @@ function DrawPotentialConnection()
 			}
 			
 		}
-		else if (inEnchufe.IsEnchufeCapsule) && (inEnchufe.capsuleHaveSomething) 
+		else if (inEnchufe.IsEnchufeCapsule) && (inEnchufe.capsuleHaveSomething) && (inEnchufe.isPluggable == true)
 		{
 			maxConectRad = maxConectRadStandard-8;
 			minConectRad = minConectRadStandard-8;
@@ -50,7 +50,7 @@ function DrawPotentialConnection()
 				draw_circle(inEnchufe.x-lengthdir_x(10,inEnchufe._angle+90), inEnchufe.y-lengthdir_y(10,inEnchufe._angle+90), minConectRad+0.3, true)
 			}
 		}
-		else if (inEnchufe.isPETA_F) 
+		else if (inEnchufe.isPETA_F) && (inEnchufe.isPluggable == true)
 		{
 			maxConectRad = maxConectRadStandard-10;
 			minConectRad = minConectRadStandard-10;
@@ -73,7 +73,7 @@ function DrawPotentialConnection()
 				draw_circle(inEnchufe.x, inEnchufe.y, minConectRad + 0.3, true)
 			}
 		}
-		else
+		else if (inEnchufe.isPluggable == true)
 		{
 			maxConectRad = maxConectRadStandard;
 			minConectRad = minConectRadStandard;

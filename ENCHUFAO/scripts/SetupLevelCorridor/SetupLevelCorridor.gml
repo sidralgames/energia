@@ -4,7 +4,7 @@ function SetupLevelCorridor()
 {
 	
 	capsulesInLevel = 0;
-	capsulesInLevelMax = 3;
+	capsulesInLevelMax = 4;
 	
 	totalFloor = 0;
 	maxFloor = 950;

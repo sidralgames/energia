@@ -6,7 +6,9 @@
 //type = collisionType.custom;
 occupied = false;
 
+isPluggable = true;
 
+enchufeTrapper = false;
 canBeEnchufated = true;
 canBeEnchufatedCont = 0;
 isMimic = false;

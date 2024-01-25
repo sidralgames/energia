@@ -132,8 +132,9 @@ if (inEnchufe)
 {	
 	if (pluggedToStrandedShip)
 	{
-		if (inEnchufe.abierto = true) && (inEnchufe.contOvercharged <=0)
+		if (inEnchufe.abierto == true) && (inEnchufe.contOvercharged <=0)
 		&& (inEnchufe.dying == false) && (inEnchufe.occupied = false)
+		&& (inEnchufe.isPluggable == true)
 		{
 			if (key_x)
 			{
@@ -155,8 +156,9 @@ if (inEnchufe)
 	{
 		if (alarm[8] <= 0)
 		{
-			if (inEnchufe.abierto = true) && (inEnchufe.contOvercharged <=0)
-			&& (inEnchufe.dying == false) && (!pluggedToStrandedShip) && (inEnchufe.occupied = false)
+			if (inEnchufe.abierto == true) && (inEnchufe.contOvercharged <=0)
+			&& (inEnchufe.dying == false) && (!pluggedToStrandedShip)
+			&& (inEnchufe.occupied = false) && (inEnchufe.isPluggable == true)
 			{
 				if (key_x)
 				{

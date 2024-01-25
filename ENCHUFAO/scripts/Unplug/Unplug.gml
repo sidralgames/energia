@@ -44,7 +44,7 @@ function Unplug()
 	global.bulletsPushenemiesIsOn = false;
 	global.bulletsAreBombs = false;
 	global.bulletsDestroyBulletsIsOn = false; 
-	global.bulletsAeSmartIsOn = false; 
+	global.bulletsAreSmartIsOn = false; 
 	global.bulletsBifurcateIsOn = false; 
 	global.bulletsDanceIsOn = false; 
 	global.bulletsBurnIsOn = false; 

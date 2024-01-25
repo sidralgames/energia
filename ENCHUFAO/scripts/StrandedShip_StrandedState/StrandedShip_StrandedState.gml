@@ -19,8 +19,9 @@ function StrandedShip_StrandedState()
 	{	
 		if (chargedInEnergy) && (chargedInHp)
 		{
-			if point_distance(x,y,o_playerShip.x, o_playerShip.y) > 50	
+			if point_distance(x,y,o_playerShip.x, o_playerShip.y) > 70	
 			{
+					strandedSpeed = lerp(strandedSpeed,maxSpeed,0.05)
 					myPath = path_add();
 					mp_grid_path(gridRoom1, myPath, x, y, o_playerShip.x,  o_playerShip.y, true);
 					changedSpeed = false;
@@ -39,6 +40,7 @@ function StrandedShip_StrandedState()
 				var a = point_direction(x, y, o_playerShip.x+diffX,  o_playerShip.y+diffY);
 				direction += sign(dsin(a - direction)) * (strtandedPrecision * global.relativeSpeed);
 				_angle = direction;
+				strandedSpeed = lerp(strandedSpeed,minSpeed,0.05)
 				speed = strandedSpeed * min(1, global.relativeSpeed+0.2);
 				
 				if (!connected)
