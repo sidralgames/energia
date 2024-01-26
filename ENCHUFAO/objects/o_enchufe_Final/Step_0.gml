@@ -14,7 +14,7 @@ if (place_meeting(x,y+_vpush*1.2,o_enchufeStandard_Father))
 
 Move();
 
-_angle += _hpush*1.5*global.relativeSpeed;
+image_angle += _hpush*1.5*global.relativeSpeed;
 
 
 if (abierto)

@@ -14,7 +14,7 @@ if (place_meeting(x,y+_vpush*1.5,o_enchufe_Father))
 
 Move();
 
-_angle += _hpush*2*global.relativeSpeed;
+image_angle += _hpush*2*global.relativeSpeed;
 
 if (charge >= 200)
 {
@@ -54,3 +54,4 @@ if (canBeEnchufatedCont <=0)
 //		lightEnchufe.light [| eLight.Y] = y
 //	}
 //}
+

@@ -19,6 +19,7 @@ _sprite = irandom(3)
 
 
 IsEnchufeCapsule = true;
+IsEnchufeCapsuleSuper = false;
 capsuleHaveSomething = true;
 
 maxCharge = 200;
@@ -128,3 +129,4 @@ scale = 1;
 _hpMax = 8;
 _hp = _hpMax;
 image_speed =0;
+bnc = 0.8;

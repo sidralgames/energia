@@ -16,7 +16,7 @@ if (place_meeting(x,y+_vpush*1.5,o_enchufe_Father))
 
 Move();
 
-_angle += _hpush*2*global.relativeSpeed;
+image_angle += _hpush*2*global.relativeSpeed;
 
 
 _hpush = clamp(_hpush, -1.4, 1.4)

@@ -5,6 +5,7 @@
 _alpha = 1;
 haveToUpdate = false;
 haveToUpdateCapsule = false;
+haveToUpdateCapsuleSuper = false;
 canCollide = false;
 fric = 0.84;
 verletSystem1 = new verletSystem(fric, 0.0);

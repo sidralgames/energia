@@ -18,13 +18,22 @@ if instance_exists(o_playerShip)
 			}
 			else if (enchufe.IsEnchufeCapsule) && (enchufe.capsuleHaveSomething)
 			{
-				xToPlug = enchufe.x+lengthdir_x(10,enchufe._angle-90)
-				yToPlug = enchufe.y+lengthdir_y(10,enchufe._angle-90)
-				draw_sprite_ext(s_chargerPlugged, 0, xToPlug, yToPlug, o_charger.scale, o_charger.scale, enchufe._angle-90, image_blend, image_alpha)
+				if (enchufe.IsEnchufeCapsuleSuper)
+				{
+					xToPlug = enchufe.x+lengthdir_x(30,enchufe.image_angle-90)
+					yToPlug = enchufe.y+lengthdir_y(30,enchufe.image_angle-90)
+					draw_sprite_ext(s_chargerPlugged, 0, xToPlug, yToPlug, o_charger.scale, o_charger.scale, enchufe.image_angle-90, image_blend, image_alpha)
+				}
+				else
+				{
+					xToPlug = enchufe.x+lengthdir_x(10,enchufe.image_angle-90)
+					yToPlug = enchufe.y+lengthdir_y(10,enchufe.image_angle-90)
+					draw_sprite_ext(s_chargerPlugged, 0, xToPlug, yToPlug, o_charger.scale, o_charger.scale, enchufe.image_angle-90, image_blend, image_alpha)
+				}
 			}
 			else
 			{
-				draw_sprite_ext(s_chargerPlugged, 0, enchufe.x, enchufe.y, o_charger.scale, o_charger.scale, enchufe._angle-90, image_blend, image_alpha)
+				draw_sprite_ext(s_chargerPlugged, 0, enchufe.x, enchufe.y, o_charger.scale, o_charger.scale, enchufe.image_angle-90, image_blend, image_alpha)
 			}
 		}
 	}

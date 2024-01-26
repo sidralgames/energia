@@ -14,7 +14,7 @@ switch(inside)
 		{
 			if (batteryCreated.inCapsule)
 			{
-				batteryCreated.image_angle = _angle;
+				batteryCreated.image_angle = image_angle;
 				batteryCreated.x = x;
 				batteryCreated.y = y;
 			}
@@ -28,14 +28,14 @@ switch(inside)
 				batteryCreated.hspeed = _hpush;
 				batteryCreated.depth = depth-1;
 				batteryCreated.inCapsule = false;
-				batteryCreated._angle = _angle;
+				batteryCreated._angle = image_angle;
 				capsuleHaveBattery = false;
 				capsuleHaveSomething = false;
 				with (o_playerShip)
 				{
 					Unplug();
 				}
-				if (batteryCreated._angle = _angle)
+				if (batteryCreated._angle = image_angle)
 				{
 					instance_destroy();
 				}
@@ -62,7 +62,7 @@ switch(inside)
 	{
 		if instance_exists(strandedFake)
 		{
-			strandedFake.image_angle = _angle;
+			strandedFake.image_angle = image_angle;
 			strandedFake.x = x;
 			strandedFake.y = y;
 		}
@@ -113,7 +113,7 @@ switch(inside)
 	{
 		if instance_exists(enemyFake)
 		{
-			enemyFake.image_angle = _angle;
+			enemyFake.image_angle = image_angle;
 			enemyFake.x = x;
 			enemyFake.y = y;
 		}
@@ -158,7 +158,7 @@ switch(inside)
 	{
 		if instance_exists(bombFake)
 		{
-			bombFake.image_angle = _angle;
+			bombFake.image_angle = image_angle;
 			bombFake.x = x;
 			bombFake.y = y;
 		}
@@ -208,7 +208,7 @@ switch(inside)
 	{
 		if instance_exists(radarFake)
 		{
-			radarFake.image_angle = _angle;
+			radarFake.image_angle = image_angle;
 			radarFake.x = x;
 			radarFake.y = y;
 		}
@@ -253,7 +253,7 @@ switch(inside)
 	{
 		if instance_exists(slowFake)
 		{
-			slowFake.image_angle = _angle;
+			slowFake.image_angle = image_angle;
 			slowFake.x = x;
 			slowFake.y = y;
 		}
@@ -262,14 +262,30 @@ switch(inside)
 		{
 			if (capsuleHaveSlowMo)
 			{
-				slowMoPickUps = random_range(50,70)
 				instance_destroy(slowFake);
 				
-				for (i = 0; i < slowMoPickUps; i++)
+				drop = choose(0,0,1);
+				
+				if (drop = 0)
 				{
-					slowmoPart = instance_create_layer(x,y,"Enchufes", o_slowMoPickUp)
-					slowmoPart._hpush = random_range(-1.5,1.5);
-					slowmoPart._vpush = random_range(-1.5,1.5);
+					slowMoPickUps = random_range(50,70)
+					for (var i = 0; i < slowMoPickUps; i++)
+					{
+						slowmoPart = instance_create_layer(x,y,"Enchufes", o_slowMoPickUp)
+						slowmoPart._hpush = random_range(-1.5,1.5);
+						slowmoPart._vpush = random_range(-1.5,1.5);
+					}
+				}
+				else
+				{
+					enemies = random_range(3,5)
+					for (var i = 0; i < enemies; i++)
+					{
+						enemy = instance_create_layer(x,y,"Enemies", o_enemyMini)
+						enemy.state=ENEMYSTATE.CHASING;
+						enemy.vspeed = random_range(-1.5,1.5);
+						enemy.hspeed = random_range(-1.5,1.5);
+					}
 				}
 
 				capsuleHaveSlowMo = false;
@@ -316,7 +332,7 @@ if (place_meeting(x,y+_vpush*1.5,o_enchufe_Father))
 
 Move();
 
-_angle += _hpush*2*global.relativeSpeed;
+image_angle += _hpush*2*global.relativeSpeed;
 
 
 if (enchufeOvercharged)

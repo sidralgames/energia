@@ -26,6 +26,12 @@ if (global.unPlugging)
 		haveToUpdateCapsule = false;
 		//rope1.vertexDeAttachTo(last);
 	}
+	if (haveToUpdateCapsuleSuper = true)
+	{
+		rope1.vertexDeAttachTo(last);
+		haveToUpdateCapsuleSuper = false;
+		//rope1.vertexDeAttachTo(last);
+	}
 	global.unPlugging = false;
 	enchufe = o_playerShip.enchufe
 	if instance_exists(enchufe)
@@ -49,7 +55,14 @@ if (global.plugging) && instance_exists(o_playerShip)
 		}
 		else if (enchufe.IsEnchufeCapsule) && (enchufe.capsuleHaveSomething)
 		{
-			haveToUpdateCapsule = true;
+			if (enchufe.IsEnchufeCapsuleSuper)
+			{
+				haveToUpdateCapsuleSuper = true;
+			}
+			else
+			{
+				haveToUpdateCapsule = true;
+			}
 		}
 		else
 		{
@@ -70,7 +83,13 @@ if (haveToUpdateCapsule = true)
 {
 	//SetHUE();
 	rope1.vertexDeAttachTo(last);
-	rope1.vertexAttachTo(last, enchufe,lengthdir_x(10,enchufe._angle-90),lengthdir_y(10,enchufe._angle-90))
+	rope1.vertexAttachTo(last, enchufe,lengthdir_x(10,enchufe.image_angle-90),lengthdir_y(10,enchufe.image_angle-90))
+}
+if (haveToUpdateCapsuleSuper = true)
+{
+	//SetHUE();
+	rope1.vertexDeAttachTo(last);
+	rope1.vertexAttachTo(last, enchufe,lengthdir_x(30,enchufe.image_angle-90),lengthdir_y(30,enchufe.image_angle-90))
 }
 if (global.pluggingShip)
 {

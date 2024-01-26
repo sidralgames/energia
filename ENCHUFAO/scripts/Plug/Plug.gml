@@ -86,9 +86,18 @@ function Plug()
 			}
 			else if (enchufe.IsEnchufeCapsule) && (enchufe.capsuleHaveSomething)
 			{
-				o_charger.scale = 0.8;
-				global.xToPlug = x+lengthdir_y(15,enchufe.image_angle)
-				global.yToPlug = y+lengthdir_y(15,enchufe.image_angle)
+				if (enchufe.IsEnchufeCapsuleSuper)
+				{
+					o_charger.scale = 1.4;
+					global.xToPlug = x+lengthdir_y(50,enchufe.image_angle)
+					global.yToPlug = y+lengthdir_y(50,enchufe.image_angle)
+				}
+				else
+				{
+					o_charger.scale = 0.8;
+					global.xToPlug = x+lengthdir_y(15,enchufe.image_angle)
+					global.yToPlug = y+lengthdir_y(15,enchufe.image_angle)
+				}
 			}
 			else
 			{
