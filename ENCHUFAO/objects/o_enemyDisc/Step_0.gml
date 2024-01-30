@@ -8,6 +8,7 @@ if (flashAlpha > 0)
 	flashAlpha -= 0.09;
 }
 
+
 MoveZeroGrv_Speed();
 	
 _angle -= sign(hspeed)*spin*global.relativeSpeed;
@@ -64,7 +65,23 @@ if instance_exists(o_playerShip)
 				contParts = contPartsInitial;
 			}
 			spin = lerp(spin, spinIdle, 0.005);
-			enemySpeed = lerp(enemySpeed, enemySpeedInitial, 0.01)
+			
+			if (slowed)
+			{
+				enemySpeed = lerp(enemySpeed, 0, 0.1+slowedPeta);
+				slowedCont--;
+				if (slowedCont <= 0)
+				{
+					slowedPeta = 0;
+					slowedCont = slowedContMax;
+					slowed = false;
+				}
+			}
+			else
+			{
+				enemySpeed = lerp(enemySpeed, enemySpeedInitial, 0.01)
+			}
+			
 			if (enemySpeed <= enemySpeedInitial+0.25) 
 			{
 				state = 0;	

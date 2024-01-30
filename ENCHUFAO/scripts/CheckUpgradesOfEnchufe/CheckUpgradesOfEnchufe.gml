@@ -41,5 +41,9 @@ function CheckUpgradesOfEnchufe(argument0, argument1)
 		{
 			global.bulletsGhostIsOn = true;	
 		}
+		if (mods.iceBullets == true)
+		{
+			global.bulletsIceIsOn = true;	
+		}
 	}
 }

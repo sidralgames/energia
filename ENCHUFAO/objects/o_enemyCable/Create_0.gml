@@ -32,6 +32,7 @@ o_SplitBulletsPickUp, o_SplitBulletsPickUp, o_SplitBulletsPickUp,
 o_BurningBulletsPickUp, o_BurningBulletsPickUp, o_BurningBulletsPickUp,
 o_ElectroBulletsPickUp, o_ElectroBulletsPickUp, o_ElectroBulletsPickUp,
 o_GhostBulletsPickUp, o_GhostBulletsPickUp, o_GhostBulletsPickUp,
+o_iceBulletsPickUp, o_iceBulletsPickUp, o_iceBulletsPickUp,
 o_ExploBulletsPickUp)
 		//// Attach an object to its last vertex
 instTope = instance_create_layer(x,y,"Enemies", battery);

@@ -8,6 +8,8 @@ occupied = false;
 
 isPluggable = true;
 
+IsEnchufeCapsuleSuper = false;
+
 enchufeTrapper = false;
 canBeEnchufated = true;
 canBeEnchufatedCont = 0;

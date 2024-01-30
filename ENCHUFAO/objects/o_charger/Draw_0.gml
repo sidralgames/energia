@@ -16,12 +16,12 @@ if instance_exists(o_playerShip)
 				yToPlug = enchufe.y-lengthdir_y(30,enchufe.image_angle)
 				draw_sprite_ext(s_chargerPlugged, 0, xToPlug, yToPlug, o_charger.scale, o_charger.scale, enchufe.image_angle-90, image_blend, image_alpha)
 			}
-			else if (enchufe.IsEnchufeCapsule) && (enchufe.capsuleHaveSomething)
+			else if (enchufe.IsEnchufeCapsule)
 			{
 				if (enchufe.IsEnchufeCapsuleSuper)
 				{
-					xToPlug = enchufe.x+lengthdir_x(30,enchufe.image_angle-90)
-					yToPlug = enchufe.y+lengthdir_y(30,enchufe.image_angle-90)
+					xToPlug = enchufe.x+lengthdir_x(25,enchufe.image_angle-90)
+					yToPlug = enchufe.y+lengthdir_y(25,enchufe.image_angle-90)
 					draw_sprite_ext(s_chargerPlugged, 0, xToPlug, yToPlug, o_charger.scale, o_charger.scale, enchufe.image_angle-90, image_blend, image_alpha)
 				}
 				else
@@ -73,6 +73,10 @@ else if (global.havePickedElectroBullets)
 else if (global.havePickedGhostBullets)
 {
 	draw_sprite_ext(s_ghostBulletsPickUp, image_index, x+lengthdir_x(20, image_angle), y+lengthdir_y(20, image_angle), scale, scale, image_angle, image_blend, image_alpha)
+}
+else if (global.havePickedIceBullets)
+{
+	draw_sprite_ext(s_iceBulletsPickUp, image_index, x+lengthdir_x(20, image_angle), y+lengthdir_y(20, image_angle), scale, scale, image_angle, image_blend, image_alpha)
 }
 
 

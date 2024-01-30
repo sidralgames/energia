@@ -26,7 +26,7 @@ if instance_exists(overBattery)
 		}
 		else
 		{
-			radi = 16;
+			radi = radCol;
 		}
 	
 		draw_set_color(c_white)

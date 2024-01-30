@@ -6,6 +6,7 @@ inCapsule = false;
 overBattery = -1;
 _angle=0;
 radi = 0;
+radCol = 35;
 t = 6;
 increment = choose(1,2,3); //degrees -- freq = 1 oscillation per second (1Hz)
 amplitude = choose(1,2);

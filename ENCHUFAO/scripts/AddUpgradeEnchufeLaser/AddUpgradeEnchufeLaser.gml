@@ -15,6 +15,7 @@ function AddUpgradeEnchufeLaser()
 		burnBullets: false,
 		electroBullets: false,
 		ghostBullets: false,
+		iceBullets: false,
 		
 	})
 	

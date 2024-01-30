@@ -32,4 +32,11 @@ function DrawStatusConditionEnemies(argument0) // image_angle
 		draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,argument0,global.yellow,electroFlash)
 		shader_reset()
 	}
+	
+	if (freeze = true)
+	{
+		shader_set(shFlash)
+		draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,argument0,global.lightBlue,freezing)
+		shader_reset()
+	}
 }

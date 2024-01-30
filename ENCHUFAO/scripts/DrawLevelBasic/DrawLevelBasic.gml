@@ -22,6 +22,7 @@ function DrawLevelBasic()
 				var oddsEnchufeBomb = 300;
 				var oddsEnchufePETA = 1000;
 				var oddsCapsule = 200;
+				var oddsSuperCapsule = 1000;
 				
 				var oddsEnchufeFinal = 300;
 				
@@ -191,24 +192,55 @@ function DrawLevelBasic()
 						PETAs += 1;
 					}
 					
-					if (irandom(oddsCapsule) == oddsCapsule) && (capsulesInLevel < capsulesInLevelMax) //&& global.level > 2
+					if (irandom(oddsCapsule) == oddsCapsule) && (capsulesInLevel <= capsulesInLevelMax) //&& global.level > 2
 					{
 						nextCapsule= instance_nearest(exM, eyM, o_capsule)
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
-						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 80)
+						nextwall = instance_nearest(exM, eyM, o_wall)
+						if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 50)
 						{
-							if instance_exists(o_capsule)
+							if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 80)
 							{
-								if (point_distance(exM,eyM, nextCapsule.x, nextCapsule.y) > 500)
+								if instance_exists(o_capsule)
+								{
+									if (point_distance(exM,eyM, nextCapsule.x, nextCapsule.y) > 500)
+									{
+										instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_capsule); 
+										capsulesInLevel +=1;
+									}
+								}
+								else
 								{
 									instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_capsule); 
 									capsulesInLevel +=1;
 								}
 							}
-							else
+						}
+					}
+					
+					if (irandom(oddsSuperCapsule) == oddsSuperCapsule) && (superCapsulesInLevel <= superCapsulesInLevelMax) //&& global.level > 2
+					{
+						nextCapsule= instance_nearest(exM, eyM, o_superCapsule)
+						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
+						nextwall = instance_nearest(exM, eyM, o_wall)
+						
+						if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 80)
+						{
+							if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 80)
 							{
-								instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_capsule); 
-								capsulesInLevel +=1;
+								if instance_exists(o_superCapsule)
+								{
+									if (point_distance(exM,eyM, nextCapsule.x, nextCapsule.y) > 500)
+									{
+										instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_superCapsule); 
+										capsulesInLevel +=1;
+									}
+								}
+								else
+								{
+									instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_superCapsule); 
+									capsulesInLevel +=1;
+								}
 							}
 						}
 					}

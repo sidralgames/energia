@@ -53,7 +53,7 @@ if (global.plugging) && instance_exists(o_playerShip)
 		{
 			haveToUpdate = true;
 		}
-		else if (enchufe.IsEnchufeCapsule) && (enchufe.capsuleHaveSomething)
+		else if (enchufe.IsEnchufeCapsule)
 		{
 			if (enchufe.IsEnchufeCapsuleSuper)
 			{
@@ -89,7 +89,7 @@ if (haveToUpdateCapsuleSuper = true)
 {
 	//SetHUE();
 	rope1.vertexDeAttachTo(last);
-	rope1.vertexAttachTo(last, enchufe,lengthdir_x(30,enchufe.image_angle-90),lengthdir_y(30,enchufe.image_angle-90))
+	rope1.vertexAttachTo(last, enchufe,lengthdir_x(25,enchufe.image_angle-90),lengthdir_y(25,enchufe.image_angle-90))
 }
 if (global.pluggingShip)
 {

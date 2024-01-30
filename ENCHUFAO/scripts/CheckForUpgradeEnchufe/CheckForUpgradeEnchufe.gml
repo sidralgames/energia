@@ -82,6 +82,15 @@ function CheckForUpgradeEnchufe(argument0, argument1)
 			_spriteBattery = s_ghostBulletsEnchufe;
 			
 		}
+		
+		if (mods.iceBullets == false) && (global.havePickedIceBullets)
+		{
+			enchufe.upgradesBattery+=1;
+			mods.iceBullets = true;
+			global.havePickedIceBullets = false;
+			_spriteBattery = s_iceBulletsEnchufe;
+			
+		}
 	}
 	
 	if (_spriteBattery != -1)

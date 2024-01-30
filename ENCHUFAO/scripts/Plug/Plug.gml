@@ -84,13 +84,13 @@ function Plug()
 				global.xToPlug = enchufe.x+lengthdir_x(30,enchufe.image_angle)
 				global.yToPlug = enchufe.y+lengthdir_y(30,enchufe.image_angle)
 			}
-			else if (enchufe.IsEnchufeCapsule) && (enchufe.capsuleHaveSomething)
+			else if (enchufe.IsEnchufeCapsule)
 			{
 				if (enchufe.IsEnchufeCapsuleSuper)
 				{
-					o_charger.scale = 1.4;
-					global.xToPlug = x+lengthdir_y(50,enchufe.image_angle)
-					global.yToPlug = y+lengthdir_y(50,enchufe.image_angle)
+					o_charger.scale = 1.5;
+					global.xToPlug = x+lengthdir_y(25,enchufe.image_angle)
+					global.yToPlug = y+lengthdir_y(25,enchufe.image_angle)
 				}
 				else
 				{

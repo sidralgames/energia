@@ -3,7 +3,10 @@
 inScreen =  (x > __view_get( e__VW.XView, 0 )-50 && x < __view_get( e__VW.XView, 0 )+710) &&
 (y > __view_get( e__VW.YView, 0 )-50 && y < __view_get( e__VW.YView, 0 )+410)
 
-
+if (scale < 1)
+{
+	scale+=0.1
+}
 
 
 switch(inside)
@@ -318,21 +321,21 @@ switch(inside)
 	
 }
 
-
-if (place_meeting(x+_hpush*1.5,y,o_enchufe_Father))
+if (alarm[2] <=0)
 {
-    _hpush = -_hpush*bnc;
-
-}
-if (place_meeting(x,y+_vpush*1.5,o_enchufe_Father))
-{
-    _vpush = -_vpush*bnc;
-	
+	if (place_meeting(x+_hpush*1.5,y,o_enchufe_Father))
+	{
+	    _hpush = -_hpush*bnc;
+	}
+	if (place_meeting(x,y+_vpush*1.5,o_enchufe_Father))
+	{
+	    _vpush = -_vpush*bnc;
+	}
 }
 
 Move();
 
-image_angle += _hpush*2*global.relativeSpeed;
+image_angle += max(0.1*sign(_hpush), 2*(abs(_hpush)),0.1*sign(_vpush), 2*(abs(_vpush))*global.relativeSpeed);
 
 
 if (enchufeOvercharged)

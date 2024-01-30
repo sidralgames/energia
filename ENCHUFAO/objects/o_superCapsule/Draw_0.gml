@@ -16,8 +16,12 @@ if instance_exists(o_playerShip)
 		{
 			charge+=1;
 		}
-		draw_sprite_ext(s_enchufeChargeHP_Out,0,x-21,y-30,0.5,1,0,image_blend, image_alpha)
-		draw_sprite_ext(s_enchufeChargeHP_In,0,x-21,y-30,(charge/maxCharge)/2,1,0,image_blend, image_alpha)
+		draw_sprite_ext(s_enchufeChargeHP_Out,0,x-21,y-50,0.5,1,0,image_blend, image_alpha)
+		draw_sprite_ext(s_enchufeChargeHP_In,0,x-21,y-50,(charge/maxCharge)/2,1,0,image_blend, image_alpha)
+	}
+	else
+	{
+		charge = 0;
 	}
 
 }

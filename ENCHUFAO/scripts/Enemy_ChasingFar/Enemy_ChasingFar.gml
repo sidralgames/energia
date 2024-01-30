@@ -3,7 +3,21 @@
 function Enemy_ChasingFar()
 {
 
-	
+	if (slowed)
+	{
+		enemySpeed = lerp(enemySpeed, 0, 0.1+slowedPeta);
+		slowedCont--;
+		if (slowedCont <= 0)
+		{
+			slowedPeta = 0;
+			slowedCont = slowedContMax;
+			slowed = false;
+		}
+	}
+	else
+	{
+		enemySpeed = lerp(enemySpeed, enemySpeedInitial, 0.1);
+	}
 //-----------TAKE COVER-------------//
 	EnemyTakeCover();
 	

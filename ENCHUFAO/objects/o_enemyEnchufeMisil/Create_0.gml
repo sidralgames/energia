@@ -1,7 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 slowedPeta = 0;
+freezing = 0;
+freeze = false;
 slowed = false;
+
+slowedContMax = 30;
+slowedCont = slowedContMax;
 discounted = false;
 canBeHittedByPlayerLaser = true;
 affectedByLaserTrap = true;

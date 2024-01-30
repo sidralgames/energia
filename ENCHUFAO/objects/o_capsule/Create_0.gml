@@ -14,7 +14,11 @@ ammo = false;
 hp = false;
 laser = false;
 
-_sprite = irandom(3)
+_sprite = choose(
+0,0,0,0, //Energy
+1, //Ammo
+2, //HP
+3) //Laser
 
 
 
@@ -43,7 +47,8 @@ switch(inside)
 		o_smartBulletsPickUp, o_BouncingBulletsPickUp, 
 		o_piercingBulletsPickUp, o_PushingBulletsPickUp,
 		o_SplitBulletsPickUp, o_BurningBulletsPickUp,
-		o_ElectroBulletsPickUp, o_GhostBulletsPickUp)
+		o_ElectroBulletsPickUp, o_GhostBulletsPickUp,
+		o_iceBulletsPickUp)
 
 		batteryCreated = instance_create(x,y,battery);
 		batteryCreated.inCapsule = true;
@@ -55,6 +60,7 @@ switch(inside)
 	{
 		capsuleHaveStranded = true;
 		strandedFake = instance_create(x,y,o_strandedFake);
+		strandedFake.capsule = self;
 		strandedFake.depth = depth+1;
 		
 	}break;	
@@ -63,6 +69,7 @@ switch(inside)
 	{
 		capsuleHaveEnemy = true;
 		enemyFake = instance_create(x,y,o_strandedFake);
+		enemyFake.capsule = self;
 		enemyFake.depth = depth+1;
 	
 	}break;
@@ -71,6 +78,7 @@ switch(inside)
 	{
 		capsuleHaveBomb = true;
 		bombFake = instance_create(x,y,o_bombFake);
+		bombFake.capsule = self;
 		bombFake.depth = depth+1;
 	
 	}break;
@@ -79,6 +87,7 @@ switch(inside)
 	{
 		capsuleHaveRadar = true;
 		radarFake = instance_create(x,y,o_bombFake);
+		radarFake.capsule = self;
 		radarFake.depth = depth+1;
 	
 	}break;
@@ -87,6 +96,7 @@ switch(inside)
 	{
 		capsuleHaveSlowMo = true;
 		slowFake = instance_create(x,y,o_slowMoFake);
+		slowFake.capsule = self;
 		slowFake.depth = depth+1;
 	
 	}break;

@@ -70,6 +70,15 @@ function PluggedToEnchufe()
 			_vpush = lengthdir_y(3.25,dir)
 		
 		}
+		else if (enchufe.IsEnchufeCapsuleSuper)
+		{
+			_hpush = lengthdir_x(2.25,dir)
+			_vpush = lengthdir_y(2.25,dir)
+			
+			enchufe._hpush -= lengthdir_x(0.05,dir)
+			enchufe._vpush -= lengthdir_y(0.05,dir)
+		
+		}
 		else
 		{
 			_hpush = lengthdir_x(2,dir)

@@ -38,7 +38,8 @@ electroFlash = 0;
 
 rojo2= make_colour_rgb(158, 40, 53);
 
-
+freezing = 0;
+freeze = false;
 slowed = false;
 
 slowedContMax = 30;

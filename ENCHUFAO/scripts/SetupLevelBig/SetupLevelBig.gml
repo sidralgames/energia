@@ -3,9 +3,6 @@
 function SetupLevelBig()
 {
 	
-	capsulesInLevel = 0;
-	capsulesInLevelMax = 3;
-	
 	totalFloor = 0;
 	maxFloor = 1300;
 	minFloor = 800;
@@ -35,6 +32,12 @@ function SetupLevelBig()
 	
 	PetasInLevelMax = 2;
 	PetasInLevel = 0;
+	
+	capsulesInLevel = 0;
+	capsulesInLevelMax = 5;
+	
+	superCapsulesInLevel = 0;
+	superCapsulesInLevelMax = 1;
 	
 	UpgradesEnchufesInLevelMax = 7;
 	UpgradesEnchufesInLevel = 0;
@@ -143,7 +146,7 @@ function SetupLevelBig()
 	SetTemporaryWalls();
 	
 	//Draw the level
-	DrawLevelBasic();
+	DrawLevelBig();
 	
 	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo)
 	|| (!enchufeShield) || (!enchufeFinal) || (!strandedShipOK) || (totalFloor < minFloor)

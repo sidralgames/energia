@@ -11,6 +11,8 @@ global.shieldsMax = 18
 
 global.spriteKilledBy = noone;
 
+
+
 global.assistedSlowmo = false;
 global.assistSlowmoIsOn = false;
 
@@ -69,6 +71,7 @@ global.bulletsDanceIsOn = false; ////////////OK movimiento en s
 global.bulletsBurnIsOn = false;
 global.bulletsElectroIsOn = false;
 global.bulletsGhostIsOn = false;
+global.bulletsIceIsOn = true;
 
 
 global.alhpaGhost = 1;
@@ -82,6 +85,7 @@ global.havePickedPushingBullets = false;
 global.havePickedBurningBullets = false;
 global.havePickedElectroBullets = false;
 global.havePickedGhostBullets = false;
+global.havePickedIceBullets = false;
 
 //------LASER MODIFICATORS-----------//
 global.laserBurnEnemies = true; /////////// OK

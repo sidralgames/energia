@@ -48,6 +48,19 @@ function BulletDamage()
 		bomb.scale = 0.7;
 	}
 	
+	if (global.bulletsIceIsOn)
+	{
+		if (isShield == false)
+		{
+			freeze = true;
+			freezing +=0.3;
+			slowed = true;	
+			slowedCont += 30;
+			slowedPeta += 0.1;
+			
+		}
+	}
+	
 	//--- BURN ---//
 	if (global.bulletsBurnIsOn)
 	{

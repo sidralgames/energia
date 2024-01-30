@@ -5,43 +5,66 @@ inScreen =  (x > __view_get( e__VW.XView, 0 )-50 && x < __view_get( e__VW.XView,
 
 
 
+
+	
+if (charge >= maxCharge) && (capsulesMax >=1)
+{
+	charge = 0;
+	alarm[2] = 10;
+	capsuleCreated = instance_create_layer(x+lengthdir_x(45, image_angle+270),y+lengthdir_y(45, image_angle+270),"Enchufes", o_capsule)
+	capsuleCreated._vpush = lengthdir_y(1.2, image_angle+random_range(250,290));
+	capsuleCreated._hpush = lengthdir_x(1.2, image_angle+random_range(250,290));
+	capsuleCreated.alarm[2] = 10;
+	_vpush = lengthdir_y(0.25, image_angle+90);
+	_hpush = lengthdir_x(0.25, image_angle+90);
+	capsuleCreated.scale = 0;
+	capsuleCreated.image_angle = irandom(359)
+	capsuleCreated.depth = depth-1;
+	instance_destroy(capsule[capsulesMax-1])
+	capsulesMax -=1;
+}
+		
+if (capsulesMax <= 0)
+{
+	capsuleHaveSomething = false;
+	if (o_playerShip.plugged) && (charging)
+	{
+		with (o_playerShip)
+		{
+			Unplug();
+		}
+	}
+	instance_destroy();
+}
+
 for ( i=0; i<capsulesMax; i++)
 {
-	capsule[i].x = x+ lengthdir_x(capsule[i].dist, capsule[i].capsuleAngle);
-	capsule[i].y = y+ lengthdir_y(capsule[i].dist, capsule[i].capsuleAngle);
-	capsule[i].image_angle += _hpush*2*global.relativeSpeed;
+	if instance_exists(capsule[i])
+	{
+		capsule[i].x = x+ lengthdir_x(capsule[i].dist, capsule[i].capsuleAngle);
+		capsule[i].y = y+ lengthdir_y(capsule[i].dist, capsule[i].capsuleAngle);
+		capsule[i].image_angle += _hpush*2*global.relativeSpeed;
+	}
 }
-	
-		
-		if (charge >= maxCharge)
-		{
-			charge = 0;
-			capsuleCreated = instance_create_layer(x+lengthdir_x(70, image_angle+270),y+lengthdir_y(70, image_angle+270),"Enchufes", o_capsule)
-			capsuleCreated._vpush = _vpush*1.5;
-			capsuleCreated._hpush = _hpush*1.5;
-			capsuleCreated.depth = depth-1;
-				
-		}
-		
-		
-		
 
-
-
-if (place_meeting(x+_hpush*1.5,y,o_enchufe_Father))
+if (alarm[2] <=0)
 {
-    _hpush = -_hpush*bnc;
+	if (place_meeting(x+_hpush*1.5,y,o_enchufe_Father))
+	{
+	    _hpush = -_hpush*bnc;
+		
 
-}
-if (place_meeting(x,y+_vpush*1.5,o_enchufe_Father))
-{
-    _vpush = -_vpush*bnc;
+	}
+	if (place_meeting(x,y+_vpush*1.5,o_enchufe_Father))
+	{
+	    _vpush = -_vpush*bnc;
+		
 	
+	}
 }
-
 Move();
 
-image_angle += _hpush*1.2*global.relativeSpeed;
+image_angle += max(0.05*sign(_hpush), 2*(abs(_hpush)),0.05*sign(_vpush), 2*(abs(_vpush))*global.relativeSpeed);
 
 
 if (enchufeOvercharged)
@@ -55,8 +78,8 @@ if (enchufeOvercharged)
 	}
 }
 
-_hpush = clamp(_hpush, -1, 1)
-_vpush = clamp(_vpush, -1, 1)
+_hpush = clamp(_hpush, -0.5, 0.5)
+_vpush = clamp(_vpush, -0.5, 0.5)
 
 
 if (canBeEnchufatedCont > 0)

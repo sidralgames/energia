@@ -15,6 +15,7 @@ function AddUpgradeEnchufeAmmo()
 		burnBullets: false,
 		electroBullets: false,
 		ghostBullets: false,
+		iceBullets: false,
 		
 	})
 	

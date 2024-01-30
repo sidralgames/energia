@@ -27,7 +27,7 @@ function DrawPotentialConnection()
 			}
 			
 		}
-		else if (inEnchufe.IsEnchufeCapsule) && (inEnchufe.capsuleHaveSomething) && (inEnchufe.isPluggable == true)
+		else if (inEnchufe.IsEnchufeCapsule) && (inEnchufe.isPluggable == true)
 		{
 			if (inEnchufe.IsEnchufeCapsuleSuper)
 			{
@@ -46,10 +46,10 @@ function DrawPotentialConnection()
 						radi = maxConectRad;
 					}
 					draw_set_color(c_white)
-					draw_circle(inEnchufe.x+lengthdir_x(30,inEnchufe.image_angle-90), inEnchufe.y+lengthdir_y(30,inEnchufe.image_angle-90), radi+0.5, true)
-					draw_circle(inEnchufe.x+lengthdir_x(30,inEnchufe.image_angle-90), inEnchufe.y+lengthdir_y(30,inEnchufe.image_angle-90), radi, true)
-					draw_circle(inEnchufe.x+lengthdir_x(30,inEnchufe.image_angle-90), inEnchufe.y+lengthdir_y(30,inEnchufe.image_angle-90), minConectRad, true)
-					draw_circle(inEnchufe.x+lengthdir_x(30,inEnchufe.image_angle-90), inEnchufe.y+lengthdir_y(30,inEnchufe.image_angle-90), minConectRad+0.3, true)
+					draw_circle(inEnchufe.x+lengthdir_x(25,inEnchufe.image_angle-90), inEnchufe.y+lengthdir_y(25,inEnchufe.image_angle-90), radi+0.5, true)
+					draw_circle(inEnchufe.x+lengthdir_x(25,inEnchufe.image_angle-90), inEnchufe.y+lengthdir_y(25,inEnchufe.image_angle-90), radi, true)
+					draw_circle(inEnchufe.x+lengthdir_x(25,inEnchufe.image_angle-90), inEnchufe.y+lengthdir_y(25,inEnchufe.image_angle-90), minConectRad, true)
+					draw_circle(inEnchufe.x+lengthdir_x(25,inEnchufe.image_angle-90), inEnchufe.y+lengthdir_y(25,inEnchufe.image_angle-90), minConectRad+0.3, true)
 				}
 			}
 			else

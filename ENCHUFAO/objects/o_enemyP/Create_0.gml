@@ -39,6 +39,8 @@ contElectroTotal = contBurnedTotalMax;
 
 burnFlash = 0;
 electroFlash = 0;
+freezing = 0;
+freeze = false;
 
 isMegaEnemy = false;
 

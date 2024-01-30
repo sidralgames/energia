@@ -34,6 +34,9 @@ function SetupLevelBasic()
 	capsulesInLevel = 0;
 	capsulesInLevelMax = 4;
 	
+	superCapsulesInLevel = 0;
+	superCapsulesInLevelMax = 1;
+	
 	UpgradesEnchufesInLevelMax = 7;
 	UpgradesEnchufesInLevel = 0;
 

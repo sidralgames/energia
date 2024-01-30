@@ -11,6 +11,6 @@ image_index = irandom(2)
 hp = random_range(490,510);
 image_speed = random_range(0.6,0.9);
 
-alarm[1] = 60;
+alarm[1] = 30;
 
 
