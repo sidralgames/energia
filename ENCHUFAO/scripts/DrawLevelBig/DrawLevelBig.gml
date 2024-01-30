@@ -197,7 +197,7 @@ function DrawLevelBig()
 						nextCapsule= instance_nearest(exM, eyM, o_capsule)
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 						nextwall = instance_nearest(exM, eyM, o_wall)
-						if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 50)
+						if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 60)
 						{
 							if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 80)
 							{
@@ -224,7 +224,7 @@ function DrawLevelBig()
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 						nextwall = instance_nearest(exM, eyM, o_wall)
 						
-						if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 80)
+						if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 90)
 						{
 							if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 80)
 							{

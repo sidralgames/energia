@@ -26,6 +26,7 @@ scale = 1;
 _hpMax = 20;
 _hp = _hpMax;
 image_speed =0;
+
 capsulesMax = irandom_range(4,7);
 
 for ( i=0; i<capsulesMax; i++)

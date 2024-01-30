@@ -71,7 +71,7 @@ global.bulletsDanceIsOn = false; ////////////OK movimiento en s
 global.bulletsBurnIsOn = false;
 global.bulletsElectroIsOn = false;
 global.bulletsGhostIsOn = false;
-global.bulletsIceIsOn = true;
+global.bulletsIceIsOn = false;
 
 
 global.alhpaGhost = 1;

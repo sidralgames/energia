@@ -35,6 +35,9 @@
     "name": "s_enchufe_Ammo",
     "path": "sprites/s_enchufe_Ammo/s_enchufe_Ammo.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "s_EnchufeEnergy",
+    "path": "sprites/s_EnchufeEnergy/s_EnchufeEnergy.yy",
+  },
   "visible": true,
 }

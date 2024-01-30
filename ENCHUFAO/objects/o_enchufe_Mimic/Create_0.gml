@@ -63,4 +63,11 @@ contElectroTotal = contBurnedTotalMax;
 burnFlash = 0;
 electroFlash = 0;
 
+freezing = 0;
+freeze = false;
+slowed = false;
+
+slowedContMax = 30;
+slowedCont = slowedContMax;
+
 

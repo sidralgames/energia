@@ -24,6 +24,31 @@ function infoGameOver(argument0)
 		case 17: text = "Noooooooooo!!"; break;
 		case 18: text = "Try another ship"; break;
 		case 19: text = "..."; break;
-		case 20: text = "Remember: Remember to"; break;
+		case 20: text = "Combine batteries"; break;
+		case 21: text = "Ouch!"; break;
+		case 22: text = "Ups..."; break;
+		case 23: text = "No problem"; break;
+		case 24: text = "Use the SlowMo"; break;
+		case 25: text = "Tip: Keep an eye on your ammo"; break;
+		case 26: text = "Open capsules"; break;
+		case 27: text = "Choose your upgrades wisely"; break;
+		case 28: text = "Don't give up"; break;
+		case 29: text = "You can do this!"; break;
+		case 30: text = "Damn!"; break;
+		case 31: text = "Tip: Think"; break;
+		case 32: text = "Remember: Batteries are good"; break;
+		case 33: text = "Tip: Use enemy bombs against them"; break;
+		case 34: text = "Tip: Use lasers against enemies"; break;
+		case 35: text = "Remember: lasertraps kill enemies"; break;
+		case 36: text = "Sorry"; break;
+		case 37: text = " :( "; break;
+		case 38: text = "It got crazy"; break;
+		case 39: text = "Use SlowMo for narrow turns"; break;
+		case 40: text = "Bomb everything"; break;
+		case 41: text = "Shoot first, ask later"; break;
+		case 42: text = "Bullets doesn't work? Try something different"; break;
+		
+		
+		
 	}
 }

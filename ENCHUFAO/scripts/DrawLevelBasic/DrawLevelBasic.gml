@@ -22,7 +22,7 @@ function DrawLevelBasic()
 				var oddsEnchufeBomb = 300;
 				var oddsEnchufePETA = 1000;
 				var oddsCapsule = 200;
-				var oddsSuperCapsule = 1000;
+				var oddsSuperCapsule = 200;
 				
 				var oddsEnchufeFinal = 300;
 				
@@ -197,7 +197,7 @@ function DrawLevelBasic()
 						nextCapsule= instance_nearest(exM, eyM, o_capsule)
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 						nextwall = instance_nearest(exM, eyM, o_wall)
-						if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 50)
+						if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 60)
 						{
 							if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 80)
 							{
@@ -224,7 +224,7 @@ function DrawLevelBasic()
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 						nextwall = instance_nearest(exM, eyM, o_wall)
 						
-						if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 80)
+						if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 90)
 						{
 							if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 80)
 							{

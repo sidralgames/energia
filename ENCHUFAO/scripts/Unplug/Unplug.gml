@@ -50,6 +50,7 @@ function Unplug()
 	global.bulletsBurnIsOn = false; 
 	global.bulletsElectroIsOn = false;
 	global.bulletsGhostIsOn = false;
+	global.bulletsIceIsOn = false;
 
 	o_charger.scale = 1;
 	

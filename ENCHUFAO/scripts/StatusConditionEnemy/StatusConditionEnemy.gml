@@ -69,6 +69,26 @@ function StatusConditionEnemy()
 			_hp-=1;
 		}
 	}
+	
+	if (freeze = true)
+	{
+		if (freezing >= 0.8)
+		{
+			freezing = 0.8;
+		}
+
+		if (freezing >= 0)
+		{
+			freezing-=0.005;	
+		}
+
+		if (freezing<= 0)
+		{
+			slowedCont = 0;
+			freeze = false;
+		}
+	}
+	
 
 	checkHPEnemies();
 }

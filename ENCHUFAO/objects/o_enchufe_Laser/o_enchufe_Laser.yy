@@ -35,6 +35,9 @@
     "name": "s_enchufe_SHIELDS288",
     "path": "sprites/s_enchufe_SHIELDS288/s_enchufe_SHIELDS288.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "s_EnchufeEnergy",
+    "path": "sprites/s_EnchufeEnergy/s_EnchufeEnergy.yy",
+  },
   "visible": true,
 }
