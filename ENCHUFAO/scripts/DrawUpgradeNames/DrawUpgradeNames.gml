@@ -13,20 +13,20 @@ function DrawUpgradeNames()
 			if (upgrades.times = 1)
 			{
 				draw_set_halign(fa_left)
-				draw_set_font(customFont2)
+				draw_set_font(global.customFont14)
 				draw_set_color(orange)
-				draw_text(__view_get( e__VW.XView, 0 )+26,__view_get( e__VW.YView, 0 )+201+timesToDraw*15, upgrades.nameUpgrade)
+				draw_text(__view_get( e__VW.XView, 0 )+26,__view_get( e__VW.YView, 0 )+171+timesToDraw*15, upgrades.nameUpgrade)
 				draw_set_color(global.yellow)
-				draw_text(__view_get( e__VW.XView, 0 )+27,__view_get( e__VW.YView, 0 )+200+timesToDraw*15, upgrades.nameUpgrade)
+				draw_text(__view_get( e__VW.XView, 0 )+27,__view_get( e__VW.YView, 0 )+170+timesToDraw*15, upgrades.nameUpgrade)
 			}
 			else
 			{
 				draw_set_halign(fa_left)
-				draw_set_font(customFont2)
+				draw_set_font(global.customFont14)
 				draw_set_color(orange)
-				draw_text(__view_get( e__VW.XView, 0 )+26,__view_get( e__VW.YView, 0 )+201+timesToDraw*15, string(upgrades.nameUpgrade) +" x" + string(upgrades.times))
+				draw_text(__view_get( e__VW.XView, 0 )+26,__view_get( e__VW.YView, 0 )+171+timesToDraw*15, string(upgrades.nameUpgrade) +" x" + string(upgrades.times))
 				draw_set_color(global.yellow)
-				draw_text(__view_get( e__VW.XView, 0 )+27,__view_get( e__VW.YView, 0 )+200+timesToDraw*15, string(upgrades.nameUpgrade) +" x" + string(upgrades.times))
+				draw_text(__view_get( e__VW.XView, 0 )+27,__view_get( e__VW.YView, 0 )+170+timesToDraw*15, string(upgrades.nameUpgrade) +" x" + string(upgrades.times))
 			}
 		}
 	}

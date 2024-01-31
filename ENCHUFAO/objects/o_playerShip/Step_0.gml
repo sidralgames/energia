@@ -170,9 +170,14 @@ if (inEnchufe)
 		
 							CheckEnchufe();
 			
-							if (room = Sala_Upgade)
+							if (room == Sala_Upgade)
 							{
 								CheckEnchufeUpgrade()
+							}
+							
+							if (room == Sala_MegaUpgade)
+							{
+								CheckEnchufeMegaUpgrade()
 							}
 						}
 						else if (inEnchufe.withStrandedShip == true)

@@ -21,3 +21,5 @@ if (global.bombIsClusterBomb)
 sprite_enchufePluged = sprite_index;
 
 maxCharge = 120;
+bombsInEnchufeMax = 5.1;
+bombsInEnchufe = bombsInEnchufeMax;

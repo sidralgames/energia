@@ -106,8 +106,12 @@ function DrawLevelBig()
 				
 				if (irandom(oddsEnchufeEnergy) == oddsEnchufeEnergy) && (enchufe0 = false)
 				{
-					instance_create_layer(exM,eyM,"Enchufes",o_enchufe); 
-					enchufe0 = true;
+					nextwall = instance_nearest(exM, eyM, o_wall)
+					if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 30)
+					{
+						instance_create_layer(exM,eyM,"Enchufes",o_enchufe); 
+						enchufe0 = true;
+					}
 				}
 				
 				if instance_exists(o_enchufe_Father)
@@ -115,44 +119,56 @@ function DrawLevelBig()
 					if (irandom(oddsEnchufeHP) == oddsEnchufeHP) && (enchufeHP = false)
 					{
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
-
-						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 300)
+						nextwall = instance_nearest(exM, eyM, o_wall)
+						if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 30)
 						{
-							instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Hp); 
-							enchufeHP = true;
+							if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 300)
+							{
+								instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Hp); 
+								enchufeHP = true;
+							}
 						}
 					}
 			
 					if (irandom(oddsEnchufeLaser) == oddsEnchufeLaser) && (enchufeShield = false)
 					{
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
-					
-						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 300)
+						nextwall = instance_nearest(exM, eyM, o_wall)
+						if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 30)
 						{
-							instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Laser); 
-							enchufeShield = true;
+							if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 300)
+							{
+								instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Laser); 
+								enchufeShield = true;
+							}
 						}
 					}
 			
 					if (irandom(oddsEnchufeAmmo) == oddsEnchufeAmmo) && (enchufeAmmo = false)
 					{
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
-					
-						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 300)
+						nextwall = instance_nearest(exM, eyM, o_wall)
+						if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 30)
 						{
-							instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Ammo); 
-							enchufeAmmo = true;
+							if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 300)
+							{
+								instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Ammo); 
+								enchufeAmmo = true;
+							}
 						}
 					}
 					
 					if (irandom(oddsEnchufeBomb) == oddsEnchufeBomb) && (enchufeBomb = false)
 					{
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
-					
-						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 200)
+						nextwall = instance_nearest(exM, eyM, o_wall)
+						if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 30)
 						{
-							instance_create_layer(exM,eyM,"Enchufes",o_enchufeBombs); 
-							enchufeBomb = true;
+							if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 200)
+							{
+								instance_create_layer(exM,eyM,"Enchufes",o_enchufeBombs); 
+								enchufeBomb = true;
+							}
 						}
 					}
 					if (global.level > 1)
@@ -160,11 +176,14 @@ function DrawLevelBig()
 						if (irandom(oddsEnchufeMimic) == oddsEnchufeMimic) 
 						{
 							nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
-					
-							if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 50) && (mimics < mimicsMax)
+							nextwall = instance_nearest(exM, eyM, o_wall)
+							if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 30)
 							{
-								instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Mimic); 
-								mimics +=1;
+								if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 50) && (mimics < mimicsMax)
+								{
+									instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Mimic); 
+									mimics +=1;
+								}
 							}
 						}
 					}

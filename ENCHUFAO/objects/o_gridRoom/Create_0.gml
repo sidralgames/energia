@@ -46,7 +46,7 @@ else if (room = Sala_Boss) ||  (room = Sala_FirstBoss)
 		}
 	}
 }
-else if (room = Sala_Upgade)
+else if (room = Sala_Upgade) ||  (room = Sala_MegaUpgade)
 {
 	global.wallgrid_ = ds_grid_create(width_,height_);
 	ds_grid_set_region(global.wallgrid_, 0, 0, width_-1, height_-1, FLOOR);

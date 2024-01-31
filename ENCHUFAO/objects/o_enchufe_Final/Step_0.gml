@@ -14,8 +14,8 @@ if (place_meeting(x,y+_vpush*1.2,o_enchufeStandard_Father))
 
 Move();
 
-image_angle += _hpush*1.5*global.relativeSpeed;
-
+image_angle += max(0.05*sign(_hpush), 2*(abs(_hpush)),0.05*sign(_vpush), 2*(abs(_vpush))*global.relativeSpeed);
+_angle = image_angle;
 
 if (abierto)
 {
@@ -68,6 +68,20 @@ if instance_exists(o_playerShip)
 					}
 				}
 			}
+			
+			
+			if (room = Sala_MegaUpgade)
+			{
+				for (var i = 0; i < global.numberOfMegaUpgrades-1; i++)
+				{
+					upgrades = ds_map_find_value(global.megaUpgradesList,i);
+					if (upgrades.canShowUp == true)
+					{
+						upgrades.isPicked = false;
+					}
+				}
+			}
+			
 			
 			cont = true
 			alarm[0] = 60;

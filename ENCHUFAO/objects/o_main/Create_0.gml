@@ -360,6 +360,21 @@ global.chargerElectrocutatesIsUpgraded = false;
 global.exploHitIsUpgraded = false;
 global.shockingPetasIsUpgraded = false;
 
+
+
+
+//----- MEGA UPGRADES ------//
+global.numberOfMegaUpgrades = 0;
+global.megaUpgradesList = ds_map_create();
+
+AddMegaUpgradePeta();
+AddMegaUpgradeInvisible();
+AddMegaUpgradeCavalry();
+
+global.invisibleIsMegaUpgraded = false;
+global.petaIsMegaUpgraded = false;
+global.cavalryIsMegaUpgraded = false;
+
 //--------UPGRADE RELATED--------//
 //--BOMBS--//
 global.haveSmokeBomb = false;

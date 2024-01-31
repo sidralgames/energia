@@ -43,7 +43,6 @@ draw_rectangle_color(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ), 
 draw_set_alpha(1);
 
 draw_sprite_ext(s_pauseBackground,spriteBack, __view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0,1,1,0,image_blend, 0.7)
-draw_sprite_ext(s_pause,0, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+50,1,1,0,image_blend, image_alpha)
 
 if (showControls)
 {
@@ -53,6 +52,8 @@ else
 {
 	if (spriteBack < 1)
 	{
+		draw_sprite_ext(s_pause,0, __view_get( e__VW.XView, 0 )+510,__view_get( e__VW.YView, 0 )+60,1,1,0,image_blend, image_alpha)
+
 		timesToDraw = 0;
 
 		infoPause();
@@ -114,6 +115,8 @@ else
 	{
 		if (spriteBack > 5)
 		{
+			draw_sprite_ext(s_pause,0, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+50,1,1,0,image_blend, image_alpha)
+
 			switch(selected)
 			{
 				case 0:

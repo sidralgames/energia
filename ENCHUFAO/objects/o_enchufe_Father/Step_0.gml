@@ -15,6 +15,7 @@ if (place_meeting(x,y+_vpush*1.5,o_enchufe_Father))
 Move();
 
 image_angle += max(0.05*sign(_hpush), 2*(abs(_hpush)),0.05*sign(_vpush), 2*(abs(_vpush))*global.relativeSpeed);
+_angle = image_angle;
 
 if (charge >= 200)
 {

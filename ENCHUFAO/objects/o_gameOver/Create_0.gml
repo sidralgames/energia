@@ -14,7 +14,7 @@ depth = layer_get_depth("Main") -1;
 
 image_alpha = 0;
 
-info = irandom(35);
+info = irandom(42);
 
 text = "";
 

@@ -51,7 +51,7 @@ contSmoke = 0;
 contBurnPartMax = 8;
 contBurnPart = random_range(contBurnPartMax-1,contBurnPartMax+2) ;
 showEnergy = false;
-if (room != Sala_Inicio) && (room != Sala_Upgade)
+if (room != Sala_Inicio) && (room != Sala_Upgade) && (room != Sala_MegaUpgade)
 {
 	SetHUE();
 }
