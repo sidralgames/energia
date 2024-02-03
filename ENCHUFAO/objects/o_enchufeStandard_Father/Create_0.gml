@@ -10,3 +10,4 @@ event_inherited();
 
 occupied = false;
 soundActive = false;
+bnc = 1;

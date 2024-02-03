@@ -27,7 +27,7 @@ _hpMax = 20;
 _hp = _hpMax;
 image_speed =0;
 
-capsulesMax = irandom_range(4,7);
+capsulesMax = irandom_range(3,5);
 
 for ( i=0; i<capsulesMax; i++)
 {

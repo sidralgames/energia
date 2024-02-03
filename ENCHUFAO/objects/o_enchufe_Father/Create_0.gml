@@ -5,7 +5,7 @@
 //	lightEnchufe= instance_create_layer(x,y,"LightPlayer",o_Light_Enchufe);
 //type = collisionType.custom;
 occupied = false;
-
+isEnchufeUpgrade = false;
 isPluggable = true;
 
 IsEnchufeCapsuleSuper = false;
@@ -65,7 +65,7 @@ charge = 0;
 maxCharge = 200;
 _hpush = choose(random_range(0.05, 0.1),-random_range(0.05, 0.1))
 _vpush = choose(random_range(0.05, 0.1), -random_range(0.05, 0.1))
-bnc = 0.9;
+bnc = 1;
 _angle = 0;
 enchufeActive = false;
 enchufeOvercharged = false;

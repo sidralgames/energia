@@ -21,9 +21,17 @@ if (cont = true)
 	{
 		room_goto(Sala_SecondBoss)
 	}
+	else if (global.level = 8)
+	{
+		room_goto(Sala_MegaUpgade)
+	}
 	else if (global.level = 15)
 	{
 		room_goto(Sala_BossWorm)
+	}
+	else if (global.level = 16)
+	{
+		room_goto(Sala_MegaUpgade)
 	}
 	else
 	{
@@ -38,6 +46,11 @@ if (cont = true)
 			if instance_exists(o_upgradesManager)
 			{
 				instance_destroy(o_upgradesManager);
+			}
+			
+			if instance_exists(o_megaUpgradesManager)
+			{
+				instance_destroy(o_megaUpgradesManager);
 			}
 		
 			room_goto(Sala_0)

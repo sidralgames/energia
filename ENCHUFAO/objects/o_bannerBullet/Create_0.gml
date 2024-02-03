@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 image_speed = 0.8;
+
 if (global.havePickedBouncingBullets)
 {
 	sprite_index = s_banner_Bouncing;
@@ -37,6 +38,10 @@ else if (global.havePickedElectroBullets)
 else if (global.havePickedGhostBullets)
 {
 	sprite_index = s_banner_Ghost;
+}
+else if (global.havePickedGhostBullets)
+{
+	sprite_index = s_banner_Freezing;
 }
 
 

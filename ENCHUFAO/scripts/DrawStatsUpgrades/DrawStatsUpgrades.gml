@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function DrawStatsUpgrades()
 {
-	draw_sprite_ext(s_statsAndUpgrades,0, __view_get( e__VW.XView, 0 )+135,__view_get( e__VW.YView, 0 )+80,1,1,0,image_blend, image_alpha)
+	draw_sprite_ext(s_statsAndUpgrades,0, __view_get( e__VW.XView, 0 )+145,__view_get( e__VW.YView, 0 )+70,1,1,0,image_blend, image_alpha)
 	draw_sprite_ext(s_shipstatsPause,0, __view_get( e__VW.XView, 0 )+65,__view_get( e__VW.YView, 0 )+142,1,1,0,image_blend, image_alpha)
 	
 	for (var i = 0; i <= global.energyStat-1; i++)

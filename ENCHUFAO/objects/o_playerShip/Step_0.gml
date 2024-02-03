@@ -169,15 +169,18 @@ if (inEnchufe)
 							Plug();
 		
 							CheckEnchufe();
-			
-							if (room == Sala_Upgade)
-							{
-								CheckEnchufeUpgrade()
-							}
 							
-							if (room == Sala_MegaUpgade)
+							if (inEnchufe.isEnchufeUpgrade)
 							{
-								CheckEnchufeMegaUpgrade()
+								if (room == Sala_Upgade)
+								{
+									CheckEnchufeUpgrade()
+								}
+							
+								if (room == Sala_MegaUpgade)
+								{
+									CheckEnchufeMegaUpgrade()
+								}
 							}
 						}
 						else if (inEnchufe.withStrandedShip == true)

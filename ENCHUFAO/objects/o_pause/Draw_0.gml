@@ -38,7 +38,7 @@ if (pause)
 orange = make_color_rgb(254,174, 52);
 
 
-draw_set_alpha(0.5);
+draw_set_alpha(0.7);
 draw_rectangle_color(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ), __view_get( e__VW.XView, 0 )+ 640,__view_get( e__VW.YView, 0 )+360,c_black, c_black, c_black,c_black, false)
 draw_set_alpha(1);
 

@@ -8,6 +8,7 @@
 event_inherited();
 fromFriend = false;
 soundDie = false;
+bnc = 1;
 //if room = Sala_0
 //{
 //	if (global.PETAsActive >= 3) && (bornFromBreach)

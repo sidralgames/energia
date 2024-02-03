@@ -10,32 +10,94 @@ function CheckEnchufeMegaUpgrade()
 		{
 			case "megaUpgradeInvisible":
 			{
-				if (!global.invisibleIsMegaUpgraded)
-				{
-					global.invisibleIsMegaUpgraded = true;
-					AddUpgradeOverchargePlayer();
-				}
+				//if (!global.invisibleIsMegaUpgraded)
+				//{
+				//	global.invisibleIsMegaUpgraded = true;
+				//	AddUpgradeOverchargePlayer();
+				//}
 				
-				for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
-				{
-					upg = ds_map_find_value(global.PlayerUpgradesList, i)
-					if (upg.obj = o_enchufeUpgadeOvercharge)
-					{
-						upg.times+=1;
-					}
-				}
+				//for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+				//{
+				//	upg = ds_map_find_value(global.PlayerUpgradesList, i)
+				//	if (upg.obj = o_enchufeUpgadeOvercharge)
+				//	{
+				//		upg.times+=1;
+				//	}
+				//}
 		
 				//-- DISCARD UPGRADE --//
 				for (var i= 0; i< global.numberOfMegaUpgrades; i++)
 				{
 					thisUpg = ds_map_find_value(global.megaUpgradesList, i)
-					if (thisUpg.obj = o_enchufeUpgadeOvercharge)
+					if (thisUpg.obj = o_enchufeMegaUpgrade_Invisible)
 					{
 						thisUpg.canShowUp = false;
 					}
 				}
 
 				global.haveInvisibiltyCloak = true;
+		
+			}break;	
+			
+			case "megaUpgradeCavalry":
+			{
+				//if (!global.invisibleIsMegaUpgraded)
+				//{
+				//	global.invisibleIsMegaUpgraded = true;
+				//	AddUpgradeOverchargePlayer();
+				//}
+				
+				//for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+				//{
+				//	upg = ds_map_find_value(global.PlayerUpgradesList, i)
+				//	if (upg.obj = o_enchufeUpgadeOvercharge)
+				//	{
+				//		upg.times+=1;
+				//	}
+				//}
+		
+				//-- DISCARD UPGRADE --//
+				for (var i= 0; i< global.numberOfMegaUpgrades; i++)
+				{
+					thisUpg = ds_map_find_value(global.megaUpgradesList, i)
+					if (thisUpg.obj = o_enchufeMegaUpgrade_Cavalry)
+					{
+						thisUpg.canShowUp = false;
+					}
+				}
+
+				global.haveCallForHelp = true;
+		
+			}break;	
+			
+			case "megaUpgradePetas":
+			{
+				//if (!global.invisibleIsMegaUpgraded)
+				//{
+				//	global.invisibleIsMegaUpgraded = true;
+				//	AddUpgradeOverchargePlayer();
+				//}
+				
+				//for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+				//{
+				//	upg = ds_map_find_value(global.PlayerUpgradesList, i)
+				//	if (upg.obj = o_enchufeUpgadeOvercharge)
+				//	{
+				//		upg.times+=1;
+				//	}
+				//}
+		
+				//-- DISCARD UPGRADE --//
+				for (var i= 0; i< global.numberOfMegaUpgrades; i++)
+				{
+					thisUpg = ds_map_find_value(global.megaUpgradesList, i)
+					if (thisUpg.obj = o_enchufeMegaUpgrade_Petas)
+					{
+						thisUpg.canShowUp = false;
+					}
+				}
+
+				global.allPETAisMulti = true;
 		
 			}break;	
 		

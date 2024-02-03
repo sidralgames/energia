@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "O_SELECTuPGRADE",
+  "name": "o_selectUpgrade",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
@@ -26,8 +26,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_selectUpgrade",
-    "path": "sprites/s_selectUpgrade/s_selectUpgrade.yy",
+    "name": "s_selectUpgradeBasic",
+    "path": "sprites/s_selectUpgradeBasic/s_selectUpgradeBasic.yy",
   },
   "spriteMaskId": null,
   "visible": true,
