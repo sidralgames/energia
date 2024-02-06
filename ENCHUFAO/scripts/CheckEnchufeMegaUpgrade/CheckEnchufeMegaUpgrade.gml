@@ -100,6 +100,39 @@ function CheckEnchufeMegaUpgrade()
 				global.allPETAisMulti = true;
 		
 			}break;	
+			
+			case "megaUpgradeExternalBattery":
+			{
+				//-- DISCARD UPGRADE --//
+				for (var i= 0; i< global.numberOfMegaUpgrades; i++)
+				{
+					thisUpg = ds_map_find_value(global.megaUpgradesList, i)
+					if (thisUpg.obj = o_enchufeMegaUpgrade_ExternalBattery)
+					{
+						thisUpg.canShowUp = false;
+					}
+				}
+
+				global.haveExternalBattery = true;
+				
+			}break;	
+			
+			case "megaUpgradeHP":
+			{
+				//-- DISCARD UPGRADE --//
+				for (var i= 0; i< global.numberOfMegaUpgrades; i++)
+				{
+					thisUpg = ds_map_find_value(global.megaUpgradesList, i)
+					if (thisUpg.obj = o_enchufeMegaUpgrade_HP)
+					{
+						thisUpg.canShowUp = false;
+					}
+				}
+
+				global.hpMax +=3;
+				global.hp += 3;
+				
+			}break;	
 		
 		}
 	

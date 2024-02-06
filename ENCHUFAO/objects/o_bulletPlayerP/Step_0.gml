@@ -14,6 +14,34 @@ if (global.bulletsGhostIsOn == false)
 		CollisionTileDestroy();
 	}
 }
+else if (global.bulletsGhostIsOn == true)
+{
+	if (canBeGhost = false)
+	{
+		if (hpBounce > 0)
+		{
+			CollisionTileBounce()
+		}
+		else
+		{
+			CollisionTileDestroy();
+		}
+	}
+	
+	if (tile_meeting(x,y,"Tiles"))
+	{
+	    isInTile = true;
+	}
+	
+	if (isInTile)
+	{
+		if !(tile_meeting(x,y,"Tiles"))
+		{
+			canBeGhost = false
+		}
+	}
+	
+}
 if (hpBullet <= 0) || (hp < 0)
 {
 	instance_destroy();	

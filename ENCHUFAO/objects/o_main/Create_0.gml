@@ -39,8 +39,9 @@ global.customFont16= font_add("ChubbyChoo-SemiBold.ttf", 16, false, false, 32, 1
 global.customFont14 = font_add("ChubbyChoo-SemiBold.ttf", 14, false, false, 32, 128);
 global.customFont12 = font_add("ChubbyChoo-SemiBold.ttf", 12, false, false, 32, 128);
 global.customFont10 = font_add("ChubbyChoo-SemiBold.ttf", 11, false, false, 32, 128);
-//-------------MEGA UPGRADES-----------------//
 
+
+//--------------- MEGA UPGRADES -----------------//
 //--INVISIBILITY CLOAK--//
 global.haveInvisibiltyCloak = true;
 global.invisibleCloak = false;
@@ -370,6 +371,8 @@ global.megaUpgradesList = ds_map_create();
 AddMegaUpgradePeta();
 AddMegaUpgradeInvisible();
 AddMegaUpgradeCavalry();
+AddMegaUpgradeExternalBattery();
+AddMegaUpgradeHP();
 
 global.invisibleIsMegaUpgraded = false;
 global.petaIsMegaUpgraded = false;

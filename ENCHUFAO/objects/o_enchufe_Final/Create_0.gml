@@ -8,7 +8,7 @@ event_inherited();
 abierto = false;
 final = true;
 cont = false;
-if (room != Sala_Upgade) &&  (room != Sala_MegaUpgade)
+if (room != Sala_Upgade) &&  (room != Sala_MegaUpgrade)
 {
 	_hpush = choose(random_range(0.03, 0.08), -random_range(0.03, 0.08));
 	_vpush = choose(random_range(0.03, 0.08), -random_range(0.03, 0.08));

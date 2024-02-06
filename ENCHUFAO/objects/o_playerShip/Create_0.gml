@@ -51,7 +51,7 @@ contSmoke = 0;
 contBurnPartMax = 8;
 contBurnPart = random_range(contBurnPartMax-1,contBurnPartMax+2) ;
 showEnergy = false;
-if (room != Sala_Inicio) && (room != Sala_Upgade) && (room != Sala_MegaUpgade)
+if (room != Sala_Inicio) && (room != Sala_Upgade) && (room != Sala_MegaUpgrade)
 {
 	SetHUE();
 }
@@ -73,7 +73,8 @@ if (global.friendIsUpgraded)
 haveUsedCall = false;
 
 haveUsedBattery = false;
-contExternalBattery = 300;
+contExternalBatteryMax = 60*8;
+contExternalBattery = contExternalBatteryMax;
 
 
 if (global.shipGreenBonusUpgraded)

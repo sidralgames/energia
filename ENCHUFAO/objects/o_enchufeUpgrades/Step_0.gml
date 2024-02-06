@@ -11,7 +11,7 @@
 
 if instance_exists(o_playerShip)
 {
-	if (o_playerShip.plugged) && (!o_playerShip.enchufe.isPETA)
+	if (o_playerShip.plugged) && (!o_playerShip.enchufe.isPETA_F)
 	{
 		if (charging == false)
 		{

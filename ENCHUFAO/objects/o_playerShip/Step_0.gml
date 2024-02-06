@@ -177,7 +177,7 @@ if (inEnchufe)
 									CheckEnchufeUpgrade()
 								}
 							
-								if (room == Sala_MegaUpgade)
+								if (room == Sala_MegaUpgrade)
 								{
 									CheckEnchufeMegaUpgrade()
 								}

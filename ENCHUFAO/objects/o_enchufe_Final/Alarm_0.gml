@@ -23,7 +23,7 @@ if (cont = true)
 	}
 	else if (global.level = 8)
 	{
-		room_goto(Sala_MegaUpgade)
+		room_goto(Sala_MegaUpgrade)
 	}
 	else if (global.level = 15)
 	{
@@ -31,7 +31,7 @@ if (cont = true)
 	}
 	else if (global.level = 16)
 	{
-		room_goto(Sala_MegaUpgade)
+		room_goto(Sala_MegaUpgrade)
 	}
 	else
 	{

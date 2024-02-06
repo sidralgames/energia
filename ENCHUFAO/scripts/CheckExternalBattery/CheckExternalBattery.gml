@@ -23,7 +23,7 @@ function CheckExternalBattery()
 			}
 			//part_particles_create(global.energyPart_sys, x+random_range(-20,20), y+random_range(-20,20), global.energyPart , 1)	
 			part_particles_create(global.laserPart_sys, x+random_range(-15,15), y+random_range(-15,15), global.laserPart , 1)	
-			contExternalBattery -=0.5;
+			contExternalBattery -=1;
 			if (contExternalBattery <= 0)
 			{
 				global.externalBatteryOn = false;

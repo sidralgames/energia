@@ -9,6 +9,9 @@ bulletSpeed = 0;
 hpBullet = 200;
 precision = 4;
 
+canBeGhost = true;
+isInTile = false;
+
 precisionHole = 1;
 
 if (global.piercingShot)

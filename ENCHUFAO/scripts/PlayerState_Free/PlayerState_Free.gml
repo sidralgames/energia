@@ -10,7 +10,7 @@ function PlayerState_Free()
 	}
 	else if (plugged == true)
 	{
-		PluggedToEnchufe()
+		PluggedToEnchufe();
 	}
 	else
 	{
@@ -22,7 +22,7 @@ function PlayerState_Free()
 		{
 			if (global.energy > 0) && (o_cable.haveToUpdate == false)
 			{
-					MoveShip()	
+				MoveShip();	
 			}
 			else
 			{
@@ -34,16 +34,14 @@ function PlayerState_Free()
 	
 	var axisrh = gamepad_axis_value(0, gp_axisrh);
 	var axisrv = gamepad_axis_value(0, gp_axisrv);
-
 	
-	var direIm = point_direction(x, y, o_crosshair.x, o_crosshair.y)
-	dire = direIm
-	if abs(axisrh) > 0.4 || abs(axisrv) > 0.4
-	{
-		
-	_angle = direIm;
+	var direIm = point_direction(x, y, o_crosshair.x, o_crosshair.y);
 	dire = direIm;
 	
+	if (abs(axisrh) > 0.4) || (abs(axisrv) > 0.4)
+	{
+		_angle = direIm;
+		dire = direIm;
 	}
 	else
 	{

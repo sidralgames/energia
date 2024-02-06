@@ -8,7 +8,7 @@ function AddMegaUpgradeCavalry()
 		timesPicked: 0,
 		unique: true,
 		nameUpgrade: "Call The Cavalry",
-		infoUpgrade: "Call The Cavalry once per level \nby pressing square",
+		infoUpgrade: "CALL THE CAVALRY once per level \nby pressing square",
 		obj: o_enchufeMegaUpgrade_Cavalry,
 		canShowUp: true,
 		xx: 0,

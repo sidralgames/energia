@@ -70,7 +70,7 @@ if instance_exists(o_playerShip)
 			}
 			
 			
-			if (room = Sala_MegaUpgade)
+			if (room = Sala_MegaUpgrade)
 			{
 				for (var i = 0; i < global.numberOfMegaUpgrades-1; i++)
 				{
