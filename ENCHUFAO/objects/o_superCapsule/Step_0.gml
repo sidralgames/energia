@@ -11,7 +11,18 @@ if (charge >= maxCharge) && (capsulesMax >=1)
 {
 	charge = 0;
 	alarm[2] = 10;
-	capsuleCreated = instance_create_layer(x+lengthdir_x(45, image_angle+270),y+lengthdir_y(45, image_angle+270),"Enchufes", o_capsule)
+	
+	odds = irandom(10);
+	if (odds <= 9)
+	{
+		capsuleToCreate = o_capsule;
+	}
+	else
+	{
+		capsuleToCreate = o_capsule_Mimic;
+	}
+	
+	capsuleCreated = instance_create_layer(x+lengthdir_x(45, image_angle+270),y+lengthdir_y(45, image_angle+270),"Enchufes", capsuleToCreate)
 	capsuleCreated._vpush = lengthdir_y(1.2, image_angle+random_range(250,290));
 	capsuleCreated._hpush = lengthdir_x(1.2, image_angle+random_range(250,290));
 	capsuleCreated.alarm[2] = 10;

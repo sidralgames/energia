@@ -166,7 +166,7 @@ bnc = 0.6;
 walkSpeed = global._speed;
 
 plugged = false
-diagSpeed = round(global._speed * ((sqrt(2)) / 2));
+diagSpeed = (global._speed * 0.707);
 
 offRange = 2;
 spaceSpeed = 3;

@@ -5,6 +5,9 @@ function DrawLevelCorridor()
 	mimics = 0;
 	mimicsMax = 2;
 	
+	mimicsCapsule = 0;
+	mimicsCapsuleMax = 2;
+	
 	PETAs = 0;
 	PETAsMax = 3;
 	
@@ -26,6 +29,8 @@ function DrawLevelCorridor()
 				
 				var oddsStrandedShip = 300;
 				var oddsEnchufeMimic = 2500;
+				
+				var oddsCapsuleMimic = 2500;
 
 				var oddsPETAPickUp = 300;
 				var oddsShieldPickUp = 300;
@@ -172,6 +177,24 @@ function DrawLevelCorridor()
 							}
 						}
 					}
+					
+					if (global.level > 1)
+					{
+						if (irandom(oddsCapsuleMimic) == oddsCapsuleMimic) 
+						{
+							nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
+							nextwall = instance_nearest(exM, eyM, o_wall)
+							if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 30)
+							{
+								if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 50) && (mimicsCapsule < mimicsCapsuleMax)
+								{
+									instance_create_layer(exM,eyM,"Enchufes",o_capsule_Mimic); 
+									mimicsCapsule +=1;
+								}
+							}
+						}
+					}
+					
 					if (global.level > 1)
 					{
 						if (irandom(oddsEnchufeMimic) == oddsEnchufeMimic) 

@@ -29,12 +29,21 @@ function PlayerShipLaser(argument0)
 	     var lx = x + lengthdir_x(i, argument0);
 	     var ly = y + lengthdir_y(i, argument0);
 		 
-		 collision = tile_meeting(lx,ly,"Tiles") || place_meeting(lx, ly, o_enemyP) 
+		 collision = place_meeting(lx, ly, o_enemyP) 
 		 || place_meeting(lx, ly, o_bulletPlayer_Bomb) || place_meeting(lx, ly, o_BossFather)
-		 || place_meeting(lx, ly, o_enchufe_Mimic) || place_meeting(lx, ly, o_bombEnemyFather)
+		 || place_meeting(lx, ly, o_enchufe_Mimic) || place_meeting(lx, ly, o_capsule_Mimic) || place_meeting(lx, ly, o_bombEnemyFather)
+		 
+		 collisionTile = tile_meeting(lx,ly,"Tiles");
 		 
 	     if (collision)
 		 {
+			 maxLenght_=i
+			 maxLenght = maxLenght_;
+			 thisLenght = maxLenght;
+		}  
+		
+		if (collisionTile)
+		{
 			 maxLenght_=i
 			 maxLenght = maxLenght_;
 			 thisLenght = maxLenght;
@@ -71,7 +80,8 @@ function PlayerShipLaser(argument0)
 					 contExploTile -= 0.05;
 				 }
 			 }
-		}  
+
+		}
 	}
 
 	boss = collision_line(x,y,x+lengthdir_x(maxLenght_+20, argument0+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,argument0+random_range(2,-2)), o_BossMecha_Inside,false, true)
@@ -109,6 +119,13 @@ function PlayerShipLaser(argument0)
 	{
 		mimic._hp -= (0.25+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
 		mimic.burned = true;
+	}
+	
+	capsuleMimic = collision_line(x,y,x+lengthdir_x(maxLenght_+20, argument0+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,argument0+random_range(2,-2)), o_capsule_Mimic,false, true)
+	if (capsuleMimic)
+	{
+		capsuleMimic._hp -= (0.25+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
+		capsuleMimic.burned = true;
 	}
 	
 	enchufeWorm = collision_line(x,y,x+lengthdir_x(maxLenght_+20, argument0+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,argument0+random_range(2,-2)), o_EnchufeBossWorm,false, true)
