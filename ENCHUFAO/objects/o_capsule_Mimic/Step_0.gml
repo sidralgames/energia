@@ -106,7 +106,7 @@ if instance_exists(o_playerShip)
 				contDie = 5;
 				canDie = true;
 				image_index = 0;
-				sprite_index = s_brainCapsule;
+				sprite_index = s_CapsuleBrain;
 			}
 			else
 			{
@@ -121,7 +121,7 @@ if instance_exists(o_playerShip)
 				contDie = 5;
 				canDie = true;
 				image_index = 0;
-				sprite_index = s_brainCapsule;
+				sprite_index = s_CapsuleBrain;
 			}
 		}
 		else
@@ -131,7 +131,7 @@ if instance_exists(o_playerShip)
 				contDie = 5;
 				canDie = true;
 				image_index = 0;
-				sprite_index = s_brainCapsule;
+				sprite_index = s_CapsuleBrain;
 			}
 		}
 	}
@@ -140,7 +140,7 @@ if instance_exists(o_playerShip)
 	{
 		image_speed = 0.5;
 		
-		sprite_index = s_brainCapsule;
+		sprite_index = s_CapsuleBrain;
 		contDie--;
 		
 		if (contDie <=0) && (image_index >= 13)

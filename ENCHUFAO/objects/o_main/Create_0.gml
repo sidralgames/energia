@@ -42,8 +42,9 @@ global.customFont10 = font_add("ChubbyChoo-SemiBold.ttf", 11, false, false, 32, 
 
 
 //--------------- MEGA UPGRADES -----------------//
+
 //--INVISIBILITY CLOAK--//
-global.haveInvisibiltyCloak = true;
+global.haveInvisibiltyCloak = false;
 global.invisibleCloak = false;
 global.cloackReal = 1;
 
@@ -56,9 +57,9 @@ global.allPETAisMulti = false;
 global.haveExternalBattery = false;
 global.externalBatteryOn = false;
 
-
 //--CALL FOR HELP--//
 global.haveCallForHelp = false;
+
 
 //-------BULLET MODIFICATORS----------//
 global.piercingShot = false;
@@ -319,7 +320,7 @@ AddUpgradeSlowMo();
 AddUpgradeOvercharge();
 AddUpgradeClusterBomb();//15
 AddUpgradeLaser();
-AddUpgradeBonus();
+//AddUpgradeBonus();  -----> MOVED TO ENCHUFE INICIO
 AddUpgradeDobleDoble();
 AddUpgradeFriend();
 AddUpgradeShootingRecharges();//20

@@ -12,6 +12,7 @@ contDie = 5;
 canDie = false;
 flashAlpha = 0;
 isMimic = true;
+isMimicCapsule = true;
 upgradesBattery = global.batteryEnchufeListAmmonum;
 contClosed = random_range(300, 500);
 state = 0;

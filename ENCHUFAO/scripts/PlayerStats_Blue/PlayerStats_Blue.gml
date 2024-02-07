@@ -6,7 +6,7 @@ function PlayerStats_Blue()
 	global.spritePart = s_bullet_part_Blue;
 	global.bulletPart_sprite = s_bullet_part_Blue;
 	
-	global.textBonus = "3x1 In Shields"
+	global.textBonus = "3x1 In Shields";
 		
 	global.energyMax = 450;
 	global.energy = global.energyMax;
@@ -32,6 +32,9 @@ function PlayerStats_Blue()
 	global.ammoStat = global.ammoMax / 50;
 	global.laserStat = global.laserMax;
 	global.cableStat = 2;
+	
+	//shields
+	global.shields = 1;
 	
 	//Experimental
 	global.accuracy =-1.5;

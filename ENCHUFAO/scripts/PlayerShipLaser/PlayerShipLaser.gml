@@ -135,13 +135,15 @@ function PlayerShipLaser(argument0)
 	}
 	
 	enemy = collision_line(x,y,x+lengthdir_x(maxLenght_+20, argument0+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,argument0+random_range(2,-2)), o_enemyP,false, true)
-	if (enemy)
+	
+	if (enemy) && (enemy.canBeHittedByPlayerLaser)
 	{
 		if (enemy.canBeHittedByPlayerLaser = true)
 		{
 			if (enemy.isShield == false) && (enemy.state == ENEMYSTATE.WAITING)
 			{
 				enemy.state = ENEMYSTATE.CHASING;
+				alert = instance_create(x,y,o_invisibleAlert);
 			}
 		
 			screenShake(4,10);
@@ -203,6 +205,7 @@ function PlayerShipLaser(argument0)
 				}
 			}
 		}
+		
 	}
 	
 	bombPlayer = collision_line(x,y,x+lengthdir_x(maxLenght_+20, argument0+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,argument0+random_range(2,-2)), o_bulletPlayer_Bomb,false, true)

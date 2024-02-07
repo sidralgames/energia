@@ -32,6 +32,9 @@ function PlayerStats_Dark()
 	global.laserStat = global.laserMax;
 	global.cableStat = 3;
 	
+	//shields
+	global.shields = 0;
+	
 	//Experimental
 	global.accuracy =0;
 }

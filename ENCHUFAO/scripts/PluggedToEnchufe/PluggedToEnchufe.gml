@@ -58,11 +58,22 @@ function PluggedToEnchufe()
 		}
 		else if (enchufe.isMimic)
 		{
-			_hpush = lengthdir_x(2,dir)
-			_vpush = lengthdir_y(2,dir)
+			if (enchufe.isMimicCapsule)
+			{
+				_hpush = lengthdir_x(1,dir)
+				_vpush = lengthdir_y(1,dir)
 		
-			enchufe._hpush -= lengthdir_x(0.05,dir)
-			enchufe._vpush -= lengthdir_y(0.05,dir)
+				enchufe._hpush -= lengthdir_x(0.18,dir)
+				enchufe._vpush -= lengthdir_y(0.18,dir)
+			}
+			else
+			{
+				_hpush = lengthdir_x(2,dir)
+				_vpush = lengthdir_y(2,dir)
+		
+				enchufe._hpush -= lengthdir_x(0.05,dir)
+				enchufe._vpush -= lengthdir_y(0.05,dir)
+			}
 		}
 		else if (enchufe.IsEnchufeBoss)
 		{

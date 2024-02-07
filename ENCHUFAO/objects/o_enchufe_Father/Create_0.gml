@@ -13,7 +13,10 @@ IsEnchufeCapsuleSuper = false;
 enchufeTrapper = false;
 canBeEnchufated = true;
 canBeEnchufatedCont = 0;
+
 isMimic = false;
+isMimicCapsule = false;
+
 IsEnchufeBoss = false;
 IsEnchufeCapsule = false;
 capsuleHaveBattery = false;

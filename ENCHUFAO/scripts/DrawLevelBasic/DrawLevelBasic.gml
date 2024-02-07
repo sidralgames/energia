@@ -32,7 +32,7 @@ function DrawLevelBasic()
 				var oddsStrandedShip = 300;
 				var oddsEnchufeMimic = 2500;
 				
-				var oddsCapsuleMimic = 2;
+				var oddsCapsuleMimic = 2000;
 
 				var oddsPETAPickUp = 300;
 				var oddsShieldPickUp = 300;

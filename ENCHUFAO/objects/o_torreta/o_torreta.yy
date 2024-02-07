@@ -22,8 +22,8 @@
     "path": "folders/Objetos/Enemies.yy",
   },
   "parentObjectId": {
-    "name": "o_enemyP",
-    "path": "objects/o_enemyP/o_enemyP.yy",
+    "name": "o_enemyP_NoHit",
+    "path": "objects/o_enemyP_NoHit/o_enemyP_NoHit.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
