@@ -500,6 +500,7 @@
     {"name":"AddMegaUpgradePeta","order":2,"path":"scripts/AddMegaUpgradePeta/AddMegaUpgradePeta.yy",},
     {"name":"s_vine2","order":5,"path":"sprites/s_vine2/s_vine2.yy",},
     {"name":"o_partOverCharged","order":6,"path":"objects/o_partOverCharged/o_partOverCharged.yy",},
+    {"name":"s_brainCapsule","order":36,"path":"sprites/s_brainCapsule/s_brainCapsule.yy",},
     {"name":"o_bulletPlayer_1","order":1,"path":"objects/o_bulletPlayer_1/o_bulletPlayer_1.yy",},
     {"name":"s_enchufeMimic_HP","order":4,"path":"sprites/s_enchufeMimic_HP/s_enchufeMimic_HP.yy",},
     {"name":"o_capsule","order":89,"path":"objects/o_capsule/o_capsule.yy",},

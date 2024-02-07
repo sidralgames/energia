@@ -18,7 +18,7 @@ state = 0;
 
 slowMoPickUps = random_range(8,10);
 
-_hp = 15;
+_hp = 10;
 _sprite = s_capsule_Mimic;
 sprite_attack = s_capsule_Mimic;
 sprite_index = _sprite;
@@ -49,4 +49,5 @@ slowed = false;
 slowedContMax = 30;
 slowedCont = slowedContMax;
 
-
+offset = irandom(360);
+isPluggable = true;

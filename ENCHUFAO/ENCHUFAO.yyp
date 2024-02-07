@@ -558,6 +558,7 @@
     {"id":{"name":"AddMegaUpgradePeta","path":"scripts/AddMegaUpgradePeta/AddMegaUpgradePeta.yy",},},
     {"id":{"name":"s_vine2","path":"sprites/s_vine2/s_vine2.yy",},},
     {"id":{"name":"o_partOverCharged","path":"objects/o_partOverCharged/o_partOverCharged.yy",},},
+    {"id":{"name":"s_brainCapsule","path":"sprites/s_brainCapsule/s_brainCapsule.yy",},},
     {"id":{"name":"o_bulletPlayer_1","path":"objects/o_bulletPlayer_1/o_bulletPlayer_1.yy",},},
     {"id":{"name":"s_enchufeMimic_HP","path":"sprites/s_enchufeMimic_HP/s_enchufeMimic_HP.yy",},},
     {"id":{"name":"tile_meeting","path":"scripts/tile_meeting/tile_meeting.yy",},},

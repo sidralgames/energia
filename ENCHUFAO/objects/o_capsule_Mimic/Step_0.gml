@@ -28,15 +28,67 @@ if (flashAlpha>0)
 }
 
 if instance_exists(o_playerShip)
-{
+{	
+	switch (state)
+	{
+		case 0: //MIMIC
+		{
+			depth = layer_get_depth("Enchufes");
+			sprite_index = _sprite;
+			image_speed = 0.4;
+		
+			if (o_playerShip.plugged) && (enchufeActive)
+			{
+				state = 1;	
+				image_index = 0;
+				contClosed = random_range(200, 300);
+				o_playerShip.trapped = true;
+			}
+			
+			if (withStrandedShip)
+			{
+				state = 1;	
+				image_index = 0;
+				contClosed = random_range(200, 300);
+				charger = instance_nearest(x,y,o_chargerStrandedShip);
+				charger.trapped = true;
+			}
+		
+		}break;
+	
+		case 1: //CLOSED
+		{
+			//depth = layer_get_depth("Cable")-2;
+			sprite_index = sprite_attack;
+			image_speed = 0.9;
+		
+			if !withStrandedShip
+			{
+				contClosed --;
+			}
+		
+			if (contClosed <= 0)
+			{
+				with (o_playerShip)
+				{
+					trapped = false;
+					Unplug();
+				}
+				
+				_hp = 0;
+			
+				o_charger.overcharged = true;
+				o_charger.alarm[0] = 300;
+				
+				state = 0;
+			}
+		
+		}break;
+	}
+	
 	if (_hp<=0)
 	{
-		EnemyDeathShake();
-		
-		global.XPpoints +=30;
-		explo = instance_create(x,y,o_explo2)
-		explo.image_xscale = 0.5;
-		explo.image_yscale = 0.5;
+		isPluggable = false;
 		
 		if (state = 1) && canDie = false
 		{
@@ -53,6 +105,8 @@ if instance_exists(o_playerShip)
 				
 				contDie = 5;
 				canDie = true;
+				image_index = 0;
+				sprite_index = s_brainCapsule;
 			}
 			else
 			{
@@ -66,85 +120,57 @@ if instance_exists(o_playerShip)
 				
 				contDie = 5;
 				canDie = true;
+				image_index = 0;
+				sprite_index = s_brainCapsule;
 			}
-			
 		}
 		else
 		{
-			instance_destroy();
+			if (canDie = false)
+			{
+				contDie = 5;
+				canDie = true;
+				image_index = 0;
+				sprite_index = s_brainCapsule;
+			}
 		}
-		
-		
-	}
-	
-	switch (state)
-	{
-		case 0: //MIMIC
-		{
-			depth = layer_get_depth("Enchufes");
-			sprite_index = _sprite;
-			image_speed = 0.4;
-		
-			if (o_playerShip.plugged) && (enchufeActive)
-			{
-				state = 1;	
-				image_index = 0;
-				contClosed = random_range(400, 500);
-				o_playerShip.trapped = true;
-			}
-			
-			if (withStrandedShip)
-			{
-				state = 1;	
-				image_index = 0;
-				contClosed = random_range(400, 500);
-				charger = instance_nearest(x,y,o_chargerStrandedShip);
-				charger.trapped = true;
-			}
-		
-		}break;
-	
-		case 1: //CLOSED
-		{
-			//depth = layer_get_depth("Cable")-2;
-			sprite_index = sprite_attack;
-			image_speed = 0.5;
-		
-			if !withStrandedShip
-			{
-				contClosed --;
-			}
-		
-			if (image_index >= 8)
-			{
-				image_speed = 0;
-			}
-		
-			if (contClosed <= 0)
-			{
-				
-			
-				with (o_playerShip)
-				{
-					trapped = false;
-					Unplug();
-				}
-				
-				o_charger.overcharged = true;
-				o_charger.alarm[0] = 300;
-				
-				state = 0;
-			}
-		
-		}break;
 	}
 	
 	if (canDie)
 	{
+		image_speed = 0.5;
+		
+		sprite_index = s_brainCapsule;
 		contDie--;
-		if (contDie <=0)
+		
+		if (contDie <=0) && (image_index >= 13)
 		{
-			instance_destroy();	
+			
+			instance_destroy();
+			ebomb = instance_create(x,y,o_exploBomb);
+			ebomb.scale = 1.8;
+			ebomb.scale = 1.8;
+			ebomb.damagePlayer = true;
+			ebomb.isFrom = "EnemyBomb";
+			ebomb.sprite_index = s_explo2;
+			ebomb.scaleShockwave = 0.25;
+			ebomb.scaleShake = 0.7;
+			shock = instance_create(x,y,o_shockwaveTiles)
+			shock.scale = 0.85;
+
+			bullets = 8;
+			for( var i = 0; i < bullets; i++ )
+			{
+			   inst = instance_create_layer( x, y, "Enemies", o_bullet_BossGarbanzo_AttackFastBomb);
+				if instance_exists(inst)
+				{
+				    inst.direction = i * (360 / bullets ) + offset;
+					inst.hp = 25;
+					inst.isEnemyBomb = true;
+					//inst.dire = choose(1, -1);
+				}
+			}
+
 		}
 	}
 }

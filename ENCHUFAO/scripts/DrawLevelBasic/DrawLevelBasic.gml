@@ -32,7 +32,7 @@ function DrawLevelBasic()
 				var oddsStrandedShip = 300;
 				var oddsEnchufeMimic = 2500;
 				
-				var oddsCapsuleMimic = 2500;
+				var oddsCapsuleMimic = 2;
 
 				var oddsPETAPickUp = 300;
 				var oddsShieldPickUp = 300;
@@ -212,7 +212,7 @@ function DrawLevelBasic()
 						}
 					}
 					
-					if (global.level > 1)
+					if (global.level >= 1)
 					{
 						if (irandom(oddsCapsuleMimic) == oddsCapsuleMimic) 
 						{
