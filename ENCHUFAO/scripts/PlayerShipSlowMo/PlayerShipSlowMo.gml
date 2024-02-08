@@ -2,8 +2,33 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function PlayerShipSlowMo()
 {
-	//------- ASSISTED SLOWMO ------//
-	if (global.assistSlowmoIsOn) && (global.hp <= 1)
+	
+	//---- AFTER HIT SLOWMO ----//
+	if (tocado == true) && (slowmoAssistedTrue = false)
+	{
+		slowmoAssistedTrue = true;
+		global.assistedSlowmo = true;
+		assistFactor = 0.05;
+		//contAssistHit = 50;
+	}
+	
+	if (slowmoAssistedTrue == true) && (tocado == false)
+	{
+		if (global.assistedSlowmo)
+		{
+			global.assistedSlowmo = false;
+			assistFactor = 0;
+			slowmoAssistedTrue = false;
+		}
+	}
+	
+	//if (contAssistHit >= 0)
+	//{
+	//	contAssistHit--;	
+	//}
+		
+	//------- AVOID HIT ASSISTED SLOWMO (OPTIONAL IN OPTIONS)------//
+	if ((global.assistSlowmoIsOn) && (global.hp <= 1))
 	{
 		nextBullet = instance_nearest(x,y,o_bulletEnemy_Father) 
 		nextEnemy =  instance_nearest(x,y,o_enemyP);
@@ -57,6 +82,7 @@ function PlayerShipSlowMo()
 	{
 		canSlowMotion = false;
 	}
+	
 	if (alarm[7] <= 0) && (!key_BulletTime) && (global.slowMoTime > 105)
 	{
 		canSlowMotion = true;
@@ -64,10 +90,12 @@ function PlayerShipSlowMo()
 
 	if ((key_BulletTime) && (canSlowMotion = true)) || 	(global.assistedSlowmo = true)
 	{
-		
 		SetTimeSlow();
-	
-		o_main.alarm[1] = 90;
+		
+		if (slowmoAssistedTrue = false)
+		{
+			o_main.alarm[1] = 90;
+		}
 	
 		if (global.assistedSlowmo = false)
 		{

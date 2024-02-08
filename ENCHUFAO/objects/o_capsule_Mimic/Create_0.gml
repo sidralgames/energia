@@ -52,3 +52,5 @@ slowedCont = slowedContMax;
 
 offset = irandom(360);
 isPluggable = true;
+
+contClosedMax = random_range(200,300)

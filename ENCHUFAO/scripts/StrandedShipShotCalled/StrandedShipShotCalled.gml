@@ -13,8 +13,6 @@ function StrandedShipShotCalled()
 			{
 				StrandedShipShoot();
 			}
-			
-			
 		}
 		else
 		{

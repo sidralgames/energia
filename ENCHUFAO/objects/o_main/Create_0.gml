@@ -58,7 +58,7 @@ global.haveExternalBattery = false;
 global.externalBatteryOn = false;
 
 //--CALL FOR HELP--//
-global.haveCallForHelp = false;
+global.haveCallForHelp = true;
 
 
 //-------BULLET MODIFICATORS----------//

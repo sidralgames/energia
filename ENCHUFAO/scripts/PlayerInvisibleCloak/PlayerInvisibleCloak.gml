@@ -58,12 +58,13 @@ function PlayerInvisibleCloak()
 			layer_set_visible("CLOAK", false);
 		}
 		
+		
 		switch(global.spriteShip)
 		{
 			case (splayer):
 			{
-				part_particles_create(global.naveP_sys, x+lengthdir_x(-5, _angle+25), y+lengthdir_y(-5, _angle+25), global.naveP , 3);
-				part_particles_create(global.naveP_sys, x+lengthdir_x(-5, _angle-25), y+lengthdir_y(-5, _angle-25), global.naveP , 3);
+				part_particles_create(global.naveP_sys, x+lengthdir_x(-5, _angle+25), y+lengthdir_y(-5, _angle+25), global.naveP , 2);
+				part_particles_create(global.naveP_sys, x+lengthdir_x(-5, _angle-25), y+lengthdir_y(-5, _angle-25), global.naveP , 2);
 			}
 			break;
 			
@@ -76,29 +77,29 @@ function PlayerInvisibleCloak()
 			
 			case (splayer_Red):
 			{
-				part_particles_create(global.naveP_sys, x+lengthdir_x(-7, _angle+20), y+lengthdir_y(-7, _angle+20), global.naveP , 3);
-				part_particles_create(global.naveP_sys, x+lengthdir_x(-7, _angle-20), y+lengthdir_y(-7, _angle-20), global.naveP , 3);
+				part_particles_create(global.naveP_sys, x+lengthdir_x(-7, _angle+20), y+lengthdir_y(-7, _angle+20), global.naveP , 2);
+				part_particles_create(global.naveP_sys, x+lengthdir_x(-7, _angle-20), y+lengthdir_y(-7, _angle-20), global.naveP , 2);
 			}
 			break;
 			
 			case (splayer_Dark):
 			{
-				part_particles_create(global.naveP_sys, x+lengthdir_x(-7, _angle+20), y+lengthdir_y(-7, _angle+20), global.naveP , 3);
-				part_particles_create(global.naveP_sys, x+lengthdir_x(-7, _angle-20), y+lengthdir_y(-7, _angle-20), global.naveP , 3);
+				part_particles_create(global.naveP_sys, x+lengthdir_x(-7, _angle+20), y+lengthdir_y(-7, _angle+20), global.naveP , 2);
+				part_particles_create(global.naveP_sys, x+lengthdir_x(-7, _angle-20), y+lengthdir_y(-7, _angle-20), global.naveP , 2);
 			}
 			break;
 			
 			case (splayer_Purple):
 			{
-				part_particles_create(global.naveP_sys, x+lengthdir_x(-7, _angle), y+lengthdir_y(-7, _angle), global.naveP , 3);
+				part_particles_create(global.naveP_sys, x+lengthdir_x(-7, _angle), y+lengthdir_y(-7, _angle), global.naveP , 2);
 				//part_particles_create(global.naveP_sys, x+lengthdir_x(-7, _angle-20), y+lengthdir_y(-7, _angle-20), global.naveP , 3);
 			}
 			break;
 			
 			case (splayer_mp3):
 			{
-				part_particles_create(global.naveP_sys, x+lengthdir_x(-5, _angle+40), y+lengthdir_y(-5, _angle+40), global.naveP , 3);
-				part_particles_create(global.naveP_sys, x+lengthdir_x(-5, _angle-40), y+lengthdir_y(-5, _angle-40), global.naveP , 3);
+				part_particles_create(global.naveP_sys, x+lengthdir_x(-5, _angle+40), y+lengthdir_y(-5, _angle+40), global.naveP , 2);
+				part_particles_create(global.naveP_sys, x+lengthdir_x(-5, _angle-40), y+lengthdir_y(-5, _angle-40), global.naveP , 2);
 			}
 			break;
 		}

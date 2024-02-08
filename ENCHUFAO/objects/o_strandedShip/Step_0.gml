@@ -35,7 +35,13 @@ else
 	}
 	else
 	{
-		part_particles_create(global.naveP_sys, x,y, global.naveP, 1);
+		contPart--;
+		
+		if (contPart <= 0)
+		{
+			part_particles_create(global.naveP_sys, x,y, global.naveP, 1);
+			contPart = 3;
+		}
 	}
 
 

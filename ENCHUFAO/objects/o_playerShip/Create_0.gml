@@ -11,6 +11,10 @@ global.totalEnemiesOnLevelMax = min(35, 20+global.level);
 contSmokeArea = 0;
 drawingShockPeta = false;
 
+contPartShip = 2;
+
+contAssistHit = 5;
+
 if (room = Sala_Tutorial)
 {
 	global.hp = 1;

@@ -41,7 +41,7 @@ if instance_exists(o_playerShip)
 			{
 				state = 1;	
 				image_index = 0;
-				contClosed = random_range(200, 300);
+				contClosed = contClosedMax;
 				o_playerShip.trapped = true;
 			}
 			
@@ -49,7 +49,7 @@ if instance_exists(o_playerShip)
 			{
 				state = 1;	
 				image_index = 0;
-				contClosed = random_range(200, 300);
+				contClosed = contClosedMax;
 				charger = instance_nearest(x,y,o_chargerStrandedShip);
 				charger.trapped = true;
 			}
@@ -143,7 +143,7 @@ if instance_exists(o_playerShip)
 		sprite_index = s_CapsuleBrain;
 		contDie--;
 		
-		if (contDie <=0) && (image_index >= 13)
+		if (contDie <=0) && (image_index >= 20)
 		{
 			
 			instance_destroy();

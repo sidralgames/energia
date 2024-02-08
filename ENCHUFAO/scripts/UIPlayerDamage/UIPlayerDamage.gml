@@ -7,7 +7,7 @@ function UIPlayerDamage()
 		if (o_playerShip.tocado) && (o_playerShip.alarm[4] > 4)
 		{
 			draw_set_color(global.red);
-			draw_set_alpha(0.35);
+			draw_set_alpha(0.45);
 			draw_rectangle(__view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0,__view_get( e__VW.XView, 0 )+640,__view_get( e__VW.YView, 0 )+360,false);
 			draw_set_color(c_white);
 			draw_set_alpha(1);

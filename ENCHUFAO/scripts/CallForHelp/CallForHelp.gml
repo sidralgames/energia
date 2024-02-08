@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function CallForHelp()
 {
-	navesToCreate = 10;
+	navesToCreate = 7;
 	if (x > __view_get( e__VW.XView, 0 )+320)
 	{
 		dirStranded = 1;
@@ -20,7 +20,7 @@ function CallForHelp()
 		spriteNave = choose(splayer, splayer_Blue, splayer_Dark, splayer_mp3, splayer_Purple, splayer_Red);
 		
 		stranded = instance_create_layer(__view_get( e__VW.XView, 0 )+xpos,__view_get( e__VW.YView, 0 )-22+(360/(navesToCreate-2))*i, "Main", o_strandedShip);
-		stranded.dirHspeed = random_range(1,2)*dirStranded;
+		stranded.dirHspeed = random_range(2,3)*dirStranded;
 		stranded.xscale = 0.75;
 		stranded.yscale = 0.75;
 		stranded.called = true;

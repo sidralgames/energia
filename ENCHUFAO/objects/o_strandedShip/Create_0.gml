@@ -16,8 +16,10 @@ tocado = false;
 cableFake = noone;
 changedSpeed = false;
 
+contPart = 3;
+
 //bombs called
-alarm[8] = random_range(30, 200);
+alarm[8] = random_range(60, 200);
 
 weight = 0;
 minSpeed = 0;

@@ -28,8 +28,16 @@ function StrandedShipIsCalled()
 	_angle = direction;
 	hspeed = dirHspeed * global.relativeSpeed;
 	vspeed = vspeedTurn * global.relativeSpeed;
-	dirHspeed = lerp(dirHspeed, 3*sign(hspeed), 0.005)
-	part_particles_create(global.naveP_sys, x,y, global.naveP, 1);
+	dirHspeed = lerp(dirHspeed, 3*sign(hspeed), 0.005);
+	
+	contPart--;
+	
+	if (contPart <=0)
+	{
+		part_particles_create(global.naveP_sys, x,y, global.naveP, 1);
+		contPart = 5;
+	}
+	
 	if (hspeed > 0)
 	{
 		if (x > __view_get( e__VW.XView, 0 )+turnDistanceD)
