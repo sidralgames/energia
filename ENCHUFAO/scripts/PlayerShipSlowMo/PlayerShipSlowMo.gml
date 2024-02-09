@@ -8,24 +8,26 @@ function PlayerShipSlowMo()
 	{
 		slowmoAssistedTrue = true;
 		global.assistedSlowmo = true;
-		assistFactor = 0.05;
-		//contAssistHit = 50;
+		assistFactor = 0.1;
+		slowFactor = -0.1;
+		contAssistHit = 30;
 	}
 	
-	if (slowmoAssistedTrue == true) && (tocado == false)
+	if (slowmoAssistedTrue == true) && (contAssistHit <= 0)
 	{
 		if (global.assistedSlowmo)
 		{
 			global.assistedSlowmo = false;
 			assistFactor = 0;
+			slowFactor = 0;
 			slowmoAssistedTrue = false;
 		}
 	}
 	
-	//if (contAssistHit >= 0)
-	//{
-	//	contAssistHit--;	
-	//}
+	if (contAssistHit >= 0)
+	{
+		contAssistHit--;	
+	}
 		
 	//------- AVOID HIT ASSISTED SLOWMO (OPTIONAL IN OPTIONS)------//
 	if ((global.assistSlowmoIsOn) && (global.hp <= 1))
@@ -42,6 +44,7 @@ function PlayerShipSlowMo()
 				global.assistedSlowmo = true;
 				assistFactor = 0.3;
 				contAssist = 50;
+				slowFactor = 0;
 			}
 		}
 		
@@ -54,6 +57,7 @@ function PlayerShipSlowMo()
 				global.assistedSlowmo = true;
 				assistFactor = 0.3;
 				contAssist = 50;
+				slowFactor = 0;
 			}
 		}
 	
@@ -66,6 +70,7 @@ function PlayerShipSlowMo()
 		{
 			global.assistedSlowmo = false;
 			assistFactor = 0;
+			slowFactor = 0;
 			slowmoAssistedTrue = false;
 		}
 	}
@@ -105,7 +110,7 @@ function PlayerShipSlowMo()
 			}
 		}
 
-		global.relativeSpeed = lerp(global.relativeSpeed,0.3, 0.05+assistFactor);
+		global.relativeSpeed = lerp(global.relativeSpeed,0.3+slowFactor, 0.05+assistFactor);
 		pitch = min(1,global.relativeSpeed+0.5);
 		audio_emitter_pitch(global.audioEmitter, pitch);
 		

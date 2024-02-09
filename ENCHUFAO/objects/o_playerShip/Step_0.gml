@@ -15,6 +15,8 @@ CheckCalledForHelp();
 
 CheckExploHitIsUpgraded();
 
+ParticlesManager();
+
 PlayerCreateSmoke();
 
 if (partChanged = true) && (!plugged)
@@ -56,7 +58,7 @@ if (o_charger.overcharged)
 }
 else
 {
-	fireRate = max(5,global.fireRate);
+	fireRate = max(5,global.fireRate - global.temporaryFireRate_Factor);
 }
 
 

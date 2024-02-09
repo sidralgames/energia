@@ -27,7 +27,7 @@ else if (part = 1)
 
 image_angle = direction-90;
 
-hp--;
+hp -= 1  * min (1,  global.relativeSpeed+0.2);;
 
 if (hp <= 0)
 {
@@ -37,7 +37,7 @@ if (hp <= 0)
 
 if (isEnemyBomb)
 {
-	speed=1.75 * global.relativeSpeed;
+	speed=1.75 * min (1,  global.relativeSpeed+0.2);
 	
 	if alarm[0]<=0
 	{
@@ -55,7 +55,7 @@ else if (isMineBomb)
 }
 else if (isBossGarbanzoBomb)
 {	
-	speed=1.75 * global.relativeSpeed;
+	speed=1.75 * min (1,  global.relativeSpeed+0.2);
 	
 	if alarm[0]<=0
 	{

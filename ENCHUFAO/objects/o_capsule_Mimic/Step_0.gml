@@ -14,6 +14,12 @@ if (place_meeting(x,y+_vpush*1.5,o_enchufe_Father))
 	
 }
 
+if (scale < 1)
+{
+	scale+=0.1
+}
+
+
 Move();
 
 image_angle += max(0.1*sign(_hpush), 2*(abs(_hpush)),0.1*sign(_vpush), 2*(abs(_vpush))*global.relativeSpeed);

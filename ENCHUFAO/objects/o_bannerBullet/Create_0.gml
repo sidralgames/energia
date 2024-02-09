@@ -39,7 +39,7 @@ else if (global.havePickedGhostBullets)
 {
 	sprite_index = s_banner_Ghost;
 }
-else if (global.havePickedGhostBullets)
+else if (global.havePickedIceBullets)
 {
 	sprite_index = s_banner_Freezing;
 }

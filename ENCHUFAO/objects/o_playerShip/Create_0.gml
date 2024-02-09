@@ -6,6 +6,8 @@
 //global.haveSmokeBomb = true;
 //global.bombIsHomingBomb = true;
 
+global.superShotInitial = global.superShot;
+
 global.totalEnemiesOnLevelMax = min(35, 20+global.level);
 
 contSmokeArea = 0;
@@ -14,6 +16,12 @@ drawingShockPeta = false;
 contPartShip = 2;
 
 contAssistHit = 5;
+slowFactor = 0;
+
+naveP_sizeInc = -0.075;
+	
+naveP_minLife=0;
+naveP_maxLife=0;
 
 if (room = Sala_Tutorial)
 {

@@ -1,5 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+//---- TEMPORARY UPGRADES -----//
+global.superShot = 1;
+global.temporaryFireRate = 0;
+global.temporarySuperShot = 0;
+
+global.temporaryFireRate_Factor = 0;
+global.temporarySuperShot_Factor = 0;
+
+global.superShotInitial = global.superShot;
+
 full = false;
 global.totalEnemies = 0;
 global.BossWormHPMax = 0;

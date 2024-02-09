@@ -10,7 +10,7 @@ switch(image_index)
 		}
 		global.energyRadar = true;
 		
-		banner = instance_create_layer(o_playerShip.x, o_playerShip.y -30, "Player", o_radarBanner)
+		banner = instance_create_layer(o_playerShip.x, o_playerShip.y -60, "Player", o_radarBanner)
 		banner.sprite_index = s_bannerEnergyRadar;
 		
 	}break;
@@ -23,7 +23,7 @@ switch(image_index)
 		}
 		global.hpRadar = true;
 		
-		banner = instance_create_layer(o_playerShip.x, o_playerShip.y -30, "Player", o_radarBanner)
+		banner = instance_create_layer(o_playerShip.x, o_playerShip.y -60, "Player", o_radarBanner)
 		banner.sprite_index = s_bannerHPRadar;
 		
 	}break; 

@@ -1,5 +1,10 @@
 
 
+sizeInc = -0.075;
+	
+minLife=0;
+maxLife=0;
+
 
 global.naveP_sys = part_system_create();
 

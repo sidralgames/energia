@@ -151,7 +151,7 @@ function CheckEnchufeUpgrade()
 					}
 				}
 
-				global.superShot += 0.25;
+				global.superShot += 0.3;
 				instance_destroy(o_partBalaP)
 				instance_create_layer(-100,-100, "Part",o_partBalaP);
 				
