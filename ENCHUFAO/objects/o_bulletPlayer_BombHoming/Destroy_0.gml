@@ -7,7 +7,7 @@ if (global.haveSmokeBomb)
 }
 if (hitByLaser = false)
 {
-	ebomb = instance_create(x,y,o_exploBomb);
+	ebomb = instance_create(x,y,o_explo2);
 	ebomb.scale = 1.4;
 	ebomb.scale = 1.4;
 	if (sprite_index = s_bombCluster)
@@ -18,7 +18,7 @@ if (hitByLaser = false)
 }
 else
 {
-	ebomb = instance_create(x,y,o_exploBomb);
+	ebomb = instance_create(x,y,o_explo2);
 	ebomb.scale = 1.8;
 	ebomb.scale = 1.8;
 	if (sprite_index = s_bombCluster)

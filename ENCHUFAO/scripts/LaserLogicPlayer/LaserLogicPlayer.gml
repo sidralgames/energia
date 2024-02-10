@@ -76,15 +76,21 @@ function LaserLogicPlayer()
 
 		if (laserActive) && (key_laser) && (global.laser>0)
 		{
+			
+			
+			
 			if (impulse = false)
 			{
+				gamepad_set_vibration(0,2,2)
+				alarm[5] = 40;
 				_hpush += -lengthdir_x(10, _angle);
 				_vpush += -lengthdir_y(10, _angle);
 				impulse = true;
 			}
 			
-			gamepad_set_vibration(0,2,2)
 			PlayerShipLaser(_angle);
+			
+			
 		}
 	}
 	else

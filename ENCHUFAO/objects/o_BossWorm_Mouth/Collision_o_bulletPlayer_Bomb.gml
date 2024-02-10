@@ -2,9 +2,18 @@
 // Puede escribir su código en este editor
 if (onlyHead)
 {
-	_hp -=5;
+	if (global.bombIsHomingBomb)
+{
+	_hp -= 3 *global.damageDealt;
+	instance_destroy(other);
 }
-instance_destroy(other);
+else
+{
+	_hp -=5 *global.damageDealt;
+	instance_destroy(other);
+}
+
+}
 
 
 

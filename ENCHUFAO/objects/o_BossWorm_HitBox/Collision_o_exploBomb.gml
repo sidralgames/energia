@@ -6,16 +6,33 @@ if instance_exists(worm)
 	{
 		if (Metal.isVisible = false) && (_hp > 0)
 		{
-			if (1*global.damageDealt > _hp )
+			if (global.bombIsHomingBomb)
 			{
-				global.BossWormHP -= _hp;
-				_hp = 0;
+				if (0.25*global.damageDealt > _hp )
+				{
+					global.BossWormHP -= _hp;
+					_hp = 0;
 		
-			} 
-			else 
+				} 
+				else 
+				{
+					global.BossWormHP -= 0.25*global.damageDealt;
+					_hp -= 0.25*global.damageDealt;
+				}
+			}
+			else
 			{
-				global.BossWormHP -= 1*global.damageDealt;
-				_hp -= 1*global.damageDealt;
+				if (1*global.damageDealt > _hp )
+				{
+					global.BossWormHP -= _hp;
+					_hp = 0;
+		
+				} 
+				else 
+				{
+					global.BossWormHP -= 1*global.damageDealt;
+					_hp -= 1*global.damageDealt;
+				}
 			}
 		}
 	}

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "s_temporary_fireRate",
+  "name": "s_temporary_laser",
   "bbox_bottom": 17,
   "bbox_left": 0,
   "bbox_right": 21,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d080d0f4-51f3-42a5-bad3-5efd277d86dc",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8b424832-b2f3-45ff-b313-7f2d51fe8d6a",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 18,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e67c7f7a-7c5e-4f41-b2c5-048b17513938","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"061c8ddc-5de3-411a-99cd-6a6bc1cee1cf","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 4,
@@ -32,7 +32,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "s_temporary_fireRate",
+    "name": "s_temporary_laser",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d080d0f4-51f3-42a5-bad3-5efd277d86dc","path":"sprites/s_temporary_fireRate/s_temporary_fireRate.yy",},},},"Disabled":false,"id":"a081df0b-5876-410e-8ff8-e2c7c3397edc","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"8b424832-b2f3-45ff-b313-7f2d51fe8d6a","path":"sprites/s_temporary_laser/s_temporary_laser.yy",},},},"Disabled":false,"id":"8aa52d1a-2371-4929-9027-914c964167a2","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

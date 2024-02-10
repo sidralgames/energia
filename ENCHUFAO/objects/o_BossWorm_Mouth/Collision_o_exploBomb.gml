@@ -2,7 +2,21 @@
 // Puede escribir su código en este editor
 if (onlyHead)
 {
-	_hp -=(1*global.damageDealt);
+	if (other.isFrom = "PlayerBomb")
+	{
+		if (global.bombIsHomingBomb)
+		{
+			_hp -= 0.5 * global.damageDealt;	
+		}
+		else
+		{
+			_hp -= 1*global.damageDealt;
+		}
+	}
+	else
+	{
+		_hp -=5 ;
+	}
 }
 
 

@@ -2,8 +2,17 @@
 // Puede escribir su código en este editor
 if instance_exists(worm)
 {
-	worm._hp -= 5*global.damageDealt;
+	if (global.bombIsHomingBomb)
+	{
+		worm._hp -= 1*global.damageDealt;
+	}
+	else
+	{
+		worm._hp -= 5*global.damageDealt;
+	}
+	
 }
+
 
 
 

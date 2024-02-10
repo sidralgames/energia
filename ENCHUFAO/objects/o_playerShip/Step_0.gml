@@ -74,7 +74,7 @@ if (alarm[5] <= 0)
 		{	
 			if (dirH != 0) || (dirV != 0)
 			{
-			_angle = point_direction(o_crosshair.x, o_crosshair.y,x,y)
+				_angle = point_direction(o_crosshair.x, o_crosshair.y,x,y)
 			}
 		}
 	}

@@ -1170,6 +1170,7 @@
     {"name":"s_hpNewUI204","order":44,"path":"sprites/s_hpNewUI204/s_hpNewUI204.yy",},
     {"name":"o_selectMegaUpgrade","order":12,"path":"objects/o_selectMegaUpgrade/o_selectMegaUpgrade.yy",},
     {"name":"s_banner_Bouncing","order":54,"path":"sprites/s_banner_Bouncing/s_banner_Bouncing.yy",},
+    {"name":"s_temporary_laser","order":19,"path":"sprites/s_temporary_laser/s_temporary_laser.yy",},
     {"name":"s_electroBulletsPickUp","order":100,"path":"sprites/s_electroBulletsPickUp/s_electroBulletsPickUp.yy",},
     {"name":"s_shieldBar_in","order":12,"path":"sprites/s_shieldBar_in/s_shieldBar_in.yy",},
     {"name":"obj_spot_light_rotate","order":8,"path":"objects/obj_spot_light_rotate/obj_spot_light_rotate.yy",},

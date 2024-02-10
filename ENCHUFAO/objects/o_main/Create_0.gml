@@ -394,7 +394,7 @@ global.cavalryIsMegaUpgraded = false;
 //--BOMBS--//
 global.haveSmokeBomb = false;
 global.bombIsClusterBomb = false;
-global.bombIsHomingBomb = false;
+global.bombIsHomingBomb = true;
 global.homingMissilesExtra = 0;
 
 global.chargerShoots = false;

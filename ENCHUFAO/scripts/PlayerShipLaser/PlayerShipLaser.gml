@@ -42,7 +42,7 @@ function PlayerShipLaser(argument0)
 			 thisLenght = maxLenght;
 		}  
 		
-		if (collisionTile)
+		if (collisionTile) && (room != Sala_Inicio)
 		{
 			 maxLenght_=i
 			 maxLenght = maxLenght_;

@@ -10,10 +10,10 @@ switch(isFrom)
 		{
 			screenShake(3,40);
 			shockwave1 = instance_create(x,y,o_shockwave);
-			shockwave1.scale = scaleShockwave;
+			shockwave1.scale = 0;
 
 			shockwave2 = instance_create(x,y,o_shockwaveTiles2)
-			shockwave2.scale = scale-0.2;
+			shockwave2.scale = 0.3;
 		}
 		else
 		{

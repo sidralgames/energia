@@ -4,7 +4,7 @@ switch(_sprite)
 {
 	case s_temporary_fireRate:
 	{
-		global.temporaryFireRate_Factor = 4;
+		global.temporaryFireRate_Factor += 4;
 		global.temporaryFireRate = 400;
 		
 	}break;
