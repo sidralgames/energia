@@ -7,6 +7,8 @@
 //global.bombIsHomingBomb = true;
 
 global.superShotInitial = global.superShot;
+global.laserDamageInitial = global.laserDamage;
+global.laserWidthInitial = global.laserWidth;
 
 global.totalEnemiesOnLevelMax = min(35, 20+global.level);
 

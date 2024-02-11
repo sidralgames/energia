@@ -107,4 +107,15 @@ if (global.shockingPetasIsUpgraded)
 	}
 }
 
+
+//if (global.temporaryFireRate >0) || (global.temporarySuperShot >0)
+//{
+//	draw_sprite_ext(s_chipAmmo, 0, x-lengthdir_x(9,70+_angle),y-lengthdir_y(9,70+_angle),  1,1, _angle, image_blend, image_alpha)	
+//}
+
+//if (global.temporaryLaser >0)
+//{
+//	draw_sprite_ext(s_chipLaser, 0, x-lengthdir_x(9,290+_angle),y-lengthdir_y(9,290+_angle),  1,1, _angle, image_blend, image_alpha)	
+//}
+
 //draw_text(x, y-50 ,string(instance_count));

@@ -2,6 +2,8 @@
 // You can write your code in this editor
 Controls_Input();
 
+
+
 if (flashAlpha > 0)
 {
 	flashAlpha--;

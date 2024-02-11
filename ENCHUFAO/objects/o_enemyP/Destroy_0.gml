@@ -6,3 +6,4 @@ if (discounted == false)
 }
 global.enemiesKilled+=1;
 global.enemiesKilledTotalAch+=1;
+

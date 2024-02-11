@@ -1,15 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-//---- TEMPORARY UPGRADES -----//
-global.superShot = 1;
-global.temporaryFireRate = 0;
-global.temporarySuperShot = 0;
-
-global.temporaryFireRate_Factor = 0;
-global.temporarySuperShot_Factor = 0;
-
-global.superShotInitial = global.superShot;
 
 full = false;
 global.totalEnemies = 0;
@@ -84,7 +75,7 @@ global.bulletsDanceIsOn = false; ////////////OK movimiento en s
 global.bulletsBurnIsOn = false;
 global.bulletsElectroIsOn = false;
 global.bulletsGhostIsOn = false;
-global.bulletsIceIsOn = false;
+global.bulletsIceIsOn = false; // DIBUJO HIELO IN PROGRESS
 
 
 global.alhpaGhost = 1;
@@ -497,3 +488,27 @@ for (var i = 0; i < global.numberOfUpgrades; i++)
 }
 
 
+
+
+//---- TEMPORARY UPGRADES -----//
+
+global.temporaryTimeMax = 400;
+
+global.chipsNumber = 0;
+global.chipsAmmoRateTot = 0;
+global.chipsAmmoSuperTot = 0;
+global.chipsLaserTot = 0;
+
+global.superShot = 1;
+
+global.temporaryFireRate = 0;
+global.temporarySuperShot = 0;
+
+global.temporaryLaser = 0;
+
+global.temporaryFireRate_Factor = 0;
+
+
+global.superShotInitial = global.superShot;
+global.laserDamageInitial = global.laserDamage;
+global.laserWidthInitial = global.laserWidth;

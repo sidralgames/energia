@@ -32,12 +32,16 @@ if (global.unPlugging)
 		haveToUpdateCapsuleSuper = false;
 		//rope1.vertexDeAttachTo(last);
 	}
+	
 	global.unPlugging = false;
-	enchufe = o_playerShip.enchufe
+	enchufe = o_playerShip.enchufe;
+	
 	if instance_exists(enchufe)
 	{
 		rope1.vertexDeAttachTo(last)
 	}
+	
+	
 	
 }
 

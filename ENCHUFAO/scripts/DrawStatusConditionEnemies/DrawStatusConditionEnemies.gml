@@ -35,8 +35,22 @@ function DrawStatusConditionEnemies(argument0) // image_angle
 	
 	if (freeze = true)
 	{
+		if (freezing >= 0.6)
+		{
+			iceImage = 2;
+		}
+		else if (freezing < 0.6) && (freezing > 0.3)
+		{
+			iceImage = 1;
+		}
+		else 
+		{
+			iceImage = 0;
+		}
+		
+		draw_sprite_ext(s_ice,iceImage,x,y,image_xscale,image_yscale,argument0,c_white,0.8)
 		shader_set(shFlash)
-		draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,argument0,global.lightBlue,freezing)
+		draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,argument0,global.lightBlue,freezing-0.3)
 		shader_reset()
 	}
 }

@@ -2,6 +2,9 @@
 
 // Create a new verlet system
 // You can create multiple systems with different physic properties
+initialChipIndex = 4;
+
+
 _alpha = 1;
 haveToUpdate = false;
 haveToUpdateCapsule = false;
