@@ -492,7 +492,7 @@ for (var i = 0; i < global.numberOfUpgrades; i++)
 
 //---- TEMPORARY UPGRADES -----//
 
-global.temporaryTimeMax = 400;
+global.temporaryTimeMax = 4000;
 
 global.chipsNumber = 0;
 global.chipsAmmoRateTot = 0;

@@ -202,6 +202,26 @@ function verletGroup() constructor {
 		ds_list_add(attachmentList, new attachment(index, object, type, 0, xoff, yoff));
 	};
 	
+	/// @function				vertexDeAttachObject(index, object, type, xoff, yoff);
+	/// @param {float} index	The index of the vertex.
+		vertexDeAttachObject = function(index) {
+		if (index == first) {
+			index = 0;
+		}
+		else if (index == scnd) {
+			index = 1;
+		}else if (index == last) {
+			index = ds_list_size(vertexList) - 1;
+		}
+		else if (index == antelast) {
+			index = ds_list_size(vertexList) - 2;
+		}
+	
+		
+		
+		ds_list_delete(attachmentList, index)
+	};
+	
 	/// @function				vertexAttachTo(index, object, xoff, yoff);
 	/// @param {float} index	The index of the vertex to attach.
 	/// @param {float} object	The object.
@@ -229,23 +249,40 @@ function verletGroup() constructor {
 	/// @param {float} [xoff]	The x offset.
 	/// @param {float} [yoff]	The y offset.
 	/// @description			Attaches a vertex to an object.
-	vertexDeAttachTo = function(index,object, xoff, yoff) {
-	if (index == first) {
+	vertexDeAttachTo = function(index) 
+	{
+	if (index == first)
+	{
 			index = 0;
-		} else if (index == last) {
+		} 
+		else if (index == last) 
+		{
 			index = ds_list_size(vertexList) - 1;
 		}
-		else if (index == antelast) {
+		else if (index == antelast) 
+		{
 			index = ds_list_size(vertexList) - 2;
 		}
+		
 		if (ds_list_size(attachmentList) > 0)
 		{
-			ds_list_delete(attachmentList,2);
+			for (var i=0; i< ds_list_size(attachmentList); i++)
+			{
+				attached = ds_list_find_value(attachmentList, i);
+			
+				if (attached == o_charger) 
+				{
+					ds_list_delete(attachmentList,i);
+				}
+			}
+			//ds_list_delete(attachmentList,2);
 			//ds_list_delete(attachmentList,3);
 			//ds_list_delete(attachmentList,4);
 			//ds_list_delete(attachmentList,5);
 		 }
 	};
+	
+	
 	
 	/// @function				stickAdd(v1, v2, length);
 	/// @param {struct} v1		The sticks first vertex.

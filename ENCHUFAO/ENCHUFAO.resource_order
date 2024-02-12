@@ -68,6 +68,7 @@
     {"name":"Parts","order":80,"path":"folders/Sprites/Parts.yy",},
     {"name":"Player","order":84,"path":"folders/Sprites/Player.yy",},
     {"name":"UI","order":82,"path":"folders/Sprites/UI.yy",},
+    {"name":"CHIPS","order":35,"path":"folders/Scripts/GENERAL/CHIPS.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"s_emergencySlowmo","order":88,"path":"sprites/s_emergencySlowmo/s_emergencySlowmo.yy",},

@@ -2,8 +2,12 @@
 
 // Create a new verlet system
 // You can create multiple systems with different physic properties
-initialChipIndex = 4;
 
+chipList = ds_map_create();
+
+initialChipIndex = 4;
+chipJustGrabbed = false;
+contUnplugging = 0;
 deattached = false;
 _alpha = 1;
 haveToUpdate = false;

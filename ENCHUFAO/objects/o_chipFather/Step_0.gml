@@ -1,5 +1,5 @@
-/// @description Inserte aquí la descripción
-// Puede escribir su código en este editor
+///// @description Inserte aquí la descripción
+//// Puede escribir su código en este editor
 
 
 //firstChip = collision_circle(x,y,50, o_chipFather, false, true);

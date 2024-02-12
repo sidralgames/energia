@@ -102,6 +102,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Parts","folderPath":"folders/Sprites/Parts.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Player","folderPath":"folders/Sprites/Player.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"UI","folderPath":"folders/Sprites/UI.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"CHIPS","folderPath":"folders/Scripts/GENERAL/CHIPS.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"ChubbyChoo-SemiBold.ttf","CopyToMask":3035426170322551022,"filePath":"datafiles",},
@@ -462,6 +463,7 @@
     {"id":{"name":"o_BossWorm_Body","path":"objects/o_BossWorm_Body/o_BossWorm_Body.yy",},},
     {"id":{"name":"s_enchufeUpgradeShootingRecharges","path":"sprites/s_enchufeUpgradeShootingRecharges/s_enchufeUpgradeShootingRecharges.yy",},},
     {"id":{"name":"s_BossWorm_Body","path":"sprites/s_BossWorm_Body/s_BossWorm_Body.yy",},},
+    {"id":{"name":"AddChip","path":"scripts/AddChip/AddChip.yy",},},
     {"id":{"name":"sh_blend_light","path":"shaders/sh_blend_light/sh_blend_light.yy",},},
     {"id":{"name":"o_slowMoPickUp","path":"objects/o_slowMoPickUp/o_slowMoPickUp.yy",},},
     {"id":{"name":"snd_songMaster","path":"sounds/snd_songMaster/snd_songMaster.yy",},},

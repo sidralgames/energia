@@ -11,13 +11,14 @@ if (global.chipsNumber < o_cable._segments)
 		
 			with(o_cable)
 			{
-				chipAmmoSuper = instance_create_layer(x,y,"Player",o_chipAmmoSuper)
+				chipAmmoSuper = instance_create_layer(x,y,"Player",o_chipAmmoSuper);
+				
+				AddChip(initialChipIndex+global.chipsNumber, chipAmmoSuper);
+				
 				rope1.vertexAttachObject(initialChipIndex+global.chipsNumber, chipAmmoSuper, vertexAttachmentType.both);
 				chipAmmoSuper.chipNum = initialChipIndex+global.chipsNumber;
 				chipAmmoSuper.tipo = "FireRate";
 			}
-		
-			global.chipsNumber+=1;
 		
 		}break;
 	
@@ -28,13 +29,15 @@ if (global.chipsNumber < o_cable._segments)
 		
 			with(o_cable)
 			{
-				chipAmmoSuper = instance_create_layer(x,y,"Player",o_chipAmmoSuper)
+				chipAmmoSuper = instance_create_layer(x,y,"Player",o_chipAmmoSuper);
+				
+				AddChip(initialChipIndex+global.chipsNumber, chipAmmoSuper);
+				
 				rope1.vertexAttachObject(initialChipIndex+global.chipsNumber, chipAmmoSuper, vertexAttachmentType.both);
 				chipAmmoSuper.chipNum = initialChipIndex+global.chipsNumber;
 				chipAmmoSuper.tipo = "SuperShot";
 			}
 		
-			global.chipsNumber+=1;
 		
 		}break;
 	
@@ -46,11 +49,12 @@ if (global.chipsNumber < o_cable._segments)
 			with(o_cable)
 			{
 				chipLaser = instance_create_layer(x,y,"Player",o_chipLaser)
+				
+				AddChip(initialChipIndex+global.chipsNumber, chipLaser);
 				rope1.vertexAttachObject(initialChipIndex+global.chipsNumber, chipLaser, vertexAttachmentType.both);
 				chipLaser.chipNum = initialChipIndex+global.chipsNumber;
 			}
 		
-			global.chipsNumber+=1;
 		
 		}break;
 	}
