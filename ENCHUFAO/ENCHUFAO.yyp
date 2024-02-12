@@ -430,6 +430,7 @@
     {"id":{"name":"s_hpBar_in","path":"sprites/s_hpBar_in/s_hpBar_in.yy",},},
     {"id":{"name":"CheckSmokeBomb","path":"scripts/CheckSmokeBomb/CheckSmokeBomb.yy",},},
     {"id":{"name":"composite_shadow_map","path":"scripts/composite_shadow_map/composite_shadow_map.yy",},},
+    {"id":{"name":"o_chipFather","path":"objects/o_chipFather/o_chipFather.yy",},},
     {"id":{"name":"s_petaInTile","path":"sprites/s_petaInTile/s_petaInTile.yy",},},
     {"id":{"name":"SetupLevelBasic","path":"scripts/SetupLevelBasic/SetupLevelBasic.yy",},},
     {"id":{"name":"s_enchufeUpgradeShockingPETAS","path":"sprites/s_enchufeUpgradeShockingPETAS/s_enchufeUpgradeShockingPETAS.yy",},},

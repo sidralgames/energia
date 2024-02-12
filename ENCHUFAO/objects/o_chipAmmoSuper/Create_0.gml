@@ -11,6 +11,7 @@ tipoSet = false;
 deattached = false;
 unplugging = false;
 inCable = false
+resetPosition = false;
 
 
 

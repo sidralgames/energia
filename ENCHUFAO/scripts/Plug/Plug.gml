@@ -74,6 +74,7 @@ function Plug()
 			global.havePickedBurningBullets = false;
 			global.havePickedElectroBullets = false;
 			global.havePickedGhostBullets = false;
+			global.havePickedIceBullets = false;
 			
 		}
 		else

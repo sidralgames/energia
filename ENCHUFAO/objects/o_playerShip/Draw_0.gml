@@ -3,7 +3,7 @@
 
  
 height = sin(random(1));
-//draw_text(x,y-30, "trapped " + string(trapped));
+draw_text(x,y-30, "chipsnumber " + string(global.chipsNumber));
 
 if (global.laser > 0)
 {

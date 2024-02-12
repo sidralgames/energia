@@ -23,31 +23,43 @@ if (tipoSet = false)
 }
 _hp --;
 
-if (global.unPlugging)
+if (global.unPlugging) || (global.plugging)
 {
 	unplugging = true;
-
 }
 
 if (unplugging)
 {
+
 	with(o_cable)
 	{
 		if instance_exists(other)
 		{
-			rope1.vertexDeAttachTo(other.chipNum)
-			rope1.vertexAttachObject(other.chipNum, other, vertexAttachmentType.both);
+			
+			rope1.vertexDeAttachTo(other.chipNum);
 		}
 	}
 	
-	unplugging = false;
+	with(o_cable)
+	{
+		if instance_exists(other)
+		{
+			
+			rope1.vertexAttachObject(other.chipNum, other, vertexAttachmentType.both);
+			other.unplugging = false;
+		}
+	}
+	
 }
 
-if (_hp <= 1) && (deattached = false)
+if (_hp <= 5) && (deattached = false)
 {
 	with(o_cable)
 	{
-		rope1.vertexDeAttachTo(other.chipNum);
+		if (other._hp <=5)
+		{
+			rope1.vertexDeAttachTo(other.chipNum);
+		}
 	}
 	
 	switch(tipo)
@@ -78,6 +90,7 @@ if (_hp <= 0)
 	instance_destroy()
 }
 
+event_inherited();
 
 
 

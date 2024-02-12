@@ -20,29 +20,26 @@ if (global.unPlugging)
 		haveToUpdate = false;
 		//rope1.vertexDeAttachTo(last);
 	}
-	if (haveToUpdateCapsule = true)
+	else if (haveToUpdateCapsule = true)
 	{
 		rope1.vertexDeAttachTo(last);
 		haveToUpdateCapsule = false;
 		//rope1.vertexDeAttachTo(last);
 	}
-	if (haveToUpdateCapsuleSuper = true)
+	else if (haveToUpdateCapsuleSuper = true)
 	{
 		rope1.vertexDeAttachTo(last);
 		haveToUpdateCapsuleSuper = false;
 		//rope1.vertexDeAttachTo(last);
 	}
-	
-	global.unPlugging = false;
-	enchufe = o_playerShip.enchufe;
-	
-	if instance_exists(enchufe)
+	else
 	{
 		rope1.vertexDeAttachTo(last)
 	}
 	
 	
-	
+	global.unPlugging = false;
+
 }
 
 if (global.plugging) && instance_exists(o_playerShip)
@@ -79,22 +76,24 @@ if (global.plugging) && instance_exists(o_playerShip)
 
 if (haveToUpdate = true)
 {
-	//SetHUE();
-	rope1.vertexDeAttachTo(last);
-	rope1.vertexAttachTo(last, enchufe,-lengthdir_x(30,enchufe.image_angle),-lengthdir_y(30,enchufe.image_angle))
+
+	rope1.vertexChangeData(last,enchufe.x-lengthdir_x(30,enchufe.image_angle),enchufe.y-lengthdir_y(30,enchufe.image_angle))
 }
 if (haveToUpdateCapsule = true)
 {
-	//SetHUE();
-	rope1.vertexDeAttachTo(last);
-	rope1.vertexAttachTo(last, enchufe,lengthdir_x(10,enchufe.image_angle-90),lengthdir_y(10,enchufe.image_angle-90))
+
+	rope1.vertexChangeData(last,enchufe.x+lengthdir_x(10,enchufe.image_angle-90),enchufe.y+lengthdir_y(10,enchufe.image_angle-90))
 }
 if (haveToUpdateCapsuleSuper = true)
 {
-	//SetHUE();
-	rope1.vertexDeAttachTo(last);
-	rope1.vertexAttachTo(last, enchufe,lengthdir_x(25,enchufe.image_angle-90),lengthdir_y(25,enchufe.image_angle-90))
+
+	rope1.vertexChangeData(last,enchufe.x+lengthdir_x(25,enchufe.image_angle-90),enchufe.y+lengthdir_y(25,enchufe.image_angle-90))
 }
+
+
+
+
+
 if (global.pluggingShip)
 {
 	global.pluggingShip = false;

@@ -4,7 +4,7 @@
 // You can create multiple systems with different physic properties
 initialChipIndex = 4;
 
-
+deattached = false;
 _alpha = 1;
 haveToUpdate = false;
 haveToUpdateCapsule = false;

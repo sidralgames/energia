@@ -377,6 +377,7 @@
     {"name":"s_hpBar_in","order":39,"path":"sprites/s_hpBar_in/s_hpBar_in.yy",},
     {"name":"CheckSmokeBomb","order":21,"path":"scripts/CheckSmokeBomb/CheckSmokeBomb.yy",},
     {"name":"composite_shadow_map","order":4,"path":"scripts/composite_shadow_map/composite_shadow_map.yy",},
+    {"name":"o_chipFather","order":50,"path":"objects/o_chipFather/o_chipFather.yy",},
     {"name":"s_petaInTile","order":5,"path":"sprites/s_petaInTile/s_petaInTile.yy",},
     {"name":"SetupLevelBasic","order":4,"path":"scripts/SetupLevelBasic/SetupLevelBasic.yy",},
     {"name":"s_enchufeUpgradeShockingPETAS","order":26,"path":"sprites/s_enchufeUpgradeShockingPETAS/s_enchufeUpgradeShockingPETAS.yy",},
