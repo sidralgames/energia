@@ -216,9 +216,7 @@ function verletGroup() constructor {
 		else if (index == antelast) {
 			index = ds_list_size(vertexList) - 2;
 		}
-	
-		
-		
+
 		ds_list_delete(attachmentList, index)
 	};
 	
@@ -249,27 +247,30 @@ function verletGroup() constructor {
 	/// @param {float} [xoff]	The x offset.
 	/// @param {float} [yoff]	The y offset.
 	/// @description			Attaches a vertex to an object.
-	vertexDeAttachTo = function(index) 
-	{
+	vertexDeAttachTo = function(index,object, xoff, yoff) {
+	if (index == first) {
 
-		
-		var attachmentAmount = ds_list_size(attachmentList);
-		var currentAttachment;
-		
-		
-		for (var i = 0; i < attachmentAmount-1; i++) 
-		{
-			currentAttachment = attachmentList[| i];
-			
-			if (currentAttachment.object == o_charger) 
-			{
-				// Object attached to vertex
-				ds_list_delete(attachmentList,i);
-			}
+
+			index = 0;
+		} else if (index == last) {
+
+
+			index = ds_list_size(vertexList) - 1;
 		}
-		
+		else if (index == antelast) {
+
+			index = ds_list_size(vertexList) - 2;
+		}
+
+		if (ds_list_size(attachmentList) > 0)
+		{
+			ds_list_delete(attachmentList,index);
+
+			//ds_list_delete(attachmentList,3);
+			//ds_list_delete(attachmentList,4);
+			//ds_list_delete(attachmentList,5);
+		 }
 	};
-	
 	
 	
 	/// @function				stickAdd(v1, v2, length);
@@ -312,6 +313,8 @@ function verletGroup() constructor {
 		for (var i = 0; i < attachmentAmount; i++) {
 			currentAttachment = attachmentList[| i];
 			
+			if instance_exists(currentAttachment.object){ ////--- SALVATORE ---///
+			
 			if (currentAttachment.hierarchy == 0) {
 				// Object attached to vertex
 				if (currentAttachment.type != vertexAttachmentType.rotationOnly) {
@@ -330,6 +333,7 @@ function verletGroup() constructor {
 				vertexList[| currentAttachment.index].x = currentAttachment.object.x + currentAttachment.xoff;
 				vertexList[| currentAttachment.index].y = currentAttachment.object.y + currentAttachment.yoff;
 			}
+		}
 		}
 		#endregion
 		#region Handle force fields

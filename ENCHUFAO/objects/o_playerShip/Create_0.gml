@@ -5,7 +5,16 @@
 //global.bombIsClusterBomb = true;
 //global.haveSmokeBomb = true;
 //global.bombIsHomingBomb = true;
+tempPickUp = instance_create(x-50,y,o_temporaryPickUp)
+tempPickUp._hpush = 0
+		tempPickUp._vpush = 0
+		tempPickUp.image_angle = 0;
+tempPickUpb = instance_create(x+50,y,o_temporaryPickUp)
+tempPickUpb._hpush = 0
+		tempPickUpb._vpush = 0
+		tempPickUpb.image_angle = 0;
 
+global.fireRateInitial = global.fireRate;
 global.superShotInitial = global.superShot;
 global.laserDamageInitial = global.laserDamage;
 global.laserWidthInitial = global.laserWidth;

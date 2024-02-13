@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Main",
-    "path": "folders/Objetos/Main.yy",
+    "name": "ENCHUFAO",
+    "path": "ENCHUFAO.yyp",
   },
   "parentObjectId": null,
   "persistent": false,

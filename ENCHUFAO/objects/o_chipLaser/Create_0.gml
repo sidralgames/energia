@@ -9,6 +9,6 @@ global.chipsLaserTot +=1;
 
 deattached = false;
 unplugging = false;
-inCable = false
+inCable = true;
 
 

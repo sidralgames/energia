@@ -2,6 +2,7 @@
 // You can write your code in this editor
 if (global.chipsNumber < o_cable._segments/2)
 {
+	global.chipsNumber+=2;
 	switch(_sprite)
 	{
 		case s_temporary_fireRate:
@@ -18,6 +19,7 @@ if (global.chipsNumber < o_cable._segments/2)
 				rope1.vertexAttachObject(initialChipIndex+global.chipsNumber, chipAmmoSuper, vertexAttachmentType.both);
 				chipAmmoSuper.chipNum = initialChipIndex+global.chipsNumber;
 				chipAmmoSuper.tipo = "FireRate";
+				
 			}
 		
 		}break;

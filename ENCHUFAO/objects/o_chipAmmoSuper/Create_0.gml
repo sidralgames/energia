@@ -10,7 +10,7 @@ tipoSet = false;
 
 deattached = false;
 unplugging = false;
-inCable = false
+inCable = true
 resetPosition = false;
 
 

@@ -32,33 +32,42 @@ if (global.unPlugging)
 	global.unPlugging = false;
 }
 
-if (global.plugging) || (contUnplugging > 0)
-{
-	if !ds_map_empty(chipList)
-	{
-		for (var i=0; i<ds_map_size(chipList); i++)
-		{
-			chip = ds_map_find_value(chipList, i)
-	
-			rope1.vertexAttachObject(chip.vert, chip.obj, vertexAttachmentType.both);
-		}
-	}
-}
+//if !ds_map_empty(chipList)
+//{
+//	if (global.plugging) || (alarm[2] < 0)
+//	{
+//		for (var i=0; i<ds_map_size(chipList); i++)
+//		{
+//			chip = ds_map_find_value(chipList, i);
+			
+//			rope1.vertexDeAttachObject(chip.vert);
+			
+//			rope1.vertexAttachObject(chip.vert, chip.obj, vertexAttachmentType.both);
+//		}
+//	}
+//}
 
-if (chipJustGrabbed)
-{
-	if !ds_map_empty(chipList)
-	{
-		for (var i=0; i<ds_map_size(chipList); i++)
-		{
-			chip = ds_map_find_value(chipList, i)
+//if (alarm[2] <= 0)
+//{
+//	alarm[2] = 3;
+//}
+
+//if (chipJustGrabbed)
+//{
+//	if !ds_map_empty(chipList)
+//	{
+//		for (var i=0; i<ds_map_size(chipList); i++)
+//		{
+//			chip = ds_map_find_value(chipList, i);
+			
+//			rope1.vertexDeAttachObject(chip.vert);
+			
+//			rope1.vertexAttachObject(chip.vert, chip.obj, vertexAttachmentType.both);
+//		}
+//	}
 	
-			rope1.vertexAttachObject(chip.vert, chip.obj, vertexAttachmentType.both);
-		}
-	}
-	
-	chipJustGrabbed = false;
-}
+//	chipJustGrabbed = false;
+//}
 
 
 
@@ -68,6 +77,7 @@ if (global.plugging) && instance_exists(o_playerShip)
 {
 	instTope.depth = depth+1;
 	enchufe = o_playerShip.enchufe;
+	
 	if instance_exists(enchufe)
 	{
 		if (enchufe.IsEnchufeBoss) 
@@ -90,6 +100,7 @@ if (global.plugging) && instance_exists(o_playerShip)
 			standardConnection = true;
 		}
 	}
+	
 	global.plugging = false;
 }
 
