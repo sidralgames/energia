@@ -9,6 +9,6 @@ ds_map_add(chipList, ds_map_size(chipList),
 		
 	})
 	
-	global.chipsNumber+=1;
+	global.chipsNumber+=2;
 	o_cable.chipJustGrabbed = true;
 }

@@ -2,8 +2,9 @@
 // You can write your code in this editor
 
  
-height = sin(random(1));
-draw_text(x,y-30, "chipsnumber " + string(global.chipsNumber));
+
+
+//draw_text(x,y-30, "chipsnumber " + string(global.chipsNumber));
 
 if (global.laser > 0)
 {

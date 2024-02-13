@@ -9,25 +9,27 @@ if instance_exists(inst)
 
 }
 
-if (contUnplugging > 0)
+if (global.unPlugging)
 {
-	contUnplugging --;
 	instTope.depth = depth-1;
 	
-	if (haveToUpdate = true)
+	if (standardConnection = true)
 	{
-		haveToUpdate = false;
+		standardConnection = false;
 	}
-	else if (haveToUpdateCapsule = true)
+	if (bossWormConnection = true)
 	{
-		haveToUpdateCapsule = false;
+		bossWormConnection = false;
 	}
-	else if (haveToUpdateCapsuleSuper = true)
+	if (capsuleConnection = true)
 	{
-		haveToUpdateCapsuleSuper = false;
+		capsuleConnection = false;
 	}
-	
-	rope1.vertexDeAttachTo(last);
+	if (superCapsuleConnection = true)
+	{
+		superCapsuleConnection = false;
+	}
+	global.unPlugging = false;
 }
 
 if (global.plugging) || (contUnplugging > 0)
@@ -60,44 +62,35 @@ if (chipJustGrabbed)
 
 
 
-if (global.unPlugging)
-{
-	contUnplugging = 20;
-	
-	global.unPlugging = false;
-
-}
 
 
 if (global.plugging) && instance_exists(o_playerShip)
 {
 	instTope.depth = depth+1;
-	global.plugging = false;
 	enchufe = o_playerShip.enchufe;
-	
 	if instance_exists(enchufe)
 	{
 		if (enchufe.IsEnchufeBoss) 
 		{
-			haveToUpdate = true;
+			bossWormConnection = true;
 		}
 		else if (enchufe.IsEnchufeCapsule)
 		{
 			if (enchufe.IsEnchufeCapsuleSuper)
 			{
-				haveToUpdateCapsuleSuper = true;
+				superCapsuleConnection = true;
 			}
 			else
 			{
-				haveToUpdateCapsule = true;
+				capsuleConnection = true;
 			}
 		}
 		else
 		{
-			rope1.vertexAttachTo(last, enchufe);
+			standardConnection = true;
 		}
-		
 	}
+	global.plugging = false;
 }
 
 if instance_exists(o_playerShip)
@@ -106,17 +99,21 @@ if instance_exists(o_playerShip)
 	{
 		if (instance_exists(enchufe))
 		{
-			if (haveToUpdate = true)
+			if (bossWormConnection = true)
 			{
 				rope1.vertexChangeData(last,enchufe.x-lengthdir_x(30,enchufe.image_angle),enchufe.y-lengthdir_y(30,enchufe.image_angle))
 			}
-			if (haveToUpdateCapsule = true)
+			if (capsuleConnection = true)
 			{
 				rope1.vertexChangeData(last,enchufe.x+lengthdir_x(10,enchufe.image_angle-90),enchufe.y+lengthdir_y(10,enchufe.image_angle-90))
 			}
-			if (haveToUpdateCapsuleSuper = true)
+			if (superCapsuleConnection = true)
 			{
 				rope1.vertexChangeData(last,enchufe.x+lengthdir_x(25,enchufe.image_angle-90),enchufe.y+lengthdir_y(25,enchufe.image_angle-90))
+			}
+			if (standardConnection = true)
+			{
+				rope1.vertexChangeData(last,enchufe.x,enchufe.y)
 			}
 		}
 	}
@@ -124,30 +121,30 @@ if instance_exists(o_playerShip)
 
 
 
+
 if (global.pluggingShip)
 {
 	global.pluggingShip = false;
-	chargerStrandedShip = instance_nearest(x,y,o_chargerStrandedShip);
+	
+	chargerStrandedShip = instance_nearest(o_playerShip.x,o_playerShip.y,o_chargerStrandedShip);
 	
 	if instance_exists(chargerStrandedShip)
 	{
-		
-		rope1.vertexAttachTo(last, chargerStrandedShip);
+		strandedShipConnection = true;
 	}
 }
 
 if (global.unPluggingShip)
 {
-
 	global.unPluggingShip = false;
-	chargerStrandedShip = instance_nearest(x,y,o_chargerStrandedShip);
-	if instance_exists(chargerStrandedShip)
-	{
-		rope1.vertexDeAttachTo(last)
-	}
-	
+	strandedShipConnection = false;
 }
 
+
+if (strandedShipConnection = true)
+{
+	rope1.vertexChangeData(last,chargerStrandedShip.x,chargerStrandedShip.y)
+}
 
 if (verletSystemExists(verletSystem1))
 {

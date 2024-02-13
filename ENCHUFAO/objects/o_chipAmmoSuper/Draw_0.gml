@@ -2,7 +2,7 @@
 // Puede escribir su código en este editor
 
 draw_self();
-draw_text(x,y,string(chipNum))
+
 
 
 

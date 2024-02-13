@@ -2,9 +2,10 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function DrawLaserPlayer(argument0)
 {
-
-if (key_laser) && !(laserActive)
+	if (key_laser) && !(laserActive)
 	{
+		height = sin(random(1));
+		
 		blueW =  lerp(blueW, global.laserWidth+1, 0.05*global.relativeSpeed);
 		whiteW =  lerp(whiteW, global.laserWidth+1, 0.05*global.relativeSpeed);
 		draw_set_alpha(0.2+random(0.5));
@@ -13,6 +14,8 @@ if (key_laser) && !(laserActive)
 	}
 	if (laserActive) 
 	{
+		height = sin(random(1));
+		
 		draw_set_alpha(0.01)
 		if (drawflash=true)
 		{

@@ -51,6 +51,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"ENEMIES","folderPath":"folders/Scripts/ENEMIES.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Functions","folderPath":"folders/Scripts/Functions.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"GENERAL","folderPath":"folders/Scripts/GENERAL.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"CHIPS","folderPath":"folders/Scripts/GENERAL/CHIPS.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"CREATE LEVEL","folderPath":"folders/Scripts/GENERAL/CREATE LEVEL.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"General","folderPath":"folders/Scripts/GENERAL/General.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Movement","folderPath":"folders/Scripts/GENERAL/Movement.yy",},
@@ -102,7 +103,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Parts","folderPath":"folders/Sprites/Parts.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Player","folderPath":"folders/Sprites/Player.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"UI","folderPath":"folders/Sprites/UI.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"CHIPS","folderPath":"folders/Scripts/GENERAL/CHIPS.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"ChubbyChoo-SemiBold.ttf","CopyToMask":3035426170322551022,"filePath":"datafiles",},

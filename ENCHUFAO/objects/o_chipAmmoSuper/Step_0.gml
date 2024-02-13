@@ -6,7 +6,7 @@ if (tipoSet = false)
 	{
 		case "FireRate":
 		{
-			global.temporaryFireRate_Factor += 4;
+			global.temporaryFireRate_Factor += 2;
 			global.chipsAmmoRateTot +=1;
 		
 		}break;

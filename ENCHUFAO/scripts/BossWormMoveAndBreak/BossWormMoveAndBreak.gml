@@ -58,7 +58,7 @@ function BossWormMoveAndBreak()
 	{
 		if instance_exists(o_cable)
 		{
-			if (o_cable.haveToUpdate == true)
+			if (o_cable.bossWormConnection == true)
 			{
 				precision = precisionRide;
 				enemySpeed = lerp(enemySpeed, enemySpeedRide, 0.09);

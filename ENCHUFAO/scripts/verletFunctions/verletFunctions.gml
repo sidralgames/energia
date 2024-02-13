@@ -251,35 +251,23 @@ function verletGroup() constructor {
 	/// @description			Attaches a vertex to an object.
 	vertexDeAttachTo = function(index) 
 	{
-	if (index == first)
-	{
-			index = 0;
-		} 
-		else if (index == last) 
+
+		
+		var attachmentAmount = ds_list_size(attachmentList);
+		var currentAttachment;
+		
+		
+		for (var i = 0; i < attachmentAmount-1; i++) 
 		{
-			index = ds_list_size(vertexList) - 1;
-		}
-		else if (index == antelast) 
-		{
-			index = ds_list_size(vertexList) - 2;
+			currentAttachment = attachmentList[| i];
+			
+			if (currentAttachment.object == o_charger) 
+			{
+				// Object attached to vertex
+				ds_list_delete(attachmentList,i);
+			}
 		}
 		
-		if (ds_list_size(attachmentList) > 0)
-		{
-			for (var i=0; i< ds_list_size(attachmentList); i++)
-			{
-				attached = ds_list_find_value(attachmentList, i);
-			
-				if (attached == o_charger) 
-				{
-					ds_list_delete(attachmentList,i);
-				}
-			}
-			//ds_list_delete(attachmentList,2);
-			//ds_list_delete(attachmentList,3);
-			//ds_list_delete(attachmentList,4);
-			//ds_list_delete(attachmentList,5);
-		 }
 	};
 	
 	

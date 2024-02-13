@@ -32,6 +32,7 @@
     {"name":"ENEMIES","order":8,"path":"folders/Scripts/ENEMIES.yy",},
     {"name":"Functions","order":2,"path":"folders/Scripts/Functions.yy",},
     {"name":"GENERAL","order":3,"path":"folders/Scripts/GENERAL.yy",},
+    {"name":"CHIPS","order":35,"path":"folders/Scripts/GENERAL/CHIPS.yy",},
     {"name":"CREATE LEVEL","order":9,"path":"folders/Scripts/GENERAL/CREATE LEVEL.yy",},
     {"name":"Movement","order":1,"path":"folders/Scripts/GENERAL/Movement.yy",},
     {"name":"STATS","order":34,"path":"folders/Scripts/GENERAL/STATS.yy",},
@@ -68,7 +69,6 @@
     {"name":"Parts","order":80,"path":"folders/Sprites/Parts.yy",},
     {"name":"Player","order":84,"path":"folders/Sprites/Player.yy",},
     {"name":"UI","order":82,"path":"folders/Sprites/UI.yy",},
-    {"name":"CHIPS","order":35,"path":"folders/Scripts/GENERAL/CHIPS.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"s_emergencySlowmo","order":88,"path":"sprites/s_emergencySlowmo/s_emergencySlowmo.yy",},

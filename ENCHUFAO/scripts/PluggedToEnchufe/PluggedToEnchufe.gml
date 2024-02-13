@@ -125,7 +125,7 @@ function PluggedToEnchufe()
 		}
 	}
 	
-	if (o_cable.haveToUpdate)
+	if (o_cable.bossWormConnection)
 	{
 		if (point_distance(x,y,global.xToPlug, global.yToPlug) > 200)
 		{

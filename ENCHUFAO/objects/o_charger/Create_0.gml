@@ -3,7 +3,7 @@
 overcharged = false;
 rateAnterior = o_playerShip.fireRate;
 scale = 1;
-
+isCharger = true;
 image_speed = 0;
 image_index = 0;
 

@@ -5,14 +5,22 @@
 
 chipList = ds_map_create();
 
+//---- CONNECTIONS ----//
+standardConnection = false;
+strandedShipConnection = false;
+bossWormConnection = false;
+capsuleConnection = false;
+superCapsuleConnection = false;
+
+//---- CHIPS ----//
 initialChipIndex = 4;
 chipJustGrabbed = false;
+
+
 contUnplugging = 0;
 deattached = false;
 _alpha = 1;
-haveToUpdate = false;
-haveToUpdateCapsule = false;
-haveToUpdateCapsuleSuper = false;
+
 canCollide = false;
 fric = 0.84;
 verletSystem1 = new verletSystem(fric, 0.0);
@@ -46,8 +54,6 @@ instTope = instance_create_layer(x,y,"Player", o_charger);
 instTope.depth = depth-1;
 rope1.vertexAttachObject(antelast, instTope, vertexAttachmentType.both);
 
-//instTope = instance_create(x, y, o_coco);
-//rope1.vertexAttachObject(last, instTope, vertexAttachmentType.positionOnly);
 
 alarm[0] = random_range(10,95);
 
