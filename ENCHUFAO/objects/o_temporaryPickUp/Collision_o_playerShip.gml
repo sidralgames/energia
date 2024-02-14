@@ -1,8 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (global.chipsNumber < o_cable._segments/2)
+if (global.chipsVertex < o_cable._segments/2)
 {
-	global.chipsNumber+=2;
+	global.chipPosition+=1;
+	global.chipsVertex+=2;
 	switch(_sprite)
 	{
 		case s_temporary_fireRate:
@@ -12,13 +13,14 @@ if (global.chipsNumber < o_cable._segments/2)
 		
 			with(o_cable)
 			{
-				chipAmmoSuper = instance_create_layer(x,y,"Player",o_chipAmmoSuper);
+				chipAmmoRate = instance_create_layer(x,y,"Player",o_chipAmmoSuper);
 				
-				AddChip(initialChipIndex+global.chipsNumber, chipAmmoSuper);
+				AddChip(initialChipIndex+global.chipsVertex, chipAmmoRate);
 				
-				rope1.vertexAttachObject(initialChipIndex+global.chipsNumber, chipAmmoSuper, vertexAttachmentType.both);
-				chipAmmoSuper.chipNum = initialChipIndex+global.chipsNumber;
-				chipAmmoSuper.tipo = "FireRate";
+				rope1.vertexAttachObject(initialChipIndex+global.chipsVertex, chipAmmoRate, vertexAttachmentType.both);
+				chipAmmoRate.chipVertex = initialChipIndex+global.chipsVertex;
+				chipAmmoRate.chipPos = global.chipPosition;
+				chipAmmoRate.tipo = "FireRate";
 				
 			}
 		
@@ -33,10 +35,11 @@ if (global.chipsNumber < o_cable._segments/2)
 			{
 				chipAmmoSuper = instance_create_layer(x,y,"Player",o_chipAmmoSuper);
 				
-				AddChip(initialChipIndex+global.chipsNumber, chipAmmoSuper);
+				AddChip(initialChipIndex+global.chipsVertex, chipAmmoSuper);
 				
-				rope1.vertexAttachObject(initialChipIndex+global.chipsNumber, chipAmmoSuper, vertexAttachmentType.both);
-				chipAmmoSuper.chipNum = initialChipIndex+global.chipsNumber;
+				rope1.vertexAttachObject(initialChipIndex+global.chipsVertex, chipAmmoSuper, vertexAttachmentType.both);
+				chipAmmoSuper.chipVertex = initialChipIndex+global.chipsVertex;
+				chipAmmoSuper.chipPos = global.chipPosition;
 				chipAmmoSuper.tipo = "SuperShot";
 			}
 		
@@ -52,9 +55,10 @@ if (global.chipsNumber < o_cable._segments/2)
 			{
 				chipLaser = instance_create_layer(x,y,"Player",o_chipLaser)
 				
-				AddChip(initialChipIndex+global.chipsNumber, chipLaser);
-				rope1.vertexAttachObject(initialChipIndex+global.chipsNumber, chipLaser, vertexAttachmentType.both);
-				chipLaser.chipNum = initialChipIndex+global.chipsNumber;
+				AddChip(initialChipIndex+global.chipsVertex, chipLaser);
+				rope1.vertexAttachObject(initialChipIndex+global.chipsVertex, chipLaser, vertexAttachmentType.both);
+				chipLaser.chipVertex = initialChipIndex+global.chipsVertex;
+				chipLaser.chipPos = global.chipPosition;
 			}
 		
 		

@@ -4,7 +4,7 @@
  
 
 
-//draw_text(x,y-30, "chipsnumber " + string(global.chipsNumber));
+//draw_text(x,y-30, "chipsnumber " + string(global.chipsVertex));
 
 if (global.laser > 0)
 {

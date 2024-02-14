@@ -247,7 +247,7 @@ function verletGroup() constructor {
 	/// @param {float} [xoff]	The x offset.
 	/// @param {float} [yoff]	The y offset.
 	/// @description			Attaches a vertex to an object.
-	vertexDeAttachTo = function(index,object, xoff, yoff) {
+	vertexDeAttachTo = function(index) {
 	if (index == first) {
 
 
