@@ -10,19 +10,12 @@ minVel = 0.1;
 hsp_f = 0;
 vsp_f = 0;
 scaleEnd = 1;
+called = false;
 
 alarm[0] = 10;
 alarm[1] = 30;
 hitByLaser = false;
 _angle = direction;
 
-if (global.bombIsHomingBomb)
-{
-	scaleEnd = 0.2;
-	correctedTime = 60;
-	corrected = false;
-	dist = random_range(120,150);
-	precision = random_range(3,3.75);
-	sprite_index = s_friend
-}
+set = false
 

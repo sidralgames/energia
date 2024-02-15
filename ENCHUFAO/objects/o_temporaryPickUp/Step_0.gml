@@ -7,6 +7,16 @@ if (scale < 1)
 
 _hp --;
 
+if (spriteSet = false)
+{
+	if (_sprite = -1)
+	{
+		_sprite = choose(s_temporary_fireRate, s_temporary_superShot, s_temporary_laser, s_temporary_Smart, s_temporary_Repair)
+	}
+	spriteSet = true;
+}
+sprite_index = _sprite;
+
 if (_hp <= 100)
 {
 	if (alarm[11] <= 2)
@@ -39,12 +49,18 @@ _angle = image_angle;
 
 //apply the shift
 
-if instance_exists(o_playerShip)
+if instance_exists(o_playerShip) && (alarm[10] <= 0)
 {
 	if (point_distance(x,y, o_playerShip.x, o_playerShip.y) < 30)
 	{
-		direction = point_direction(x,y, o_playerShip.x, o_playerShip.y)
-		speed = 4;
+		if (o_playerShip.pluggedFinal = false)
+		{
+			if (2+global.chipsVertex/2 <= global.cableStat*2)
+			{
+			direction = point_direction(x,y, o_playerShip.x, o_playerShip.y)
+			speed = 4;
+			}
+		}
 	}
 
 }

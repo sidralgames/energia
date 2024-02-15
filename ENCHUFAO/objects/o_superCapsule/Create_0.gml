@@ -18,7 +18,7 @@ IsEnchufeCapsule = true;
 IsEnchufeCapsuleSuper = true;
 capsuleHaveSomething = true;
 
-maxCharge = 200;
+maxCharge = 160;
 
 sprite_enchufePluged = s_capsuleOpen;
 

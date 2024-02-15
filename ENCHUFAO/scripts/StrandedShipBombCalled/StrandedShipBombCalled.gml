@@ -5,6 +5,7 @@ function StrandedShipBombCalled()
 	if (alarm[8] <= 0)
 	{
 		bomb = instance_create_layer(x,y, "Enemies", o_bulletPlayer_Bomb)
+		bomb.called = true;
 		bomb.scale = 0.75;
 		bomb.image_blend = c_ltgray;
 		bomb._hpush = -3*sign(hspeed);

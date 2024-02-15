@@ -9,7 +9,16 @@ tempPickUp = instance_create(x-50,y,o_temporaryPickUp)
 tempPickUp._hpush = 0
 		tempPickUp._vpush = 0
 		tempPickUp.image_angle = 0;
-tempPickUpb = instance_create(x+50,y,o_temporaryPickUp)
+tempPickUpb = instance_create(x+250,y,o_temporaryPickUp)
+tempPickUpb._hpush = 0
+		tempPickUpb._vpush = 0
+		tempPickUpb.image_angle = 0;
+		
+		tempPickUp = instance_create(x-250,y,o_temporaryPickUp)
+tempPickUp._hpush = 0
+		tempPickUp._vpush = 0
+		tempPickUp.image_angle = 0;
+tempPickUpb = instance_create(x+150,y,o_temporaryPickUp)
 tempPickUpb._hpush = 0
 		tempPickUpb._vpush = 0
 		tempPickUpb.image_angle = 0;

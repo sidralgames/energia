@@ -11,6 +11,28 @@ function DrawLevelBasic()
 	PETAs = 0;
 	PETAsMax = 3;
 	
+	enchufe0 = false;
+	enchufeHP = false;
+	enchufeShield = false;
+	enchufeAmmo = false;
+	enchufeBomb = false;
+	enchufeFinal = false;
+	
+	ShieldsInLevel = 0;
+	ShieldsInLevelMax = 2;
+	
+	BombsInLevelMax = 3;
+	BombsInLevel = 0;
+	
+	PetasInLevelMax = 2;
+	PetasInLevel = 0;
+	
+	capsulesInLevel = 0;
+	capsulesInLevelMax = 4;
+	
+	superCapsulesInLevel = 0;
+	superCapsulesInLevelMax = 1;
+	
 	for ( var yy = 0; yy < height_; yy++) 
 	{
 	    for (var xx = 0; xx < width_; xx++) 
@@ -25,14 +47,15 @@ function DrawLevelBasic()
 				var oddsEnchufeBomb = 300;
 				var oddsEnchufePETA = 1000;
 				var oddsCapsule = 200;
-				var oddsSuperCapsule = 200;
+				var oddsSuperCapsule = 400;
 				
 				var oddsEnchufeFinal = 300;
 				
 				var oddsStrandedShip = 300;
-				var oddsEnchufeMimic = 2500;
 				
-				var oddsCapsuleMimic = 2;
+				
+				var oddsEnchufeMimic = 2500;
+				var oddsCapsuleMimic = 2500;
 
 				var oddsPETAPickUp = 300;
 				var oddsShieldPickUp = 300;
@@ -212,7 +235,7 @@ function DrawLevelBasic()
 						}
 					}
 					
-					if (global.level >= 1)
+					if (global.level > 1)
 					{
 						if (irandom(oddsCapsuleMimic) == oddsCapsuleMimic) 
 						{
@@ -231,14 +254,22 @@ function DrawLevelBasic()
 				
 				
 					
-					if (irandom(oddsEnchufePETA) == oddsEnchufePETA) && (PETAs <= PETAsMax)
+					if (irandom(oddsEnchufePETA) == oddsEnchufePETA) && (PETAs < PETAsMax)
 					{
-						peta = choose(o_enchufePETA, o_enchufePETAAmmo, o_enchufePETAHP, o_enchufePETALaser)
+						if (global.allPETAisMulti)
+						{
+							peta = choose(o_enchufePETAAll)
+						}
+						else
+						{
+							peta = choose(o_enchufePETA, o_enchufePETAAmmo, o_enchufePETAHP, o_enchufePETALaser)
+						}
+						
 						instance_create_layer(exM,eyM,"Enchufes",peta); 
 						PETAs += 1;
 					}
 					
-					if (irandom(oddsCapsule) == oddsCapsule) && (capsulesInLevel <= capsulesInLevelMax) //&& global.level > 2
+					if (irandom(oddsCapsule) == oddsCapsule) && (capsulesInLevel < capsulesInLevelMax) //&& global.level > 2
 					{
 						nextCapsule= instance_nearest(exM, eyM, o_capsule)
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
@@ -264,7 +295,7 @@ function DrawLevelBasic()
 						}
 					}
 					
-					if (irandom(oddsSuperCapsule) == oddsSuperCapsule) && (superCapsulesInLevel <= superCapsulesInLevelMax) //&& global.level > 2
+					if (irandom(oddsSuperCapsule) == oddsSuperCapsule) && (superCapsulesInLevel < superCapsulesInLevelMax) //&& global.level > 2
 					{
 						nextCapsule= instance_nearest(exM, eyM, o_superCapsule)
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)

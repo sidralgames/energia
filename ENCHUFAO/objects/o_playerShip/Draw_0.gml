@@ -48,7 +48,7 @@ if (global.ammo <= global.ammoMax/5)
 		draw_sprite_ext(s_ammoStranded, imageStrandedAmmo, x-12, y-22, 1,1, 0, image_blend, image_alpha)	
 	}
 }
-if (global.hp <= 1*global.damageReceived)
+if (global.hp < 2*global.damageReceived)
 {
 	imageStrandedHp+=0.05;
 

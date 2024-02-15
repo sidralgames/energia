@@ -15,27 +15,7 @@ function SetupLevelBasic()
 	global.BatteriesInLevel = 0;
 	global.BatteriesInLevel_Max = 2;
 	
-	enchufe0 = false;
-	enchufeHP = false;
-	enchufeShield = false;
-	enchufeAmmo = false;
-	enchufeBomb = false;
-	enchufeFinal = false;
 	
-	ShieldsInLevel = 0;
-	ShieldsInLevelMax = 2;
-	
-	BombsInLevelMax = 3;
-	BombsInLevel = 0;
-	
-	PetasInLevelMax = 2;
-	PetasInLevel = 0;
-	
-	capsulesInLevel = 0;
-	capsulesInLevelMax = 4;
-	
-	superCapsulesInLevel = 0;
-	superCapsulesInLevelMax = 1;
 	
 	UpgradesEnchufesInLevelMax = 7;
 	UpgradesEnchufesInLevel = 0;
@@ -156,6 +136,7 @@ function SetupLevelBasic()
 	
 	
 	PlacePetasInTiles(60);
+	PlaceChipsInTiles(60);
 
 	
 }

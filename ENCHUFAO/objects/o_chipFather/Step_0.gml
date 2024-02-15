@@ -8,9 +8,10 @@ if (scale >1)
 }
 
 _hp --;
-if (_hp <= 110)
+
+if (_hp <= 60)
 {
-	scale = _hp/70;	
+	scale = _hp/40;	
 }
 
 image_xscale = scale;

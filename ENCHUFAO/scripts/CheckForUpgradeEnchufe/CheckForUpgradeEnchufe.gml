@@ -3,7 +3,11 @@
 function CheckForUpgradeEnchufe(argument0, argument1)
 {
 	_spriteBattery =-1;
-	instance_create_layer(o_playerShip.x, o_playerShip.y -30, "Player", o_bannerBullet)
+	
+	if (haveBatteryUpgrade)
+	{
+		instance_create_layer(o_playerShip.x, o_playerShip.y -30, "Player", o_bannerBullet)
+	}
 	
 	for (var i=0; i< 1; i++)
 	{

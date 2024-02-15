@@ -1,7 +1,19 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-if (global.bombIsHomingBomb)
+if (set = false)
+{
+	set = true;
+	if (global.bombIsHomingBomb) && (called = false)
+	{
+		scaleEnd = 0.2;
+		correctedTime = 60;
+		corrected = false;
+		dist = random_range(120,150);
+		precision = random_range(3,3.75);
+		sprite_index = s_friend
+	}
+}
+if (global.bombIsHomingBomb) && (called = false)
 {
 	_speed = lerp(_speed, 4.5, 0.05);
 	

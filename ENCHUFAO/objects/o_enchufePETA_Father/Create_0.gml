@@ -32,3 +32,6 @@ bnc = 1;
 //		global.PETAsActive+=1;
 //	}
 //}
+
+_hpush = choose(random_range(0.05, 0.1),-random_range(0.05, 0.1))
+_vpush = choose(random_range(0.05, 0.1), -random_range(0.05, 0.1))

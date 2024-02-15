@@ -7,10 +7,22 @@ if (o_playerShip.plugged)
 {
 	with (o_playerShip)
 	{
-		CheckUpgradesOfEnchufe(global.enchufeEnergyUpgradesList, global.enchufeEnergyUpgradesNum);
-		CheckUpgradesOfEnchufe(global.enchufeAmmoUpgradesList, global.enchufeEnergyUpgradesNum);
-		CheckUpgradesOfEnchufe(global.enchufeLaserUpgradesList, global.enchufeEnergyUpgradesNum);
-		CheckUpgradesOfEnchufe(global.enchufeHPUpgradesList, global.enchufeEnergyUpgradesNum);
+		if (enchufe.hp)
+		{
+			CheckForUpgradeEnchufe(global.enchufeHPUpgradesList, global.enchufeHPUpgradesNum)
+		}
+		else if (enchufe.ammo)
+		{
+			CheckForUpgradeEnchufe(global.enchufeAmmoUpgradesList, global.enchufeAmmoUpgradesNum)
+		}
+		else if (enchufe.laser)
+		{
+			CheckForUpgradeEnchufe(global.enchufeLaserUpgradesList, global.enchufeLaserUpgradesNum)
+		}
+		else if (enchufe.energy)
+		{
+			CheckForUpgradeEnchufe(global.enchufeEnergyUpgradesList, global.enchufeEnergyUpgradesNum)
+		}
 	}
 }
 
