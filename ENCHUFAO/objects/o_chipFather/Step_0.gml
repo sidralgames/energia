@@ -2,25 +2,36 @@
 //// Puede escribir su código en este editor
 
 
-
+if (scale >1)
+{
+	scale-=0.05;	
+}
 
 _hp --;
-if (_hp <= 50)
+if (_hp <= 110)
 {
-	if (alarm[11] <= 2)
-	{
-		image_alpha = 0.8;
-	}
-	else
-	{
-		image_alpha = 1;
-	}
-	
-	if (alarm[11] <= 0)
-	{
-		alarm[11] = 5;
-	}
+	scale = _hp/70;	
 }
+
+image_xscale = scale;
+image_yscale = scale;
+
+//if (_hp <= 50)
+//{
+//	if (alarm[11] <= 2)
+//	{
+//		image_alpha = 0.8;
+//	}
+//	else
+//	{
+//		image_alpha = 1;
+//	}
+	
+//	if (alarm[11] <= 0)
+//	{
+//		alarm[11] = 5;
+//	}
+//}
 if (_hp <= 3) && (deattached = false)
 {
 	with(o_cable)

@@ -6,7 +6,7 @@ _sprite = choose(s_temporary_fireRate, s_temporary_superShot, s_temporary_laser,
 sprite_index = _sprite;
 _angle = image_angle;
 
-_hp = random_range(400, 450);
+_hp = random_range(600, 650);
 
 image_speed = 0;
 

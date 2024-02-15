@@ -7,5 +7,6 @@ CreateSlowmoParts();
 
 
 // Inherit the parent event
+CreateTemporaryChip(2);
 event_inherited();
 

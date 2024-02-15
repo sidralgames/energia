@@ -10,6 +10,9 @@ if (isMegaEnemy)
 		instance_destroy(cable);
 	}
 }
+
+CreateTemporaryChip(2);
+
 // Inherit the parent event
 event_inherited();
 
