@@ -6,7 +6,6 @@
 		case "FireRate":
 		{
 			global.temporaryFireRate_Factor -= 2;
-			global.chipsVertex -= 2;
 			global.chipsAmmoRateTot -=1;
 		
 		}break;
@@ -14,7 +13,6 @@
 		case "SuperShot":
 		{
 			global.superShot -= 0.3;
-			global.chipsVertex -= 2;
 			global.chipsAmmoSuperTot -=1;
 		
 		}break;

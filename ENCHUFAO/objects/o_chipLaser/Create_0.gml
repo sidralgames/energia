@@ -4,8 +4,8 @@
 event_inherited();
 _hp = global.temporaryTimeMax;
 
-global.laserDamage += 0.15;
-global.laserWidth+=1;
+global.laserDamage += 0.16;
+global.laserWidth+=1.2;
 
 global.chipsLaserTot +=1;
 

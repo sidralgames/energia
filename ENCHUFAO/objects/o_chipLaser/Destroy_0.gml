@@ -3,7 +3,7 @@
 global.laserDamage -= 0.15;
 global.laserWidth -=1;
 	
-global.chipsVertex -= 2;
+
 global.chipsLaserTot -=1;
 
 event_inherited()

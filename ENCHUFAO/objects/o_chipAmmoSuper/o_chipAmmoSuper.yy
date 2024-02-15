@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_chipAmmo",
-    "path": "sprites/s_chipAmmo/s_chipAmmo.yy",
+    "name": "s_chipAmmoRate",
+    "path": "sprites/s_chipAmmoRate/s_chipAmmoRate.yy",
   },
   "spriteMaskId": null,
   "visible": true,

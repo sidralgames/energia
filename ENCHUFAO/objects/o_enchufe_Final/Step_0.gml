@@ -82,7 +82,10 @@ if instance_exists(o_playerShip)
 				}
 			}
 			
-			
+			if instance_exists(o_chipFather)
+			{
+				o_chipFather._hp = 1;
+			}
 			cont = true
 			alarm[0] = 60;
 		}

@@ -32,20 +32,7 @@ if (global.unPlugging)
 	global.unPlugging = false;
 }
 
-//if !ds_map_empty(chipList)
-//{
-//	if (global.plugging) || (alarm[2] < 0)
-//	{
-//		for (var i=0; i<ds_map_size(chipList); i++)
-//		{
-//			chip = ds_map_find_value(chipList, i);
-			
-//			rope1.vertexDeAttachObject(chip.vert);
-			
-//			rope1.vertexAttachObject(chip.vert, chip.obj, vertexAttachmentType.both);
-//		}
-//	}
-//}
+
 
 //if (alarm[2] <= 0)
 //{

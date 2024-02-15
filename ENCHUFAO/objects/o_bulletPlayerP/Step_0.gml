@@ -50,10 +50,10 @@ if (hpBullet <= 0) || (hp < 0)
 if (global.bulletsAreSmartIsOn)
 {
 	enemyNear = instance_nearest(x,y,o_enemyP);
-	if (instance_exists(enemyNear)) && (point_distance(x,y, enemyNear.x, enemyNear.y) < 100)
+	if (instance_exists(enemyNear)) && (point_distance(x,y, enemyNear.x, enemyNear.y) < 100 + (global.chipSmartFactor * 10) )
 	{
 		var a = point_direction(x,y, enemyNear.x, enemyNear.y);
-		direction += sign(dsin(a - direction)) * (precision * min(1, global.relativeSpeed+0.2));
+		direction += sign(dsin(a - direction)) * (precision + global.chipSmartFactor * min(1, global.relativeSpeed+0.2));
 	}
 	
 }

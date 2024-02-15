@@ -3,6 +3,12 @@
 
 if (cont = true)
 {
+	//---- KILL CHIPS ----//
+	if instance_exists(o_chipFather)
+	{
+		o_chipFather._hp = 1;
+	}
+			
 	if (room = Sala_Tutorial)
 	{
 		global.mandatoryTutorial = 1;	

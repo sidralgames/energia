@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (global.chipsVertex < o_cable._segments/2)
+if (global.chipsVertex < floor(o_cable._segments/2))
 {
 	global.chipPosition+=1;
 	global.chipsVertex+=2;
@@ -59,6 +59,42 @@ if (global.chipsVertex < o_cable._segments/2)
 				rope1.vertexAttachObject(initialChipIndex+global.chipsVertex, chipLaser, vertexAttachmentType.both);
 				chipLaser.chipVertex = initialChipIndex+global.chipsVertex;
 				chipLaser.chipPos = global.chipPosition;
+			}
+		
+		
+		}break;
+		
+		case s_temporary_Smart:
+		{
+		
+			global.temporaryLaser = global.temporaryTimeMax;
+		
+			with(o_cable)
+			{
+				chipSmart = instance_create_layer(x,y,"Player",o_chipSmart)
+				
+				AddChip(initialChipIndex+global.chipsVertex, chipSmart);
+				rope1.vertexAttachObject(initialChipIndex+global.chipsVertex, chipSmart, vertexAttachmentType.both);
+				chipSmart.chipVertex = initialChipIndex+global.chipsVertex;
+				chipSmart.chipPos = global.chipPosition;
+			}
+		
+		
+		}break;
+		
+		case s_temporary_Repair:
+		{
+		
+			global.temporaryLaser = global.temporaryTimeMax;
+		
+			with(o_cable)
+			{
+				chipRepair= instance_create_layer(x,y,"Player",o_chipRepair)
+				
+				AddChip(initialChipIndex+global.chipsVertex, chipRepair);
+				rope1.vertexAttachObject(initialChipIndex+global.chipsVertex, chipRepair, vertexAttachmentType.both);
+				chipRepair.chipVertex = initialChipIndex+global.chipsVertex;
+				chipRepair.chipPos = global.chipPosition;
 			}
 		
 		

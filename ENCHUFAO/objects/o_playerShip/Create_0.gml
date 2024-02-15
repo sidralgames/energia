@@ -31,11 +31,9 @@ tempPickUpbc = instance_create(x+150,y+50,o_temporaryPickUp)
 tempPickUpbc._hpush = 0
 		tempPickUpbc._vpush = 0
 		tempPickUpbc.image_angle = 0;
+		
+global.temporaryFireRate_Factor = 0;
 
-global.fireRateInitial = global.fireRate;
-global.superShotInitial = global.superShot;
-global.laserDamageInitial = global.laserDamage;
-global.laserWidthInitial = global.laserWidth;
 
 global.totalEnemiesOnLevelMax = min(35, 20+global.level);
 

@@ -7,6 +7,8 @@ if (cont = true)
 
 	room_goto(Sala_0)
 	global.level = 1;
+	
+
 }
 
 

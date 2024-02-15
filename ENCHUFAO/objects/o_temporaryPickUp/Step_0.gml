@@ -5,6 +5,28 @@ if (scale < 1)
 	scale +=0.1;
 }
 
+_hp --;
+
+if (_hp <= 100)
+{
+	if (alarm[11] <= 2)
+	{
+		image_alpha = 0.3;
+	}
+	else
+	{
+		image_alpha = 1;
+	}
+	
+	if (alarm[11] <= 0)
+	{
+		alarm[11] = 5;
+	}
+}
+if (_hp <= 0)
+{
+	instance_destroy();
+}
 
 _hpush = lerp(_hpush, 0, 0.01);
 _vpush = lerp(_vpush, 0, 0.01);

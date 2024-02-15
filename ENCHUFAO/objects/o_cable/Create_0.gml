@@ -13,7 +13,7 @@ capsuleConnection = false;
 superCapsuleConnection = false;
 
 //---- CHIPS ----//
-initialChipIndex = 4;
+initialChipIndex = 3;
 chipJustGrabbed = false;
 
 
