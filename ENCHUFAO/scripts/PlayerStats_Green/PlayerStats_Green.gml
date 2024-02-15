@@ -30,7 +30,7 @@ function PlayerStats_Green()
 	global.hpStat = global.hpMax;
 	global.ammoStat = global.ammoMax / 50;
 	global.laserStat = global.laserMax;
-	global.cableStat = 4;
+	global.cableStat = 3.5;
 	
 	global.PETAAmmo = 3;
 	

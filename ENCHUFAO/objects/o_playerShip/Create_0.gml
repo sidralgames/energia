@@ -5,41 +5,42 @@
 //global.bombIsClusterBomb = true;
 //global.haveSmokeBomb = true;
 //global.bombIsHomingBomb = true;
-tempPickUp = instance_create(x-50,y,o_temporaryPickUp)
-tempPickUp._hpush = 0
-		tempPickUp._vpush = 0
-		tempPickUp.image_angle = 0;
-tempPickUpb = instance_create(x+250,y,o_temporaryPickUp)
-tempPickUpb._hpush = 0
-		tempPickUpb._vpush = 0
-		tempPickUpb.image_angle = 0;
+
+//tempPickUp = instance_create(x-50,y,o_temporaryPickUp)
+//tempPickUp._hpush = 0
+//		tempPickUp._vpush = 0
+//		tempPickUp.image_angle = 0;
+//tempPickUpb = instance_create(x+250,y,o_temporaryPickUp)
+//tempPickUpb._hpush = 0
+//		tempPickUpb._vpush = 0
+//		tempPickUpb.image_angle = 0;
 		
-		tempPickUp = instance_create(x-250,y,o_temporaryPickUp)
-tempPickUp._hpush = 0
-		tempPickUp._vpush = 0
-		tempPickUp.image_angle = 0;
-tempPickUpb = instance_create(x+150,y,o_temporaryPickUp)
-tempPickUpb._hpush = 0
-		tempPickUpb._vpush = 0
-		tempPickUpb.image_angle = 0;
+//		tempPickUp = instance_create(x-250,y,o_temporaryPickUp)
+//tempPickUp._hpush = 0
+//		tempPickUp._vpush = 0
+//		tempPickUp.image_angle = 0;
+//tempPickUpb = instance_create(x+150,y,o_temporaryPickUp)
+//tempPickUpb._hpush = 0
+//		tempPickUpb._vpush = 0
+//		tempPickUpb.image_angle = 0;
 		
-		tempPickUpc = instance_create(x-50,y-50,o_temporaryPickUp)
-tempPickUpc._hpush = 0
-		tempPickUpc._vpush = 0
-		tempPickUpc.image_angle = 0;
-tempPickUpbc = instance_create(x+50,y+50,o_temporaryPickUp)
-tempPickUpbc._hpush = 0
-		tempPickUpbc._vpush = 0
-		tempPickUpbc.image_angle = 0;
+//		tempPickUpc = instance_create(x-50,y-50,o_temporaryPickUp)
+//tempPickUpc._hpush = 0
+//		tempPickUpc._vpush = 0
+//		tempPickUpc.image_angle = 0;
+//tempPickUpbc = instance_create(x+50,y+50,o_temporaryPickUp)
+//tempPickUpbc._hpush = 0
+//		tempPickUpbc._vpush = 0
+//		tempPickUpbc.image_angle = 0;
 		
-				tempPickUpc = instance_create(x+50,y-50,o_temporaryPickUp)
-tempPickUpc._hpush = 0
-		tempPickUpc._vpush = 0
-		tempPickUpc.image_angle = 0;
-tempPickUpbc = instance_create(x+150,y+50,o_temporaryPickUp)
-tempPickUpbc._hpush = 0
-		tempPickUpbc._vpush = 0
-		tempPickUpbc.image_angle = 0;
+//				tempPickUpc = instance_create(x+50,y-50,o_temporaryPickUp)
+//tempPickUpc._hpush = 0
+//		tempPickUpc._vpush = 0
+//		tempPickUpc.image_angle = 0;
+//tempPickUpbc = instance_create(x+150,y+50,o_temporaryPickUp)
+//tempPickUpbc._hpush = 0
+//		tempPickUpbc._vpush = 0
+//		tempPickUpbc.image_angle = 0;
 		
 global.temporaryFireRate_Factor = 0;
 

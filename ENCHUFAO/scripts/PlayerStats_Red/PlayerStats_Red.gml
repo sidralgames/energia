@@ -30,7 +30,7 @@ function PlayerStats_Red()
 	global.hpStat = global.hpMax;
 	global.ammoStat = global.ammoMax / 50;
 	global.laserStat = global.laserMax;
-	global.cableStat = 5;
+	global.cableStat = 4.5;
 	
 	//shields
 	global.shields = 0;

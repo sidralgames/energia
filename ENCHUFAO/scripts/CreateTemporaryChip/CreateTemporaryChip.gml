@@ -4,7 +4,7 @@
 
 function CreateTemporaryChip(argument0) //odds
 {
-	if irandom(argument0) = argument0
+	if irandom(argument0-1) = argument0-1
 	{
 		tempPickUp = instance_create_layer(x,y, "Cable", o_temporaryPickUp)
 		tempPickUp._hpush = lengthdir_x(enemySpeed, _angle);

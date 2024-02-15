@@ -8,9 +8,10 @@ function PlayerShipSlowMo()
 	{
 		slowmoAssistedTrue = true;
 		global.assistedSlowmo = true;
-		assistFactor = 0.1;
-		slowFactor = -0.1;
-		contAssistHit = 30;
+		assistFactor = 0.04;
+		slowFactor = 0.4;
+		contAssistHit = 10;
+		recoverSlowFactor = 0.05;
 	}
 	
 	if (slowmoAssistedTrue == true) && (contAssistHit <= 0)
@@ -21,6 +22,7 @@ function PlayerShipSlowMo()
 			assistFactor = 0;
 			slowFactor = 0;
 			slowmoAssistedTrue = false;
+			recoverSlowFactor = 0
 		}
 	}
 	
@@ -32,6 +34,7 @@ function PlayerShipSlowMo()
 	//------- AVOID HIT ASSISTED SLOWMO (OPTIONAL IN OPTIONS)------//
 	if ((global.assistSlowmoIsOn) && (global.hp <= 1))
 	{
+		recoverSlowFactor = 0
 		nextBullet = instance_nearest(x,y,o_bulletEnemy_Father) 
 		nextEnemy =  instance_nearest(x,y,o_enemyP);
 		
@@ -95,6 +98,7 @@ function PlayerShipSlowMo()
 
 	if ((key_BulletTime) && (canSlowMotion = true)) || 	(global.assistedSlowmo = true)
 	{
+		recoverSlowFactor = 0
 		SetTimeSlow();
 		
 		if (slowmoAssistedTrue = false)
@@ -146,7 +150,7 @@ function PlayerShipSlowMo()
 			}
 			else
 			{
-				global.relativeSpeed = lerp(global.relativeSpeed,1.0, 0.05);
+				global.relativeSpeed = lerp(global.relativeSpeed,1.0, 0.05 + recoverSlowFactor);
 				pitch = lerp(pitch,1.0, 0.05);
 			}
 		}

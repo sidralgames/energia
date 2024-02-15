@@ -67,7 +67,7 @@ function DrawStatsUpgrades()
 
 	for (var i = 0; i <= global.cableStat-1; i++)
 	{
-		if (i < global.cableStatInitial)
+		if (i < floor(global.cableStatInitial))
 		{
 			draw_sprite(s_indivStatPause, 0,  __view_get( e__VW.XView, 0 )+ 120 +(i * 10),__view_get( e__VW.YView, 0 )+180)	
 		}
