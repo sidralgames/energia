@@ -8,7 +8,7 @@ function AddMegaUpgradeInvisible()
 		timesPicked: 0,
 		unique: true,
 		nameUpgrade: "Invisibility",
-		infoUpgrade: "Become INVISIBLE TO ENEMIES \nby pressing triangle",
+		infoUpgrade: "Become INVISIBLE TO ENEMIES \nby pressing triangle (energy drop faster while INVSISIBLE)",
 		obj: o_enchufeMegaUpgrade_Invisible,
 		canShowUp: true,
 		xx: 0,

@@ -55,6 +55,8 @@ contPartShip = 2;
 contAssistHit = 5;
 slowFactor = 0;
 
+recoverSlowFactor = 0;
+
 naveP_sizeInc = -0.075;
 	
 naveP_minLife=0;

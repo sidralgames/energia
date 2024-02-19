@@ -2,7 +2,7 @@
 // Puede escribir su código en este editor
 
 event_inherited();
-_hp = global.temporaryTimeMax;
+_hp = global.chipDuration;
 
 global.chipSmartFactor+=0.25;
 

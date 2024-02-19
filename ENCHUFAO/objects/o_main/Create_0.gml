@@ -333,6 +333,8 @@ AddUpgradeHomingBomb();
 AddUpgradeSmokeBomb(); //25
 AddUpgradeShockingPETAS();
 AddUpgradeHomingBombPlus();
+AddUpgradeLongLastingChip();
+AddUpgradeMoreChipDrops();
 
 
 
@@ -363,6 +365,8 @@ global.recoverBulletIsUpgraded = false;
 global.chargerElectrocutatesIsUpgraded = false;
 global.exploHitIsUpgraded = false;
 global.shockingPetasIsUpgraded = false;
+global.longLastingChipIsUpgraded = false;
+global.moreChipDropsIsUpgraded = false;
 
 
 
@@ -492,8 +496,9 @@ for (var i = 0; i < global.numberOfUpgrades; i++)
 
 //---- TEMPORARY UPGRADES -----//
 
-global.temporaryTimeMax = 60 * 25;
+global.chipDuration = 60 * 25;
 global.chipPosition = 1;
+global.chipDrop = -1;
 
 global.chipSmartFactor =0;
 

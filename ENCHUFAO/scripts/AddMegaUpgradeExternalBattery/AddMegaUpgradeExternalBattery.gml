@@ -8,7 +8,7 @@ function AddMegaUpgradeExternalBattery()
 		timesPicked: 0,
 		unique: true,
 		nameUpgrade: "External Battery",
-		infoUpgrade: "FULL & INFINITE Energy, Ammo and Laser \n for 8 seconds by pressing circle (once per level)",
+		infoUpgrade: "FULL & INFINITE Energy, Ammo and Laser \n FOR 8 SECONDS by pressing circle (once per level)",
 		obj: o_enchufeMegaUpgrade_ExternalBattery,
 		canShowUp: true,
 		xx: 0,

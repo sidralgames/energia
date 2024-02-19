@@ -722,6 +722,69 @@ function CheckEnchufeUpgrade()
 	
 	
 			}break;
+			
+			case "upgradeLongLastingChip":
+			{
+				if (!global.longLastingChipIsUpgraded)
+				{
+					global.longLastingChipIsUpgraded = true;
+					AddUpgradeLongLastingChipPlayer();
+				}
+				
+				for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+				{
+					upg = ds_map_find_value(global.PlayerUpgradesList, i)
+					if (upg.obj = o_enchufeUpgadeLongLastingChip)
+					{
+						upg.times+=1;
+					}
+				}
+				
+				global.chipDuration += (60 * 6);
+				//-- DISCARD UPGRADE --//
+				for (var i= 0; i< global.numberOfUpgrades; i++)
+				{
+					thisUpg = ds_map_find_value(global.upgradesList, i)
+					if (thisUpg.obj = o_enchufeUpgadeLongLastingChip)
+					{
+						thisUpg.canShowUp = false;
+					}
+				}
+	
+	
+			}break;
+			
+			case "upgradeMoreChipDrops":
+			{
+				if (!global.moreChipDropsIsUpgraded)
+				{
+					global.moreChipDropsIsUpgraded = true;
+					AddUpgradeMoreChipDropsPlayer();
+				}
+				
+				for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+				{
+					upg = ds_map_find_value(global.PlayerUpgradesList, i)
+					if (upg.obj = o_enchufeUpgadeMoreChipDrops)
+					{
+						upg.times+=1;
+					}
+				}
+				
+				global.chipDrop -= 1;
+				
+				//-- DISCARD UPGRADE --//
+				for (var i= 0; i< global.numberOfUpgrades; i++)
+				{
+					thisUpg = ds_map_find_value(global.upgradesList, i)
+					if (thisUpg.obj = o_enchufeUpgadeMoreChipDrops)
+					{
+						thisUpg.canShowUp = false;
+					}
+				}
+	
+	
+			}break;
 		
 			case "upgradeBonus":
 			{

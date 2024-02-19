@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "UPGRADESLIST",
-    "path": "folders/Scripts/GENERAL/UPGRADESLIST.yy",
+    "name": "UPGRADES",
+    "path": "folders/Scripts/GENERAL/UPGRADESLIST/UPGRADES.yy",
   },
 }

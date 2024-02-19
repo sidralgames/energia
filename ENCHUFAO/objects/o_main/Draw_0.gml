@@ -13,7 +13,8 @@ if instance_exists(o_playerShip)
 		draw_circular_bar(o_playerShip.x+23, o_playerShip.y-23, global.energy, global.energyMax, global.lightBlue, 7,1, 2);
 		draw_circular_bar(o_playerShip.x+23, o_playerShip.y-23, global.energy, global.energyMax, c_white, 6,1, 2);
 	}
-	
+	//draw_text(o_playerShip.x, o_playerShip.y-100, string(global.chipDrop))
+//draw_text(o_playerShip.x, o_playerShip.y-120, string(global.chipDuration))
 
 }
 

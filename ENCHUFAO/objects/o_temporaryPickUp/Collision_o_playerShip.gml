@@ -13,7 +13,7 @@ if instance_exists(o_playerShip) && (alarm[10] <= 0)
 				case s_temporary_fireRate:
 				{
 			
-					global.temporaryFireRate = global.temporaryTimeMax;
+					global.temporaryFireRate = global.chipDuration;
 		
 					with(o_cable)
 					{
@@ -33,7 +33,7 @@ if instance_exists(o_playerShip) && (alarm[10] <= 0)
 				case s_temporary_superShot:
 				{
 		
-					global.temporarySuperShot = global.temporaryTimeMax;
+					global.temporarySuperShot = global.chipDuration;
 		
 					with(o_cable)
 					{
@@ -53,7 +53,7 @@ if instance_exists(o_playerShip) && (alarm[10] <= 0)
 				case s_temporary_laser:
 				{
 		
-					global.temporaryLaser = global.temporaryTimeMax;
+					global.temporaryLaser = global.chipDuration;
 		
 					with(o_cable)
 					{
@@ -71,7 +71,7 @@ if instance_exists(o_playerShip) && (alarm[10] <= 0)
 				case s_temporary_Smart:
 				{
 		
-					global.temporaryLaser = global.temporaryTimeMax;
+					global.temporaryLaser = global.chipDuration;
 		
 					with(o_cable)
 					{
@@ -89,7 +89,7 @@ if instance_exists(o_playerShip) && (alarm[10] <= 0)
 				case s_temporary_Repair:
 				{
 		
-					global.temporaryLaser = global.temporaryTimeMax;
+					global.temporaryLaser = global.chipDuration;
 		
 					with(o_cable)
 					{
