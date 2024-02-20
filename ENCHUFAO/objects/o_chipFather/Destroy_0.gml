@@ -41,6 +41,15 @@ if instance_exists(o_chipRepair)
 	}
 }
 
+if instance_exists(o_chipMimic)
+{
+	with(o_chipMimic)
+	{
+		alarm[0] = 1
+		changeVertex = true;
+	}
+}
+
 
 global.chipsVertex -= 2;
 

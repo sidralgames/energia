@@ -1,19 +1,22 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_ChipinTile",
+  "name": "o_chipMimic",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Enchufes",
-    "path": "folders/Objetos/Enchufes.yy",
+    "name": "ENCHUFAO",
+    "path": "ENCHUFAO.yyp",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "o_chipFather",
+    "path": "objects/o_chipFather/o_chipFather.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -30,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_chipInTileLaser",
-    "path": "sprites/s_chipInTileLaser/s_chipInTileLaser.yy",
+    "name": "s_mimicMiniChip",
+    "path": "sprites/s_mimicMiniChip/s_mimicMiniChip.yy",
   },
   "spriteMaskId": null,
   "visible": true,

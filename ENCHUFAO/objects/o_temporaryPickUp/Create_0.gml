@@ -8,7 +8,7 @@ _angle = image_angle;
 
 _hp = random_range(600, 650);
 
-image_speed = 0;
+image_speed = 0.65;
 
 bnc = 1;
 
