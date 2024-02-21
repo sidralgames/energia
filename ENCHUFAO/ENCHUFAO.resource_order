@@ -493,6 +493,7 @@
     {"name":"CheckShipToUnlock","order":6,"path":"scripts/CheckShipToUnlock/CheckShipToUnlock.yy",},
     {"name":"o_enchufeUpgadeAmmo","order":8,"path":"objects/o_enchufeUpgadeAmmo/o_enchufeUpgadeAmmo.yy",},
     {"name":"FriendIA","order":21,"path":"scripts/FriendIA/FriendIA.yy",},
+    {"name":"infoGameOverEnemyChip","order":51,"path":"scripts/infoGameOverEnemyChip/infoGameOverEnemyChip.yy",},
     {"name":"AddUpgradeSpeedUpPlayer","order":10,"path":"scripts/AddUpgradeSpeedUpPlayer/AddUpgradeSpeedUpPlayer.yy",},
     {"name":"o_BigWormGameOver","order":55,"path":"objects/o_BigWormGameOver/o_BigWormGameOver.yy",},
     {"name":"s_options","order":61,"path":"sprites/s_options/s_options.yy",},

@@ -411,6 +411,32 @@ function DrawKilledByEnemy()
 	
 		}
 		break;
+		
+		//------ CHIP MIMIC ------//
+		case (s_chipMimic):
+		{
+			image_speed = 0.6;
+
+			draw_set_color(global.brightRed);
+			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+261,"Badchip");
+
+			draw_set_color(c_white)
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+260,"Badchip");
+		
+			draw_set_font(global.customFont12);
+			if (tipChoosed = false)
+			{
+				tipChoosed = true;
+				tip = irandom_range(0,2)
+			}
+			infoGameOverEnemyChip(tip);
+			draw_set_color(global.lightBlue)
+			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+286, string(text))
+			draw_set_color(c_white)
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+285, string(text))
+	
+		}
+		break;
 		// ------- WALL ENEMIES --------//	
 		case (s_enemyMouth):
 		{

@@ -3,8 +3,8 @@
 if instance_exists(o_playerShip)
 {
 	exploChip = instance_create_layer(o_playerShip.x,o_playerShip.y,"Player", o_explo2)
-	exploChip.image_xscale = 0.3;
-	exploChip.image_yscale = 0.3;
+	exploChip.image_xscale = 0.4;
+	exploChip.image_yscale = 0.4;
 	
 	with (o_playerShip)
 	{

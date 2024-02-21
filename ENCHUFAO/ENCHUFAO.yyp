@@ -552,6 +552,7 @@
     {"id":{"name":"CheckShipToUnlock","path":"scripts/CheckShipToUnlock/CheckShipToUnlock.yy",},},
     {"id":{"name":"o_enchufeUpgadeAmmo","path":"objects/o_enchufeUpgadeAmmo/o_enchufeUpgadeAmmo.yy",},},
     {"id":{"name":"FriendIA","path":"scripts/FriendIA/FriendIA.yy",},},
+    {"id":{"name":"infoGameOverEnemyChip","path":"scripts/infoGameOverEnemyChip/infoGameOverEnemyChip.yy",},},
     {"id":{"name":"AddUpgradeSpeedUpPlayer","path":"scripts/AddUpgradeSpeedUpPlayer/AddUpgradeSpeedUpPlayer.yy",},},
     {"id":{"name":"o_BigWormGameOver","path":"objects/o_BigWormGameOver/o_BigWormGameOver.yy",},},
     {"id":{"name":"s_options","path":"sprites/s_options/s_options.yy",},},

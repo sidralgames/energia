@@ -498,7 +498,7 @@ for (var i = 0; i < global.numberOfUpgrades; i++)
 
 global.chipDuration = 60 * 25;
 global.chipPosition = 1;
-global.chipDrop = -1;
+global.chipDrop = 0;
 
 global.chipSmartFactor =0;
 

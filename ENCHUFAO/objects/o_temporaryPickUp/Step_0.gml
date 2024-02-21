@@ -11,8 +11,15 @@ if (spriteSet = false)
 {
 	if (_sprite = -1)
 	{
-		_sprite = choose(s_chipMimic, s_temporary_fireRate, s_temporary_superShot, s_temporary_laser, s_temporary_Smart, s_temporary_Repair)
+		_sprite = choose(
+		s_temporary_fireRate, s_temporary_fireRate,
+		s_temporary_superShot, s_temporary_superShot, 
+		s_temporary_laser, s_temporary_laser, 
+		s_temporary_Smart, s_temporary_Smart, 
+		s_temporary_Repair, s_temporary_Repair,
+		s_chipMimic)
 	}
+	
 	spriteSet = true;
 }
 sprite_index = _sprite;
