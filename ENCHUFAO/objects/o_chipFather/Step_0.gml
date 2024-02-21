@@ -63,55 +63,9 @@ if (alarm[0] <= 0) && (changeVertex = true)
 		rope1.vertexDeAttachTo(2);
 		rope1.vertexAttachObject(other.chipVertex, other, vertexAttachmentType.both);
 	}
-	
 
-
-	
 }
 
-
-
-
-
-
-
-//firstChip = collision_circle(x,y,50, o_chipFather, false, true);
-
-//if (firstChip)
-//{
-//	if (firstChip.chipVertex !=4)
-//	{
-//		if (chipVertex > 4) && !collision_circle(x,y,100, o_chipFather, false, true)
-//		{
-//			chipVertex -=1;
-//			chipToMove = self;
-	
-//			with(o_cable)
-//			{
-//				chip = o_chipFather.chipToMove;
-		
-//				rope1.vertexDeAttachTo(chip.chipVertex+1);
-//				rope1.vertexAttachObject(chip.chipVertex, chip, vertexAttachmentType.both);
-//			}
-//		}
-//	}
-//}
-//else
-//{
-//	if (chipVertex > 4) && !collision_circle(x,y,100, o_chipFather, false, true)
-//	{
-//		chipVertex -=1;
-//		chipToMove = self;
-	
-//		with(o_cable)
-//		{
-//			chip = o_chipFather.chipToMove;
-	
-//			rope1.vertexDeAttachTo(chip.chipVertex+1);
-//			rope1.vertexAttachObject(chip.chipVertex, chip, vertexAttachmentType.both);
-//		}
-//	}
-//}
 
 
 

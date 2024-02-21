@@ -2,6 +2,10 @@
 // You can write your code in this editor
 if instance_exists(o_playerShip)
 {
+	exploChip = instance_create_layer(o_playerShip.x,o_playerShip.y,"Player", o_explo2)
+	exploChip.image_xscale = 0.3;
+	exploChip.image_yscale = 0.3;
+	
 	with (o_playerShip)
 	{
 		if (tocado = false)
@@ -26,6 +30,9 @@ if instance_exists(o_playerShip)
 		}
 	}
 }
+
+
+	
 global.chipsLaserTot -=1;
 
 event_inherited()

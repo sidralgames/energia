@@ -23,7 +23,7 @@ function PlayerStats_Blue()
 	global.bombAmmo = 2;
 	
 	
-	global._speed = 3.25;
+	global._speed = 3.6;
 	global.walkAcceleration = 0.2;
 	
 	global.energyStat = (global.energyMax / 50)-2;;

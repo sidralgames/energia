@@ -49,9 +49,12 @@ if (tile_meeting(x+hspeed,y,"Tiles"))
 {
 	if (abs(speed) > 2.7*global.relativeSpeed)
 	{
-	instance_create(x+(30*sign(hspeed)),y+(30*sign(vspeed)),o_exploBomb)
-	instance_create(x+(30*sign(hspeed)),y-(30*sign(vspeed)),o_exploBomb)
-
+		b1 = instance_create(x+(30*sign(hspeed)),y+(30*sign(vspeed)),o_exploBomb)
+		b2 = instance_create(x+(30*sign(hspeed)),y-(30*sign(vspeed)),o_exploBomb)
+		b1.isFrom = "BossBomb";
+		b2.isFrom = "BossBomb";
+		b1.isExploFromBoss = true;
+		b2.isExploFromBoss = true;
 	}
     hspeed = -hspeed*bnc;
 }
@@ -59,8 +62,13 @@ if (tile_meeting(x+hspeed,y,"Tiles"))
 {
 	if (abs(speed) > 2.7*global.relativeSpeed)
 	{
-		instance_create(x+(30*sign(hspeed)),y+(30*sign(vspeed)),o_exploBomb)
-		instance_create(x-(30*sign(hspeed)),y+(30*sign(vspeed)),o_exploBomb)
+		b1 = instance_create(x+(30*sign(hspeed)),y+(30*sign(vspeed)),o_exploBomb)
+		b2 = instance_create(x-(30*sign(hspeed)),y+(30*sign(vspeed)),o_exploBomb)
+		
+		b1.isFrom = "BossBomb";
+		b2.isFrom = "BossBomb";
+		b1.isExploFromBoss = true;
+		b2.isExploFromBoss = true;
 	}
     vspeed = -vspeed*bnc;
 }

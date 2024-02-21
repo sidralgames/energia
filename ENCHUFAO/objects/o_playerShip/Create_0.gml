@@ -217,7 +217,10 @@ bnc = 0.6;
 walkSpeed = global._speed;
 
 plugged = false
-diagSpeed = (global._speed * 0.707);
+diagSpeed = round((global._speed * 0.707));
+
+diagAcc = round((global.walkAcceleration * 0.707));
+normlaAcc = global.walkAcceleration;
 
 offRange = 2;
 spaceSpeed = 3;

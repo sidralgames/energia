@@ -22,7 +22,7 @@ function PlayerStats_Dark()
 	
 	global.bombAmmo = 2;
 	
-	global._speed = 3.5;
+	global._speed = 3.6;
 	global.walkAcceleration = 0.15;
 	
 	global.energyStat = (global.energyMax / 50)-2;

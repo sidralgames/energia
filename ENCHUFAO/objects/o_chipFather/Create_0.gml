@@ -4,7 +4,7 @@ changeVertex = false;
 changedPos = false;
 
 scale = 1.7;
-
+image_speed = 0;;
 
 
 

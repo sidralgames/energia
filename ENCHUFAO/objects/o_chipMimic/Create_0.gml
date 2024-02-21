@@ -10,5 +10,6 @@ global.chipsLaserTot +=1;
 deattached = false;
 unplugging = false;
 inCable = true;
+image_speed = 0.5;
 
 

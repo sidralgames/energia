@@ -5,7 +5,7 @@ function MoveShip()
 	dirH = key_right - key_left;
 	dirV = key_down - key_up;
 	
-	if (abs(_hpush) + abs(_vpush) < round(global._speed*1.9))
+	if (abs(_hpush) + abs(_vpush) < round(global._speed*1.8))
 	{
 		_hpush = clamp(_hpush, -walkSpeed, walkSpeed);
 		_vpush = clamp(_vpush, -walkSpeed, walkSpeed);
@@ -21,7 +21,7 @@ function MoveShip()
 		if (alarm[3] <= 0)
 		{
 			_hpush += dirH * global.walkAcceleration;
-			_hpush = lerp(_hpush, 0, 0.00005);
+			//_hpush = lerp(_hpush, 0, 0.00005);
 		}
 	}
 
@@ -30,7 +30,7 @@ function MoveShip()
 		if (alarm[3] <= 0)
 		{
 			_vpush += dirV * global.walkAcceleration;
-			_vpush = lerp(_vpush, 0, 0.00005);
+			//_vpush = lerp(_vpush, 0, 0.00005);
 			
 		}
 	}
