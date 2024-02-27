@@ -19,6 +19,8 @@ switch(state)
 //		lightEnemy.light [| eLight.Y] = y
 //	}
 
+checkChasing();
+
 if (_hp <= 0)
 {
 	EnemyDeathShake();

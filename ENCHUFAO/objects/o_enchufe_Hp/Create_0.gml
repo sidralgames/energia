@@ -28,3 +28,4 @@ for (i=0; i< global.batteryEnchufeListHPnum; i++)
 	}
 	
 
+isMainEnchufe = true;

@@ -26,3 +26,5 @@ if (global.level > 2)
 		batSprite = ds_map_find_value(global.batteryEnchufeListAmmo, i)
 		EnchufeBatterysStartLevel();
 	}
+	
+isMainEnchufe = true;

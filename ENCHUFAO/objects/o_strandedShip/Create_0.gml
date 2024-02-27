@@ -1,5 +1,32 @@
 /// @description Insert description here
 // You can write your code in this editor
+chargedInEnergy = true;
+chargedInAmmo = true;
+chargedInHp = true;
+firstSetted = false;
+
+for (var i=0; i<2; i++)
+{
+	chooseAttribute = choose(0,1,2)
+
+	switch (chooseAttribute)
+	{
+		case 0:
+		{
+			chargedInAmmo = false;
+		}break;
+	
+		case 1:
+		{
+			chargedInHp = false;
+		}break;
+	
+		case 2:
+		{
+			chargedInEnergy = false;
+		}break;
+	}
+}
 called = false
 sprite = -1;
 strtandedPrecision = 2;
@@ -26,34 +53,22 @@ minSpeed = 0;
 maxSpeed = 0;
 
 
-oddChargedEnergy = choose(0,1)
-if (oddChargedEnergy == 1)
-{
-	chargedInEnergy = true;
-}
-else
-{
-	chargedInEnergy = false;
-}
+
+
 
 
 chargeEnergy = 0;
 maxChargeEnergy = 500;
 
-chargedInHp = false;
+
 chargeHp = 0;
 maxChargeHp = 500;
 
 
+
+
 oddChargedAmmo = choose(0,1)
-if (oddChargedAmmo == 1)
-{
-	chargedInAmmo = true;
-}
-else
-{
-	chargedInAmmo = false;
-}
+
 chargeAmmo = 0;
 maxChargeAmmo = 500;
 

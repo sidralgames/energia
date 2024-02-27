@@ -29,5 +29,5 @@ if (global.level > 2)
 		EnchufeBatterysStartLevel();
 	}
 	
-
+isMainEnchufe = true;
 

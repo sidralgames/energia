@@ -17,7 +17,7 @@ function StrandedShip_StrandedState()
 	
 	if instance_exists(o_playerShip)
 	{	
-		if (chargedInEnergy) && (chargedInHp)
+		if ((chargedInEnergy) && (chargedInHp) && (firstSetted = true))
 		{
 			if point_distance(x,y,o_playerShip.x, o_playerShip.y) > 70	
 			{

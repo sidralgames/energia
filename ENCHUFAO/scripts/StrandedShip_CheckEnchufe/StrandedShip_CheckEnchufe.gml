@@ -36,6 +36,7 @@ function StrandedShip_CheckEnchufe()
 				if (inst.chargeEnergy >= inst.maxChargeEnergy-1)
 				{
 					inst.chargedInEnergy = true;
+					inst.firstSetted = true;
 					inst.unlocked = true;
 				}
 			}
@@ -57,6 +58,7 @@ function StrandedShip_CheckEnchufe()
 				if (inst.chargeHp >= inst.maxChargeHp-1)
 				{
 					inst.chargedInHp = true;
+					inst.firstSetted = true;
 					inst.unlocked = true;
 				}
 			}
@@ -72,6 +74,7 @@ function StrandedShip_CheckEnchufe()
 				if (inst.chargeAmmo >= inst.maxChargeAmmo-1)
 				{
 					inst.chargedInAmmo = true;
+					inst.firstSetted = true;
 					inst.unlocked = true;
 				}
 			}
@@ -87,6 +90,7 @@ function StrandedShip_CheckEnchufe()
 				if (inst.chargeAmmo >= inst.maxChargeAmmo-1)
 				{
 					inst.chargedInAmmo = true;
+					inst.firstSetted = true;
 					inst.unlocked = true;
 				}
 			}

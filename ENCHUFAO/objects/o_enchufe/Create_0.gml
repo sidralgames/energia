@@ -27,4 +27,4 @@ for (i=0; i< global.batteryEnchufeListEnergynum; i++)
 		EnchufeBatterysStartLevel();
 	}
 	
-
+isMainEnchufe = true;

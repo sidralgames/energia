@@ -15,7 +15,7 @@ switch(state)
 	case ENEMYSTATE.SHOCKED: Enemy_Shocked(); break;
 }
 
-
+checkChasing();
 
 if (_hp <= 0)
 {

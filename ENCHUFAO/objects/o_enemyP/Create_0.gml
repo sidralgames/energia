@@ -2,7 +2,8 @@
 // You can write your code in this editor
 
 discounted = false;
-
+keepChasingTime = 180;
+keepChasing = true;
 enemyIsWorm = false;
 canBeHittedByPlayerLaser = true;
 leavesTrail = true;

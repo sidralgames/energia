@@ -5,7 +5,10 @@ if (scale < 1)
 	scale +=0.1;
 }
 
-_hp --;
+if (_sprite != s_chipMimic)
+{
+	_hp --;
+}
 
 if (spriteSet = false)
 {
@@ -16,7 +19,7 @@ if (spriteSet = false)
 		s_temporary_superShot, s_temporary_superShot, 
 		s_temporary_laser, s_temporary_laser, 
 		s_temporary_Smart, s_temporary_Smart, 
-		s_temporary_Repair, s_temporary_Repair,
+		s_temporary_Repair,
 		s_chipMimic)
 	}
 	
@@ -24,7 +27,7 @@ if (spriteSet = false)
 }
 sprite_index = _sprite;
 
-if (_hp <= 100)
+if (_hp <= 100) && (_sprite != s_chipMimic)
 {
 	if (alarm[11] <= 2)
 	{
@@ -43,6 +46,13 @@ if (_hp <= 100)
 if (_hp <= 0)
 {
 	instance_destroy();
+	
+	if (_sprite = s_chipMimic)
+	{
+		explo = instance_create(x,y,o_explo2);
+		explo.image_xscale = 0.5;
+		explo.image_yscale = 0.5;
+	}
 }
 
 _hpush = lerp(_hpush, 0, 0.01);

@@ -6,6 +6,8 @@
 //type = collisionType.custom;
 randomize();
 
+isMainEnchufe = false;
+
 occupied = false;
 isEnchufeUpgrade = false;
 isPluggable = true;

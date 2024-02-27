@@ -60,7 +60,7 @@ global.haveExternalBattery = false;
 global.externalBatteryOn = false;
 
 //--CALL FOR HELP--//
-global.haveCallForHelp = true;
+global.haveCallForHelp = false;
 
 
 //-------BULLET MODIFICATORS----------//
@@ -389,7 +389,7 @@ global.cavalryIsMegaUpgraded = false;
 //--BOMBS--//
 global.haveSmokeBomb = false;
 global.bombIsClusterBomb = false;
-global.bombIsHomingBomb = true;
+global.bombIsHomingBomb = false;
 global.homingMissilesExtra = 0;
 
 global.chargerShoots = false;

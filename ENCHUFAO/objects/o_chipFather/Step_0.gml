@@ -7,7 +7,14 @@ if (scale >1)
 	scale-=0.05;	
 }
 
-_hp --;
+if (sprite_index = s_chipRepair)
+{
+	_hp -= 2;
+}
+else
+{
+	_hp --;
+}
 
 if (_hp <= 60)
 {

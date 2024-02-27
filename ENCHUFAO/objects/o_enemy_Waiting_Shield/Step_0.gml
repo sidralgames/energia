@@ -18,6 +18,8 @@ if instance_exists(o_playerShip)
 	}
 }
 
+checkChasing();
+
 if (_hp <= 0)
 {
 	EnemyDeathShake();

@@ -1070,6 +1070,7 @@
     {"id":{"name":"s_enemyLaserGreen","path":"sprites/s_enemyLaserGreen/s_enemyLaserGreen.yy",},},
     {"id":{"name":"s_enemyTurret","path":"sprites/s_enemyTurret/s_enemyTurret.yy",},},
     {"id":{"name":"o_bulletPlayer_BombHoming","path":"objects/o_bulletPlayer_BombHoming/o_bulletPlayer_BombHoming.yy",},},
+    {"id":{"name":"Script409","path":"scripts/Script409/Script409.yy",},},
     {"id":{"name":"o_partBalaTorretaBig","path":"objects/o_partBalaTorretaBig/o_partBalaTorretaBig.yy",},},
     {"id":{"name":"o_enemyFastMini","path":"objects/o_enemyFastMini/o_enemyFastMini.yy",},},
     {"id":{"name":"o_enchufeUpgadeSuperShot","path":"objects/o_enchufeUpgadeSuperShot/o_enchufeUpgadeSuperShot.yy",},},

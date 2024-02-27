@@ -1,7 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 slowedPeta = 0;
-
+keepChasingTime = 180;
+keepChasing = true;
 discounted = false;
 canBeHittedByPlayerLaser = true;
 finalTrail = true;
