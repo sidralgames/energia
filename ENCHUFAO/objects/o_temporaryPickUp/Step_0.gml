@@ -54,20 +54,15 @@ Move();
 image_angle += max(0.05*sign(_hpush), 2*(abs(_hpush)),0.05*sign(_vpush), 2*(abs(_vpush))*global.relativeSpeed);
 _angle = image_angle;
 
-//apply the shift
 
-if instance_exists(o_playerShip) && (alarm[10] <= 0)
+if instance_exists(o_playerShip) && (alarm[10] <= 0) && (2+global.chipsVertex/2 <= global.cableStat*2)
 {
 	if (point_distance(x,y, o_playerShip.x, o_playerShip.y) < 30)
 	{
 		if (o_playerShip.pluggedFinal = false)
 		{
-			if (2+global.chipsVertex/2 <= global.cableStat*2)
-			{
 			direction = point_direction(x,y, o_playerShip.x, o_playerShip.y)
 			speed = 4;
-			}
 		}
 	}
-
 }

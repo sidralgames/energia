@@ -6,8 +6,8 @@ function CreateEnchufeBattery()
 		{
 			xoffset = 0;
 			yoffset = 20;
-			var _c = dcos(inEnchufe.image_angle);
-			var _s = dsin(inEnchufe.image_angle);
+			var _c = dcos(inEnchufe._angle);
+			var _s = dsin(inEnchufe._angle);
 			var _x = inEnchufe.x - xoffset * _c - yoffset * _s;
 			var _y = inEnchufe.y - xoffset * -_s - yoffset * _c;
 		
@@ -22,8 +22,8 @@ function CreateEnchufeBattery()
 		{
 			xoffset = 12;
 			yoffset = -17;
-			var _c = dcos(inEnchufe.image_angle);
-			var _s = dsin(inEnchufe.image_angle);
+			var _c = dcos(inEnchufe._angle);
+			var _s = dsin(inEnchufe._angle);
 			var _x = inEnchufe.x - xoffset * _c - yoffset * _s;
 			var _y = inEnchufe.y - xoffset * -_s - yoffset * _c;
 		
@@ -39,8 +39,8 @@ function CreateEnchufeBattery()
 		{
 			xoffset = -12;
 			yoffset = -17;
-			var _c = dcos(inEnchufe.image_angle);
-			var _s = dsin(inEnchufe.image_angle);
+			var _c = dcos(inEnchufe._angle);
+			var _s = dsin(inEnchufe._angle);
 			var _x = inEnchufe.x - xoffset * _c - yoffset * _s;
 			var _y = inEnchufe.y - xoffset * -_s - yoffset * _c;
 		

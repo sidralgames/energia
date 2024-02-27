@@ -33,7 +33,7 @@ if instance_exists(o_playerShip)
 			}
 			else
 			{
-				draw_sprite_ext(s_chargerPlugged, 0, enchufe.x, enchufe.y, o_charger.scale, o_charger.scale, enchufe.image_angle-90, image_blend, image_alpha)
+				draw_sprite_ext(s_chargerPlugged, 0, enchufe.x, enchufe.y, o_charger.scale, o_charger.scale, enchufe._angle-90, image_blend, image_alpha)
 			}
 		}
 	}

@@ -8,6 +8,8 @@ inScreen =  (x > __view_get( e__VW.XView, 0 )-50 && x < __view_get( e__VW.XView,
 
 	
 if (charge >= maxCharge) && (capsulesMax >=1)
+&& (!tile_meeting(x+lengthdir_x(45, image_angle+270),y+lengthdir_y(45, image_angle+270),"Tiles"))
+&& (!place_meeting(x+lengthdir_x(45, image_angle+270),y+lengthdir_y(45, image_angle+270),o_enchufe_Father))
 {
 	charge = 0;
 	alarm[2] = 10;
