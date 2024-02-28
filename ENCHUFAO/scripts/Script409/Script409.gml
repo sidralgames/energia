@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function checkChasing()
 {
-	if (state = ENEMYSTATE.CHASING) && instance_exists(o_playerShip)
+	if (state = ENEMYSTATE.CHASING) && instance_exists(o_playerShip) && (canStopChasing)
 	{
 		if (point_distance(x,y,o_playerShip.x, o_playerShip.y) > 540)
 		{

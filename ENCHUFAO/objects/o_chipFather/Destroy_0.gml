@@ -1,6 +1,9 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
 
+
+//global.chipVertexDead = chipVertex;
+
 global.chipPosition -= 1;
 
 if instance_exists(o_chipLaser)

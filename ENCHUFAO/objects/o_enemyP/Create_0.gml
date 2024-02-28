@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+canStopChasing = false;
 discounted = false;
 keepChasingTime = 180;
 keepChasing = true;

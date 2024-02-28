@@ -13,6 +13,7 @@ if (global.strandedShipGreen)
 		stranded.sprite = splayer;
 		stranded.hpMax = 4;
 		stranded.hp = global.strandedShipGreenHP;
+		stranded.firstSetted = true;
 		
 	}
 	if (global.strandedShipBlue)
@@ -26,6 +27,7 @@ if (global.strandedShipGreen)
 		stranded.sprite = splayer_Blue;
 		stranded.hpMax = 4;
 		stranded.hp = global.strandedShipBlueHP;
+		stranded.firstSetted = true;
 	}
 	if (global.strandedShipPurple)
 	{
@@ -38,6 +40,7 @@ if (global.strandedShipGreen)
 		stranded.sprite = splayer_Purple;
 		stranded.hpMax = 4;
 		stranded.hp = global.strandedShipPurpleHP;
+		stranded.firstSetted = true;
 	}
 	if (global.strandedShipDark)
 	{
@@ -50,6 +53,7 @@ if (global.strandedShipGreen)
 		stranded.sprite = splayer_Dark;
 		stranded.hpMax = 4;
 		stranded.hp = global.strandedShipDarkHP;
+		stranded.firstSetted = true;
 	}
 	if (global.strandedShipRed)
 	{
@@ -63,6 +67,7 @@ if (global.strandedShipGreen)
 		stranded.sprite = splayer_Red;
 		stranded.hpMax = 4;
 		stranded.hp = global.strandedShipRedHP;
+		stranded.firstSetted = true;
 	}
 	if (global.strandedShipMP3)
 	{
@@ -76,5 +81,6 @@ if (global.strandedShipGreen)
 		stranded.sprite = splayer_mp3;
 		stranded.hpMax = 4;
 		stranded.hp = global.strandedShipMP3HP;
+		stranded.firstSetted = true;
 	}
 }

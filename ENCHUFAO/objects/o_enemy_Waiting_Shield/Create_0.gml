@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+canStopChasing = false;
 slowedPeta = 0;
 keepChasingTime = 180;
 keepChasing = true;

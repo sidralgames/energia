@@ -41,6 +41,8 @@ function Enemy_Chasing()
 
 		if (inScreen)
 		{
+			canStopChasing = true;
+			
 			if (leavesTrail)
 			{
 				if (enemyIsMini)

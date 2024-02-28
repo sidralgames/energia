@@ -3,27 +3,30 @@
 global.bulletsAreSmartIsOn = false;
 global.chipSmartFactor-=0.25;
 
-if (o_playerShip.plugged)
+if instance_exists(o_playerShip)
 {
-	with (o_playerShip)
+	if (o_playerShip.plugged)
 	{
-		if (enchufe.isMainEnchufe)
+		with (o_playerShip)
 		{
-			if (enchufe.hp)
+			if (enchufe.isMainEnchufe)
 			{
-				CheckForUpgradeEnchufe(global.enchufeHPUpgradesList, global.enchufeHPUpgradesNum)
-			}
-			else if (enchufe.ammo)
-			{
-				CheckForUpgradeEnchufe(global.enchufeAmmoUpgradesList, global.enchufeAmmoUpgradesNum)
-			}
-			else if (enchufe.laser)
-			{
-				CheckForUpgradeEnchufe(global.enchufeLaserUpgradesList, global.enchufeLaserUpgradesNum)
-			}
-			else if (enchufe.energy)
-			{
-				CheckForUpgradeEnchufe(global.enchufeEnergyUpgradesList, global.enchufeEnergyUpgradesNum)
+				if (enchufe.hp)
+				{
+					CheckForUpgradeEnchufe(global.enchufeHPUpgradesList, global.enchufeHPUpgradesNum)
+				}
+				else if (enchufe.ammo)
+				{
+					CheckForUpgradeEnchufe(global.enchufeAmmoUpgradesList, global.enchufeAmmoUpgradesNum)
+				}
+				else if (enchufe.laser)
+				{
+					CheckForUpgradeEnchufe(global.enchufeLaserUpgradesList, global.enchufeLaserUpgradesNum)
+				}
+				else if (enchufe.energy)
+				{
+					CheckForUpgradeEnchufe(global.enchufeEnergyUpgradesList, global.enchufeEnergyUpgradesNum)
+				}
 			}
 		}
 	}

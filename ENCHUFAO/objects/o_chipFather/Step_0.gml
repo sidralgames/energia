@@ -7,14 +7,14 @@ if (scale >1)
 	scale-=0.05;	
 }
 
-if (sprite_index = s_chipRepair)
-{
-	_hp -= 2;
-}
-else
-{
+//if (sprite_index = s_chipRepair)
+//{
+//	_hp -= 2;
+//}
+//else
+//{
 	_hp --;
-}
+//}
 
 if (_hp <= 60)
 {
@@ -40,7 +40,7 @@ image_yscale = scale;
 //		alarm[11] = 5;
 //	}
 //}
-if (_hp <= 3) && (deattached = false)
+if (_hp <= 4) && (deattached = false)
 {
 	with(o_cable)
 	{
@@ -59,10 +59,11 @@ if (_hp <= 0)
 	instance_destroy();
 }
 
-if (alarm[0] <= 0) && (changeVertex = true)
+if (alarm[0] <= 0) && (changeVertex = true) //&& (chipVertex > global.chipVertexDead)
 {
+	//que no pasen del vertex inicial
+	//y que solo se corran los de por detras del muerto
 	changeVertex = false;
-	
 	chipVertex = chipVertex-2;
 	
 	with(o_cable)
