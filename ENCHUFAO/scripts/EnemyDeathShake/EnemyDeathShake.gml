@@ -2,11 +2,11 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function EnemyDeathShake()
 {
-	if (x > __view_get( e__VW.XView, 0 )-50) && (x < __view_get( e__VW.XView, 0 )+690)
+	inScreen =  (x > __view_get( e__VW.XView, 0 )-50 && x < __view_get( e__VW.XView, 0 )+710) &&
+	(y > __view_get( e__VW.YView, 0 )-50 && y < __view_get( e__VW.YView, 0 )+410)
+	
+	if (inScreen)
 	{
-		if (y > __view_get( e__VW.YView, 0 )-50) && (x < __view_get( e__VW.YView, 0 )+410)
-		{
-			screenShake(2,5);
-		}
+		screenShake(2,5);
 	}
 }

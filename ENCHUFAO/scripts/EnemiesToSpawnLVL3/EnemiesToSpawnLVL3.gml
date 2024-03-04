@@ -8,19 +8,16 @@ function EnemiesToSpawnLVL3()
 	{
 		enemy = choose(o_enemy, o_enemyFast, o_enemyFastMini)
 	}
-	else
-	if (enemyToSpawn > 4) && (enemyToSpawn<=7)
+	else if (enemyToSpawn > 4) && (enemyToSpawn<=7)
 	{
 		enemy = choose(o_enemyFast,o_enemyDisp,o_enemyMitosis,o_enemy_Waiting_Shield)
 	}
-	else
-	if (enemyToSpawn > 7) && (enemyToSpawn<=9)
+	else if (enemyToSpawn > 7) && (enemyToSpawn<=9)
 	{
 		enemy = choose(o_enemySniper, o_enemyDisc,o_enemyMitosis)
 	}
-	else
-	if(enemyToSpawn >= 9)
+	else if(enemyToSpawn >= 9)
 	{
-		enemy = choose(o_enemyMines,o_enemyBomber,o_enemyMothership)
+		enemy = choose(o_enemyMines,o_enemyBomber,o_enemyMothership, o_enemyMisil)
 	}
 }

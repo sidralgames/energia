@@ -6,7 +6,7 @@ if instance_exists(o_playerShip)
 {
 	if (global.hp <= global.hpMax)
 	{
-		global.hp += 0.0015;
+		global.hp += 0.0018;
 	
 		if (alarm[1] <=0)
 		{

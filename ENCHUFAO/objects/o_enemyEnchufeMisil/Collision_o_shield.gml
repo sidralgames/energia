@@ -3,10 +3,14 @@
 if (state = ENEMYSTATE.PLUGGED)
 {
 	state = ENEMYSTATE.FREE;
+	alarm[5] = 60;
 }
 else
 {
-	_hp = 0;
+	if (alarm[5] <= 0)
+	{
+		_hp = 0;
+	}
 	global.shields-=1;
 	global.shieldsUsed+=1;
 	gamepad_set_vibration(0,0.1,0.1);

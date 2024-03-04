@@ -1,5 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
+global.meteorsCount +=1;
+
+if (global.meteorsCount >= 10)
+{
+	instance_destroy();
+}
+
 explo = instance_create(x,y,o_explo3)
 scale1 = random_range(0.2, 0.4)
 explo.image_xscale = scale1;
@@ -24,3 +31,4 @@ if tile_meeting(x,y,"Tiles")
 	instance_destroy();
 }
 contDie = 300;
+

@@ -3,7 +3,7 @@
 randomize();
 
 
-contTiles = 2;
+contTiles = 20;
 global.Go = false;
 
 global.enemiesMax =  min(12, 3 + global.level) //1 + (global.level * 2);

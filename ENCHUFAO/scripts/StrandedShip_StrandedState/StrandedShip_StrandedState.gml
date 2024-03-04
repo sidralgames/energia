@@ -17,7 +17,7 @@ function StrandedShip_StrandedState()
 	
 	if instance_exists(o_playerShip)
 	{	
-		if ((chargedInEnergy) && (chargedInHp) && (firstSetted = true))
+		if ((chargedInEnergy) && (chargedInHp) && (firstSetted == true))
 		{
 			if point_distance(x,y,o_playerShip.x, o_playerShip.y) > 70	
 			{
@@ -60,7 +60,7 @@ function StrandedShip_StrandedState()
 		}
 	}
 
-	if (chargedInAmmo) && (chargedInHp)
+	if ((chargedInAmmo) && (chargedInHp) && (firstSetted == true))
 	{
 		nearestEnemy = instance_nearest(x, y, o_enemyP);
 			

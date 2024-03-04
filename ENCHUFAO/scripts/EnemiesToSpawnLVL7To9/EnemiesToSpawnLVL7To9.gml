@@ -21,7 +21,7 @@ function EnemiesToSpawnLVL7To9()
 	else
 	if(enemyToSpawn > 8) && (enemyToSpawn<=12)
 	{
-		enemy = choose(o_enemyMines,o_enemyBomber,o_enemyMouth_Free)
+		enemy = choose(o_enemyMines,o_enemyBomber,o_enemyMouth_Free, o_enemyMisil)
 	}
 	else
 	if(enemyToSpawn > 12)

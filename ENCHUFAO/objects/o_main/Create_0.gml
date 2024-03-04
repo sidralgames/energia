@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+global.meteorsCount = 0;
 
 full = false;
 global.totalEnemies = 0;
@@ -498,7 +498,7 @@ for (var i = 0; i < global.numberOfUpgrades; i++)
 
 global.chipDuration = 60 * 25;
 global.chipPosition = 1;
-global.chipDrop =-1;
+global.chipDrop = -1;
 
 global.chipVertexDead = 0;
 

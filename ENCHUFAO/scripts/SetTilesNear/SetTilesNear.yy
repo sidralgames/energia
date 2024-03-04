@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "Script409",
+  "name": "SetTilesNear",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "ENEMIES",
-    "path": "folders/Scripts/ENEMIES.yy",
+    "name": "CREATE LEVEL",
+    "path": "folders/Scripts/GENERAL/CREATE LEVEL.yy",
   },
 }

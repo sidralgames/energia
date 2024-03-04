@@ -48,9 +48,16 @@ if instance_exists(inst)
 }
 if instance_exists(inst) //&& instance_exists(instAchor)
 {
-	if (verletSystemExists(verletSystem1))
+	//TESTING NO SIMULATE HASTA QUE NO VAYA A APARECER POR PANTALLA LA CABEZA
+	inScreen =  (inst.x > __view_get( e__VW.XView, 0 )-250 && inst.x < __view_get( e__VW.XView, 0 )+910) &&
+	(inst.y > __view_get( e__VW.YView, 0 )-250 && inst.y < __view_get( e__VW.YView, 0 )+610)
+	
+	if (inScreen)
 	{
-		verletSystem1.simulate();
+		if (verletSystemExists(verletSystem1))
+		{
+			verletSystem1.simulate();
+		}
 	}
 }
 else
