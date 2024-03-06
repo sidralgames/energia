@@ -2,17 +2,16 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SetTilesNear(argument0, argument1, argument2, argument3)
 {
-	if (global.changingTiles)
-	{
+
 	var w_left = 0;
 	var w_downleft = 0;
 	var w_up = 0;
 	var w_upright = 0;
 	var w_upleft = 0;
 	
-	for (var _y = yPrev; _y < yPost; _y++)
+	for (var _y = argument0; _y < argument1; _y++)
 	{
-		for (var _x = xPrev; _x < xPost; _x++)
+		for (var _x = argument2; _x < argument3; _x++)
 		{
 			if (global.wallgrid_[# _x, _y] != FLOOR) 
 			{
@@ -163,5 +162,5 @@ function SetTilesNear(argument0, argument1, argument2, argument3)
 			}
 		}
 	}
-	}
+	
 }

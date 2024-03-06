@@ -34,6 +34,7 @@ if (room != Sala_Inicio)
 		&& (_y > 50) && (_y < room_height-50)
 	{
 		global.changingTiles = true;
+		
 		tilemap_set_at_pixel(_tilemap_id, 0, _x, _y);
 		velo = random_range(1,1.5);
 		global.wallgrid_[# _x/32, _y/32] = FLOOR
@@ -44,6 +45,7 @@ if (room != Sala_Inicio)
 			met._hpush = lengthdir_x(velo,dir)
 			met._vpush = lengthdir_y(velo,dir)
 		}
+		//ChangeNearTiles(_x/32,_y/32);
 	}
 
 
@@ -51,6 +53,7 @@ if (room != Sala_Inicio)
 	&& (_y2 > 50) && (_y2 < room_height-50)
 	{
 		global.changingTiles = true;
+		
 		tilemap_set_at_pixel(_tilemap_id, 0, _x2, _y2);
 		velo = random_range(1,1.5);
 		global.wallgrid_[# _x2/32, _y2/32] = FLOOR
@@ -62,6 +65,7 @@ if (room != Sala_Inicio)
 			met2._hpush = lengthdir_x(velo,dir)
 			met2._vpush = lengthdir_y(velo,dir)
 		}
+		//ChangeNearTiles(_x2/32,_y2/32);
 	}
 
 
@@ -69,6 +73,7 @@ if (room != Sala_Inicio)
 	&& (_y3 > 50) && (_y3 < room_height-50)
 	{
 		global.changingTiles = true;
+
 		tilemap_set_at_pixel(_tilemap_id, 0, _x3, _y3);
 		velo = random_range(1,1.5);
 		global.wallgrid_[# _x3/32, _y3/32] = FLOOR
@@ -79,8 +84,8 @@ if (room != Sala_Inicio)
 		{
 			met3._hpush = lengthdir_x(velo,dir)
 			met3._vpush = lengthdir_y(velo,dir)
-
 		}
+		//ChangeNearTiles(_x3/32,_y3/32);
 	}
 
 }

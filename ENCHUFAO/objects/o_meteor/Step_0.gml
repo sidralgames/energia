@@ -48,4 +48,5 @@ if (hp <= 0) || (contDie <=0)
 {
 	instance_destroy();
 }
+
 contDie --;

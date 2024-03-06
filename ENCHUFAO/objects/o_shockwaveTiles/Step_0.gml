@@ -34,6 +34,7 @@ if (room != Sala_Inicio)
 		&& (_y > 50) && (_y < room_height-50)
 	{
 		global.changingTiles=true
+	
 		//if oddsPETA = irandom(oddsPETA)
 		//{
 		//	canCreatePeta = true;
@@ -50,13 +51,15 @@ if (room != Sala_Inicio)
 		}
 		xtoCreateP = _x;
 		yToCreateP = _y;
+		//ChangeNearTiles(_x/32,_y/32);
 	}
 
 
 	if (global.wallgrid_[# _x2/32, _y2/32] ==VOID)&& (_x2 > 50) && (_x2 < room_width-50)
 		&& (_y2 > 50) && (_y2 < room_height-50)
 	{
-		global.changingTiles=true
+		global.changingTiles=true;
+	
 		//if oddsPETA = irandom(oddsPETA)
 		//{
 		//	canCreatePeta = true;
@@ -74,13 +77,15 @@ if (room != Sala_Inicio)
 		}
 		xtoCreateP = _x2;
 		yToCreateP = _y2;
+		//ChangeNearTiles(_x2/32,_y2/32);
 	}
 
 
 	if (global.wallgrid_[# _x3/32, _y3/32] ==VOID) && (_x3 > 50) && (_x3 < room_width-50)
 		&& (_y3 > 50) && (_y3 < room_height-50)
 	{
-		global.changingTiles=true
+		global.changingTiles=true;
+		
 		//if oddsPETA = irandom(oddsPETA)
 		//{
 		//	canCreatePeta = true;
@@ -99,6 +104,7 @@ if (room != Sala_Inicio)
 		}
 		xtoCreateP = _x3;
 		yToCreateP = _y3;
+		//ChangeNearTiles(_x3/32,_y3/32);
 	}
 }
 

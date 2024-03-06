@@ -29,7 +29,7 @@ else
 
 
 
-	if (!chargedInEnergy) || (!chargedInHp)
+	if ((!chargedInEnergy) || (!chargedInHp)) && (firstSetted == false)
 	{
 		_angle += max(0.5*sign(_hpush), 2*(abs(_hpush)),0.5*sign(_vpush), 2*(abs(_vpush))*global.relativeSpeed);
 	}
