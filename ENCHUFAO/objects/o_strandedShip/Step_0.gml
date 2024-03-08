@@ -93,8 +93,9 @@ else
 	if (hp <= 0) && (goesToNextRoom = true)
 	{
 		shipReady = false;
+		firstSetted = false;
 		chargedInAmmo = choose(false, true);
-		chargedInEnergy = choose(false, true);
+		chargedInEnergy = false;
 		chargedInHp = false;
 		state = STRANDEDSHIPSTATE.STRANDED;
 		StrandedShip_False();

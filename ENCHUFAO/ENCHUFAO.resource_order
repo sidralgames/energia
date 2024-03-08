@@ -240,6 +240,7 @@
     {"name":"s_EnchufeEnergy","order":10,"path":"sprites/s_EnchufeEnergy/s_EnchufeEnergy.yy",},
     {"name":"CreateLaserTrapWall","order":2,"path":"scripts/CreateLaserTrapWall/CreateLaserTrapWall.yy",},
     {"name":"o_enchufeUpgadeRecoverBullet","order":106,"path":"objects/o_enchufeUpgadeRecoverBullet/o_enchufeUpgadeRecoverBullet.yy",},
+    {"name":"o_misilBomb","order":61,"path":"objects/o_misilBomb/o_misilBomb.yy",},
     {"name":"AddUpgradeChargerShoots","order":3,"path":"scripts/AddUpgradeChargerShoots/AddUpgradeChargerShoots.yy",},
     {"name":"s_banner_Piercing","order":78,"path":"sprites/s_banner_Piercing/s_banner_Piercing.yy",},
     {"name":"StopSounds","order":32,"path":"scripts/StopSounds/StopSounds.yy",},

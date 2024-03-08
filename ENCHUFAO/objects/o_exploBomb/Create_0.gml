@@ -8,7 +8,9 @@ sounded = false;
 
 drawflash = true
 alarm[0] = 1
-scale=1;
+scale=0;
 damagePlayer = false;
 scaleShockwave = scale;
 scaleShake = scale
+image_xscale = scale;
+image_yscale = scale;

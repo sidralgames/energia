@@ -29,7 +29,7 @@ function CallForHelp()
 		stranded.chargedInHp = true;
 		stranded.chargedInAmmo = true;
 		stranded.sprite = spriteNave;
-		stranded.hpMax = 4 + global.strandedHPUpgrade;
+		stranded.hpMax = 3 + global.strandedHPUpgrade;
 		stranded.hp = global.strandedShipGreenHP;
 	}
 }

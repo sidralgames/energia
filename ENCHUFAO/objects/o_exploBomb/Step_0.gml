@@ -2,7 +2,8 @@
 // You can write your code in this editor
 
 image_speed = min(1, 1*(global.relativeSpeed+0.2));
-
+image_xscale = scale;
+image_yscale = scale;
 if (sounded = false)
 {
 	sounded = true;

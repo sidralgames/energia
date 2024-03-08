@@ -138,11 +138,11 @@ if (inEnchufe)
 	{
 		if (inEnchufe.abierto == true) && (inEnchufe.contOvercharged <=0)
 		&& (inEnchufe.dying == false) && (inEnchufe.occupied = false)
-		&& (inEnchufe.isPluggable == true)
+		&& (inEnchufe.isPluggable == true) 
 		{
 			if (key_x)
 			{
-				if (inEnchufe.isPETA_F == false)
+				if (inEnchufe.isPETA_F == false) && (inEnchufe.isMainEnchufe)
 				{
 					inEnchufe.withStrandedShip = true;
 					PlugStrandedShipToEnchufe();

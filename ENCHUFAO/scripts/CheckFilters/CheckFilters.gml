@@ -27,7 +27,7 @@ function CheckFilters()
 		{
 			nearestHole = instance_nearest(x,y,o_blackHole);
 		
-			inBlackHoleArea =  point_distance(x,y,nearestHole.x, nearestHole.y) < 300
+			inBlackHoleArea =  point_distance(x,y,nearestHole.x, nearestHole.y) < 250
 		}
 	
 		if instance_exists(o_blackHole) 
@@ -62,7 +62,7 @@ function CheckFilters()
 			dir = point_direction(x,y,nearestHole.x, nearestHole.y)
 			if !tile_meeting(x+lengthdir_x(5,dir) ,y+lengthdir_y(5,dir),"Tiles")
 			{
-				if point_distance(x,y,nearestHole.x, nearestHole.y) < 280 &&
+				if point_distance(x,y,nearestHole.x, nearestHole.y) < 240 &&
 				point_distance(x,y,nearestHole.x, nearestHole.y) > 5
 				 {
 					_hpush += lengthdir_x(0.07,dir)

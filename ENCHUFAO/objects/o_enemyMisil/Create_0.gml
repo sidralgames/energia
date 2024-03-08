@@ -4,7 +4,7 @@ slowedPeta = 0;
 freezing = 0;
 freeze = false;
 slowed = false;
-
+dirMisil = random_range(359);
 slowedContMax = 30;
 slowedCont = slowedContMax;
 discounted = false;

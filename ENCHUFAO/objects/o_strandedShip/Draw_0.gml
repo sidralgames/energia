@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+//draw_text(x,y-20, string(hpMax));
+//draw_text(x,y-10, string(hp));
 if (called)
 {
 
@@ -46,12 +47,12 @@ else
 	{
 		for (var i = 0; i < hpMax; i++)
 		{
-			draw_sprite_ext(s_hpStrandedShip, 1, x-13+(8*i), y-18,  1,1, 0, image_blend, image_alpha)	
+			draw_sprite_ext(s_hpStrandedShip, 1, x-10+(8*i), y-18,  1,1, 0, image_blend, image_alpha)	
 		}
 	
 		for (var i = 0; i < floor(hp); i++)
 		{
-			draw_sprite_ext(s_hpStrandedShip, 0, x-13+(8*i), y-18,  1,1, 0, image_blend, image_alpha)	
+			draw_sprite_ext(s_hpStrandedShip, 0, x-10+(8*i), y-18,  1,1, 0, image_blend, image_alpha)	
 		}
 	}
 }

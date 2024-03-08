@@ -290,6 +290,7 @@
     {"id":{"name":"s_EnchufeEnergy","path":"sprites/s_EnchufeEnergy/s_EnchufeEnergy.yy",},},
     {"id":{"name":"CreateLaserTrapWall","path":"scripts/CreateLaserTrapWall/CreateLaserTrapWall.yy",},},
     {"id":{"name":"o_enchufeUpgadeRecoverBullet","path":"objects/o_enchufeUpgadeRecoverBullet/o_enchufeUpgadeRecoverBullet.yy",},},
+    {"id":{"name":"o_misilBomb","path":"objects/o_misilBomb/o_misilBomb.yy",},},
     {"id":{"name":"AddUpgradeChargerShoots","path":"scripts/AddUpgradeChargerShoots/AddUpgradeChargerShoots.yy",},},
     {"id":{"name":"s_banner_Piercing","path":"sprites/s_banner_Piercing/s_banner_Piercing.yy",},},
     {"id":{"name":"StopSounds","path":"scripts/StopSounds/StopSounds.yy",},},

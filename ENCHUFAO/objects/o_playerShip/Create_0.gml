@@ -2,6 +2,8 @@
 // You can write your code in this editor
 
 global.meteorsCount = 0;
+global.assistedSlowmo = false;
+
 //global.bombIsClusterBomb = true;
 //global.haveSmokeBomb = true;
 //global.bombIsHomingBomb = true;

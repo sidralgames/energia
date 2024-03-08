@@ -183,12 +183,12 @@ global.strandedShipDark = false;
 global.strandedShipPurple = false;
 global.strandedShipMP3 = false;
 
-global.strandedShipGreenHP = 4;
-global.strandedShipBlueHP = 4;
-global.strandedShipRedHP = 4;
-global.strandedShipPurpleHP = 4;
-global.strandedShipDarkHP = 4;
-global.strandedShipMP3HP = 4;
+global.strandedShipGreenHP = 3;
+global.strandedShipBlueHP = 3;
+global.strandedShipRedHP = 3;
+global.strandedShipPurpleHP = 3;
+global.strandedShipDarkHP = 3;
+global.strandedShipMP3HP = 3;
 
 global.strandedHPUpgrade = 0;
 global.pluggingStrandedShipToEnchufe = false;
@@ -498,7 +498,7 @@ for (var i = 0; i < global.numberOfUpgrades; i++)
 
 global.chipDuration = 60 * 25;
 global.chipPosition = 1;
-global.chipDrop = -1;
+global.chipDrop = 0;
 
 global.chipVertexDead = 0;
 

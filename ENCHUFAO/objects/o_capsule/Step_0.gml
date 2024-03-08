@@ -83,6 +83,7 @@ switch(inside)
 				newStranded.chargedInAmmo = true;
 				newStranded.shipReady = true;
 				newStranded.createdStranded = false;
+				newStranded.firstSetted = true;
 				//x = x+lengthdir_x(10,_angle-90);
 				//y = y+lengthdir_y(10,_angle-90);
 				capsuleHaveStranded = false;
