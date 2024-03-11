@@ -29,19 +29,18 @@ else
 
 
 
-	if ((!chargedInEnergy) || (!chargedInHp)) && (firstSetted == false)
-	{
-		_angle += max(0.5*sign(_hpush), 2*(abs(_hpush)),0.5*sign(_vpush), 2*(abs(_vpush))*global.relativeSpeed);
-	}
-	else
+	if ((chargedInEnergy) && (chargedInHp)) && (firstSetted == true)
 	{
 		contPart--;
-		
 		if (contPart <= 0)
 		{
 			part_particles_create(global.naveP_sys, x,y, global.naveP, 1);
 			contPart = 3;
 		}
+	}
+	else
+	{
+		_angle += max(0.5*sign(_hpush), 2*(abs(_hpush)),0.5*sign(_vpush), 2*(abs(_vpush))*global.relativeSpeed);
 	}
 
 

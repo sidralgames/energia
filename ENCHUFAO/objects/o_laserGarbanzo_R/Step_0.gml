@@ -51,7 +51,7 @@ if instance_exists(o_BossMecha)
 					enemy._hp -=(0.25+global.laserDamage+(global.amplifyPowerLaser/2));
 				}
 				enemy.flashAlpha = 1;
-				//explo = instance_create(enemy.x, enemy.y, o_explo2)
+				//explo = instance_create(enemy.x, enemy.y, o_exploPurple)
 				//explo.image_xscale = 0.25;
 				//explo.image_yscale = 0.25;
 			}

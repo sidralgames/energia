@@ -2,7 +2,7 @@
 // You can write your code in this editor
 if instance_exists(o_playerShip)
 {
-	exploChip = instance_create_layer(o_playerShip.x,o_playerShip.y,"Player", o_explo2)
+	exploChip = instance_create_layer(o_playerShip.x,o_playerShip.y,"Player", o_exploPurple)
 	exploChip.image_xscale = 0.4;
 	exploChip.image_yscale = 0.4;
 	

@@ -46,7 +46,7 @@ if (point_distance(x,y,o_playerShip.x, o_playerShip.y) <= 300) && ((global.invis
 			instance_destroy(cross)
 		}
 		global.XPpoints +=30;
-		explo = instance_create(x,y,o_explo2)
+		explo = instance_create(x,y,o_exploPurple)
 		explo.image_xscale = 0.5;
 		explo.image_yscale = 0.5;
 		instance_destroy();

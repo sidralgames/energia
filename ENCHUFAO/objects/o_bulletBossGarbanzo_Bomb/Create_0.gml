@@ -20,3 +20,6 @@ flashAlpha = 0;
 offset = irandom(360);
 
 touched = false;
+
+enemyShooter = s_bossMechaActive;
+shooterTrail = false;

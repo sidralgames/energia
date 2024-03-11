@@ -6,7 +6,8 @@ function BossGarbanzoAttack_Mini_R()
 	
 	if (clearWall = false)
 	{
-		instance_create(x+40, y+57,o_exploBomb);
+		bomb = instance_create(x+40, y+57,o_exploBomb);
+		bomb.isFrom = "BossBomb"
 		clearWall = true;
 	}
 	if (alarm[4] <= 0)

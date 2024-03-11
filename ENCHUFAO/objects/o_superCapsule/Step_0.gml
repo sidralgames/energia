@@ -133,5 +133,5 @@ if (_hp <= 0) && (capsuleHaveSomething)
 		}
 	}
 	instance_destroy();
-	instance_create(x,y,o_explo2);
+	instance_create(x,y,o_exploPurple);
 }

@@ -46,7 +46,7 @@ function SetupLevelBoss2()
 	//Create the player
 
 
-	instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Player", o_playerShip);
+
 	CreateStrandedShip();
 	
 	//Create the controller
@@ -83,6 +83,7 @@ function SetupLevelBoss2()
 
 	SetTiles();
 	SetVines();
+	SetTemporaryWalls();
 
 	for ( var yy = 0; yy < height_; yy++) 
 	{
@@ -102,14 +103,14 @@ function SetupLevelBoss2()
 			    var exM = xx * CELL_WIDTH+CELL_WIDTH/2;
 			    var eyM = yy * CELL_HEIGHT+CELL_HEIGHT/2;
 				
-				if (irandom(oddsBoss) == oddsBoss) && (hasBoss = false) &&
-				(global.wallgrid_[# xx+1, yy] == FLOOR) && (global.wallgrid_[# xx-1, yy] == FLOOR) &&
-				(global.wallgrid_[# xx+2, yy] == FLOOR) && (global.wallgrid_[# xx-2, yy] == FLOOR) &&
-				(global.wallgrid_[# xx, yy+1] == FLOOR) && (global.wallgrid_[# xx, yy-1] == FLOOR) &&
-				(global.wallgrid_[# xx, yy+2] == FLOOR) && (global.wallgrid_[# xx, yy-2] == FLOOR)
+				if (irandom(oddsBoss) == oddsBoss) && (hasBoss = false)
 				{
-					instance_create_layer(exM,eyM,"Banners",o_BossMecha); 
-					hasBoss = true;
+					nextwall = instance_nearest(exM, eyM, o_wall)
+					if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 120)
+					{
+						instance_create_layer(exM,eyM,"Banners",o_BossMecha); 
+						hasBoss = true;
+					}
 				}
 				
 				if instance_exists(o_BossMecha)
@@ -121,8 +122,8 @@ function SetupLevelBoss2()
 					&& (point_distance(exM, o_BossMecha.y, o_BossMecha.x, o_BossMecha.y) < 250)
 					{
 						instance_create_layer(exM,eyM,"Enemies",o_enemyMini_BossMecha); 
-						o_playerShip.x = exM-10;
-						o_playerShip.y = eyM+10;
+						instance_create_layer(exM,eyM, "Player", o_playerShip);
+					
 						hasBossPeque = true;
 					}
 				}
@@ -206,11 +207,7 @@ function SetupLevelBoss2()
 
 	}
 
-	
-	
-	
-	
-	PlacePetasInTiles(20);
 
-	SetTemporaryWalls()
+	PlacePetasInTiles(20);
+	
 }

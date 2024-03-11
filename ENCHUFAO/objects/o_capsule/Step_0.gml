@@ -56,7 +56,7 @@ switch(inside)
 				}
 			}
 			instance_destroy();
-			instance_create(x,y,o_explo2);
+			instance_create(x,y,o_exploPurple);
 		}
 		
 	}break;
@@ -108,7 +108,7 @@ switch(inside)
 				}
 			}
 			instance_destroy();
-			instance_create(x,y,o_explo2);
+			instance_create(x,y,o_exploPurple);
 		}
 	
 	}break;	
@@ -153,7 +153,7 @@ switch(inside)
 				}
 			}
 			instance_destroy();
-			instance_create(x,y,o_explo2);
+			instance_create(x,y,o_exploPurple);
 		}
 		
 	}break;
@@ -203,7 +203,7 @@ switch(inside)
 				}
 			}
 			instance_destroy();
-			instance_create(x,y,o_explo2);
+			instance_create(x,y,o_exploPurple);
 		}
 		
 	}break;
@@ -248,7 +248,7 @@ switch(inside)
 				}
 			}
 			instance_destroy();
-			instance_create(x,y,o_explo2);
+			instance_create(x,y,o_exploPurple);
 		}
 		
 	}break;
@@ -315,7 +315,7 @@ switch(inside)
 				}
 			}
 			instance_destroy();
-			instance_create(x,y,o_explo2);
+			instance_create(x,y,o_exploPurple);
 		}
 		
 	}break;

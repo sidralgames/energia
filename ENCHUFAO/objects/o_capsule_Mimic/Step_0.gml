@@ -158,7 +158,7 @@ if instance_exists(o_playerShip)
 			ebomb.scale = 1.8;
 			ebomb.damagePlayer = true;
 			ebomb.isFrom = "EnemyBomb";
-			ebomb.sprite_index = s_explo2;
+			ebomb.sprite_index = s_exploPurple;
 			ebomb.scaleShockwave = 0.25;
 			ebomb.scaleShake = 0.7;
 			shock = instance_create(x,y,o_shockwaveTiles)

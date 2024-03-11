@@ -5,6 +5,7 @@ gamepad_set_vibration(0,0.3,0.3);
 if (hitByLaser = false)
 {
 	ebomb = instance_create(x,y,o_exploBomb);
+	ebomb.sprite_index = s_exploOrange;
 	ebomb.scale = 1.4;
 	ebomb.scale = 1.4;
 	ebomb.isFrom = "EnemyBomb";
@@ -12,7 +13,7 @@ if (hitByLaser = false)
 	
 	if (sprite_index = s_bombCluster)
 	{
-		ebomb.sprite_index = s_explo2;	
+		ebomb.sprite_index = s_exploPurple;	
 	}
 	shock = instance_create(x,y,o_shockwaveTiles)
 	shock.scale = 1;
@@ -20,13 +21,14 @@ if (hitByLaser = false)
 else
 {
 	ebomb = instance_create(x,y,o_exploBomb);
+	ebomb.sprite_index = s_exploOrange;
 	ebomb.scale = 1.8;
 	ebomb.scale = 1.8;
 	ebomb.isFrom = "EnemyBomb";
 	ebomb.damagePlayer = true;
 	if (sprite_index = s_bombCluster)
 	{
-		ebomb.sprite_index = s_explo2;	
+		ebomb.sprite_index = s_exploPurple;	
 	}
 	shock = instance_create(x,y,o_shockwaveTiles)
 	shock.scale = 1;

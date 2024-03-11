@@ -8,10 +8,10 @@ function PlayerShipSlowMo()
 	{
 		slowmoAssistedTrue = true;
 		global.assistedSlowmo = true;
-		assistFactor = 0.04;
-		slowFactor = 0.4;
+		assistFactor = 0.06;
+		slowFactor = 0.2;
 		contAssistHit = 10;
-		recoverSlowFactor = 0.05;
+		recoverSlowFactor = 0.98;
 	}
 	
 	if (slowmoAssistedTrue == true) && (contAssistHit <= 0)

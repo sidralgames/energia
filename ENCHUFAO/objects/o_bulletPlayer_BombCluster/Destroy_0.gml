@@ -11,7 +11,7 @@ if (hitByLaser = false)
 {
 	ebomb = instance_create(x,y,o_exploBomb);
 	ebomb.scale = 1.3*scaleEnd;
-	ebomb.sprite_index = s_explo2;
+	ebomb.sprite_index = s_exploPurple;
 	
 	shock = instance_create(x,y,o_shockwaveTiles)
 	shock.scale = scaleEnd;
@@ -20,7 +20,7 @@ else
 {
 	ebomb = instance_create(x,y,o_exploBomb);
 	ebomb.scale = 1.9*scaleEnd;
-	ebomb.sprite_index = s_explo2;
+	ebomb.sprite_index = s_exploPurple;
 	
 	shock = instance_create(x,y,o_shockwaveTiles)
 	shock.scale = scaleEnd;

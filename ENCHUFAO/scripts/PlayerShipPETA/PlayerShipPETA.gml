@@ -29,7 +29,7 @@ function PlayerShipPETA()
 			        _list[| i].electrocutated = true;
 					_list[| i].slowed = true;
 					
-					shokExplo = instance_create(_list[| i].x, _list[| i].y, o_explo2);
+					shokExplo = instance_create(_list[| i].x, _list[| i].y, o_exploPurple);
 					shokExplo.image_xscale = 0.5;
 					shokExplo.image_yscale = 0.5;
 			    }

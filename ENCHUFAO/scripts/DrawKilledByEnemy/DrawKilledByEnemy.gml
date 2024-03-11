@@ -70,6 +70,8 @@ function DrawKilledByEnemy()
 			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+285, string(text))
 		}
 		break;
+		
+		
 		// ------- MINI ENEMIES --------//
 		case (s_enemyMini_2):
 		{
@@ -92,7 +94,8 @@ function DrawKilledByEnemy()
 			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+285, string(text))
 		}
 		break;
-		// -------BOMB ENEMIES --------//
+		
+		// -------BOMB ENEMIES & BOMBS-------//
 		case (s_enemyBomber):
 		{
 			draw_set_color(global.brightRed);
@@ -115,6 +118,32 @@ function DrawKilledByEnemy()
 	
 		}
 		break;
+		
+		case (s_explo):
+		{
+			BombKilledBy();
+		}
+		break;
+		
+		case (s_exploPurple):
+		{
+			BombKilledBy();
+		}
+		break;
+		
+		case (s_exploOrange):
+		{
+			BombKilledBy();
+		}
+		break;
+		
+		case (s_exploBlue):
+		{
+			BombKilledBy();
+		}
+		break;
+		
+		
 		// ------- SHOOTER ENEMIES --------//	
 		case (s_enemyDisp):
 		{
@@ -210,6 +239,7 @@ function DrawKilledByEnemy()
 	
 		}
 		break;
+		
 		// ------- MITOSIS ENEMIES --------//
 		case (s_enemyMitosis):
 		{
@@ -274,6 +304,7 @@ function DrawKilledByEnemy()
 			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+285, string(text))
 		}
 		break;
+		
 		// ------- MOTHERSHIP ENEMIES --------//	
 		case (s_enemyMothership):
 		{

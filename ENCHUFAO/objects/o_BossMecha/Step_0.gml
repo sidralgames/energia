@@ -1,15 +1,17 @@
 /// @description Insert description here
 // You can write your code in this editor
 //makeRoom
-if instance_exists(o_gridRoom) && (makeRoom = false) && (alarm[4] <= 0)
-{	
-	instance_create(x,y,o_shockwaveTiles2)
-	instance_create(x+60,y+60,o_shockwaveTiles2)
-	instance_create(x-60,y-60,o_shockwaveTiles2)
-	instance_create(x+60,y-60,o_shockwaveTiles2)
-	instance_create(x-60,y+60,o_shockwaveTiles2)
-	makeRoom = true;
-}
+//if instance_exists(o_gridRoom) && (makeRoom = false) && (alarm[4] <= 0)
+//{	
+//	instance_create(x,y,o_shockwaveTiles2)
+//	instance_create(x+80,y+80,o_shockwaveTiles2)
+//	instance_create(x-80,y-80,o_shockwaveTiles2)
+//	instance_create(x+80,y+20,o_shockwaveTiles2)
+//	instance_create(x-80,y-20,o_shockwaveTiles2)
+//	instance_create(x+80,y-80,o_shockwaveTiles2)
+//	instance_create(x-80,y+80,o_shockwaveTiles2)
+//	makeRoom = true;
+//}
 
 switch(state)
 {

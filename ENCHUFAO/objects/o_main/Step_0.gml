@@ -16,6 +16,11 @@ if (global.enemiesKilledTotalAch >= 500) && (global.ach500Enemies = 0)
 }
 
 
+if (global.shields < 0)
+{
+	global.shields = 0
+}
+
 
 if (global.bulletsGhostIsOn = true)
 {

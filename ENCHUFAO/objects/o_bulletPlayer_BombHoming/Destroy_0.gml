@@ -7,23 +7,23 @@ if (global.haveSmokeBomb)
 }
 if (hitByLaser = false)
 {
-	ebomb = instance_create(x,y,o_explo2);
+	ebomb = instance_create(x,y,o_exploPurple);
 	ebomb.scale = 1.4;
 	ebomb.scale = 1.4;
 	if (sprite_index = s_bombCluster)
 	{
-		ebomb.sprite_index = s_explo2;	
+		ebomb.sprite_index = s_exploPurple;	
 	}
 	instance_create(x,y,o_shockwaveTiles)
 }
 else
 {
-	ebomb = instance_create(x,y,o_explo2);
+	ebomb = instance_create(x,y,o_exploPurple);
 	ebomb.scale = 1.8;
 	ebomb.scale = 1.8;
 	if (sprite_index = s_bombCluster)
 	{
-		ebomb.sprite_index = s_explo2;	
+		ebomb.sprite_index = s_exploPurple;	
 	}
 	instance_create(x,y,o_shockwaveTiles)
 }

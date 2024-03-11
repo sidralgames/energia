@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_explo2",
+  "name": "o_exploPurple",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_explo2",
-    "path": "sprites/s_explo2/s_explo2.yy",
+    "name": "s_exploPurple",
+    "path": "sprites/s_exploPurple/s_exploPurple.yy",
   },
   "spriteMaskId": null,
   "visible": true,

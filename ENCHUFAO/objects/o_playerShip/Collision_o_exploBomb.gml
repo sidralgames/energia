@@ -13,11 +13,13 @@ if (other.damagePlayer == true)
 			alarm[1] = 30
 			tocado = true;
 			global.hp -= 1 * global.damageReceived;
+			
 			if (global.hp < 1)
 			{
-				global.spriteKilledBy = s_killedBy;
-				global.imageKilledBy = 0;
+				global.spriteKilledBy = other.sprite_index;
+				global.FinalTrail = false;
 			}
+			
 			screenShake(4,30);
 			global.hitsTaken+=1;
 		}
@@ -31,7 +33,10 @@ if (other.damagePlayer == true)
 			flashAlpha = 1;
 			alarm[1] = 30
 			tocado = true;
-			global.shields-=1;
+			if (global.shields > 0)
+			{
+				global.shields-=1;
+			}
 			screenShake(4,30);
 			global.hitsTaken+=1;
 		}

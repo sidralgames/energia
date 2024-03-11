@@ -80,6 +80,8 @@ else
 	global.slowMoTime = global.slowMoTimeMax;
 }
 
+//global.shields = 1;
+
 slowmoSound = false;
 checkAssist = false;
 assistCont = 60;
