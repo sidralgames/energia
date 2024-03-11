@@ -3,8 +3,9 @@
 
 Controls_Input();
 
-if (key_x)
+if (key_x) || (key_back)
 {
+	audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 	menuHome = instance_create(x,y,o_menuHome);
 	menuHome.alarm[0]=10;
 	menuHome._visible = true;

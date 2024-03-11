@@ -10,6 +10,9 @@ else
 {
 	image_index = 0;
 }
+
+
+
 if gamepad_is_connected(0)
 {
 	var axisrh = gamepad_axis_value(0, gp_axisrh); 
@@ -103,7 +106,7 @@ if gamepad_is_connected(0)
 			y= __view_get( e__VW.YView, 0 )+350;
 		}
 
-		draw_sprite_ext(s_crosshair,image_index,x,y,1,1,image_angle,image_blend,alphaP);
+		draw_sprite_ext(_sprite,image_index,x,y,1,1,image_angle,image_blend,alphaP);
 	
 	}
 
@@ -124,6 +127,6 @@ else
 			alphaP = 0;
 		}
 	
-		draw_sprite_ext(s_crosshair,image_index,x,y,1,1,image_angle,image_blend,alphaP);
+		draw_sprite_ext(_sprite,image_index,x,y,1,1,image_angle,image_blend,alphaP);
 	}
 }

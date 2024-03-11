@@ -10,6 +10,8 @@ function Controls_Input()
 	
 	//-- ACTION - PLUG/UNPLUG --//
 	key_x = keyboard_check_pressed(ord("X")) || gamepad_button_check_pressed(0, gp_face1) || mouse_check_button_pressed(mb_right)
+	key_back =  keyboard_check_pressed(ord("Z")) || gamepad_button_check_pressed(0, gp_face2)
+	
 	
 	//-- TRIGGERS - SHOOT --// 
 	key_shoot = mouse_check_button(mb_left) || gamepad_button_check(0, gp_shoulderr)

@@ -16,3 +16,14 @@ width_ = room_width div CELL_WIDTH;
 height_ = room_height div CELL_HEIGHT;
 
 global.wallgrid_ = ds_grid_create(width_,height_);
+
+
+t = 6;
+increment = 2; //degrees -- freq = 1 oscillation per second (1Hz)
+amplitude = 3;
+
+dir1 = choose(90,270);
+
+//clone the x- and y-positions
+xx = x;
+yy = y;

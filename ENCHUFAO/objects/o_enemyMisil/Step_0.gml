@@ -32,7 +32,7 @@ if (point_distance(x,y,o_playerShip.x, o_playerShip.y) <= 300) && ((global.invis
 		dire = direction;
 		if (alarm[0] <= 0)
 		{
-			dirMisil = random_range(359);
+			dirMisil = irandom(359);
 			instance_create_layer(x+lengthdir_x(10, dirMisil) , y+lengthdir_y(10, dirMisil), "Bullets", o_misilBomb);
 			alarm[0] = random_range(120,200)
 		}

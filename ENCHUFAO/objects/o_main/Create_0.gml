@@ -1,7 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 global.meteorsCount = 0;
-
+global.crosshairSprite = s_crosshair;
+global.crosshairSpritesMax = 6;
 full = false;
 global.totalEnemies = 0;
 global.BossWormHPMax = 0;

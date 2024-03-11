@@ -32,6 +32,7 @@ if (alarm[0] <= 0)
 		if (key_x)
 		{
 			audio_play_sound_on(global.audioEmitter,snd_acceptMenu,false, 50);
+			
 			switch(selected)
 			{
 				case 0:
@@ -74,6 +75,25 @@ if (alarm[0] <= 0)
 		
 				}break;
 			}
+		}
+		
+		if (key_back)
+		{
+			audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+			
+			if (global.infiniteAmmoIsOn) || (global.infiniteEnergyIsOn) 
+			|| (global.infiniteHPIsOn) || (global.infiniteLaserIsOn)
+			{
+				global.godModeIsOn = true;	
+			}
+			else
+			{
+				global.godModeIsOn = false;		
+			}
+			
+			_visible = false;
+			instance_destroy();
+			instance_create(x,y,o_menuOptions);
 		}
 	
 	}

@@ -43,7 +43,9 @@ if (alarm[0] <= 0)
 				break;
 				case 1:
 				{
-					global.screenshakeIsOn = !global.screenshakeIsOn;
+					_visible = false;
+					instance_create(x,y,o_menuGameSettings);
+					instance_destroy();
 		
 				}break;
 				case 2:
@@ -60,7 +62,8 @@ if (alarm[0] <= 0)
 					//global.godModeIsOn = !global.godModeIsOn;
 		
 				}break;
-					case 4:
+				
+				case 4:
 				{
 					_visible = false;
 					instance_destroy();
@@ -68,6 +71,14 @@ if (alarm[0] <= 0)
 		
 				}break;
 			}
+		}
+		
+		if (key_back)
+		{
+			audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+			_visible = false;
+			instance_destroy();
+			instance_create(x,y,o_menuHome);
 		}
 	
 	}

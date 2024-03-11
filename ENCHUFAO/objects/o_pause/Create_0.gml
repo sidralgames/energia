@@ -23,5 +23,8 @@ customFont2 = font_add("ChubbyChoo-SemiBold.ttf", 12, false, false, 32, 128);
 
 timesToDraw = 0;
 
+quit = false;
+
 selected = 0;
+selectedCross = 0;
 spriteBack = 0;
