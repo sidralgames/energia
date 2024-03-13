@@ -3,6 +3,9 @@
 event_inherited();
 type = collisionType.custom;
 slowMoPickUps = choose(2,3);
+
+enemyBestiaryNumber = 2;
+
 alarm[10] = 30;
 //lightEnemy= instance_create_layer(x,y,"LightEnemy",o_Light_Enemy);
 isCounted=false;

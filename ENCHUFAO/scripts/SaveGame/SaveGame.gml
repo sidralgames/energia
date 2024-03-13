@@ -26,6 +26,30 @@ function SaveGame()
 	ini_write_real("stats","slowmilisecs", global.slowmilisecs);
 	ini_write_real("stats","connectedmilisecs", global.connectedmilisecs);
 	ini_write_real("stats","TotalBumps", global.totalBumps);
+	
+	ini_write_real("bestiary","number", global.enemiesInBestiary);
+	ini_write_real("bestiary","basic", global.bestiaryEnemyBasicUnlocked);
+	ini_write_real("bestiary","basicMega", global.bestiaryEnemyBasicMegaUnlocked);
+	ini_write_real("bestiary","fast", global.bestiaryEnemyFastUnlocked);
+	ini_write_real("bestiary","disp", global.bestiaryEnemyDispUnlocked);
+	ini_write_real("bestiary","sniper", global.bestiaryEnemySniperUnlocked);
+	ini_write_real("bestiary","sniperMega", global.bestiaryEnemySniperMegaUnlocked);
+	
+	ini_write_real("bestiary","basicKills", global.enemyBasicKills);
+	ini_write_real("bestiary","basicKilledBy", global.enemyBasicKilledBy);
+	
+	ini_write_real("bestiary","basicMegaKills", global.enemyBasicMegaKills);
+	ini_write_real("bestiary","basicMegaKilledBy", global.enemyBasicMegaKilledBy);
+	
+	ini_write_real("bestiary","fastKills", global.enemyFastKills);
+	ini_write_real("bestiary","fastKilledBy", global.enemyFastKilledBy);
+
+	ini_write_real("bestiary","sniperKills", global.enemySniperKills);
+	ini_write_real("bestiary","sniperKilledBy", global.enemySniperKilledBy);
+	
+	ini_write_real("bestiary","dispKills", global.enemyDispKills);
+	ini_write_real("bestiary","dispKilledBy", global.enemyDispKilledBy);
+	
 		
 	ini_write_real("main","playTimes", global.playTimes);
 	ini_write_real("main","mandatoryTutorial", global.mandatoryTutorial);

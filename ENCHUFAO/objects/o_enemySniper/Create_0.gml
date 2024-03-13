@@ -68,7 +68,7 @@ precisionInitial = 2;
 precisionPlayer = 0.2;
 
 offBullet = 1.75;
-
+enemyBestiaryNumber = 4;
 oddsBattery = 2;
 if (isMega = 0) && (room != Sala_Tutorial)
 {
@@ -76,6 +76,7 @@ if (isMega = 0) && (room != Sala_Tutorial)
 	sprite_index = s_enemySniperMega;
 	bulletVelo = 6.5;
 	isMegaEnemy = true;
+	enemyBestiaryNumber = 5;
 	_hp = 12;
 	offBullet = 2.5;
 	precisionInitial = 2.25;

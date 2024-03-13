@@ -13,7 +13,7 @@ contParts = contPartsInitial;
 text ="";
 info ="";
 
-
+deathCounted = false;
 
 tipChoosed = false;
 tip = irandom_range(0,3)

@@ -53,7 +53,7 @@ if (alarm[0] <= 0)
 					break;
 					case 2:
 					{
-						instance_create(x,y,o_menuAchievements);
+						instance_create(x,y,o_menuScores);
 						instance_destroy();
 						_visible = false;
 		
@@ -110,7 +110,7 @@ if (alarm[0] <= 0)
 					
 					case 3:
 					{
-						instance_create(x,y,o_menuAchievements);
+						instance_create(x,y,o_menuScores);
 						instance_destroy();
 						_visible = false;
 		

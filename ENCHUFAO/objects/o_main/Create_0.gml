@@ -1,5 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+global.bestiaryEnemiesNum = 1;
+global.differentEnemiesTotal = 25;
+
 global.meteorsCount = 0;
 global.crosshairSprite = s_crosshair;
 global.crosshairSpritesMax = 6;
@@ -39,6 +43,7 @@ global.dark = make_color_rgb(38,43,68)
 //---- FONTS ---//
 global.customFont20 = font_add("ChubbyChoo-SemiBold.ttf", 20, false, false, 32, 128);
 global.customFont16= font_add("ChubbyChoo-SemiBold.ttf", 16, false, false, 32, 128);
+global.customFont13= font_add("ChubbyChoo-SemiBold.ttf", 13, false, false, 32, 128);
 global.customFont14 = font_add("ChubbyChoo-SemiBold.ttf", 14, false, false, 32, 128);
 global.customFont12 = font_add("ChubbyChoo-SemiBold.ttf", 12, false, false, 32, 128);
 global.customFont10 = font_add("ChubbyChoo-SemiBold.ttf", 11, false, false, 32, 128);
@@ -475,6 +480,18 @@ AddTotalPETAStat();
 AddTotalSlowMoTimeStat();
 AddTotalBumpsStat();
 
+
+
+
+global.bestiaryList = ds_map_create();
+
+global.numberOfEnemiesBestiary = 0;
+//
+AddBestiaryEnemyBasic();
+AddBestiaryEnemyBasicMega();
+AddBestiaryEnemyFast();
+AddBestiaryEnemyDisp();
+AddBestiaryEnemySniper();
 
 //global.possibleShipList = ds_map_create();
 

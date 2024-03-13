@@ -7,3 +7,11 @@ CreateSlowmoParts();
 event_inherited();
 
 CreateTemporaryChip(4);
+
+if (global.bestiaryEnemyFastUnlocked = 0)
+{
+	global.bestiaryEnemyFastUnlocked = 1;
+	enemy = ds_map_find_value(global.bestiaryList, enemyBestiaryNumber);
+	enemy.unlocked = 1;
+	global.enemiesInBestiary +=1;
+}

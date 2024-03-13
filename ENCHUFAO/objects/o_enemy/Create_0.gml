@@ -2,6 +2,8 @@
 // You can write your code in this editor
 event_inherited();
 
+enemyBestiaryNumber = 0;
+
 slowMoPickUps = choose(3,4);
 
 alarm[10] = 30;
@@ -59,6 +61,7 @@ oddsBattery = 2;
 
 if (isMega = 0) && (room != Sala_Tutorial)
 {
+	enemyBestiaryNumber = 1;
 	isMegaEnemy = true;
 	global.MegaEnemiesInLevel+=1;
 	_hp = 15;

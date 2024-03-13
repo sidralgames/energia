@@ -2,7 +2,9 @@
 // You can write your code in this editor
 event_inherited();
 type = collisionType.custom;
-slowMoPickUps = choose(4,5)
+slowMoPickUps = choose(4,5);
+
+enemyBestiaryNumber = 3;
 
 alarm[10] = 30;
 isCounted = false;

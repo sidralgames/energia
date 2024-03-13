@@ -30,6 +30,29 @@ function LoadGame()
 	global.playTimes = ini_read_real("main","playTimes", 0);
 	global.mandatoryTutorial = ini_read_real("main","mandatoryTutorial", 0);
 	
+	global.enemiesInBestiary = ini_read_real("bestiary","number", 0);
+	global.bestiaryEnemyBasicUnlocked = ini_read_real("bestiary","basic", 0);
+	global.bestiaryEnemyBasicMegaUnlocked = ini_read_real("bestiary","basicMega", 0);
+	global.bestiaryEnemyFastUnlocked = ini_read_real("bestiary","fast", 0);
+	global.bestiaryEnemySniperUnlocked = ini_read_real("bestiary","sniper", 0);
+	global.bestiaryEnemySniperMegaUnlocked = ini_read_real("bestiary","sniperMega", 0);
+	global.bestiaryEnemyDispUnlocked = ini_read_real("bestiary","disp", 0);
+	
+	
+	global.enemyBasicKilledBy = ini_read_real("bestiary","basicKilledBy", 0);
+	global.enemyBasicKills = ini_read_real("bestiary","basicKills", 0);
+
+	global.enemyBasicMegaKilledBy = ini_read_real("bestiary","basicMegaKilledBy", 0);
+	global.enemyBasicMegaKills = ini_read_real("bestiary","basicMegaKills", 0);
+
+	global.enemyFastKilledBy = ini_read_real("bestiary","fastKilledBy", 0);
+	global.enemyFastKills = ini_read_real("bestiary","fastKills", 0);
+
+	global.enemyDispKilledBy = ini_read_real("bestiary","dispKilledBy", 0);
+	global.enemyDispKills = ini_read_real("bestiary","dispKills", 0);
+
+	global.enemySniperKilledBy = ini_read_real("bestiary","sniperKilledBy", 0);
+	global.enemySniperKills = ini_read_real("bestiary","sniperKills", 0);
 	
 	global.godModeIsOn = false;
 	global.infiniteEnergyIsOn = false;

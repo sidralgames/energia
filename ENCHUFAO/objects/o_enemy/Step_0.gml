@@ -26,6 +26,7 @@ if (_hp <= 0)
 {
 	EnemyDeathShake();
 	
+	
 	if instance_exists(o_playerShip)
 	{
 		global.XPpoints +=enemyXP;

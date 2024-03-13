@@ -7,6 +7,11 @@ function DrawKilledByEnemy()
 		// ------- BASIC ENEMIES --------//
 		case (s_enemyBasic):
 		{
+			if (deathCounted = false)
+			{
+				deathCounted = true;
+				global.enemyBasicKilledBy +=1;
+			}
 			draw_set_font(global.customFont14);
 			draw_set_color(global.brightRed);
 			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+261,"Silver Hunter");
@@ -29,6 +34,11 @@ function DrawKilledByEnemy()
 	
 		case (s_enemyBasicMega):
 		{
+			if (deathCounted = false)
+			{
+				deathCounted = true;
+				global.enemyBasicMegaKilledBy +=1;
+			}
 			draw_set_color(global.brightRed);
 			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+261,"MegaChaser");
 
@@ -39,7 +49,7 @@ function DrawKilledByEnemy()
 			if (tipChoosed = false)
 			{
 				tipChoosed = true;
-				tip = irandom_range(0,12)
+				tip = irandom_range(0,11)
 			}
 			infoGameOverEnemyBasic(tip);
 			draw_set_color(global.lightBlue)
@@ -51,6 +61,11 @@ function DrawKilledByEnemy()
 	
 		case (s_enemyMini):
 		{
+			if (deathCounted = false)
+			{
+				deathCounted = true;
+				global.enemyFastKilledBy +=1;
+			}
 			draw_set_color(global.brightRed);
 			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+261,"Red Runner");
 
@@ -61,7 +76,7 @@ function DrawKilledByEnemy()
 			if (tipChoosed = false)
 			{
 				tipChoosed = true;
-				tip = irandom_range(0,12)
+				tip = irandom_range(0,11)
 			}
 			infoGameOverEnemyBasic(tip);
 			draw_set_color(global.lightBlue)
@@ -147,6 +162,11 @@ function DrawKilledByEnemy()
 		// ------- SHOOTER ENEMIES --------//	
 		case (s_enemyDisp):
 		{
+			if (deathCounted = false)
+			{
+				deathCounted = true;
+				global.enemyDispKilledBy +=1;
+			}
 			draw_set_color(global.brightRed);
 			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+261,"The Shooter");
 
@@ -169,6 +189,11 @@ function DrawKilledByEnemy()
 	
 		case (s_enemySniper):
 		{
+			if (deathCounted = false)
+			{
+				deathCounted = true;
+				global.enemySniperKilledBy +=1;
+			}
 			draw_set_color(global.brightRed);
 			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+261,"The Sniper");
 

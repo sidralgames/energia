@@ -27,6 +27,31 @@ function LoadDefaultDataIngame()
 	global.connectedmilisecs = 0;
 	
 	
+	global.enemiesInBestiary = 0;
+	
+	global.bestiaryEnemyBasicUnlocked = 0;
+	global.bestiaryEnemyBasicMegaUnlocked = 0;
+	global.bestiaryEnemyFastUnlocked = 0;
+	global.bestiaryEnemySniperUnlocked = 0;
+	global.bestiaryEnemyDispUnlocked = 0;
+	
+	
+	
+	global.enemyBasicKilledBy = 0;
+	global.enemyBasicKills = 0;
+
+	global.enemyBasicMegaKilledBy = 0;
+	global.enemyBasicMegaKills = 0;
+
+	global.enemyFastKilledBy = 0;
+	global.enemyFastKills = 0;
+
+	global.enemyDispKilledBy = 0;
+	global.enemyDispKills = 0;
+
+	global.enemySniperKilledBy = 0;
+	global.enemySniperKills = 0;
+
 	global.godModeIsOn = false;
 	global.infiniteEnergyIsOn = false;
 	global.infiniteAmmoIsOn = false;

@@ -9,7 +9,8 @@ if (key_x) || (key_back)
 	menuHome = instance_create(x,y,o_menuHome);
 	menuHome.alarm[0]=10;
 	menuHome._visible = true;
-	instance_destroy();	
+	instance_destroy();
+	o_nextRoom._visible = true;
 }
 
 
