@@ -186,42 +186,42 @@ function DrawSpriteBestiary()
 		
 		}break;
 		
-		case 5: //---- MEGA SNIPER
-		{
-			enemy = ds_map_find_value(global.bestiaryList, selectedBest)
+		//case 5: //---- MEGA SNIPER
+		//{
+		//	enemy = ds_map_find_value(global.bestiaryList, selectedBest)
 			
-			if (enemy.unlocked = 1)
-			{
+		//	if (enemy.unlocked = 1)
+		//	{
 			
-				draw_sprite_ext(s_enemySniperMega, image_index, __view_get( e__VW.XView, 0 )+initialX,__view_get( e__VW.YView, 0 )+220, xScale,1,0,image_blend, image_alpha)
-				contParts --;
-				if (contParts <=0)
-				{
-					part_particles_create(global.EnemyKilledBy_sys, __view_get( e__VW.XView, 0 )+initialX - 4*xScale, __view_get( e__VW.YView, 0 )+220, global.EnemyKilledBy_part , 1)
-					contParts = contPartsInitial;
-				}
+		//		draw_sprite_ext(s_enemySniperMega, image_index, __view_get( e__VW.XView, 0 )+initialX,__view_get( e__VW.YView, 0 )+220, xScale,1,0,image_blend, image_alpha)
+		//		contParts --;
+		//		if (contParts <=0)
+		//		{
+		//			part_particles_create(global.EnemyKilledBy_sys, __view_get( e__VW.XView, 0 )+initialX - 4*xScale, __view_get( e__VW.YView, 0 )+220, global.EnemyKilledBy_part , 1)
+		//			contParts = contPartsInitial;
+		//		}
 			
-				draw_set_color(global.brightRed);
-				draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+261,"The MegaSniper");
+		//		draw_set_color(global.brightRed);
+		//		draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+261,"The MegaSniper");
 
-				draw_set_color(c_white)
-				draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+260,"The MegaSniper");
+		//		draw_set_color(c_white)
+		//		draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+260,"The MegaSniper");
 	
 	
-				draw_set_font(global.customFont12);
-				if (tipChoosed = false)
-				{
-					tipChoosed = true;
-					tip = irandom_range(0,6)
-				}
-				infoGameOverEnemyShooter(tip);
-				draw_set_color(global.lightBlue)
-				draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+286, string(text))
-				draw_set_color(c_white)
-				draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+285, string(text))
-			}
+		//		draw_set_font(global.customFont12);
+		//		if (tipChoosed = false)
+		//		{
+		//			tipChoosed = true;
+		//			tip = irandom_range(0,6)
+		//		}
+		//		infoGameOverEnemyShooter(tip);
+		//		draw_set_color(global.lightBlue)
+		//		draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+286, string(text))
+		//		draw_set_color(c_white)
+		//		draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+285, string(text))
+		//	}
 		
-		}break;
+		//}break;
 		
 	}
 		enemy = ds_map_find_value(global.bestiaryList, selectedBest)
