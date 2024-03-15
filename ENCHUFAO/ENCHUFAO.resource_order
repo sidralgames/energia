@@ -759,6 +759,7 @@
     {"name":"AddUpgradeSlowMoPlayer","order":9,"path":"scripts/AddUpgradeSlowMoPlayer/AddUpgradeSlowMoPlayer.yy",},
     {"name":"sCircle","order":4,"path":"sprites/sCircle/sCircle.yy",},
     {"name":"s_exploBulletsEnchufe","order":67,"path":"sprites/s_exploBulletsEnchufe/s_exploBulletsEnchufe.yy",},
+    {"name":"AddBestiaryEnemySniperMega","order":68,"path":"scripts/AddBestiaryEnemySniperMega/AddBestiaryEnemySniperMega.yy",},
     {"name":"s_selectUpgrade","order":13,"path":"sprites/s_selectUpgrade/s_selectUpgrade.yy",},
     {"name":"s_naveEnemy_part2","order":28,"path":"sprites/s_naveEnemy_part2/s_naveEnemy_part2.yy",},
     {"name":"o_enchufe_Laser","order":5,"path":"objects/o_enchufe_Laser/o_enchufe_Laser.yy",},

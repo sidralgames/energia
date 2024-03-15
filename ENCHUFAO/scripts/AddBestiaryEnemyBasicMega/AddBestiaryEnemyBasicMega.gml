@@ -7,7 +7,8 @@ ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
 		name: "MegaChaser",
 		number: 1,
 		unlocked: global.bestiaryEnemyBasicMegaUnlocked,
-		textBestiary: "Improved version\nof the Basic Enemy\nHarder to kill\nbut slower\nStrong enough\nto carry batterys",
+		textBestiary: "Improved version\nof the Silver Hunter\nHarder to kill but slower",
+		lines: 3,
 		kills: "KILLED: " + string(global.enemyBasicMegaKills),
 		killedBy: "KILLED BY: " + string(global.enemyBasicMegaKilledBy)
 	})

@@ -7,7 +7,8 @@ ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
 		name: "Silver",
 		number: 0,
 		unlocked: global.bestiaryEnemyBasicUnlocked,
-		textBestiary: "Basic Enemy\n \nBetter kill them fast",
+		textBestiary: "The Big Breach\nthrew loads\nof this monstship\ninto our galaxy",
+		lines: 4,
 		kills: "KILLED: " + string(global.enemyBasicKills),
 		killedBy: "KILLED BY: " + string(global.enemyBasicKilledBy)
 		

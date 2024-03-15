@@ -7,7 +7,8 @@ ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
 		textStat: "Best Run: Level " + string(global.bestLevelRun),
 		number: 3,
 		unlocked: global.bestiaryEnemyDispUnlocked,
-		textBestiary: "Some gained the\nability to shoot\ndark energy\nfrom their eyes\n\nBetter avoid their shoots",
+		textBestiary: "Some gained the\nability to shoot\nREDDARK ENERGY\nfrom their eyes",
+		lines: 4,
 		kills: "KILLED: " + string(global.enemyDispKills),
 		killedBy: "KILLED BY: " + string(global.enemyDispKilledBy)
 	})

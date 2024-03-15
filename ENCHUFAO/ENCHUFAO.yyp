@@ -831,6 +831,7 @@
     {"id":{"name":"AddUpgradeSlowMoPlayer","path":"scripts/AddUpgradeSlowMoPlayer/AddUpgradeSlowMoPlayer.yy",},},
     {"id":{"name":"sCircle","path":"sprites/sCircle/sCircle.yy",},},
     {"id":{"name":"s_exploBulletsEnchufe","path":"sprites/s_exploBulletsEnchufe/s_exploBulletsEnchufe.yy",},},
+    {"id":{"name":"AddBestiaryEnemySniperMega","path":"scripts/AddBestiaryEnemySniperMega/AddBestiaryEnemySniperMega.yy",},},
     {"id":{"name":"s_selectUpgrade","path":"sprites/s_selectUpgrade/s_selectUpgrade.yy",},},
     {"id":{"name":"s_naveEnemy_part2","path":"sprites/s_naveEnemy_part2/s_naveEnemy_part2.yy",},},
     {"id":{"name":"o_enchufe_Laser","path":"objects/o_enchufe_Laser/o_enchufe_Laser.yy",},},

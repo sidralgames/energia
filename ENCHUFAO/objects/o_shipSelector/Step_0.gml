@@ -7,12 +7,18 @@ if !instance_exists(o_playerShip) && (o_nextRoom.canSelectShip)
 	{
 		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 		selected +=1;
+		o_nextRoom.initialX = 380;
+		o_nextRoom.alphaSprite = 0;
+		o_nextRoom.scaleArrowsR =0.5;
 	}
 	
 	if (key_leftP)
 	{
 		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 		selected -=1;
+		o_nextRoom.initialX = 260;
+		o_nextRoom.alphaSprite = 0;
+		o_nextRoom.scaleArrowsL =0.5;
 	}
 
 	if (selected < 0)

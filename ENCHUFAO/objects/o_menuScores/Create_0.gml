@@ -5,11 +5,11 @@ font_add_enable_aa(false);
 o_nextRoom._visible = false;
 customFont = font_add("ChubbyChoo-SemiBold.ttf", 14, false, false, 32, 128);
 customFont2 = font_add("ChubbyChoo-SemiBold.ttf", 14, false, false, 32, 128);
-
+alphaInfo=0;
 selectedAch = 0;
 selected = 0;
 selectedMenu = 0;
-
+factor = 0.15;
 initialStat = 35;
 initialAch = 260;
 initialScores = 288;
@@ -19,7 +19,9 @@ tipChoosed = false
 minNumb = global.differentEnemiesTotal;
 selectedBest=0
 enemyToShow=0
-
+	initialXText = 320;
+scaleArrowsR = 0;
+scaleArrowsL = 0;
 xScale = 1;
 initialX=320;
 

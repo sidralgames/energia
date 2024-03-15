@@ -7,6 +7,8 @@ if (_visible = true)
 {
 	draw_self();
 	
+	initialX = lerp(initialX, 320, 0.2);
+	
 	//}
 	draw_set_halign(fa_center)
 	//if gamepad_is_connected(0)
@@ -37,7 +39,19 @@ if (_visible = true)
 
 	if (shipSelected = false) && (canSelectShip)
 	{
-		draw_sprite_ext(spriteToShow,0,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+155,2,2,90,image_blend, image_alpha)
+		if (scaleArrowsL >0)
+		{
+			scaleArrowsL -=0.1;
+		}
+		if (scaleArrowsR >0)
+		{
+			scaleArrowsR -=0.1;
+		}
+		if (alphaSprite < 1)
+		{
+			alphaSprite+=0.2;
+		}
+		draw_sprite_ext(spriteToShow,0,__view_get( e__VW.XView, 0 )+initialX,__view_get( e__VW.YView, 0 )+155,2,2,90,image_blend, alphaSprite)
 
 		draw_set_font(customFont);
 	
@@ -60,8 +74,8 @@ if (_visible = true)
 			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+319, "BONUS: ???? ??? ?????")
 		}
 
-		draw_sprite_ext(s_arrows,0,__view_get( e__VW.XView, 0 )+255,__view_get( e__VW.YView, 0 )+155,1,1,0,image_blend, image_alpha)
-		draw_sprite_ext(s_arrows,1,__view_get( e__VW.XView, 0 )+385,__view_get( e__VW.YView, 0 )+155,1,1,0,image_blend, image_alpha)
+		draw_sprite_ext(s_arrows,0,__view_get( e__VW.XView, 0 )+250,__view_get( e__VW.YView, 0 )+155,1+scaleArrowsL,1+scaleArrowsL,0,image_blend, image_alpha)
+		draw_sprite_ext(s_arrows,1,__view_get( e__VW.XView, 0 )+390,__view_get( e__VW.YView, 0 )+155,1+scaleArrowsR,1+scaleArrowsR,0,image_blend, image_alpha)
 	}
 
 	if (canSelectShip) && (alarm[0] < 60)

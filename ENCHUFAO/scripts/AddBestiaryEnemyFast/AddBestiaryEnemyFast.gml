@@ -7,7 +7,8 @@ ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
 		name: "fast",
 		number: 2,
 		unlocked: global.bestiaryEnemyFastUnlocked,
-		textBestiary: "Evolved to be faster\n \nAlways following you",
+		textBestiary: "Evolved to be faster\nto catch their prey\nALWAYS following you",
+		lines: 3,
 		kills: "KILLED: " + string(global.enemyFastKills),
 		killedBy: "KILLED BY: " + string(global.enemyFastKilledBy)
 		
