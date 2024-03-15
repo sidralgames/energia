@@ -1,7 +1,6 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description ENEMY INCOMING
 
-if (room != Sala_Tutorial)
+if (room != Sala_Tutorial) && (room != Sala_ChillRoom)
 {
 	if (global.totalEnemiesOnLevel < global.totalEnemiesOnLevelMax)
 	{

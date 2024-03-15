@@ -4,12 +4,15 @@ function AddBestiaryEnemySniper()
 {
 ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
 	{ 
-		textStat: "Best Run: Level " + string(global.bestLevelRun),
+		alias: "The Sniper",
+		sprite: s_enemySniper,
 		number: 4,
 		unlocked: global.bestiaryEnemySniperUnlocked,
-		textBestiary: "Slow movement and aim\nbut shoots very fast\nTip: SlowMo their bullets!",
+		textBestiary: "Slow movement and aim,\nbut shoots very fast.\nTip: SlowMo their bullets!",
 		lines: 3,
 		kills: "KILLED: " + string(global.enemySniperKills),
+		killsNum: global.enemySniperKills,
+		killsToUnlock: 5,
 		killedBy: "KILLED BY: " + string(global.enemySniperKilledBy)
 	})
 

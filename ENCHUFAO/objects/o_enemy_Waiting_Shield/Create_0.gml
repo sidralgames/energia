@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+enemyBestiaryNumber = 6;
+
 canStopChasing = false;
 slowedPeta = 0;
 keepChasingTime = 180;

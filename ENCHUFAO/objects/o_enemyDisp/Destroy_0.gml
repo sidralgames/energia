@@ -9,6 +9,8 @@ CreateTemporaryChip(3);
 // Inherit the parent event
 event_inherited();
 
+global.enemyDispKills +=1;
+
 if (global.bestiaryEnemyDispUnlocked = 0)
 {
 	global.bestiaryEnemyDispUnlocked = 1;

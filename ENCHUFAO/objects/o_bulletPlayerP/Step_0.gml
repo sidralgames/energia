@@ -5,7 +5,7 @@ hpBullet--;
 
 if (global.bulletsGhostIsOn == false)
 {
-	if (hpBounce > 0)
+	if (hpBounce > 0) && (isFrom = "Player")
 	{
 		CollisionTileBounce()
 	}
@@ -18,7 +18,7 @@ else if (global.bulletsGhostIsOn == true)
 {
 	if (canBeGhost = false)
 	{
-		if (hpBounce > 0)
+		if (hpBounce > 0) && (isFrom = "Player")
 		{
 			CollisionTileBounce()
 		}
@@ -47,7 +47,7 @@ if (hpBullet <= 0) || (hp < 0)
 	instance_destroy();	
 }
 
-if (global.bulletsAreSmartIsOn)
+if (global.bulletsAreSmartIsOn) && (isFrom = "Player")
 {
 	enemyNear = instance_nearest(x,y,o_enemyP);
 	if (instance_exists(enemyNear)) && (point_distance(x,y, enemyNear.x, enemyNear.y) < 100 + (global.chipSmartFactor * 10) )
@@ -69,7 +69,7 @@ if (instance_exists(blackHoleNear)) && (point_distance(x,y, blackHoleNear.x, bla
 
 
 
- if (global.bulletsDanceIsOn)
+ if (global.bulletsDanceIsOn) && (isFrom = "Player")
  {
 	direction+=dire*5;
 	if (alarm[2]<=0)

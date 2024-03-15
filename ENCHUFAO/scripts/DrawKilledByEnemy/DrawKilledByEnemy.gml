@@ -90,6 +90,12 @@ function DrawKilledByEnemy()
 		// ------- MINI ENEMIES --------//
 		case (s_enemyMini_2):
 		{
+			if (deathCounted = false)
+			{
+				deathCounted = true;
+				global.enemyMiniKilledBy +=1;
+			}
+			
 			draw_set_color(global.brightRed);
 			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+261,"Minithreat");
 
@@ -219,6 +225,11 @@ function DrawKilledByEnemy()
 	
 		case (s_enemySniperMega):
 		{
+			if (deathCounted = false)
+			{
+				deathCounted = true;
+				global.enemySniperMegaKilledBy +=1;
+			}
 			draw_set_color(global.brightRed);
 			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+261,"The MegaSniper");
 
@@ -403,6 +414,11 @@ function DrawKilledByEnemy()
 		// ------- SHIELD ENEMIES --------//
 		case (s_enemyShield):
 		{
+			if (deathCounted = false)
+			{
+				deathCounted = true;
+				global.enemyShieldKilledBy +=1;
+			}
 			draw_sprite_ext(s_shieldEnemy, 10, __view_get( e__VW.XView, 0 )+332,__view_get( e__VW.YView, 0 )+245,1,1, image_angle, image_blend, 0.9)
 			draw_set_color(global.brightRed);
 			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+281,"The Barrier");

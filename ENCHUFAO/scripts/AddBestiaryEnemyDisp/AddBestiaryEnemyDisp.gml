@@ -4,12 +4,15 @@ function AddBestiaryEnemyDisp()
 {
 ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
 	{ 
-		textStat: "Best Run: Level " + string(global.bestLevelRun),
+		alias: "The Shooter",
+		sprite: s_enemyDisp,
 		number: 3,
 		unlocked: global.bestiaryEnemyDispUnlocked,
-		textBestiary: "Some gained the\nability to shoot\nREDDARK ENERGY\nfrom their eyes",
+		textBestiary: "Some gained the\nability to shoot\nREDDARK ENERGY\nfrom their eyes.",
 		lines: 4,
 		kills: "KILLED: " + string(global.enemyDispKills),
+		killsNum: global.enemyDispKills,
+		killsToUnlock: 7,
 		killedBy: "KILLED BY: " + string(global.enemyDispKilledBy)
 	})
 

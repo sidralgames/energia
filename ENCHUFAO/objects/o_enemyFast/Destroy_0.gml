@@ -8,6 +8,8 @@ event_inherited();
 
 CreateTemporaryChip(4);
 
+global.enemyFastKills +=1;
+
 if (global.bestiaryEnemyFastUnlocked = 0)
 {
 	global.bestiaryEnemyFastUnlocked = 1;

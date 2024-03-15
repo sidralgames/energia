@@ -44,7 +44,8 @@ if (selected = 3)
 	{
 		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 		initialX = 200;
-		initialXText = 440;
+		initialXText = 350;
+		initialXInterrog = 280;
 		selectedBest+=1;
 		xScale = 1;
 		alphaInfo=0;
@@ -56,7 +57,8 @@ if (selected = 3)
 	{
 		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 		initialX = 440;
-		initialXText = 200;
+		initialXText = 290;
+		initialXInterrog = 360
 		selectedBest-=1;
 		xScale = -1;
 		scaleArrowsL =0.5;

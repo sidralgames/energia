@@ -4,12 +4,15 @@ function AddBestiaryEnemyBasic()
 {
 ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
 	{ 
-		name: "Silver",
+		alias: "Silver Hunter",
+		sprite: s_enemyBasic,
 		number: 0,
 		unlocked: global.bestiaryEnemyBasicUnlocked,
-		textBestiary: "The Big Breach\nthrew loads\nof this monstship\ninto our galaxy",
+		textBestiary: "The BIG BREACH\nthrew loads of\nthis monstship\ninto our galaxy.",
 		lines: 4,
 		kills: "KILLED: " + string(global.enemyBasicKills),
+		killsNum: global.enemyBasicKills,
+		killsToUnlock: 10,
 		killedBy: "KILLED BY: " + string(global.enemyBasicKilledBy)
 		
 	})

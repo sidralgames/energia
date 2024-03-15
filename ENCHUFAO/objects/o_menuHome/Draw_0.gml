@@ -114,7 +114,7 @@ if (_visible)
 				initialPlay = lerp(initialPlay, 155,factor);
 				initialTut = lerp(initialTut, 175,factor);
 				initialOption = lerp(initialOption, 197 ,factor)
-				initialStat =  lerp(initialStat, 222,factor);
+				initialStat =  lerp(initialStat, 220,factor);
 				initialQuit = lerp(initialQuit, 270,factor);
 				
 				draw_sprite_ext(s_playHome, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialPlay,0.6,0.6,0,image_blend,  0.8)

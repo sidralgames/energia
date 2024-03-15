@@ -1,6 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
-Controls_Input()
+Controls_Input();
+if (key_back)
+{
+	if (goToChillRoom = true)
+	{
+		canSelectShip = false;
+		instance_create(x,y,o_menuOptions);
+		Stats._visible = false;
+		goToChillRoom = false;
+	}
+}
 //if (!instance_exists(o_menuAchievements))
 //{
 if (_visible = true)
@@ -80,24 +90,45 @@ if (_visible = true)
 
 	if (canSelectShip) && (alarm[0] < 60)
 	{
+		
 		if (key_x) && (shipSelected = false) && (ship.unlocked == 1)
 		{
-			audio_play_sound_on(global.audioEmitter,snd_playMenu,false, 50);
-			shipSelected = true;
-			instance_create_layer(512,269, "Enchufes", o_enchufeInicio)
-			instance_create_layer(520,50, "Enchufes", o_enchufeInicioGarbanzo)
-			instance_create_layer(580,50, "Enchufes", o_enchufeInicioWorm)
-			instance_create_layer(112,272, "Enchufes" ,o_enchufeResetSelector)
-			instance_create_layer(50,40, "Enchufes" ,o_enchufeDeleteData)
-			Stats._visible = false;
-			player = instance_create_layer(x,y+100,"Player", o_playerShip)
-			global.ammoStatInitial = global.ammoStat;
-			global.energyStatInitial = global.energyStat;
-			global.HPStatInitial = global.hpStat;
-			global.speedStatInitial = global.speedStat;
-			global.cableStatInitial = global.cableStat;
-			global.laserStatInitial = global.laserStat;
-	
+			if (!goToChillRoom)
+			{
+				audio_play_sound_on(global.audioEmitter,snd_playMenu,false, 50);
+				shipSelected = true;
+				instance_create_layer(512,269, "Enchufes", o_enchufeInicio)
+				instance_create_layer(520,50, "Enchufes", o_enchufeInicioGarbanzo)
+				instance_create_layer(580,50, "Enchufes", o_enchufeInicioWorm)
+				instance_create_layer(112,272, "Enchufes" ,o_enchufeResetSelector)
+				instance_create_layer(50,40, "Enchufes" ,o_enchufeDeleteData)
+				Stats._visible = false;
+				player = instance_create_layer(x,y+100,"Player", o_playerShip)
+				global.ammoStatInitial = global.ammoStat;
+				global.energyStatInitial = global.energyStat;
+				global.HPStatInitial = global.hpStat;
+				global.speedStatInitial = global.speedStat;
+				global.cableStatInitial = global.cableStat;
+				global.laserStatInitial = global.laserStat;
+			}
+			else
+			{
+				room_goto(Sala_ChillRoom);
+				
+				global.infiniteAmmoIsOn = true;
+				global.infiniteLaserIsOn = true;
+				global.infiniteEnergyIsOn = true;
+				global.infiniteHPIsOn = true;
+				
+				global.level = 1;
+				
+				global.ammoStatInitial = global.ammoStat;
+				global.energyStatInitial = global.energyStat;
+				global.HPStatInitial = global.hpStat;
+				global.speedStatInitial = global.speedStat;
+				global.cableStatInitial = global.cableStat;
+				global.laserStatInitial = global.laserStat;
+			}
 		}
 	}
 }

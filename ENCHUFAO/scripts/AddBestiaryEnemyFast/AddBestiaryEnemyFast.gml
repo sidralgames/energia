@@ -4,12 +4,15 @@ function AddBestiaryEnemyFast()
 {
 ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
 	{ 
-		name: "fast",
+		alias: "Red Runner",
+		sprite: s_enemyMini,
 		number: 2,
 		unlocked: global.bestiaryEnemyFastUnlocked,
-		textBestiary: "Evolved to be faster\nto catch their prey\nALWAYS following you",
-		lines: 3,
+		textBestiary: "Evolved to be faster.\nALWAYS catching\ntheir prey.\nShoot'em fast.",
+		lines: 4,
 		kills: "KILLED: " + string(global.enemyFastKills),
+		killsNum: global.enemyFastKills,
+		killsToUnlock: 12,
 		killedBy: "KILLED BY: " + string(global.enemyFastKilledBy)
 		
 	})

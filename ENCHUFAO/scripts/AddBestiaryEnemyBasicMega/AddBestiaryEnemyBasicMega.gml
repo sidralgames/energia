@@ -4,12 +4,15 @@ function AddBestiaryEnemyBasicMega()
 {
 ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
 	{ 
-		name: "MegaChaser",
+		alias: "MegaChaser",
+		sprite: s_enemyBasicMega,
 		number: 1,
 		unlocked: global.bestiaryEnemyBasicMegaUnlocked,
-		textBestiary: "Improved version\nof the Silver Hunter\nHarder to kill but slower",
+		textBestiary: "Improved version\nof the Silver Hunter.\nHarder to kill but slower",
 		lines: 3,
 		kills: "KILLED: " + string(global.enemyBasicMegaKills),
+		killsNum: global.enemyBasicMegaKills,
+		killsToUnlock: 10,
 		killedBy: "KILLED BY: " + string(global.enemyBasicMegaKilledBy)
 	})
 

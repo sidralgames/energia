@@ -3,6 +3,9 @@
 global.level = 1;
 global.XPpoints = 0;
 
+
+goToChillRoom = false;
+
 shipSelected = false
 canSelectShip = false;
 

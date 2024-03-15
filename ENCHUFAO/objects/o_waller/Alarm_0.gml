@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description GRID
 instance_create(x,y,o_gridRoom)
 
 if !audio_is_playing(global.song)

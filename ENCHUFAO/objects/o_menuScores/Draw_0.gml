@@ -36,7 +36,7 @@ switch(selected)
 			stat = ds_map_find_value(global.statsList, i)
 
 			draw_set_halign(fa_center)
-			draw_set_font(customFont2)
+			draw_set_font(global.customFont14)
 			draw_set_color(global.lightBlue)
 			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+46+i*15, string(stat.textStat))
 			draw_set_color(c_white)

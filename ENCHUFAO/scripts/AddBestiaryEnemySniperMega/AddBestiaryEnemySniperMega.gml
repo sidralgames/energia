@@ -4,13 +4,16 @@ function AddBestiaryEnemySniperMega()
 {
 ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
 	{ 
-		textStat: "Best Run: Level " + string(global.bestLevelRun),
+		alias: "The MegaSniper",
+		sprite: s_enemySniperMega,
 		number: 5,
 		unlocked: global.bestiaryEnemySniperUnlocked,
-		textBestiary: "A better model\nShoots more bullets\nBe even more careful!",
+		textBestiary: "A better sniper model.\nShoots more bullets.\nBe even more careful!",
 		lines: 3,
-		kills: "KILLED: " + string(global.enemySniperKills),
-		killedBy: "KILLED BY: " + string(global.enemySniperKilledBy)
+		kills: "KILLED: " + string(global.enemySniperMegaKills),
+		killsNum: global.enemySniperMegaKills,
+		killsToUnlock: 6,
+		killedBy: "KILLED BY: " + string(global.enemySniperMegaKilledBy)
 	})
 
 global.numberOfEnemiesBestiary +=1;

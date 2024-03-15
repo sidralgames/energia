@@ -10,12 +10,16 @@ function LoadDefaultData()
 	global.shipPurpleUnlocked  = 0;
 	global.shipMP3Unlocked  = 0;
 	
-	//achievement
+	//------- PLAYTIMES - MANDATORY TURORIAL? -----//
+	global.playTimes = 0;
+	global.mandatoryTutorial = 0;
+	
+	//-------- ACHIEVEMENTS --------//
 	global.achNoBump = 0;
 	global.ach500Enemies = 0;
 	global.enemiesKilledTotalAch = 0;
 	
-	//stats
+	//-------- STATS ---------//
 	global.bestLevelRun = 0;
 	global.HighScore = 0;
 	global.totalDeaths = 0;
@@ -24,43 +28,64 @@ function LoadDefaultData()
 	global.totalPlugs = 0;
 	global.totalPETAS = 0;
 	global.totalBumps = 0;
-	
 	global.slowmilisecs = 0;
 	global.connectedmilisecs = 0;
 	
+	//-------- GOD MODE -------//
 	global.godModeIsOn = false;
 	global.infiniteEnergyIsOn = false;
 	global.infiniteAmmoIsOn = false;
 	global.infiniteHPIsOn = false;
 	global.infiniteLaserIsOn = false;
 	
+	
+	
+	//----------- BESTIARY ------------//
 	global.enemiesInBestiary = 0;
 	
+
+	//------------ KILLS -----------//
+	
+	//-- BASIC --//
 	global.bestiaryEnemyBasicUnlocked = 0;
-	global.bestiaryEnemyBasicMegaUnlocked = 0;
-	global.bestiaryEnemyFastUnlocked = 0;
-	global.bestiaryEnemySniperUnlocked = 0;
-	global.bestiaryEnemyDispUnlocked = 0;
-	
-	
 	global.enemyBasicKilledBy = 0;
 	global.enemyBasicKills = 0;
-
+	
+	//-- BASIC MEGA --//
+	global.bestiaryEnemyBasicMegaUnlocked = 0;
 	global.enemyBasicMegaKilledBy = 0;
 	global.enemyBasicMegaKills = 0;
-
+	
+	//-- FAST --//
+	global.bestiaryEnemyFastUnlocked = 0;
 	global.enemyFastKilledBy = 0;
 	global.enemyFastKills = 0;
-
+	
+	//-- DISP --//
+	global.bestiaryEnemyDispUnlocked = 0;
 	global.enemyDispKilledBy = 0;
 	global.enemyDispKills = 0;
-
+	
+	//-- SNIPER --//
+	global.bestiaryEnemySniperUnlocked = 0;
 	global.enemySniperKilledBy = 0;
 	global.enemySniperKills = 0;
-
 	
-	//main
-	global.playTimes = 0;
-	global.mandatoryTutorial = 0;
+	//-- SNIPER MEGA --//	
+	global.bestiaryEnemySniperMegaUnlocked = 0;
+	global.enemySniperMegaKilledBy = 0;
+	global.enemySniperMegaKills = 0;
+	
+	//-- SHIELD --//
+	global.bestiaryEnemyShieldUnlocked = 0;
+	global.enemyShieldKilledBy = 0;
+	global.enemyShieldKills =  0;
+	
+	//-- MINI --//
+	global.bestiaryEnemyMiniUnlocked = 0;
+	global.enemyMiniKilledBy = 0;
+	global.enemyMiniKills = 0;
+	
+
 	
 }

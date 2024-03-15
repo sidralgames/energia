@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+enemyBestiaryNumber = 7;
 event_inherited();
 enemyIsMini = true;
 type = collisionType.custom;

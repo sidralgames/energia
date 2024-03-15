@@ -5,6 +5,7 @@
 
 // Inherit the parent event
 event_inherited();
+isFrom = "";
 bulletSpeed = 0;
 hpBullet = 200;
 precision = 4;

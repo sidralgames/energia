@@ -67,6 +67,11 @@ else if (room = Sala_Tutorial)
 	SetupLevelTutorial();
 	levelType="Tutorial"
 }
+else if (room = Sala_ChillRoom)
+{
+	levelType="Big"
+	SetupLevelChill();
+}
 //else if (levelType = 1)
 //{
 //	SetupLevelBasicWide()

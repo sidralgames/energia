@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-Controls_Input()
+Controls_Input();
+
+
 if !instance_exists(o_playerShip) && (o_nextRoom.canSelectShip)
 {
 	if (key_rightP) 

@@ -493,6 +493,8 @@ AddBestiaryEnemyFast();
 AddBestiaryEnemyDisp();
 AddBestiaryEnemySniper();
 AddBestiaryEnemySniperMega();
+AddBestiaryEnemyShield();
+AddBestiaryEnemyMini();
 
 //global.possibleShipList = ds_map_create();
 
