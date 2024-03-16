@@ -44,6 +44,7 @@ if (selected = 3)
 	{
 		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 		initialX = 200;
+		positionChoosed = false;
 		initialXText = 350;
 		initialXInterrog = 280;
 		selectedBest+=1;
@@ -51,6 +52,7 @@ if (selected = 3)
 		alphaInfo=0;
 		scaleArrowsR =0.5;
 		tipChoosed = false;
+		//contParts = 0;
 		part_type_direction(global.EnemyKilledBy_part,175,185,0,1);
 	}
 	if (key_leftP)
@@ -58,12 +60,14 @@ if (selected = 3)
 		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 		initialX = 440;
 		initialXText = 290;
+		positionChoosed = false;
 		initialXInterrog = 360
 		selectedBest-=1;
 		xScale = -1;
 		scaleArrowsL =0.5;
 		alphaInfo=0;
 		tipChoosed = false;
+		//contParts = 0;
 		part_type_direction(global.EnemyKilledBy_part,355,5,0,1);
 	}
 	

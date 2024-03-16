@@ -5,9 +5,12 @@
 //	lightEnchufe= instance_create_layer(x,y,"LightPlayer",o_Light_Enchufe);
 //type = collisionType.custom;
 randomize();
-
+IsEnchufeMP3CHILL = false;
 isMainEnchufe = false;
 
+
+xConnectionPos = x;
+yConnectionPos = y;
 occupied = false;
 isEnchufeUpgrade = false;
 isPluggable = true;

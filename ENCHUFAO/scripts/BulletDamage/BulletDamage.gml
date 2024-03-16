@@ -3,7 +3,7 @@
 function BulletDamage()
 {
 	//--- PIERCING ---//
-	if (global.piercingShot) && (isFrom = "Player")
+	if (global.piercingShot) && (other.isFrom = "Player")
 	{
 		if (ds_list_find_index(other.collisionIds, id) == -1)
 		{
@@ -12,17 +12,22 @@ function BulletDamage()
 			other.hp -= 1; 
 		}
 	}
-	else 
+	else //---- STANDARD ----//
 	{
 		_hp -= (global.superShot+global.amplifyPowerAmmo)*global.damageDealt; //--- DO DAMAGE TO ENEMY ---//
+		
+		if (other.isFrom = "Player")
+		{
+			RecoverBullet();
+		}
+		
 		instance_destroy(other);
-		RecoverBullet();
 	}
 	
 	
 	//--- PUSH ---//
 	if (global.bulletsPushenemiesIsOn) && (repelled = false)
-	&& (state != ENEMYSTATE.PLUGGED) && (!isShield) && (isFrom = "Player")
+	&& (state != ENEMYSTATE.PLUGGED) && (!isShield) && (other.isFrom = "Player")
 	{
 		if (!shocked)
 		{
@@ -40,8 +45,9 @@ function BulletDamage()
 		}
 	}
 	
-	//--- BOMB ---//
-	if (global.bulletsAreBombs) && (isFrom = "Player")
+	
+	//---- BOMB ----//
+	if (global.bulletsAreBombs) && (other.isFrom = "Player")
 	{
 		bomb = instance_create(other.x,other.y,o_exploBomb)
 		bomb.sprite_index = s_exploOrange;
@@ -49,7 +55,9 @@ function BulletDamage()
 		bomb.scale = 0.7;
 	}
 	
-	if (global.bulletsIceIsOn) && (isFrom = "Player")
+	
+	//---- FREEZING ----//
+	if (global.bulletsIceIsOn) && (other.isFrom = "Player")
 	{
 		if (isShield == false)
 		{
@@ -62,8 +70,9 @@ function BulletDamage()
 		}
 	}
 	
+	
 	//--- BURN ---//
-	if (global.bulletsBurnIsOn) && (isFrom = "Player")
+	if (global.bulletsBurnIsOn) && (other.isFrom = "Player")
 	{
 		if (isShield == false) && (burned == false)
 		{
@@ -71,8 +80,9 @@ function BulletDamage()
 		}
 	}
 	
-		//--- BURN ---//
-	if (global.bulletsElectroIsOn) && (isFrom = "Player")
+	
+	//---- ELECTRO ----//
+	if (global.bulletsElectroIsOn) && (other.isFrom = "Player")
 	{
 		if (isShield == false) && (electrocutated == false)
 		{

@@ -11,6 +11,7 @@ strandedShipConnection = false;
 bossWormConnection = false;
 capsuleConnection = false;
 superCapsuleConnection = false;
+MP3CHILLConnection = false;
 
 //---- CHIPS ----//
 initialChipIndex = 3;

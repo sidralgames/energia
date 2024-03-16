@@ -27,6 +27,29 @@ function DrawPotentialConnection()
 			}
 			
 		}
+		else if (inEnchufe.IsEnchufeMP3CHILL)
+		{
+			maxConectRad = maxConectRadBoss;
+			minConectRad = minConectRadBoss;
+			if (inEnchufe) && (!inEnchufe.enchufeActive)
+			&& (inEnchufe.abierto) && (!inEnchufe.enchufeOvercharged)
+			{
+				if (radi > minConectRad)
+				{
+					radi-=0.75;
+				}
+				else
+				{
+					radi = maxConectRadBoss;
+				}
+				draw_set_color(c_white)
+				draw_circle(inEnchufe.x-lengthdir_x(105,inEnchufe.image_angle), inEnchufe.y-lengthdir_y(105,inEnchufe.image_angle), radi+0.5, true)
+				draw_circle(inEnchufe.x-lengthdir_x(105,inEnchufe.image_angle), inEnchufe.y-lengthdir_y(105,inEnchufe.image_angle), radi, true)
+				draw_circle(inEnchufe.x-lengthdir_x(105,inEnchufe.image_angle), inEnchufe.y-lengthdir_y(105,inEnchufe.image_angle), minConectRad, true)
+				draw_circle(inEnchufe.x-lengthdir_x(105,inEnchufe.image_angle), inEnchufe.y-lengthdir_y(105,inEnchufe.image_angle), minConectRad+0.3, true)
+			}
+			
+		}
 		else if (inEnchufe.IsEnchufeCapsule) && (inEnchufe.isPluggable == true)
 		{
 			if (inEnchufe.IsEnchufeCapsuleSuper)

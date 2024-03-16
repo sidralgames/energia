@@ -3,24 +3,28 @@
 function DrawSpriteBestiary()
 {
 	draw_set_halign(fa_center);
+	
+	initialY = 220;
 	initialX = lerp(initialX, 320, 0.15);
 	initialXText = lerp(initialXText, 320, 0.15);
 	initialXInterrog = lerp(initialXInterrog, 320, 0.15);
+	
 	enemy = ds_map_find_value(global.bestiaryList, selectedBest);
 	
 	if (alphaInfo<=1)
 	{
 		alphaInfo+=0.1
 	}
-
 	
 	if (enemy.unlocked = 0) || (enemy.killsNum < enemy.killsToUnlock)
 	{
+		part_type_alpha2(global.EnemyKilledBy_part, 0,0);
+		
 		draw_set_font(global.customFont14);
 		draw_set_color(global.brightRed);
-		draw_text(__view_get( e__VW.XView, 0 )-1+initialXInterrog,__view_get( e__VW.YView, 0 )+231,"Killed: " + string(enemy.killsNum) + "/" + string(enemy.killsToUnlock));
+		draw_text(__view_get( e__VW.XView, 0 )-1+initialXInterrog,__view_get( e__VW.YView, 0 )+236,"Killed: " + string(enemy.killsNum) + "/" + string(enemy.killsToUnlock));
 		draw_set_color(c_white);
-		draw_text(__view_get( e__VW.XView, 0 )+initialXInterrog,__view_get( e__VW.YView, 0 )+230,"Killed: " + string(enemy.killsNum) + "/" + string(enemy.killsToUnlock));
+		draw_text(__view_get( e__VW.XView, 0 )+initialXInterrog,__view_get( e__VW.YView, 0 )+235,"Killed: " + string(enemy.killsNum) + "/" + string(enemy.killsToUnlock));
 		
 		draw_set_alpha(alphaInfo)
 		for (var i=0; i<2; i++)
@@ -35,12 +39,14 @@ function DrawSpriteBestiary()
 		
 		if (enemy.killsNum > enemy.killsToUnlock/2)
 		{
+			part_type_alpha2(global.EnemyKilledBy_part, 0.5,0.5);
+			
 			draw_set_alpha(alphaInfo);
 						
-			GetEnemyBestiaryLocked(enemy.sprite, c_black, 0.8);
+			GetEnemyBestiaryLocked(enemy.sprite, c_gray, 0.8);
 		
 			draw_set_alpha(1)
-
+			draw_set_font(global.customFont14);
 			draw_set_color(global.brightRed);
 			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+131,string(selectedBest+1) + " / " + string(global.differentEnemiesTotal));
 			draw_set_color(c_white);
@@ -49,12 +55,14 @@ function DrawSpriteBestiary()
 		}
 		else
 		{
+			part_type_alpha2(global.EnemyKilledBy_part, 0,0);
+			
 			draw_set_alpha(alphaInfo);
 							
 			draw_sprite_ext(s_interrog, image_index, __view_get( e__VW.XView, 0 )+initialXInterrog,__view_get( e__VW.YView, 0 )+210, 1,1,0,image_blend, alphaInfo)
 		
 			draw_set_alpha(1)
-
+			draw_set_font(global.customFont14);
 			draw_set_color(global.brightRed);
 			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+131,string(selectedBest+1) + " / " + string(global.differentEnemiesTotal));
 			draw_set_color(c_white);
@@ -65,6 +73,8 @@ function DrawSpriteBestiary()
 	else
 	{
 		draw_set_alpha(alphaInfo)
+		
+		part_type_alpha2(global.EnemyKilledBy_part, 1,1);
 		
 		GetEnemyBestiary(enemy.sprite);
 		

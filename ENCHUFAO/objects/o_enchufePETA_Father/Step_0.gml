@@ -1,5 +1,9 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+
+xConnectionPos = x;
+yConnectionPos = y;
+
 if (charge < 300)
 {
 	if (image_index >= 18)

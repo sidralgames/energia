@@ -71,6 +71,11 @@ function LoadDefaultDataIngame()
 	global.bestiaryEnemyMiniUnlocked = 0;
 	global.enemyMiniKilledBy = 0;
 	global.enemyMiniKills = 0;
+	
+	//-- MOTHERSHIP --//
+	global.bestiaryEnemyMothershipUnlocked = 0;
+	global.enemyMothershipKilledBy = 0;
+	global.enemyMothershipKills = 0;
 
 
 	//------- GOD MODE -------//

@@ -40,7 +40,6 @@ function Plug()
 		
 	}
 	
-	
 	if (enchufe.isPETA)
 	{
 		if (enchufe.fromFriend)
@@ -79,6 +78,12 @@ function Plug()
 		}
 		else
 		{	
+			if (enchufe.IsEnchufeMP3CHILL)
+			{
+				o_charger.scale = 1.5;
+				global.xToPlug = enchufe.xConnectionPos;
+				global.yToPlug = enchufe.yConnectionPos;
+			}
 			if (enchufe.IsEnchufeBoss)
 			{
 				o_charger.scale = 1.4;
@@ -90,24 +95,25 @@ function Plug()
 				if (enchufe.IsEnchufeCapsuleSuper)
 				{
 					o_charger.scale = 1.5;
-					global.xToPlug = x+lengthdir_y(25,enchufe.image_angle)
-					global.yToPlug = y+lengthdir_y(25,enchufe.image_angle)
+					global.xToPlug = enchufe.x+lengthdir_y(25,enchufe.image_angle)
+					global.yToPlug = enchufe.y+lengthdir_y(25,enchufe.image_angle)
 				}
 				else
 				{
 					o_charger.scale = 0.8;
-					global.xToPlug = x+lengthdir_y(15,enchufe.image_angle)
-					global.yToPlug = y+lengthdir_y(15,enchufe.image_angle)
+					global.xToPlug = enchufe.x+lengthdir_y(15,enchufe.image_angle)
+					global.yToPlug = enchufe.y+lengthdir_y(15,enchufe.image_angle)
 				}
 			}
 			else
 			{
 				o_charger.scale = enchufe.scale;
-				global.xToPlug = enchufe.x;
-				global.yToPlug = enchufe.y;
+				global.xToPlug = enchufe.xConnectionPos;
+				global.yToPlug = enchufe.yConnectionPos;
 			}
 		}
 	}
+	
 	plugged = true;
 	
 }

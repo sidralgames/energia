@@ -86,6 +86,11 @@ function LoadGame()
 	global.enemyMiniKilledBy = ini_read_real("bestiary","miniKilledBy", 0);
 	global.enemyMiniKills = ini_read_real("bestiary","miniKills", 0);
 	
+	//--- MINI ---//
+	global.bestiaryEnemyMothershipUnlocked = ini_read_real("bestiary","mini", 0);
+	global.enemyMothershipKilledBy = ini_read_real("bestiary","mothershipKilledBy", 0);
+	global.enemyMothershipKills = ini_read_real("bestiary","mothershipKills", 0);
+	
 	
 	//----- GOD MODE DEFAULT OFF -----//
 	global.godModeIsOn = false;

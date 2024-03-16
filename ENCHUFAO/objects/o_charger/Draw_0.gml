@@ -16,6 +16,10 @@ if instance_exists(o_playerShip)
 				yToPlug = enchufe.y-lengthdir_y(30,enchufe.image_angle)
 				draw_sprite_ext(s_chargerPlugged, 0, xToPlug, yToPlug, o_charger.scale, o_charger.scale, enchufe.image_angle-90, image_blend, image_alpha)
 			}
+			else if (enchufe.IsEnchufeMP3CHILL)
+			{
+				draw_sprite_ext(s_chargerPlugged, 0, global.xToPlug, global.yToPlug, o_charger.scale, o_charger.scale, enchufe.image_angle, image_blend, image_alpha)
+			}
 			else if (enchufe.IsEnchufeCapsule)
 			{
 				if (enchufe.IsEnchufeCapsuleSuper)

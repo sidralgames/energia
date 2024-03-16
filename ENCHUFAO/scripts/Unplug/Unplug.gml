@@ -3,7 +3,7 @@
 function Unplug()
 {
 	
-	thisEnchufe = instance_nearest(global.xToPlug, global.yToPlug, o_enchufe_Father);
+	thisEnchufe = enchufe;
 	thisEnchufe.canBeEnchufated = false;
 	thisEnchufe.canBeEnchufatedCont = 20;
 	o_enchufe_Father.enchufeActive = false;

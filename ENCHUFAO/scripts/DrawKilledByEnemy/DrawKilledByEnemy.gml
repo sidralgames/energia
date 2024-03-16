@@ -345,10 +345,10 @@ function DrawKilledByEnemy()
 		case (s_enemyMothership):
 		{
 			draw_set_color(global.brightRed);
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+261,"Mother Loader");
+			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+261,"Motherthreat");
 
 			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+260,"Mother Loader");
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+260,"Motherthreat");
 		
 			draw_set_font(global.customFont12);
 			if (tipChoosed = false)
@@ -368,10 +368,10 @@ function DrawKilledByEnemy()
 		case (s_enemyMothershipMega):
 		{
 			draw_set_color(global.brightRed);
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+261,"Mega Mother Loader");
+			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+261,"MegaMotherthreat");
 
 			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+260,"Mega Mother Loader");
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+260,"MegMotherthreat");
 		
 			draw_set_font(global.customFont12);
 			if (tipChoosed = false)

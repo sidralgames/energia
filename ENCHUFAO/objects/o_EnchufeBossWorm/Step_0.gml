@@ -5,7 +5,8 @@
 
 // Inherit the parent event
 event_inherited();
-
+xConnectionPos= x;
+yConnectionPos = y;
 if (charge>=200) && (changedMetal = false)
 {
 	changedMetal = true;

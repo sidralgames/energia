@@ -495,6 +495,7 @@ AddBestiaryEnemySniper();
 AddBestiaryEnemySniperMega();
 AddBestiaryEnemyShield();
 AddBestiaryEnemyMini();
+AddBestiaryEnemyMothership();
 
 //global.possibleShipList = ds_map_create();
 

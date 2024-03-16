@@ -74,6 +74,7 @@ function SetupLevelChill()
 
 	//Create the player
 	instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Player", o_playerShip);
+	instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2, cy*CELL_HEIGHT+CELL_HEIGHT/2, "Meteors", o_mp3ChillRoom);
 	
 	
 	if (global.level = 1) && (global.spriteShip = splayer_Red) && (creadaStrandedRed = false)

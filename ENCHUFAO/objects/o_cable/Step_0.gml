@@ -29,6 +29,10 @@ if (global.unPlugging)
 	{
 		superCapsuleConnection = false;
 	}
+	if (MP3CHILLConnection = true)
+	{
+		MP3CHILLConnection = false;
+	}
 	global.unPlugging = false;
 }
 
@@ -71,6 +75,10 @@ if (global.plugging) && instance_exists(o_playerShip)
 		{
 			bossWormConnection = true;
 		}
+		else if (enchufe.IsEnchufeMP3CHILL) 
+		{
+			MP3CHILLConnection = true;
+		}
 		else if (enchufe.IsEnchufeCapsule)
 		{
 			if (enchufe.IsEnchufeCapsuleSuper)
@@ -100,6 +108,10 @@ if instance_exists(o_playerShip)
 			if (bossWormConnection = true)
 			{
 				rope1.vertexChangeData(last,enchufe.x-lengthdir_x(30,enchufe.image_angle),enchufe.y-lengthdir_y(30,enchufe.image_angle))
+			}
+			if (MP3CHILLConnection = true)
+			{
+				rope1.vertexChangeData(last,global.xToPlug,global.yToPlug)
 			}
 			if (capsuleConnection = true)
 			{

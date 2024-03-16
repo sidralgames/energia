@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 o_nextRoom._visible = false;
-
+positionChoosed = false;
 alphaInfo=0;
 selectedAch = 0;
 selected = 0;
@@ -31,6 +31,7 @@ xScale = 1;
 
 bestiaryNum = 0;
 initialScale = 1;
-contPartsInitial = 2;
-contParts = contPartsInitial
+contPartsInitial = 8;
+contParts = 0
+trailCreated = false;
 

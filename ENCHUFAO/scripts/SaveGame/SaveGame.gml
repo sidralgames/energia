@@ -35,42 +35,54 @@ function SaveGame()
 	
 	//-------- BESTIARY ---------//
 	ini_write_real("bestiary","number", global.enemiesInBestiary);
-	ini_write_real("bestiary","basic", global.bestiaryEnemyBasicUnlocked);
-	ini_write_real("bestiary","basicMega", global.bestiaryEnemyBasicMegaUnlocked);
-	ini_write_real("bestiary","fast", global.bestiaryEnemyFastUnlocked);
-	ini_write_real("bestiary","disp", global.bestiaryEnemyDispUnlocked);
-	ini_write_real("bestiary","sniper", global.bestiaryEnemySniperUnlocked);
-	ini_write_real("bestiary","sniperMega", global.bestiaryEnemySniperMegaUnlocked);
-	ini_write_real("bestiary","shield", global.bestiaryEnemyShieldUnlocked);
-	ini_write_real("bestiary","mini", global.bestiaryEnemyMiniUnlocked);
-	
+
 	//-------- KILLS ---------//
+	
+	//---- BASIC ----//
+	ini_write_real("bestiary","basic", global.bestiaryEnemyBasicUnlocked);
 	ini_write_real("bestiary","basicKills", global.enemyBasicKills);
 	ini_write_real("bestiary","basicKilledBy", global.enemyBasicKilledBy);
 	
+	//---- BASIC MEGA ----//
+	ini_write_real("bestiary","basicMega", global.bestiaryEnemyBasicMegaUnlocked);
 	ini_write_real("bestiary","basicMegaKills", global.enemyBasicMegaKills);
 	ini_write_real("bestiary","basicMegaKilledBy", global.enemyBasicMegaKilledBy);
 	
+	//---- FAST ----//
+	ini_write_real("bestiary","fast", global.bestiaryEnemyFastUnlocked);
 	ini_write_real("bestiary","fastKills", global.enemyFastKills);
 	ini_write_real("bestiary","fastKilledBy", global.enemyFastKilledBy);
-
-	ini_write_real("bestiary","sniperMegaKills", global.enemySniperMegaKills);
-	ini_write_real("bestiary","sniperMegaKilledBy", global.enemySniperKilledBy);
 	
+	//---- DISP ----//
+	ini_write_real("bestiary","disp", global.bestiaryEnemyDispUnlocked);
+	ini_write_real("bestiary","dispKills", global.enemyDispKills);
+	ini_write_real("bestiary","dispKilledBy", global.enemyDispKilledBy);
+
+	//---- SNIPER ----//
+	ini_write_real("bestiary","sniper", global.bestiaryEnemySniperUnlocked);
 	ini_write_real("bestiary","sniperKills", global.enemySniperKills);
 	ini_write_real("bestiary","sniperKilledBy", global.enemySniperKilledBy);
 	
-	ini_write_real("bestiary","dispKills", global.enemyDispKills);
-	ini_write_real("bestiary","dispKilledBy", global.enemyDispKilledBy);
+	//---- SNIPER MEGA ----//
+	ini_write_real("bestiary","sniperMega", global.bestiaryEnemySniperMegaUnlocked);	
+	ini_write_real("bestiary","sniperMegaKills", global.enemySniperMegaKills);
+	ini_write_real("bestiary","sniperMegaKilledBy", global.enemySniperKilledBy);
 	
-	ini_write_real("bestiary","miniKills", global.enemyMiniKills);
-	ini_write_real("bestiary","miniKilledBy", global.enemyMiniKilledBy);
-	
+	//---- SHIELD ----//
+	ini_write_real("bestiary","shield", global.bestiaryEnemyShieldUnlocked);
 	ini_write_real("bestiary","shieldKills", global.enemyShieldKills);
 	ini_write_real("bestiary","shieldKilledBy", global.enemyShieldKilledBy);
 	
+	//---- MINI ----//
+	ini_write_real("bestiary","mini", global.bestiaryEnemyMiniUnlocked);
+	ini_write_real("bestiary","miniKills", global.enemyMiniKills);
+	ini_write_real("bestiary","miniKilledBy", global.enemyMiniKilledBy);
+	
+	//---- MOTHERSHIP ----//
+	ini_write_real("bestiary","mothership", global.bestiaryEnemyMothershipUnlocked);
+	ini_write_real("bestiary","mothershipKills", global.enemyMothershipKills);
+	ini_write_real("bestiary","mothershipKilledBy", global.enemyMothershipKilledBy);
+	
 
-	
-	
 	ini_close();
 }

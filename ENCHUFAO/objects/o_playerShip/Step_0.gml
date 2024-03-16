@@ -130,15 +130,18 @@ if (key_l3Dowm) && (key_r3Dowm) && (global.PETAAmmo > 0 )
 }
 
 //--------- PLUG -----------//
-inEnchufe = collision_circle(x,y,maxConectRad,o_enchufe_Father,false,true);
+inEnchufe = collision_circle(x,y,maxConectRad+10,o_enchufe_Father,true,true);
 
 if (inEnchufe) 
 {	
+	inEnchufeConnectionPoint = (point_distance(x,y,inEnchufe.xConnectionPos,inEnchufe.yConnectionPos) < maxConectRad+10)
+
+	
 	if (pluggedToStrandedShip)
 	{
 		if (inEnchufe.abierto == true) && (inEnchufe.contOvercharged <=0)
 		&& (inEnchufe.dying == false) && (inEnchufe.occupied = false)
-		&& (inEnchufe.isPluggable == true) 
+		&& (inEnchufe.isPluggable == true) && (inEnchufeConnectionPoint == true)
 		{
 			if (key_x)
 			{
@@ -147,7 +150,7 @@ if (inEnchufe)
 					inEnchufe.withStrandedShip = true;
 					PlugStrandedShipToEnchufe();
 				}
-				else
+				else 
 				{
 					SimpleStrandedUnplug();
 					Plug();
@@ -163,6 +166,7 @@ if (inEnchufe)
 			if (inEnchufe.abierto == true) && (inEnchufe.contOvercharged <=0)
 			&& (inEnchufe.dying == false) && (!pluggedToStrandedShip)
 			&& (inEnchufe.occupied = false) && (inEnchufe.isPluggable == true)
+			&& (inEnchufeConnectionPoint == true)
 			{
 				if (key_x)
 				{

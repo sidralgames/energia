@@ -78,7 +78,7 @@ if (_visible)
 		{
 			initialCon = lerp(initialCon, 150,factor);
 			initialSett = lerp(initialSett, 170,factor);
-			initialChill = lerp(initialChill, 195,factor);
+			initialChill = lerp(initialChill, 192,factor);
 			initialCred = lerp(initialCred, 240 ,factor)
 			initialGod=  lerp(initialGod, 295,factor);
 			initialBack = lerp(initialBack, 320,factor);

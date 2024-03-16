@@ -10,6 +10,13 @@ if (key_back)
 		Stats._visible = false;
 		goToChillRoom = false;
 	}
+	
+	if (Stats._visible = true)
+	{
+		canSelectShip = false;
+		Stats._visible = false;
+		o_menuHome._visible = true;
+	}
 }
 //if (!instance_exists(o_menuAchievements))
 //{

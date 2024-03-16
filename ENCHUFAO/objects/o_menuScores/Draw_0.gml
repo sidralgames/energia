@@ -5,8 +5,6 @@
 orange = make_color_rgb(254,174, 52);
 achievement = ds_map_find_value(global.achievementList, selectedAch);
 
-
-
 if (scaleArrowsR > 0)
 {
 	scaleArrowsR -=0.1;

@@ -31,8 +31,7 @@ function PluggedToEnchufe()
 	
 	if instance_exists(enchufe)
 	{
-		global.xToPlug = enchufe.x;
-		global.yToPlug = enchufe.y;
+		GetPositionToPLug();
 	}
 		
 	part_particles_create(global.enchufe_sys, global.xToPlug+random_range(-18,18), global.yToPlug+random_range(-18,18), global.enchufePart , 10)
@@ -79,6 +78,15 @@ function PluggedToEnchufe()
 		{
 			_hpush = lengthdir_x(3.25,dir)
 			_vpush = lengthdir_y(3.25,dir)
+		
+		}
+		else if (enchufe.IsEnchufeMP3CHILL)
+		{
+			_hpush = lengthdir_x(2,dir)
+			_vpush = lengthdir_y(2,dir)
+		
+			enchufe._hpush -= lengthdir_x(0.05,dir)
+			enchufe._vpush -= lengthdir_y(0.05,dir)
 		
 		}
 		else if (enchufe.IsEnchufeCapsuleSuper)
