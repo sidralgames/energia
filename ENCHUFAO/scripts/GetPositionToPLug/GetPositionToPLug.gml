@@ -22,7 +22,13 @@ function GetPositionToPLug()
 		o_charger.scale = enchufe.scale;
 		global.xToPlug = enchufe.x;
 		global.yToPlug = enchufe.y;
-				
+		
+		if (enchufe.final)
+		{
+			o_charger.scale = 1.5;
+			global.xToPlug = enchufe.xConnectionPos
+			global.yToPlug = enchufe.yConnectionPos
+		}
 		if (enchufe.IsEnchufeMP3CHILL)
 		{
 			o_charger.scale = 1.5;

@@ -785,6 +785,55 @@ function CheckEnchufeUpgrade()
 	
 	
 			}break;
+			
+			
+			case "upgradeShieldPerRoom":
+			{
+				if (!global.shieldPerRoomIsUpgraded)
+				{
+					global.shieldPerRoomIsUpgraded = true;
+					AddUpgradeShieldPerRoomPlayer();
+				}
+				
+				for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+				{
+					upg = ds_map_find_value(global.PlayerUpgradesList, i)
+					if (upg.obj = o_enchufeUpgadeShieldPerRoom)
+					{
+						upg.times+=1;
+					}
+				}
+				
+				if (global.spriteShip = splayer_Blue) //SINERGIA BONUS 2x1 ESCUDOS NAVE AZUL
+				{
+					if (global.bonusIsUpgraded = false)
+					{
+						global.shieldsPerRoom += 2;
+					}
+					else
+					{
+						global.shieldsPerRoom += 3; //PUEDE SER TOCHO 
+					}
+				}
+				else
+				{
+					global.shieldsPerRoom += 1;
+				}
+				
+				//-- DISCARD UPGRADE --//
+				//for (var i= 0; i< global.numberOfUpgrades; i++)
+				//{
+				//	thisUpg = ds_map_find_value(global.upgradesList, i)
+				//	if (thisUpg.obj = o_enchufeUpgadeMoreChipDrops)
+				//	{
+				//		thisUpg.canShowUp = false;
+				//	}
+				//}
+	
+	
+			}break;
+			
+			
 		
 			case "upgradeBonus":
 			{

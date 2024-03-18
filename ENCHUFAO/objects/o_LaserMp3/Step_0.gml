@@ -8,9 +8,10 @@ _angle = superGun._angle;
 	
 if (superGun.contToShoot <= 0)
 {
-	var maxLenght_ = 1040;
-	screenShake(2,10)
-	gamepad_set_vibration(0,0.2, 0.2);
+	reseted = false;
+	var maxLenght_ = 640;
+	screenShake(1.1,5)
+	gamepad_set_vibration(0,0.15, 0.15);
 	
 	for(var i = 0; i < maxLenght_; i++)
 	{
@@ -103,7 +104,24 @@ if (superGun.contToShoot <= 0)
 			instance_destroy(bomb)
 		}
 	}
+}
+else
+{
+	if (reseted = false)
+	{
+		reseted = true;
+		
+		drawflash = true;
+		blueWidht = 11;
+		whiteWidht = 8;
+		blueW=50;
+		whiteW=20;
+		mp3laserWidth1 = 14;
+		mp3laserWidth2 = 8;
 
+		outRad = 10;
+		inRad = 4;
+	}
 }
 
 

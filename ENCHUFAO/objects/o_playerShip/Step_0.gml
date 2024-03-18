@@ -2,6 +2,11 @@
 // You can write your code in this editor
 Controls_Input();
 
+if (shielded = false)
+{
+	shielded = true;
+	global.shields += global.shieldsPerRoom;
+}
 
 
 if (flashAlpha > 0)
@@ -134,7 +139,7 @@ inEnchufe = collision_circle(x,y,maxConectRad+10,o_enchufe_Father,true,true);
 
 if (inEnchufe) 
 {	
-	inEnchufeConnectionPoint = (point_distance(x,y,inEnchufe.xConnectionPos,inEnchufe.yConnectionPos) < maxConectRad+10)
+	inEnchufeConnectionPoint = (point_distance(x,y,inEnchufe.xConnectionPos,inEnchufe.yConnectionPos) < maxConectRad+50)
 
 	
 	if (pluggedToStrandedShip)
@@ -213,7 +218,8 @@ if (connectedToShip)
 	if (key_x)
 	{
 		chargerStrandedShip = connectedToShip;
-		if (chargerStrandedShip.trapped = false) && (pluggedToStrandedShip = false) && (o_charger.overcharged = false) && alarm[4] <=0
+		if (chargerStrandedShip.canBeEnchufated) && (chargerStrandedShip.trapped = false) && (pluggedToStrandedShip = false)
+		&& (o_charger.overcharged = false) && (alarm[4] <=0)
 		{
 			PlugToShip();
 		}

@@ -341,8 +341,9 @@ AddUpgradeShockingPETAS();
 AddUpgradeHomingBombPlus();
 AddUpgradeLongLastingChip();
 AddUpgradeMoreChipDrops();
+AddUpgradeShieldPerRoom();
 
-
+global.shieldsPerRoom = 0;
 
 global.ammoIsUpgraded = false;
 global.cableIsUpgraded = false;
@@ -373,6 +374,7 @@ global.exploHitIsUpgraded = false;
 global.shockingPetasIsUpgraded = false;
 global.longLastingChipIsUpgraded = false;
 global.moreChipDropsIsUpgraded = false;
+global.shieldPerRoomIsUpgraded = false;
 
 
 
@@ -496,7 +498,8 @@ AddBestiaryEnemySniperMega();
 AddBestiaryEnemyShield();
 AddBestiaryEnemyMini();
 AddBestiaryEnemyMothership();
-
+AddBestiaryEnemyMothershipMega();
+AddBestiaryEnemyDisc();
 //global.possibleShipList = ds_map_create();
 
 //AddShipGreenPos();

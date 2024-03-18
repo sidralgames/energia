@@ -7,6 +7,8 @@ _vpush = 0
 bnc = 1;
 myShip = instance_nearest(x,y,o_strandedShip)
 
+canBeEnchufated = true;
+
 if (myShip.called = true)
 {
 	image_blend = c_ltgray;

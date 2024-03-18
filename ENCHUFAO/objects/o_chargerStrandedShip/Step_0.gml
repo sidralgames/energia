@@ -9,5 +9,14 @@ if (connected)
 x+=_hpush * global.relativeSpeed;
 y+=_vpush * global.relativeSpeed;
 
+if (myShip.shipReady = true)
+{
+	canBeEnchufated = false;
+}
+else
+{
+	canBeEnchufated = true;
+}
+	
 
 

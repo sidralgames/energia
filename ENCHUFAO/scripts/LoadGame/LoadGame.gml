@@ -86,10 +86,20 @@ function LoadGame()
 	global.enemyMiniKilledBy = ini_read_real("bestiary","miniKilledBy", 0);
 	global.enemyMiniKills = ini_read_real("bestiary","miniKills", 0);
 	
-	//--- MINI ---//
+	//--- MOTHERSHIP ---//
 	global.bestiaryEnemyMothershipUnlocked = ini_read_real("bestiary","mini", 0);
 	global.enemyMothershipKilledBy = ini_read_real("bestiary","mothershipKilledBy", 0);
 	global.enemyMothershipKills = ini_read_real("bestiary","mothershipKills", 0);
+	
+	//--- MEGA MOTHERSHIP ---//
+	global.bestiaryEnemyMothershipMegaUnlocked = ini_read_real("bestiary","mothershipMega", 0);
+	global.enemyMothershipMegaKilledBy = ini_read_real("bestiary","mothershipMegaKilledBy", 0);
+	global.enemyMothershipMegaKills = ini_read_real("bestiary","mothershipMegaKills", 0);
+	
+	//--- DISC ---//
+	global.bestiaryEnemyDiscUnlocked = ini_read_real("bestiary","disc", 0);
+	global.enemyDiscKilledBy = ini_read_real("bestiary","discKilledBy", 0);
+	global.enemyDiscKills = ini_read_real("bestiary","discMegaKills", 0);
 	
 	
 	//----- GOD MODE DEFAULT OFF -----//

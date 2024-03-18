@@ -91,6 +91,16 @@ function LoadDefaultData()
 	global.enemyMothershipKilledBy = 0;
 	global.enemyMothershipKills = 0;
 	
+	//-- MEGA MOTHERSHIP --//
+	global.bestiaryEnemyMothershipMegaUnlocked = 0;
+	global.enemyMothershipMegaKilledBy = 0;
+	global.enemyMothershipMegaKills = 0;
+	
+	//--- DISC ---//
+	global.bestiaryEnemyDiscUnlocked = 0;
+	global.enemyDiscKilledBy = 0;
+	global.enemyDiscKills = 0;
+	
 
 	
 }

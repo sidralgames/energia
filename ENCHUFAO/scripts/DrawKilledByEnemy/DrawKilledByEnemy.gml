@@ -344,6 +344,11 @@ function DrawKilledByEnemy()
 		// ------- MOTHERSHIP ENEMIES --------//	
 		case (s_enemyMothership):
 		{
+			if (deathCounted = false)
+			{
+				deathCounted = true;
+				global.enemyMothershipKilledBy +=1;
+			}
 			draw_set_color(global.brightRed);
 			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+261,"Motherthreat");
 
@@ -367,6 +372,11 @@ function DrawKilledByEnemy()
 	
 		case (s_enemyMothershipMega):
 		{
+			if (deathCounted = false)
+			{
+				deathCounted = true;
+				global.enemyMothershipMegaKilledBy +=1;
+			}
 			draw_set_color(global.brightRed);
 			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+261,"MegaMotherthreat");
 
@@ -459,6 +469,12 @@ function DrawKilledByEnemy()
 		// ------- DISC ENEMIES --------//
 		case (s_enemyDisc):
 		{
+			if (deathCounted = false)
+			{
+				deathCounted = true;
+				global.enemyDiscKilledBy +=1;
+			}
+			
 			image_angle+=8;
 	
 			draw_sprite_ext(s_enemyDiscEye, 16, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+245,1,1, 0, image_blend, image_alpha)

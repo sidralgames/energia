@@ -102,7 +102,7 @@ switch(selected)
 		
 		draw_sprite_ext(s_statsHome, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialStat,0.6,0.6,0,image_blend, 0.7)	
 		
-		DrawSpriteBestiary()
+		GetBestiary();
 		
 		draw_sprite_ext(s_achievementsHome, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialAch,0.7,0.7,0,image_blend, 0.7)	
 		draw_sprite_ext(s_highscoresMenu,1, __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialScores,0.8,0.8,0,image_blend, 0.7)

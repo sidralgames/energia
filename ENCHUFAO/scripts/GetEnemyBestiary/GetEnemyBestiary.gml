@@ -7,35 +7,44 @@ function GetEnemyBestiary(argument0)
 	{
 		default:
 		{
-			DrawSpriteWithTrail(enemy.sprite,0,0);
+			BestiaryDrawSpriteWithTrail(enemy.sprite,0,0);
 		}break;
 		
 		case (s_enemyMini_2):
 		{
 			part_type_alpha2(global.EnemyKilledBy_part, 0.9,0.2);
-			DrawSpriteWithTrail(enemy.sprite,-30,-20);
-			DrawSpriteWithTrail(enemy.sprite,20,5);
-			DrawSpriteWithTrail(enemy.sprite,0,-10);
-			DrawSpriteWithTrail(enemy.sprite,-5,9);
-			DrawSpriteWithTrail(enemy.sprite,-25,20);
+			BestiaryDrawSpriteWithTrail(enemy.sprite,-30,-20);
+			BestiaryDrawSpriteWithTrail(enemy.sprite,20,5);
+			BestiaryDrawSpriteWithTrail(enemy.sprite,0,-10);
+			BestiaryDrawSpriteWithTrail(enemy.sprite,-5,9);
+			BestiaryDrawSpriteWithTrail(enemy.sprite,-25,20);
 			
 		}break;
 		
 		case (s_enemyMothership):
 		{
-			DrawSpriteWithTrail(s_enemyMini_2,-40,-20);
-			DrawSpriteWithTrail(enemy.sprite,10,5);
-			DrawSpriteWithTrail(s_enemyMini_2,-10,-10);
-			DrawSpriteWithTrail(s_enemyMini_2,-15,9);
-			DrawSpriteWithTrail(s_enemyMini_2,-35,20);
+			BestiaryDrawSpriteWithTrail(s_enemyMini_2,-40,-20);
+			BestiaryDrawSpriteWithTrail(enemy.sprite,10,5);
+			BestiaryDrawSpriteWithTrail(s_enemyMini_2,-10,-10);
+			BestiaryDrawSpriteWithTrail(s_enemyMini_2,-15,9);
+			BestiaryDrawSpriteWithTrail(s_enemyMini_2,-35,20);
 			
 		}break;
 		
 		case (s_enemyShieldBestiary):
 		{
-			DrawSpriteWithTrail(s_enemyMini,-30,-10);
-			DrawSpriteWithTrail(s_enemyMini_2,-20,9);
-			DrawSpriteWithTrail(enemy.sprite,10,0);
+			BestiaryDrawSpriteWithTrail(s_enemyMini,-30,-10);
+			BestiaryDrawSpriteWithTrail(s_enemyMini_2,-20,9);
+			BestiaryDrawSpriteWithTrail(enemy.sprite,10,0);
+			
+		}break;
+		
+		case (s_enemyDisc):
+		{
+			rot+=10;
+			
+			BestiaryDrawEnemy(enemy.sprite, 0, 0, 0, rot, c_white, 1, false);
+			BestiaryDrawEnemy(s_enemyDiscEye, 28, 0, 0, 0, c_white, 1, false);
 			
 		}break;
 	}

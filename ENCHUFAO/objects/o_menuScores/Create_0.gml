@@ -22,6 +22,8 @@ initialX=320;
 initialXText = 320;
 initialXInterrog = 320;
 
+rot = 0;
+
 part_type_direction(global.EnemyKilledBy_part,175,185,0,1);
 
 scaleArrowsR = 0;

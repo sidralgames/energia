@@ -80,7 +80,8 @@ else
 	global.slowMoTime = global.slowMoTimeMax;
 }
 
-//global.shields = 1;
+shielded = false;
+
 
 slowmoSound = false;
 checkAssist = false;

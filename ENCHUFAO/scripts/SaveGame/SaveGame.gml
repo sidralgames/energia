@@ -83,6 +83,16 @@ function SaveGame()
 	ini_write_real("bestiary","mothershipKills", global.enemyMothershipKills);
 	ini_write_real("bestiary","mothershipKilledBy", global.enemyMothershipKilledBy);
 	
+	//---- MEGA MOTHERSHIP ----//
+	ini_write_real("bestiary","mothershipMega", global.bestiaryEnemyMothershipMegaUnlocked);
+	ini_write_real("bestiary","mothershipMegaKills", global.enemyMothershipMegaKills);
+	ini_write_real("bestiary","mothershipMegaKilledBy", global.enemyMothershipMegaKilledBy);
+	
+	//---- DISC ----//
+	ini_write_real("bestiary","disc", global.bestiaryEnemyDiscUnlocked);
+	ini_write_real("bestiary","discKills", global.enemyDiscKills);
+	ini_write_real("bestiary","discKilledBy", global.enemyDiscKilledBy);
+	
 
 	ini_close();
 }
