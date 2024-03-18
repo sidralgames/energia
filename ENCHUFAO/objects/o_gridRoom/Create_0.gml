@@ -26,7 +26,7 @@ if (room = Sala_0) ||  (room = Sala_SecondBoss) || (room =Sala_Tutorial)
 		}
 	}
 }
-else if (room = Sala_Boss) ||  (room = Sala_FirstBoss)
+else if (room = Sala_Boss) ||  (room = Sala_FirstBoss) 
 {
 	 _wall_map_id = layer_tilemap_get_id("Tiles");
 		for ( var yyW = 0; yyW < height_; yyW++) 
@@ -46,7 +46,7 @@ else if (room = Sala_Boss) ||  (room = Sala_FirstBoss)
 		}
 	}
 }
-else if (room = Sala_Upgade) ||  (room = Sala_MegaUpgrade)
+else if (room = Sala_Upgade) ||  (room = Sala_MegaUpgrade) || (room =Sala_ChillRoom)
 {
 	global.wallgrid_ = ds_grid_create(width_,height_);
 	ds_grid_set_region(global.wallgrid_, 0, 0, width_-1, height_-1, FLOOR);

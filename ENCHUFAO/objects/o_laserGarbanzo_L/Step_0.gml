@@ -64,7 +64,7 @@ if (o_BossMecha.creatingEnemies)
 			if (bomb)
 			{	
 				bomb.hitByLaser = true;
-				instance_destroy(other)
+				instance_destroy(bomb)
 			}
 		}
 	

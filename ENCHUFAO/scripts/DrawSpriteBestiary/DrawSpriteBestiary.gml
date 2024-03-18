@@ -16,15 +16,16 @@ function DrawSpriteBestiary()
 		alphaInfo+=0.1
 	}
 	
-	if (enemy.unlocked = 0) || (enemy.killsNum < enemy.killsToUnlock)
+	if (enemy.unlocked = 0) || (enemy.killsNum < 1)
 	{
 		part_type_alpha2(global.EnemyKilledBy_part, 0,0);
 		
 		draw_set_font(global.customFont14);
 		draw_set_color(global.brightRed);
-		draw_text(__view_get( e__VW.XView, 0 )-1+initialXInterrog,__view_get( e__VW.YView, 0 )+236,"Killed: " + string(enemy.killsNum) + "/" + string(enemy.killsToUnlock));
+		draw_sprite_ext(s_interrog, image_index, __view_get( e__VW.XView, 0 )+initialXInterrog,__view_get( e__VW.YView, 0 )+210, 1,1,0,image_blend, alphaInfo)
+		draw_text(__view_get( e__VW.XView, 0 )-1+initialXInterrog,__view_get( e__VW.YView, 0 )+241,"Killed: " + string(enemy.killsNum) + "/" + string(enemy.killsToUnlock));
 		draw_set_color(c_white);
-		draw_text(__view_get( e__VW.XView, 0 )+initialXInterrog,__view_get( e__VW.YView, 0 )+235,"Killed: " + string(enemy.killsNum) + "/" + string(enemy.killsToUnlock));
+		draw_text(__view_get( e__VW.XView, 0 )+initialXInterrog,__view_get( e__VW.YView, 0 )+240,"Killed: " + string(enemy.killsNum) + "/" + string(enemy.killsToUnlock));
 		
 		draw_set_alpha(alphaInfo)
 		for (var i=0; i<2; i++)
@@ -35,42 +36,59 @@ function DrawSpriteBestiary()
 			draw_set_color(c_white)
 			draw_text(__view_get( e__VW.XView, 0 )+initialXText,__view_get( e__VW.YView, 0 )+150+ (i*110),"??? ?? ???");
 		}
-		draw_set_alpha(1);
-		
-		if (enemy.killsNum > enemy.killsToUnlock/2)
-		{
-			part_type_alpha2(global.EnemyKilledBy_part, 0.5,0.5);
-			
-			draw_set_alpha(alphaInfo);
-						
-			GetEnemyBestiaryLocked(enemy.sprite, c_gray, 0.8);
-		
-			draw_set_alpha(1)
-			draw_set_font(global.customFont14);
-			draw_set_color(global.brightRed);
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+131,string(selectedBest+1) + " / " + string(global.differentEnemiesTotal));
-			draw_set_color(c_white);
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+130,string(selectedBest+1) + " / " + string(global.differentEnemiesTotal));
 
-		}
-		else
-		{
-			part_type_alpha2(global.EnemyKilledBy_part, 0,0);
-			
-			draw_set_alpha(alphaInfo);
-							
-			draw_sprite_ext(s_interrog, image_index, __view_get( e__VW.XView, 0 )+initialXInterrog,__view_get( e__VW.YView, 0 )+210, 1,1,0,image_blend, alphaInfo)
-		
-			draw_set_alpha(1)
-			draw_set_font(global.customFont14);
-			draw_set_color(global.brightRed);
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+131,string(selectedBest+1) + " / " + string(global.differentEnemiesTotal));
-			draw_set_color(c_white);
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+130,string(selectedBest+1) + " / " + string(global.differentEnemiesTotal));
-
-		}
 	}
-	else
+	
+	if (enemy.killsNum >= 1) && (enemy.killsNum < enemy.killsToUnlock)
+	{
+		part_type_alpha2(global.EnemyKilledBy_part, 0.5,0.5);
+		
+		draw_set_alpha(alphaInfo);
+					
+		
+		
+		draw_set_font(global.customFont14);
+		draw_set_color(global.brightRed);
+		draw_text(__view_get( e__VW.XView, 0 )-1+initialXInterrog,__view_get( e__VW.YView, 0 )+241,"Killed: " + string(enemy.killsNum) + "/" + string(enemy.killsToUnlock));
+		draw_set_color(c_white);
+		draw_text(__view_get( e__VW.XView, 0 )+initialXInterrog,__view_get( e__VW.YView, 0 )+240,"Killed: " + string(enemy.killsNum) + "/" + string(enemy.killsToUnlock));
+		
+		draw_set_alpha(alphaInfo)
+		for (var i=0; i<2; i++)
+		{
+			draw_set_font(global.customFont16);
+			draw_set_color(global.brightRed);
+			draw_text(__view_get( e__VW.XView, 0 )-1+initialXText,__view_get( e__VW.YView, 0 )+151 + (i*110),"??? ?? ???");
+			draw_set_color(c_white)
+			draw_text(__view_get( e__VW.XView, 0 )+initialXText,__view_get( e__VW.YView, 0 )+150+ (i*110),"??? ?? ???");
+		}
+		
+		switch (enemy.sprite)
+		{
+			default: 
+			{
+				GetEnemyBestiaryLocked(enemy.sprite, c_gray, 0.8, 0, 0);
+			}break;
+			
+			case (s_enemyShieldBestiary): 
+			{
+				GetEnemyBestiaryLocked(enemy.sprite, c_gray, 0.7, 0, -10);
+				
+			}break;
+			
+		}
+		
+		
+		draw_set_alpha(1)
+		draw_set_font(global.customFont14);
+		draw_set_color(global.brightRed);
+		draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+131,string(selectedBest+1) + " / " + string(global.differentEnemiesTotal));
+		draw_set_color(c_white);
+		draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+130,string(selectedBest+1) + " / " + string(global.differentEnemiesTotal));
+
+	}
+
+	if (enemy.unlocked) && (enemy.killsNum > enemy.killsToUnlock)
 	{
 		draw_set_alpha(alphaInfo)
 		

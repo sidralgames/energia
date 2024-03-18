@@ -61,7 +61,7 @@ if instance_exists(o_BossMecha)
 			if (bomb)
 			{	
 				bomb.hitByLaser = true;
-				instance_destroy(other)
+				instance_destroy(bomb)
 			}
 		}
 	
