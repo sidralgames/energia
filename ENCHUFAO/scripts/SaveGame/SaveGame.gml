@@ -113,6 +113,11 @@ function SaveGame()
 	ini_write_real("bestiary","pewpewKills", global.enemyPewPewKills);
 	ini_write_real("bestiary","pewpewKilledBy", global.enemyPewPewKilledBy);
 	
+	//---- PEWPEW ----//
+	ini_write_real("bestiary","mitoson", global.bestiaryEnemyMitosonUnlocked);
+	ini_write_real("bestiary","mitosonills", global.enemyMitosonKills);
+	ini_write_real("bestiary","mitosonKilledBy", global.enemyMitosonKilledBy);
+	
 
 	ini_close();
 }

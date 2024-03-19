@@ -507,6 +507,7 @@ AddBestiaryEnemyPincher();
 AddBestiaryEnemyNibblade();
 AddBestiaryEnemyBomber();
 AddBestiaryEnemyPewPew();
+AddBestiaryEnemyMitoson();
 
 
 

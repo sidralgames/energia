@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "ENCHUFAO",
-    "path": "ENCHUFAO.yyp",
+    "name": "ADD ENEMIES",
+    "path": "folders/Scripts/BESTIARY/ADD ENEMIES.yy",
   },
 }

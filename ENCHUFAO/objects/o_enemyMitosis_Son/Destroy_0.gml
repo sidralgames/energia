@@ -9,3 +9,11 @@ CreateTemporaryChip(3);
 // Inherit the parent event
 event_inherited();
 
+global.enemyMitosonKills +=1;
+if (global.bestiaryEnemyMitosonUnlocked = 0)
+{
+	global.bestiaryEnemyBasicUnlocked = 1;
+	enemy = ds_map_find_value(global.bestiaryList, enemyBestiaryNumber);
+	enemy.unlocked = 1;
+	global.enemiesInBestiary +=1;
+}

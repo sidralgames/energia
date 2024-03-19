@@ -3,24 +3,7 @@
 
 Controls_Input();
 
-if (key_back)
-{
-	selected-=1;
-	wallMouth = false;
-	alphaInfo=0;
-	tipChoosed = false;
-	part_type_alpha2(global.EnemyKilledBy_part, 1,1);
-	part_type_direction(global.EnemyKilledBy_part,175,185,0,1);
-	aliasOff = 10;
-	factorInitialX = 0.15;
-	
-	audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
-	menuHome = instance_create(x,y,o_menuHome);
-	menuHome.alarm[0]=10;
-	menuHome._visible = true;
-	instance_destroy();
-	o_nextRoom._visible = true;
-}
+
 
 
 if (key_upP)
@@ -176,4 +159,33 @@ switch(selected)
 		
 	}
 	break;
+}
+
+if (key_back)
+{
+	selected-=1;
+	wallMouth = false;
+	alphaInfo=0;
+	tipChoosed = false;
+	part_type_alpha2(global.EnemyKilledBy_part, 1,1);
+	part_type_direction(global.EnemyKilledBy_part,175,185,0,1);
+	aliasOff = 10;
+	factorInitialX = 0.15;
+	
+	audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+	menuHome = instance_create(x,y,o_menuHome);
+	menuHome.alarm[0]=10;
+	menuHome._visible = true;
+	instance_destroy();
+	o_nextRoom._visible = true;
+}
+if instance_exists(o_wallGameOver)
+{
+	if (key_leftP) || (key_rightP)
+	|| (key_upP) || (key_downP) || (key_back)
+	{
+		instance_destroy(o_enemy_Mouth);
+		instance_destroy(o_mouthAnchor);
+		instance_destroy(o_wallGameOver);
+	}
 }

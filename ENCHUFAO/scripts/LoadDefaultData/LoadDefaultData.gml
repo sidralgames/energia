@@ -121,4 +121,9 @@ function LoadDefaultData()
 	global.enemyPewPewKilledBy = 0;
 	global.enemyPewPewKills = 0;
 	
+	//--- MITOSON ---//
+	global.bestiaryEnemyMitosonUnlocked = 0;
+	global.enemyMitosonKilledBy = 0;
+	global.enemyMitosonKills = 0;
+	
 }

@@ -121,6 +121,11 @@ function LoadGame()
 	global.enemyPewPewKilledBy = ini_read_real("bestiary","pewpewKilledBy", 0);
 	global.enemyPewPewKills = ini_read_real("bestiary","pewpewKills", 0);
 	
+	//--- MITOSON ---//
+	global.bestiaryEnemyMitosonUnlocked = ini_read_real("bestiary","mitoson", 0);
+	global.enemyMitosonKilledBy = ini_read_real("bestiary","mitosonKilledBy", 0);
+	global.enemyMitosonKills = ini_read_real("bestiary","mitosonKills", 0);
+	
 	
 	//----- GOD MODE DEFAULT OFF -----//
 	global.godModeIsOn = false;

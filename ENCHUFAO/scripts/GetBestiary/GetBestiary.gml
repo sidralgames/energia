@@ -21,8 +21,6 @@ function GetBestiary()
 		//BestiaryDrawUnlocked();
 		BestiaryDrawUnknown();
 		//BestiaryDrawLocked();
-		
-
 	}
 	
 	if (enemy.killsNum >= 1) && (enemy.killsNum < enemy.killsToUnlock)

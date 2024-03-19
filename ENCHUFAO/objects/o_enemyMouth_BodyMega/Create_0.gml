@@ -32,7 +32,7 @@ rope1.vertexAttachTo(last, instAchor);
 
 plugged = false;
 
-
+_color = c_white;
 //instTope = instance_create(x, y, o_coco);
 //rope1.vertexAttachObject(last, instTope, vertexAttachmentType.positionOnly);
 

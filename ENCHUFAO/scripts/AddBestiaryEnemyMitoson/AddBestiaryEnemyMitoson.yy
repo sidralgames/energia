@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "ChooseEnemyBestiaryPosition",
+  "name": "AddBestiaryEnemyMitoson",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "ENCHUFAO",
-    "path": "ENCHUFAO.yyp",
+    "name": "ADD ENEMIES",
+    "path": "folders/Scripts/BESTIARY/ADD ENEMIES.yy",
   },
 }

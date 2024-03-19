@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+enemyBestiaryNumber = 15;
+
 event_inherited();
 type = collisionType.custom;
 slowMoPickUps = choose(2,3);
