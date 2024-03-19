@@ -10,10 +10,12 @@ ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
 		unlocked: global.bestiaryEnemyBasicMegaUnlocked,
 		textBestiary: "Improved version\nof the Silver Hunter.\nHarder to kill but slower",
 		lines: 3,
-		kills: "KILLED: " + string(global.enemyBasicMegaKills),
+		killsText: "KILLED: " + string(global.enemyBasicMegaKills),
 		killsNum: global.enemyBasicMegaKills,
-		killsToUnlock: 10,
-		killedBy: "KILLED BY: " + string(global.enemyBasicMegaKilledBy)
+		killsToUnlock: 8,
+		killedByText: "KILLED BY: " + string(global.enemyBasicMegaKilledBy),
+		killedByNum: global.enemyBasicMegaKilledBy,
+		group: "Basic"
 	})
 
 global.numberOfEnemiesBestiary +=1;

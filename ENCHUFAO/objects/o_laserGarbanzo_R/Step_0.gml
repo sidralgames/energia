@@ -88,7 +88,7 @@ if instance_exists(o_BossMecha)
 							
 							if (global.hp <= 0)
 							{
-								global.spriteKilledBy =s_bossMechaActive;
+								global.numEnemyKilledBy =s_bossMechaActive;
 								global.imageKilledBy = 0;
 							}
 						}

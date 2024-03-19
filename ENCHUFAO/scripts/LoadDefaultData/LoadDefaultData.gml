@@ -101,6 +101,24 @@ function LoadDefaultData()
 	global.enemyDiscKilledBy = 0;
 	global.enemyDiscKills = 0;
 	
+	//--- PINCHER ---//
+	global.bestiaryEnemyPincherUnlocked = 0;
+	global.enemyPincherKilledBy = 0;
+	global.enemyPincherKills = 0;
+	
+	//--- NIBBLADE ---//
+	global.bestiaryEnemyNibbladeUnlocked = 0;
+	global.enemyNibbladeKilledBy = 0;
+	global.enemyNibbladeKills = 0;
 
+	//--- BOMBO ---//
+	global.bestiaryEnemyBomboUnlocked = 0;
+	global.enemyBomboKilledBy = 0;
+	global.enemyBomboKills = 0;
+	
+	//--- PEWPEW ---//
+	global.bestiaryEnemyPewPewUnlocked = 0;
+	global.enemyPewPewKilledBy = 0;
+	global.enemyPewPewKills = 0;
 	
 }

@@ -15,7 +15,7 @@ if (global.shields<1) //&& (other.isImmortal = false)
 		{
 			if (other.sprite_index != s_shieldPurple)
 			{
-				global.spriteKilledBy = other.sprite_index;
+				global.numEnemyKilledBy = other.enemyBestiaryNumber;
 				
 				if (other.finalTrail)
 				{
@@ -24,7 +24,7 @@ if (global.shields<1) //&& (other.isImmortal = false)
 			}
 			else
 			{
-				global.spriteKilledBy = other.enemyShooter;
+				global.numEnemyKilledBy = other.enemyShooter;
 				global.FinalTrail = other.shooterTrail;
 				
 			}

@@ -18,11 +18,12 @@ function PlayerShipShoot()
 	audio_play_sound_on(global.audioEmitter,snd_shoot_2, false, 80,,,random_range(0.85,1))
 	audio_play_sound_on(global.audioEmitter,snd_shoot_5, false, 80,,,random_range(0.85,1))
 		
-	shoots = ceil(global.ammo/50);
+	shoots = ceil(global.ammo/global.ammoMod);
 		
 	for (var i = 0; i<shoots; i++)
 	{
-		off = -(shoots) + i*2
+		//----- EQUIDISTANTES Y REPARTIDAS A CADA LADO - 2.5PX DE DIFERENCIA ENTRE BALA ¿¿ACCURACY??----//
+		off = -(shoots) + i*2.5; 
 		
 		bullet[i] = instance_create_layer(x +((_hpush*3) * global.relativeSpeed) + lengthdir_x(15, _angle), y +((_vpush*5) * global.relativeSpeed)+ lengthdir_y(15, _angle),
 		"Bullets", o_bulletPlayer);

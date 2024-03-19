@@ -10,10 +10,12 @@ ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
 		unlocked: global.bestiaryEnemyMothershipUnlocked,
 		textBestiary: "Throw MINITHREATS\nfrom their insides.\nDestroying it quickly\nis HIGHLY recommended.",
 		lines: 4,
-		kills: "KILLED: " + string(global.enemyMothershipKills),
+		killsText: "KILLED: " + string(global.enemyMothershipKills),
 		killsNum: global.enemyMothershipKills,
 		killsToUnlock: 5,
-		killedBy: "KILLED BY: " + string(global.enemyMothershipKilledBy)
+		killedByText: "KILLED BY: " + string(global.enemyMothershipKilledBy),
+		killedByNum: global.enemyMothershipKilledBy,
+		group: "Mothership"
 		
 	})
 

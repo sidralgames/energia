@@ -5,6 +5,15 @@ Controls_Input();
 
 if (key_back)
 {
+	selected-=1;
+	wallMouth = false;
+	alphaInfo=0;
+	tipChoosed = false;
+	part_type_alpha2(global.EnemyKilledBy_part, 1,1);
+	part_type_direction(global.EnemyKilledBy_part,175,185,0,1);
+	aliasOff = 10;
+	factorInitialX = 0.15;
+	
 	audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 	menuHome = instance_create(x,y,o_menuHome);
 	menuHome.alarm[0]=10;
@@ -17,12 +26,22 @@ if (key_back)
 if (key_upP)
 {
 	selected-=1;
+	wallMouth = false;
+	alphaInfo=0;
+	tipChoosed = false;
+	factorInitialX = 0.15
+	part_type_alpha2(global.EnemyKilledBy_part, 1,1);
 	audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 	
 }
 if (key_downP)
 {
+	factorInitialX = 0.15
 	selected+=1;
+	wallMouth = false;
+	alphaInfo=0;
+	tipChoosed = false;
+	part_type_alpha2(global.EnemyKilledBy_part, 1,1);
 	audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 }
 
@@ -52,6 +71,10 @@ if (selected = 3)
 		alphaInfo=0;
 		scaleArrowsR =0.5;
 		tipChoosed = false;
+		wallMouth = false;
+		alarm[0] = 10;
+		aliasOff = 10;
+		factorInitialX = 0.15
 		//contParts = 0;
 		part_type_direction(global.EnemyKilledBy_part,175,185,0,1);
 	}
@@ -67,6 +90,10 @@ if (selected = 3)
 		scaleArrowsL =0.5;
 		alphaInfo=0;
 		tipChoosed = false;
+		wallMouth = false;
+		alarm[0] = 10;
+		aliasOff = 10;
+		factorInitialX = 0.15
 		//contParts = 0;
 		part_type_direction(global.EnemyKilledBy_part,355,5,0,1);
 	}
@@ -138,6 +165,7 @@ switch(selected)
 	{
 		if (key_x)
 		{
+			part_type_direction(global.EnemyKilledBy_part,175,185,0,1);
 			audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 			menuHome = instance_create(x,y,o_menuHome);
 			menuHome.alarm[0]=10;

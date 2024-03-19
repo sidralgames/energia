@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function DrawKilledByEnemy()
 {
-	switch(global.spriteKilledBy)
+	switch(global.numEnemyKilledBy)
 	{
 		// ------- BASIC ENEMIES --------//
 		case (s_enemyBasic):
@@ -452,7 +452,7 @@ function DrawKilledByEnemy()
 	
 		case (s_shieldEnemy):
 		{
-			global.spriteKilledBy = s_enemyShield;
+			global.numEnemyKilledBy = s_enemyShield;
 		}
 		break;
 	

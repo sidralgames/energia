@@ -10,10 +10,12 @@ ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
 		unlocked: global.bestiaryEnemyMothershipMegaUnlocked,
 		textBestiary: "More internal capacity.\nExpulses hordes\nof MINITHREATS.",
 		lines: 3,
-		kills: "KILLED: " + string(global.enemyMothershipMegaKills),
+		killsText: "KILLED: " + string(global.enemyMothershipMegaKills),
 		killsNum: global.enemyMothershipMegaKills,
 		killsToUnlock: 5,
-		killedBy: "KILLED BY: " + string(global.enemyMothershipMegaKilledBy)
+		killedByText: "KILLED BY: " + string(global.enemyMothershipMegaKilledBy),
+		killedByNum: global.enemyMothershipMegaKilledBy,
+		group: "Mothership"
 		
 	})
 

@@ -46,7 +46,7 @@ function Enemy_WaitingAnchored()
 			}
 		}
 		
-		if !instance_exists(o_gameOver)
+		if !instance_exists(o_gameOver) && !instance_exists(o_menuScores)
 		{
 			if tile_meeting(x+lengthdir_x(5,direction), y+lengthdir_y(5,direction), "Tiles")
 			{

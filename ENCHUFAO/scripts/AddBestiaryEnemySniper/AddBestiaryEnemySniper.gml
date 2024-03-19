@@ -10,10 +10,12 @@ ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
 		unlocked: global.bestiaryEnemySniperUnlocked,
 		textBestiary: "Slow movement,\nbut precise and fast\n at shooting.\nTip: SlowMo their bullets!",
 		lines: 4,
-		kills: "KILLED: " + string(global.enemySniperKills),
+		killsText: "KILLED: " + string(global.enemySniperKills),
 		killsNum: global.enemySniperKills,
-		killsToUnlock: 5,
-		killedBy: "KILLED BY: " + string(global.enemySniperKilledBy)
+		killsToUnlock: 4,
+		killedByText: "KILLED BY: " + string(global.enemySniperKilledBy),
+		killedByNum: global.enemySniperKilledBy,
+		group: "Shooter"
 	})
 
 global.numberOfEnemiesBestiary +=1;

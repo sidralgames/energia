@@ -18,6 +18,10 @@ minNumb = global.differentEnemiesTotal;
 selectedBest=0
 enemyToShow=0;
 
+aliasOff = 0;
+
+factorInitialX = 0.15;
+
 initialX=320;
 initialXText = 320;
 initialXInterrog = 320;
@@ -30,6 +34,7 @@ scaleArrowsR = 0;
 scaleArrowsL = 0;
 xScale = 1;
 
+wallMouth = false;
 
 bestiaryNum = 0;
 initialScale = 1;
@@ -37,3 +42,9 @@ contPartsInitial = 8;
 contParts = 0
 trailCreated = false;
 
+
+frequency = 1;
+amplitude = 50;
+midpoint = 10;
+timer = 0;
+current = 0;

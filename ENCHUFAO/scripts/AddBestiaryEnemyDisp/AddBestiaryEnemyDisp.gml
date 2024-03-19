@@ -10,10 +10,12 @@ ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
 		unlocked: global.bestiaryEnemyDispUnlocked,
 		textBestiary: "Some gained the\nability to shoot\nREDDARK ENERGY\nfrom their eyes.",
 		lines: 4,
-		kills: "KILLED: " + string(global.enemyDispKills),
+		killsText: "KILLED: " + string(global.enemyDispKills),
 		killsNum: global.enemyDispKills,
 		killsToUnlock: 7,
-		killedBy: "KILLED BY: " + string(global.enemyDispKilledBy)
+		killedByText: "KILLED BY: " + string(global.enemyDispKilledBy),
+		killedByNum: global.enemyDispKilledBy,
+		group: "Shooter"
 	})
 
 global.numberOfEnemiesBestiary +=1;

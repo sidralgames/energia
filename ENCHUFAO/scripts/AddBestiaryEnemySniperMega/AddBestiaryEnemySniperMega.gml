@@ -10,10 +10,12 @@ ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
 		unlocked: global.bestiaryEnemySniperMegaUnlocked,
 		textBestiary: "A better SNIPER model.\nShoots more bullets.\nBe even more careful!",
 		lines: 3,
-		kills: "KILLED: " + string(global.enemySniperMegaKills),
+		killsText: "KILLED: " + string(global.enemySniperMegaKills),
 		killsNum: global.enemySniperMegaKills,
 		killsToUnlock: 5,
-		killedBy: "KILLED BY: " + string(global.enemySniperMegaKilledBy)
+		killedByText: "KILLED BY: " + string(global.enemySniperMegaKilledBy),
+		killedByNum: global.enemySniperMegaKilledBy,
+		group: "Shooter"
 	})
 
 global.numberOfEnemiesBestiary +=1;

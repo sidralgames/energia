@@ -10,10 +10,12 @@ ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
 		unlocked: global.bestiaryEnemyFastUnlocked,
 		textBestiary: "Evolved to be faster.\nALWAYS catching\ntheir prey.\nShoot'em fast.",
 		lines: 4,
-		kills: "KILLED: " + string(global.enemyFastKills),
+		killsText: "KILLED: " + string(global.enemyFastKills),
 		killsNum: global.enemyFastKills,
 		killsToUnlock: 12,
-		killedBy: "KILLED BY: " + string(global.enemyFastKilledBy)
+		killedByText: "KILLED BY: " + string(global.enemyFastKilledBy),
+		killedByNum: global.enemyFastKilledBy,
+		group: "Basic"
 		
 	})
 

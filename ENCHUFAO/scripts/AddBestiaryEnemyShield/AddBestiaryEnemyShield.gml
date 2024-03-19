@@ -10,10 +10,12 @@ ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
 		unlocked: global.bestiaryEnemyShieldUnlocked,
 		textBestiary: "Other monstships can\ntake cover behind\ntheir energy SHIELD",
 		lines: 3,
-		kills: "KILLED: " + string(global.enemyShieldKills),
+		killsText: "KILLED: " + string(global.enemyShieldKills),
 		killsNum: global.enemyShieldKills,
 		killsToUnlock: 3,
-		killedBy: "KILLED BY: " + string(global.enemyShieldKilledBy)
+		killedByText: "KILLED BY: " + string(global.enemyShieldKilledBy),
+		killedByNum: global.enemyShieldKilledBy,
+		group: "Basic"
 		
 	})
 

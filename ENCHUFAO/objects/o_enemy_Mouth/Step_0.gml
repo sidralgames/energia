@@ -13,59 +13,101 @@ if (contDiscount <= 0)
 	}
 }
 
-if (megaStated = false)
+if (isOnlyDraw)
 {
-	megaStated = true;
-	if (fromBullet = false)
+	if (setDraw = false)
 	{
-		if (canBeMega)
+		setDraw = true;
+		
+		if (isMegaDraw)
 		{
-			if (isMega = 0) 
+			enemyBestiaryNumber = 12;
+			_hp = 7;
+			sprite_index = s_enemyMouthMega;
+			isMegaEnemy = true;
+
+			cable = instance_create_layer(x,y,"PauseHUE", o_enemyMouth_BodyMega);
+			cable._color = _colorBody;
+		}
+		else
+		{
+			enemyBestiaryNumber = 11;
+			_hp = 7;
+			sprite_index = s_enemyMouth;
+			isMegaEnemy = true;
+
+			cable = instance_create_layer(x,y,"PauseHUE", o_enemyMouth_Body);
+			cable._color = _colorBody;
+		}
+	}
+}
+else
+{
+	if (megaStated = false)
+	{
+		megaStated = true;
+		
+		if (fromBullet = false)
+		{
+			if (canBeMega)
 			{
-				_hp = 7;
-				sprite_index = s_enemyMouthMega;
-				isMegaEnemy = true;
-				if instance_exists(o_gameOver)
+				if (isMega = 0) 
 				{
-					cable = instance_create_layer(x,y,"PauseHUE", o_enemyMouth_BodyMega);
+					enemyBestiaryNumber = 12;
+					_hp = 7;
+					sprite_index = s_enemyMouthMega;
+					isMegaEnemy = true;
+					if instance_exists(o_gameOver) || instance_exists(o_menuScores)
+					{
+						cable = instance_create_layer(x,y,"PauseHUE", o_enemyMouth_BodyMega);
+						cable._color = _colorBody;
+					}
+					else
+					{
+						cable = instance_create_layer(x,y,"EnemiesHUE", o_enemyMouth_BodyMega);
+					}
 				}
 				else
 				{
-					cable = instance_create_layer(x,y,"EnemiesHUE", o_enemyMouth_BodyMega);
+					if instance_exists(o_gameOver) || instance_exists(o_menuScores)
+					{
+						cable = instance_create_layer(x,y,"PauseHUE", o_enemyMouth_Body);
+						cable._color = _colorBody;
+					}
+					else
+					{
+						cable = instance_create_layer(x,y,"EnemiesHUE", o_enemyMouth_Body);
+					}
 				}
 			}
 			else
 			{
-				if instance_exists(o_gameOver)
+				if instance_exists(o_gameOver) || instance_exists(o_menuScores)
 				{
 					cable = instance_create_layer(x,y,"PauseHUE", o_enemyMouth_Body);
+					cable._color = _colorBody;
 				}
 				else
 				{
 					cable = instance_create_layer(x,y,"EnemiesHUE", o_enemyMouth_Body);
 				}
+			
 			}
 		}
 		else
 		{
-			if instance_exists(o_gameOver)
-			{
-				cable = instance_create_layer(x,y,"PauseHUE", o_enemyMouth_Body);
-			}
-			else
-			{
-				cable = instance_create_layer(x,y,"EnemiesHUE", o_enemyMouth_Body);
-			}
-			
+			cable = instance_create_layer(x,y,"EnemiesHUE", o_enemyMouth_Body);
+		
 		}
 	}
-	else
-	{
-		cable = instance_create_layer(x,y,"EnemiesHUE", o_enemyMouth_Body);
-		
-	}
-
 }
+		
+
+
+
+
+
+
 
 
 event_inherited();

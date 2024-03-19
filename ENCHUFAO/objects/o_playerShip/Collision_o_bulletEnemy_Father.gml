@@ -14,7 +14,7 @@ if (global.shields<1)
 		global.hp -= 1 * global.damageReceived;
 		if (global.hp <1)
 		{
-			global.spriteKilledBy = other.enemyShooter;
+			global.numEnemyKilledBy = other.enemyShooter;
 			global.FinalTrail = other.shooterTrail;
 		}
 		instance_destroy(other);

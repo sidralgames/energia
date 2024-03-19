@@ -1,3 +1,5 @@
+enemyBestiaryNumber = 14;
+
 parado=false
 type = collisionType.custom;
 direction= point_direction(x, y, o_playerShip.x, o_playerShip.y)+choose(-90,-60,60,90);

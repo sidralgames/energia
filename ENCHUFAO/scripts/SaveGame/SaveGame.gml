@@ -92,6 +92,26 @@ function SaveGame()
 	ini_write_real("bestiary","disc", global.bestiaryEnemyDiscUnlocked);
 	ini_write_real("bestiary","discKills", global.enemyDiscKills);
 	ini_write_real("bestiary","discKilledBy", global.enemyDiscKilledBy);
+
+	//---- PINCHER ----//
+	ini_write_real("bestiary","pincher", global.bestiaryEnemyPincherUnlocked);
+	ini_write_real("bestiary","pincherKills", global.enemyPincherKills);
+	ini_write_real("bestiary","pincherKilledBy", global.enemyPincherKilledBy);
+	
+	//---- NIBBLADE ----//
+	ini_write_real("bestiary","nibblade", global.bestiaryEnemyNibbladeUnlocked);
+	ini_write_real("bestiary","nibbladeKills", global.enemyNibbladeKills);
+	ini_write_real("bestiary","nibbladeKilledBy", global.enemyNibbladeKilledBy);
+
+	//---- BOMBO ----//
+	ini_write_real("bestiary","bombo", global.bestiaryEnemyBomboUnlocked);
+	ini_write_real("bestiary","bomboKills", global.enemyBomboKills);
+	ini_write_real("bestiary","bomboKilledBy", global.enemyBomboKilledBy);
+	
+	//---- PEWPEW ----//
+	ini_write_real("bestiary","pewpew", global.bestiaryEnemyPewPewUnlocked);
+	ini_write_real("bestiary","pewpewKills", global.enemyPewPewKills);
+	ini_write_real("bestiary","pewpewKilledBy", global.enemyPewPewKilledBy);
 	
 
 	ini_close();

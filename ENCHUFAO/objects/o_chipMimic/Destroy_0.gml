@@ -21,7 +21,7 @@ if instance_exists(o_playerShip)
 			
 			if (global.hp <1)
 			{
-				global.spriteKilledBy = s_chipMimic;
+				global.numEnemyKilledBy = s_chipMimic;
 				global.FinalTrail = false;
 			}
 			

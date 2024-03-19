@@ -10,10 +10,12 @@ ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
 		unlocked: global.bestiaryEnemyMiniUnlocked,
 		textBestiary: "Too many of this\ntiny and fast monstship\ncan be a PROBLEM.",
 		lines: 3,
-		kills: "KILLED: " + string(global.enemyMiniKills),
+		killsText: "KILLED: " + string(global.enemyMiniKills),
 		killsNum: global.enemyMiniKills,
 		killsToUnlock: 20,
-		killedBy: "KILLED BY: " + string(global.enemyMiniKilledBy)
+		killedByText: "KILLED BY: " + string(global.enemyMiniKilledBy),
+		killedByNum: global.enemyMiniKilledBy,
+		group: "Mini"
 		
 	})
 

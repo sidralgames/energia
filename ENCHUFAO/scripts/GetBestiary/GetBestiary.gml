@@ -5,7 +5,7 @@ function GetBestiary()
 	draw_set_halign(fa_center);
 	
 	initialY = 220;
-	initialX = lerp(initialX, 320, 0.15);
+	initialX = lerp(initialX, 320, factorInitialX);
 	initialXText = lerp(initialXText, 320, 0.15);
 	initialXInterrog = lerp(initialXInterrog, 320, 0.15);
 	
@@ -20,14 +20,14 @@ function GetBestiary()
 	{
 		//BestiaryDrawUnlocked();
 		BestiaryDrawUnknown();
-		//BestiaryGetEnemyLocked();
+		//BestiaryDrawLocked();
 		
 
 	}
 	
 	if (enemy.killsNum >= 1) && (enemy.killsNum < enemy.killsToUnlock)
 	{
-		BestiaryGetEnemyLocked();
+		BestiaryDrawLocked();
 	}
 
 	if (enemy.unlocked) && (enemy.killsNum > enemy.killsToUnlock)

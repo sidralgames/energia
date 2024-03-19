@@ -10,10 +10,12 @@ ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
 		unlocked: global.bestiaryEnemyBasicUnlocked,
 		textBestiary: "The BIG BREACH\nthrew loads of\nthis monstship\ninto our galaxy.",
 		lines: 4,
-		kills: "KILLED: " + string(global.enemyBasicKills),
+		killsText: "KILLED: " + string(global.enemyBasicKills),
 		killsNum: global.enemyBasicKills,
 		killsToUnlock: 10,
-		killedBy: "KILLED BY: " + string(global.enemyBasicKilledBy)
+		killedByText: "KILLED BY: " + string(global.enemyBasicKilledBy),
+		killedByNum: global.enemyBasicKilledBy,
+		group: "Basic"
 		
 	})
 

@@ -2,7 +2,7 @@
 // Puede escribir su código en este editor
 image_alpha = o_gameOver.image_alpha;
 
-if global.spriteKilledBy = s_torreta
+if global.numEnemyKilledBy = s_torreta
 {
 	current = dsin(timer * frequency) * amplitude + midpoint;
 	timer++;
@@ -12,14 +12,6 @@ if global.spriteKilledBy = s_torreta
 draw_set_font(global.customFont16);
 draw_set_halign(fa_center);
 
-
-if (drawsprite)
-{
-	if (global.spriteKilledBy != noone)
-	{
-		draw_sprite_ext(global.spriteKilledBy, image_index, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+245+off,1,1, image_angle, image_blend, o_gameOver.image_alpha)
-	}
-}
 
 // ----- PARTICLES?----//
 if (global.FinalTrail = true)
@@ -39,7 +31,7 @@ if (global.FinalTrail = true)
 		
 //DrawStatsUpgrades();
 
-DrawKilledByEnemy();
+DrawKilledByEnemy_2();
 
 draw_set_font(global.customFont16);
 draw_set_halign(fa_center);

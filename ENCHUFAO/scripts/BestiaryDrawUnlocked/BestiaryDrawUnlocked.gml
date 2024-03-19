@@ -5,7 +5,7 @@ function BestiaryDrawUnlocked()
 	draw_set_alpha(alphaInfo)
 	part_type_alpha2(global.EnemyKilledBy_part, 1,1);
 		
-	GetEnemyBestiary(enemy.sprite);
+	GetEnemyBestiary(enemy.alias);
 		
 	BestiaryDrawEnemyInfo();
 		

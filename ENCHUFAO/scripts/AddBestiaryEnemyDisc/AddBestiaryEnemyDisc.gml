@@ -10,10 +10,12 @@ function AddBestiaryEnemyDisc()
 		unlocked: global.bestiaryEnemyDiscUnlocked,
 		textBestiary: "Remains asleep until\napproaching them.\nExplodes after dying.",
 		lines: 3,
-		kills: "KILLED: " + string(global.enemyDiscKills),
+		killsText: "KILLED: " + string(global.enemyDiscKills),
 		killsNum: global.enemyDiscKills,
 		killsToUnlock: 5,
-		killedBy: "KILLED BY: " + string(global.enemyDiscKilledBy)
+		killedByText: "KILLED BY: " + string(global.enemyDiscKilledBy),
+		killedByNum: global.enemyDiscKilledBy,
+		group: "Basic"
 	})
 
 	global.numberOfEnemiesBestiary +=1;

@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+enemyBestiaryNumber = 11;
+_colorBody = c_white;
 event_inherited();
 
 finalTrail = false;
@@ -60,6 +62,9 @@ anchor = -1;
 isMega = irandom(5);
 megaStated = false;
 canBeMega = true;
+isMegaDraw = false;
+isOnlyDraw = false;
+setDraw = false;
 
 
 

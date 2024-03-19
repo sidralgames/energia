@@ -21,7 +21,7 @@ if collision_circle(x,y,120,o_playerShip, false, true)
 			global.hp -= 1 * global.damageReceived;
 			if (global.hp <= 0)
 			{
-				global.spriteKilledBy = s_bossWorm_Mouth_Metal;
+				global.numEnemyKilledBy = s_bossWorm_Mouth_Metal;
 			}
 			screenShake(4,30);		
 			global.hitsTaken+=1;

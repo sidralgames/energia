@@ -101,6 +101,26 @@ function LoadGame()
 	global.enemyDiscKilledBy = ini_read_real("bestiary","discKilledBy", 0);
 	global.enemyDiscKills = ini_read_real("bestiary","discMegaKills", 0);
 	
+	//--- PINCHER ---//
+	global.bestiaryEnemyPincherUnlocked = ini_read_real("bestiary","pincher", 0);
+	global.enemyPincherKilledBy = ini_read_real("bestiary","pincherKilledBy", 0);
+	global.enemyPincherKills = ini_read_real("bestiary","pincherKills", 0);
+
+	//--- NIBBLADE ---//
+	global.bestiaryEnemyNibbladeUnlocked = ini_read_real("bestiary","nibblade", 0);
+	global.enemyNibbladeKilledBy = ini_read_real("bestiary","nibbladeKilledBy", 0);
+	global.enemyNibbladeKills = ini_read_real("bestiary","nibbladeKills", 0);
+	
+	//--- BOMBO ---//
+	global.bestiaryEnemyBomboUnlocked = ini_read_real("bestiary","bombo", 0);
+	global.enemyBomboKilledBy = ini_read_real("bestiary","bomboKilledBy", 0);
+	global.enemyBomboKills = ini_read_real("bestiary","bomboKills", 0);
+	
+	//--- PEWPEW ---//
+	global.bestiaryEnemyPewPewUnlocked = ini_read_real("bestiary","pewpew", 0);
+	global.enemyPewPewKilledBy = ini_read_real("bestiary","pewpewKilledBy", 0);
+	global.enemyPewPewKills = ini_read_real("bestiary","pewpewKills", 0);
+	
 	
 	//----- GOD MODE DEFAULT OFF -----//
 	global.godModeIsOn = false;
