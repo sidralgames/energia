@@ -43,6 +43,9 @@ contParts = 0
 trailCreated = false;
 
 
+imageSprite = 0;
+enchufeChoosed = false;
+
 frequency = 1;
 amplitude = 50;
 midpoint = 10;

@@ -113,10 +113,30 @@ function SaveGame()
 	ini_write_real("bestiary","pewpewKills", global.enemyPewPewKills);
 	ini_write_real("bestiary","pewpewKilledBy", global.enemyPewPewKilledBy);
 	
-	//---- PEWPEW ----//
+	//---- MITOSON ----//
 	ini_write_real("bestiary","mitoson", global.bestiaryEnemyMitosonUnlocked);
-	ini_write_real("bestiary","mitosonills", global.enemyMitosonKills);
+	ini_write_real("bestiary","mitosonKills", global.enemyMitosonKills);
 	ini_write_real("bestiary","mitosonKilledBy", global.enemyMitosonKilledBy);
+	
+	//---- MITOSHIP ----//
+	ini_write_real("bestiary","mitoship", global.bestiaryEnemyMitoshipUnlocked);
+	ini_write_real("bestiary","mitoshipKills", global.enemyMitoshipKills);
+	ini_write_real("bestiary","mitoshipKilledBy", global.enemyMitoshipKilledBy);
+	
+	//---- MITOTHREE ----//
+	ini_write_real("bestiary","mitothree", global.bestiaryEnemyMitothreeUnlocked);
+	ini_write_real("bestiary","mitothreeKills", global.enemyMitothreeKills);
+	ini_write_real("bestiary","mitothreeKilledBy", global.enemyMitothreeKilledBy);
+	
+	//---- SOCKETSUCKER ----//
+	ini_write_real("bestiary","socketsucker", global.bestiaryEnemySocketsuckerUnlocked);
+	ini_write_real("bestiary","socketsuckerKills", global.enemySocketsuckerKills);
+	ini_write_real("bestiary","socketsuckerKilledBy", global.enemySocketsuckerKilledBy);
+	
+	//---- LIL CRUSHER ----//
+	ini_write_real("bestiary","lilcrusher", global.bestiaryEnemyBossCrusherUnlocked);
+	ini_write_real("bestiary","lilcrusherKills", global.enemyBossCrusherKills);
+	ini_write_real("bestiary","lilcrusherKilledBy", global.enemyBossCrusherKilledBy);
 	
 
 	ini_close();

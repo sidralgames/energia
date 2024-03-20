@@ -9,45 +9,86 @@ function DrawKilledByEnemy_2()
 		// ------- BASIC ENEMIES --------//
 		default:
 		{
-			KilledByDrawEnemy(enemy.alias, infoGameOverEnemyBasic, irandom_range(0,11))
+			KilledByDrawEnemy(enemy.alias, infoGameOverEnemyBasic, irandom_range(0,11), global.FinalTrail, 0);
 		}
 		break
 		
 		case ("Basic"):
 		{
-			KilledByDrawEnemy(enemy.alias, infoGameOverEnemyBasic, irandom_range(0,11))
+			KilledByDrawEnemy(enemy.alias, infoGameOverEnemyBasic, irandom_range(0,11), global.FinalTrail, 0);
 		}
 		break;
 	
 		case ("Shooter"):
 		{
-			KilledByDrawEnemy(enemy.alias, infoGameOverEnemyShooter, irandom_range(0,6))
+			KilledByDrawEnemy(enemy.alias, infoGameOverEnemyShooter, irandom_range(0,6), global.FinalTrail, 0);
 		}
 		break;
 		
 		case ("Mini"):
 		{
-			KilledByDrawEnemy(enemy.alias, infoGameOverEnemyMini, irandom_range(0,8))
+			KilledByDrawEnemy(enemy.alias, infoGameOverEnemyMini, irandom_range(0,8), global.FinalTrail, 0);
 		}
 		break;
 		
 		case ("Mothership"):
 		{
-			KilledByDrawEnemy(enemy.alias, infoGameOverEnemyMotherShip, irandom_range(0,5))
-		}
-		break;
-		
-		case ("WallMouth"):
-		{
-			KilledByDrawEnemy(enemy.alias, infoGameOverEnemyWall, irandom_range(0,10))
+			KilledByDrawEnemy(enemy.alias, infoGameOverEnemyMotherShip, irandom_range(0,5), global.FinalTrail, 0);
 		}
 		break;
 		
 		case ("Bombers"):
 		{
-			KilledByDrawEnemy(enemy.alias, infoGameOverEnemyBombs, irandom_range(0,7))
+			KilledByDrawEnemy(enemy.alias, infoGameOverEnemyBombs, irandom_range(0,7), global.FinalTrail, 0);
 		}
 		break;
+		
+		case ("Mitosis"):
+		{
+			KilledByDrawEnemy(enemy.alias, infoGameOverEnemyMitosis, irandom_range(0,8), global.FinalTrail, 0);
+		}
+		break;
+		
+		case ("Shields"):
+		{
+			KilledByDrawEnemy(enemy.alias, infoGameOverEnemyShield, irandom_range(0,8), global.FinalTrail, 0);
+		}
+		break;
+		
+		case ("Discs"):
+		{
+			KilledByDrawEnemy(enemy.alias, infoGameOverEnemyDisc, irandom_range(0,9), global.FinalTrail, 0);
+		}
+		break;
+		
+		case ("WallMouth"):
+		{
+			GameOverDrawWallEnemy(enemy.alias, infoGameOverEnemyWall, irandom_range(0,10));
+		}
+		break;
+		
+		case ("Turrets"):
+		{
+			GameOverDrawTurretEnemy(enemy.alias, infoGameOverEnemyTorreta, irandom_range(0,5));
+		}
+		break;
+		
+		case ("SocketSuckers"):
+		{
+			imageSprite += 0.2;
+			GameOverDrawSprite(s_enchufe_Ammo, 0);
+			KilledByDrawEnemy(enemy.alias, infoGameOverEnemyShield, irandom_range(0,8), global.FinalTrail, imageSprite);
+		}
+		break;
+		
+		case ("Lil Crusher"):
+		{
+			KilledByDrawEnemy(enemy.alias, infoGameOverLilCrusher, irandom_range(0,5), false, 0);
+		}
+		break;
+		
+		//Worms
+		
 		
 		// -------BOMB ENEMIES & BOMBS-------//
 		case (s_explo):
@@ -99,70 +140,6 @@ function DrawKilledByEnemy_2()
 		}
 		break;
 		
-		// ------- MITOSIS ENEMIES --------//
-		case (s_enemyMitosis):
-		{
-			draw_set_color(global.brightRed);
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+261,"Mitoship");
-
-			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+260,"Mitoship");
-		
-			draw_set_font(global.customFont12);
-			if (tipChoosed = false)
-			{
-				tipChoosed = true;
-				tip = irandom_range(0,7)
-			}
-			infoGameOverEnemyMitosis(tip);
-			draw_set_color(global.lightBlue)
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+286, string(text))
-			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+285, string(text))
-		}
-		break;
-	
-		case (s_enemyMitosis_Son):
-		{
-			draw_set_color(global.brightRed);
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+261,"Mitoson");
-
-			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+260,"Mitoson");
-			draw_set_font(global.customFont12);
-			if (tipChoosed = false)
-			{
-				tipChoosed = true;
-				tip = irandom_range(0,7)
-			}
-			infoGameOverEnemyMitosis(tip);
-			draw_set_color(global.lightBlue)
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+286, string(text))
-			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+285, string(text))
-		}
-		break;
-	
-		case (s_enemyMitosis_Mega):
-		{
-			draw_set_color(global.brightRed);
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+261,"Mitothree");
-
-			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+260,"Mitothree");
-			draw_set_font(global.customFont12);
-			if (tipChoosed = false)
-			{
-				tipChoosed = true;
-				tip = irandom_range(0,7)
-			}
-			infoGameOverEnemyMitosis(tip);
-			draw_set_color(global.lightBlue)
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+286, string(text))
-			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+285, string(text))
-		}
-		break;
 		
 		// ------- OVNI ENEMIES --------//
 		case (s_enemyMisil):
@@ -190,39 +167,7 @@ function DrawKilledByEnemy_2()
 		}
 		break;
 		// ------- SHIELD ENEMIES --------//
-		case (s_enemyShield):
-		{
-			if (deathCounted = false)
-			{
-				deathCounted = true;
-				global.enemyShieldKilledBy +=1;
-			}
-			draw_sprite_ext(s_shieldEnemy, 10, __view_get( e__VW.XView, 0 )+332,__view_get( e__VW.YView, 0 )+245,1,1, image_angle, image_blend, 0.9)
-			draw_set_color(global.brightRed);
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+281,"The Barrier");
-
-			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+280,"The Barrier");
 		
-			draw_set_font(global.customFont12);
-			if (tipChoosed = false)
-			{
-				tipChoosed = true;
-				tip = irandom_range(0,8)
-			}
-			infoGameOverEnemyShield(tip);
-			draw_set_color(global.lightBlue)
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+306, string(text))
-			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+305, string(text))
-		}
-		break;
-	
-		case (s_shieldEnemy):
-		{
-			global.numEnemyKilledBy = s_enemyShield;
-		}
-		break;
 	
 		case (s_enemyShield_v2):
 		{
@@ -234,39 +179,7 @@ function DrawKilledByEnemy_2()
 			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+280,"The Shielder");
 		}
 		break;
-		// ------- DISC ENEMIES --------//
-		case (s_enemyDisc):
-		{
-			if (deathCounted = false)
-			{
-				deathCounted = true;
-				global.enemyDiscKilledBy +=1;
-			}
-			
-			image_angle+=8;
-	
-			draw_sprite_ext(s_enemyDiscEye, 16, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+245,1,1, 0, image_blend, image_alpha)
 
-			draw_set_color(global.brightRed);
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+261,"Spinblade");
-
-			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+260,"Spinblade");
-		
-			draw_set_font(global.customFont12);
-			if (tipChoosed = false)
-			{
-				tipChoosed = true;
-				tip = irandom_range(0,9)
-			}
-			infoGameOverEnemyDisc(tip);
-			draw_set_color(global.lightBlue)
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+286, string(text))
-			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+285, string(text))
-	
-		}
-		break;
 		
 		//------ CHIP MIMIC ------//
 		case (s_chipMimic):
@@ -293,130 +206,8 @@ function DrawKilledByEnemy_2()
 	
 		}
 		break;
-		// ------- WALL ENEMIES --------//	
-		case (s_enemyMouth):
-		{
-			drawsprite = false;
-			if (wallMouth = false)
-			{
-				wallMouth = true;
-				wall = instance_create_layer(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+262,"PauseHUE_Sub",o_wallGameOver);
-				anchor = instance_create_layer(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+247,"PauseHUE",o_mouthAnchor);
-				enemy = instance_create_layer(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+217,"PauseHUE",o_enemy_Mouth);
-				if instance_exists(enemy)
-				{
-					enemy.diffYFar = -10;
-					enemy.canBeMega = false;
-					enemy.isMegaEnemy = false;
-				
-					if instance_exists(anchor)
-					{
-						enemy.anchor = anchor;
-						anchor.enemyBelong = enemy;
-						wallMouth = true;
-					}
-				}
-			
-			}
-		
-			draw_set_color(global.brightRed);
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+276,"Pincher");
 
-			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+275,"Pincher");
-		
-			draw_set_font(global.customFont12);
-		
-			if (tipChoosed = false)
-			{
-				tipChoosed = true;
-				tip = irandom_range(0,10)
-			}
-			infoGameOverEnemyWall(tip);
-			draw_set_color(global.lightBlue)
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+301, string(text))
-			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+300, string(text))
-		}
-		break;
 	
-		case (s_enemyMouthMega):
-		{
-			drawsprite = false;
-			if (wallMouth = false)
-			{
-				wallMouth = true;
-				wall = instance_create_layer(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+262,"PauseHUE_Sub",o_wallGameOver);
-				anchor = instance_create_layer(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+247,"PauseHUE",o_mouthAnchor);
-				enemy = instance_create_layer(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+217,"PauseHUE",o_enemy_Mouth);
-				if instance_exists(enemy)
-				{
-					enemy.diffYFar = -10;
-					enemy.canBeMega = true;
-					enemy.isMegaEnemy = true;
-					enemy.isMega = 0;
-				
-					if instance_exists(anchor)
-					{
-						enemy.anchor = anchor;
-						anchor.enemyBelong = enemy;
-						wallMouth = true;
-					}
-				}
-			
-			}
-		
-			draw_set_color(global.brightRed);
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+276,"Nibblade");
-
-			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+275,"Nibblade");
-		
-			draw_set_font(global.customFont12);
-		
-			if (tipChoosed = false)
-			{
-				tipChoosed = true;
-				tip = irandom_range(0,10)
-			}
-			infoGameOverEnemyWall(tip);
-			draw_set_color(global.lightBlue)
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+301, string(text))
-			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+300, string(text))
-		}
-		break;
-		// ------- TURRET TRAP --------//
-		case (s_torreta):
-		{
-			depth = layer_get_depth("PauseHUE")-1;
-			if (wallMouth = false)
-			{
-				wallMouth = true;
-				wall = instance_create_layer(__view_get( e__VW.XView, 0 )+317,__view_get( e__VW.YView, 0 )+245,"PauseHUE_Sub",o_wallGameOver);
-				wall.image_index = 1;
-			}
-		
-			draw_set_color(global.brightRed);
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+256,"PewPew");
-
-			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+255,"PewPew");
-		
-			draw_set_font(global.customFont12);
-		
-			if (tipChoosed = false)
-			{
-				tipChoosed = true;
-				tip = irandom_range(0,5)
-			}
-			infoGameOverEnemyTorreta(tip);
-			draw_set_color(global.lightBlue)
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+281, string(text))
-			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+280, string(text))
-		}
-		break;
 		// ------- LASER TRAP --------//
 		case (s_laserEnemy):
 		{

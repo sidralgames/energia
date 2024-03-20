@@ -8,14 +8,14 @@ function AddBestiaryEnemyDisc()
 		sprite: s_enemyDisc,
 		number: 10,
 		unlocked: global.bestiaryEnemyDiscUnlocked,
-		textBestiary: "Remains asleep until\napproaching them.\nExplodes after dying.",
-		lines: 3,
+		textBestiary: "Remains asleep until\nit detects something\napproaching them.\n\nExplodes after dying.",
+		lines: 5,
 		killsText: "KILLED: " + string(global.enemyDiscKills),
 		killsNum: global.enemyDiscKills,
 		killsToUnlock: 5,
 		killedByText: "KILLED BY: " + string(global.enemyDiscKilledBy),
 		killedByNum: global.enemyDiscKilledBy,
-		group: "Basic"
+		group: "Discs"
 	})
 
 	global.numberOfEnemiesBestiary +=1;

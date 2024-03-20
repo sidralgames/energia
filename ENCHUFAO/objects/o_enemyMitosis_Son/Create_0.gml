@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-enemyBestiaryNumber = 15;
+enemyBestiaryNumber = 16;
 
 event_inherited();
 type = collisionType.custom;

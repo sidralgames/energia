@@ -8,9 +8,10 @@ shift = amplitude * dsin(t);
 image_angle= 0+(shift/1.5);
 
 //apply the shift
-
-x = xx + lengthdir_x(shift, direction +dir1);
-y = yy + lengthdir_y(shift, direction + dir1);	
+if (alarm[1] <=0)
+{
+	y = yy + lengthdir_y(shift, direction + dir1);
+}
 
 
 

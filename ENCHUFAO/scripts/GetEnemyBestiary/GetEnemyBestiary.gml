@@ -71,10 +71,45 @@ function GetEnemyBestiary(argument0)
 		case ("PewPew"):
 		{
 			aliasOff = 10;
-			
 			BestiaryDrawTurretEnemy();
 		
 		}break;
+		
+		case ("Socketsucker"):
+		{
+			imageSprite += 0.2;
+			aliasOff = 0;
+			
+			
+			//--- IN SOCKET ---//
+			if (enchufeChoosed = false)
+			{
+				enchufeToDraw = choose(s_enchufe_Ammo, s_enchufe_Ammo_Charged, 
+				s_EnchufeEnergy, s_EnchufeEnergy_charged, 
+				s_enchufe_HP, s_enchufe_HP_Charged, 
+				s_enchufe_Laser, s_enchufe_Laser_Charged);
+				enchufeChoosed = true;
+			}
+			BestiaryDrawEnemy(enchufeToDraw, 0, 0, 0, 0, c_white, alphaInfo, false);
+			BestiaryDrawEnemy(enemy.sprite, imageSprite, 1, 1, 0, c_white, alphaInfo, false);
+			
+			//--- ALONE ---//
+			//BestiaryDrawSockerSuckerAlone(1, 10, c_white, alphaInfo);
+		}break;
+		
+		case ("Lil Crusher"):
+		{
+			aliasOff = 30;
+			BestiaryDrawEnemy(enemy.sprite, 0, 0, 26, 0, c_white, alphaInfo, false);
+		}
+		break;
+		
+		case ("Gripper"):
+		{
+			BestiaryDrawEnemyWorm(enemy.alias);
+		}
+		break;
+		
 	}
 	
 	

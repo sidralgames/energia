@@ -507,7 +507,12 @@ AddBestiaryEnemyPincher();
 AddBestiaryEnemyNibblade();
 AddBestiaryEnemyBomber();
 AddBestiaryEnemyPewPew();
+AddBestiaryEnemySocketsucker();
 AddBestiaryEnemyMitoson();
+AddBestiaryEnemyMitoship();
+AddBestiaryEnemyMitothree();
+AddBestiaryEnemyBossCrusher();
+AddBestiaryEnemyGripper();
 
 
 

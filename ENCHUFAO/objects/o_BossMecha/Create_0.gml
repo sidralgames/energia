@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited();
+
+enemyBestiaryNumber = 19
+
 isBombable = false;
 soundLaser = -1;
 minBombTime = 60;

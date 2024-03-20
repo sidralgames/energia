@@ -8,7 +8,7 @@ function AddBestiaryEnemyNibblade()
 		sprite: s_enemyMouthMega,
 		number: 12,
 		unlocked: global.bestiaryEnemyNibbladeUnlocked,
-		textBestiary: "If a PINCHER \ncan reach enough food,\n it will grow\nbigger and deadlier",
+		textBestiary: "If a PINCHER \ncan reach enough food,\n it will grow\nBIGGER and DEADLIER",
 		lines: 4,
 		killsText: "KILLED: " + string(global.enemyNibbladeKills),
 		killsNum: global.enemyNibbladeKills,

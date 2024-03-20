@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+enemyBestiaryNumber = 15; 
+
 slowedPeta = 0;
 freezing = 0;
 freeze = false;

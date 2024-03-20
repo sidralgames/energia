@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_enchufe_SHIELDS288",
-    "path": "sprites/s_enchufe_SHIELDS288/s_enchufe_SHIELDS288.yy",
+    "name": "s_enchufe_Laser",
+    "path": "sprites/s_enchufe_Laser/s_enchufe_Laser.yy",
   },
   "spriteMaskId": {
     "name": "s_EnchufeEnergy",

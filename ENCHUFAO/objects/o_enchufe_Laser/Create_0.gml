@@ -12,13 +12,13 @@ event_inherited();
 upgradesBattery = global.batteryEnchufeListLasernum;
 
 laser = true;
-sprite_enchufePluged = s_enchufe_SHIELDS_Bat_Charged;
+sprite_enchufePluged = s_enchufe_Laser_Charged;
 
 if (global.level > 2)
 {
 	if (irandom(oddsEnemy) = oddsEnemy)
 	{
-		instance_create_layer(x,y, "Enemies",choose(o_enemyEnchufeMisil, o_enemyEnchufeMisil_v2));
+		instance_create_layer(x,y, "Enemies",choose(o_enemySocketSucker, o_enemyEnchufeMisil_v2));
 	}
 }
 

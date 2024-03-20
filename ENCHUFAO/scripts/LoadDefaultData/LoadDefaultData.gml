@@ -126,4 +126,29 @@ function LoadDefaultData()
 	global.enemyMitosonKilledBy = 0;
 	global.enemyMitosonKills = 0;
 	
+	//--- MITOSHIP ---//
+	global.bestiaryEnemyMitoshipUnlocked = 0;
+	global.enemyMitoshipKilledBy = 0;
+	global.enemyMitoshipKills = 0;
+	
+	//--- MITOTHREE ---//
+	global.bestiaryEnemyMitothreeUnlocked = 0;
+	global.enemyMitothreeKilledBy = 0;
+	global.enemyMitothreeKills = 0;
+	
+	//--- SOCKETSUCKER ---//
+	global.bestiaryEnemySocketsuckerUnlocked = 0;
+	global.enemySocketsuckerKilledBy = 0;
+	global.enemySocketsuckerKills = 0;
+	
+	//---- LIL CRUSHER ----//
+	global.bestiaryEnemyBossCrusherUnlocked = 0;
+	global.enemyBossCrusherKilledBy = 0;
+	global.enemyBossCrusherKills = 0;
+	
+	//--- GRIPPER ---//
+	global.bestiaryEnemyGripperUnlocked = 0;
+	global.enemyGripperKilledBy = 0;
+	global.enemyGripperKills = 0;
+
 }

@@ -31,6 +31,7 @@ if (spriteSet = false)
 		s_temporary_laser, s_temporary_laser, 
 		s_temporary_Smart, s_temporary_Smart, 
 		s_temporary_Repair,
+		s_temporary_shootUp,
 		s_chipMimic)
 	}
 	

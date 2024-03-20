@@ -6,9 +6,9 @@ function AddBestiaryEnemyMitoson()
 	{ 
 		alias: "Mitoson",
 		sprite: s_enemyMitosis_Son,
-		number: 15,
+		number: 16,
 		unlocked: global.bestiaryEnemyMitosonUnlocked,
-		textBestiary: "This hermetic specimen\nonly goes with their equals.\nVery intolerant with others.\nWatch out.",
+		textBestiary: "This hermetic specimen\nonly goes with their equals.\nVery INTOLERANT with others.\nWatch out.",
 		lines: 4,
 		killsText: "KILLED: " + string(global.enemyMitosonKills),
 		killsNum: global.enemyMitosonKills,

@@ -24,3 +24,4 @@ canHaveAShield = false;
 haveAShield = false;
 state = -1;
 affectedByLaserTrap = true;
+enemyBestiaryNumber = enemyBelongs.enemyBestiaryNumber;

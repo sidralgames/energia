@@ -104,6 +104,24 @@ if instance_exists(o_playerShip) && (alarm[10] <= 0)
 		
 				}break;
 				
+				case s_temporary_shootUp:
+				{
+		
+					global.temporaryLaser = global.chipDuration;
+		
+					with(o_cable)
+					{
+						chipShootUp= instance_create_layer(x,y,"Player",o_chipShootUp)
+				
+						AddChip(initialChipIndex+global.chipsVertex, chipShootUp);
+						rope1.vertexAttachObject(initialChipIndex+global.chipsVertex, chipShootUp, vertexAttachmentType.both);
+						chipShootUp.chipVertex = initialChipIndex+global.chipsVertex;
+						chipShootUp.chipPos = global.chipPosition;
+					}
+		
+		
+				}break;
+				
 				case s_chipMimic:
 				{
 		

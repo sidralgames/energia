@@ -8,7 +8,7 @@ function AddBestiaryEnemyPincher()
 		sprite: s_enemyMouth,
 		number: 11,
 		unlocked: global.bestiaryEnemyPincherUnlocked,
-		textBestiary: "This MINITHREATS\nhave evolved to\nmimic the environmen \nin a SYMBIOTIC relationship",
+		textBestiary: "This Minithreats\nhave evolved to\nMIMIC the environment\nin a SYMBIOTIC relationship.",
 		lines: 4,
 		killsText: "KILLED: " + string(global.enemyPincherKills),
 		killsNum: global.enemyPincherKills,

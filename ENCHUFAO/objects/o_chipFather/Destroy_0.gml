@@ -54,6 +54,16 @@ if instance_exists(o_chipMimic)
 }
 
 
+if instance_exists(o_chipShootUp)
+{
+	with(o_chipShootUp)
+	{
+		alarm[0] = 1
+		changeVertex = true;
+	}
+}
+
+
 global.chipsVertex -= 2;
 
 

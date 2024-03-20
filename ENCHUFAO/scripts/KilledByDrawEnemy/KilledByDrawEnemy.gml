@@ -1,7 +1,21 @@
 // Los recursos de Script han cambiado para la v2.3.0 Consulta
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
-function KilledByDrawEnemy(_name, _info, _range)
+function KilledByDrawEnemy(_name, _info, _range, _trail, _image)
 {
+	
+	if (_trail = true)
+	{
+		if (image_alpha>=0.5)
+		{
+			contParts --;
+			if (contParts <=0)
+			{
+				part_particles_create(global.EnemyKilledBy_sys, __view_get( e__VW.XView, 0 )+320 - (sprite_width/4), __view_get( e__VW.YView, 0 )+245, global.EnemyKilledBy_part , 1)
+				contParts = contPartsInitial;
+			}
+		}
+	}
+	
 	if (deathCounted = false)
 	{
 		deathCounted = true;
@@ -12,7 +26,7 @@ function KilledByDrawEnemy(_name, _info, _range)
 	{
 		if (global.numEnemyKilledBy != noone)
 		{
-			GameOverDrawSprite(enemy.sprite, 0)
+			GameOverDrawSprite(enemy.sprite, _image)
 		}
 	}
 	

@@ -126,6 +126,34 @@ function LoadGame()
 	global.enemyMitosonKilledBy = ini_read_real("bestiary","mitosonKilledBy", 0);
 	global.enemyMitosonKills = ini_read_real("bestiary","mitosonKills", 0);
 	
+	//--- MITOSHIP ---//
+	global.bestiaryEnemyMitoshipUnlocked = ini_read_real("bestiary","mitoship", 0);
+	global.enemyMitoshipKilledBy = ini_read_real("bestiary","mitoshipKilledBy", 0);
+	global.enemyMitoshipKills = ini_read_real("bestiary","mitoshipKills", 0);
+	
+	//--- MITOTHREE ---//
+	global.bestiaryEnemyMitothreeUnlocked = ini_read_real("bestiary","mitothree", 0);
+	global.enemyMitothreeKilledBy = ini_read_real("bestiary","mitothreeKilledBy", 0);
+	global.enemyMitothreeKills = ini_read_real("bestiary","mitothreeKills", 0);
+	
+	//--- SOCKETSUCKER ---//
+	global.bestiaryEnemySocketsuckerUnlocked = ini_read_real("bestiary","socketsucker", 0);
+	global.enemySocketsuckerKilledBy = ini_read_real("bestiary","socketsuckerKilledBy", 0);
+	global.enemySocketsuckerKills = ini_read_real("bestiary","socketsuckerKills", 0);
+	
+	//--- LIL CRUSHER ---//
+	global.bestiaryEnemyBossCrusherUnlocked = ini_read_real("bestiary","lilcrusher", 0);
+	global.enemyBossCrusherKilledBy = ini_read_real("bestiary","lilcrusherKilledBy", 0);
+	global.enemyBossCrusherKills = ini_read_real("bestiary","lilcrusherKills", 0);
+	
+	//--- GRIPPER ---//
+	global.bestiaryEnemyGripperUnlocked = ini_read_real("bestiary","gripper", 0);
+	global.enemyGripperKilledBy = ini_read_real("bestiary","gripperKilledBy", 0);
+	global.enemyGripperKills = ini_read_real("bestiary","gripperKills", 0);
+	
+	
+	
+	
 	
 	//----- GOD MODE DEFAULT OFF -----//
 	global.godModeIsOn = false;

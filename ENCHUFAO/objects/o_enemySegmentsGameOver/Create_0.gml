@@ -12,7 +12,8 @@ amplitude = choose(4);
 dir1 = choose(90,270)
 
 //clone the x- and y-positions
-xx = x;
+
 yy = y;
 
 alarm[0] = 30;
+alarm[0] = 60;

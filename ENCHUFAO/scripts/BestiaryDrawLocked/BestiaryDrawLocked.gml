@@ -5,22 +5,7 @@ function BestiaryDrawLocked()
 	part_type_alpha2(global.EnemyKilledBy_part, 0.5,0.5);
 		
 	draw_set_alpha(alphaInfo);
-
-	draw_set_font(global.customFont14);
-	draw_set_color(global.brightRed);
-	draw_text(__view_get( e__VW.XView, 0 )-1+initialXInterrog,__view_get( e__VW.YView, 0 )+241+aliasOff,"Killed: " + string(enemy.killsNum) + "/" + string(enemy.killsToUnlock));
-	draw_set_color(c_white);
-	draw_text(__view_get( e__VW.XView, 0 )+initialXInterrog,__view_get( e__VW.YView, 0 )+240+aliasOff,"Killed: " + string(enemy.killsNum) + "/" + string(enemy.killsToUnlock));
-		
-	draw_set_alpha(alphaInfo)
-	for (var i=0; i<2; i++)
-	{
-		draw_set_font(global.customFont16);
-		draw_set_color(global.brightRed);
-		draw_text(__view_get( e__VW.XView, 0 )-1+initialXText,__view_get( e__VW.YView, 0 )+151 + (i*(110+aliasOff)),"??? ?? ???");
-		draw_set_color(c_white)
-		draw_text(__view_get( e__VW.XView, 0 )+initialXText,__view_get( e__VW.YView, 0 )+150+ (i*(110+aliasOff)),"??? ?? ???");
-	}
+	
 		
 	switch (enemy.alias)
 	{
@@ -84,8 +69,54 @@ function BestiaryDrawLocked()
 			BestiaryDrawEnemy(enemy.sprite, 0, 0, 0, rot, global.darkPalette, 1, false);
 		
 		}break;
+		
+		case ("Socketsucker"):
+		{
+			imageSprite += 0.2;
+			aliasOff = 0;
+			
+			
+			//--- IN SOCKET ---//
+			if (enchufeChoosed = false)
+			{
+				enchufeToDraw = choose(s_enchufe_Ammo, s_enchufe_Ammo_Charged, 
+				s_EnchufeEnergy, s_EnchufeEnergy_charged, 
+				s_enchufe_HP, s_enchufe_HP_Charged, 
+				s_enchufe_Laser, s_enchufe_Laser_Charged);
+				enchufeChoosed = true;
+			}
+			BestiaryDrawEnemy(enchufeToDraw, 0, 0, 0, 0,  global.darkPalette, 1, false);
+			BestiaryDrawEnemy(enemy.sprite, imageSprite, 1, 1, 0,  global.darkPalette, 1, false);
+			
+			//--- ALONE ---//
+			//BestiaryDrawSockerSuckerAlone(1, 10, c_white, alphaInfo);
+		}break;
+		
+		case ("Lil Crusher"):
+		{
+			aliasOff = 30;
+			BestiaryDrawEnemy(enemy.sprite, 0, 0, 26, 0, global.darkPalette, 1, false);
+		}
+		break;
 	
 	}
+	
+	draw_set_alpha(alphaInfo);
+	draw_set_font(global.customFont14);
+	draw_set_color(global.brightRed);
+	draw_text(__view_get( e__VW.XView, 0 )-1+initialXInterrog,__view_get( e__VW.YView, 0 )+241+aliasOff,"Killed: " + string(enemy.killsNum) + "/" + string(enemy.killsToUnlock));
+	draw_set_color(c_white);
+	draw_text(__view_get( e__VW.XView, 0 )+initialXInterrog,__view_get( e__VW.YView, 0 )+240+aliasOff,"Killed: " + string(enemy.killsNum) + "/" + string(enemy.killsToUnlock));
 		
+	draw_set_alpha(alphaInfo)
+	for (var i=0; i<2; i++)
+	{
+		draw_set_font(global.customFont16);
+		draw_set_color(global.brightRed);
+		draw_text(__view_get( e__VW.XView, 0 )-1+initialXText,__view_get( e__VW.YView, 0 )+151 + (i*(110+aliasOff)),"??? ?? ???");
+		draw_set_color(c_white)
+		draw_text(__view_get( e__VW.XView, 0 )+initialXText,__view_get( e__VW.YView, 0 )+150+ (i*(110+aliasOff)),"??? ?? ???");
+	}
+	
 	BestiaryDrawPaginator(global.customFont14, global.brightRed, 1);
 }

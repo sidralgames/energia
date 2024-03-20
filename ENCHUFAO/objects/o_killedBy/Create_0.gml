@@ -30,6 +30,8 @@ off = 0;
 wallMouth = false;
 drawsprite = true;
 
+imageSprite = 0;
+
 
 
 

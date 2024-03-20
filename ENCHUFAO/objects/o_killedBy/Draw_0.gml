@@ -13,20 +13,6 @@ draw_set_font(global.customFont16);
 draw_set_halign(fa_center);
 
 
-// ----- PARTICLES?----//
-if (global.FinalTrail = true)
-{
-	if (image_alpha>=0.5)
-	{
-		contParts --;
-		if (contParts <=0)
-		{
-			part_particles_create(global.EnemyKilledBy_sys, __view_get( e__VW.XView, 0 )+320 - (sprite_width/4), __view_get( e__VW.YView, 0 )+245, global.EnemyKilledBy_part , 1)
-			contParts = contPartsInitial;
-		}
-	}
-}
-
 //DrawUpgradeNames();	
 		
 //DrawStatsUpgrades();

@@ -8,7 +8,7 @@ function AddBestiaryEnemyPewPew()
 		sprite: s_torreta,
 		number: 14,
 		unlocked: global.bestiaryEnemyPewPewUnlocked,
-		textBestiary: "This TURRETS were once\npart of our defense systems.\n \nThey seem hacked now...",
+		textBestiary: "This TURRETS were once\npart of our defense systems.\n \nThey seem HACKED now...",
 		lines: 4,
 		killsText: "KILLED: " + string(global.enemyPewPewKills),
 		killsNum: global.enemyPewPewKills,

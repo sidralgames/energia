@@ -12,6 +12,8 @@ if (key_upP)
 	wallMouth = false;
 	alphaInfo=0;
 	tipChoosed = false;
+	enchufeChoosed = false;
+	imageSprite = 0;
 	factorInitialX = 0.15
 	part_type_alpha2(global.EnemyKilledBy_part, 1,1);
 	audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
@@ -24,6 +26,8 @@ if (key_downP)
 	wallMouth = false;
 	alphaInfo=0;
 	tipChoosed = false;
+	imageSprite = 0;
+	enchufeChoosed = false
 	part_type_alpha2(global.EnemyKilledBy_part, 1,1);
 	audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 }
@@ -58,6 +62,8 @@ if (selected = 3)
 		alarm[0] = 10;
 		aliasOff = 10;
 		factorInitialX = 0.15
+		enchufeChoosed = false;
+		imageSprite = 0;
 		//contParts = 0;
 		part_type_direction(global.EnemyKilledBy_part,175,185,0,1);
 	}
@@ -77,6 +83,8 @@ if (selected = 3)
 		alarm[0] = 10;
 		aliasOff = 10;
 		factorInitialX = 0.15
+		enchufeChoosed = false;
+		imageSprite = 0;
 		//contParts = 0;
 		part_type_direction(global.EnemyKilledBy_part,355,5,0,1);
 	}
@@ -171,6 +179,8 @@ if (key_back)
 	part_type_direction(global.EnemyKilledBy_part,175,185,0,1);
 	aliasOff = 10;
 	factorInitialX = 0.15;
+	enchufeChoosed = false;
+	imageSprite = 0;
 	
 	audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 	menuHome = instance_create(x,y,o_menuHome);
@@ -187,5 +197,14 @@ if instance_exists(o_wallGameOver)
 		instance_destroy(o_enemy_Mouth);
 		instance_destroy(o_mouthAnchor);
 		instance_destroy(o_wallGameOver);
+	}
+}
+
+if instance_exists(o_enemyGameOver_parent)
+{
+	if (key_leftP) || (key_rightP)
+	|| (key_upP) || (key_downP) || (key_back)
+	{
+		instance_destroy(o_enemyGameOver_parent);
 	}
 }

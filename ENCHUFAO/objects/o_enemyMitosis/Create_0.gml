@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited();
+
+enemyBestiaryNumber = 17;
+
 type = collisionType.custom;
 slowMoPickUps = choose(2,3);
 
@@ -44,9 +47,12 @@ if tile_meeting(x,y,"Tiles")
 isMega = irandom(5);
 oddsBattery = 2;
 
+
+
 if (isMega = 0)
 {
 	isMegaEnemy = true;
+	enemyBestiaryNumber = 18;
 	global.MegaEnemiesInLevel+=1;
 	_hp = 9;
 	sprite_index = s_enemyMitosis_Mega;

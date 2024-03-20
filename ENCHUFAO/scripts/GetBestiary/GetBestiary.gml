@@ -18,17 +18,15 @@ function GetBestiary()
 	
 	if (enemy.unlocked = 0) || (enemy.killsNum < 1)
 	{
+		BestiaryDrawUnlocked();
 		//BestiaryDrawUnlocked();
-		BestiaryDrawUnknown();
 		//BestiaryDrawLocked();
 	}
-	
-	if (enemy.killsNum >= 1) && (enemy.killsNum < enemy.killsToUnlock)
+	else if (enemy.killsNum >= 1) && (enemy.killsNum < enemy.killsToUnlock)
 	{
-		BestiaryDrawLocked();
+		BestiaryDrawUnlocked();
 	}
-
-	if (enemy.unlocked) && (enemy.killsNum > enemy.killsToUnlock)
+	else if (enemy.unlocked) && (enemy.killsNum > enemy.killsToUnlock)
 	{
 		BestiaryDrawUnlocked();
 	}

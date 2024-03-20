@@ -12,7 +12,10 @@
     "name": "Enemies",
     "path": "folders/Objetos/Enemies.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "o_enemyGameOver_parent",
+    "path": "objects/o_enemyGameOver_parent/o_enemyGameOver_parent.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

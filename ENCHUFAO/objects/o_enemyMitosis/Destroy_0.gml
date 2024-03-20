@@ -15,3 +15,25 @@ CreateTemporaryChip(5);
 // Inherit the parent event
 event_inherited();
 
+if (isMegaEnemy)
+{
+	global.enemyMitothreeKills +=1;
+	if (global.bestiaryEnemyMitothreeUnlocked = 0)
+	{
+		global.bestiaryEnemyMitothreeUnlocked = 1;
+		enemy = ds_map_find_value(global.bestiaryList, enemyBestiaryNumber);
+		enemy.unlocked = 1;
+		global.enemiesInBestiary +=1;
+	}
+}
+else
+{
+	global.enemyMitoshipKills +=1;
+	if (global.bestiaryEnemyMitoshipUnlocked = 0)
+	{
+		global.bestiaryEnemyMitoshipUnlocked = 1;
+		enemy = ds_map_find_value(global.bestiaryList, enemyBestiaryNumber);
+		enemy.unlocked = 1;
+		global.enemiesInBestiary +=1;
+	}
+}
