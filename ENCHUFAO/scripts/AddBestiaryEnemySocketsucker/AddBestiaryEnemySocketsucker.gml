@@ -12,7 +12,7 @@ function AddBestiaryEnemySocketsucker()
 		lines: 3,
 		killsText: "KILLED: " + string(global.enemySocketsuckerKills),
 		killsNum: global.enemySocketsuckerKills,
-		killsToUnlock: 5,
+		killsToUnlock: 9,
 		killedByText: "KILLED BY: " + string(global.enemySocketsuckerKilledBy),
 		killedByNum: global.enemySocketsuckerKilledBy,
 		group: "SocketSuckers"

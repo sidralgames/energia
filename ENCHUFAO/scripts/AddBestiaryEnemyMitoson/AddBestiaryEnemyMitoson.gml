@@ -12,7 +12,7 @@ function AddBestiaryEnemyMitoson()
 		lines: 4,
 		killsText: "KILLED: " + string(global.enemyMitosonKills),
 		killsNum: global.enemyMitosonKills,
-		killsToUnlock: 10,
+		killsToUnlock: 15,
 		killedByText: "KILLED BY: " + string(global.enemyMitosonKilledBy),
 		killedByNum: global.enemyMitosonKilledBy,
 		group: "Mitosis"

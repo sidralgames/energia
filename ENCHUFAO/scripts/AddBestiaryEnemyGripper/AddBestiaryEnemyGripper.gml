@@ -12,7 +12,7 @@ function AddBestiaryEnemyGripper()
 		lines: 4,
 		killsText: "KILLED: " + string(global.enemyGripperKills),
 		killsNum: global.enemyGripperKills,
-		killsToUnlock: 5,
+		killsToUnlock: 8,
 		killedByText: "KILLED BY: " + string(global.enemyGripperKilledBy),
 		killedByNum: global.enemyGripperKilledBy,
 		group: "Worms"

@@ -12,7 +12,7 @@ function AddBestiaryEnemyNibblade()
 		lines: 4,
 		killsText: "KILLED: " + string(global.enemyNibbladeKills),
 		killsNum: global.enemyNibbladeKills,
-		killsToUnlock: 10,
+		killsToUnlock: 15,
 		killedByText: "KILLED BY: " + string(global.enemyNibbladeKilledBy),
 		killedByNum: global.enemyNibbladeKilledBy,
 		group: "WallMouth"

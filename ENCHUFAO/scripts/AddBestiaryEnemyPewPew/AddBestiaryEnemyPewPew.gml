@@ -12,7 +12,7 @@ function AddBestiaryEnemyPewPew()
 		lines: 4,
 		killsText: "KILLED: " + string(global.enemyPewPewKills),
 		killsNum: global.enemyPewPewKills,
-		killsToUnlock: 5,
+		killsToUnlock: 15,
 		killedByText: "KILLED BY: " + string(global.enemyPewPewKilledBy),
 		killedByNum: global.enemyPewPewKilledBy,
 		group: "Turrets"

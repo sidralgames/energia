@@ -12,7 +12,7 @@ function AddBestiaryEnemyPincher()
 		lines: 4,
 		killsText: "KILLED: " + string(global.enemyPincherKills),
 		killsNum: global.enemyPincherKills,
-		killsToUnlock: 8,
+		killsToUnlock: 25,
 		killedByText: "KILLED BY: " + string(global.enemyPincherKilledBy),
 		killedByNum: global.enemyPincherKilledBy,
 		group: "WallMouth"

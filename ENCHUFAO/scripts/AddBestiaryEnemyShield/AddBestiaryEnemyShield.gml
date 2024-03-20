@@ -12,7 +12,7 @@ ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
 		lines: 3,
 		killsText: "KILLED: " + string(global.enemyShieldKills),
 		killsNum: global.enemyShieldKills,
-		killsToUnlock: 3,
+		killsToUnlock: 10,
 		killedByText: "KILLED BY: " + string(global.enemyShieldKilledBy),
 		killedByNum: global.enemyShieldKilledBy,
 		group: "Shields"

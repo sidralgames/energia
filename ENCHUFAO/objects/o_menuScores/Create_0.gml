@@ -23,6 +23,7 @@ aliasOff = 0;
 factorInitialX = 0.15;
 
 initialX=320;
+initialXReserve = 320
 initialXText = 320;
 initialXInterrog = 320;
 

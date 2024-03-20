@@ -106,7 +106,7 @@ function GetEnemyBestiary(argument0)
 		
 		case ("Gripper"):
 		{
-			BestiaryDrawEnemyWorm(enemy.alias);
+			BestiaryDrawEnemyWorm(enemy.alias, 30);
 		}
 		break;
 		

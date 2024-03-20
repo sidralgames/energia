@@ -12,7 +12,7 @@ function AddBestiaryEnemyDisc()
 		lines: 5,
 		killsText: "KILLED: " + string(global.enemyDiscKills),
 		killsNum: global.enemyDiscKills,
-		killsToUnlock: 5,
+		killsToUnlock: 6,
 		killedByText: "KILLED BY: " + string(global.enemyDiscKilledBy),
 		killedByNum: global.enemyDiscKilledBy,
 		group: "Discs"

@@ -24,7 +24,9 @@ contPlugBody = -1;
 //rope1 = verletGroupCreateRope(verletSystem1, x, y, cableColor, 2, 3, _segments, 2, 100, canCollide);
 
  //Attach its first vertex to an object
+ alarm[1] = 20;
 inst = instance_nearest(x,y,o_enemySegmentsGameOver)
+
 rope1.vertexAttachTo(first, inst);
 
 instAchor = instance_create_layer(x,y,"PauseHUE_Sub",o_enemySegments_last)
@@ -37,7 +39,6 @@ if instance_exists(o_gameOver)
 }
 
 
-force = verletSystem1.addForceField(x-200, y-80, x+30, y+260,180, 1.5, false);
 
 //instTope = instance_create(x, y, o_coco);
 //rope1.vertexAttachObject(last, instTope, vertexAttachmentType.positionOnly);

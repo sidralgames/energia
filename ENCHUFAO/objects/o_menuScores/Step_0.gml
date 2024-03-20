@@ -14,7 +14,8 @@ if (key_upP)
 	tipChoosed = false;
 	enchufeChoosed = false;
 	imageSprite = 0;
-	factorInitialX = 0.15
+	factorInitialX = 0.15;
+	initialX = initialXReserve;
 	part_type_alpha2(global.EnemyKilledBy_part, 1,1);
 	audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 	
@@ -27,7 +28,8 @@ if (key_downP)
 	alphaInfo=0;
 	tipChoosed = false;
 	imageSprite = 0;
-	enchufeChoosed = false
+	enchufeChoosed = false;
+	initialX = initialXReserve;
 	part_type_alpha2(global.EnemyKilledBy_part, 1,1);
 	audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 }
@@ -50,6 +52,7 @@ if (selected = 3)
 	{
 		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 		initialX = 200;
+		initialXReserve = 200;
 		positionChoosed = false;
 		initialXText = 350;
 		initialXInterrog = 280;
@@ -71,6 +74,7 @@ if (selected = 3)
 	{
 		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 		initialX = 440;
+		initialXReserve = 440;
 		initialXText = 290;
 		positionChoosed = false;
 		initialXInterrog = 360
@@ -102,26 +106,30 @@ if (selected = 3)
 
 if (selected = 1)
 {
+	
+	
+	
+	
+	
 	if (key_rightP)
 	{
 		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 		selectedAch+=1;
+		if (selectedAch > global.numberOfAch-1)
+		{
+			selectedAch  = 0	
+		}
 		scaleArrowsR =0.5;
 	}
 	if (key_leftP)
 	{
 		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 		selectedAch-=1;
+		if (selected < 0) 
+		{
+			selectedAch = global.numberOfAch-1
+		}
 		scaleArrowsL =0.5;
-	}
-	
-	if (selectedAch > global.numberOfAch-1)
-	{
-		selectedAch  = 0	
-	}
-	if (selected < 0) 
-	{
-		selectedAch = global.numberOfAch-1
 	}
 }
 

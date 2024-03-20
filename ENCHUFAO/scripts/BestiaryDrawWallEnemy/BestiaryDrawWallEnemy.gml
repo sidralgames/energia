@@ -6,6 +6,8 @@ function BestiaryDrawWallEnemy(_mega, _yoff, _color, _alpha)
 	
 	if (wallMouth = false)
 	{
+		SetHUE();
+		
 		if !instance_exists(o_mouthAnchor) && !instance_exists(o_enemy_Mouth)
 		{
 			wall = instance_create_layer(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+252+_yoff,"PauseHUE_Sub",o_wallGameOver);
