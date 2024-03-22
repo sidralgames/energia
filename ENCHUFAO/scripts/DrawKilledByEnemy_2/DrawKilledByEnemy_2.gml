@@ -114,32 +114,6 @@ function DrawKilledByEnemy_2()
 			BombKilledBy();
 		}
 		break;
-
-		// ------- BOMB MINES ENEMIES --------//
-		case (s_enemyMines):
-		{
-			draw_set_color(global.brightRed);
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+261,"Miner");
-
-			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+260,"Miner");
-		
-		
-			draw_set_font(global.customFont12);
-			if (tipChoosed = false)
-			{
-				tipChoosed = true;
-				tip = irandom_range(0,5)
-			}
-			infoGameOverEnemyBombs(tip);
-			draw_set_color(global.lightBlue)
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+286, string(text))
-			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+285, string(text))
-	
-		}
-		break;
-		
 		
 		// ------- OVNI ENEMIES --------//
 		case (s_enemyMisil):
@@ -429,28 +403,6 @@ function DrawKilledByEnemy_2()
 		break;
 		
 		// ------- BOSSES --------//
-		case (s_bossMechaActive):
-		{
-			off = 10;
-			draw_set_color(global.brightRed);
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+281,"Lil Crusher");
-
-			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+280,"Lil Crusher");
-		
-			draw_set_font(global.customFont12);
-			if (tipChoosed = false)
-			{
-				tipChoosed = true;
-				tip = irandom_range(0,5)
-			}
-			infoGameOverLilCrusher(tip);
-			draw_set_color(global.lightBlue)
-			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+306, string(text))
-			draw_set_color(c_white)
-			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+305, string(text))
-		}
-		break;
 		
 		case (s_bossWorm_Mouth_Metal):
 		{

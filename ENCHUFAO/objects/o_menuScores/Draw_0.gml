@@ -76,15 +76,15 @@ switch(selected)
 	{
 		
 		initialStat = lerp(initialStat, 45,factor);
-		initialAch = lerp(initialAch, 70,factor);
-		initialScores = lerp(initialScores, 100 ,factor)
+		initialAch = lerp(initialAch, 35,factor);
+		initialScores = lerp(initialScores, 65 ,factor)
 		initialBestiary =  lerp(initialBestiary, 305,factor);
 		initialBack = lerp(initialBack, 330,factor);
 		initialAlpha= 0;
 		
-		draw_sprite_ext(s_statsHome, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialStat,0.8,0.8,0,image_blend, 0.7)	
+		//draw_sprite_ext(s_statsHome, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialStat,0.8,0.8,0,image_blend, 0.7)	
 		
-		draw_sprite_ext(s_achievementsHome, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialAch,0.9,0.9,0,image_blend, 0.7)	
+		draw_sprite_ext(s_achievementsHome, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialAch,0.7,0.7,0,image_blend, 0.7)	
 		draw_sprite_ext(s_highscoresMenu,1, __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialScores,1.1,1.1,0,image_blend, image_alpha)
 		draw_sprite_ext(s_bestiaryMenu,0, __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialBestiary,0.9,0.9,0,image_blend, 0.7)
 		draw_sprite_ext(s_backMenu,0, __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialBack,0.8,0.8,0,image_blend, 0.7)
@@ -94,22 +94,22 @@ switch(selected)
 	case 3:
 	{
 		initialStat = lerp(initialStat, 40,factor);
-		initialAch = lerp(initialAch, 60,factor);
-		initialScores = lerp(initialScores, 85 ,factor)
-		initialBestiary =  lerp(initialBestiary, 117,factor);
-		initialBack = lerp(initialBack, 331,factor);
+		initialAch = lerp(initialAch, 20,factor);
+		initialScores = lerp(initialScores, 30 ,factor)
+		initialBestiary =  lerp(initialBestiary, 60,factor);
+		initialBack = lerp(initialBack, 335,factor);
 		initialAlpha = lerp(initialAlpha, 1,0.1);
 		
-		draw_sprite_ext(s_statsHome, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialStat,0.6,0.6,0,image_blend, 0.7)	
+		//draw_sprite_ext(s_statsHome, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialStat,0.6,0.6,0,image_blend, 0.7)	
 		
 		GetBestiary();
 		
-		draw_sprite_ext(s_achievementsHome, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialAch,0.7,0.7,0,image_blend, 0.7)	
-		draw_sprite_ext(s_highscoresMenu,1, __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialScores,0.8,0.8,0,image_blend, 0.7)
+		//draw_sprite_ext(s_achievementsHome, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialAch,0.5,0.5,0,image_blend, 0.7)	
+		draw_sprite_ext(s_highscoresMenu,1, __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialScores,0.6,0.6,0,image_blend, 0.7)
 		draw_sprite_ext(s_bestiaryMenu,0, __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialBestiary,1.1,1.1,0,image_blend, image_alpha)
-		draw_sprite_ext(s_backMenu,0, __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialBack,0.8,0.8,0,image_blend, 0.7)
-		draw_sprite_ext(s_arrows,0, __view_get( e__VW.XView, 0 )+270,__view_get( e__VW.YView, 0 )+145,1+scaleArrowsL,1+scaleArrowsL,0,image_blend, 1)
-		draw_sprite_ext(s_arrows,1, __view_get( e__VW.XView, 0 )+370,__view_get( e__VW.YView, 0 )+145,1+scaleArrowsR,1+scaleArrowsR,0,image_blend, 1)
+		draw_sprite_ext(s_backMenu,0, __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialBack,0.6,0.6,0,image_blend, 0.7)
+		draw_sprite_ext(s_arrows,0, __view_get( e__VW.XView, 0 )+270,__view_get( e__VW.YView, 0 )+initialYPaginator+15,1+scaleArrowsL,1+scaleArrowsL,0,image_blend, 1)
+		draw_sprite_ext(s_arrows,1, __view_get( e__VW.XView, 0 )+370,__view_get( e__VW.YView, 0 )+initialYPaginator+15,1+scaleArrowsR,1+scaleArrowsR,0,image_blend, 1)
 	
 	}
 	break;

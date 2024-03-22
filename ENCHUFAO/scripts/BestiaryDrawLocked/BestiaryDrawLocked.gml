@@ -18,7 +18,7 @@ function BestiaryDrawLocked()
 			
 		case ("The Barrier"): 
 		{
-			aliasOff = 13;
+			aliasOff = 10;
 			BestiaryDrawEnemy(enemy.sprite, 0, 0, 0, 0, global.darkPalette, 1, true);
 				
 		}break;
@@ -33,14 +33,14 @@ function BestiaryDrawLocked()
 		
 		case ("Pincher"):
 		{
-			aliasOff = 25;
+			aliasOff = 15;
 			BestiaryDrawWallEnemy(0, 0, global.darkPalette, 1);
 		}
 		break;
 		
 		case ("Nibblade"):
 		{
-			aliasOff = 25;
+			aliasOff = 15;
 			BestiaryDrawWallEnemy(1, 0, global.darkPalette, 1);
 		}break;
 		
@@ -55,7 +55,7 @@ function BestiaryDrawLocked()
 			if (wallMouth = false)
 			{
 				wallMouth = true;
-				wall = instance_create_layer(__view_get( e__VW.XView, 0 )+317,__view_get( e__VW.YView, 0 )+221,"PauseHUE_Sub",o_wallGameOver);
+				wall = instance_create_layer(__view_get( e__VW.XView, 0 )+317,__view_get( e__VW.YView, 0 )+initialY,"PauseHUE_Sub",o_wallGameOver);
 				wall.image_index = 1;
 			}
 			
@@ -73,7 +73,7 @@ function BestiaryDrawLocked()
 		case ("Socketsucker"):
 		{
 			imageSprite += 0.2;
-			aliasOff = 0;
+			aliasOff = 10;
 			
 			
 			//--- IN SOCKET ---//
@@ -94,8 +94,24 @@ function BestiaryDrawLocked()
 		
 		case ("Lil Crusher"):
 		{
-			aliasOff = 30;
+			aliasOff = 10;
 			BestiaryDrawEnemy(enemy.sprite, 0, 0, 26, 0, global.darkPalette, 1, false);
+		}
+		break;
+		
+		case ("Gripper"):
+		{
+			aliasOff = 10;
+			BestiaryDrawEnemyWorm(enemy.alias, 30, global.darkPalette, 1);
+		}
+		break;
+		
+		case ("O.V.N.I"):
+		{
+			rot+=1;
+			aliasOff = 10;
+			imageSprite += 0.2;
+			BestiaryDrawEnemy(enemy.sprite, imageSprite, 0, 0, rot, global.darkPalette, alphaInfo, false);
 		}
 		break;
 	
@@ -104,18 +120,18 @@ function BestiaryDrawLocked()
 	draw_set_alpha(alphaInfo);
 	draw_set_font(global.customFont14);
 	draw_set_color(global.brightRed);
-	draw_text(__view_get( e__VW.XView, 0 )-1+initialXInterrog,__view_get( e__VW.YView, 0 )+241+aliasOff,"Killed: " + string(enemy.killsNum) + "/" + string(enemy.killsToUnlock));
+	draw_text(__view_get( e__VW.XView, 0 )-1+initialXInterrog,__view_get( e__VW.YView, 0 )+InitialYToKill+1+aliasOff,"Killed: " + string(enemy.killsNum) + "/" + string(enemy.killsToUnlock));
 	draw_set_color(c_white);
-	draw_text(__view_get( e__VW.XView, 0 )+initialXInterrog,__view_get( e__VW.YView, 0 )+240+aliasOff,"Killed: " + string(enemy.killsNum) + "/" + string(enemy.killsToUnlock));
+	draw_text(__view_get( e__VW.XView, 0 )+initialXInterrog,__view_get( e__VW.YView, 0 )+InitialYToKill+aliasOff,"Killed: " + string(enemy.killsNum) + "/" + string(enemy.killsToUnlock));
 		
 	draw_set_alpha(alphaInfo)
 	for (var i=0; i<2; i++)
 	{
 		draw_set_font(global.customFont16);
 		draw_set_color(global.brightRed);
-		draw_text(__view_get( e__VW.XView, 0 )-1+initialXText,__view_get( e__VW.YView, 0 )+151 + (i*(110+aliasOff)),"??? ?? ???");
+		draw_text(__view_get( e__VW.XView, 0 )-1+initialXText,__view_get( e__VW.YView, 0 )+InitialYName + (i*(160+aliasOff)),"??? ?? ???");
 		draw_set_color(c_white)
-		draw_text(__view_get( e__VW.XView, 0 )+initialXText,__view_get( e__VW.YView, 0 )+150+ (i*(110+aliasOff)),"??? ?? ???");
+		draw_text(__view_get( e__VW.XView, 0 )+initialXText,__view_get( e__VW.YView, 0 )+InitialYName+ (i*(160+aliasOff)),"??? ?? ???");
 	}
 	
 	BestiaryDrawPaginator(global.customFont14, global.brightRed, 1);

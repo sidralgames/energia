@@ -5,6 +5,6 @@ face = 0
 snd = snd_laserActive;
 soundLaser = -1;
 sndActivating = -1
-
+enemyBestiaryNumber = 24;
 
 

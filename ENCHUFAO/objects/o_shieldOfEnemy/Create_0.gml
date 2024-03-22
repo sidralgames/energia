@@ -23,7 +23,7 @@ finalTrail = false;
 
 if instance_exists(enemy)
 {
-	enemyShooter = enemy.sprite_index;
+	enemyShooter = enemy.enemyBestiaryNumber;
 	shooterTrail = enemy.finalTrail;
 	bulletSpeed = 0;
 }

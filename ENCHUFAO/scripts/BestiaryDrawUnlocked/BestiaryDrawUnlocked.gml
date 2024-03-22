@@ -10,4 +10,6 @@ function BestiaryDrawUnlocked()
 	BestiaryDrawEnemyInfo();
 		
 	BestiaryDrawPaginator(global.customFont14, global.lightBlue, 1);
+	
+	
 }

@@ -8,28 +8,40 @@ Controls_Input();
 
 if (key_upP)
 {
+	rot = 0;
+	drawWall = true;
+	wallYoff = wallYoffInitial;
+	wallBest = false;
 	selected-=1;
 	wallMouth = false;
 	alphaInfo=0;
+	targetCreated = false;
 	tipChoosed = false;
 	enchufeChoosed = false;
 	imageSprite = 0;
-	factorInitialX = 0.15;
+	factorInitialX =0.09;
 	initialX = initialXReserve;
+	initialXWall = initialX;
 	part_type_alpha2(global.EnemyKilledBy_part, 1,1);
 	audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 	
 }
 if (key_downP)
 {
-	factorInitialX = 0.15
+	rot = 0;
+	drawWall = true;
+	wallYoff = wallYoffInitial;
+	wallBest = false;
+	factorInitialX =0.09;
 	selected+=1;
 	wallMouth = false;
 	alphaInfo=0;
 	tipChoosed = false;
 	imageSprite = 0;
+	targetCreated = false;
 	enchufeChoosed = false;
 	initialX = initialXReserve;
+	initialXWall = initialX;
 	part_type_alpha2(global.EnemyKilledBy_part, 1,1);
 	audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 }
@@ -52,6 +64,7 @@ if (selected = 3)
 	{
 		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 		initialX = 200;
+		initialXWall = initialX;
 		initialXReserve = 200;
 		positionChoosed = false;
 		initialXText = 350;
@@ -64,9 +77,14 @@ if (selected = 3)
 		wallMouth = false;
 		alarm[0] = 10;
 		aliasOff = 10;
-		factorInitialX = 0.15
+		factorInitialX =0.09;
 		enchufeChoosed = false;
+		targetCreated = false;
 		imageSprite = 0;
+		wallBest = false;
+		drawWall = true;
+		wallYoff = wallYoffInitial;
+		rot = 0;
 		//contParts = 0;
 		part_type_direction(global.EnemyKilledBy_part,175,185,0,1);
 	}
@@ -74,6 +92,7 @@ if (selected = 3)
 	{
 		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 		initialX = 440;
+		initialXWall = initialX;
 		initialXReserve = 440;
 		initialXText = 290;
 		positionChoosed = false;
@@ -86,20 +105,25 @@ if (selected = 3)
 		wallMouth = false;
 		alarm[0] = 10;
 		aliasOff = 10;
-		factorInitialX = 0.15
+		factorInitialX =0.09;
+		targetCreated = false;
 		enchufeChoosed = false;
 		imageSprite = 0;
+		wallBest = false;
+		drawWall = true;
+		wallYoff = wallYoffInitial;
+		rot = 0;
 		//contParts = 0;
 		part_type_direction(global.EnemyKilledBy_part,355,5,0,1);
 	}
 	
-	if (selectedBest > global.numberOfEnemiesBestiary-1)
+	if (selectedBest > global.totalNumberOfEnemiesBestiary-1)
 	{
 		selectedBest  = 0	
 	}
 	if (selectedBest < 0) 
 	{
-		selectedBest = global.numberOfEnemiesBestiary-1;
+		selectedBest = global.totalNumberOfEnemiesBestiary-1;
 	}
 }
 
@@ -189,6 +213,8 @@ if (key_back)
 	factorInitialX = 0.15;
 	enchufeChoosed = false;
 	imageSprite = 0;
+	rot = 0;
+	targetCreated = false;
 	
 	audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 	menuHome = instance_create(x,y,o_menuHome);
@@ -205,6 +231,7 @@ if instance_exists(o_wallGameOver)
 		instance_destroy(o_enemy_Mouth);
 		instance_destroy(o_mouthAnchor);
 		instance_destroy(o_wallGameOver);
+		instance_destroy(o_misilBombBestiary);
 	}
 }
 

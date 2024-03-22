@@ -8,6 +8,7 @@
 
 // Inherit the parent event
 event_inherited();
+enemyBestiaryNumber = 27;
 contDie = 5;
 canDie = false;
 flashAlpha = 0;

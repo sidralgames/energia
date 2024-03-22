@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function AddBestiaryEnemyShield()
 {
-ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
+ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "The Barrier",
 		sprite: s_enemyShieldBestiary,
@@ -19,5 +19,5 @@ ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
 		
 	})
 
-global.numberOfEnemiesBestiary +=1;
+global.totalNumberOfEnemiesBestiary +=1;
 }

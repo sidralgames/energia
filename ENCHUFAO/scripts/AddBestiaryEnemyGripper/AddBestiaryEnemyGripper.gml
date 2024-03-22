@@ -2,13 +2,13 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function AddBestiaryEnemyGripper()
 {
-	ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
+	ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "Gripper",
 		sprite: s_enemySegments,
 		number: 20,
 		unlocked: global.bestiaryEnemyGripperUnlocked,
-		textBestiary: "Piloted by a Minithreat,\nthis enormous MECHA\ncan destroy everything\nwith its hard hull.",
+		textBestiary: "No longer in need of roots,\nthey catch their prey\nwith erratic\nand fast movements",
 		lines: 4,
 		killsText: "KILLED: " + string(global.enemyGripperKills),
 		killsNum: global.enemyGripperKills,
@@ -17,6 +17,5 @@ function AddBestiaryEnemyGripper()
 		killedByNum: global.enemyGripperKilledBy,
 		group: "Worms"
 	})
-
-	global.numberOfEnemiesBestiary +=1;
+	global.totalNumberOfEnemiesBestiary +=1;
 }

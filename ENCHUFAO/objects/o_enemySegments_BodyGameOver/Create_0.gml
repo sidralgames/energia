@@ -19,18 +19,18 @@ _segments = 6;
 rope1 = verletGroupCreateRopeTextured(verletSystem1, x, y, _sprite, _segments, 1, 10);
 
 contPlugBody = -1;
+_color = c_white;
 
 // Create a new rope
 //rope1 = verletGroupCreateRope(verletSystem1, x, y, cableColor, 2, 3, _segments, 2, 100, canCollide);
 
  //Attach its first vertex to an object
- alarm[1] = 20;
+ alarm[1] = 3;
 inst = instance_nearest(x,y,o_enemySegmentsGameOver)
 
 rope1.vertexAttachTo(first, inst);
 
-instAchor = instance_create_layer(x,y,"PauseHUE_Sub",o_enemySegments_last)
-rope1.vertexAttachObject(last, instAchor,vertexAttachmentType.both);
+
 
 if instance_exists(o_gameOver)
 {

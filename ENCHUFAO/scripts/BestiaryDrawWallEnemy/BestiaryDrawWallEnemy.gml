@@ -10,9 +10,9 @@ function BestiaryDrawWallEnemy(_mega, _yoff, _color, _alpha)
 		
 		if !instance_exists(o_mouthAnchor) && !instance_exists(o_enemy_Mouth)
 		{
-			wall = instance_create_layer(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+252+_yoff,"PauseHUE_Sub",o_wallGameOver);
-			anchor = instance_create_layer(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+237+_yoff,"PauseHUE",o_mouthAnchor);
-			enemyMouth = instance_create_layer(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+207+_yoff,"PauseHUE",o_enemy_Mouth);
+			wall = instance_create_layer(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+initialY+wallYoff,"PauseHUE_Sub",o_wallGameOver);
+			anchor = instance_create_layer(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+initialY+40,"PauseHUE",o_mouthAnchor);
+			enemyMouth = instance_create_layer(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+initialY,"PauseHUE",o_enemy_Mouth);
 			
 			if (_mega = 1)
 			{
@@ -25,7 +25,7 @@ function BestiaryDrawWallEnemy(_mega, _yoff, _color, _alpha)
 				enemyMouth.isMegaDraw = false;
 			}
 			wallMouth = true;
-		
+			wall.sprite_index = s_wallBestiary;
 			wall.image_blend = _color;
 			
 			anchor.image_blend = _color;

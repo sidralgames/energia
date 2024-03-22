@@ -64,6 +64,15 @@ if (_hp <= 0)
 		explo = instance_create(x,y,o_exploPurple);
 		explo.image_xscale = 0.5;
 		explo.image_yscale = 0.5;
+		
+		global.enemyBadChipKills +=1;
+		if (global.bestiaryEnemyBadChipUnlocked = 0)
+		{
+			global.bestiaryEnemyBadChipUnlocked = 1;
+			enemy = ds_map_find_value(global.bestiaryList, enemyBestiaryNumber);
+			enemy.unlocked = 1;
+			global.enemiesInBestiary +=1;
+		}
 	}
 }
 

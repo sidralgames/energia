@@ -18,6 +18,6 @@ function EnemiesToSpawnLVL3()
 	}
 	else if(enemyToSpawn >= 9)
 	{
-		enemy = choose(o_enemyMines,o_enemyBomber,o_enemyMothership, o_enemyMisil)
+		enemy = choose(o_enemyMines,o_enemyBomber,o_enemyMothership, o_enemyOVNI)
 	}
 }

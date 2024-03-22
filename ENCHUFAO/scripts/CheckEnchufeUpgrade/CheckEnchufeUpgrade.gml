@@ -73,6 +73,19 @@ function CheckEnchufeUpgrade()
 				global.hp = global.hpMax;
 				global.hpStat+=1;
 				
+				if (global.hpMax >= 10)
+				{
+					//-- DISCARD UPGRADE --//
+					for (var i= 0; i< global.numberOfUpgrades; i++)
+					{
+						thisUpg = ds_map_find_value(global.upgradesList, i)
+						if (thisUpg.obj = o_enchufeUpgadeHP)
+						{
+							thisUpg.canShowUp = false;
+						}
+					}	
+				}
+				
 			}break;
 			
 			case "upgradeCharge":

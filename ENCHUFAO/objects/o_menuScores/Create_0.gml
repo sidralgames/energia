@@ -17,8 +17,12 @@ tipChoosed = false
 minNumb = global.differentEnemiesTotal;
 selectedBest=0
 enemyToShow=0;
-
-aliasOff = 0;
+initialXWall = 320;
+factorInitialXWall = 0.15;
+contMisilMax = random_range(120, 300)
+contMisil = contMisilMax;
+targetCreated = false;
+aliasOff = 10;
 
 factorInitialX = 0.15;
 
@@ -29,11 +33,17 @@ initialXInterrog = 320;
 
 rot = 0;
 
+wallBest = false;
+
 part_type_direction(global.EnemyKilledBy_part,175,185,0,1);
 
 scaleArrowsR = 0;
 scaleArrowsL = 0;
 xScale = 1;
+
+drawWall = true;
+wallYoffInitial = 50;
+wallYoff = wallYoffInitial;
 
 wallMouth = false;
 

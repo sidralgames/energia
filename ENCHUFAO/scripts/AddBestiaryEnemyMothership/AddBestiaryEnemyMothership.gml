@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function AddBestiaryEnemyMothership()
 {
-ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
+ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "MotherThreat",
 		sprite: s_enemyMothership,
@@ -19,5 +19,5 @@ ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
 		
 	})
 
-global.numberOfEnemiesBestiary +=1;
+global.totalNumberOfEnemiesBestiary +=1;
 }

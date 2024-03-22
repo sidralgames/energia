@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function AddBestiaryEnemyMitothree()
 {
-	ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
+	ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "Mitothree",
 		sprite: s_enemyMitosis_Mega,
@@ -18,5 +18,5 @@ function AddBestiaryEnemyMitothree()
 		group: "Mitosis"
 	})
 
-	global.numberOfEnemiesBestiary +=1;
+	global.totalNumberOfEnemiesBestiary +=1;
 }

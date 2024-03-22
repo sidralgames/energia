@@ -150,5 +150,42 @@ function LoadDefaultData()
 	global.bestiaryEnemyGripperUnlocked = 0;
 	global.enemyGripperKilledBy = 0;
 	global.enemyGripperKills = 0;
+	
+	//--- ENCHUFE MIMIC ---//
+	global.bestiaryEnemyEnchufeMimicUnlocked = 0;
+	global.enemyEnchufeMimicKilledBy = 0;
+	global.enemyEnchufeMimicKills = 0;
+	
+	//--- MINER	---//
+	global.bestiaryEnemyMinerUnlocked = 0;
+	global.enemyMinerKilledBy = 0;
+	global.enemyMinerKills = 0;
+	
+	//--- OVNI	---//
+	global.bestiaryEnemyOVNIUnlocked = 0;
+	global.enemyOVNIKilledBy = 0;
+	global.enemyOVNIKills = 0;
+	
+	//--- LASER TRAP ---//
+	global.bestiaryEnemyLaserTrapUnlocked = 0;
+	global.enemyLaserTrapKilledBy = 0;
+	global.enemyLaserTrapKills = 0;
+	
+	//--- BAD CHIP ---//
+	global.bestiaryEnemyBadChipUnlocked = 0;
+	global.enemyBadChipKilledBy = 0;
+	global.enemyBadChipKills = 0;
+	
+	//--- SHIELDER ---//
+	global.bestiaryEnemyShielderUnlocked = 0;
+	global.enemyShielderKilledBy = 0;
+	global.enemyShielderKills = 0;
+	
+	//--- CAPSULE MIMIC ---//
+	global.bestiaryEnemyCapsuleMimicUnlocked = 0;
+	global.enemyCapsuleMimicKilledBy = 0;
+	global.enemyCapsuleMimicKills = 0;
+	
+	
 
 }

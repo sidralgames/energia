@@ -1,8 +1,7 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+_colorBody = c_white;
 
-
-cable = instance_create_layer(x,y,"PauseHUE_sub", o_enemySegments_BodyGameOver);
 
 
 t = 6;
@@ -17,3 +16,4 @@ yy = y;
 
 alarm[0] = 30;
 alarm[0] = 60;
+alarm[2] = 2;

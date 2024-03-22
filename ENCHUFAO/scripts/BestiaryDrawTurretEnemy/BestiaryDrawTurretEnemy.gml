@@ -10,7 +10,7 @@ function BestiaryDrawTurretEnemy() //sprite, image, xoff, yoff,rot,color,alpha)
 	{
 		SetHUE();
 		wallMouth = true;
-		wall = instance_create_layer(__view_get( e__VW.XView, 0 )+317,__view_get( e__VW.YView, 0 )+221,"PauseHUE_Sub",o_wallGameOver);
+		wall = instance_create_layer(__view_get( e__VW.XView, 0 )+317,__view_get( e__VW.YView, 0 )+initialY,"PauseHUE_Sub",o_wallGameOver);
 		wall.image_index = 1;
 	}
 			

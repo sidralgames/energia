@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited();
+enemyBestiaryNumber = 26;
+
 thisEnemyBounce = false;
 isMotherShip = false;
 slowMoPickUps = choose(3,4);

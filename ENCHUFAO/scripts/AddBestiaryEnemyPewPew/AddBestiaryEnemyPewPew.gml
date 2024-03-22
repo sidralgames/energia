@@ -2,14 +2,14 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function AddBestiaryEnemyPewPew()
 {
-	ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
+	ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "PewPew",
 		sprite: s_torreta,
 		number: 14,
 		unlocked: global.bestiaryEnemyPewPewUnlocked,
-		textBestiary: "This TURRETS were once\npart of our defense systems.\n \nThey seem HACKED now...",
-		lines: 4,
+		textBestiary: "This TURRETS were\nonce part of our\ndefense systems.\n \nThey seem HACKED now...",
+		lines: 5,
 		killsText: "KILLED: " + string(global.enemyPewPewKills),
 		killsNum: global.enemyPewPewKills,
 		killsToUnlock: 15,
@@ -18,5 +18,5 @@ function AddBestiaryEnemyPewPew()
 		group: "Turrets"
 	})
 
-	global.numberOfEnemiesBestiary +=1;
+	global.totalNumberOfEnemiesBestiary +=1;
 }

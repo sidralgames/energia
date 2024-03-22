@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function AddBestiaryEnemyMini()
 {
-ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
+ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "Minithreat",
 		sprite: s_enemyMini_2,
@@ -19,5 +19,5 @@ ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
 		
 	})
 
-global.numberOfEnemiesBestiary +=1;
+global.totalNumberOfEnemiesBestiary +=1;
 }

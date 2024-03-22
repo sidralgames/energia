@@ -138,6 +138,45 @@ function SaveGame()
 	ini_write_real("bestiary","lilcrusherKills", global.enemyBossCrusherKills);
 	ini_write_real("bestiary","lilcrusherKilledBy", global.enemyBossCrusherKilledBy);
 	
+	//---- GRIPPER ----//
+	ini_write_real("bestiary","gripper", global.bestiaryEnemyGripperUnlocked);
+	ini_write_real("bestiary","gripperKills", global.enemyGripperKills);
+	ini_write_real("bestiary","gripperKilledBy", global.enemyGripperKilledBy);
+	
+	//---- ENCHUFE MIMIC ----//
+	ini_write_real("bestiary","mimic", global.bestiaryEnemyEnchufeMimicUnlocked);
+	ini_write_real("bestiary","mimicKills", global.enemyEnchufeMimicKills);
+	ini_write_real("bestiary","mimicKilledBy", global.enemyEnchufeMimicKilledBy);
+	
+	//---- MINER ----//
+	ini_write_real("bestiary","miner", global.bestiaryEnemyMinerUnlocked);
+	ini_write_real("bestiary","minerKills", global.enemyMinerKills);
+	ini_write_real("bestiary","minerKilledBy", global.enemyMinerKilledBy);
+	
+	//---- OVNI ----//
+	ini_write_real("bestiary","ovni", global.bestiaryEnemyOVNIUnlocked);
+	ini_write_real("bestiary","ovniKills", global.enemyOVNIKills);
+	ini_write_real("bestiary","ovniKilledBy", global.enemyOVNIKilledBy);
+	
+	//---- LASER TRAP ----//
+	ini_write_real("bestiary","lasertrap", global.bestiaryEnemyLaserTrapUnlocked);
+	ini_write_real("bestiary","lasertrapKills", global.enemyLaserTrapKills);
+	ini_write_real("bestiary","lasertrapKilledBy", global.enemyLaserTrapKilledBy);
+	
+	//---- BAD CHIP ----//
+	ini_write_real("bestiary","badchip", global.bestiaryEnemyBadChipUnlocked);
+	ini_write_real("bestiary","badchipKills", global.enemyBadChipKills);
+	ini_write_real("bestiary","badchipKilledBy", global.enemyBadChipKilledBy);
+	
+	//---- SHIELDER ----//
+	ini_write_real("bestiary","shielder", global.bestiaryEnemyShielderUnlocked);
+	ini_write_real("bestiary","shielderKills", global.enemyShielderKills);
+	ini_write_real("bestiary","shielderKilledBy", global.enemyShielderKilledBy);
+	
+	//---- CAPSULE MIMIC ----//
+	ini_write_real("bestiary","capsulemimic", global.bestiaryEnemyCapsuleMimicUnlocked);
+	ini_write_real("bestiary","capsulemimicKills", global.enemyCapsuleMimicKills);
+	ini_write_real("bestiary","capsulemimicKilledBy", global.enemyCapsuleMimicKilledBy);
 
 	ini_close();
 }

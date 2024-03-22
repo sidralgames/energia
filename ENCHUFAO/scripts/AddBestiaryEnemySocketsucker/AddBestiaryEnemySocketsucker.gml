@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function AddBestiaryEnemySocketsucker()
 {
-	ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
+	ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "Socketsucker",
 		sprite: s_enemyEnchufePlugged,
@@ -18,5 +18,5 @@ function AddBestiaryEnemySocketsucker()
 		group: "SocketSuckers"
 	})
 
-	global.numberOfEnemiesBestiary +=1;
+	global.totalNumberOfEnemiesBestiary +=1;
 }

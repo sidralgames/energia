@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function AddBestiaryEnemyPincher()
 {
-	ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
+	ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "Pincher",
 		sprite: s_enemyMouth,
@@ -18,5 +18,5 @@ function AddBestiaryEnemyPincher()
 		group: "WallMouth"
 	})
 
-	global.numberOfEnemiesBestiary +=1;
+	global.totalNumberOfEnemiesBestiary +=1;
 }

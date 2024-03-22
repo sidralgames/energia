@@ -151,6 +151,43 @@ function LoadGame()
 	global.enemyGripperKilledBy = ini_read_real("bestiary","gripperKilledBy", 0);
 	global.enemyGripperKills = ini_read_real("bestiary","gripperKills", 0);
 	
+	//--- ENCHUFE MIMIC ---//
+	global.bestiaryEnemyEnchufeMimicUnlocked = ini_read_real("bestiary","mimic", 0);
+	global.enemyEnchufeMimicKilledBy = ini_read_real("bestiary","mimicKilledBy", 0);
+	global.enemyEnchufeMimicKills = ini_read_real("bestiary","mimicKills", 0);
+	
+	//--- MINER	---//
+	global.bestiaryEnemyMinerUnlocked =  ini_read_real("bestiary","miner", 0);
+	global.enemyMinerKilledBy = ini_read_real("bestiary","minerKilledBy", 0);
+	global.enemyMinerKills = ini_read_real("bestiary","minerKills", 0);
+	
+	//--- OVNI	---//
+	global.bestiaryEnemyOVNIUnlocked =  ini_read_real("bestiary","ovni", 0);
+	global.enemyOVNIKilledBy = ini_read_real("bestiary","ovniKilledBy", 0);
+	global.enemyOVNIKills = ini_read_real("bestiary","ovniKills", 0);
+	
+	//--- LASER TRAP	---//
+	global.bestiaryEnemyLaserTrapUnlocked = ini_read_real("bestiary","lasertrap", 0);
+	global.enemyLaserTrapKilledBy = ini_read_real("bestiary","lasertrapKilledBy", 0);
+	global.enemyLaserTrapKills = ini_read_real("bestiary","lasertrapKills", 0);
+	
+	//--- BAD CHIP ---//
+	global.bestiaryEnemyBadChipUnlocked = ini_read_real("bestiary","badchip", 0);
+	global.enemyBadChipKilledBy = ini_read_real("bestiary","badchipKilledBy", 0);
+	global.enemyBadChipKills = ini_read_real("bestiary","badchipKills", 0);
+	
+	//--- SHIELDER ---//
+	global.bestiaryEnemyShielderUnlocked = ini_read_real("bestiary","shielder", 0);
+	global.enemyShielderKilledBy = ini_read_real("bestiary","shielderKilledBy", 0);
+	global.enemyShielderKills = ini_read_real("bestiary","shielderKills", 0); 
+	
+	//--- CAPSULE MIMIC ---//
+	global.bestiaryEnemyCapsuleMimicUnlocked =ini_read_real("bestiary","capsulemimic", 0);
+	global.enemyCapsuleMimicKilledBy = ini_read_real("bestiary","capsulemimicKilledBy", 0);
+	global.enemyCapsuleMimicKills = ini_read_real("bestiary","capsulemimicKills", 0); 
+	
+	
+	
 	
 	
 	

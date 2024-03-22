@@ -490,32 +490,36 @@ AddTotalBumpsStat();
 
 global.bestiaryList = ds_map_create();
 
-global.numberOfEnemiesBestiary = 0;
+global.totalNumberOfEnemiesBestiary = 0;
 //
 AddBestiaryEnemyBasic();
 AddBestiaryEnemyBasicMega();
 AddBestiaryEnemyFast();
 AddBestiaryEnemyDisp();
+AddBestiaryEnemyPewPew();
 AddBestiaryEnemySniper();
-AddBestiaryEnemySniperMega();
+AddBestiaryEnemyBadChip();
 AddBestiaryEnemyShield();
+AddBestiaryEnemySocketsucker();
 AddBestiaryEnemyMini();
 AddBestiaryEnemyMothership();
-AddBestiaryEnemyMothershipMega();
+AddBestiaryEnemyLaserTrap();
 AddBestiaryEnemyDisc();
 AddBestiaryEnemyPincher();
 AddBestiaryEnemyNibblade();
 AddBestiaryEnemyBomber();
-AddBestiaryEnemyPewPew();
-AddBestiaryEnemySocketsucker();
+AddBestiaryEnemyEnchufeMimic();
 AddBestiaryEnemyMitoson();
 AddBestiaryEnemyMitoship();
 AddBestiaryEnemyMitothree();
 AddBestiaryEnemyBossCrusher();
 AddBestiaryEnemyGripper();
-
-
-
+AddBestiaryEnemySniperMega();
+AddBestiaryEnemyMiner();
+AddBestiaryEnemyOVNI();
+AddBestiaryEnemyMothershipMega();
+AddBestiaryEnemyShielder();
+AddBestiaryEnemyCapsuleMimic();
 //global.possibleShipList = ds_map_create();
 
 //AddShipGreenPos();

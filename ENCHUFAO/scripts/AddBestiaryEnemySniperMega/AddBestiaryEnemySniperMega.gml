@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function AddBestiaryEnemySniperMega()
 {
-ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
+ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "The MegaSniper",
 		sprite: s_enemySniperMega,
@@ -18,5 +18,5 @@ ds_map_add(global.bestiaryList, global.numberOfEnemiesBestiary,
 		group: "Shooter"
 	})
 
-global.numberOfEnemiesBestiary +=1;
+global.totalNumberOfEnemiesBestiary +=1;
 }

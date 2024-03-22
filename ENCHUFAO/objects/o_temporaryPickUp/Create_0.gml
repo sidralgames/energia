@@ -13,7 +13,7 @@ image_speed = 0.65;
 bnc = 1;
 
 scale = 0;
-
+enemyBestiaryNumber = 25;
 
 
 

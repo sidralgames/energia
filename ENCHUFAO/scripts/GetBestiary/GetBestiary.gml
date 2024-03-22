@@ -3,11 +3,18 @@
 function GetBestiary()
 {
 	draw_set_halign(fa_center);
+	factorInitialXWall = 0.16;
 	
-	initialY = 220;
+	InitialYName = 110;
+	initialY = 200;
 	initialX = lerp(initialX, 320, factorInitialX);
+	InitialYText = 192;
 	initialXText = lerp(initialXText, 320, 0.15);
 	initialXInterrog = lerp(initialXInterrog, 320, 0.15);
+	InitialYInterrog = 180;
+	initialYPaginator = 80;
+	InitialYToKill = 250;
+	initialXWall = lerp(initialXWall, 320, factorInitialXWall);
 	
 	enemy = ds_map_find_value(global.bestiaryList, selectedBest);
 	
@@ -18,16 +25,18 @@ function GetBestiary()
 	
 	if (enemy.unlocked = 0) || (enemy.killsNum < 1)
 	{
-		BestiaryDrawUnknown()
-		//BestiaryDrawUnlocked();
+		//BestiaryDrawUnknown();
+		BestiaryDrawUnlocked();
 		//BestiaryDrawLocked();
 	}
 	else if (enemy.killsNum >= 1) && (enemy.killsNum < enemy.killsToUnlock)
 	{
-		BestiaryDrawLocked()
+		BestiaryDrawUnlocked();
+		//BestiaryDrawLocked();
 	}
 	else if (enemy.unlocked) && (enemy.killsNum > enemy.killsToUnlock)
 	{
 		BestiaryDrawUnlocked();
+		
 	}
 }

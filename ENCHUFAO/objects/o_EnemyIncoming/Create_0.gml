@@ -107,7 +107,7 @@ else
 //	o_enemyDisp, o_enemyDisp,
 //	o_enemy_Waiting_Shield,
 //	o_enemyShield_v2,
-//	o_enemyMisil,
+//	o_enemyOVNI,
 //	o_enemyMothership,
 //	o_enemySniper,
 //	o_enemyMitosis,
@@ -123,7 +123,7 @@ else
 //	o_enemyDisp, o_enemyDisp, 
 //	o_enemy_Waiting_Shield,
 //	o_enemyShield_v2,
-//	o_enemyMisil,
+//	o_enemyOVNI,
 //	o_enemyMothership,
 //	o_enemyTurret, o_enemySniper, o_enemySniper)
 //}
