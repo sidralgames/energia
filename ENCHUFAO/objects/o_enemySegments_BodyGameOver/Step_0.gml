@@ -15,7 +15,10 @@ if instance_exists(inst) //&& instance_exists(instAchor)
 }
 else
 {
-	instance_destroy(instAchor)
+	if instance_exists(instAchor)
+	{
+		instance_destroy(instAchor)
+	}
 	instance_destroy();	
 }
 

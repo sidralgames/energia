@@ -2,9 +2,7 @@
 // Puede escribir su código en este editor
 
 
-cable = instance_create_layer(x,y,"PauseHUE_sub", o_enemyMouth_Body_FreeGameOver);
-
-
+_color = c_white;
 t = 6;
 increment = choose(4); //degrees -- freq = 1 oscillation per second (1Hz)
 amplitude = choose(6);
@@ -12,6 +10,8 @@ amplitude = choose(6);
 dir1 = choose(90,270)
 
 //clone the x- and y-positions
-xx = x;
+//xx = x;
 yy = y;
+alarm[2] = 2;
 
+cable = -1;

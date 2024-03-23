@@ -5,11 +5,18 @@
 t = (t + increment) mod 360;
 shift = amplitude * dsin(t);
 
-image_angle= 0+(shift/2);
+if instance_exists(o_menuScores)
+{
+image_angle= 0+(shift/4)*o_menuScores.xScale;
+}
+else
+{
+	image_angle= 0+(shift/4)
+}
 
 //apply the shift
 
-x = xx + lengthdir_x(shift, direction +dir1);
+//x = xx + lengthdir_x(shift, direction +dir1);
 y = yy + lengthdir_y(shift, direction + dir1);	
 
 

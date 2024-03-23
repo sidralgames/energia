@@ -8,6 +8,9 @@ Controls_Input();
 
 if (key_upP)
 {
+	gripperCreated = false;
+freewormCreated = false;
+wormageddonCreated = false;
 	rot = 0;
 	drawWall = true;
 	wallYoff = wallYoffInitial;
@@ -22,12 +25,16 @@ if (key_upP)
 	factorInitialX =0.09;
 	initialX = initialXReserve;
 	initialXWall = initialX;
+	settedHue = false
 	part_type_alpha2(global.EnemyKilledBy_part, 1,1);
 	audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 	
 }
 if (key_downP)
 {
+	gripperCreated = false;
+freewormCreated = false;
+wormageddonCreated = false;
 	rot = 0;
 	drawWall = true;
 	wallYoff = wallYoffInitial;
@@ -42,6 +49,7 @@ if (key_downP)
 	enchufeChoosed = false;
 	initialX = initialXReserve;
 	initialXWall = initialX;
+	settedHue = false
 	part_type_alpha2(global.EnemyKilledBy_part, 1,1);
 	audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 }
@@ -62,6 +70,9 @@ if (selected = 3)
 {
 	if (key_rightP)
 	{
+		gripperCreated = false;
+freewormCreated = false;
+wormageddonCreated = false;
 		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 		initialX = 200;
 		initialXWall = initialX;
@@ -85,11 +96,15 @@ if (selected = 3)
 		drawWall = true;
 		wallYoff = wallYoffInitial;
 		rot = 0;
+		settedHue = false
 		//contParts = 0;
 		part_type_direction(global.EnemyKilledBy_part,175,185,0,1);
 	}
 	if (key_leftP)
 	{
+		gripperCreated = false;
+freewormCreated = false;
+wormageddonCreated = false;
 		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 		initialX = 440;
 		initialXWall = initialX;
@@ -113,6 +128,7 @@ if (selected = 3)
 		drawWall = true;
 		wallYoff = wallYoffInitial;
 		rot = 0;
+		settedHue = false
 		//contParts = 0;
 		part_type_direction(global.EnemyKilledBy_part,355,5,0,1);
 	}
@@ -203,6 +219,9 @@ switch(selected)
 
 if (key_back)
 {
+	gripperCreated = false;
+freewormCreated = false;
+wormageddonCreated = false;
 	selected-=1;
 	wallMouth = false;
 	alphaInfo=0;
@@ -220,6 +239,7 @@ if (key_back)
 	menuHome = instance_create(x,y,o_menuHome);
 	menuHome.alarm[0]=10;
 	menuHome._visible = true;
+	settedHue = false
 	instance_destroy();
 	o_nextRoom._visible = true;
 }

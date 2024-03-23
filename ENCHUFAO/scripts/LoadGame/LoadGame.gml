@@ -182,12 +182,19 @@ function LoadGame()
 	global.enemyShielderKills = ini_read_real("bestiary","shielderKills", 0); 
 	
 	//--- CAPSULE MIMIC ---//
-	global.bestiaryEnemyCapsuleMimicUnlocked =ini_read_real("bestiary","capsulemimic", 0);
+	global.bestiaryEnemyCapsuleMimicUnlocked = ini_read_real("bestiary","capsulemimic", 0);
 	global.enemyCapsuleMimicKilledBy = ini_read_real("bestiary","capsulemimicKilledBy", 0);
 	global.enemyCapsuleMimicKills = ini_read_real("bestiary","capsulemimicKills", 0); 
 	
+	//--- FREEWORM ---//
+	global.bestiaryEnemyFreewormUnlocked = ini_read_real("bestiary","freeworm", 0);
+	global.enemyFreewormKilledBy = ini_read_real("bestiary","freewormKilledBy", 0);
+	global.enemyFreewormKills = ini_read_real("bestiary","freewormKills", 0); 
 	
-	
+	//--- WORMAGEDDON ---//
+	global.bestiaryEnemyWormageddonUnlocked = ini_read_real("bestiary","wormageddon", 0);
+	global.enemyWormageddonKilledBy = ini_read_real("bestiary","wormageddonKilledBy", 0);
+	global.enemyWormageddonKills = ini_read_real("bestiary","wormageddonKills", 0); 
 	
 	
 	

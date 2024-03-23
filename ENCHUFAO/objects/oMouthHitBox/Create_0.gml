@@ -19,3 +19,5 @@ die = false;
 state = -1;
 isWormHitBox = true;
 dying = false;
+
+enemyBestiaryNumber = global.enemyFreewormBestiaryNumber;

@@ -5,7 +5,14 @@
 t = (t + increment) mod 360;
 shift = amplitude * dsin(t);
 
-image_angle= 0+(shift/1.5);
+if instance_exists(o_menuScores)
+{
+image_angle= 0+(shift/4)*o_menuScores.xScale;
+}
+else
+{
+	image_angle= 0+(shift/4)
+}
 
 //apply the shift
 if (alarm[1] <=0)

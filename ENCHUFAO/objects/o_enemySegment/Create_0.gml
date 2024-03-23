@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited();
+
+enemyBestiaryNumber = global.enemyGripperBestiaryNumber;
+
 isBossWorm = false;
 enemyIsWorm = true;
 thisEnemyBounce = false;

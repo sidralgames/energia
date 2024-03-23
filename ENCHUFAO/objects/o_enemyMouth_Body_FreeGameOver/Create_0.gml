@@ -4,7 +4,7 @@
 // You can create multiple systems with different physic properties
 mega = false;
 canCollide = false;
-fric = 0.9;
+fric = 0.6;
 grv = 0.0;
 verletSystem1 = new verletSystem(fric, grv);
 off = 0;
@@ -30,7 +30,7 @@ counting=false;
 countingNInitial=20
 countingN=countingNInitial;
 _sprite = s_enemyMouth_Body_Free;
-_segments = 7;
+_segments = choose(7,8)
 rope1 = verletGroupCreateRopeTextured(verletSystem1, x, y, _sprite, _segments, 1, 10);
 
 contPlugBody = -1;
@@ -42,15 +42,17 @@ contPlugBody = -1;
 inst = instance_nearest(x,y,o_enemyMouth_FreeGameOver)
 rope1.vertexAttachTo(first, inst);
 
+_color = c_white;
+alarm[1] = 2;
+changed = false
+if instance_exists(o_gameOver)
+{
+	rope1.vertexChangeData(first, x-40,y-20,,false)
+	
+}
+//rope1.vertexChangeData(last,,y+10,,false)
 
-instAchor = instance_create_layer(x,y,"PauseHUE_Sub",o_chargerMouth)
-rope1.vertexAttachObject(last, instAchor,vertexAttachmentType.both);
-
-rope1.vertexChangeData(first, x-40,y-20,,false)
-rope1.vertexChangeData(last, x-200,y-20,,false)
-
-
-force = verletSystem1.addForceField(x-200, y-80, x+30, y+260,180, 1, false);
+//force = verletSystem1.addForceField(x-200, y-80, x+30, y+260,180, 1, false);
 
 //instTope = instance_create(x, y, o_coco);
 //rope1.vertexAttachObject(last, instTope, vertexAttachmentType.positionOnly);

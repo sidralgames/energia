@@ -131,7 +131,7 @@ function GetEnemyBestiary(argument0)
 		{
 			drawWall = false;
 			aliasOff = 10;
-			BestiaryDrawEnemyWorm(enemy.alias, 30, c_white, alphaInfo);
+			BestiaryDrawEnemyWorm(enemy.alias, 30, 0, c_white, alphaInfo);
 		}
 		break;
 		
@@ -207,6 +207,24 @@ function GetEnemyBestiary(argument0)
 			aliasOff = 10;
 			BestiaryDrawEnemy(enemy.sprite, imageSprite, 0, 0, 260*xScale+rot, c_white, alphaInfo, false);
 		}
+		break;
+		
+		case ("Freeworm"):
+		{
+			drawWall = false;
+			aliasOff = 10;
+			BestiaryDrawEnemyWorm(enemy.alias, 55, 0, c_white, alphaInfo);
+		}
+		break;
+		
+		case ("Wormageddon"):
+		{
+			drawWall = false;
+			aliasOff = 10;
+			BestiaryDrawEnemyWorm(enemy.alias, 90,0, c_white, alphaInfo);
+			//BestiaryDrawEnemyWorm("Gripper", -10, -30, c_white, alphaInfo);
+		}
+		break;
 	}
 	
 	if (drawWall)

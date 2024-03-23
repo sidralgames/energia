@@ -520,6 +520,42 @@ AddBestiaryEnemyOVNI();
 AddBestiaryEnemyMothershipMega();
 AddBestiaryEnemyShielder();
 AddBestiaryEnemyCapsuleMimic();
+AddBestiaryEnemyFreeworm();
+AddBestiaryEnemyWormageddon_();
+
+
+global.enemyBasicBestiaryNumber = 0;
+global.enemyBasicMegaBestiaryNumber = 1;
+global.enemyFastBestiaryNumber = 2;
+global.enemyDispBestiaryNumber = 3;
+global.enemySniperBestiaryNumber = 4;
+global.enemySniperMegaBestiaryNumber = 5;
+global.enemyShieldBestiaryNumber = 6;
+global.enemyMiniBestiaryNumber = 7;
+global.enemyMothershipBestiaryNumber = 8;
+global.enemyMothershipMegaBestiaryNumber = 9;
+global.enemyDiscBestiaryNumber = 10;
+global.enemyPincherBestiaryNumber = 11;
+global.enemyNibbladeBestiaryNumber = 12;
+global.enemyBomberBestiaryNumber = 13;
+global.enemyPewPewBestiaryNumber = 14;
+global.enemySocketsuckerBestiaryNumber = 15;
+global.enemyMitosonBestiaryNumber = 16;
+global.enemyMitoshipBestiaryNumber = 17;
+global.enemyMitothreeBestiaryNumber = 18;
+global.enemyBossCrusherBestiaryNumber = 19;
+global.enemyGripperBestiaryNumber = 20;
+global.enemyEnchufeMimicBestiaryNumber = 21;
+global.enemyMinerBestiaryNumber = 22;
+global.enemyOVNIBestiaryNumber = 23;
+global.enemyLasertrapBestiaryNumber = 24;
+global.enemyBadchipBestiaryNumber = 25;
+global.enemyShielderBestiaryNumber = 26;
+global.enemyCapsuleMimicBestiaryNumber = 27;
+global.enemyFreewormBestiaryNumber = 28;
+global.enemyWormageddonBestiaryNumber = 29;
+
+
 //global.possibleShipList = ds_map_create();
 
 //AddShipGreenPos();

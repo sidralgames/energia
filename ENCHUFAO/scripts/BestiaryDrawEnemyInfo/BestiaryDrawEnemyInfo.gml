@@ -16,12 +16,12 @@ function BestiaryDrawEnemyInfo()
 	draw_set_font(global.customFont14);
 		
 	draw_set_color(global.lightBlue)
-	draw_text(__view_get( e__VW.XView, 0 )-120+initialXText,__view_get( e__VW.YView, 0 )+InitialYText-19, string(enemy.killsText))
+	draw_text(__view_get( e__VW.XView, 0 )-140+initialXText,__view_get( e__VW.YView, 0 )+InitialYText-19, string(enemy.killsText))
 	draw_set_color(c_white)
-	draw_text(__view_get( e__VW.XView, 0 )-119+initialXText,__view_get( e__VW.YView, 0 )+InitialYText-20, string(enemy.killsText))
+	draw_text(__view_get( e__VW.XView, 0 )-139+initialXText,__view_get( e__VW.YView, 0 )+InitialYText-20, string(enemy.killsText))
 		
 	draw_set_color(global.lightBlue)
-	draw_text(__view_get( e__VW.XView, 0 )-120+initialXText,__view_get( e__VW.YView, 0 )+InitialYText+11, string(enemy.killedByText))
+	draw_text(__view_get( e__VW.XView, 0 )-140+initialXText,__view_get( e__VW.YView, 0 )+InitialYText+11, string(enemy.killedByText))
 	draw_set_color(c_white)
-	draw_text(__view_get( e__VW.XView, 0 )-119+initialXText,__view_get( e__VW.YView, 0 )+InitialYText+10, string(enemy.killedByText))
+	draw_text(__view_get( e__VW.XView, 0 )-139+initialXText,__view_get( e__VW.YView, 0 )+InitialYText+10, string(enemy.killedByText))
 }

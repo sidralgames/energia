@@ -21,7 +21,14 @@ initialXWall = 320;
 factorInitialXWall = 0.15;
 contMisilMax = random_range(120, 300)
 contMisil = contMisilMax;
+
+
 targetCreated = false;
+
+contDisp = 120;
+current_recoil = 0;
+
+
 aliasOff = 10;
 
 factorInitialX = 0.15;
@@ -40,6 +47,12 @@ part_type_direction(global.EnemyKilledBy_part,175,185,0,1);
 scaleArrowsR = 0;
 scaleArrowsL = 0;
 xScale = 1;
+
+gripperCreated = false;
+freewormCreated = false;
+wormageddonCreated = false;
+
+settedHue = false;
 
 drawWall = true;
 wallYoffInitial = 50;

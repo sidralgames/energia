@@ -35,10 +35,19 @@ if instance_exists(inst) //&& instance_exists(instAchor)
 					//currentForceField.y2 = y+130;
 					//currentForceField.dir = dire;
 	}
+	
+	if (changed = false)
+	{
+		changed = true
+		rope1.vertexChangeData(last, inst.x-(120*inst.xscale),inst.y,,false)
+	}
 }
 else
 {
-	instance_destroy(instAchor)
+	if instance_exists(instAchor)
+	{
+		instance_destroy(instAchor)
+	}
 	instance_destroy();	
 }
 

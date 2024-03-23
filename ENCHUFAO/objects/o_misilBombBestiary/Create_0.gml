@@ -9,7 +9,7 @@ muertoCount=100;
 touched = false;
 //global.enemigos+=1;
 randomize();
-depth = -1000;
+
 direction= point_direction(x, y, o_targetBestiary.x, o_targetBestiary.y)+choose(-90,90);
 
 _speed=random(0.7)+0.7;

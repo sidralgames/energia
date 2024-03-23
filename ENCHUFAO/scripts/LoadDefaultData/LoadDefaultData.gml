@@ -186,6 +186,16 @@ function LoadDefaultData()
 	global.enemyCapsuleMimicKilledBy = 0;
 	global.enemyCapsuleMimicKills = 0;
 	
+	//--- FREEWORM ---//
+	global.bestiaryEnemyFreewormUnlocked = 0;
+	global.enemyFreewormKilledBy = 0;
+	global.enemyFreewormKills = 0;
+	
+	//--- WORMAGEDDON ---//
+	global.bestiaryEnemyWormageddonUnlocked = 0;
+	global.enemyWormageddonKilledBy = 0;
+	global.enemyWormageddonKills = 0;
+	
 	
 
 }

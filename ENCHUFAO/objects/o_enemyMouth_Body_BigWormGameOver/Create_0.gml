@@ -4,11 +4,13 @@
 // You can create multiple systems with different physic properties
 mega = false;
 canCollide = false;
-fric = 0.9;
+fric = 0.6;
 grv = 0.0;
 verletSystem1 = new verletSystem(fric, grv);
 off = 0;
+_color = c_white;
 
+alarm[1] = 2;
 fixing = false;
 
 
@@ -26,20 +28,17 @@ contPlugBody = -1;
 
  //Attach its first vertex to an object
 inst = instance_nearest(x,y,o_BigWormGameOver)
-rope1.vertexAttachTo(first, inst, 20);
-rope1.vertexChangeData(last, inst.x-100,,false)
-
-instAchor = instance_create_layer(x,y,"PauseHUE_Sub",o_chargerMouth)
-rope1.vertexAttachObject(last, instAchor,vertexAttachmentType.both);
-
-
-
-
+rope1.vertexAttachTo(first, inst, 0);
+if instance_exists(o_gameOver)
+{
+	rope1.vertexAttachTo(first, inst, 20);
+	
+}
 
 plugged = false;
+rope1.vertexChangeData(last, inst.x-(220*inst.xscale),inst.y,,false)
 
-force = verletSystem1.addForceField(x-400, y-80, x+50, y+260,180, 0.8, false);
-
+changed = false
 //instTope = instance_create(x, y, o_coco);
 //rope1.vertexAttachObject(last, instTope, vertexAttachmentType.positionOnly);
 osc = 1

@@ -177,6 +177,21 @@ function SaveGame()
 	ini_write_real("bestiary","capsulemimic", global.bestiaryEnemyCapsuleMimicUnlocked);
 	ini_write_real("bestiary","capsulemimicKills", global.enemyCapsuleMimicKills);
 	ini_write_real("bestiary","capsulemimicKilledBy", global.enemyCapsuleMimicKilledBy);
+	
+	//---- FREEWORM ----//
+	ini_write_real("bestiary","freeworm", global.bestiaryEnemyFreewormUnlocked);
+	ini_write_real("bestiary","freewormKills", global.enemyFreewormKills);
+	ini_write_real("bestiary","freewormKilledBy", global.enemyFreewormKilledBy);
+	
+	//---- WORMAGEDDON ----//
+	ini_write_real("bestiary","wormageddon", global.bestiaryEnemyWormageddonUnlocked);
+	ini_write_real("bestiary","wormageddonKills", global.enemyWormageddonKills);
+	ini_write_real("bestiary","wormageddonKilledBy", global.enemyWormageddonKilledBy);
+	
+	
+	
+	
+	
 
 	ini_close();
 }
