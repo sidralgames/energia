@@ -5,6 +5,7 @@ function AddBestiaryEnemyMitothree()
 	ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "Mitothree",
+		keyKilledBy :"mitothreeKilledBy",
 		sprite: s_enemyMitosis_Mega,
 		number: 18,
 		unlocked: global.bestiaryEnemyMitothreeUnlocked,

@@ -5,6 +5,7 @@ function AddBestiaryEnemyOVNI()
 	ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "O.V.N.I",
+		keyKilledBy :"ovniKilledBy",
 		sprite: s_enemyMisil,
 		number: 23,
 		unlocked: global.bestiaryEnemyOVNIUnlocked,

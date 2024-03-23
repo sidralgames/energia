@@ -5,6 +5,7 @@ function AddBestiaryEnemyPincher()
 	ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "Pincher",
+		keyKilledBy :"pincherKilledBy",
 		sprite: s_enemyMouth,
 		number: 11,
 		unlocked: global.bestiaryEnemyPincherUnlocked,

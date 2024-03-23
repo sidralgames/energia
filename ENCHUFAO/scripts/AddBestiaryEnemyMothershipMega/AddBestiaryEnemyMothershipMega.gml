@@ -5,6 +5,7 @@ function AddBestiaryEnemyMothershipMega()
 ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "Mega MotherThreat",
+		keyKilledBy :"mothershipMegaKilledBy",
 		sprite: s_enemyMothershipMega,
 		number: 9,
 		unlocked: global.bestiaryEnemyMothershipMegaUnlocked,

@@ -5,6 +5,7 @@ function AddBestiaryEnemyShield()
 ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "The Barrier",
+		keyKilledBy :"shieldKilledBy",
 		sprite: s_enemyShieldBestiary,
 		number: 6,
 		unlocked: global.bestiaryEnemyShieldUnlocked,

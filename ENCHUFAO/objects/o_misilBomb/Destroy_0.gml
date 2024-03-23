@@ -7,6 +7,7 @@ if (hitByLaser = false)
 	ebomb.damagePlayer = true;
 	ebomb.isFrom = "EnemyBomb";
 	ebomb.sprite_index = s_exploOrange;
+	ebomb.numBombKilledBy = global.numExploOrange;
 	ebomb.scaleShockwave = 0.1;
 	ebomb.scaleShake = 0.2;
 	shock = instance_create(x,y,o_shockwaveTiles)
@@ -20,6 +21,7 @@ else
 	ebomb.damagePlayer = true;
 	ebomb.isFrom = "EnemyBomb";
 	ebomb.sprite_index = s_exploOrange;
+	ebomb.numBombKilledBy = global.numExploOrange;
 	ebomb.scaleShockwave = 0.25;
 	ebomb.scaleShake = 0.45;
 	shock = instance_create(x,y,o_shockwaveTiles)

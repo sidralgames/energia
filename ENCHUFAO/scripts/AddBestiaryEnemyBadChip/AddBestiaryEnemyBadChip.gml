@@ -5,6 +5,7 @@ function AddBestiaryEnemyBadChip()
 	ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "BadChip",
+		keyKilledBy :"badchipKilledBy",
 		sprite: s_chipMimic,
 		number: 25,
 		unlocked: global.bestiaryEnemyBadChipUnlocked,

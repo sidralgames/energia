@@ -16,7 +16,8 @@ if (other.damagePlayer == true)
 			
 			if (global.hp < 1)
 			{
-				global.numEnemyKilledBy = other.sprite_index;
+				global.killedByExplosion = true;
+				global.numEnemyKilledBy = other.numBombKilledBy;
 				global.FinalTrail = false;
 			}
 			

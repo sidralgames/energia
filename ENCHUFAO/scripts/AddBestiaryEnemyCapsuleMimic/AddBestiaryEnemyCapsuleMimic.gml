@@ -6,6 +6,7 @@ function AddBestiaryEnemyCapsuleMimic()
 	{ 
 		alias: "Trapsule",
 		sprite: s_capsule_MimicBestiary,
+		keyKilledBy :"capsulemimicKilledBy",
 		number: 27,
 		unlocked: global.bestiaryEnemyCapsuleMimicUnlocked,
 		textBestiary: "Some kind of PARASITE\ninfested this capsule.\nNo prize inside for you!",

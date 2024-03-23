@@ -5,6 +5,7 @@ function AddBestiaryEnemyEnchufeMimic()
 	ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "Mimic",
+		keyKilledBy :"enchufemimicKilledBy",
 		sprite: s_enchufeMimicBestiary,
 		number: 21,
 		unlocked: global.bestiaryEnemyEnchufeMimicUnlocked,

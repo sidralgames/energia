@@ -5,6 +5,7 @@ function AddBestiaryEnemyDisp()
 ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "The Shooter",
+		keyKilledBy :"dispKilledBy",
 		sprite: s_enemyDisp,
 		number: 3,
 		unlocked: global.bestiaryEnemyDispUnlocked,

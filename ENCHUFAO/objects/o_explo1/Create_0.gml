@@ -1,0 +1,1 @@
+numBombKilledBy = 0;

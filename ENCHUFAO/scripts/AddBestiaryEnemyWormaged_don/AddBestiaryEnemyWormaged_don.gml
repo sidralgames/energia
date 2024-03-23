@@ -5,6 +5,7 @@ function AddBestiaryEnemyWormageddon_()
 	ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "Wormageddon",
+		keyKilledBy :"wormageddonKilledBy",
 		sprite: s_bigWorm_Mouth,
 		number: 29,
 		unlocked: global.bestiaryEnemyWormageddonUnlocked,

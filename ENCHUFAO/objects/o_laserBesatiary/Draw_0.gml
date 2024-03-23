@@ -18,7 +18,7 @@ if (alarm[0] > limit)
 	draw_set_alpha(1)
 }
 
-if alarm[0] <= 0
+if (alarm[0] <= 0)
 {
 	alarm[0] = random_range(300, 400)
 }

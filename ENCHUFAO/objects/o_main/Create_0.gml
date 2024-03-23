@@ -41,7 +41,7 @@ global.yellow = make_color_rgb(254,231, 97);
 global.lightBlue = make_color_rgb(44,232, 245);
 global.blue = make_color_rgb(0,149,233);
 global.dark = make_color_rgb(38,43,68);
-global.darkPalette =  make_color_rgb(38,43,68);
+global.darkPalette =  make_color_rgb(24,20,37);
 
 //---- FONTS ---//
 global.customFont20 = font_add("ChubbyChoo-SemiBold.ttf", 20, false, false, 32, 128);
@@ -555,6 +555,25 @@ global.enemyCapsuleMimicBestiaryNumber = 27;
 global.enemyFreewormBestiaryNumber = 28;
 global.enemyWormageddonBestiaryNumber = 29;
 
+
+
+
+
+
+global.killedByExplosion = false;
+global.numBombKilledBy = 0;
+global.explosionList = ds_map_create();
+
+global.totalNumberOfExplosions = 0;
+AddExplosionBlue();
+AddExplosionGreen();
+AddExplosionPurple();
+AddExplosionOrange();
+
+
+
+global.numExploOrange = 3;
+//
 
 //global.possibleShipList = ds_map_create();
 

@@ -16,11 +16,7 @@ function KilledByDrawEnemy(_name, _info, _range, _trail, _image)
 		}
 	}
 	
-	if (deathCounted = false)
-	{
-		deathCounted = true;
-		enemy.killedByNum+=1;
-	}
+
 	
 	if (drawsprite)
 	{

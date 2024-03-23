@@ -3,7 +3,9 @@
 function BombKilledBy()
 {
 	off = 5;
-	image_speed = 0.6;
+	image_speed = 0.2;
+	draw_sprite_ext(explosion.sprite, image_index,__view_get( e__VW.XView, 0 )+319,
+	__view_get( e__VW.YView, 0 )+245, 1,1,image_angle, image_blend, image_alpha)
 	draw_set_color(global.brightRed);
 	draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+271,"Explosion");
 

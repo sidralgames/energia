@@ -5,6 +5,7 @@ function AddBestiaryEnemyGripper()
 	ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "Gripper",
+		keyKilledBy :"gripperKilledBy",
 		sprite: s_enemySegments,
 		number: 20,
 		unlocked: global.bestiaryEnemyGripperUnlocked,

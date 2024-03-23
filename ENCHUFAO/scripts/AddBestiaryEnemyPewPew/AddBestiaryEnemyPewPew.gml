@@ -5,6 +5,7 @@ function AddBestiaryEnemyPewPew()
 	ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "PewPew",
+		keyKilledBy :"pewpewKilledBy",
 		sprite: s_torreta,
 		number: 14,
 		unlocked: global.bestiaryEnemyPewPewUnlocked,

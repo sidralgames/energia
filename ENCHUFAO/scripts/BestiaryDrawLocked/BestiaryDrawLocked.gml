@@ -72,6 +72,7 @@ function BestiaryDrawLocked()
 		
 		case ("Socketsucker"):
 		{
+			rot = lerp(rot, 60*-xScale, 0.08)
 			imageSprite += 0.2;
 			aliasOff = 10;
 			
@@ -85,12 +86,30 @@ function BestiaryDrawLocked()
 				s_enchufe_Laser, s_enchufe_Laser_Charged);
 				enchufeChoosed = true;
 			}
-			BestiaryDrawEnemy(enchufeToDraw, 0, 0, 0, 0,  global.darkPalette, 1, false);
-			BestiaryDrawEnemy(enemy.sprite, imageSprite, 1, 1, 0,  global.darkPalette, 1, false);
+			BestiaryDrawEnemy(enchufeToDraw, 0, 0, 0, 60*xScale+rot, global.darkPalette, alphaInfo, false);
+			BestiaryDrawEnemy(enemy.sprite, imageSprite, 1, 1,60*xScale+rot, global.darkPalette, alphaInfo, false);
 			
 			//--- ALONE ---//
 			//BestiaryDrawSockerSuckerAlone(1, 10, c_white, alphaInfo);
 		}break;
+		
+		case ("Mimic"):
+		{
+			
+			rot = lerp(rot, 60*-xScale, 0.08)
+			aliasOff = 10;
+			imageSprite += 0.2;
+			BestiaryDrawEnemy(enemy.sprite, imageSprite, 0, 0,60*xScale+rot,  global.darkPalette, alphaInfo, false);
+		}
+		break;
+		
+		case ("LaserTrap"):
+		{
+			drawWall = false;
+			
+			BestiaryDrawLaserTrap(global.darkPalette);
+		}
+		break;
 		
 		case ("Lil Crusher"):
 		{
@@ -102,7 +121,7 @@ function BestiaryDrawLocked()
 		case ("Gripper"):
 		{
 			aliasOff = 10;
-			BestiaryDrawEnemyWorm(enemy.alias, 30, global.darkPalette, 1);
+			BestiaryDrawEnemyWorm(enemy.alias, 30, 0, global.darkPalette, 1);
 		}
 		break;
 		
@@ -114,6 +133,43 @@ function BestiaryDrawLocked()
 			BestiaryDrawEnemy(enemy.sprite, imageSprite, 0, 0, rot, global.darkPalette, alphaInfo, false);
 		}
 		break;
+		
+		case ("BadChip"):
+		{
+			rot = lerp(rot, 400*-xScale, 0.05)
+			imageSprite += 0.3;
+			wallYoff=wallYoffInitial;
+			aliasOff = 10;
+			BestiaryDrawEnemy(enemy.sprite, imageSprite, 0, 0, 400*xScale+rot, global.darkPalette, alphaInfo, false);
+		}
+		break;
+		
+		case ("Trapsule"):
+		{
+			factorInitialX=0.06
+			rot = lerp(rot, 260*-xScale, 0.08)
+			imageSprite += 0.2;
+			wallYoff=wallYoffInitial;
+			aliasOff = 10;
+			BestiaryDrawEnemy(enemy.sprite, imageSprite, 0, 0, 260*xScale+rot, global.darkPalette, alphaInfo, false);
+		}
+		break
+		
+		case ("Freeworm"):
+		{
+			
+			aliasOff = 10;
+			BestiaryDrawEnemyWorm(enemy.alias, 55, 0, global.darkPalette, alphaInfo);
+		}
+		break;
+		
+		case ("Wormageddon"):
+		{
+			
+			aliasOff = 10;
+			BestiaryDrawEnemyWorm(enemy.alias, 90,0, global.darkPalette, alphaInfo);
+			//BestiaryDrawEnemyWorm("Gripper", -10, -30, c_white, alphaInfo);
+		}
 	
 	}
 	

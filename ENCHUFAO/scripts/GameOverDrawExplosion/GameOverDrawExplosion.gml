@@ -1,33 +1,39 @@
 // Los recursos de Script han cambiado para la v2.3.0 Consulta
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function GameOverDrawExplosion()
-
-//TO DOOOOOOOOOOOOO
 {
-	switch(enemy.sprite)
+	for (var i=0; i<global.totalNumberOfExplosions; i++)
 	{
-		case (s_explo):
+		explosion = ds_map_find_value(global.explosionList, i);
+		if (explosion.number = enemyBestiaryNumber)
 		{
-			BombKilledBy();
-		}
-		break;
+			switch(explosion.sprite)
+			{
+	
+				case (s_explo):
+				{
+					BombKilledBy();
+				}
+				break;
 		
-		case (s_exploPurple):
-		{
-			BombKilledBy();
-		}
-		break;
+				case (s_exploPurple):
+				{
+					BombKilledBy();
+				}
+				break;
 		
-		case (s_exploOrange):
-		{
-			BombKilledBy();
-		}
-		break;
+				case (s_exploOrange):
+				{
+					BombKilledBy();
+				}
+				break;
 		
-		case (s_exploBlue):
-		{
-			BombKilledBy();
+				case (s_exploBlue):
+				{
+					BombKilledBy();
+				}
+				break;
+			}
 		}
-		break;
 	}
 }

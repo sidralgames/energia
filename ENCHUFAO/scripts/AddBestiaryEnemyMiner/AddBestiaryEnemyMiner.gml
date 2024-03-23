@@ -5,6 +5,7 @@ function AddBestiaryEnemyMiner()
 	ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "Miner",
+		keyKilledBy :"minerKilledBy",
 		sprite: s_enemyMines,
 		number: 22,
 		unlocked: global.bestiaryEnemyMinerUnlocked,

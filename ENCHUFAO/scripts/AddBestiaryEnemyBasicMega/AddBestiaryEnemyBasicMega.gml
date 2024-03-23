@@ -5,6 +5,7 @@ function AddBestiaryEnemyBasicMega()
 ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "MegaChaser",
+		keyKilledBy :"basicMegaKilledBy",
 		sprite: s_enemyBasicMega,
 		number: 1,
 		unlocked: global.bestiaryEnemyBasicMegaUnlocked,

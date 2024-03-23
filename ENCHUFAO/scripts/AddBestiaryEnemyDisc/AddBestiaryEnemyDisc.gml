@@ -6,6 +6,7 @@ function AddBestiaryEnemyDisc()
 	{ 
 		alias: "Spinblade",
 		sprite: s_enemyDisc,
+		keyKilledBy :"discKilledBy",
 		number: 10,
 		unlocked: global.bestiaryEnemyDiscUnlocked,
 		textBestiary: "Remains asleep until\nit detects something\napproaching them.\n\nExplodes after dying.",

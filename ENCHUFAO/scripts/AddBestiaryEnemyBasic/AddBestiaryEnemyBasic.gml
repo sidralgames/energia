@@ -5,6 +5,7 @@ function AddBestiaryEnemyBasic()
 	ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "Silver Hunter",
+		keyKilledBy :"basicKilledBy",
 		sprite: s_enemyBasic,
 		number: 0,
 		unlocked: global.bestiaryEnemyBasicUnlocked,

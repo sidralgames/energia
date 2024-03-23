@@ -5,6 +5,7 @@ function AddBestiaryEnemyBossCrusher()
 	ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "Lil Crusher",
+		keyKilledBy :"lilcrusherKilledBy",
 		sprite: s_bossMechaActive,
 		number: 19,
 		unlocked: global.bestiaryEnemyBossCrusherUnlocked,

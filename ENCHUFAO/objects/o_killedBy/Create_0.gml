@@ -40,3 +40,30 @@ amplitude = 50;
 midpoint = 10;
 timer = 0;
 current = 0;
+
+
+
+
+//------ COUNT KILLED BY -------//
+
+SaveGame();
+
+for (var i=0; i<global.totalNumberOfEnemiesBestiary; i++)
+{
+	enemy = ds_map_find_value(global.bestiaryList, i);
+	
+	if (enemy.number = enemyBestiaryNumber)
+	{
+		enemy.killedByNum = enemy.killedByNum+1;
+		
+		//-- Guardamos ya valor --//
+		ini_open("EnxufaoData.ini");
+		ini_write_real("bestiary", enemy.keyKilledBy,enemy.killedByNum);
+		ini_close();
+		
+		//-- Load para machacar el valor killedBy --//
+		LoadGame();
+		
+		break;
+	}
+}

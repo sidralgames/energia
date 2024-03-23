@@ -5,6 +5,7 @@ function AddBestiaryEnemyMitoship()
 	ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "Mitoship",
+		keyKilledBy :"mitoshipKilledBy",
 		sprite: s_enemyMitosis,
 		number: 17,
 		unlocked: global.bestiaryEnemyMitoshipUnlocked,

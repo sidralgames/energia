@@ -174,7 +174,7 @@ function GetEnemyBestiary(argument0)
 		{
 			drawWall = false;
 			
-			BestiaryDrawLaserTrap()
+			BestiaryDrawLaserTrap(c_white);
 		}
 		break;
 		

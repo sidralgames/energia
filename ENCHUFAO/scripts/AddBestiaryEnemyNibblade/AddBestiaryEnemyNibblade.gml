@@ -5,6 +5,7 @@ function AddBestiaryEnemyNibblade()
 	ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "Nibblade",
+		keyKilledBy :"nibbladeKilledBy",
 		sprite: s_enemyMouthMega,
 		number: 12,
 		unlocked: global.bestiaryEnemyNibbladeUnlocked,

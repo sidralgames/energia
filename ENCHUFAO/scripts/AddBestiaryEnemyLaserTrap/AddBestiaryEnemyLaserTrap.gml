@@ -5,6 +5,7 @@ function AddBestiaryEnemyLaserTrap()
 	ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "LaserTrap",
+		keyKilledBy :"lasertrapKilledBy",
 		sprite: s_laserEnemy,
 		number: 24,
 		unlocked: global.bestiaryEnemyLaserTrapUnlocked,

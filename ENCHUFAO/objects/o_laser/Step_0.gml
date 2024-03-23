@@ -54,7 +54,7 @@ if (canShot)
 							global.hp -=1 * global.damageReceived;
 							if (global.hp <= 0)
 							{
-								global.numEnemyKilledBy = s_laserEnemy;
+								global.numEnemyKilledBy = global.enemyLasertrapBestiaryNumber;
 							}
 						}
 						screenShake(4,30)
@@ -115,7 +115,7 @@ if (canShot)
 							global.hp -=1 * global.damageReceived;
 							if (global.hp <= 0)
 							{
-								global.numEnemyKilledBy = s_laserEnemy;
+								global.numEnemyKilledBy = global.enemyLasertrapBestiaryNumber;
 							}
 						}
 						screenShake(4,30)

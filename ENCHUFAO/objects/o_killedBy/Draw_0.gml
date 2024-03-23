@@ -16,8 +16,14 @@ draw_set_halign(fa_center);
 //DrawUpgradeNames();	
 		
 //DrawStatsUpgrades();
-
-DrawKilledByEnemy_2();
+if (global.killedByExplosion = true)
+{
+	GameOverDrawExplosion();
+}
+else
+{
+	DrawKilledByEnemy_2();
+}
 
 draw_set_font(global.customFont16);
 draw_set_halign(fa_center);

@@ -5,6 +5,7 @@ function AddBestiaryEnemyFast()
 ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "Red Runner",
+		keyKilledBy :"fastKilledBy",
 		sprite: s_enemyMini,
 		number: 2,
 		unlocked: global.bestiaryEnemyFastUnlocked,

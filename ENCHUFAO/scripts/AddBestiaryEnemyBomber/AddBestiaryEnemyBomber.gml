@@ -5,6 +5,7 @@ function AddBestiaryEnemyBomber()
 	ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "Bombo",
+		keyKilledBy :"bomboKilledBy",
 		sprite: s_enemyBomber,
 		number: 13,
 		unlocked: global.bestiaryEnemyBomboUnlocked,

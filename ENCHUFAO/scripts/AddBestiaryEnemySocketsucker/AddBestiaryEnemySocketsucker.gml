@@ -5,6 +5,7 @@ function AddBestiaryEnemySocketsucker()
 	ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "Socketsucker",
+		keyKilledBy :"socketsuckerKilledBy",
 		sprite: s_enemyEnchufePlugged,
 		number: 15,
 		unlocked: global.bestiaryEnemySocketsuckerUnlocked,

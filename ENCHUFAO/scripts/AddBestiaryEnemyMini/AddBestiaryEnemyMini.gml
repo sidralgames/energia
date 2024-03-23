@@ -5,6 +5,7 @@ function AddBestiaryEnemyMini()
 ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "Minithreat",
+		keyKilledBy :"miniKilledBy",
 		sprite: s_enemyMini_2,
 		number: 7,
 		unlocked: global.bestiaryEnemyMiniUnlocked,

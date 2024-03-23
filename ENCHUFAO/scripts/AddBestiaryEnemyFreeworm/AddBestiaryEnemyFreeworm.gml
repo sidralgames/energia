@@ -5,6 +5,7 @@ function AddBestiaryEnemyFreeworm()
 	ds_map_add(global.bestiaryList, global.totalNumberOfEnemiesBestiary,
 	{ 
 		alias: "Freeworm",
+		keyKilledBy :"freewormKilledBy",
 		sprite: s_enemyMouthFree,
 		number: 28,
 		unlocked: global.bestiaryEnemyFreewormUnlocked,
