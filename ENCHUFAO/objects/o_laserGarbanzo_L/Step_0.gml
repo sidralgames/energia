@@ -91,7 +91,7 @@ if (o_BossMecha.creatingEnemies)
 							
 							if (global.hp <= 0)
 							{
-								global.numEnemyKilledBy =s_bossMechaActive;
+								global.numEnemyKilledBy = global.enemyBossCrusherBestiaryNumber;
 								global.imageKilledBy = 0;
 							}
 						}

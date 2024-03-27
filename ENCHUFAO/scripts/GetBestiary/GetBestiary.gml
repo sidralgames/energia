@@ -31,11 +31,13 @@ function GetBestiary()
 	}
 	else if (enemy.killsNum >= 1) && (enemy.killsNum < enemy.killsToUnlock)
 	{
-		//BestiaryDrawUnlocked();
+		//BestiaryDrawUnknown();
 		BestiaryDrawLocked();
+		//BestiaryDrawUnlocked();
 	}
-	else if (enemy.unlocked) && (enemy.killsNum > enemy.killsToUnlock)
+	else if (enemy.unlocked) && (enemy.killsNum >= enemy.killsToUnlock)
 	{
+		//BestiaryDrawUnknown();
 		BestiaryDrawUnlocked();
 		
 	}

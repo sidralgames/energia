@@ -24,5 +24,5 @@ hitByLaser = false;
 flashAlpha = 0;
 offset = irandom(360);
 
-enemyShooter = s_enemyMines;
+enemyShooter = global.enemyMinerBestiaryNumber;
 shooterTrail = true;

@@ -37,20 +37,22 @@ if (charge >= maxCharge) && (capsulesMax >=1)
 	instance_destroy(capsule[capsulesMax-1])
 	capsulesMax -=1;
 }
-		
-if (capsulesMax <= 0)
-{
-	capsuleHaveSomething = false;
-	if (o_playerShip.plugged) && (charging)
-	{
-		with (o_playerShip)
-		{
-			Unplug();
-		}
-	}
-	instance_destroy();
-}
 
+if instance_exists(o_playerShip)
+{
+	if (capsulesMax <= 0)
+	{
+		capsuleHaveSomething = false;
+		if (o_playerShip.plugged) && (charging)
+		{
+			with (o_playerShip)
+			{
+				Unplug();
+			}
+		}
+		instance_destroy();
+	}
+}
 for ( i=0; i<capsulesMax; i++)
 {
 	if instance_exists(capsule[i])

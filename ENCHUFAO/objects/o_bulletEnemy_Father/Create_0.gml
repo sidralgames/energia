@@ -7,7 +7,7 @@ precisionHole = 1;
 enemy = instance_nearest(x,y,o_enemyP)
 if instance_exists(enemy)
 {
-	enemyShooter = enemy.sprite_index;
+	enemyShooter = enemy.enemyBestiaryNumber;
 	shooterTrail = enemy.finalTrail;
 	bulletSpeed = 0;
 }

@@ -11,318 +11,320 @@ if (scale < 1)
 	scale+=0.1
 }
 
-
-switch(inside)
+if instance_exists(o_playerShip)
 {
-	case "Battery":
+	switch(inside)
 	{
-		if instance_exists(batteryCreated)
+		case "Battery":
 		{
-			if (batteryCreated.inCapsule)
+			if instance_exists(batteryCreated)
 			{
-				batteryCreated.image_angle = image_angle;
-				batteryCreated.x = x;
-				batteryCreated.y = y;
-			}
-		}
-		
-		if (charge >= maxCharge)
-		{
-			if (capsuleHaveBattery)
-			{
-				batteryCreated.vspeed = _vpush;
-				batteryCreated.hspeed = _hpush;
-				batteryCreated.depth = depth-1;
-				batteryCreated.inCapsule = false;
-				batteryCreated._angle = image_angle;
-				capsuleHaveBattery = false;
-				capsuleHaveSomething = false;
-				with (o_playerShip)
+				if (batteryCreated.inCapsule)
 				{
-					Unplug();
+					batteryCreated.image_angle = image_angle;
+					batteryCreated.x = x;
+					batteryCreated.y = y;
 				}
-				if (batteryCreated._angle = image_angle)
+			}
+		
+			if (charge >= maxCharge)
+			{
+				if (capsuleHaveBattery)
 				{
+					batteryCreated.vspeed = _vpush;
+					batteryCreated.hspeed = _hpush;
+					batteryCreated.depth = depth-1;
+					batteryCreated.inCapsule = false;
+					batteryCreated._angle = image_angle;
+					capsuleHaveBattery = false;
+					capsuleHaveSomething = false;
+					with (o_playerShip)
+					{
+						Unplug();
+					}
+					if (batteryCreated._angle = image_angle)
+					{
+						instance_destroy();
+					}
+				}
+			}
+		
+			if (_hp <= 0) && (capsuleHaveSomething)
+			{
+				instance_destroy(batteryCreated);
+				if (o_playerShip.plugged) && (charging)
+				{
+					with (o_playerShip)
+					{
+						Unplug();
+					}
+				}
+				instance_destroy();
+				instance_create(x,y,o_exploPurple);
+			}
+		
+		}break;
+	
+		case "Sidekick":
+		{
+			if instance_exists(strandedFake)
+			{
+				strandedFake.image_angle = image_angle;
+				strandedFake.x = x;
+				strandedFake.y = y;
+			}
+		
+			if (charge >= maxCharge)
+			{
+				if (capsuleHaveStranded)
+				{
+					instance_destroy(strandedFake);
+					newStranded = instance_create(x,y, o_strandedShip);
+					newStranded.sprite = choose(splayer, splayer_Blue, splayer_Dark, splayer_Red, splayer_Purple, splayer_mp3)
+					newStranded.strandedShipCableStat = 2;
+					newStranded.chargedInEnergy = true;
+					newStranded.chargedInHp = true;
+					newStranded.chargedInAmmo = true;
+					newStranded.shipReady = true;
+					newStranded.createdStranded = false;
+					newStranded.firstSetted = true;
+					//x = x+lengthdir_x(10,_angle-90);
+					//y = y+lengthdir_y(10,_angle-90);
+					capsuleHaveStranded = false;
+					capsuleHaveSomething = false;
+				
+					with (o_playerShip)
+					{
+						Unplug();
+					}
 					instance_destroy();
 				}
 			}
-		}
 		
-		if (_hp <= 0) && (capsuleHaveSomething)
-		{
-			instance_destroy(batteryCreated);
-			if (o_playerShip.plugged) && (charging)
-			{
-				with (o_playerShip)
-				{
-					Unplug();
-				}
-			}
-			instance_destroy();
-			instance_create(x,y,o_exploPurple);
-		}
-		
-	}break;
-	
-	case "Sidekick":
-	{
-		if instance_exists(strandedFake)
-		{
-			strandedFake.image_angle = image_angle;
-			strandedFake.x = x;
-			strandedFake.y = y;
-		}
-		
-		if (charge >= maxCharge)
-		{
-			if (capsuleHaveStranded)
+			if (_hp <= 0) && (capsuleHaveSomething)
 			{
 				instance_destroy(strandedFake);
-				newStranded = instance_create(x,y, o_strandedShip);
-				newStranded.sprite = choose(splayer, splayer_Blue, splayer_Dark, splayer_Red, splayer_Purple, splayer_mp3)
-				newStranded.strandedShipCableStat = 2;
-				newStranded.chargedInEnergy = true;
-				newStranded.chargedInHp = true;
-				newStranded.chargedInAmmo = true;
-				newStranded.shipReady = true;
-				newStranded.createdStranded = false;
-				newStranded.firstSetted = true;
-				//x = x+lengthdir_x(10,_angle-90);
-				//y = y+lengthdir_y(10,_angle-90);
-				capsuleHaveStranded = false;
-				capsuleHaveSomething = false;
-				
-				with (o_playerShip)
+				if (o_playerShip.plugged) && (charging)
 				{
-					Unplug();
+					with (o_playerShip)
+					{
+						Unplug();
+					}
 				}
 				instance_destroy();
+				instance_create(x,y,o_exploPurple);
 			}
-		}
-		
-		if (_hp <= 0) && (capsuleHaveSomething)
+	
+		}break;	
+	
+		case "Enemy":
 		{
-			instance_destroy(strandedFake);
-			if (o_playerShip.plugged) && (charging)
+			if instance_exists(enemyFake)
 			{
-				with (o_playerShip)
+				enemyFake.image_angle = image_angle;
+				enemyFake.x = x;
+				enemyFake.y = y;
+			}
+		
+			if (charge >= maxCharge)
+			{
+				if (capsuleHaveEnemy)
 				{
-					Unplug();
+					instance_destroy(enemyFake);
+					enemy = choose(o_enemy, o_enemyFast, o_enemyMitosis, o_enemy_Waiting_Shield)
+					newEnemy = instance_create_layer(x,y, "Enemies", enemy);
+
+					capsuleHaveEnemy = false;
+					capsuleHaveSomething = false;
+				
+					with (o_playerShip)
+					{
+						Unplug();
+					}
+
+					instance_destroy();
 				}
 			}
-			instance_destroy();
-			instance_create(x,y,o_exploPurple);
-		}
-	
-	}break;	
-	
-	case "Enemy":
-	{
-		if instance_exists(enemyFake)
-		{
-			enemyFake.image_angle = image_angle;
-			enemyFake.x = x;
-			enemyFake.y = y;
-		}
 		
-		if (charge >= maxCharge)
-		{
-			if (capsuleHaveEnemy)
+			if (_hp <= 0) && (capsuleHaveSomething)
 			{
 				instance_destroy(enemyFake);
-				enemy = choose(o_enemy, o_enemyFast, o_enemyMitosis, o_enemy_Waiting_Shield)
-				newEnemy = instance_create_layer(x,y, "Enemies", enemy);
-
-				capsuleHaveEnemy = false;
-				capsuleHaveSomething = false;
-				
-				with (o_playerShip)
+				if (o_playerShip.plugged) && (charging)
 				{
-					Unplug();
+					with (o_playerShip)
+					{
+						Unplug();
+					}
 				}
-
 				instance_destroy();
+				instance_create(x,y,o_exploPurple);
 			}
-		}
 		
-		if (_hp <= 0) && (capsuleHaveSomething)
+		}break;
+	
+		case "Bomb":
 		{
-			instance_destroy(enemyFake);
-			if (o_playerShip.plugged) && (charging)
+			if instance_exists(bombFake)
 			{
-				with (o_playerShip)
+				bombFake.image_angle = image_angle;
+				bombFake.x = x;
+				bombFake.y = y;
+			}
+		
+			if (charge >= maxCharge)
+			{
+				if (capsuleHaveBomb)
 				{
-					Unplug();
+					instance_destroy(bombFake);
+					bomb = choose(o_BombpickUp, o_bombMine, o_bombEnemy);
+					newBomb = instance_create_layer(x,y, "Enemies", bomb);
+				
+					if (bomb=o_bombMine)
+					{
+						newBomb.bulletSpeed = 0;
+					}
+
+					capsuleHaveBomb = false;
+					capsuleHaveSomething = false;
+				
+					with (o_playerShip)
+					{
+						Unplug();
+					}
+
+					instance_destroy();
 				}
 			}
-			instance_destroy();
-			instance_create(x,y,o_exploPurple);
-		}
 		
-	}break;
-	
-	case "Bomb":
-	{
-		if instance_exists(bombFake)
-		{
-			bombFake.image_angle = image_angle;
-			bombFake.x = x;
-			bombFake.y = y;
-		}
-		
-		if (charge >= maxCharge)
-		{
-			if (capsuleHaveBomb)
+			if (_hp <= 0) && (capsuleHaveSomething)
 			{
 				instance_destroy(bombFake);
-				bomb = choose(o_BombpickUp, o_bombMine, o_bombEnemy);
-				newBomb = instance_create_layer(x,y, "Enemies", bomb);
-				
-				if (bomb=o_bombMine)
+				if (o_playerShip.plugged) && (charging)
 				{
-					newBomb.bulletSpeed = 0;
+					with (o_playerShip)
+					{
+						Unplug();
+					}
 				}
-
-				capsuleHaveBomb = false;
-				capsuleHaveSomething = false;
-				
-				with (o_playerShip)
-				{
-					Unplug();
-				}
-
 				instance_destroy();
+				instance_create(x,y,o_exploPurple);
 			}
-		}
 		
-		if (_hp <= 0) && (capsuleHaveSomething)
+		}break;
+	
+		case "Radar":
 		{
-			instance_destroy(bombFake);
-			if (o_playerShip.plugged) && (charging)
+			if instance_exists(radarFake)
 			{
-				with (o_playerShip)
+				radarFake.image_angle = image_angle;
+				radarFake.x = x;
+				radarFake.y = y;
+			}
+		
+			if (charge >= maxCharge)
+			{
+				if (capsuleHaveRadar)
 				{
-					Unplug();
+					instance_destroy(radarFake);
+				
+					newRadar= instance_create_layer(x,y, "Enemies", o_radarPickup);
+
+					capsuleHaveRadar = false;
+					capsuleHaveSomething = false;
+				
+					with (o_playerShip)
+					{
+						Unplug();
+					}
+
+					instance_destroy();
 				}
 			}
-			instance_destroy();
-			instance_create(x,y,o_exploPurple);
-		}
 		
-	}break;
-	
-	case "Radar":
-	{
-		if instance_exists(radarFake)
-		{
-			radarFake.image_angle = image_angle;
-			radarFake.x = x;
-			radarFake.y = y;
-		}
-		
-		if (charge >= maxCharge)
-		{
-			if (capsuleHaveRadar)
+			if (_hp <= 0) && (capsuleHaveSomething)
 			{
 				instance_destroy(radarFake);
-				
-				newRadar= instance_create_layer(x,y, "Enemies", o_radarPickup);
-
-				capsuleHaveRadar = false;
-				capsuleHaveSomething = false;
-				
-				with (o_playerShip)
+				if (o_playerShip.plugged) && (charging)
 				{
-					Unplug();
+					with (o_playerShip)
+					{
+						Unplug();
+					}
 				}
-
 				instance_destroy();
+				instance_create(x,y,o_exploPurple);
 			}
-		}
 		
-		if (_hp <= 0) && (capsuleHaveSomething)
+		}break;
+	
+		case "SlowMo":
 		{
-			instance_destroy(radarFake);
-			if (o_playerShip.plugged) && (charging)
+			if instance_exists(slowFake)
 			{
-				with (o_playerShip)
+				slowFake.image_angle = image_angle;
+				slowFake.x = x;
+				slowFake.y = y;
+			}
+		
+			if (charge >= maxCharge)
+			{
+				if (capsuleHaveSlowMo)
 				{
-					Unplug();
+					instance_destroy(slowFake);
+				
+					drop = choose(0,0,1);
+				
+					if (drop = 0)
+					{
+						slowMoPickUps = random_range(50,70)
+						for (var i = 0; i < slowMoPickUps; i++)
+						{
+							slowmoPart = instance_create_layer(x,y,"Enchufes", o_slowMoPickUp)
+							slowmoPart._hpush = random_range(-1.5,1.5);
+							slowmoPart._vpush = random_range(-1.5,1.5);
+						}
+					}
+					else
+					{
+						enemies = random_range(3,5)
+						for (var i = 0; i < enemies; i++)
+						{
+							enemy = instance_create_layer(x,y,"Enemies", o_enemyMini)
+							enemy.state=ENEMYSTATE.CHASING;
+							enemy.vspeed = random_range(-1.5,1.5);
+							enemy.hspeed = random_range(-1.5,1.5);
+						}
+					}
+
+					capsuleHaveSlowMo = false;
+					capsuleHaveSomething = false;
+				
+					with (o_playerShip)
+					{
+						Unplug();
+					}
+
+					instance_destroy();
 				}
 			}
-			instance_destroy();
-			instance_create(x,y,o_exploPurple);
-		}
 		
-	}break;
-	
-	case "SlowMo":
-	{
-		if instance_exists(slowFake)
-		{
-			slowFake.image_angle = image_angle;
-			slowFake.x = x;
-			slowFake.y = y;
-		}
-		
-		if (charge >= maxCharge)
-		{
-			if (capsuleHaveSlowMo)
+			if (_hp <= 0) && (capsuleHaveSomething)
 			{
 				instance_destroy(slowFake);
-				
-				drop = choose(0,0,1);
-				
-				if (drop = 0)
+				if (o_playerShip.plugged) && (charging)
 				{
-					slowMoPickUps = random_range(50,70)
-					for (var i = 0; i < slowMoPickUps; i++)
+					with (o_playerShip)
 					{
-						slowmoPart = instance_create_layer(x,y,"Enchufes", o_slowMoPickUp)
-						slowmoPart._hpush = random_range(-1.5,1.5);
-						slowmoPart._vpush = random_range(-1.5,1.5);
+						Unplug();
 					}
 				}
-				else
-				{
-					enemies = random_range(3,5)
-					for (var i = 0; i < enemies; i++)
-					{
-						enemy = instance_create_layer(x,y,"Enemies", o_enemyMini)
-						enemy.state=ENEMYSTATE.CHASING;
-						enemy.vspeed = random_range(-1.5,1.5);
-						enemy.hspeed = random_range(-1.5,1.5);
-					}
-				}
-
-				capsuleHaveSlowMo = false;
-				capsuleHaveSomething = false;
-				
-				with (o_playerShip)
-				{
-					Unplug();
-				}
-
 				instance_destroy();
+				instance_create(x,y,o_exploPurple);
 			}
-		}
 		
-		if (_hp <= 0) && (capsuleHaveSomething)
-		{
-			instance_destroy(slowFake);
-			if (o_playerShip.plugged) && (charging)
-			{
-				with (o_playerShip)
-				{
-					Unplug();
-				}
-			}
-			instance_destroy();
-			instance_create(x,y,o_exploPurple);
-		}
-		
-	}break;
+		}break;
 	
+	}
 }
 
 if (alarm[2] <=0)
