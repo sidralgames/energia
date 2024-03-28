@@ -5,7 +5,7 @@ function AddExplosionGreen()
 	ds_map_add(global.explosionList, global.totalNumberOfExplosions,
 	{ 
 		alias: "Green",
-		sprite: s_explo,
+		sprite: s_exploGreen,
 		number: 1,
 		group: "Explosions"
 	})

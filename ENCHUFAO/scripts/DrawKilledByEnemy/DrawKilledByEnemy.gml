@@ -140,7 +140,7 @@ function DrawKilledByEnemy()
 		}
 		break;
 		
-		case (s_explo):
+		case (s_exploGreen):
 		{
 			BombKilledBy();
 		}

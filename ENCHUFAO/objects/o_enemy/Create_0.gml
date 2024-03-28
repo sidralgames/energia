@@ -2,12 +2,12 @@
 // You can write your code in this editor
 event_inherited();
 
-enemyBestiaryNumber = 0;
+enemyBestiaryNumber = global.enemyBasicBestiaryNumber;
 
 slowMoPickUps = choose(3,4);
 
 alarm[10] = 30;
-//lightEnemy= instance_create_layer(x,y,"LightEnemy",o_Light_Enemy);
+
 isCounted=false;
 bnc = 0.5;
 
@@ -39,8 +39,6 @@ breakDistance = random_range(0.005, 0.05)
 accelDistance = random_range(0.005, 0.05);
 
 
-
-
 if tile_meeting(x,y,"Tiles")
 {
 	instance_destroy()
@@ -61,7 +59,7 @@ oddsBattery = 2;
 
 if (isMega = 0) && (room != Sala_Tutorial)
 {
-	enemyBestiaryNumber = 1;
+	enemyBestiaryNumber = global.enemyBasicMegaBestiaryNumber;
 	isMegaEnemy = true;
 	global.MegaEnemiesInLevel+=1;
 	_hp = 15;
@@ -77,7 +75,6 @@ if (isMega = 0) && (room != Sala_Tutorial)
 	
 	sprite_index = s_enemyBasicMega;
 }
-
 
 hasShield = irandom(10);
 

@@ -6,7 +6,14 @@ function BestiaryDrawLaserTrap(_color)
 	{
 		SetHUE();
 		wallMouth = true;
-		laserGameOver = instance_create_layer(__view_get( e__VW.XView, 0 )+385,__view_get( e__VW.YView, 0 )+initialY,"PauseHUE_Sub",o_laserBesatiary);
+		if (_color = c_white)
+		{
+			laserGameOver = instance_create_layer(__view_get( e__VW.XView, 0 )+385,__view_get( e__VW.YView, 0 )+initialY,"PauseHUE_Sub",o_laserBesatiary);
+		}
+		else
+		{
+				laserGameOver = instance_create_layer(__view_get( e__VW.XView, 0 )+385,__view_get( e__VW.YView, 0 )+initialY,"PauseHUE_Sub",o_laserBesatiaryLocked);
+		}
 		wall = instance_create_layer(__view_get( e__VW.XView, 0 )+240,__view_get( e__VW.YView, 0 )+initialY,"PauseHUE_Sub",o_wallGameOver);
 		wall.image_index = 2;
 		wall.image_angle = 270;

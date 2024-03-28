@@ -2,12 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function GameOverDrawTurretEnemy(_name, _info, _range)
 {
-	
-	if (deathCounted = false)
-	{
-		deathCounted = true;
-		enemy.killedByNum+=1;
-	}
+	draw_sprite_ext(s_torreta, 0,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+245, 1, image_yscale, rot, image_blend, 1);
 	
 	if (wallMouth = false)
 	{
@@ -15,6 +10,12 @@ function GameOverDrawTurretEnemy(_name, _info, _range)
 		wall = instance_create_layer(__view_get( e__VW.XView, 0 )+317,__view_get( e__VW.YView, 0 )+245,"PauseHUE_Sub",o_wallGameOver);
 		wall.image_index = 1;
 	}
+	
+	current = dsin(timer * frequency) * amplitude + midpoint;
+	timer++;
+	rot=current;
+		
+
 		
 	draw_set_color(global.brightRed);
 	draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+256, _name);

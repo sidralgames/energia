@@ -1,16 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_explo1",
+  "name": "o_laserBesatiaryLocked",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Explosion",
-    "path": "folders/Objetos/Explosion.yy",
+    "name": "Main",
+    "path": "folders/Objetos/Main.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -28,10 +29,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "s_exploGreen",
-    "path": "sprites/s_exploGreen/s_exploGreen.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

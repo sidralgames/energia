@@ -2,7 +2,7 @@
 // You can write your code in this editor
 event_inherited();
 
-enemyBestiaryNumber = 17;
+enemyBestiaryNumber = global.enemyMitoshipBestiaryNumber;
 
 type = collisionType.custom;
 slowMoPickUps = choose(2,3);
@@ -52,7 +52,7 @@ oddsBattery = 2;
 if (isMega = 0)
 {
 	isMegaEnemy = true;
-	enemyBestiaryNumber = 18;
+	enemyBestiaryNumber = global.enemyMitothreeBestiaryNumber;
 	global.MegaEnemiesInLevel+=1;
 	_hp = 9;
 	sprite_index = s_enemyMitosis_Mega;

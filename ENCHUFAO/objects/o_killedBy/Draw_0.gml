@@ -2,12 +2,6 @@
 // Puede escribir su código en este editor
 image_alpha = o_gameOver.image_alpha;
 
-if global.numEnemyKilledBy = s_torreta
-{
-	current = dsin(timer * frequency) * amplitude + midpoint;
-	timer++;
-	image_angle=current;
-}
 
 draw_set_font(global.customFont16);
 draw_set_halign(fa_center);

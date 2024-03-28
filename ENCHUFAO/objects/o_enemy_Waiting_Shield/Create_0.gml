@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-enemyBestiaryNumber = 6;
+enemyBestiaryNumber = global.enemyShieldBestiaryNumber;
 
 canStopChasing = false;
 slowedPeta = 0;
@@ -87,9 +87,7 @@ haveAShield = false;
 direction_ =direction;
 state = ENEMYSTATE.WAITING;
 existsShield = false;
-//tentacles.offs = 10
-//tentacles2 = instance_create_layer(x,y+5,"Tentacles",oVine)
-//tentacles2.offs =-10
+
 _angle = 0;
 alarm[1] = 0;
 _speed=0;

@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-enemyBestiaryNumber = 10;
+enemyBestiaryNumber = global.enemyDiscBestiaryNumber;
 
 slowedPeta = 0;
 slowed = false;

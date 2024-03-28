@@ -4,7 +4,7 @@ event_inherited();
 type = collisionType.custom;
 slowMoPickUps = choose(4,5);
 
-enemyBestiaryNumber = 3;
+enemyBestiaryNumber = global.enemyDispBestiaryNumber;
 
 alarm[10] = 30;
 isCounted = false;

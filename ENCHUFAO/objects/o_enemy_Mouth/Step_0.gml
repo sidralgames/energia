@@ -21,7 +21,7 @@ if (isOnlyDraw)
 		
 		if (isMegaDraw)
 		{
-			enemyBestiaryNumber = 12;
+			enemyBestiaryNumber = global.enemyNibbladeBestiaryNumber;
 			_hp = 7;
 			sprite_index = s_enemyMouthMega;
 			isMegaEnemy = true;
@@ -31,7 +31,7 @@ if (isOnlyDraw)
 		}
 		else
 		{
-			enemyBestiaryNumber = 11;
+			enemyBestiaryNumber = global.enemyPincherBestiaryNumber;
 			_hp = 7;
 			sprite_index = s_enemyMouth;
 			isMegaEnemy = true;
@@ -53,7 +53,7 @@ else
 			{
 				if (isMega = 0) 
 				{
-					enemyBestiaryNumber = 12;
+					enemyBestiaryNumber = global.enemyNibbladeBestiaryNumber;
 					_hp = 7;
 					sprite_index = s_enemyMouthMega;
 					isMegaEnemy = true;
@@ -102,14 +102,6 @@ else
 	}
 }
 		
-
-
-
-
-
-
-
-
 event_inherited();
 
 image_speed = 0.5 * global.relativeSpeed;
@@ -126,15 +118,8 @@ switch(state)
 	case ENEMYSTATE.SHOCKED: Enemy_Shocked(); break;
 }
 
-//if instance_exists(lightEnemy)
-//	{
-//		lightEnemy.light [| eLight.X] = x
-//		lightEnemy.light [| eLight.Y] = y
-//	}
-
 if (_hp <= 0) || !instance_exists(anchor)
 {
-	
 	EnemyDeathShake();
 	
 	if instance_exists(o_playerShip)

@@ -2,13 +2,6 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function GameOverDrawWallEnemy(_name, _info, _range)
 {
-	
-	if (deathCounted = false)
-	{
-		deathCounted = true;
-		enemy.killedByNum+=1;
-	}
-	
 	if (wallMouth = false)
 	{
 		wall = instance_create_layer(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+262,"PauseHUE_Sub",o_wallGameOver);
@@ -59,5 +52,4 @@ function GameOverDrawWallEnemy(_name, _info, _range)
 	draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+301, string(text))
 	draw_set_color(c_white)
 	draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+300, string(text))
-	
 }

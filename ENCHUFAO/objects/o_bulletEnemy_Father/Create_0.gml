@@ -4,12 +4,13 @@ type = collisionType.custom;
 
 precisionHole = 1;
 
-enemy = instance_nearest(x,y,o_enemyP)
-if instance_exists(enemy)
-{
-	enemyShooter = enemy.enemyBestiaryNumber;
-	shooterTrail = enemy.finalTrail;
-	bulletSpeed = 0;
-}
+//enemy = instance_nearest(x,y,o_enemyP)
+//if instance_exists(enemy)
+//{
+//	enemyShooter = enemy.enemyBestiaryNumber;
+//	shooterTrail = enemy.finalTrail;
+//	
+//}
 
 
+bulletSpeed = 0;

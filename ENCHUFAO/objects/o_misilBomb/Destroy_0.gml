@@ -3,6 +3,7 @@
 if (hitByLaser = false)
 {
 	ebomb = instance_create(x,y,o_exploBomb);
+	ebomb.numBombKilledBy = 3;
 	ebomb.scale = 0.45;
 	ebomb.damagePlayer = true;
 	ebomb.isFrom = "EnemyBomb";
@@ -16,6 +17,7 @@ if (hitByLaser = false)
 else
 {
 	ebomb = instance_create(x,y,o_exploBomb);
+	ebomb.numBombKilledBy = 3;
 	ebomb.scale = 0.7;
 	ebomb.scale = 0.7;
 	ebomb.damagePlayer = true;

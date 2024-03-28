@@ -4,7 +4,7 @@ if (other.isFrom = "PlayerBomb")
 {
 	if (global.bombIsHomingBomb)
 	{
-		_hp -= 0.4 *global.damageDealt;	
+		_hp -= 0.2 *global.damageDealt;	
 	}
 	else
 	{

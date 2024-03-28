@@ -10,7 +10,7 @@ function GameOverDrawExplosion()
 			switch(explosion.sprite)
 			{
 	
-				case (s_explo):
+				case (s_exploGreen):
 				{
 					BombKilledBy();
 				}

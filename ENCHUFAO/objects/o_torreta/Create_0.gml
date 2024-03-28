@@ -1,4 +1,4 @@
-enemyBestiaryNumber = 14;
+enemyBestiaryNumber = global.enemyPewPewBestiaryNumber;
 
 parado=false
 type = collisionType.custom;

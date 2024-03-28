@@ -60,6 +60,7 @@ function DrawKilledByEnemy_2()
 		
 				case ("Discs"):
 				{
+					rot+=7;
 					KilledByDrawEnemy(enemy.alias, infoGameOverEnemyDisc, irandom_range(0,9), global.FinalTrail, 0);
 				}
 				break;
@@ -79,6 +80,7 @@ function DrawKilledByEnemy_2()
 		
 				case ("Turrets"):
 				{
+					depth = layer_get_depth("PauseHUE")-1;
 					GameOverDrawTurretEnemy(enemy.alias, infoGameOverEnemyTorreta, irandom_range(0,5));
 				}
 				break;
@@ -86,13 +88,14 @@ function DrawKilledByEnemy_2()
 				case ("SocketSuckers"):
 				{
 					imageSprite += 0.2;
-					GameOverDrawSprite(s_enchufe_Ammo, 0);
+					GameOverDrawSprite(s_enchufe_Ammo, 0, 0);
 					KilledByDrawEnemy(enemy.alias, infoGameOverEnemyShield, irandom_range(0,8), global.FinalTrail, imageSprite);
 				}
 				break;
 		
 				case ("OVNI"):
 				{
+					rot+=2;
 					KilledByDrawEnemy(enemy.alias, infoGameOverEnemyOVNI, irandom_range(0,3), false, 0);
 				}
 				break;

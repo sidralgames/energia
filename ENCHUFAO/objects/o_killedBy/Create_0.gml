@@ -34,7 +34,7 @@ imageSprite = 0;
 
 
 
-
+rot = 0;
 frequency = 1;
 amplitude = 50;
 midpoint = 10;

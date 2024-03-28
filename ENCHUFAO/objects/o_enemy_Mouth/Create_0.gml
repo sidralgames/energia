@@ -1,17 +1,19 @@
 /// @description Insert description here
 // You can write your code in this editor
-enemyBestiaryNumber = 11;
+enemyBestiaryNumber = global.enemyPincherBestiaryNumber;
+
 _colorBody = c_white;
+
 event_inherited();
 
 finalTrail = false;
 fromBullet = false;
 myTileMap = layer_tilemap_get_id("Tiles")
-//depth = layer_get_depth("Enemies");
+
 slowMoPickUps = choose(3,4);
 contBounce = 60;
 alarm[10] = 30;
-//lightEnemy= instance_create_layer(x,y,"LightEnemy",o_Light_Enemy);
+
 isCounted=false;
 bnc = 0.9;
 _hp = choose(1,2);

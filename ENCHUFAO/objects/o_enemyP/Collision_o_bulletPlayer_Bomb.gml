@@ -3,7 +3,7 @@
 
 if (global.bombIsHomingBomb)
 {
-	_hp -= 3 *global.damageDealt;
+	_hp -= 2 *global.damageDealt;
 	instance_destroy(other);
 }
 else

@@ -157,6 +157,8 @@ function EnemyBomberIA()
 		bullet.bulletSpeed = random_range(2.25, 3.5);
 		bullet.image_angle = _angle;
 		bullet.direction = _angle;
+		bullet.enemyShooter = global.enemyBomboBestiaryNumber;
+		bullet.shooterTrail = finalTrail;
 									
 		playerTargeted = false;
 			
@@ -166,21 +168,5 @@ function EnemyBomberIA()
 		recoil = 70;
 		hspeed -= lengthdir_x(bullet.bulletSpeed, _angle);
 		vspeed -= lengthdir_y(bullet.bulletSpeed, _angle);
-	}
-	
-	if (isMegaEnemy)
-	{
-		contDropBomb --;
-		
-		if (contDropBomb<= 0) 
-		{	
-			var bullet = instance_create_layer(x - lengthdir_x(10, _angle), y - lengthdir_y(10, _angle),
-			"Bullets", o_bombEnemy);
-			bullet.bulletSpeed = random_range(1.5, 2);
-			bullet.image_angle = _angle;
-			bullet.direction = _angle+180;
-			
-			contDropBomb = random_range(120,400);
-		}	
 	}
 }

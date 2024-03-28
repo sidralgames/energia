@@ -14,6 +14,11 @@ direction= point_direction(x, y, o_playerShip.x, o_playerShip.y)+choose(random_r
 _speed=random(1)+1;
 speed = _speed;
 
+enemyShooter = global.enemyOVNIBestiaryNumber;
+shooterTrail = false;
+hitByLaser = false;
+
+
 xDiff = random_range(-20,20);
 yDiff = random_range(-20,20);
 
@@ -31,9 +36,7 @@ hp = 2;
 
 vida=200;
 
-enemyShooter = global.enemyOVNIBestiaryNumber;
-shooterTrail = false;
-hitByLaser = false;
+
 
 
 

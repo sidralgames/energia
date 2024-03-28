@@ -2,7 +2,7 @@
 // You can write your code in this editor
 event_inherited();
 
-enemyBestiaryNumber = 13;
+enemyBestiaryNumber = global.enemyBomboBestiaryNumber;
 
 isMotherShip = true;
 slowMoPickUps = choose(3,4);

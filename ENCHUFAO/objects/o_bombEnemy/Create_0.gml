@@ -21,3 +21,5 @@ offset = irandom(360)
 
 _hp = 3;
 flashAlpha = 0;
+
+enemyShooter = global.enemyBomboBestiaryNumber

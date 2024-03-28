@@ -34,6 +34,7 @@ if instance_exists(o_playerShip)
 			{
 				enemyMini.bulletSpeed = enemySpeed;
 				enemyMini.direction = _angle-180;
+				enemyMini.enemyShooter = enemyBestiaryNumber;
 			}
 			
 		}

@@ -5,6 +5,7 @@ gamepad_set_vibration(0,0.2,0.2);
 if (hitByLaser = false)
 {
 	ebomb = instance_create(x,y,o_exploBomb);
+	ebomb.numBombKilledBy = 3;
 	ebomb.scale = 1.4;
 	ebomb.scale = 1.4;
 	ebomb.damagePlayer = true;
@@ -18,6 +19,7 @@ if (hitByLaser = false)
 else
 {
 	ebomb = instance_create(x,y,o_exploBomb);
+	ebomb.numBombKilledBy = 3;
 	ebomb.scale = 1.8;
 	ebomb.scale = 1.8;
 	ebomb.damagePlayer = true;
@@ -39,6 +41,8 @@ for( i = 0; i < bullets; i++ )
 	    inst.direction = i * (360 / bullets ) + offset;
 		inst.hp = 25;
 		inst.isEnemyBomb = true;
+		inst.enemyShooter = global.enemyBomboBestiaryNumber;
+		inst.finalTrail = true;
 		//inst.dire = choose(1, -1);
 	}
 }

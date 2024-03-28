@@ -5,11 +5,12 @@ gamepad_set_vibration(0,0.2,0.2);
 if (hitByLaser = false)
 {
 	ebomb = instance_create(x,y,o_exploBomb);
+	ebomb.numBombKilledBy = 1;
 	ebomb.scale = 1.4;
 	ebomb.scale = 1.4;
 	ebomb.damagePlayer = true;
 	ebomb.isFrom = "EnemyBomb";
-	ebomb.sprite_index = s_exploOrange;
+	ebomb.sprite_index = s_exploGreen;
 	ebomb.scaleShockwave = 0.15;
 	ebomb.scaleShake = 0.5;
 	shock = instance_create(x,y,o_shockwaveTiles)
@@ -18,6 +19,7 @@ if (hitByLaser = false)
 else
 {
 	ebomb = instance_create(x,y,o_exploBomb);
+	ebomb.numBombKilledBy = 1;
 	ebomb.scale = 1.8;
 	ebomb.scale = 1.8;
 	ebomb.damagePlayer = true;
@@ -40,6 +42,8 @@ for( i = 0; i < bullets; i++ )
 		inst.hp = 90;
 		inst.isMineBomb = true;
 		inst.part = 1;
+		inst.enemyShooter = global.enemyMinerBestiaryNumber;
+		inst.finalTrail = true;
 		//inst.dire = choose(1, -1);
 	}
 }

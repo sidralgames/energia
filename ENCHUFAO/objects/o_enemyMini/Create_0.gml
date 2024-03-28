@@ -1,14 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-enemyBestiaryNumber = 7;
+enemyBestiaryNumber = global.enemyMiniBestiaryNumber;
+
 event_inherited();
 enemyIsMini = true;
 type = collisionType.custom;
 slowMoPickUps = choose(2,3);
 
 alarm[10] = 30;
-//lightEnemy= instance_create_layer(x,y,"LightEnemy",o_Light_Enemy);
+
 isCounted=false;
 bnc = 0.5;
 _hp = 1;

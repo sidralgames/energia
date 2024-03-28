@@ -28,7 +28,7 @@ alarm[0]=50;
 hp = 2;
 vida=200;
 
-enemyShooter = s_enemyMisil;
+enemyShooter = global.enemyOVNIBestiaryNumber;
 shooterTrail = false;
 
 

@@ -2,7 +2,7 @@
 // You can write your code in this editor
 event_inherited();
 
-enemyBestiaryNumber = 8;
+enemyBestiaryNumber = global.enemyMothershipBestiaryNumber;
 
 isMotherShip = true;
 slowMoPickUps = choose(3,4);
@@ -47,11 +47,11 @@ accelDistance = random_range(0.005, 0.05);
 isMegaEnemy = false
 isMega = irandom(4);
 
-oddsBattery = 2;
+oddsBattery = 1;
 
 if (isMega = 0)
 {
-	enemyBestiaryNumber = 9;
+	enemyBestiaryNumber = global.enemyMothershipMegaBestiaryNumber;
 	isMegaEnemy = true;
 	global.MegaEnemiesInLevel+=1;
 	_hp = 25;
