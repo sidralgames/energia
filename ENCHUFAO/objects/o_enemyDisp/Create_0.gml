@@ -38,6 +38,11 @@ breakDistance = random_range(0.005, 0.05)
 accelDistance = random_range(0.005, 0.05);
 
 
+if tile_meeting(x,y,"Tiles")
+{
+	instance_destroy()
+}
+
 hasShield = irandom(10);
 
 if (hasShield = 0)
@@ -46,8 +51,5 @@ if (hasShield = 0)
 }
 
 
-if tile_meeting(x,y,"Tiles")
-{
-	instance_destroy()
-}
+
 

@@ -53,13 +53,14 @@ isMega = irandom(5);
 canHaveAShield = false;
 hasShield = irandom(0);
 
-if (hasShield = 0)
-{
-	CreateShieldEnemy(15, 0.85, s_shieldPurple); //hp, scale, sprite
-}
-
 
 if tile_meeting(x,y,"Tiles")
 {
 	instance_destroy()
 }
+
+if (hasShield = 0)
+{
+	CreateShieldEnemy(15, 0.85, s_shieldPurple); //hp, scale, sprite
+}
+

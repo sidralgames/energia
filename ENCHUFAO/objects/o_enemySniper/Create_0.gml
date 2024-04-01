@@ -104,15 +104,14 @@ enemySpeed = enemySpeedInitial;
 precision= precisionInitial;
 speed=enemySpeed;
 
+if tile_meeting(x,y,"Tiles")
+{
+	instance_destroy();
+}
+
 hasShield = irandom(5);
 
 if (hasShield = 0)
 {
 	CreateShieldEnemy(20, 0.75, s_shieldPurple); //hp, scale, sprite
-}
-
-
-if tile_meeting(x,y,"Tiles")
-{
-	instance_destroy()
 }

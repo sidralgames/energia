@@ -84,7 +84,7 @@ if (electrocutated = true)
 }
 
 
-if (global.BossWormHP <= 1)
+if (global.BossWormHP <= 1) || (die)
 {
 	instance_destroy();
 }

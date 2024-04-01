@@ -2,6 +2,7 @@
 // You can write your code in this editor
 event_inherited();
 
+enemyBestiaryNumber = global.enemyBossWormBestiaryNumber;
 
 leavesTrail = false;
 isBossWorm = true;
@@ -40,7 +41,7 @@ speed=random(1)+2;
 
 state = ENEMYSTATE.CHASING;
 
-enemyXP = global.enemyStandardXP;
+enemyXP = 1500;
 
 direction_ =direction;
 

@@ -15,7 +15,7 @@ with (o_playerShip)
 			if (global.hp <= 0)
 			{
 				global.FinalTrail = false;
-				global.numEnemyKilledBy = s_bossMechaActive;
+				global.numEnemyKilledBy = other.enemyBestiaryNumber;
 			}
 			
 			screenShake(4,30)

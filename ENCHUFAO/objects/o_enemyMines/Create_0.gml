@@ -47,6 +47,11 @@ accelDistance = random_range(0.005, 0.05);
 isMegaEnemy = false
 isMega = irandom(5);
 
+
+if tile_meeting(x,y,"Tiles")
+{
+	instance_destroy()
+}
 //if (isMega = 0) && (global.MegaEnemiesInLevel < global.MegaEnemiesInLevel_Max+1)
 //{
 //	isMegaEnemy = true;
@@ -66,7 +71,3 @@ if (hasShield = 0)
 }
 
 
-if tile_meeting(x,y,"Tiles")
-{
-	instance_destroy()
-}

@@ -522,6 +522,7 @@ AddBestiaryEnemyShielder();
 AddBestiaryEnemyCapsuleMimic();
 AddBestiaryEnemyFreeworm();
 AddBestiaryEnemyWormageddon_();
+AddBestiaryEnemyBossWorm();
 
 
 global.enemyBasicBestiaryNumber = 0;
@@ -554,6 +555,7 @@ global.enemyShielderBestiaryNumber = 26;
 global.enemyCapsuleMimicBestiaryNumber = 27;
 global.enemyFreewormBestiaryNumber = 28;
 global.enemyWormageddonBestiaryNumber = 29;
+global.enemyBossWormBestiaryNumber = 30;
 
 
 

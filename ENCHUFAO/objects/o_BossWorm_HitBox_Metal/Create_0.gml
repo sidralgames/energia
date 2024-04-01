@@ -20,3 +20,4 @@ isWormHitBox = true;
 dying = false;
 isVisible = true;
 affectedByLaserTrap = false;
+enemyBestiaryNumber = global.enemyBossWormBestiaryNumber;

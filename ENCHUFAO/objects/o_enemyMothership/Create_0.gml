@@ -47,6 +47,12 @@ accelDistance = random_range(0.005, 0.05);
 isMegaEnemy = false
 isMega = irandom(4);
 
+
+if tile_meeting(x,y,"Tiles")
+{
+	instance_destroy();
+}
+
 oddsBattery = 1;
 
 if (isMega = 0)
@@ -70,15 +76,11 @@ if (isMega = 0)
 
 }
 
+
+
 hasShield = irandom(5);
 
 if (hasShield = 0)
 {
 	CreateShieldEnemy(25, 0.75, s_shieldPurple); //hp, scale, sprite
-}
-
-
-if tile_meeting(x,y,"Tiles")
-{
-	instance_destroy()
 }

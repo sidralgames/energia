@@ -23,7 +23,7 @@ _hp = 5;
 flashAlpha = 0;
 
 
-enemyShooter = s_bossWorm_Mouth_Metal;
+enemyShooter = global.enemyBossWormBestiaryNumber;
 shooterTrail = false;
 
 circleTile = false;

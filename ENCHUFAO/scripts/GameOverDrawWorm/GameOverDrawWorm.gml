@@ -93,6 +93,36 @@ function GameOverDrawWorm(_name)
 			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+285, string(text))
 		}
 		break;
+		
+		case ("Gusanene"):
+		{
+			drawsprite = false;
+			global.FinalTrail = false;
+			
+			if (wallMouth = false)
+			{
+				wallMouth = true;
+				enemy = instance_create_layer(__view_get( e__VW.XView, 0 )+570,__view_get( e__VW.YView, 0 )+245,"PauseHUE",o_BossWorm_MouthGameOver);
+			}
+			
+			draw_set_color(global.brightRed);
+			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+261,"Gusanene");
+
+			draw_set_color(c_white)
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+260,"Gusanene");
+			draw_set_font(global.customFont12);
+			if (tipChoosed = false)
+			{
+				tipChoosed = true;
+				tip = irandom_range(0,7)
+			}
+			infoGameOverGusanene(tip);
+			draw_set_color(global.lightBlue)
+			draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+286, string(text))
+			draw_set_color(c_white)
+			draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+285, string(text))
+		}
+		break;
 	}
 
 }

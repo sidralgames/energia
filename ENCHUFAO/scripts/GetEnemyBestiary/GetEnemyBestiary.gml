@@ -225,6 +225,15 @@ function GetEnemyBestiary(argument0)
 			//BestiaryDrawEnemyWorm("Gripper", -10, -30, c_white, alphaInfo);
 		}
 		break;
+		
+		case ("Gusanene"):
+		{
+			drawWall = false;
+			aliasOff = 10;
+			BestiaryDrawEnemyWorm(enemy.alias, 230,0, c_white, alphaInfo);
+			//BestiaryDrawEnemyWorm("Gripper", -10, -30, c_white, alphaInfo);
+		}
+		break;
 	}
 	
 	if (drawWall)

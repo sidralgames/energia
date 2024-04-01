@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "AddBestiaryEnemyWormaged_don",
+  "name": "AddBestiaryEnemyWormageddon_",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

@@ -196,6 +196,11 @@ function LoadDefaultData()
 	global.enemyWormageddonKilledBy = 0;
 	global.enemyWormageddonKills = 0;
 	
+	//--- GUSANENE ---//
+	global.bestiaryEnemyBossWormUnlocked = 0;
+	global.enemyBossWormKilledBy = 0;
+	global.enemyBossWormKills = 0;
+	
 	
 
 }

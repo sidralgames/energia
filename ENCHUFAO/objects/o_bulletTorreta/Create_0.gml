@@ -9,3 +9,4 @@ hp = 200;
 // Inherit the parent event
 event_inherited();
 
+enemyShooter = global.enemyPewPewBestiaryNumber;

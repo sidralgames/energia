@@ -196,6 +196,11 @@ function LoadGame()
 	global.enemyWormageddonKilledBy = ini_read_real("bestiary","wormageddonKilledBy", 0);
 	global.enemyWormageddonKills = ini_read_real("bestiary","wormageddonKills", 0); 
 	
+	//--- GUSANENE ---//
+	global.bestiaryEnemyBossWormUnlocked = ini_read_real("bestiary","gusanene", 0);
+	global.enemyBossWormKilledBy = ini_read_real("bestiary","gusaneneKilledBy", 0);
+	global.enemyBossWormKills = ini_read_real("bestiary","gusaneneKills", 0); 
+	
 	
 	
 	

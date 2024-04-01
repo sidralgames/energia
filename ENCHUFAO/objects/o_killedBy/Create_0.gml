@@ -1,6 +1,6 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-
+part_system_depth(global.EnemyKilledBy_sys,layer_get_depth("Pause") -1 )
 cam = view_camera[0];
 x = __view_get( e__VW.XView, 0 );
 y = __view_get( e__VW.YView, 0 );

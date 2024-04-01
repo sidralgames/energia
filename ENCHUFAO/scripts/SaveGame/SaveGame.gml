@@ -191,6 +191,11 @@ function SaveGame()
 	ini_write_real("bestiary","wormageddonKills", global.enemyWormageddonKills);
 	ini_write_real("bestiary","wormageddonKilledBy", global.enemyWormageddonKilledBy);
 	
+	//---- GUSANENE ----//
+	ini_write_real("bestiary","gusanene", global.bestiaryEnemyBossWormUnlocked);
+	ini_write_real("bestiary","gusaneneKills", global.enemyBossWormKills);
+	ini_write_real("bestiary","gusaneneKilledBy", global.enemyBossWormKilledBy);
+	
 	
 	
 	

@@ -9,8 +9,9 @@ Controls_Input();
 if (key_upP)
 {
 	gripperCreated = false;
-freewormCreated = false;
-wormageddonCreated = false;
+	freewormCreated = false;
+	wormageddonCreated = false;
+	gusaneneCreated = false;
 	rot = 0;
 	drawWall = true;
 	wallYoff = wallYoffInitial;
@@ -33,8 +34,9 @@ wormageddonCreated = false;
 if (key_downP)
 {
 	gripperCreated = false;
-freewormCreated = false;
-wormageddonCreated = false;
+	freewormCreated = false;
+	wormageddonCreated = false;
+	gusaneneCreated = false;
 	rot = 0;
 	drawWall = true;
 	wallYoff = wallYoffInitial;
@@ -71,8 +73,9 @@ if (selected = 3)
 	if (key_rightP)
 	{
 		gripperCreated = false;
-freewormCreated = false;
-wormageddonCreated = false;
+		freewormCreated = false;
+		wormageddonCreated = false;
+		gusaneneCreated = false;
 		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 		initialX = 200;
 		initialXWall = initialX;
@@ -103,8 +106,9 @@ wormageddonCreated = false;
 	if (key_leftP)
 	{
 		gripperCreated = false;
-freewormCreated = false;
-wormageddonCreated = false;
+		freewormCreated = false;
+		wormageddonCreated = false;
+		gusaneneCreated = false;
 		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 		initialX = 440;
 		initialXWall = initialX;
@@ -222,6 +226,7 @@ if (key_back)
 	gripperCreated = false;
 freewormCreated = false;
 wormageddonCreated = false;
+gusaneneCreated = false;
 	selected-=1;
 	wallMouth = false;
 	alphaInfo=0;
@@ -260,6 +265,26 @@ if instance_exists(o_enemyGameOver_parent)
 	if (key_leftP) || (key_rightP)
 	|| (key_upP) || (key_downP) || (key_back)
 	{
+		if instance_exists(o_BossWorm_HitBox_Metal)
+		{
+			o_BossWorm_HitBox_Metal.die = true;
+		}
+		
+		if instance_exists(o_chargerBossWorm)
+		{
+			o_chargerBossWorm.die = true;
+		}
+		
+		if instance_exists(o_BossWorm_HitBox)
+		{
+			o_BossWorm_HitBox.die = true;
+		}
+		
+		if instance_exists(o_EnchufeBossWorm)
+		{
+			o_EnchufeBossWorm.die = true;
+		}
+		
 		instance_destroy(o_enemyGameOver_parent);
 	}
 }

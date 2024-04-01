@@ -29,3 +29,4 @@ IsEnchufeBoss = true;
 changedMetal = false
 
 sprite_enchufePluged = s_enchufeBossWorm;
+die = false

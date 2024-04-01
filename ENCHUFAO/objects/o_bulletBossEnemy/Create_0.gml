@@ -3,7 +3,7 @@
 
 type = collisionType.custom;
 enemy = instance_nearest(x,y,o_BossMecha)
-enemyShooter = enemy.sprite_index;
+enemyShooter = global.enemyBossCrusherBestiaryNumber;
 shooterTrail = false;
 if (tile_meeting(x,y, "Tiles"))
 {

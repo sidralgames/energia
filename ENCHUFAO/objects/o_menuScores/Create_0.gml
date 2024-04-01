@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+rote = 0;
 o_nextRoom._visible = false;
 positionChoosed = false;
 alphaInfo=0;
@@ -19,7 +19,7 @@ selectedBest=0
 enemyToShow=0;
 initialXWall = 320;
 factorInitialXWall = 0.15;
-contMisilMax = random_range(120, 300)
+contMisilMax = random_range(12, 30)
 contMisil = contMisilMax;
 
 
@@ -51,6 +51,7 @@ xScale = 1;
 gripperCreated = false;
 freewormCreated = false;
 wormageddonCreated = false;
+gusaneneCreated = false;
 
 settedHue = false;
 

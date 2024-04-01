@@ -128,5 +128,44 @@ function BestiaryDrawEnemyWorm(_name, _xoff, _yoff,_color, _alpha)
 				x = __view_get( e__VW.XView, 0 )+ other.initialX +(_xoff*other.xScale);
 			}
 		}break; 
+		
+		case "Gusanene":
+		{
+			if (gusaneneCreated = false)
+			{
+				//BestiaryDrawWallEnemy(0,0,c_white,1)
+				gusaneneCreated = true;
+				gusanene = instance_create_layer(__view_get( e__VW.XView, 0 )+initialX+(_xoff*xScale),
+				__view_get( e__VW.YView, 0 )+initialY+_yoff,"PauseHUE",o_BossWorm_MouthGameOver)
+			
+				if (xScale = 1)
+				{
+					gusanene.cableForce = 180
+				}
+				else
+				{
+					gusanene.cableForce = 0
+				}
+		
+				gusanene.image_blend = _color;
+				gusanene._colorBody = _color;
+			}
+			
+			with(gusanene) 
+			{
+				image_alpha = _alpha
+				image_xscale = other.xScale;
+				if (other.xScale = 1)
+				{
+					cableForce = 180
+				}
+				else
+				{
+					cableForce = 0
+				}
+				x = __view_get( e__VW.XView, 0 )+ other.initialX +(_xoff*other.xScale);
+			}
+			
+		}break; 
 	}
 }

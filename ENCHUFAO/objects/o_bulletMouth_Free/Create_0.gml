@@ -12,5 +12,5 @@ if tile_meeting(x,y,"Tiles")
 }
 
 precisionHole = 1;
-enemyShooter = s_enemyMouth;
+enemyShooter = global.enemyPincherBestiaryNumber;
 shooterTrail = false;

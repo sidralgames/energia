@@ -5,6 +5,8 @@ function BestiaryDrawEnemy(_sprite, _image, _xoff, _yoff, _rot, _color, _alpha, 
 	
 	draw_sprite_ext(_sprite, _image, __view_get( e__VW.XView, 0 )+initialX+(_xoff*xScale),__view_get( e__VW.YView, 0 )+initialY+_yoff, xScale,1,_rot,_color, _alpha)
 	
+	//draw_text_ext_transformed(__view_get( e__VW.XView, 0 )+200,__view_get( e__VW.YView, 0 )+200,"Hola",10, 300, 2, 2,rote)
+	
 	if (_drawparts)
 	{
 		contParts --;

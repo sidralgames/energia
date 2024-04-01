@@ -10,7 +10,7 @@ touched = false;
 //global.enemigos+=1;
 randomize();
 
-direction= point_direction(x, y, o_targetBestiary.x, o_targetBestiary.y)+choose(-90,90);
+direction= point_direction(x, y, o_targetBestiary.x, o_targetBestiary.y)+random(360);
 
 _speed=random(0.7)+0.7;
 speed = _speed;

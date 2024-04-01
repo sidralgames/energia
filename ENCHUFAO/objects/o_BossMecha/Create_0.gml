@@ -2,7 +2,7 @@
 // You can write your code in this editor
 event_inherited();
 
-enemyBestiaryNumber = 19
+enemyBestiaryNumber = global.enemyBossCrusherBestiaryNumber;
 
 isBombable = false;
 soundLaser = -1;

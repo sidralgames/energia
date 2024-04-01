@@ -11,7 +11,7 @@ if instance_exists(o_chipLaser)
 
 	with(o_chipLaser)
 	{
-		alarm[0] = 1
+		alarm[0] = 2;
 		changeVertex = true;
 	}
 }
@@ -21,7 +21,7 @@ if instance_exists(o_chipSmart)
 
 	with(o_chipSmart)
 	{
-		alarm[0] = 1
+		alarm[0] = 2;
 		changeVertex = true;
 	}
 }
@@ -30,7 +30,7 @@ if instance_exists(o_chipAmmoSuper)
 {
 	with(o_chipAmmoSuper)
 	{
-		alarm[0] = 1
+		alarm[0] = 2;
 		changeVertex = true;
 	}
 }
@@ -39,7 +39,7 @@ if instance_exists(o_chipRepair)
 {
 	with(o_chipRepair)
 	{
-		alarm[0] = 1
+		alarm[0] = 2;
 		changeVertex = true;
 	}
 }
@@ -48,7 +48,7 @@ if instance_exists(o_chipMimic)
 {
 	with(o_chipMimic)
 	{
-		alarm[0] = 1
+		alarm[0] = 2;
 		changeVertex = true;
 	}
 }
@@ -58,7 +58,7 @@ if instance_exists(o_chipShootUp)
 {
 	with(o_chipShootUp)
 	{
-		alarm[0] = 1
+		alarm[0] = 2;
 		changeVertex = true;
 	}
 }

@@ -15,3 +15,4 @@ dir1 = choose(90,270)
 xx = x;
 yy = y;
 alarm[2] = 2;
+

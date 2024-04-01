@@ -87,6 +87,11 @@ _speed=0;
 off = 90;
 len = 0;
 
+if tile_meeting(x,y,"Tiles")
+{
+	instance_destroy();
+}
+
 hasShield = irandom(4);
 
 if (hasShield = 0)
@@ -94,8 +99,3 @@ if (hasShield = 0)
 	CreateShieldEnemy(20, 1, s_shieldPurple); //hp, scale, sprite
 }
 
-
-if tile_meeting(x,y,"Tiles")
-{
-	instance_destroy()
-}

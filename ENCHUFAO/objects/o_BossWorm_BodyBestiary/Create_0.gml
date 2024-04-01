@@ -19,19 +19,19 @@ _sprite = s_BossWorm_Body;
 _segments = 12;
 rope1 = verletGroupCreateRopeTextured(verletSystem1, x, y, _sprite, _segments, 1, 10);
 changed = false;
-alarm[1] = 30;
+alarm[1] = 2;
 contPlugBody = -1;
-
+changed = false;
 // Create a new rope
 //rope1 = verletGroupCreateRope(verletSystem1, x, y, cableColor, 2, 3, _segments, 2, 100, canCollide);
 
  //Attach its first vertex to an object
 inst = instance_nearest(x,y,o_BossWorm_MouthGameOver)
-rope1.vertexAttachTo(first, inst);
+rope1.vertexChangeData(last, inst.x-(500*inst.xscale),inst.y-100,,false)
+rope1.vertexAttachTo(first, inst, 20*inst.xscale);
 
-rope1.vertexAttachTo(first, inst,20);
 //rope1.vertexChangeData(6, x-270,y,,true)
-rope1.vertexChangeData(last, x-540,y,,true)
+//rope1.vertexChangeData(last, x-540,y,,true)
 
 
 instAchor = instance_create_layer(x,y,"PauseHUE",o_chargerBossWorm)
