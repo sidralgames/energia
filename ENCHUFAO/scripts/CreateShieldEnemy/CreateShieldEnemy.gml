@@ -8,4 +8,5 @@ function CreateShieldEnemy(argument0, argument1, argument2)
 	shield.scale = argument1;
 	shield.sprite_index = argument2;
 	shield.enemy = self;
+	shield.enemyShooter = enemyBestiaryNumber;
 }

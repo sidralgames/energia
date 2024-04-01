@@ -3,7 +3,7 @@
 
 global.chipsLaserTot -=1;
 
-global.ammoMod += 10;
+global.ammoMod += 15;
 
 if (global.ammoMod > 50)
 {
