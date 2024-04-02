@@ -29,7 +29,8 @@ if (cont = true)
 	}
 	else if (global.level = 8)
 	{
-		room_goto(Sala_MegaUpgrade)
+		room_goto(Sala_MegaUpgrade);
+		//ResetEnchufesUpgrades();
 	}
 	else if (global.level = 15)
 	{
@@ -37,7 +38,8 @@ if (cont = true)
 	}
 	else if (global.level = 16)
 	{
-		room_goto(Sala_MegaUpgrade)
+		room_goto(Sala_MegaUpgrade);
+		//ResetEnchufesUpgrades();
 	}
 	else
 	{
@@ -45,7 +47,7 @@ if (cont = true)
 		if (global.level mod 2 == 0)
 		{
 			global.XPpoints += global.level*100;
-			room_goto(Sala_Upgade)
+			room_goto(Sala_Upgade);
 		}
 		else 
 		{

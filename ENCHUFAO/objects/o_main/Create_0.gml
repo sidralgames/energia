@@ -422,10 +422,12 @@ global.shipMP3BonusUpgraded = false;
 
 //----------ENCHUFE UPGRADES -------// EXPERIMENTAL-------///
 checkUpgradesOfEnchufe = false;
+
 global.enchufeHPUpgradesList = ds_map_create();
 global.enchufeAmmoUpgradesList = ds_map_create();
 global.enchufeLaserUpgradesList = ds_map_create();
 global.enchufeEnergyUpgradesList = ds_map_create();
+
 
 
 global.enchufeHPUpgradesNum = 0;

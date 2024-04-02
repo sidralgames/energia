@@ -10,7 +10,7 @@ if (global.ammoMod > 50)
 	global.ammoMod = 50;	
 }
 
-event_inherited()
+event_inherited();
 
 
 

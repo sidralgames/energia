@@ -99,7 +99,7 @@ function LoadGame()
 	//--- DISC ---//
 	global.bestiaryEnemyDiscUnlocked = ini_read_real("bestiary","disc", 0);
 	global.enemyDiscKilledBy = ini_read_real("bestiary","discKilledBy", 0);
-	global.enemyDiscKills = ini_read_real("bestiary","discMegaKills", 0);
+	global.enemyDiscKills = ini_read_real("bestiary","discKills", 0);
 	
 	//--- PINCHER ---//
 	global.bestiaryEnemyPincherUnlocked = ini_read_real("bestiary","pincher", 0);

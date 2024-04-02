@@ -773,6 +773,7 @@
     {"name":"o_menuAchievements","order":33,"path":"objects/o_menuAchievements/o_menuAchievements.yy",},
     {"name":"o_torreta","order":4,"path":"objects/o_torreta/o_torreta.yy",},
     {"name":"s_enchufeMimic_LaserAttack","order":7,"path":"sprites/s_enchufeMimic_LaserAttack/s_enchufeMimic_LaserAttack.yy",},
+    {"name":"ResetEnchufesUpgrades","order":102,"path":"scripts/ResetEnchufesUpgrades/ResetEnchufesUpgrades.yy",},
     {"name":"o_capsule_Mimic","order":60,"path":"objects/o_capsule_Mimic/o_capsule_Mimic.yy",},
     {"name":"s_chargerMP3","order":41,"path":"sprites/s_chargerMP3/s_chargerMP3.yy",},
     {"name":"s_enemyMothershipMega","order":24,"path":"sprites/s_enemyMothershipMega/s_enemyMothershipMega.yy",},

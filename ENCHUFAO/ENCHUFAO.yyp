@@ -842,6 +842,7 @@
     {"id":{"name":"o_menuAchievements","path":"objects/o_menuAchievements/o_menuAchievements.yy",},},
     {"id":{"name":"o_torreta","path":"objects/o_torreta/o_torreta.yy",},},
     {"id":{"name":"s_enchufeMimic_LaserAttack","path":"sprites/s_enchufeMimic_LaserAttack/s_enchufeMimic_LaserAttack.yy",},},
+    {"id":{"name":"ResetEnchufesUpgrades","path":"scripts/ResetEnchufesUpgrades/ResetEnchufesUpgrades.yy",},},
     {"id":{"name":"o_capsule_Mimic","path":"objects/o_capsule_Mimic/o_capsule_Mimic.yy",},},
     {"id":{"name":"s_chargerMP3","path":"sprites/s_chargerMP3/s_chargerMP3.yy",},},
     {"id":{"name":"s_enemyMothershipMega","path":"sprites/s_enemyMothershipMega/s_enemyMothershipMega.yy",},},

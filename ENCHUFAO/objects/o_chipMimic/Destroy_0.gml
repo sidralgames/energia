@@ -21,7 +21,7 @@ if instance_exists(o_playerShip)
 			
 			if (global.hp <1)
 			{
-				global.numEnemyKilledBy = enemyBestiaryNumber;
+				global.numEnemyKilledBy = other.enemyBestiaryNumber;
 				global.FinalTrail = false;
 			}
 			

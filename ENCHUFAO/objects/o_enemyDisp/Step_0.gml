@@ -46,6 +46,9 @@ if instance_exists(o_playerShip)
 			var bullet = instance_create_layer(x + lengthdir_x(20, dire), y + lengthdir_y(20, dire),
 			"Bullets", o_bulletEnemy);
 			off =  random_range(5,-5)
+			bullet.enemyShooter = enemyBestiaryNumber;
+			bullet.enemy = self;
+			bullet.shooterTrail = true;
 			bullet.bulletSpeed = 3;
 			bullet.image_angle = dire+off;
 			bullet.direction = dire+off;

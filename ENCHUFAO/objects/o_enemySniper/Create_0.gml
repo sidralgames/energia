@@ -71,7 +71,7 @@ offBullet = 1.75;
 
 enemyBestiaryNumber = global.enemySniperBestiaryNumber;
 
-oddsBattery = 2;
+oddsBattery = 1;
 if (isMega = 0) && (room != Sala_Tutorial)
 {
 	global.MegaEnemiesInLevel+=1;
