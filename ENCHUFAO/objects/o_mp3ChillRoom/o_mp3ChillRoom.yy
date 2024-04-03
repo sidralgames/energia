@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_mp3ChillRoom",
-    "path": "sprites/s_mp3ChillRoom/s_mp3ChillRoom.yy",
+    "name": "s_mp3Gun3",
+    "path": "sprites/s_mp3Gun3/s_mp3Gun3.yy",
   },
   "spriteMaskId": {
     "name": "s_mp3ChillRoom",

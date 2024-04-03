@@ -27,13 +27,23 @@ if (enchufeActive)
 		contToShoot--;
 	}
 	
-	sprite_index = s_mp3ChillRoom_2
+	sprite_index = s_mp3Gun3;
+	if (image_index<27)
+	{
+		image_speed = 0.5;
+	}
+	else
+	{
+		image_speed = 0;
+	}
 }
 else
 {
 	counting = false;
 	contToShoot = 60;
-	sprite_index = s_mp3ChillRoom
+	sprite_index = s_mp3Gun3;
+	image_speed = 0;
+	image_index = 0;
 }
 
 if (!tile_meeting(x+_hpush*5.25,y,"Tiles")) && (!tile_meeting(x,y +_vpush*5.25,"Tiles"))

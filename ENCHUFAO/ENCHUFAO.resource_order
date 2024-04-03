@@ -1153,6 +1153,7 @@
     {"name":"PlugStrandedShipToEnchufe","order":13,"path":"scripts/PlugStrandedShipToEnchufe/PlugStrandedShipToEnchufe.yy",},
     {"name":"o_BigWorm_Mouth","order":48,"path":"objects/o_BigWorm_Mouth/o_BigWorm_Mouth.yy",},
     {"name":"draw_wheel_part","order":30,"path":"scripts/draw_wheel_part/draw_wheel_part.yy",},
+    {"name":"s_mp3Gun3","order":103,"path":"sprites/s_mp3Gun3/s_mp3Gun3.yy",},
     {"name":"s_bossHealthBar_In","order":14,"path":"sprites/s_bossHealthBar_In/s_bossHealthBar_In.yy",},
     {"name":"o_enchufeUpgadeMoreChipDrops","order":114,"path":"objects/o_enchufeUpgadeMoreChipDrops/o_enchufeUpgadeMoreChipDrops.yy",},
     {"name":"splayer_Blue_Locked","order":4,"path":"sprites/splayer_Blue_Locked/splayer_Blue_Locked.yy",},
