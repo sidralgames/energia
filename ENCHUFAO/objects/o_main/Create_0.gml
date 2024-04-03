@@ -41,7 +41,7 @@ global.yellow = make_color_rgb(254,231, 97);
 global.lightBlue = make_color_rgb(44,232, 245);
 global.blue = make_color_rgb(0,149,233);
 global.dark = make_color_rgb(38,43,68);
-global.darkPalette =   make_color_rgb(28,32,49);//make_color_rgb(24,20,37);
+global.darkPalette = make_color_rgb(38,43,68);//  make_color_rgb(28,32,49);//make_color_rgb(24,20,37);
 
 //---- FONTS ---//
 global.customFont20 = font_add("ChubbyChoo-SemiBold.ttf", 20, false, false, 32, 128);

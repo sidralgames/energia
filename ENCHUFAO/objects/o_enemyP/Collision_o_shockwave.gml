@@ -3,25 +3,26 @@
 
 if (!shocked)
 {
+	state = ENEMYSTATE.SHOCKED;
 	path_end();
-	shocked = true;
+	slowed = false;
 	
-	alarm[9] = 30;
+	alarm[9] = 120;
 	
 	dirShoked = point_direction(other.x, other.y, x,y);
 	
 	if point_distance(other.x, other.y, x,y) < 50
 	{
-		speed = random_range(2,3);
+		speed = random_range(3,3);
 	}
 	else
 	{
-		speed = random_range(1,2);
+		speed = random_range(2,3);
 	}
 	
 	direction = dirShoked;
 	
-	state = ENEMYSTATE.SHOCKED;
+	
 	takeCover = false;
 }
 

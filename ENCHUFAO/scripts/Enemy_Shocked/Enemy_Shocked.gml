@@ -7,11 +7,13 @@ function Enemy_Shocked()
 		part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(8,direction), y-lengthdir_y(8,direction), global.naveEnemy_Waiting , 1)
 	}
 
-	speed = lerp(speed, 0, 0.02);
+	speed = lerp(speed, 0, 0.00002);
 
 	_angle = dirShoked;
 	
 	MoveZeroGrv_Speed();
+	x+=hspeed * global.relativeSpeed;
+	y+=vspeed * global.relativeSpeed;
 	
 	if (alarm[9] <= 0)
 	{

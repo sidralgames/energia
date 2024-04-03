@@ -7,6 +7,11 @@ function ResetEnchufesUpgrades()
 	ds_map_clear(global.enchufeLaserUpgradesList);
 	ds_map_clear(global.enchufeEnergyUpgradesList);
 	
+	global.batteryEnchufeListLasernum = 0;
+	global.batteryEnchufeListAmmonum = 0;
+	global.batteryEnchufeListHPnum = 0;
+	global.batteryEnchufeListEnergynum = 0;
+	
 	AddUpgradeEnchufeHP();
 	AddUpgradeEnchufeAmmo();
 	AddUpgradeEnchufeEnergy();

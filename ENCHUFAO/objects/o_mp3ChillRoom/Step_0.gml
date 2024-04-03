@@ -6,8 +6,8 @@ IsEnchufeMP3CHILL = true;
 xConnectionPos= x+lengthdir_x(105,image_angle-180);
 yConnectionPos = y+lengthdir_y(105,image_angle-180);
 
-xConnectionDisp= x+lengthdir_x(105,image_angle);
-yConnectionDisp = y+lengthdir_y(105,image_angle);
+xConnectionDisp= x+lengthdir_x(135,image_angle);
+yConnectionDisp = y+lengthdir_y(135,image_angle);
 
 if instance_exists(laser)
 {

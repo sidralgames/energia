@@ -89,7 +89,7 @@ if instance_exists(o_BossMecha)
 							if (global.hp <= 0)
 							{
 								global.numEnemyKilledBy = global.enemyBossCrusherBestiaryNumber;
-								global.imageKilledBy = 0;
+								//global.imageKilledBy = 0;
 							}
 						}
 						

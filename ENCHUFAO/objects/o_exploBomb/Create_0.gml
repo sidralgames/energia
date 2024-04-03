@@ -9,7 +9,7 @@ sounded = false;
 
 drawflash = true
 alarm[0] = 1
-scale=0;
+scale=1;
 damagePlayer = false;
 scaleShockwave = scale;
 scaleShake = scale

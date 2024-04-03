@@ -10,3 +10,4 @@ hp = 200;
 event_inherited();
 
 enemyShooter = global.enemyPewPewBestiaryNumber;
+shooterTrail = false;

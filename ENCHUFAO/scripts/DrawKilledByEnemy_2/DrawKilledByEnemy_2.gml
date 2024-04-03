@@ -113,7 +113,7 @@ function DrawKilledByEnemy_2()
 				}
 				break;
 		
-				case ("Lil Crusher"):
+				case ("Crusher"):
 				{
 					KilledByDrawEnemy(enemy.alias, infoGameOverLilCrusher, irandom_range(0,5), false, 0);
 				}
