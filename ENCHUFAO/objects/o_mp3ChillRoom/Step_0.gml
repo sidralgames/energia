@@ -16,13 +16,13 @@ if instance_exists(laser)
 }
 if (enchufeActive)
 {
-	if !audio_is_playing(sndEasyLover)
+	if !audio_is_playing(snd_song)
 	{
-		audio_play_sound_on(delay_emitter, sndEasyLover, true, 90,5.9,,1.1);
+		audio_play_sound_on(delay_emitter, snd_song, true, 90,5.9,,0.9);
 	}
 	else
 	{
-		audio_resume_sound(sndEasyLover)
+		audio_resume_sound(snd_song)
 	}
 	
 	sprite_index = s_mp3Gun3;
@@ -52,7 +52,7 @@ if (enchufeActive)
 }
 else
 {
-	audio_pause_sound(sndEasyLover)
+	audio_pause_sound(snd_song)
 	counting = false;
 	contToShoot = 60;
 	sprite_index = s_mp3Gun3;
