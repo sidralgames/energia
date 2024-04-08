@@ -26,4 +26,13 @@ if instance_exists(o_playerShip)
 
 // Inherit the parent event
 event_inherited();
+//if collision_circle(x, y, 40,  o_playerShip, false, true)
+//{
+//	draw_sprite_ext(sprite_index,image_index, x,y, scale, scale, _angle, image_blend, image_alpha)
+//}
+//else
+//{
+//	draw_sprite_ext(upgrade,image_index, x,y, scale, scale, _angle, image_blend, image_alpha)
+//}
+
 

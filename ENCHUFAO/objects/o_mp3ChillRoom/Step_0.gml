@@ -6,8 +6,8 @@ IsEnchufeMP3CHILL = true;
 xConnectionPos= x+lengthdir_x(105,image_angle-180);
 yConnectionPos = y+lengthdir_y(105,image_angle-180);
 
-xConnectionDisp= x+lengthdir_x(135,image_angle);
-yConnectionDisp = y+lengthdir_y(135,image_angle);
+xConnectionDisp= x+lengthdir_x(145,image_angle-6);
+yConnectionDisp = y+lengthdir_y(145,image_angle-6);
 
 if instance_exists(laser)
 {
@@ -16,18 +16,31 @@ if instance_exists(laser)
 }
 if (enchufeActive)
 {
-	if (counting = false)
+	if !audio_is_playing(sndEasyLover)
 	{
-		counting = true;
-		contToShoot = 60;
+		audio_play_sound_on(delay_emitter, sndEasyLover, true, 90,5.9,,1.1);
 	}
-	
-	if (contToShoot > 0)
+	else
 	{
-		contToShoot--;
+		audio_resume_sound(sndEasyLover)
 	}
 	
 	sprite_index = s_mp3Gun3;
+
+	if (image_index >25)
+	{
+		if (counting = false)
+		{
+			counting = true;
+			contToShoot = 50;
+		}
+	
+		if (contToShoot > 0)
+		{
+			contToShoot--;
+		}
+	}
+	
 	if (image_index<27)
 	{
 		image_speed = 0.5;
@@ -39,6 +52,7 @@ if (enchufeActive)
 }
 else
 {
+	audio_pause_sound(sndEasyLover)
 	counting = false;
 	contToShoot = 60;
 	sprite_index = s_mp3Gun3;

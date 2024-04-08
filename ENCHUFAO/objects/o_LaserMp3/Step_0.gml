@@ -112,15 +112,14 @@ else
 		reseted = true;
 		
 		drawflash = true;
-		blueWidht = 11;
+		blueWidht = 20;
 		whiteWidht = 8;
 		blueW=50;
 		whiteW=20;
-		mp3laserWidth1 = 14;
-		mp3laserWidth2 = 8;
-
-		outRad = 10;
-		inRad = 4;
+		mp3laserWidth1 = 20;
+		mp3laserWidth2 = 10;
+		outRad = 20;
+		inRad = 8;
 	}
 }
 

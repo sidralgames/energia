@@ -30,7 +30,7 @@ if (cont = true)
 	else if (global.level = 8)
 	{
 		room_goto(Sala_MegaUpgrade);
-		ResetEnchufesUpgrades();
+		//ResetEnchufesUpgrades();
 	}
 	else if (global.level = 15)
 	{
@@ -39,7 +39,7 @@ if (cont = true)
 	else if (global.level = 16)
 	{
 		room_goto(Sala_MegaUpgrade);
-		ResetEnchufesUpgrades();
+		//ResetEnchufesUpgrades();
 	}
 	else
 	{

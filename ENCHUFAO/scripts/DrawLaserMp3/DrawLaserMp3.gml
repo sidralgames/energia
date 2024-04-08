@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function DrawLaserMp3(argument0)
 {
-	if (superGun.enchufeActive)
+	if (superGun.enchufeActive) && (superGun.image_index > 15)
 	{
 		height = sin(random(1));
 		colorLaser = make_color_rgb(255,0,68);

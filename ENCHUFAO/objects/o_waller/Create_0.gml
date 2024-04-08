@@ -49,6 +49,12 @@ if (room = Sala_0) //(levelType = 0)
 		}
 		break;
 		
+		case "Mejora":
+		{
+			SetupLevelMejora();
+		}
+		break;
+		
 		case "Corridor":
 		{
 			SetupLevelCorridor();

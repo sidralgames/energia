@@ -10,14 +10,14 @@ contExploTile=0;
 maxLenght = 640;
 
 drawflash = true;
-blueWidht = 11;
-whiteWidht = 8;
+blueWidht = 18;
+whiteWidht = 10;
 blueW=50;
 whiteW=20;
-mp3laserWidth1 = 14;
-mp3laserWidth2 = 8;
-outRad = 10;
-inRad = 4;
+mp3laserWidth1 = 20;
+mp3laserWidth2 = 10;
+outRad = 20;
+inRad = 8;
 
 reseted = false;
 

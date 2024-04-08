@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PluggedToEnchufe()
 {
-	if instance_exists(enchufe)
+	if instance_exists(enchufe) && (room != Sala_ChillRoom) 
 	{
 		if (room != Sala_Tutorial)
 		{

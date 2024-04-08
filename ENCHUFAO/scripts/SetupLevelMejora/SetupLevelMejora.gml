@@ -3,8 +3,8 @@
 function SetupLevelMejora()
 {
 	totalFloor = 0;
-	maxFloor = 150;
-	minFloor = 30;
+	maxFloor = 250;
+	minFloor = 40;
 	realSteps = 0;
 	global.newChargerX = 0;
 	global.newChargerY = 0;
@@ -24,7 +24,7 @@ function SetupLevelMejora()
 	__background_set( e__BG.Y, 0, irandom(1000) );
 
 
-	room_width = (CELL_WIDTH/32) * 32 * 35; // = 42 celdas
+	room_width = (CELL_WIDTH/32) * 32 * 28; // = 42 celdas
 	room_height = (CELL_HEIGHT/32) *32 * 18; // = 1280 = 40 celdas
 
 
@@ -59,7 +59,7 @@ function SetupLevelMejora()
 	var _controller_y = height_ div 2
 	var _controller_direction = irandom(3);
 
-	var _steps = 4000;
+	var _steps = 2500;
 
 	var _direction_change_odds = 0;
 	
@@ -107,7 +107,7 @@ function SetupLevelMejora()
 	//Draw the level
 	DrawLevelMejora();
 	
-	if (!enchufe0) || (!enchufeFinal) || (totalFloor < minFloor)
+	if (!manager) || (!eFinal) || (placeholders < 1) || (totalFloor < minFloor)
 	//|| (UpgradesEnchufesInLevel < 1)
 
 	{
