@@ -16,7 +16,7 @@ enemiesMax = min(7,global.level+2);
 
 if (global.level = 1) || (global.level = 9)
 {
-	levelType = "Basic";
+	levelType = "Mejora";
 }
 else if (global.level = 3) || (global.level = 11)
 {

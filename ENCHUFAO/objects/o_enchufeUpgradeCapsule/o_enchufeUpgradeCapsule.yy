@@ -1,13 +1,11 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_enchufe_Final",
+  "name": "o_enchufeUpgradeCapsule",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":3,"eventType":2,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -16,8 +14,8 @@
     "path": "folders/Objetos/Enchufes.yy",
   },
   "parentObjectId": {
-    "name": "o_enchufe_Father",
-    "path": "objects/o_enchufe_Father/o_enchufe_Father.yy",
+    "name": "o_enchufeUpgrades",
+    "path": "objects/o_enchufeUpgrades/o_enchufeUpgrades.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -35,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_enchufe_Final",
-    "path": "sprites/s_enchufe_Final/s_enchufe_Final.yy",
+    "name": "s_capsuleUpgrade",
+    "path": "sprites/s_capsuleUpgrade/s_capsuleUpgrade.yy",
   },
   "spriteMaskId": null,
   "visible": true,

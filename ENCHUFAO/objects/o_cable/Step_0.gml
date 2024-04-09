@@ -123,7 +123,7 @@ if instance_exists(o_playerShip)
 			}
 			if (standardConnection = true)
 			{
-				rope1.vertexChangeData(last,enchufe.x,enchufe.y)
+				rope1.vertexChangeData(last,enchufe.xConnectionPos,enchufe.yConnectionPos)
 			}
 		}
 	}

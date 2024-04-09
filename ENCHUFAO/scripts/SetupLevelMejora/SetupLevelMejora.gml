@@ -100,7 +100,7 @@ function SetupLevelMejora()
 	}
 
 	SetTiles();
-	SetVines();
+	SetVines(2);
 	
 	SetTemporaryWalls();
 	

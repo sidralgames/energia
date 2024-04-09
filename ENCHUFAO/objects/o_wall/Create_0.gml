@@ -10,6 +10,9 @@ oddsDisc = max(20, 200 - global.level);
 
 oddsSmasher = 10;
 
+
+
+
 if (room = Sala_BossWorm)
 {
 	oddsEnemyMouth = 7;
@@ -36,9 +39,16 @@ yyD = y+20;
 xxL = x-20;
 xxR = x+20;
 
-
-
-
+if (room = Sala_0)
+{
+	if (o_waller.levelType = "Mejora")
+	{
+		oddsLaserV = 7;
+		oddsLaserH = 7;
+		oddsEnemyMouth = 5;
+		oddsTurret = 2
+	}
+}
 // Inherit the parent event
 event_inherited();
 

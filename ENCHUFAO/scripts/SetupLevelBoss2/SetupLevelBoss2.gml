@@ -82,7 +82,7 @@ function SetupLevelBoss2()
 	}
 
 	SetTiles();
-	SetVines();
+	SetVines(5);
 	SetTemporaryWalls();
 
 	for ( var yy = 0; yy < height_; yy++) 

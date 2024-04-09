@@ -15,7 +15,7 @@ function DrawLevelMejora()
 			    var oddsManager = 30;
 				var oddsFinal = 30;
 				
-				var oddsPlaceholder = 30;
+				var oddsPlaceholder = 100;
 				
 			    var exM = xx * CELL_WIDTH+CELL_WIDTH/2;
 			    var eyM = yy * CELL_HEIGHT+CELL_HEIGHT/2;
@@ -68,7 +68,7 @@ function DrawLevelMejora()
 					
 					if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 200)
 					{
-						if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 50)
+						if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 70)
 						{
 							instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Final); 
 							eFinal = true;

@@ -112,7 +112,7 @@ function SetupLevelTutorial()
 	}
 
 	SetTiles();
-	SetVines();
+	SetVines(4);
 	
 	SetTemporaryWalls();
 	

@@ -138,7 +138,7 @@ function SetupLevelCorridor()
 	}
 
 	SetTiles();
-	SetVines();
+	SetVines(5);
 	
 	SetTemporaryWalls();
 	

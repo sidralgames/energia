@@ -91,7 +91,7 @@ function SetupLevelBossWorm()
 	}
 
 	SetTiles();
-	SetVines();
+	SetVines(5);
 
 	for ( var yy = 0; yy < height_; yy++) 
 	{

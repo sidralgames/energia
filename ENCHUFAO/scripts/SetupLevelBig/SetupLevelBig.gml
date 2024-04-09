@@ -141,7 +141,7 @@ function SetupLevelBig()
 	}
 
 	SetTiles();
-	SetVines();
+	SetVines(5);
 	
 	SetTemporaryWalls();
 	

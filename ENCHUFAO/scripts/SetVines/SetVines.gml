@@ -1,14 +1,14 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function SetVines()
+function SetVines(_odds)
 {
 	if (room = Sala_BossWorm)
 	{
-		oddsVine_s = 2;
+		oddsVine_s = _odds-3;
 	}
 	else
 	{
-		oddsVine_s = 5;
+		oddsVine_s = _odds;
 	}
 	
 for ( var yyW = 0; yyW < height_; yyW++) 

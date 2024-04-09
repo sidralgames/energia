@@ -142,7 +142,7 @@ function SetupLevelChill()
 	}
 
 	SetTiles();
-	SetVines();
+	SetVines(4);
 	
 	SetTemporaryWalls();
 	

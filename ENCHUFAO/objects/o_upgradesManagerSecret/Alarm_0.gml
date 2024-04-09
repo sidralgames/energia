@@ -10,11 +10,17 @@ if (upgradesTotal < 1)
 		upgradeChosen.timesPicked += 1;
 		placeholder = instance_nearest(x,y,o_enchufePLACEHOLDER);
 		upgradeCreated = instance_create_layer(placeholder.x, placeholder.y, "Enchufes", upgradeChosen.obj);
+		infoToDraw = upgradeChosen.infoUpgrade;
+		
+		capsuleCreated = instance_create_layer(placeholder.x, placeholder.y, "Enchufes", o_enchufeUpgradeCapsule);
+		capsuleCreated.thisUpgrade = upgradeChosen.obj.thisUpgrade;
+		capsuleCreated.info = infoToDraw;
 		
 		if instance_exists(upgradeCreated)
 		{
 			upgradesTotal +=1;
 			instance_destroy(placeholder);
+			instance_destroy(upgradeCreated);
 		}
 		
 	}
