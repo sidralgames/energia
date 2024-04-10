@@ -15,7 +15,6 @@
     {"name":"inst_1387873B_3","path":"rooms/Sala_UpgadeSecret/Sala_UpgadeSecret.yy",},
     {"name":"inst_7D35EEA2_1","path":"rooms/Sala_UpgadeSecret/Sala_UpgadeSecret.yy",},
     {"name":"inst_70B541E8_2","path":"rooms/Sala_UpgadeSecret/Sala_UpgadeSecret.yy",},
-    {"name":"inst_7C2DBE21","path":"rooms/Sala_UpgadeSecret/Sala_UpgadeSecret.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -77,7 +76,6 @@
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Enchufes","depth":2000,"effectEnabled":true,"effectType":null,"gridX":2,"gridY":2,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_B391096_2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"o_enchufe_Final","path":"objects/o_enchufe_Final/o_enchufe_Final.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":698.0,"y":396.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7D35EEA2_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"o_enchufePLACEHOLDER","path":"objects/o_enchufePLACEHOLDER/o_enchufePLACEHOLDER.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":508.0,"y":152.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7C2DBE21","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"o_upgradesSecretManager","path":"objects/o_upgradesSecretManager/o_upgradesSecretManager.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":120.0,"y":170.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles","depth":2100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":19,"SerialiseWidth":27,"TileCompressedData":[
 -57,47,1,4,-9,28,5,8,4,28,28,8,-12,47,1,24,-9,-2147483648,7,40,38,-2147483648,-2147483648,40,28,8,-9,

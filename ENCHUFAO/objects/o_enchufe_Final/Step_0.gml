@@ -5,6 +5,8 @@
 xConnectionPos = x;
 yConnectionPos = y;
 
+isOpen = (global.pluggedInEnergy) && (global.pluggedInHp) && (global.pluggedInAmmo) && (global.pluggedInLaser);
+
 if (place_meeting(x+_hpush*1.2,y,o_enchufeStandard_Father))
 {
     _hpush = -_hpush*bnc;
@@ -17,11 +19,13 @@ if (place_meeting(x,y+_vpush*1.2,o_enchufeStandard_Father))
 }
 
 Move();
-if alarm[3] <= 0
+
+if (alarm[3] <= 0)
 {
 	image_angle += max(0.05*sign(_hpush), 2*(abs(_hpush)),0.05*sign(_vpush), 2*(abs(_vpush))*global.relativeSpeed);
 	_angle = image_angle;
 }
+
 if (abierto)
 {
 	image_index = 1;
@@ -33,8 +37,7 @@ else
 
 if (room = Sala_0) 
 {
-	if (global.pluggedInEnergy) && (global.pluggedInHp) &&
-	(global.pluggedInAmmo) && (global.pluggedInLaser)
+	if (isOpen)
 	{
 		abierto = true;	
 	}
@@ -42,8 +45,7 @@ if (room = Sala_0)
 
 if (room = Sala_Tutorial)
 {
-	if (global.pluggedInEnergy) && (global.pluggedInHp) &&
-	(global.pluggedInAmmo) && (global.pluggedInLaser)
+	if (isOpen)
 	{
 		abierto = true;	
 	}
@@ -52,7 +54,7 @@ if (room = Sala_Tutorial)
 
 if instance_exists(o_playerShip)
 {
-	if o_playerShip.plugged = true && (o_playerShip.pluggedFinal = true)
+	if o_playerShip.plugged = true && (o_playerShip.pluggedFinal = true) && (enchufeActive)
 	{
 		if (cont = false)
 		{
@@ -91,6 +93,9 @@ if instance_exists(o_playerShip)
 			{
 				o_chipFather._hp = 10;
 			}
+			
+			global.goToSecretRoom = false;
+			
 			cont = true
 			alarm[0] = 60;
 		}

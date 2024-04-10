@@ -13,7 +13,10 @@
     "name": "Enchufes",
     "path": "folders/Objetos/Enchufes.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "o_objectIntile",
+    "path": "objects/o_objectIntile/o_objectIntile.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

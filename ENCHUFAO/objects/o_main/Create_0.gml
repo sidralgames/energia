@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+global.goToSecretRoom = false;
+
 global.ammoMod = 50 // 10 guapo //50 lo de siempre
 
 global.bestiaryEnemiesNum = 1;

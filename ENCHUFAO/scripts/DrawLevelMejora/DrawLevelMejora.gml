@@ -12,8 +12,8 @@ function DrawLevelMejora()
 		{
 		    if (global.wallgrid_[# xx, yy] == FLOOR) 
 			{
-			    var oddsManager = 30;
-				var oddsFinal = 30;
+			    var oddsManager = 90;
+				var oddsFinal = 90;
 				
 				var oddsPlaceholder = 100;
 				
@@ -66,7 +66,7 @@ function DrawLevelMejora()
 					nextEnchufe = instance_nearest(exM, eyM, o_enchufePLACEHOLDER)
 					nextwall = instance_nearest(exM, eyM, o_wall)
 					
-					if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 200)
+					if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 400)
 					{
 						if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 70)
 						{

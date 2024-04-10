@@ -148,17 +148,19 @@ function SetupLevelBig()
 	//Draw the level
 	DrawLevelBig();
 	
-	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo)
-	|| (!enchufeShield) || (!enchufeFinal) || (!strandedShipOK) || (totalFloor < minFloor)
-	//|| (UpgradesEnchufesInLevel < 1)
-
+	PlaceSecretEnchufe(60);
+	
+	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo) || (!enchufeShield) 
+	|| (!enchufeFinal) 
+	|| (!strandedShipOK) 
+	|| (totalFloor < minFloor)
+	|| (enchufesSecret < 1)
 	{
 		room_restart();
 	}
 	
-	
-	
 	PlacePetasInTiles(60);
+	PlaceChipsInTiles(60);
 
 	
 }

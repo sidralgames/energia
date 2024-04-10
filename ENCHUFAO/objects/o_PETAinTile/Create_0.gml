@@ -31,7 +31,7 @@ else
 	
 }
 
-if collision_circle(x,y,70, o_PETAinTile, false, true)
+if collision_circle(x,y,70, o_objectIntile, false, true) 
 {
 	instance_destroy();	
 }

@@ -26,6 +26,11 @@ if instance_exists(o_playerShip)
 	if (charge >= 200)
 	{
 		o_enchufe_Final.abierto = true;
+		with(o_playerShip)
+		{
+			Unplug();
+		}
+		instance_destroy();
 
 	}
 }

@@ -125,10 +125,13 @@ function SetupLevelBasic()
 	//Draw the level
 	DrawLevelBasic();
 	
-	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo)
-	|| (!enchufeShield) || (!enchufeFinal) || (!strandedShipOK) || (totalFloor < minFloor)
-	//|| (UpgradesEnchufesInLevel < 1)
-
+	PlaceSecretEnchufe(60);
+	
+	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo) || (!enchufeShield)
+	|| (!enchufeFinal)
+	|| (!strandedShipOK)
+	|| (totalFloor < minFloor)
+	|| (enchufesSecret < 1)
 	{
 		room_restart();
 	}

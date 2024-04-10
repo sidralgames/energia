@@ -20,15 +20,27 @@ if (alarm[0] <= 0)
 	alarm[0] = 5
 }
 
-if instance_exists(o_playerShip) && instance_exists(o_enchufeUpgrades)
+if (alarm[1] <= 0)
 {
-	if (o_enchufeUpgradeCapsule.charge >= 200)
+	if instance_exists(o_playerShip) 
 	{
-		drawText = true;
+		if instance_exists(o_enchufeUpgrades)
+		{
+			drawText = false;
+			infoToDraw = o_enchufeUpgradeCapsule.info
+		}
+		else
+		{
+			if (drawText = false)
+			{
+				drawText = true;
+				drawTextTime = 180;
+			}
+		}
 	}
-	else
-	{
-		drawText = false;
-		namecheck = false;
-	}
+}
+
+if (drawTextTime > 0)
+{
+	drawTextTime --;
 }

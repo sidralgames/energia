@@ -29,7 +29,8 @@ switch (_sprite)
 }
 	
 sprite_index = _sprite;
-if collision_circle(x,y,70, o_ChipinTile, false, true)
+
+if collision_circle(x,y,70, o_objectIntile, false, true)
 {
 	instance_destroy();	
 }

@@ -43,9 +43,9 @@ if (room = Sala_0)
 {
 	if (o_waller.levelType = "Mejora")
 	{
-		oddsLaserV = 7;
-		oddsLaserH = 7;
-		oddsEnemyMouth = 5;
+		oddsLaserV = 8;
+		oddsLaserH = 8;
+		oddsEnemyMouth = 3;
 		oddsTurret = 2
 	}
 }
