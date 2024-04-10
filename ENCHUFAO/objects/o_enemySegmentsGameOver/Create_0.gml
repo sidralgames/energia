@@ -17,3 +17,4 @@ yy = y;
 alarm[0] = 30;
 alarm[0] = 60;
 alarm[2] = 2;
+cableForce = 180

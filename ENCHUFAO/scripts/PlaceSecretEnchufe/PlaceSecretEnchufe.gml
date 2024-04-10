@@ -14,8 +14,8 @@ function PlaceSecretEnchufe(argument0)
 			var exW = xxW * CELL_WIDTH+CELL_WIDTH/2;
 			var eyW = yyW * CELL_HEIGHT+CELL_HEIGHT/2;
 
-			if (global.wallgrid_[# xxW, yyW] == VOID) && (exW > 50) && (exW < room_width-50)
-			&& (eyW > 50) && (eyW < room_height-50)
+			if (global.wallgrid_[# xxW, yyW] == VOID) && (exW > 70) && (exW < room_width-70)
+			&& (eyW > 70) && (eyW < room_height-70)
 			{
 				if (oddsSecretEnchufeInTile = irandom(oddsSecretEnchufeInTile)) && (enchufesSecret < enchufesSecretMax)
 				{

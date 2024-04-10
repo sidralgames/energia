@@ -1271,6 +1271,7 @@
     {"id":{"name":"oVinePadre","path":"objects/oVinePadre/oVinePadre.yy",},},
     {"id":{"name":"o_BossWorm_BodyGameOver","path":"objects/o_BossWorm_BodyGameOver/o_BossWorm_BodyGameOver.yy",},},
     {"id":{"name":"AddUpgradeExploHitPlayer","path":"scripts/AddUpgradeExploHitPlayer/AddUpgradeExploHitPlayer.yy",},},
+    {"id":{"name":"sndLemo","path":"sounds/sndLemo/sndLemo.yy",},},
     {"id":{"name":"s_energyStranded","path":"sprites/s_energyStranded/s_energyStranded.yy",},},
     {"id":{"name":"snd_shoot_6","path":"sounds/snd_shoot_6/snd_shoot_6.yy",},},
     {"id":{"name":"o_cableEnemy","path":"objects/o_cableEnemy/o_cableEnemy.yy",},},

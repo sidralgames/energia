@@ -16,13 +16,13 @@ if instance_exists(laser)
 }
 if (enchufeActive)
 {
-	if !audio_is_playing(snd_song)
+	if !audio_is_playing(sndLemo)
 	{
-		audio_play_sound_on(delay_emitter, snd_song, true, 90,5.9,,0.9);
+		audio_play_sound_on(delay_emitter, sndLemo, true, 90,5.9,,1.1);
 	}
 	else
 	{
-		audio_resume_sound(snd_song)
+		audio_resume_sound(sndLemo)
 	}
 	
 	sprite_index = s_mp3Gun3;
@@ -52,7 +52,7 @@ if (enchufeActive)
 }
 else
 {
-	audio_pause_sound(snd_song)
+	audio_pause_sound(sndLemo)
 	counting = false;
 	contToShoot = 60;
 	sprite_index = s_mp3Gun3;

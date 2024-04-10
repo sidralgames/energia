@@ -1174,6 +1174,7 @@
     {"name":"oVinePadre","order":3,"path":"objects/oVinePadre/oVinePadre.yy",},
     {"name":"o_BossWorm_BodyGameOver","order":64,"path":"objects/o_BossWorm_BodyGameOver/o_BossWorm_BodyGameOver.yy",},
     {"name":"AddUpgradeExploHitPlayer","order":28,"path":"scripts/AddUpgradeExploHitPlayer/AddUpgradeExploHitPlayer.yy",},
+    {"name":"sndLemo","order":50,"path":"sounds/sndLemo/sndLemo.yy",},
     {"name":"s_energyStranded","order":36,"path":"sprites/s_energyStranded/s_energyStranded.yy",},
     {"name":"snd_shoot_6","order":38,"path":"sounds/snd_shoot_6/snd_shoot_6.yy",},
     {"name":"o_cableEnemy","order":10,"path":"objects/o_cableEnemy/o_cableEnemy.yy",},
