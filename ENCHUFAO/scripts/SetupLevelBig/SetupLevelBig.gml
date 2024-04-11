@@ -148,7 +148,7 @@ function SetupLevelBig()
 	//Draw the level
 	DrawLevelBig();
 	
-	PlaceSecretEnchufe(200);
+	PlaceSecretEnchufe(250);
 	
 	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo) || (!enchufeShield) 
 	|| (!enchufeFinal) 

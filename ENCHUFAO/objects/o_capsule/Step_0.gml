@@ -3,8 +3,8 @@
 inScreen =  (x > __view_get( e__VW.XView, 0 )-50 && x < __view_get( e__VW.XView, 0 )+710) &&
 (y > __view_get( e__VW.YView, 0 )-50 && y < __view_get( e__VW.YView, 0 )+410)
 
-xConnectionPos = x;
-yConnectionPos = y;
+xConnectionPos= x + lengthdir_x(5, _angle+270);
+yConnectionPos = y + lengthdir_y(5, _angle+270)
 
 if (scale < 1)
 {

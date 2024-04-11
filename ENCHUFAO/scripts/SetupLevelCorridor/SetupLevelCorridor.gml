@@ -145,7 +145,7 @@ function SetupLevelCorridor()
 	//Draw the level
 	DrawLevelCorridor();
 	
-	PlaceSecretEnchufe(200);
+	PlaceSecretEnchufe(250);
 	
 	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo) || (!enchufeShield) 
 	|| (!enchufeFinal) 

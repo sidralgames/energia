@@ -9,3 +9,4 @@ depth = -100;
 drawText = false;
 drawTextTime = 0;
 alarm[1] = 20;
+drawTextPrev = false;

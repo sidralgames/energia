@@ -58,6 +58,7 @@ if instance_exists(o_playerShip)
 	{
 		if (cont = false)
 		{
+			
 			if (o_playerShip.bumpsAchievement = true) && (global.achNoBump = 0) && (room  = Sala_0)
 			{
 				global.achNoBump = 1;

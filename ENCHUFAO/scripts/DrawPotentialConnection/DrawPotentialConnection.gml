@@ -43,10 +43,10 @@ function DrawPotentialConnection()
 					radi = maxConectRadBoss;
 				}
 				draw_set_color(c_white)
-				draw_circle(inEnchufe.x-lengthdir_x(105,inEnchufe.image_angle), inEnchufe.y-lengthdir_y(105,inEnchufe.image_angle), radi+0.5, true)
-				draw_circle(inEnchufe.x-lengthdir_x(105,inEnchufe.image_angle), inEnchufe.y-lengthdir_y(105,inEnchufe.image_angle), radi, true)
-				draw_circle(inEnchufe.x-lengthdir_x(105,inEnchufe.image_angle), inEnchufe.y-lengthdir_y(105,inEnchufe.image_angle), minConectRad, true)
-				draw_circle(inEnchufe.x-lengthdir_x(105,inEnchufe.image_angle), inEnchufe.y-lengthdir_y(105,inEnchufe.image_angle), minConectRad+0.3, true)
+				draw_circle(inEnchufe.xConnectionPos, inEnchufe.yConnectionPos, radi+0.5, true)
+				draw_circle(inEnchufe.xConnectionPos, inEnchufe.yConnectionPos, radi, true)
+				draw_circle(inEnchufe.xConnectionPos, inEnchufe.yConnectionPos, minConectRad, true)
+				draw_circle(inEnchufe.xConnectionPos, inEnchufe.yConnectionPos, minConectRad+0.3, true)
 			}
 			
 		}
@@ -69,10 +69,10 @@ function DrawPotentialConnection()
 						radi = maxConectRad;
 					}
 					draw_set_color(c_white)
-					draw_circle(inEnchufe.x+lengthdir_x(25,inEnchufe.image_angle-90), inEnchufe.y+lengthdir_y(25,inEnchufe.image_angle-90), radi+0.5, true)
-					draw_circle(inEnchufe.x+lengthdir_x(25,inEnchufe.image_angle-90), inEnchufe.y+lengthdir_y(25,inEnchufe.image_angle-90), radi, true)
-					draw_circle(inEnchufe.x+lengthdir_x(25,inEnchufe.image_angle-90), inEnchufe.y+lengthdir_y(25,inEnchufe.image_angle-90), minConectRad, true)
-					draw_circle(inEnchufe.x+lengthdir_x(25,inEnchufe.image_angle-90), inEnchufe.y+lengthdir_y(25,inEnchufe.image_angle-90), minConectRad+0.3, true)
+					draw_circle(inEnchufe.xConnectionPos, inEnchufe.yConnectionPos, radi+0.5, true)
+					draw_circle(inEnchufe.xConnectionPos, inEnchufe.yConnectionPos, radi, true)
+					draw_circle(inEnchufe.xConnectionPos, inEnchufe.yConnectionPos, minConectRad, true)
+					draw_circle(inEnchufe.xConnectionPos, inEnchufe.yConnectionPos, minConectRad+0.3, true)
 				}
 			}
 			else
@@ -92,10 +92,10 @@ function DrawPotentialConnection()
 						radi = maxConectRad;
 					}
 					draw_set_color(c_white)
-					draw_circle(inEnchufe.x-lengthdir_x(10,inEnchufe.image_angle+90), inEnchufe.y-lengthdir_y(10,inEnchufe.image_angle+90), radi+0.5, true)
-					draw_circle(inEnchufe.x-lengthdir_x(10,inEnchufe.image_angle+90), inEnchufe.y-lengthdir_y(10,inEnchufe.image_angle+90), radi, true)
-					draw_circle(inEnchufe.x-lengthdir_x(10,inEnchufe.image_angle+90), inEnchufe.y-lengthdir_y(10,inEnchufe.image_angle+90), minConectRad, true)
-					draw_circle(inEnchufe.x-lengthdir_x(10,inEnchufe.image_angle+90), inEnchufe.y-lengthdir_y(10,inEnchufe.image_angle+90), minConectRad+0.3, true)
+					draw_circle(inEnchufe.xConnectionPos, inEnchufe.yConnectionPos, radi+0.5, true)
+					draw_circle(inEnchufe.xConnectionPos, inEnchufe.yConnectionPos, radi, true)
+					draw_circle(inEnchufe.xConnectionPos, inEnchufe.yConnectionPos, minConectRad, true)
+					draw_circle(inEnchufe.xConnectionPos, inEnchufe.yConnectionPos, minConectRad+0.3, true)
 				}
 			}
 		}
@@ -116,10 +116,10 @@ function DrawPotentialConnection()
 					radi = maxConectRad;
 				}
 				draw_set_color(c_white)
-				draw_circle(inEnchufe.x, inEnchufe.y, radi+0.5, true)
-				draw_circle(inEnchufe.x, inEnchufe.y, radi, true)
-				draw_circle(inEnchufe.x, inEnchufe.y, minConectRad, true)
-				draw_circle(inEnchufe.x, inEnchufe.y, minConectRad + 0.3, true)
+				draw_circle(inEnchufe.xConnectionPos, inEnchufe.yConnectionPos, radi+0.5, true)
+				draw_circle(inEnchufe.xConnectionPos, inEnchufe.yConnectionPos, radi, true)
+				draw_circle(inEnchufe.xConnectionPos, inEnchufe.yConnectionPos, minConectRad, true)
+				draw_circle(inEnchufe.xConnectionPos, inEnchufe.yConnectionPos, minConectRad+0.3, true)
 			}
 		}
 		else if (inEnchufe.isPluggable == true)
@@ -139,10 +139,10 @@ function DrawPotentialConnection()
 					radi = maxConectRad;
 				}
 				draw_set_color(c_white)
-				draw_circle(inEnchufe.x, inEnchufe.y, radi+0.5, true)
-				draw_circle(inEnchufe.x, inEnchufe.y, radi, true)
-				draw_circle(inEnchufe.x, inEnchufe.y, minConectRad, true)
-				draw_circle(inEnchufe.x, inEnchufe.y, minConectRad + 0.3, true)
+				draw_circle(inEnchufe.xConnectionPos, inEnchufe.yConnectionPos, radi+0.5, true)
+				draw_circle(inEnchufe.xConnectionPos, inEnchufe.yConnectionPos, radi, true)
+				draw_circle(inEnchufe.xConnectionPos, inEnchufe.yConnectionPos, minConectRad, true)
+				draw_circle(inEnchufe.xConnectionPos, inEnchufe.yConnectionPos, minConectRad+0.3, true)
 			}
 		}
 	}

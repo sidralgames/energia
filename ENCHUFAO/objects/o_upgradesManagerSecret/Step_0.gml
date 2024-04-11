@@ -38,6 +38,20 @@ if (alarm[1] <= 0)
 			}
 		}
 	}
+	
+	if instance_exists(o_enchufeUpgrades)
+	{
+		if collision_circle(o_enchufeUpgradeCapsule.x, o_enchufeUpgradeCapsule.y, 50, o_playerShip, false, true) && (drawText = false)
+		{
+			drawTextPrev = true;
+		}
+		else
+		{
+			drawTextPrev = false;
+		}
+	}
+	
+	
 }
 
 if (drawTextTime > 0)

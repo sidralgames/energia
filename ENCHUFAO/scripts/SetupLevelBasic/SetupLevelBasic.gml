@@ -125,7 +125,7 @@ function SetupLevelBasic()
 	//Draw the level
 	DrawLevelBasic();
 	
-	PlaceSecretEnchufe(200);
+	PlaceSecretEnchufe(250);
 	
 	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo) || (!enchufeShield)
 	|| (!enchufeFinal)

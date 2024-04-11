@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_capsuleUpgrade",
-    "path": "sprites/s_capsuleUpgrade/s_capsuleUpgrade.yy",
+    "name": "s_capsuleUpgradeSecret",
+    "path": "sprites/s_capsuleUpgradeSecret/s_capsuleUpgradeSecret.yy",
   },
   "spriteMaskId": null,
   "visible": true,

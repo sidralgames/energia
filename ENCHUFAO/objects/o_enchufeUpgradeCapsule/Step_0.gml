@@ -16,13 +16,12 @@ if (place_meeting(x,y+_vpush*1.5,o_enchufe_Father))
 	
 }
 
+xConnectionPos= x + lengthdir_x(13, _angle+270);
+yConnectionPos = y + lengthdir_y(13, _angle+270);
+
 Move();
 
 _angle += max(0.05*sign(_hpush), 2*(abs(_hpush)),0.05*sign(_vpush), 2*(abs(_vpush))*global.relativeSpeed);
-
-xConnectionPos= x + lengthdir_x(12, _angle+270);
-yConnectionPos = y + lengthdir_y(12, _angle+270);
-
 
 
 if (enchufeOvercharged)
