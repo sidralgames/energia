@@ -149,12 +149,14 @@ function SetupLevelBig()
 	DrawLevelBig();
 	
 	PlaceSecretEnchufe(250);
+	PlaceChargerAdapter(50);
 	
 	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo) || (!enchufeShield) 
 	|| (!enchufeFinal) 
 	|| (!strandedShipOK) 
 	|| (totalFloor < minFloor)
-	//|| (enchufesSecret < 1)
+	|| (adapters < 1)
+	|| (enchufesSecret < 1)
 	{
 		room_restart();
 	}

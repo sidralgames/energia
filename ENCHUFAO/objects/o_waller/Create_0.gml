@@ -6,12 +6,25 @@ randomize();
 contTiles = 20;
 global.Go = false;
 
+secretType = "";
+
 global.enemiesMax =  min(12, 3 + global.level) //1 + (global.level * 2);
 global.totalEnemiesOnLevel = 0;
 spawners=0;
+spawnersSecret = 0;
 
 enemiesMin = min(3,global.level+1);
 enemiesMax = min(7,global.level+2);
+
+
+timesSpawner = min(5, choose(0,1,2,3,4)+global.level-1)
+
+
+timesTotal = 500;
+timesBreach = min(8, global.level-2);
+breachRetryTime = 60;
+breachDuration = 3000;
+spawningBreach = false;
 
 
 if (global.goToSecretRoom)
@@ -22,7 +35,7 @@ else
 {
 	if (global.level = 1) || (global.level = 9)
 	{
-		levelType = "Secret";
+		levelType = "Basic";
 	}
 	else if (global.level = 3) || (global.level = 11)
 	{
@@ -58,22 +71,20 @@ if (room = Sala_0) //(levelType = 0)
 		
 		case "Secret":
 		{
-			level = irandom(2)
+			level = choose(0, 1, 1)
 			switch(level)
 			{
 				case 0:
 				{
-					SetupLevelSecret(2500, 40, 50, 18, 2500, DrawLevelMejora);
+					secretType = "Mejora";
+					SetupLevelSecret(250, 40, 28, 18, 2500, DrawLevelMejora);
 				}
 				break;
 				case 1:
 				{
-					SetupLevelSecret(2500, 40, 28, 18, 2500, DrawLevelMejora);
-				}
-				break;
-				case 2:
-				{
-					SetupLevelSecret(2500, 40, 18, 18, 2500, DrawLevelMejora);
+					secretType = "Snipers";
+					timesSpawner = 5;
+					SetupLevelSecret(2000, 40, 38, 18, 2500, DrawLevelMejora);
 				}
 				break;
 			}
@@ -121,13 +132,6 @@ else if (room = Sala_ChillRoom)
 alarm[0] = 15;
 alarm[1] = 220;
 alarm[2] = 50;
+alarm[7] = 50;
 alarm[3] = 300;
 
-timesSpawner = min(5, choose(0,1,2,3,4)+global.level-1)
-
-
-timesTotal = 500;
-timesBreach = min(8, global.level-2);
-breachRetryTime = 60;
-breachDuration = 3000;
-spawningBreach = false;

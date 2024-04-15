@@ -4,10 +4,23 @@ if !instance_exists(o_partBulletMouth)
 {
 	instance_create_layer(-100,-100,"EnemiesHUE",o_partBulletMouth)
 }
-if (alarm[2] <= 0) && timesSpawner>0 //Try spawner 
+
+
+if (levelType = "Secret")
 {
-	timesTotal-=1;
-	alarm[2] = 2;
+	if (alarm[7] <= 0) && timesSpawner>0 //Try spawner 
+	{
+		timesTotal-=1;
+		alarm[7] = 2;
+	}
+}
+else
+{
+	if (alarm[2] <= 0) && timesSpawner>0 //Try spawner 
+	{
+		timesTotal-=1;
+		alarm[2] = 2;
+	}
 }
 
 if (global.level > 2) && (timesBreach> 0)
