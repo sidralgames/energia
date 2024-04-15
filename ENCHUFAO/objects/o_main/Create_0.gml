@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+global.haveChargerAdapter = false;
+global.adaptersInLevel = 0;
 global.goToSecretRoom = false;
 
 global.ammoMod = 50 // 10 guapo //50 lo de siempre

@@ -1,6 +1,6 @@
 /// @description BREACH
 
-if (timesBreach >0) && (global.totalEnemiesOnLevel < global.totalEnemiesOnLevelMax) && (levelType != "Mejora")
+if (timesBreach >0) && (global.totalEnemiesOnLevel < global.totalEnemiesOnLevelMax) && (levelType != "Secret")
 {
 	if instance_exists(o_playerShip)
 	{

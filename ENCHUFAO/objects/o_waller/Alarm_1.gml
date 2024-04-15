@@ -1,6 +1,6 @@
 /// @description ENEMY INCOMING
 
-if (room != Sala_Tutorial) && (room != Sala_ChillRoom) && (levelType != "Mejora")
+if (room != Sala_Tutorial) && (room != Sala_ChillRoom) && (levelType != "Secret")
 {
 	if (global.totalEnemiesOnLevel < global.totalEnemiesOnLevelMax)
 	{

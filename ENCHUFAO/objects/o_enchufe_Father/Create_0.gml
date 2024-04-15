@@ -69,7 +69,7 @@ reset = false;
 thisUpgrade = "";
 
 
-
+secret = false;
 
 charge = 0;
 maxCharge = 200;

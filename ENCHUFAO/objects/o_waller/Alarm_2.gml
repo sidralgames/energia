@@ -1,6 +1,6 @@
 /// @description GANG SPAWN
 // spawners
-if (room != Sala_Tutorial) && (levelType != "Mejora")
+if (room != Sala_Tutorial) && (levelType != "Secret")
 {
 	if (timesTotal > 0)
 	{

@@ -36,9 +36,12 @@
   "properties": [],
   "solid": false,
   "spriteId": {
+    "name": "s_enchufeSecretLocked",
+    "path": "sprites/s_enchufeSecretLocked/s_enchufeSecretLocked.yy",
+  },
+  "spriteMaskId": {
     "name": "s_enchufeSecret",
     "path": "sprites/s_enchufeSecret/s_enchufeSecret.yy",
   },
-  "spriteMaskId": null,
   "visible": true,
 }

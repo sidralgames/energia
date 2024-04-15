@@ -49,7 +49,21 @@ else
 
 if (free) && (image_index >= 9)
 {
+	image_speed = 0;
+}
+
+if (o_enchufe_Final.abierto = true)
+{
+	sprite_index = spriteUnlocked;	
+}
+
+if (sprite_index = spriteUnlocked) && (global.haveChargerAdapter)
+{
 	abierto = true;	
+}
+else
+{
+	abierto = false;	
 }
 
 if instance_exists(o_playerShip)

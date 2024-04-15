@@ -16,13 +16,13 @@ enemiesMax = min(7,global.level+2);
 
 if (global.goToSecretRoom)
 {
-	levelType = "Mejora";
+	levelType = "Secret";
 }
 else
 {
 	if (global.level = 1) || (global.level = 9)
 	{
-		levelType = "Basic";
+		levelType = "Secret";
 	}
 	else if (global.level = 3) || (global.level = 11)
 	{
@@ -56,9 +56,27 @@ if (room = Sala_0) //(levelType = 0)
 		}
 		break;
 		
-		case "Mejora":
+		case "Secret":
 		{
-			SetupLevelMejora();
+			level = irandom(2)
+			switch(level)
+			{
+				case 0:
+				{
+					SetupLevelSecret(2500, 40, 50, 18, 2500, DrawLevelMejora);
+				}
+				break;
+				case 1:
+				{
+					SetupLevelSecret(2500, 40, 28, 18, 2500, DrawLevelMejora);
+				}
+				break;
+				case 2:
+				{
+					SetupLevelSecret(2500, 40, 18, 18, 2500, DrawLevelMejora);
+				}
+				break;
+			}
 		}
 		break;
 		

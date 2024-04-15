@@ -79,4 +79,9 @@ function CheckEnchufe()
 	{
 		pluggedFinal = true;
 	}
+	
+	if (inEnchufe.secret = true)
+	{
+		pluggedSecret= true;
+	}
 }

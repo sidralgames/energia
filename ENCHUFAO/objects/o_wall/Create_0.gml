@@ -41,7 +41,7 @@ xxR = x+20;
 
 if (room = Sala_0)
 {
-	if (o_waller.levelType = "Mejora")
+	if (o_waller.levelType = "Secret")
 	{
 		oddsLaserV = 8;
 		oddsLaserH = 8;
@@ -53,3 +53,4 @@ if (room = Sala_0)
 event_inherited();
 
 alarm[0] = 50;
+

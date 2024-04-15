@@ -5,9 +5,20 @@ if instance_exists(o_playerShip)
 	if (o_playerShip.plugged == false)
 	{
 		draw_sprite_ext(sprite_index, image_index, x, y, scale, scale, image_angle, image_blend, image_alpha)
+		
+		if (global.haveChargerAdapter = true)
+		{
+			draw_sprite_ext(s_chargerAdapter, image_index, x+lengthdir_x(15, image_angle), y+lengthdir_y(15, image_angle), scale, scale, image_angle, image_blend, image_alpha)
+		}
 	}
 	else
 	{
+		if (global.haveChargerAdapter = true) && (!o_playerShip.pluggedSecret)
+		{
+			global.haveChargerAdapter = false;
+			adapter = instance_create_layer(x,y,"Enchufes", o_chargerAdapter)
+			adapter._angle = image_angle;
+		}
 		with (o_playerShip)
 		{
 			if (enchufe.IsEnchufeBoss)
@@ -42,6 +53,9 @@ if instance_exists(o_playerShip)
 		}
 	}
 }
+
+
+
 if (global.havePickedBouncingBullets)
 {
 	draw_sprite_ext(s_bouncingBulletsPicKUp, image_index, x+lengthdir_x(20, image_angle), y+lengthdir_y(20, image_angle), scale, scale, image_angle, image_blend, image_alpha)

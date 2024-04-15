@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+global.haveChargerAdapter = false;
 global.meteorsCount = 0;
 global.assistedSlowmo = false;
 
@@ -213,6 +213,7 @@ contSuperShot = 0;
 		
 sounded = false;
 pluggedFinal = false;
+pluggedSecret = false;
 
 soundEnergy = false
 _hpush = 0;
