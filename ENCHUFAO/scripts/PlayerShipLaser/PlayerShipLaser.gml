@@ -32,6 +32,7 @@ function PlayerShipLaser(argument0)
 		 collision = place_meeting(lx, ly, o_enemyP) 
 		 || place_meeting(lx, ly, o_bulletPlayer_Bomb) || place_meeting(lx, ly, o_BossFather)
 		 || place_meeting(lx, ly, o_enchufe_Mimic) || place_meeting(lx, ly, o_capsule_Mimic) || place_meeting(lx, ly, o_bombEnemyFather)
+		 || place_meeting(lx, ly, o_enchufeUpgradeCapsule) || place_meeting(lx, ly, o_capsule) 
 		 
 		 collisionTile = tile_meeting(lx,ly,"Tiles");
 		 
@@ -127,6 +128,19 @@ function PlayerShipLaser(argument0)
 		capsuleMimic._hp -= (0.25+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
 		capsuleMimic.burned = true;
 	}
+	
+	capsuleUpgrade = collision_line(x,y,x+lengthdir_x(maxLenght_+20, argument0+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,argument0+random_range(2,-2)), o_enchufeUpgradeCapsule,false, true)
+	if (capsuleUpgrade)
+	{
+		capsuleUpgrade._hp -= (0.25+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
+	}
+	
+	capsule = collision_line(x,y,x+lengthdir_x(maxLenght_+20, argument0+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,argument0+random_range(2,-2)), o_capsule,false, true)
+	if (capsule)
+	{
+		capsule._hp -= (0.25+global.laserDamage+(global.amplifyPowerLaser/2)) * global.damageDealt;
+	}
+
 	
 	enchufeWorm = collision_line(x,y,x+lengthdir_x(maxLenght_+20, argument0+random_range(2,-2)), y+lengthdir_y(maxLenght_+20,argument0+random_range(2,-2)), o_EnchufeBossWorm,false, true)
 	if (enchufeWorm)

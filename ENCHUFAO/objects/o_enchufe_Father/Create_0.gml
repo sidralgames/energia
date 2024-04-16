@@ -15,6 +15,7 @@ occupied = false;
 isEnchufeUpgrade = false;
 isPluggable = true;
 
+isCapsuleUpgrade = false;
 IsEnchufeCapsuleSuper = false;
 
 enchufeTrapper = false;

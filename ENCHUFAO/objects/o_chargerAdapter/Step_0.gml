@@ -1,4 +1,15 @@
+if tile_meeting(x,y,"Tiles") && (!free)
+{
+	image_index = 1;	
+}
+else
+{
+	free = true;
+	image_index = 0;
+}
 
+if (free)
+{
 if (place_meeting(x+_hpush*1.5,y,o_enchufe_Father))
 {
     _hpush = -_hpush*bnc;
@@ -30,3 +41,4 @@ if instance_exists(o_playerShip)
 			}
 		}
 	}
+}

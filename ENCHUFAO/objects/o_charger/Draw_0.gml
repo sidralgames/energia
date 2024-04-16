@@ -15,7 +15,13 @@ if instance_exists(o_playerShip)
 	{
 		if (global.haveChargerAdapter = true) && (!o_playerShip.pluggedSecret)
 		{
+			createAdapter = true;
+		}
+		
+		if !tile_meeting(x,y,"Tiles") && (createAdapter = true)
+		{
 			global.haveChargerAdapter = false;
+			createAdapter = false
 			adapter = instance_create_layer(x,y,"Enchufes", o_chargerAdapter)
 			adapter._angle = image_angle;
 		}

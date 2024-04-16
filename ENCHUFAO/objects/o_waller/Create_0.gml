@@ -84,7 +84,7 @@ if (room = Sala_0) //(levelType = 0)
 				{
 					secretType = "Snipers";
 					timesSpawner = 5;
-					SetupLevelSecret(2000, 40, 38, 18, 2500, DrawLevelMejora);
+					SetupLevelSecret(2000, 40, irandom_range(40,25), irandom_range(20,15), 2500, DrawLevelMejora);
 				}
 				break;
 			}

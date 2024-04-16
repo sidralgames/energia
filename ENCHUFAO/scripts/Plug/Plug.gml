@@ -17,7 +17,7 @@ function Plug()
 	
 	global.plugging = true;
 	
-	if (haveBatteryUpgrade) && (enchufe.isPETA_F == false) 
+	if (haveBatteryUpgrade) && (enchufe.isPETA_F == false) && (enchufe.isCapsuleUpgrade == false) 
 	&& (enchufe.enchufeBomb == false) && (enchufe.upgradesBattery < 3)
 	&& (enchufe.IsEnchufeBoss == false) && (enchufe.IsEnchufeCapsule == false) 
 	{

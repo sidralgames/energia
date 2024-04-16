@@ -2,7 +2,15 @@
 // You can write your code in this editor
 
 
+inScreen =  (x > __view_get( e__VW.XView, 0 )-50 && x < __view_get( e__VW.XView, 0 )+710) &&
+(y > __view_get( e__VW.YView, 0 )-50 && y < __view_get( e__VW.YView, 0 )+410)
 
+
+if (_hp <= 0)
+{
+	o_enchufe_Final.abierto = true;
+	instance_destroy();	
+}
 
 
 if (place_meeting(x+_hpush*1.5,y,o_enchufe_Father))

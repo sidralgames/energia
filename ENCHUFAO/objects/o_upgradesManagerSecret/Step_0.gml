@@ -54,6 +54,11 @@ if (alarm[1] <= 0)
 	
 }
 
+if (drawTextTime >0)
+{
+	drawTextPrev = false;
+}
+
 if (drawTextTime > 0)
 {
 	drawTextTime --;
