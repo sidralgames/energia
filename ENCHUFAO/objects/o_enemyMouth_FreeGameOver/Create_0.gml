@@ -6,7 +6,7 @@ _color = c_white;
 t = 6;
 increment = choose(4); //degrees -- freq = 1 oscillation per second (1Hz)
 amplitude = choose(6);
-
+_colorBody = c_white;
 dir1 = choose(90,270)
 
 //clone the x- and y-positions

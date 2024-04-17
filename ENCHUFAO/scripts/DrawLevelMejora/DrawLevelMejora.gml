@@ -3,6 +3,7 @@
 function DrawLevelMejora()
 {
 	manager = false;
+	enchufeAmmo= false;
 	eFinal = false;
 	placeholders = 0;
 	
@@ -17,8 +18,21 @@ function DrawLevelMejora()
 				
 				var oddsPlaceholder = 100;
 				
+				var oddsEnchufeAmmo= 100;
+				
 			    var exM = xx * CELL_WIDTH+CELL_WIDTH/2;
 			    var eyM = yy * CELL_HEIGHT+CELL_HEIGHT/2;
+				
+				if (irandom(oddsEnchufeAmmo) == oddsEnchufeAmmo) && (enchufeAmmo = false)
+				{
+					nextwall = instance_nearest(exM, eyM, o_wall)
+					if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 20)
+					{
+						instance_create_layer(exM,eyM,"Enchufes",choose(o_enchufe_Ammo, o_enchufe_Laser)); 
+						enchufeAmmo = true;
+					}
+				}
+				
 				
 				if (irandom(oddsManager) == oddsManager) && (manager = false)
 				{

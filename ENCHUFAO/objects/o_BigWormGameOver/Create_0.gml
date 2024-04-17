@@ -2,7 +2,7 @@
 // Puede escribir su código en este editor
 
 _color = c_white;
-
+_colorBody = c_white;
 
 t = 4;
 increment = choose(4); //degrees -- freq = 1 oscillation per second (1Hz)

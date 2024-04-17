@@ -15,6 +15,7 @@
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fd58b728-5186-49b8-b997-5540ee17fd43",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6499cd5f-19e7-4759-b7ce-a41bfcd2557b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9e153efd-df2a-4979-918f-05f8cd33b843",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -44,7 +45,7 @@
     "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "eventStubScript": null,
     "eventToFunction": {},
-    "length": 2.0,
+    "length": 3.0,
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
@@ -57,6 +58,7 @@
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fd58b728-5186-49b8-b997-5540ee17fd43","path":"sprites/s_enchufe_Final/s_enchufe_Final.yy",},},},"Disabled":false,"id":"093d5dec-e964-46af-b789-ace36b264c47","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6499cd5f-19e7-4759-b7ce-a41bfcd2557b","path":"sprites/s_enchufe_Final/s_enchufe_Final.yy",},},},"Disabled":false,"id":"ad396c6f-3e95-4720-913a-b881cb2d84a9","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9e153efd-df2a-4979-918f-05f8cd33b843","path":"sprites/s_enchufe_Final/s_enchufe_Final.yy",},},},"Disabled":false,"id":"e57e0cb9-978b-4925-8d2f-d7816a4e22cf","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

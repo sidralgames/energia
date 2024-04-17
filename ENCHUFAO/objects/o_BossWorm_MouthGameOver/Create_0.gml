@@ -4,7 +4,7 @@
 _color = c_white;
 cable = -1;
 image_speed = 0;
-
+_colorBody = c_white;
 t = 4;
 increment = choose(3); //degrees -- freq = 1 oscillation per second (1Hz)
 amplitude = choose(9);

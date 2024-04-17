@@ -56,7 +56,7 @@ StrandedShipsInLevelMax = 1;
 strandedShipOK = false;
 creadaStrandedRed = false;
 
-alarm[6] = 50 
+
 global.changingTiles = false;
 
 if (room = Sala_0) //(levelType = 0)
@@ -71,20 +71,35 @@ if (room = Sala_0) //(levelType = 0)
 		
 		case "Secret":
 		{
-			level = choose(0, 1, 1)
+			level = choose("Worms") //choose("Mejora", "Snipers", "Minis", "Worms")
 			switch(level)
 			{
-				case 0:
+				case "Mejora":
 				{
 					secretType = "Mejora";
 					SetupLevelSecret(250, 40, 28, 18, 2500, DrawLevelMejora);
 				}
 				break;
-				case 1:
+				case "Snipers":
 				{
 					secretType = "Snipers";
-					timesSpawner = 5;
-					SetupLevelSecret(2000, 40, irandom_range(40,25), irandom_range(20,15), 2500, DrawLevelMejora);
+					timesSpawner = choose(4,5);
+					SetupLevelSecret(800, 40, irandom_range(40,25), irandom_range(20,15), 2500, DrawLevelMejora);
+				}
+				break;
+				case "Minis":
+				{
+					secretType = "Minis";
+					timesSpawner = choose(4,5);
+					SetupLevelSecret(800, 40, irandom_range(40,25), irandom_range(20,15), 2500, DrawLevelMejora);
+				}
+				break;
+				
+				case "Worms":
+				{
+					secretType = "Worms";
+					timesSpawner = choose(4,5);
+					SetupLevelSecret(800, 40, irandom_range(40,25), irandom_range(20,15), 2500, DrawLevelMejora);
 				}
 				break;
 			}
@@ -132,6 +147,7 @@ else if (room = Sala_ChillRoom)
 alarm[0] = 15;
 alarm[1] = 220;
 alarm[2] = 50;
-alarm[7] = 50;
+alarm[7] = 20;
 alarm[3] = 300;
+alarm[6] = 80 
 

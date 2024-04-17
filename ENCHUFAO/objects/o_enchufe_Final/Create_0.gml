@@ -26,3 +26,5 @@ if (room = Sala_Tutorial)
 {
 	global.level = -1;
 }
+
+alarm[2] = 30;

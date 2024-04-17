@@ -32,7 +32,17 @@ if (abierto)
 }
 else
 {
-	image_index = 0;	
+	if instance_exists(o_waller)
+	{
+		if (o_waller.levelType = "Secret")
+		{
+			image_index = 2;	
+		}
+		else
+		{
+			image_index = 0;	
+		}
+	}
 }
 
 if (room = Sala_0) 
@@ -103,3 +113,16 @@ if instance_exists(o_playerShip)
 	}
 }
 
+if (alarm[2] <= 0)
+{
+	if instance_exists(o_waller)
+	{
+		if (o_waller.levelType = "Secret")
+		{
+			if !instance_exists(o_enchufeUpgradeCapsule) && !instance_exists(o_enemyP)
+			{
+				abierto = true;
+			}
+		}
+	}
+}

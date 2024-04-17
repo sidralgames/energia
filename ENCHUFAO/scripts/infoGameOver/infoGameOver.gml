@@ -46,7 +46,7 @@ function infoGameOver(argument0)
 		case 39: text = "Use SlowMo for narrow turns"; break;
 		case 40: text = "Bomb everything"; break;
 		case 41: text = "Shoot first, ask later"; break;
-		case 42: text = "Bullets doesn't work? Try something different"; break;
+		case 42: text = "Try something different"; break;
 		
 		
 		

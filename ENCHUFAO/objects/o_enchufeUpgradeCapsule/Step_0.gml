@@ -8,8 +8,15 @@ inScreen =  (x > __view_get( e__VW.XView, 0 )-50 && x < __view_get( e__VW.XView,
 
 if (_hp <= 0)
 {
-	o_enchufe_Final.abierto = true;
-	instance_destroy();	
+	if (o_playerShip.plugged) && (enchufeActive)
+	{
+		with (o_playerShip)
+		{
+			Unplug();
+		}
+	}
+	instance_destroy();
+	instance_create(x,y,o_exploPurple);
 }
 
 

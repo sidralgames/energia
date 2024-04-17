@@ -107,7 +107,9 @@ function SetupLevelMejora()
 	//Draw the level
 	DrawLevelMejora();
 	
-	if (!manager) || (!eFinal) || (placeholders < 1) || (totalFloor < minFloor)
+	if (!manager) || (placeholders < 1)
+	|| (!eFinal) || (!enchufeAmmo)
+	|| (totalFloor < minFloor)
 	//|| (UpgradesEnchufesInLevel < 1)
 
 	{
