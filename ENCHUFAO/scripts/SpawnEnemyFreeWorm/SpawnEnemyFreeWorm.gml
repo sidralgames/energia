@@ -5,7 +5,7 @@ function SpawnEnemyFreeWorm()
 	for (var i=0; i<irandom_range(1,1); i++)
 	{
 		enemies = instance_create_layer(cx*CELL_WIDTH+CELL_WIDTH/2+random_range(-28,28),
-		cy*CELL_HEIGHT+CELL_HEIGHT/2+random_range(-10,10), "EnemiesHUE", o_enemyMouth_Free)
+		cy*CELL_HEIGHT+CELL_HEIGHT/2+random_range(-10,10), "EnemiesHUESub3", o_enemyMouth_Free)
 		if instance_exists(enemies)
 		{
 

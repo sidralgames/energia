@@ -14,6 +14,7 @@ if (levelType = "Secret")
 		{
 			GangSecret(SpawnEnemyMini);
 		}
+		break;
 		
 		case "Worms":
 		{

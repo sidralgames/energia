@@ -1,7 +1,7 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
 
-
+xscale = 1;
 _color = c_white;
 t = 6;
 increment = choose(4); //degrees -- freq = 1 oscillation per second (1Hz)
@@ -15,3 +15,4 @@ yy = y;
 alarm[2] = 2;
 
 cable = -1;
+cableForce=180;

@@ -24,6 +24,8 @@ if instance_exists(o_playerShip)
 			createAdapter = false
 			adapter = instance_create_layer(x,y,"Enchufes", o_chargerAdapter)
 			adapter._angle = image_angle;
+			adapter.image_index = 1;
+			adapter.free = true;
 		}
 		with (o_playerShip)
 		{
