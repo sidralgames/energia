@@ -10,7 +10,7 @@ if (flashAlpha > 0)
 switch(state)
 {
 	case ENEMYSTATE.WAITING: Enemy_Waiting(); break;
-	case ENEMYSTATE.CHASING: Enemy_ChasingFarSniper(); break;
+	case ENEMYSTATE.CHASING: Enemy_Chasing(); break;
 	case ENEMYSTATE.SHOCKED: Enemy_Shocked(); break;
 }
 
@@ -20,6 +20,16 @@ switch(state)
 //		lightEnemy.light [| eLight.Y] = y
 //	}
 
+if instance_exists(o_playerShip)
+{
+	canAim--;
+	recoil--;
+	
+	if (state != ENEMYSTATE.SHOCKED)
+	{
+		EnemySniperAimAndShoot();
+	}
+}
 
 if (_hp <= 0)
 {

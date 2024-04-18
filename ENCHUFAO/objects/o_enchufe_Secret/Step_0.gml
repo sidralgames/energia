@@ -52,9 +52,12 @@ if (free) && (image_index >= 9)
 	image_speed = 0;
 }
 
-if (o_enchufe_Final.abierto = true)
+if instance_exists(o_enchufe_Final)
 {
-	sprite_index = spriteUnlocked;	
+	if (o_enchufe_Final.abierto = true)
+	{
+		sprite_index = spriteUnlocked;	
+	}
 }
 
 if (sprite_index = spriteUnlocked) && (global.haveChargerAdapter)

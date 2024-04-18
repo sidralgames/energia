@@ -125,11 +125,13 @@ function SetupLevelBasic()
 	//Draw the level
 	DrawLevelBasic();
 	
-	PlaceSecretEnchufe(250);
-	PlaceChargerAdapter(50);
+	PlaceSecretEnchufe(200);
+	PlaceChargerAdapter(200);
+	
+	haveEnchufeFinal = (enchufeFinal = true) || (enchufeFinal_Broken_L = true && enchufeFinal_Broken_R = true)
 	
 	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo) || (!enchufeShield)
-	|| (!enchufeFinal)
+	|| (!haveEnchufeFinal)
 	|| (!strandedShipOK)
 	|| (totalFloor < minFloor)
 	|| (adapters < 1)

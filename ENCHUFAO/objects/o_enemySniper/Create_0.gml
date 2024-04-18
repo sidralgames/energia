@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited();
-
+_angleRecoil = 0;
 thisEnemyBounce = false;
 isMotherShip = true;
 slowMoPickUps = choose(3,4);

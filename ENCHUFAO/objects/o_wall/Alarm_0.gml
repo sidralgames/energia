@@ -7,7 +7,7 @@ if(room = Sala_0) || (room = Sala_SecondBoss) || (room = Sala_BossWorm)
 	{
 		if  point_distance(x,y,o_playerShip.x,o_playerShip.y)>100 && irandom(oddsTurret) == oddsTurret
 		{
-			instance_create_layer(x,y,"Enemies",o_torreta)
+			instance_create_layer(x,y,"EnemiesHUE",o_torreta)
 		}
 	}
 	

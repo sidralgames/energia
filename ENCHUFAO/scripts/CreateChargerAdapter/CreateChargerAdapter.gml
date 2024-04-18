@@ -9,8 +9,8 @@ function CreateChargerAdapter(oddsAdapterInTile, _place)
 			var exW = xxW * CELL_WIDTH+CELL_WIDTH/2;
 			var eyW = yyW * CELL_HEIGHT+CELL_HEIGHT/2;
 
-			if (global.wallgrid_[# xxW, yyW] == _place) && (exW > 70) && (exW < room_width-70)
-			&& (eyW > 70) && (eyW < room_height-70)
+			if (global.wallgrid_[# xxW, yyW] == _place) && (exW > 90) && (exW < room_width-90)
+			&& (eyW > 90) && (eyW < room_height-90)
 			{
 				if (oddsAdapterInTile = irandom(oddsAdapterInTile)) && (adapters < adaptersMax)
 				{

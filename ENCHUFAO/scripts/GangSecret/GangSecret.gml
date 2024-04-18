@@ -25,7 +25,7 @@ function GangSecret(_spawner)
 						if (spawners >= 1) 
 						{
 							padreNear = instance_nearest(exM, eyM,o_enemySpawnerIndicator_F)
-							if point_distance(exM,eyM,padreNear.x, padreNear.y) > 30
+							if point_distance(exM,eyM,padreNear.x, padreNear.y) > 50
 							{
 								instance_create(exM,eyM,o_enemySpawnerIndicator);
 								spawners+=1;
