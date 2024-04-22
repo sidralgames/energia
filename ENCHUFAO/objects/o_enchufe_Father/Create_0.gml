@@ -82,3 +82,4 @@ enchufeActive = false;
 enchufeOvercharged = false;
 contOvercharged = 0;
 
+isBroken = false;

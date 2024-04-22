@@ -1443,6 +1443,7 @@
     {"name":"LoadDefaultDataIngame","order":3,"path":"scripts/LoadDefaultDataIngame/LoadDefaultDataIngame.yy",},
     {"name":"o_enchufeUpgradeCapsule","order":119,"path":"objects/o_enchufeUpgradeCapsule/o_enchufeUpgradeCapsule.yy",},
     {"name":"SpawnEnemyBasicBreach","order":1,"path":"scripts/SpawnEnemyBasicBreach/SpawnEnemyBasicBreach.yy",},
+    {"name":"PlaceEnchufeFinal","order":36,"path":"scripts/PlaceEnchufeFinal/PlaceEnchufeFinal.yy",},
     {"name":"s_torreta","order":66,"path":"sprites/s_torreta/s_torreta.yy",},
     {"name":"Enemy_ChasingFarSniper","order":19,"path":"scripts/Enemy_ChasingFarSniper/Enemy_ChasingFarSniper.yy",},
     {"name":"AddBestiaryEnemyFreeworm","order":28,"path":"scripts/AddBestiaryEnemyFreeworm/AddBestiaryEnemyFreeworm.yy",},

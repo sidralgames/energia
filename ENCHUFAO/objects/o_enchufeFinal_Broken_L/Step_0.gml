@@ -24,18 +24,27 @@ if (place_meeting(x,y+_vpush*1.5,o_enchufe_Father))
 
 Move();
 
-
-fakeDir = point_direction(xConnectionPos, yConnectionPos, o_playerShip.x, o_playerShip.y)
-if (enchufeActive)
+if instance_exists(o_playerShip)
 {
-	if (o_playerShip.alarm[5] > 10)
+	fakeDir = point_direction(xConnectionPos, yConnectionPos, o_playerShip.x, o_playerShip.y)
+	if (enchufeActive)
 	{
-		_angle += sign(dsin(fakeDir - _angle)) * precision;
+		if (o_playerShip.alarm[5] > 0)
+		{
+			_angle += sign(dsin(fakeDir - _angle)) * precision;
+		}
 	}
-}
-else
-{
-	_angle += sign(_hpush) * _hpush/3 * global.relativeSpeed;
+	else
+	{
+		if (abs(_hpush) > 0.15)
+		{
+			_angle += sign(_hpush) * _hpush/3 * global.relativeSpeed;
+		}
+		else
+		{
+			_angle += sign(_vpush) * _vpush/3 * global.relativeSpeed;
+		}
+	}
 }
 
 

@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PluggedToEnchufe()
 {
-	if instance_exists(enchufe) && (room != Sala_ChillRoom) 
+	if instance_exists(enchufe) && (room != Sala_ChillRoom) && (enchufe.isBroken = false)
 	{
 		if (room != Sala_Tutorial)
 		{
@@ -96,6 +96,15 @@ function PluggedToEnchufe()
 			
 			enchufe._hpush -= lengthdir_x(0.05,dir)
 			enchufe._vpush -= lengthdir_y(0.05,dir)
+		
+		}
+		else if (enchufe.isBroken)
+		{
+			_hpush = lengthdir_x(1.5,dir)
+			_vpush = lengthdir_y(1.5,dir)
+			
+			enchufe._hpush -= lengthdir_x(0.1,dir)
+			enchufe._vpush -= lengthdir_y(0.1,dir)
 		
 		}
 		else

@@ -1554,6 +1554,7 @@
     {"id":{"name":"LoadDefaultDataIngame","path":"scripts/LoadDefaultDataIngame/LoadDefaultDataIngame.yy",},},
     {"id":{"name":"o_enchufeUpgradeCapsule","path":"objects/o_enchufeUpgradeCapsule/o_enchufeUpgradeCapsule.yy",},},
     {"id":{"name":"SpawnEnemyBasicBreach","path":"scripts/SpawnEnemyBasicBreach/SpawnEnemyBasicBreach.yy",},},
+    {"id":{"name":"PlaceEnchufeFinal","path":"scripts/PlaceEnchufeFinal/PlaceEnchufeFinal.yy",},},
     {"id":{"name":"s_torreta","path":"sprites/s_torreta/s_torreta.yy",},},
     {"id":{"name":"Enemy_ChasingFarSniper","path":"scripts/Enemy_ChasingFarSniper/Enemy_ChasingFarSniper.yy",},},
     {"id":{"name":"AddBestiaryEnemyFreeworm","path":"scripts/AddBestiaryEnemyFreeworm/AddBestiaryEnemyFreeworm.yy",},},

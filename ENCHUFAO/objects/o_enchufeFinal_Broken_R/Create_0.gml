@@ -20,4 +20,5 @@ col.enchufe = self;
 image_speed = 0;
 image_index = 1;
 fakeAngle = 0;
-precision = 0.5;
+precision = 1;
+isBroken = true;
