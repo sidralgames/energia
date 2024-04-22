@@ -19,3 +19,5 @@ col = instance_create(x,y,o_brokenCol_R);
 col.enchufe = self;
 image_speed = 0;
 image_index = 1;
+fakeAngle = 0;
+precision = 0.5;

@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_brokenCol",
-    "path": "sprites/s_brokenCol/s_brokenCol.yy",
+    "name": "s_brokenCol2",
+    "path": "sprites/s_brokenCol2/s_brokenCol2.yy",
   },
   "spriteMaskId": null,
   "visible": true,

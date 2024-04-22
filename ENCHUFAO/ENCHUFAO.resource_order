@@ -237,6 +237,7 @@
     {"name":"o_partNaveFriend","order":16,"path":"objects/o_partNaveFriend/o_partNaveFriend.yy",},
     {"name":"oVine_Techo","order":4,"path":"objects/oVine_Techo/oVine_Techo.yy",},
     {"name":"PlayerStats_Purple","order":5,"path":"scripts/PlayerStats_Purple/PlayerStats_Purple.yy",},
+    {"name":"s_brokenCol2","order":110,"path":"sprites/s_brokenCol2/s_brokenCol2.yy",},
     {"name":"o_enchufeUpgadeSpeedUp","order":34,"path":"objects/o_enchufeUpgadeSpeedUp/o_enchufeUpgadeSpeedUp.yy",},
     {"name":"snd_hit","order":33,"path":"sounds/snd_hit/snd_hit.yy",},
     {"name":"oDrag","order":2,"path":"objects/oDrag/oDrag.yy",},
