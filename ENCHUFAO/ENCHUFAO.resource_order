@@ -1124,6 +1124,7 @@
     {"name":"__init_view","order":11,"path":"scripts/__init_view/__init_view.yy",},
     {"name":"obj_spot_light_rotate_mouse","order":9,"path":"objects/obj_spot_light_rotate_mouse/obj_spot_light_rotate_mouse.yy",},
     {"name":"o_menuGodModeOptions","order":39,"path":"objects/o_menuGodModeOptions/o_menuGodModeOptions.yy",},
+    {"name":"PlayerShipLoseEnergy","order":27,"path":"scripts/PlayerShipLoseEnergy/PlayerShipLoseEnergy.yy",},
     {"name":"s_bulletTorreta43","order":9,"path":"sprites/s_bulletTorreta43/s_bulletTorreta43.yy",},
     {"name":"s_enemyMini_2","order":22,"path":"sprites/s_enemyMini_2/s_enemyMini_2.yy",},
     {"name":"AddUpgradeFriend","order":10,"path":"scripts/AddUpgradeFriend/AddUpgradeFriend.yy",},

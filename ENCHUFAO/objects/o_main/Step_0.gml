@@ -45,27 +45,20 @@ if instance_exists(o_playerShip) //&& (room != Sala_Inicio)
 	
 	if (o_playerShip.plugged)
 	{
-		PlayerPluggedMainEnchufes()
+		if (o_playerShip.pluggedInEnchufeBroken)
+		{
+			PlayerShipLoseEnergy();
+		}
+		else
+		{
+			PlayerPluggedMainEnchufes();
+		}
 			
 	}
 	else if (o_playerShip.plugged == false)
 	{
 		full = false;
-		
-		if (!global.infiniteEnergyIsOn)
-		{
-			if (global.energy>0)
-			{
-				if (abs(o_playerShip._hpush) >= 0.1) || (abs(o_playerShip._vpush) >= 0.1)
-				{
-					global.energy-=(0.3 * global.cloackReal ) / global.DischargeTime
-				}
-				else
-				{
-					global.energy-= (0.1 * global.cloackReal ) / global.DischargeTime
-				}
-			}
-		}
+		PlayerShipLoseEnergy();
 	}
 }
 

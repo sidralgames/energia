@@ -4,7 +4,7 @@
  
 
 
-//draw_text(x,y-30, "chipsnumber " + string(global.chipsVertex));
+draw_text(x,y-30, "pluggedInEnchufeBroken " + string(pluggedInEnchufeBroken));
 
 if (global.laser > 0)
 {

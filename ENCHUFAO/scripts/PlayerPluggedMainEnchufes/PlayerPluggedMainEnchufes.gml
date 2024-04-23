@@ -11,13 +11,16 @@ function PlayerPluggedMainEnchufes()
 				canModify = (inEnchufe.dying == false) && (inEnchufe.enchufeActive) && (inEnchufe.isPETA_F == false)
 				&& (inEnchufe.enchufeBomb == false) && (inEnchufe.IsEnchufeCapsule == false);
 				
-				enchufeMimic = (inEnchufe.isMimic);
+				pluggedInEnchufeMimic = (inEnchufe.isMimic);
+				pluggedInEnchufeBroken = (inEnchufe.isBroken)
 				
 			}
 		}
 		
+		
+		
 		//-----------ALL ENERGY---------//
-		if (o_playerShip.enchufeMimic == false)
+		if (o_playerShip.pluggedInEnchufeMimic == false) && (o_playerShip.pluggedInEnchufeBroken == false)
 		{
 			if (global.energy <= global.energyMax)
 			{

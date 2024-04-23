@@ -1218,6 +1218,7 @@
     {"id":{"name":"obj_spot_light_rotate_mouse","path":"objects/obj_spot_light_rotate_mouse/obj_spot_light_rotate_mouse.yy",},},
     {"id":{"name":"s_enchufe_Ammo70","path":"sprites/s_enchufe_Ammo70/s_enchufe_Ammo70.yy",},},
     {"id":{"name":"o_menuGodModeOptions","path":"objects/o_menuGodModeOptions/o_menuGodModeOptions.yy",},},
+    {"id":{"name":"PlayerShipLoseEnergy","path":"scripts/PlayerShipLoseEnergy/PlayerShipLoseEnergy.yy",},},
     {"id":{"name":"s_bulletTorreta43","path":"sprites/s_bulletTorreta43/s_bulletTorreta43.yy",},},
     {"id":{"name":"s_enemyMini_2","path":"sprites/s_enemyMini_2/s_enemyMini_2.yy",},},
     {"id":{"name":"AddUpgradeFriend","path":"scripts/AddUpgradeFriend/AddUpgradeFriend.yy",},},

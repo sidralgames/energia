@@ -33,8 +33,11 @@ function PluggedToEnchufe()
 	{
 		GetPositionToPLug();
 	}
-		
-	part_particles_create(global.enchufe_sys, global.xToPlug+random_range(-18,18), global.yToPlug+random_range(-18,18), global.enchufePart , 10)
+	
+	if (enchufe.isMimic == false) && (enchufe.isBroken == false)
+	{
+		part_particles_create(global.enchufe_sys, global.xToPlug+random_range(-18,18), global.yToPlug+random_range(-18,18), global.enchufePart , 10)
+	}
 	
 	if (point_distance(x,y,global.xToPlug,global.yToPlug) <= global.cableStat*38)
 	{
@@ -100,11 +103,11 @@ function PluggedToEnchufe()
 		}
 		else if (enchufe.isBroken)
 		{
-			_hpush = lengthdir_x(1.5,dir)
-			_vpush = lengthdir_y(1.5,dir)
+			_hpush = lengthdir_x(1.2,dir)
+			_vpush = lengthdir_y(1.2,dir)
 			
-			enchufe._hpush -= lengthdir_x(0.1,dir)
-			enchufe._vpush -= lengthdir_y(0.1,dir)
+			enchufe._hpush -= lengthdir_x(0.15,dir)
+			enchufe._vpush -= lengthdir_y(0.15,dir)
 		
 		}
 		else

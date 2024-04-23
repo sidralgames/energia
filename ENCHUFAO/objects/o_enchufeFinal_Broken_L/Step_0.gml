@@ -26,16 +26,30 @@ Move();
 
 if instance_exists(o_playerShip)
 {
-	fakeDir = point_direction(xConnectionPos, yConnectionPos, o_playerShip.x, o_playerShip.y)
+	
 	if (enchufeActive)
 	{
-		if (o_playerShip.alarm[5] > 0)
+		if (o_playerShip.alarm[5] > 0) && (changingAngle = false)
 		{
+			fakeDir = point_direction(xConnectionPos, yConnectionPos, o_playerShip.x, o_playerShip.y)
+			changingAngle = true;
+			changingCont = 60 ;
+		}
+		
+		if (changingCont > 0)
+		{
+			changingCont --;
 			_angle += sign(dsin(fakeDir - _angle)) * precision;
+		}
+		
+		if (changingCont <= 0)
+		{
+			changingAngle = false
 		}
 	}
 	else
 	{
+		changingCont = 0;
 		if (abs(_hpush) > 0.15)
 		{
 			_angle += sign(_hpush) * _hpush/3 * global.relativeSpeed;

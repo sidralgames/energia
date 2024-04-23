@@ -7,11 +7,13 @@ function Unplug()
 	thisEnchufe.canBeEnchufated = false;
 	thisEnchufe.canBeEnchufatedCont = 20;
 	o_enchufe_Father.enchufeActive = false;
+	
 	if (thisEnchufe.isPETA_F == true)
 	{
 		thisEnchufe.dying = true;
 		thisEnchufe.petaActive = false;
 	}
+	
 	thisEnchufe.charging = false;
 	thisEnchufe.occupied = false;
 	gamepad_set_vibration(0,0.15,0.15);
@@ -29,6 +31,8 @@ function Unplug()
 	global.bombAmmo = floor(global.bombAmmo);
 	global.laserDrain = 0.005;
 	pluggedFinal = false;
+	pluggedInEnchufeBroken = false;
+	pluggedInEnchufeMimic= false;
 	
 	if (global.spriteShip = splayer_mp3)
 	{

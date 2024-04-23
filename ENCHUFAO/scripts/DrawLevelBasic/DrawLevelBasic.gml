@@ -213,7 +213,7 @@ function DrawLevelBasic()
 						}
 					}
 					
-					PlaceEnchufeFinal(finalEnchufeType);
+					PlaceEnchufeFinal("Broken");
 					
 					if (global.level > 1)
 					{

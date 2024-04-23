@@ -193,7 +193,9 @@ pluggedTimer = 0;
 pluggedTimerMax = 300;
 pluggedTimerAlert = 200;
 
-pluggedToStrandedShip = false
+pluggedToStrandedShip = false;
+pluggedInEnchufeBroken = false;
+
 global.pitch = 1;
 
 upgraded = false;
