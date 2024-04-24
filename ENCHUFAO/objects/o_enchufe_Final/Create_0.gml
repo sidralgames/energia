@@ -2,6 +2,9 @@
 // You can write your code in this editor
 
 image_speed = 0;
+haveHPnow = false;
+_hpMax = 20;
+_hp = _hpMax;
 
 // Inherit the parent event
 event_inherited();

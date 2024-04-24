@@ -24,11 +24,6 @@ function PlayerPluggedMainEnchufes()
 		{
 			if (global.energy <= global.energyMax)
 			{
-				//if (alarm[4] <=0)
-				//{
-				//		part_particles_create(global.energyPart_sys, o_playerShip.x+random_range(-15,15), o_playerShip.y+random_range(-15,15), global.energyPart , 1)	
-				//		alarm[4] = 3;
-				//}
 				global.energy+=0.75*global.chargeTime;
 			}
 		

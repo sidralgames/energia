@@ -1,6 +1,11 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
 
+if (firstCont > 0 )
+{
+	firstCont --;
+}
+
 xConnectionPos= x + lengthdir_x(17, _angle+180);
 yConnectionPos = y + lengthdir_y(17, _angle+180);
 
@@ -36,18 +41,23 @@ if instance_exists(o_playerShip)
 		{
 			fakeDir = point_direction(xConnectionPos, yConnectionPos, o_playerShip.x, o_playerShip.y)
 			changingAngle = true;
-			changingCont = 60 ;
+			changingCont = 20
 		}
 		
 		if (changingCont > 0)
 		{
 			changingCont --;
-			_angle -= sign(dsin(fakeDir - _angle)) * precision;
+			if (precision > 0)
+			{
+				precision-=0.05;
+			}
+			_angle -= (sign(dsin(fakeDir - _angle)) * precision);
 		}
 		
-		if (changingCont <= 0)
+		if (changingCont <= 0) || (o_playerShip.alarm[5] > 0)
 		{
-			changingAngle = false
+			changingAngle = false;
+			precision = precisionInitial;
 		}
 	}
 	else

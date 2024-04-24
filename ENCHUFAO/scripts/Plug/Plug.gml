@@ -2,6 +2,8 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Plug()
 {
+	pluggedInEnchufeBroken = false;
+	
 	global.totalPlugs+=1;
 	gamepad_set_vibration(0,0.2,0.2);
 	alarm[4] = 10;

@@ -9,7 +9,7 @@ function LowBatterySounds()
 		audio_play_sound_on(global.audioEmitter, snd_battery, true, 90)
 	}
 
-	if (global.energy > 80) || (plugged == true)
+	if (global.energy > 80) || ( (plugged == true) && (enchufe.isBroken == false) )
 	{
 		sounded = false
 		soundEnergy = false

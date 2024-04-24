@@ -7,6 +7,7 @@ function UnplugPETA()
 		o_enchufe_Father.enchufeActive = false;
 		gamepad_set_vibration(0,0.15,0.15);
 		o_playerShip.alarm[4] = 5;
+		o_playerShip.pluggedInEnchufeBroken = false;
 		audio_play_sound_on(global.audioEmitter, choose(snd_unPlugged, snd_unPlugged_2, snd_unPlugged_3),false, 50)
 		o_playerShip.plugged = false;
 		o_cable.plugged = false;
@@ -19,6 +20,7 @@ function UnplugPETA()
 		global.laserDrain = 0.005;
 		o_playerShip.pluggedFinal = false;
 		o_charger.scale = 1;
+		
 		
 		
 	}

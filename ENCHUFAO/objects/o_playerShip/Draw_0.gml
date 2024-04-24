@@ -4,7 +4,7 @@
  
 
 
-draw_text(x,y-30, "pluggedInEnchufeBroken " + string(pluggedInEnchufeBroken));
+//draw_text(x,y-30, "pluggedInEnchufeBroken " + string(pluggedInEnchufeBroken));
 
 if (global.laser > 0)
 {

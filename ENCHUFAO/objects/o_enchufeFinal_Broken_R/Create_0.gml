@@ -13,6 +13,7 @@
 
 // Inherit the parent event
 event_inherited();
+firstCont = 60;
 changingAngle = false;
 radCol = 25;
 col = instance_create(x,y,o_brokenCol_R);
@@ -20,7 +21,8 @@ col.enchufe = self;
 image_speed = 0;
 image_index = 1;
 fakeAngle = 0;
-precision = 1;
+precisionInitial = 1;
+precision = precisionInitial;
 isBroken = true;
 changingCont = 0;
 changingAngle = false;

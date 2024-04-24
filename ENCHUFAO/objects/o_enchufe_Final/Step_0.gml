@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+inScreen =  (x > __view_get( e__VW.XView, 0 )-50 && x < __view_get( e__VW.XView, 0 )+710) &&
+(y > __view_get( e__VW.YView, 0 )-50 && y < __view_get( e__VW.YView, 0 )+410)
 
 
 xConnectionPos = x;
@@ -124,5 +126,31 @@ if (alarm[2] <= 0)
 				abierto = true;
 			}
 		}
+	}
+}
+
+if (abierto) && (haveHPnow = false)
+{
+	haveHPnow = true;
+}
+
+if (haveHPnow)
+{
+	if (_hp <= 0)
+	{
+		explo = instance_create(x,y,o_exploPurple)
+		
+		brokenL = instance_create_layer(x-20,y, "Enchufes", o_enchufeFinal_Broken_L);
+		brokenR = instance_create_layer(x+20,y, "Enchufes", o_enchufeFinal_Broken_R);
+		
+		brokenL.firstCont = 90;
+		brokenL._hpush = -random_range(0.5,1);
+		brokenL._vpush = random_range(1,-1)
+		
+		brokenR.firstCont = 90;
+		brokenR._hpush = random_range(0.5,1);
+		brokenR._vpush = random_range(1,-1);
+		
+		instance_destroy();
 	}
 }

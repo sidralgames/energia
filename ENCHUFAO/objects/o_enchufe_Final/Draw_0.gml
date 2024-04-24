@@ -34,3 +34,16 @@ if instance_exists(o_waller)
 		}
 	}
 }
+
+if (haveHPnow)
+{
+	for (var i = 0; i < floor(_hpMax/2); i++)
+	{
+		draw_sprite_ext(s_bombAmmoEnchufe, 1, x-26+(8*i), y-40,  1,1.1, 0, image_blend, image_alpha)	
+	}
+	
+	for (var i = 0; i < floor(_hp/2); i++)
+	{
+		draw_sprite_ext(s_bombAmmoEnchufe, 0, x-26+(8*i), y-40,  1,1.1, 0, image_blend, image_alpha)	
+	}
+}
