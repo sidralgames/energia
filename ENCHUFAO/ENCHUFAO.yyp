@@ -435,6 +435,7 @@
     {"id":{"name":"o_capsuleFake","path":"objects/o_capsuleFake/o_capsuleFake.yy",},},
     {"id":{"name":"s_playerShip_purple_part","path":"sprites/s_playerShip_purple_part/s_playerShip_purple_part.yy",},},
     {"id":{"name":"o_BossWorm_BodyBestiary","path":"objects/o_BossWorm_BodyBestiary/o_BossWorm_BodyBestiary.yy",},},
+    {"id":{"name":"o_enemyP_Real","path":"objects/o_enemyP_Real/o_enemyP_Real.yy",},},
     {"id":{"name":"s_ach_NoBump","path":"sprites/s_ach_NoBump/s_ach_NoBump.yy",},},
     {"id":{"name":"o_breachBanner","path":"objects/o_breachBanner/o_breachBanner.yy",},},
     {"id":{"name":"StrandedShip_StrandedState","path":"scripts/StrandedShip_StrandedState/StrandedShip_StrandedState.yy",},},

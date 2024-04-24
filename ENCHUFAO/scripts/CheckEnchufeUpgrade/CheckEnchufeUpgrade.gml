@@ -576,6 +576,7 @@ function CheckEnchufeUpgrade()
 				if (!global.friendIsUpgraded)
 				{
 					global.friendIsUpgraded = true;
+					global.turretsAreOnYourSide = true;
 					instance_create_layer(o_playerShip.x+30, o_playerShip.y-30, "Player", o_friend)
 					AddUpgradeFriendPlayer();
 				}

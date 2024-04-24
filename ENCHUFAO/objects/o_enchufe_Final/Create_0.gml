@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+inScreen = false;
 image_speed = 0;
 haveHPnow = false;
 _hpMax = 20;

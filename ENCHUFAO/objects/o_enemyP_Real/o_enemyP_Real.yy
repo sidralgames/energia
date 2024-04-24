@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_enemyP",
+  "name": "o_enemyP_Real",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
@@ -20,8 +20,8 @@
     "path": "folders/Objetos/Enemies.yy",
   },
   "parentObjectId": {
-    "name": "o_enemyP_Real",
-    "path": "objects/o_enemyP_Real/o_enemyP_Real.yy",
+    "name": "parCollision",
+    "path": "objects/parCollision/parCollision.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

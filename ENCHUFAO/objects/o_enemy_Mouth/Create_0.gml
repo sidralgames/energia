@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 enemyBestiaryNumber = global.enemyPincherBestiaryNumber;
-
+isOnlyDraw = false;
 _colorBody = c_white;
 
 event_inherited();

@@ -15,7 +15,7 @@ if (global.turretsAreOnYourSide)
 	{
 		if instance_exists(o_enemyP)
 		{
-			nearEnemy = instance_nearest(x,y,o_enemy)
+			nearEnemy = instance_nearest(x,y,o_enemyP)
 			if instance_exists(nearEnemy)
 			{
 				var a = point_direction(x, y, nearEnemy.x, nearEnemy.y);

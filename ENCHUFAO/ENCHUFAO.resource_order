@@ -384,6 +384,7 @@
     {"name":"o_capsuleFake","order":26,"path":"objects/o_capsuleFake/o_capsuleFake.yy",},
     {"name":"s_playerShip_purple_part","order":24,"path":"sprites/s_playerShip_purple_part/s_playerShip_purple_part.yy",},
     {"name":"o_BossWorm_BodyBestiary","order":69,"path":"objects/o_BossWorm_BodyBestiary/o_BossWorm_BodyBestiary.yy",},
+    {"name":"o_enemyP_Real","order":67,"path":"objects/o_enemyP_Real/o_enemyP_Real.yy",},
     {"name":"s_ach_NoBump","order":1,"path":"sprites/s_ach_NoBump/s_ach_NoBump.yy",},
     {"name":"o_breachBanner","order":3,"path":"objects/o_breachBanner/o_breachBanner.yy",},
     {"name":"StrandedShip_StrandedState","order":5,"path":"scripts/StrandedShip_StrandedState/StrandedShip_StrandedState.yy",},

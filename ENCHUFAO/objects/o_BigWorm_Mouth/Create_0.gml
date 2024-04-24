@@ -3,7 +3,7 @@
 event_inherited();
 
 enemyBestiaryNumber = global.enemyWormageddonBestiaryNumber;
-
+isOnlyDraw = false
 leavesTrail = false;
 isBossWorm = true;
 thisEnemyBounce = false;

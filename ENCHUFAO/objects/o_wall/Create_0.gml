@@ -29,7 +29,7 @@ else
 	}
 }
 
-oddsTurret = 0
+oddsTurret = max(8,25 - global.level);
 
 laserB = 1;
 discB = 1;

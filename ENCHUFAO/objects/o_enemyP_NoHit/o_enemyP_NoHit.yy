@@ -12,8 +12,8 @@
     "path": "ENCHUFAO.yyp",
   },
   "parentObjectId": {
-    "name": "o_enemyP",
-    "path": "objects/o_enemyP/o_enemyP.yy",
+    "name": "o_enemyP_Real",
+    "path": "objects/o_enemyP_Real/o_enemyP_Real.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

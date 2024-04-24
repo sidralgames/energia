@@ -57,6 +57,7 @@ if instance_exists(o_playerShip) //&& (room != Sala_Inicio)
 	}
 	else if (o_playerShip.plugged == false)
 	{
+		pluggedInEnchufeBroken = false;
 		full = false;
 		PlayerShipLoseEnergy();
 	}
