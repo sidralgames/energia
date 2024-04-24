@@ -140,16 +140,18 @@ if (haveHPnow)
 	{
 		explo = instance_create(x,y,o_exploPurple)
 		
-		brokenL = instance_create_layer(x-20,y, "Enchufes", o_enchufeFinal_Broken_L);
-		brokenR = instance_create_layer(x+20,y, "Enchufes", o_enchufeFinal_Broken_R);
+		brokenL = instance_create_layer(x,y, "Enchufes", o_enchufeFinal_Broken_L);
+		brokenR = instance_create_layer(x,y, "Enchufes", o_enchufeFinal_Broken_R);
 		
 		brokenL.firstCont = 90;
-		brokenL._hpush = -random_range(0.5,1);
-		brokenL._vpush = random_range(1,-1)
+		brokenL._angle = _angle+180;
+		brokenL._hpush = lengthdir_x(0.5, _angle+180)
+		brokenL._vpush = lengthdir_y(0.5, _angle+180)
 		
 		brokenR.firstCont = 90;
-		brokenR._hpush = random_range(0.5,1);
-		brokenR._vpush = random_range(1,-1);
+		brokenR._angle = _angle
+		brokenR._hpush = lengthdir_x(0.5, _angle)
+		brokenR._vpush = lengthdir_y(0.5, _angle)
 		
 		instance_destroy();
 	}

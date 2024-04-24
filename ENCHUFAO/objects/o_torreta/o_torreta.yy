@@ -41,8 +41,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_torreta",
-    "path": "sprites/s_torreta/s_torreta.yy",
+    "name": "s_torreta_2",
+    "path": "sprites/s_torreta_2/s_torreta_2.yy",
   },
   "spriteMaskId": null,
   "visible": true,

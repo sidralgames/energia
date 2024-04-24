@@ -3,7 +3,6 @@
 if (inScreen) && (haveHPnow)
 {
 	_hp -=1;
-	instance_destroy(other);
 }
 
 

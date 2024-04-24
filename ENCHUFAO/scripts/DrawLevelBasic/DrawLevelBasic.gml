@@ -59,7 +59,7 @@ function DrawLevelBasic()
 				var oddsEnchufeBomb = 300;
 				var oddsEnchufePETA = 1000;
 				var oddsCapsule = 200;
-				var oddsSuperCapsule = 400;
+				var oddsSuperCapsule = 500;
 				
 				 oddsEnchufeFinal = 300;
 				
@@ -77,8 +77,8 @@ function DrawLevelBasic()
 				
 				
 			
-			     exM = xx * CELL_WIDTH+CELL_WIDTH/2;
-			     eyM = yy * CELL_HEIGHT+CELL_HEIGHT/2;
+			    exM = xx * CELL_WIDTH+CELL_WIDTH/2;
+			    eyM = yy * CELL_HEIGHT+CELL_HEIGHT/2;
 				
 				
 				if (irandom(oddsStrandedShip) == oddsStrandedShip) && (StrandedShipsInLevel < StrandedShipsInLevelMax) 
@@ -213,7 +213,7 @@ function DrawLevelBasic()
 						}
 					}
 					
-					PlaceEnchufeFinal("Broken");
+					PlaceEnchufeFinal("Standard");
 					
 					if (global.level > 1)
 					{
@@ -307,13 +307,13 @@ function DrawLevelBasic()
 									if (point_distance(exM,eyM, nextCapsule.x, nextCapsule.y) > 500)
 									{
 										instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_superCapsule); 
-										capsulesInLevel +=1;
+										superCapsulesInLevelMax +=1;
 									}
 								}
 								else
 								{
 									instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",o_superCapsule); 
-									capsulesInLevel +=1;
+									superCapsulesInLevelMax +=1;
 								}
 							}
 						}
