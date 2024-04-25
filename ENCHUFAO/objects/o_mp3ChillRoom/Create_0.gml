@@ -13,6 +13,7 @@
 
 // Inherit the parent event
 event_inherited();
+paused = false
 xConnectionDisp= x+lengthdir_x(105,image_angle-5);
 yConnectionDisp = y+lengthdir_y(105,image_angle-5);
 contToShoot=0;

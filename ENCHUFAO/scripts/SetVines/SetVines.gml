@@ -4,7 +4,7 @@ function SetVines(_odds)
 {
 	if (room = Sala_BossWorm)
 	{
-		oddsVine_s = _odds-3;
+		oddsVine_s = 2;
 	}
 	else
 	{

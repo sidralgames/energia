@@ -1,10 +1,10 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function SetupLevelBasic()
+function SetupLevelBasic(_maxFloor, _minFloor, _hCells, _vCells)
 {
 	totalFloor = 0;
-	maxFloor = 1000;
-	minFloor = 600;
+	maxFloor = _maxFloor;
+	minFloor = _minFloor;
 	realSteps = 0;
 	global.newChargerX = 0;
 	global.newChargerY = 0;
@@ -24,8 +24,8 @@ function SetupLevelBasic()
 	__background_set( e__BG.Y, 0, irandom(1000) );
 
 
-	room_width = (CELL_WIDTH/32) *1344; // = 42 celdas
-	room_height = (CELL_HEIGHT/32) *(320*4); // = 1280 = 40 celdas
+	room_width = (CELL_WIDTH/32) * (32 * _hCells); // = 42 celdas
+	room_height = (CELL_HEIGHT/32) *(32 * _vCells); // = 1280 = 40 celdas
 
 
 	__view_set( e__VW.HView, 0, __view_get( e__VW.HPort, 0 ) );

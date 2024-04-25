@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function SetupLevelSecret(_maxFloor, _minFloor, _hCells, _wCells, _steps, _drawScript)
+function SetupLevelSecret(_maxFloor, _minFloor, _hCells, _wCells, _steps, _oddVines, _drawScript)
 {
 	totalFloor = 0;
 	maxFloor = _maxFloor;
@@ -94,18 +94,26 @@ function SetupLevelSecret(_maxFloor, _minFloor, _hCells, _wCells, _steps, _drawS
 	}
 
 	SetTiles();
-	SetVines(2);
+	SetVines(_oddVines);
 	
 	SetTemporaryWalls();
 	
 	//Draw the level
 	_drawScript();
 	
-	if (!manager) || (!eFinal) || (placeholders < 1) || (totalFloor < minFloor)
-	//|| (UpgradesEnchufesInLevel < 1)
-
+	if (secretType = "ChillRoom")
 	{
-		room_restart();
+		if (!haveMp3) || (!eFinal) || (totalFloor < minFloor)
+		{
+			room_restart();
+		}
+	}
+	else
+	{
+		if (!manager) || (!eFinal) || (placeholders < 1) || (totalFloor < minFloor)
+		{
+			room_restart();
+		}
 	}
 	
 	

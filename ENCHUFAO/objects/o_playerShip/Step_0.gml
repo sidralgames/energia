@@ -2,7 +2,6 @@
 // You can write your code in this editor
 Controls_Input();
 
-
 if (shielded = false) && ( (room != Sala_Upgade) && (room != Sala_MegaUpgrade) )
 {
 	shielded = true;

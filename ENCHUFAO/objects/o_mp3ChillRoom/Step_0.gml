@@ -16,13 +16,18 @@ if instance_exists(laser)
 }
 if (enchufeActive)
 {
-	if !audio_is_playing(sndLemo)
+	if (paused = false)
 	{
-		audio_play_sound_on(delay_emitter, sndLemo, true, 90,5.9,,1.1);
-	}
-	else
-	{
-		audio_resume_sound(sndLemo)
+		with (o_main)
+		{
+			_delay_effect.size = 0.9;
+			_delay_effect.mix = 0.6;
+			_delay_effect.damp = 0.9;
+			_delay_effect.bypass = false;
+			delay_bus.effects[0] = _delay_effect;
+		}
+		
+		paused = true;
 	}
 	
 	sprite_index = s_mp3Gun3;
@@ -52,7 +57,16 @@ if (enchufeActive)
 }
 else
 {
-	audio_pause_sound(sndLemo)
+	if (paused = true)
+	{
+		with (o_main)
+		{
+			_delay_effect.bypass = true;
+			delay_bus.effects[0] = _delay_effect;
+		}
+		
+		paused = false;
+	}
 	counting = false;
 	contToShoot = 60;
 	sprite_index = s_mp3Gun3;

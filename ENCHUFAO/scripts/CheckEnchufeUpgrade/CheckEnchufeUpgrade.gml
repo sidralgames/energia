@@ -576,7 +576,6 @@ function CheckEnchufeUpgrade()
 				if (!global.friendIsUpgraded)
 				{
 					global.friendIsUpgraded = true;
-					global.turretsAreOnYourSide = true;
 					instance_create_layer(o_playerShip.x+30, o_playerShip.y-30, "Player", o_friend)
 					AddUpgradeFriendPlayer();
 				}
@@ -847,6 +846,35 @@ function CheckEnchufeUpgrade()
 	
 			}break;
 			
+			
+			case "upgradeTurretsAllies":
+			{
+				if (!global.turretsAlliesIsUpgraded)
+				{
+					global.turretsAlliesIsUpgraded = true;
+					AddUpgradeTurretsAlliesPlayer();
+				}
+				
+				for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+				{
+					upg = ds_map_find_value(global.PlayerUpgradesList, i)
+					if (upg.obj = o_enchufeUpgadeTurretsAllies)
+					{
+						upg.times+=1;
+					}
+				}
+				
+				//-- DISCARD UPGRADE --//
+				for (var i= 0; i< global.numberOfUpgrades; i++)
+				{
+					thisUpg = ds_map_find_value(global.upgradesList, i)
+					if (thisUpg.obj = o_enchufeUpgadeTurretsAllies)
+					{
+						thisUpg.canShowUp = false;
+					}
+				}
+			}
+			break;
 			
 		
 			case "upgradeBonus":

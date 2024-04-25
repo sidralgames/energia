@@ -3,7 +3,7 @@
 global.haveChargerAdapter = false;
 global.adaptersInLevel = 0;
 global.goToSecretRoom = false;
-global.turretsAreOnYourSide = false;
+
 global.ammoMod = 50 // 10 guapo //50 lo de siempre
 
 global.bestiaryEnemiesNum = 1;
@@ -211,6 +211,21 @@ global.BossGarbanzo_Awaken = false;
 
 global.audioEmitter = audio_emitter_create();
 
+// Delay route
+delay_bus = audio_bus_create();
+
+audio_emitter_bus(global.audioEmitter, delay_bus);
+
+// Delay effect
+_delay_effect = audio_effect_create(AudioEffectType.Reverb1);
+_delay_effect.size = 0.9;
+_delay_effect.mix = 0.5;
+_delay_effect.damp = 0.8;
+_delay_effect.bypass = true;
+delay_bus.effects[0] = _delay_effect;
+
+
+
 global.relativeSpeed = 1.0;
 
 global.PETAsActive = 0;
@@ -348,6 +363,7 @@ AddUpgradeHomingBombPlus();
 AddUpgradeLongLastingChip();
 AddUpgradeMoreChipDrops();
 AddUpgradeShieldPerRoom();
+AddUpgradeTurretsAllies();
 
 global.shieldsPerRoom = 0;
 
@@ -381,6 +397,7 @@ global.shockingPetasIsUpgraded = false;
 global.longLastingChipIsUpgraded = false;
 global.moreChipDropsIsUpgraded = false;
 global.shieldPerRoomIsUpgraded = false;
+global.turretsAlliesIsUpgraded = false;
 
 
 

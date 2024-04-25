@@ -9,7 +9,7 @@ if !tile_meeting(x,y,"Tiles")
 	instance_destroy();
 }
 
-if (global.turretsAreOnYourSide)
+if (global.turretsAlliesIsUpgraded)
 {
 	if (inScreen)
 	{

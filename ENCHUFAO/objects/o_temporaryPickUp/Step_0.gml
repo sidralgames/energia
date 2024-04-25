@@ -1,25 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (_sprite != s_chipMimic)
+
+if (scale < 1)
 {
-	if (scale < 1)
-	{
-		scale +=0.1;
-	}
-}
-else
-{
-	if (scale < 1.1)
-	{
-		scale +=0.1;
-	}
-	
+	scale +=0.1;
 }
 
-if (_sprite != s_chipMimic)
-{
-	_hp --;
-}
+_hp --;
 
 if (spriteSet = false)
 {
@@ -37,9 +24,19 @@ if (spriteSet = false)
 	
 	spriteSet = true;
 }
+
+if (_sprite = s_chipMimic)
+{
+	chipMimic = instance_create_layer(x,y,"Enemies", o_enemyChipMimic);
+	chipMimic._angle = _angle;
+	chipMimic._hpush = _hpush;
+	chipMimic._vpush = _vpush;
+	instance_destroy();
+}
+
 sprite_index = _sprite;
 
-if (_hp <= 100) && (_sprite != s_chipMimic)
+if (_hp <= 100)
 {
 	if (alarm[11] <= 2)
 	{
@@ -55,25 +52,10 @@ if (_hp <= 100) && (_sprite != s_chipMimic)
 		alarm[11] = 5;
 	}
 }
+
 if (_hp <= 0)
 {
 	instance_destroy();
-	
-	if (_sprite = s_chipMimic)
-	{
-		explo = instance_create(x,y,o_exploPurple);
-		explo.image_xscale = 0.5;
-		explo.image_yscale = 0.5;
-		
-		global.enemyBadChipKills +=1;
-		if (global.bestiaryEnemyBadChipUnlocked = 0)
-		{
-			global.bestiaryEnemyBadChipUnlocked = 1;
-			enemy = ds_map_find_value(global.bestiaryList, enemyBestiaryNumber);
-			enemy.unlocked = 1;
-			global.enemiesInBestiary +=1;
-		}
-	}
 }
 
 _hpush = lerp(_hpush, 0, 0.01);

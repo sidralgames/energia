@@ -65,33 +65,42 @@ if (room = Sala_0) //(levelType = 0)
 	{
 		case "Basic":
 		{
-			SetupLevelBasic();
+			SetupLevelBasic(1000, 600, irandom_range(40,44), irandom_range(38,42));
 		}
 		break;
 		
 		case "Secret":
 		{
-			level = choose("Snipers", "Minis", "Worms")
+			level = choose("ChillRoom", "Snipers", "Minis", "Worms"); 
+			
 			switch(level)
 			{
 				case "Mejora":
 				{
 					secretType = "Mejora";
-					SetupLevelSecret(250, 40, 28, 18, 2500, DrawLevelMejora);
+					SetupLevelSecret(250, 40, 28, 18, 2500, 2, DrawLevelMejora);
 				}
 				break;
+				
+				case "ChillRoom":
+				{
+					secretType = "ChillRoom";
+					SetupLevelSecret(800,  irandom_range(44,40), irandom_range(32,30), 18, 2500, 4, DrawLevelChillRoom);
+				}
+				break;
+				
 				case "Snipers":
 				{
 					secretType = "Snipers";
 					timesSpawner = irandom_range(3,5);
-					SetupLevelSecret(500, 40, irandom_range(40,25), irandom_range(20,15), 2000, DrawLevelMejora);
+					SetupLevelSecret(600, 40, irandom_range(42,32), irandom_range(26,18), 2000, 3, DrawLevelMejora);
 				}
 				break;
 				case "Minis":
 				{
 					secretType = "Minis";
 					timesSpawner = irandom_range(3,5);
-					SetupLevelSecret(500, 40, irandom_range(40,25), irandom_range(20,15), 2000, DrawLevelMejora);
+					SetupLevelSecret(500, 40, irandom_range(40,28), irandom_range(24,15), 2000, 3, DrawLevelMejora);
 				}
 				break;
 				
@@ -99,7 +108,7 @@ if (room = Sala_0) //(levelType = 0)
 				{
 					secretType = "Worms";
 					timesSpawner = irandom_range(3,5);
-					SetupLevelSecret(500, 40, irandom_range(40,28), irandom_range(24,15), 2000, DrawLevelMejora);
+					SetupLevelSecret(500, 40, irandom_range(42,28), irandom_range(24,15), 2000, 2, DrawLevelMejora);
 				}
 				break;
 			}

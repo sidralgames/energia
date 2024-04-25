@@ -39,11 +39,11 @@ if (haveHPnow)
 {
 	for (var i = 0; i < floor(_hpMax/2); i++)
 	{
-		draw_sprite_ext(s_bombAmmoEnchufe, 1, x-32+(8*i), y-42,  1,1.2, 0, image_blend, image_alpha)	
+		draw_sprite_ext(s_bombAmmoEnchufe, 1, x-40+(8*i), y-42,  1,1.2, 0, image_blend, image_alpha)	
 	}
 	
-	for (var i = 0; i < floor(_hp/2); i++)
+	for (var i = 0; i < ceil(_hp/2); i++)
 	{
-		draw_sprite_ext(s_bombAmmoEnchufe, 0, x-32+(8*i), y-42,  1,1.2, 0, image_blend, image_alpha)	
+		draw_sprite_ext(s_bombAmmoEnchufe, 0, x-40+(8*i), y-42,  1,1.2, 0, image_blend, image_alpha)	
 	}
 }
