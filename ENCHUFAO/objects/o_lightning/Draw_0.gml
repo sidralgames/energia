@@ -31,7 +31,7 @@ if (surface_exists(light_surf))
 	//	}
 	//}
 		gpu_set_blendmode(bm_subtract);
-		draw_set_alpha(0.1)
+		draw_set_alpha(0.15)
 		draw_triangle_color(x-lengthdir_x(iniOff,_angle-90), y-lengthdir_y(iniOff, _angle-90), x+lengthdir_x(maxLenght,_angle+angOff), y-1+lengthdir_y(maxLenght, _angle+angOff), x+lengthdir_x(maxLenght,_angle-angOff), y-1+lengthdir_y(maxLenght, _angle-angOff), c_white, c_white, c_white, false);
 		draw_triangle_color(x-lengthdir_x(iniOff,_angle+90), y-lengthdir_y(iniOff, _angle+90), x+lengthdir_x(maxLenght,_angle+angOff), y-1+lengthdir_y(maxLenght, _angle+angOff), x+lengthdir_x(maxLenght,_angle-angOff), y-1+lengthdir_y(maxLenght, _angle-angOff), c_white, c_white, c_white, false);
 		draw_set_alpha(0.07)
@@ -57,10 +57,10 @@ if (surface_exists(light_surf))
 		if (soundActive = true)
 		{
 			off = random_range(0.05, -0.05);
-			gpu_set_blendmode(bm_add);
-			draw_sprite_ext(s_lightBulb_Big, 0, x, y, 1+off, 1+off, 0, c_white, 0.15);
-			gpu_set_blendmode(bm_add);
-			draw_sprite_ext(s_lightBulb, 0, x, y, 0.4+off, 0.4+off, 0, global.lightBlue, 0.15);
+			gpu_set_blendmode(bm_normal);
+			draw_sprite_ext(s_lightBulb_Big, 0, x, y, 1+off, 1+off, 0, c_white, 0.2);
+			gpu_set_blendmode(bm_normal);
+			draw_sprite_ext(s_lightBulb, 0, x, y, 0.4+off, 0.4+off, 0, global.lightBlue, 0.2);
 		}
 	}
 	
@@ -76,7 +76,7 @@ if (surface_exists(light_surf))
 	
 	gpu_set_blendmode(bm_normal);
 	surface_reset_target();
-	draw_surface_ext(light_surf, 0, 0, 1, 1, 0, c_white, _darkness)
+	draw_surface_ext(light_surf, 0, 0, 1, 1, 0, c_white, darkness)
 	
 }
 else
