@@ -71,7 +71,7 @@ if (room = Sala_0) //(levelType = 0)
 		
 		case "Secret":
 		{
-			level = choose("ChillRoom", "Snipers", "Minis", "Worms"); 
+			level = choose("Snipers", "Minis", "Worms"); 
 			
 			switch(level)
 			{
