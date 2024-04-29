@@ -20,3 +20,4 @@ thisEnemyBounce = false;
 leavesTrail = false;
 finalTrail = false;
 
+

@@ -9,4 +9,5 @@ function CreateShieldEnemy(argument0, argument1, argument2)
 	shield.sprite_index = argument2;
 	shield.enemy = self;
 	shield.enemyShooter = enemyBestiaryNumber;
+	shield.shooterTrail = finalTrail;
 }
