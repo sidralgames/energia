@@ -22,7 +22,7 @@ function lighting_global() {
 	//	#####################################
 
 	// Ambient shadow level
-	global.ambientShadowIntensity = 0.75;
+	global.ambientShadowIntensity = 0.85;
 
 	// Whether the shadow caster's collision mask is used to cull it against lights (true) or not (false)
 	// A polygon must be assigned to the shadow caster regardless, this is only for efficient culling
@@ -37,7 +37,7 @@ function lighting_global() {
 
 	// Delay in frames between light updates
 	// You can force the lighting system to update with lighting_set_dirty(true)
-	global.lightUpdateFrameDelay = 2;
+	global.lightUpdateFrameDelay = 1;
 
 	// Set this to true to debug shadow casters
 	// This will draw all polygons

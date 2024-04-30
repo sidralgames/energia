@@ -11,7 +11,7 @@
   ],
   "parent": {
     "name": "Demo",
-    "path": "folders/Objetos/Demo.yy",
+    "path": "folders/Objects/Demo.yy",
   },
   "parentObjectId": {
     "name": "obj_light_demo",

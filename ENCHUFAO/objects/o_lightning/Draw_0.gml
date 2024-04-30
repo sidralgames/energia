@@ -14,7 +14,7 @@ if (surface_exists(light_surf))
 		gpu_set_blendmode(bm_subtract);
 		draw_sprite_ext(s_lightBulb, 0, x, y, 0.5+off, 0.5+off, 0, c_white, 1);
 		gpu_set_blendmode(bm_add);
-		draw_sprite_ext(s_lightBulb, 0, x, y, 0.5+off, 0.5+off, 0, c_red, 0.5);
+		draw_sprite_ext(s_lightBulb, 0, x, y, 0.5+off, 0.5+off, 0, c_white, 0.5);
 		gpu_set_blendmode(bm_normal);
 
 		

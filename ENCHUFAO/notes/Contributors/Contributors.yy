@@ -4,6 +4,6 @@
   "name": "Contributors",
   "parent": {
     "name": "Lighting",
-    "path": "folders/Notas/Lighting.yy",
+    "path": "folders/Notes/Lighting.yy",
   },
 }

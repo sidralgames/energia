@@ -10,9 +10,12 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Demo",
-    "path": "folders/Objetos/Demo.yy",
+    "path": "folders/Objects/Demo.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_shadow_caster",
+    "path": "objects/obj_shadow_caster/obj_shadow_caster.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -28,7 +31,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_box",
+    "path": "sprites/spr_box/spr_box.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

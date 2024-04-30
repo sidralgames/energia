@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"20998355-19e9-42e7-ad08-bf24fce27aa7","path":"sprites/spr_lut_light_intensity_linear/spr_lut_light_intensity_linear.yy",},},},"Disabled":false,"id":"b8e187f5-f0d2-4b1e-bdf4-4fc9f6757d86","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"20998355-19e9-42e7-ad08-bf24fce27aa7","path":"sprites/spr_lut_light_intensity_linear/spr_lut_light_intensity_linear.yy",},},},"Disabled":false,"id":"c27beff3-86b6-4166-b49a-ca0fa8ccfec7","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
