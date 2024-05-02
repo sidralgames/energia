@@ -13,7 +13,7 @@
 		iniOff = 7
 		
 		draw_sprite_ext(s_lightBulb, 0, x, y, 0.5+off, 0.5+off, 0, c_white, 0.15);
-		draw_set_alpha(0.25)
+		draw_set_alpha(0.28)
 		draw_triangle_color(x-lengthdir_x(iniOff,_angle-90), y-lengthdir_y(iniOff, _angle-90), x+lengthdir_x(maxLenght,_angle+angOff), y-1+lengthdir_y(maxLenght, _angle+angOff), x+lengthdir_x(maxLenght,_angle-angOff), y-1+lengthdir_y(maxLenght, _angle-angOff), c_white, c_white, c_white, false);
 		draw_triangle_color(x-lengthdir_x(iniOff,_angle+90), y-lengthdir_y(iniOff, _angle+90), x+lengthdir_x(maxLenght,_angle+angOff), y-1+lengthdir_y(maxLenght, _angle+angOff), x+lengthdir_x(maxLenght,_angle-angOff), y-1+lengthdir_y(maxLenght, _angle-angOff), c_white, c_white, c_white, false);
 		draw_set_alpha(1)
@@ -27,7 +27,7 @@
 		{
 			off = random_range(0.1, -0.1);
 			
-			draw_sprite_ext(s_lightBulb4, 0, x, y, 1+off, 1+off, 0, c_white, 0.5);
+			draw_sprite_ext(s_lightBulb4, 0, x, y, 1+off, 1+off, 0, c_white, 0.5+off);
 			
 		}
 		
@@ -35,10 +35,10 @@
 		{
 			off = random_range(0.1, -0.1);
 			
+			gpu_set_blendmode(bm_normal)
+			draw_sprite_ext(s_lightBulb4, 0, x, y, 1.5+off, 1.5+off, 0, c_white, 0.75+off);
 			
-			draw_sprite_ext(s_lightBulb4, 0, x, y, 1.5+off, 1.5+off, 0, c_white, 0.75);
-			gpu_set_blendmode(bm_normal);
-			
+			//gpu_set_blendmode(bm_normal);
 			//draw_sprite_ext(s_lightBulb4, 0, x, y, 0.65+off, 0.65+off, 0, global.lightBlue, 0.5);
 			
 		}
@@ -49,22 +49,35 @@
 		if (enchufeActive)
 		{
 			off = random_range(0.1, -0.1);
-			
-			
+		
 			draw_sprite_ext(s_lightBulb4, 0, x, y, 1+off, 1+off, 0, c_white, 0.5);
 			gpu_set_blendmode(bm_normal);
 			draw_sprite_ext(s_lightBulb4, 0, x, y, 0.5+off, 0.5+off, 0, global.lightBlue, 0.2);
-			
+		}
+		else
+		{
+			off = random_range(0.1, -0.1);
+
+			draw_sprite_ext(s_lightBulb4, 0, x, y, 0.75+off, 0.75+off, 0, c_white, 0.2);
+			gpu_set_blendmode(bm_normal);
+			draw_sprite_ext(s_lightBulb4, 0, x, y, 0.4+off, 0.4+off, 0, global.lightBlue, 0.1);
 		}
 	}
+	
+	with(o_exploBomb)
+	{
+		off = random_range(0.1, -0.1);
+		
+		draw_sprite_ext(s_lightBulb4, 0, x, y, 0.85+off, 0.85+off, 0, c_white, 0.9);
+	}
+	
 	
 	with(o_enchufePETA_Father)
 	{
 		if (enchufeActive)
 		{
 			off = random_range(0.1, -0.1);
-			
-			
+		
 			draw_sprite_ext(s_lightBulb4, 0, x, y, 1+off, 1+off, 0, c_white, 0.5);
 			gpu_set_blendmode(bm_normal);
 			draw_sprite_ext(s_lightBulb4, 0, x, y, 0.5+off, 0.5+off, 0, global.lightBlue, 0.2);

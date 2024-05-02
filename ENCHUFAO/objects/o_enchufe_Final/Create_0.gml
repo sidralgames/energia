@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+firstHP = 200;
+
 inScreen = false;
 image_speed = 0;
 haveHPnow = false;

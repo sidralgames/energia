@@ -1,7 +1,7 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
 
-num = irandom(255);
+num = irandom_range(40,225);
 black = make_color_rgb(num,num,num)
 
 light_layer = layer_get_id("Light");
