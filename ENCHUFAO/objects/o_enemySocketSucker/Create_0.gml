@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 enemyBestiaryNumber = global.enemySocketsuckerBestiaryNumber; 
-
+enemyWithLight = false;
 slowedPeta = 0;
 freezing = 0;
 freeze = false;

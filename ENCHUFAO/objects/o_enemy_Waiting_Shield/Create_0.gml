@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 enemyBestiaryNumber = global.enemyShieldBestiaryNumber;
-
+enemyWithLight = false;
 canStopChasing = false;
 slowedPeta = 0;
 keepChasingTime = 180;

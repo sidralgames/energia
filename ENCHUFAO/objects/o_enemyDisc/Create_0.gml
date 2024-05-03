@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 enemyBestiaryNumber = global.enemyDiscBestiaryNumber;
-
+enemyWithLight = false;
 slowedPeta = 0;
 slowed = false;
 freezing = 0;

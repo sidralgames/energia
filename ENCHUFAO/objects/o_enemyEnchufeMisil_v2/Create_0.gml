@@ -4,7 +4,7 @@ slowedPeta = 0;
 freezing = 0;
 freeze = false;
 slowed = false;
-
+enemyWithLight = false;
 slowedContMax = 30;
 slowedCont = slowedContMax;
 discounted = false;

@@ -3,7 +3,7 @@
 global.haveChargerAdapter = false;
 global.meteorsCount = 0;
 global.assistedSlowmo = false;
-
+contLight = 0;
 //global.bombIsClusterBomb = true;
 //global.haveSmokeBomb = true;
 //global.bombIsHomingBomb = true;

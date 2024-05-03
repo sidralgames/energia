@@ -4,7 +4,7 @@ chargedInEnergy = true;
 chargedInAmmo = true;
 chargedInHp = true;
 firstSetted = false;
-
+contLight = 0;
 for (var i=0; i<2; i++)
 {
 	chooseAttribute = choose(0,1,2)

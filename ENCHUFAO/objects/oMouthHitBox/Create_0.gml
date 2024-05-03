@@ -8,6 +8,7 @@ discounted = false;
 
 // Inherit the parent event
 event_inherited();
+enemyWithLight = false;
 hurts = true;
 contHurt=10;
 canBreak = false;

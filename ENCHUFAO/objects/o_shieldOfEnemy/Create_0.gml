@@ -19,5 +19,6 @@ canBeDestroyed = true;
 thisEnemyBounce = false;
 leavesTrail = false;
 finalTrail = false;
+enemyWithLight = false;
 
 
