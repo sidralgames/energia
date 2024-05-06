@@ -29,6 +29,8 @@ else
 	}
 }
 
+image_xscale = 1 + off/2;
+image_yscale = 1 + off/2;
 
 
 

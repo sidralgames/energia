@@ -14,12 +14,7 @@ resH = display_get_height();
 alarm[1] = 20;
 showControls = false;
 
-
-
 font_add_enable_aa(false);
-
-customFont = font_add("ChubbyChoo-SemiBold.ttf", 14, false, false, 32, 128);
-customFont2 = font_add("ChubbyChoo-SemiBold.ttf", 12, false, false, 32, 128);
 
 timesToDraw = 0;
 

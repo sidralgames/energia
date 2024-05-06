@@ -12,11 +12,9 @@ function Lights_end()
 		
 			gpu_set_blendmode_ext(bm_dest_color, bm_zero)
 		
-			draw_surface(iLight.light_surface, 0, 0)
+			draw_surface(oLight.light_surface, 0, 0)
 			gpu_set_blendmode(bm_normal);
 		
 		surface_reset_target();
-
 	}
-
 }

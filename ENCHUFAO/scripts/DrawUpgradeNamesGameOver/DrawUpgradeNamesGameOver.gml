@@ -13,7 +13,7 @@ function DrawUpgradeNamesGameOver()
 			if (upgrades.times = 1)
 			{
 				draw_set_halign(fa_left)
-				draw_set_font(customFont2)
+				draw_set_font(global.customFont12)
 				draw_set_color(orange)
 				draw_text(__view_get( e__VW.XView, 0 )+46,__view_get( e__VW.YView, 0 )+201+timesToDraw*15, upgrades.nameUpgrade)
 				draw_set_color(global.yellow)
@@ -22,7 +22,7 @@ function DrawUpgradeNamesGameOver()
 			else
 			{
 				draw_set_halign(fa_left)
-				draw_set_font(customFont2)
+				draw_set_font(global.customFont12)
 				draw_set_color(orange)
 				draw_text(__view_get( e__VW.XView, 0 )+46,__view_get( e__VW.YView, 0 )+201+timesToDraw*15, string(upgrades.nameUpgrade) +" x" + string(upgrades.times))
 				draw_set_color(global.yellow)

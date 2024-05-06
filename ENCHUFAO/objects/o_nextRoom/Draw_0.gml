@@ -70,7 +70,7 @@ if (_visible = true)
 		}
 		draw_sprite_ext(spriteToShow,0,__view_get( e__VW.XView, 0 )+initialX,__view_get( e__VW.YView, 0 )+155,2,2,90,image_blend, alphaSprite)
 
-		draw_set_font(customFont);
+		draw_set_font(global.customFont16);
 	
 		if (ship.unlocked == 1)
 		{

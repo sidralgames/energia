@@ -1,7 +1,7 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
 
-draw_set_font(customFont2)
+draw_set_font(global.customFont13)
 draw_set_halign(fa_center)
 if instance_exists(o_playerShip) && instance_exists(o_charger)
 {

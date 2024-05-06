@@ -55,6 +55,7 @@ global.customFont12 = font_add("ChubbyChoo-SemiBold.ttf", 12, false, false, 32, 
 global.customFont11 = font_add("ChubbyChoo-SemiBold.ttf", 11, false, false, 32, 128);
 
 
+
 //--------------- MEGA UPGRADES -----------------//
 
 //--INVISIBILITY CLOAK--//

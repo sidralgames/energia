@@ -11,10 +11,7 @@
     "name": "Light",
     "path": "folders/Objetos/Light.yy",
   },
-  "parentObjectId": {
-    "name": "obj_shadow_caster",
-    "path": "objects/obj_shadow_caster/obj_shadow_caster.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

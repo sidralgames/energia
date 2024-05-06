@@ -66,8 +66,25 @@ if instance_exists(o_playerShip) //&& (room != Sala_Inicio)
 
 if (key_select)
 {
+	DeleteAndClearLists();
+	
+	if ds_exists(global.wallgrid_,ds_type_grid)
+	{
+		ds_grid_destroy(global.wallgrid_);
+	}
+	
+	if instance_exists(o_gridRoom)
+	{
+		mp_grid_destroy(gridRoom1);
+	}
+	
+	instance_activate_all();
+	instance_destroy(all);
+	
+	
 	SaveGame();
-	game_restart()
+	
+	room_goto(Sala_Inicio);
 }
 
 

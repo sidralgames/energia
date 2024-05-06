@@ -3,7 +3,7 @@
 function SaveGame()
 {
 	
-	
+	FreeLightSurface();
 	
 	ini_open("EnxufaoData.ini");
 	

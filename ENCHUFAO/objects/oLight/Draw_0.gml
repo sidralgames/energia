@@ -6,6 +6,18 @@
 //num +=1;
 //black = make_color_rgb(num,num,num)
 
+with(o_shield)
+{
+	off = random_range(0.05, -0.05);
+	draw_sprite_ext(s_lightBulb4, 0, x, y, 0.2+off, 0.2+off, 0, c_white, 0.35);
+}
+
+with(o_ShieldpickUp)
+{
+	off = random_range(0.05, -0.05);
+	draw_sprite_ext(s_lightBulb4, 0, x, y, 0.15+off, 0.15+off, 0, c_white, 0.5);
+}
+
 
 //------ PLAYER ------//
 with(o_playerShip)
@@ -46,12 +58,14 @@ with(o_playerShip)
 	maxLenght = 600;
 	angOff = max(0, global.energy*0.05)
 	iniOff = 7
-	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, _angle, c_white, 0.2);
-	draw_sprite_ext(s_lightBulb4, 0, x, y, 0.5+off, 0.5+off, 0, c_white, 0.2);
+	
+	draw_sprite_ext(s_lightBulb4, 0, x, y, 0.5+off, 0.5+off, 0, c_white, 0.25);
 	draw_set_alpha(0.28)
 	draw_triangle_color(x-lengthdir_x(iniOff,_angle-90), y-lengthdir_y(iniOff, _angle-90), x+lengthdir_x(maxLenght,_angle+angOff), y-1+lengthdir_y(maxLenght, _angle+angOff), x+lengthdir_x(maxLenght,_angle-angOff), y-1+lengthdir_y(maxLenght, _angle-angOff), c_white, c_white, c_white, false);
 	draw_triangle_color(x-lengthdir_x(iniOff,_angle+90), y-lengthdir_y(iniOff, _angle+90), x+lengthdir_x(maxLenght,_angle+angOff), y-1+lengthdir_y(maxLenght, _angle+angOff), x+lengthdir_x(maxLenght,_angle-angOff), y-1+lengthdir_y(maxLenght, _angle-angOff), c_white, c_white, c_white, false);
 	draw_set_alpha(1)
+	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, _angle, c_white, 0.2);
+
 	
 }
 
@@ -196,7 +210,7 @@ with(o_enemyP)
 
 with(o_strandedShip)
 {
-	if (!chargedInHp) || (!chargedInEnergy)
+	if (!chargedInHp) || (!chargedInEnergy) || (!chargedInAmmo)
 	{
 		off = random_range(0.05, -0.05);
 		if (contLight <= 10)

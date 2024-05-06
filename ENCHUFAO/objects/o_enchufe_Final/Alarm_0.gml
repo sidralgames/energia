@@ -3,6 +3,8 @@
 
 if (cont = true)
 {
+	FreeLightSurface();
+	
 	//---- KILL CHIPS ----//
 	if instance_exists(o_chipFather)
 	{

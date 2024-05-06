@@ -3,7 +3,6 @@
 global.bombsTutorial = 0;
 global.laserTutorial = 0;
 
-customFont2 = font_add("ChubbyChoo-SemiBold.ttf", 13, false, false, 32, 128);
 bomb = false;
 contEnemies =260;
 global.assistedSlowmo = false;

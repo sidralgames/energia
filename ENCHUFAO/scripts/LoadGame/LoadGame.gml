@@ -212,6 +212,5 @@ function LoadGame()
 	global.infiniteLaserIsOn = false;
 	
 	ini_close();
-	
-	
+
 }
