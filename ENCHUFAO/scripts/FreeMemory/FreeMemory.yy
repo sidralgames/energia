@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "DeleteAndClearLists",
+  "name": "FreeMemory",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "FREE MEMORY",
+    "path": "folders/Scripts/FREE MEMORY.yy",
   },
 }

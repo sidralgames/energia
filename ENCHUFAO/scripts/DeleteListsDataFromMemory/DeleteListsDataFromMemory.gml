@@ -1,15 +1,7 @@
 // Los recursos de Script han cambiado para la v2.3.0 Consulta
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
-function DeleteAndClearLists()
+function DeleteListsDataFromMemory()
 {
-	font_delete(global.customFont20);
-	font_delete(global.customFont16);
-	font_delete(global.customFont14);
-	font_delete(global.customFont13);
-	font_delete(global.customFont12);
-	font_delete(global.customFont11);
-	
-	
 	for (var i= 0; i<global.numberOfUpgradesPlayer; i++)
 	{
 		ds_map_delete(global.PlayerUpgradesList, i)	
@@ -85,10 +77,6 @@ function DeleteAndClearLists()
 		ds_map_delete(global.explosionList, i)	
 	}
 	
-	
-	audio_bus_clear_emitters(delay_bus)
-	audio_emitter_free(global.audioEmitter);
-	
 	ds_map_clear(global.PlayerUpgradesList);
 	ds_map_clear(global.upgradesList);
 	ds_map_clear(global.megaUpgradesList);
@@ -129,72 +117,4 @@ function DeleteAndClearLists()
 	ds_map_destroy(global.statsList);
 	ds_map_destroy(global.bestiaryList);
 	ds_map_destroy(global.explosionList);
-
-	part_emitter_destroy_all(global.ammoPart_sys);
-	part_system_destroy(global.ammoPart_sys);
-	
-	part_emitter_destroy_all(global.enchufe_sys);
-	part_system_destroy(global.enchufe_sys);
-	
-	part_emitter_destroy_all(global.energyPart_sys);
-	part_system_destroy(global.energyPart_sys);
-	
-	part_emitter_destroy_all(global.balaGarbanzo_sys);
-	part_system_destroy(global.balaGarbanzo_sys);
-	
-	part_emitter_destroy_all(global.balaGreen_sys);
-	part_system_destroy(global.balaGreen_sys);
-	
-	part_emitter_destroy_all(global.balaP_sys);
-	part_system_destroy(global.balaP_sys);
-	
-	part_emitter_destroy_all(global.balaPTorreta_sys);
-	part_system_destroy(global.balaPTorreta_sys);
-	
-	part_emitter_destroy_all(global.balaPTorretaBig_sys);
-	part_system_destroy(global.balaPTorretaBig_sys);
-	
-	part_emitter_destroy_all(global.EnemyKilledBy_sys);
-	part_system_destroy(global.EnemyKilledBy_sys);
-	
-	part_emitter_destroy_all(global.laserPart_sys);
-	part_system_destroy(global.laserPart_sys);
-	
-	part_emitter_destroy_all(global.misil_sys);
-	part_system_destroy(global.misil_sys);
-	
-	part_emitter_destroy_all(global.naveEnemy_Mini_sys);
-	part_system_destroy(global.naveEnemy_Mini_sys);
-	
-	part_emitter_destroy_all(global.naveEnemy_Waiting_sys);
-	part_system_destroy(global.naveEnemy_Waiting_sys);
-	
-	part_emitter_destroy_all(global.naveEnemy1_sys);
-	part_system_destroy(global.naveEnemy1_sys);
-	
-	part_emitter_destroy_all(global.naveFriend_sys);
-	part_system_destroy(global.naveFriend_sys);
-	
-	part_emitter_destroy_all(global.naveP_cloak_sys);
-	part_system_destroy(global.naveP_cloak_sys);
-	
-	part_emitter_destroy_all(global.naveP_sys);
-	part_system_destroy(global.naveP_sys);
-	
-	part_emitter_destroy_all(global.overCharged_sys);
-	part_system_destroy(global.overCharged_sys);
-	
-	part_emitter_destroy_all(global.partSmoke_sys);
-	part_system_destroy(global.partSmoke_sys);
-	
-	part_emitter_destroy_all(global.partSmokeBomb_Back_sys);
-	part_system_destroy(global.partSmokeBomb_Back_sys);
-	
-	part_emitter_destroy_all(global.partSmokeBomb_sys);
-	part_system_destroy(global.partSmokeBomb_sys);
-	
-	part_emitter_destroy_all(global.repairingPart_sys);
-	part_system_destroy(global.repairingPart_sys);
-	
-	
 }

@@ -18,7 +18,7 @@ thisEnemyBounce = false;
 isWormHitBox = false;
 canBeDestroyed = true;
 hurts = true;
-myPath = path_add();
+
 burned = false;
 finalTrail = false;
 
@@ -41,7 +41,7 @@ repelled = false;
 repelledTimeMax = 20;
 repelledTime = repelledTimeMax;
 
-myPath = path_add();
+
 _angle=0;
 isShield = false;
 isImmortal = false

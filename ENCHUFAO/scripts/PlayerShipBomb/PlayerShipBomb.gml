@@ -2,6 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PlayerShipBomb()
 {
+	
 	if (global.bombIsClusterBomb)
 	{
 		bombToFire = o_bulletPlayer_BombCluster;

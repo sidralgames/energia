@@ -4,7 +4,7 @@ function FriendIA()
 {
 	if point_distance(x,y,o_playerShip.x, o_playerShip.y) > 50	
 	{
-		myPath = path_add();
+		//myPath = path_add();
 		mp_grid_path(gridRoom1, myPath, x, y, o_playerShip.x,  o_playerShip.y, true);
 		changedSpeed = false;
 		

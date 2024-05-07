@@ -63,29 +63,42 @@ if instance_exists(o_playerShip) //&& (room != Sala_Inicio)
 	}
 }
 
+part_type_sprite(global.balaP,global.bulletPart_sprite,true,1,false)
 
-if (key_select)
+
+if (key_select) && (ending = false)
 {
-	DeleteAndClearLists();
-	
-	if ds_exists(global.wallgrid_,ds_type_grid)
-	{
-		ds_grid_destroy(global.wallgrid_);
-	}
-	
-	if instance_exists(o_gridRoom)
-	{
-		mp_grid_destroy(gridRoom1);
-	}
-	
 	instance_activate_all();
+	ending = true;
+	endTimer = 90;
+}
+
+if (endTimer >= 0)  && (ending = true)
+{
+	endTimer --;
+	var lay_id = layer_get_id("Tiles");
+	var tile_id = layer_tilemap_get_id(lay_id);
+	
+	if (layer_tilemap_exists(lay_id, tile_id))
+	{
+	    layer_tilemap_destroy(tile_id);
+	}
+}
+
+if (endTimer <= 0) && (ending = true)
+{
+	FreeMemory();
+	
+	
+	instance_destroy(o_pause);
+	instance_destroy(o_gridRoom);
+	
 	instance_destroy(all);
 	
-	
 	SaveGame();
-	
+
 	room_goto(Sala_Inicio);
 }
 
 
-part_type_sprite(global.balaP,global.bulletPart_sprite,true,1,false)
+

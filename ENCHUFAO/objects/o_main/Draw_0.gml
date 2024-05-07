@@ -19,7 +19,7 @@ if instance_exists(o_playerShip)
 
 }
 
-if (!isPaused)
+if (!isPaused) && (room != Sala_Splash)
 {
 
 	UIPlayership();

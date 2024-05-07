@@ -10,6 +10,11 @@ if (cont = true)
 		o_chipFather._hp = 1;
 	}
 	
+	instance_deactivate_object(o_main)
+	instance_deactivate_object(o_pause)
+	instance_destroy(all);
+	instance_activate_object(o_main)
+	instance_activate_object(o_pause)
 	room_goto(Sala_0)
 	global.level = 1;
 	

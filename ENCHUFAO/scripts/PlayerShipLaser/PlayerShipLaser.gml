@@ -21,7 +21,7 @@ function PlayerShipLaser(argument0)
 	_angle+=random_range(1,-1);
 	_hpush += -lengthdir_x(0.13, _angle);
 	_vpush += -lengthdir_y(0.13, _angle);
-	var maxLenght_ = 640;
+	var maxLenght_ = 600;
 	
 	for(var i = 0; i < maxLenght_; i++)
 	{

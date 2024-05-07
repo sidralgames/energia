@@ -22,7 +22,7 @@ function StrandedShip_StrandedState()
 			if point_distance(x,y,o_playerShip.x, o_playerShip.y) > 70	
 			{
 					strandedSpeed = lerp(strandedSpeed,maxSpeed,0.05)
-					myPath = path_add();
+					//myPath = path_add();
 					mp_grid_path(gridRoom1, myPath, x, y, o_playerShip.x,  o_playerShip.y, true);
 					changedSpeed = false;
 					StrandedShip_MoveIA();

@@ -2,23 +2,22 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function Lights_begin()
 {
-	_color = oLight.black;
-	if (event_type == ev_draw) && (event_number == 0)
+	if instance_exists(oLight)
 	{
-		if (!surface_exists(oLight.light_surface))
+		_color = oLight.black;
+		
+		if (event_type == ev_draw) && (event_number == 0)
 		{
-			oLight.light_surface = surface_create(room_width, room_height);
+			if (!surface_exists(oLight.light_surface))
+			{
+				oLight.light_surface = surface_create(room_width, room_height);
+			}
+		
+			surface_set_target(oLight.light_surface);
+		
+			draw_clear_alpha(_color, 1.0);
+		
+			gpu_set_blendmode(bm_add);
 		}
-		
-	
-		
-		surface_set_target(oLight.light_surface);
-		
-		
-		
-		draw_clear_alpha(_color, 1.0);
-		
-		
-		gpu_set_blendmode(bm_add);
 	}
 }

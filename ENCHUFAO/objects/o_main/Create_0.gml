@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+ending = false;
+endTimer = 10;
 global.haveChargerAdapter = false;
 global.adaptersInLevel = 0;
 global.goToSecretRoom = false;
@@ -128,7 +130,7 @@ global.laserStunsEnemies = false; //fLASH AL LANZARLO
 
 
 global.shootingRecharges = false;
-global.friendIsUpgraded = false;
+global.friendIsUpgraded = true;
 
 
 

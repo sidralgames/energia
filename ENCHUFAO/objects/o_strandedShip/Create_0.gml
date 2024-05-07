@@ -5,6 +5,9 @@ chargedInAmmo = true;
 chargedInHp = true;
 firstSetted = false;
 contLight = 0;
+
+myPath = path_add();
+
 for (var i=0; i<2; i++)
 {
 	chooseAttribute = choose(0,1,2)

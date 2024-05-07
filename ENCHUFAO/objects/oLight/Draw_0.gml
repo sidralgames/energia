@@ -225,6 +225,7 @@ with(o_strandedShip)
 	
 	if (shipReady)
 	{
+		off = random_range(0.05, -0.05);
 		draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, _angle, c_white, 0.2);
 		draw_sprite_ext(s_lightBulb4, 0, x, y, 0.5+off, 0.5+off, 0, c_white, 0.15);
 	}
