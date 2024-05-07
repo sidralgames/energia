@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "UIPlayerDamage",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "PLAYERSHIP",
-    "path": "folders/Scripts/PLAYERSHIP.yy",
+  "$GMScript":"",
+  "%Name":"UIPlayerDamage",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"UIPlayerDamage",
+  "parent":{
+    "name":"PLAYERSHIP",
+    "path":"folders/Scripts/PLAYERSHIP.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

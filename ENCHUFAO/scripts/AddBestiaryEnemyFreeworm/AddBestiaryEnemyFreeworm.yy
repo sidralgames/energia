@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "AddBestiaryEnemyFreeworm",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "ADD ENEMIES",
-    "path": "folders/Scripts/BESTIARY/ADD ENEMIES.yy",
+  "$GMScript":"",
+  "%Name":"AddBestiaryEnemyFreeworm",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddBestiaryEnemyFreeworm",
+  "parent":{
+    "name":"ADD ENEMIES",
+    "path":"folders/Scripts/BESTIARY/ADD ENEMIES.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

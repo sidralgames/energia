@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "AddHighScoreStat",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "STATS",
-    "path": "folders/Scripts/GENERAL/STATS.yy",
+  "$GMScript":"",
+  "%Name":"AddHighScoreStat",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddHighScoreStat",
+  "parent":{
+    "name":"STATS",
+    "path":"folders/Scripts/GENERAL/STATS.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

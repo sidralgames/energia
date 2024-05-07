@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CreateStrandedShipBonusUpgraded",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "STRANDED FRIEND",
-    "path": "folders/Scripts/STRANDED SHIP/STRANDED FRIEND.yy",
+  "$GMScript":"",
+  "%Name":"CreateStrandedShipBonusUpgraded",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreateStrandedShipBonusUpgraded",
+  "parent":{
+    "name":"STRANDED FRIEND",
+    "path":"folders/Scripts/STRANDED SHIP/STRANDED FRIEND.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

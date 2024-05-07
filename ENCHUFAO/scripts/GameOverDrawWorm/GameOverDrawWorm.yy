@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "GameOverDrawWorm",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "ENCHUFAO",
-    "path": "ENCHUFAO.yyp",
+  "$GMScript":"",
+  "%Name":"GameOverDrawWorm",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GameOverDrawWorm",
+  "parent":{
+    "name":"ENCHUFAO",
+    "path":"ENCHUFAO.yyp",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

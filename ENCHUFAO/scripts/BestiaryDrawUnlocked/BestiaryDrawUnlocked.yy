@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "BestiaryDrawUnlocked",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "BESTIARY",
-    "path": "folders/Scripts/BESTIARY.yy",
+  "$GMScript":"",
+  "%Name":"BestiaryDrawUnlocked",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BestiaryDrawUnlocked",
+  "parent":{
+    "name":"BESTIARY",
+    "path":"folders/Scripts/BESTIARY.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

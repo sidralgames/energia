@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "SpawnEnemyMitosisAndMini",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "GROUPS",
-    "path": "folders/Scripts/SPAWNERS/GROUPS.yy",
+  "$GMScript":"",
+  "%Name":"SpawnEnemyMitosisAndMini",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SpawnEnemyMitosisAndMini",
+  "parent":{
+    "name":"GROUPS",
+    "path":"folders/Scripts/SPAWNERS/GROUPS.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

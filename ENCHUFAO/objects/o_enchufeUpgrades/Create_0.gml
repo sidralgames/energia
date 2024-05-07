@@ -10,3 +10,4 @@
 // Inherit the parent event
 event_inherited();
 isEnchufeUpgrade = true;
+finalOpen = false;

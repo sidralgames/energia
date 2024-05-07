@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "StopSounds",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "GENERAL",
-    "path": "folders/Scripts/GENERAL.yy",
+  "$GMScript":"",
+  "%Name":"StopSounds",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"StopSounds",
+  "parent":{
+    "name":"GENERAL",
+    "path":"folders/Scripts/GENERAL.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

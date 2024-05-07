@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CheckEnchufeUpgrade",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "UPGRADESLIST",
-    "path": "folders/Scripts/GENERAL/UPGRADESLIST.yy",
+  "$GMScript":"",
+  "%Name":"CheckEnchufeUpgrade",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CheckEnchufeUpgrade",
+  "parent":{
+    "name":"UPGRADESLIST",
+    "path":"folders/Scripts/GENERAL/UPGRADESLIST.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

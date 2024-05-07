@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "SlowMoIndicator",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "PLAYERSHIP",
-    "path": "folders/Scripts/PLAYERSHIP.yy",
+  "$GMScript":"",
+  "%Name":"SlowMoIndicator",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SlowMoIndicator",
+  "parent":{
+    "name":"PLAYERSHIP",
+    "path":"folders/Scripts/PLAYERSHIP.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

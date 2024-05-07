@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CallForHelp",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "CALLING FOR HELP",
-    "path": "folders/Scripts/STRANDED SHIP/CALLING FOR HELP.yy",
+  "$GMScript":"",
+  "%Name":"CallForHelp",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CallForHelp",
+  "parent":{
+    "name":"CALLING FOR HELP",
+    "path":"folders/Scripts/STRANDED SHIP/CALLING FOR HELP.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

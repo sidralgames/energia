@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "AddUpgradeShieldPerRoom",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "UPGRADES",
-    "path": "folders/Scripts/GENERAL/UPGRADESLIST/UPGRADES.yy",
+  "$GMScript":"",
+  "%Name":"AddUpgradeShieldPerRoom",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddUpgradeShieldPerRoom",
+  "parent":{
+    "name":"UPGRADES",
+    "path":"folders/Scripts/GENERAL/UPGRADESLIST/UPGRADES.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

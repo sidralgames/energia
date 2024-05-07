@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "__init_global",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "background",
-    "path": "folders/Scripts/Compatibility/background.yy",
+  "$GMScript":"",
+  "%Name":"__init_global",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__init_global",
+  "parent":{
+    "name":"background",
+    "path":"folders/Scripts/Compatibility/background.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

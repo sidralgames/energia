@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "AddUpgradeHomingBombPlus",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "UPGRADES",
-    "path": "folders/Scripts/GENERAL/UPGRADESLIST/UPGRADES.yy",
+  "$GMScript":"",
+  "%Name":"AddUpgradeHomingBombPlus",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddUpgradeHomingBombPlus",
+  "parent":{
+    "name":"UPGRADES",
+    "path":"folders/Scripts/GENERAL/UPGRADESLIST/UPGRADES.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

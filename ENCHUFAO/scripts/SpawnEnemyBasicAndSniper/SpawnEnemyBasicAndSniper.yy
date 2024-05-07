@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "SpawnEnemyBasicAndSniper",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "GROUPS",
-    "path": "folders/Scripts/SPAWNERS/GROUPS.yy",
+  "$GMScript":"",
+  "%Name":"SpawnEnemyBasicAndSniper",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SpawnEnemyBasicAndSniper",
+  "parent":{
+    "name":"GROUPS",
+    "path":"folders/Scripts/SPAWNERS/GROUPS.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "AddUpgradeExploHit",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "UPGRADES",
-    "path": "folders/Scripts/GENERAL/UPGRADESLIST/UPGRADES.yy",
+  "$GMScript":"",
+  "%Name":"AddUpgradeExploHit",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddUpgradeExploHit",
+  "parent":{
+    "name":"UPGRADES",
+    "path":"folders/Scripts/GENERAL/UPGRADESLIST/UPGRADES.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

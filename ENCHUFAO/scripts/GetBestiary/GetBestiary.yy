@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "GetBestiary",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "ENCHUFAO",
-    "path": "ENCHUFAO.yyp",
+  "$GMScript":"",
+  "%Name":"GetBestiary",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GetBestiary",
+  "parent":{
+    "name":"ENCHUFAO",
+    "path":"ENCHUFAO.yyp",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

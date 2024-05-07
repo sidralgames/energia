@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "SetFxParameters",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "General",
-    "path": "folders/Scripts/GENERAL/General.yy",
+  "$GMScript":"",
+  "%Name":"SetFxParameters",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SetFxParameters",
+  "parent":{
+    "name":"General",
+    "path":"folders/Scripts/GENERAL/General.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

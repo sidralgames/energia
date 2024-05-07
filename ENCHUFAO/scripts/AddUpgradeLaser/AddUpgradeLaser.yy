@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "AddUpgradeLaser",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "UPGRADES",
-    "path": "folders/Scripts/GENERAL/UPGRADESLIST/UPGRADES.yy",
+  "$GMScript":"",
+  "%Name":"AddUpgradeLaser",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddUpgradeLaser",
+  "parent":{
+    "name":"UPGRADES",
+    "path":"folders/Scripts/GENERAL/UPGRADESLIST/UPGRADES.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

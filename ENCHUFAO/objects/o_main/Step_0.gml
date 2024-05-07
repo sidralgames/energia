@@ -70,7 +70,7 @@ if (key_select) && (ending = false)
 {
 	instance_activate_all();
 	ending = true;
-	endTimer = 90;
+	endTimer = 10;
 }
 
 if (endTimer >= 0)  && (ending = true)

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "PluggedToShip",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "PLAYERSHIP",
-    "path": "folders/Scripts/PLAYERSHIP.yy",
+  "$GMScript":"",
+  "%Name":"PluggedToShip",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"PluggedToShip",
+  "parent":{
+    "name":"PLAYERSHIP",
+    "path":"folders/Scripts/PLAYERSHIP.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

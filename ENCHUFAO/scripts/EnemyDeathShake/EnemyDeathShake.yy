@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "EnemyDeathShake",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "ENEMIES",
-    "path": "folders/Scripts/ENEMIES.yy",
+  "$GMScript":"",
+  "%Name":"EnemyDeathShake",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"EnemyDeathShake",
+  "parent":{
+    "name":"ENEMIES",
+    "path":"folders/Scripts/ENEMIES.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

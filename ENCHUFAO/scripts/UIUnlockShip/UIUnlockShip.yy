@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "UIUnlockShip",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "STRANDED SHIP",
-    "path": "folders/Scripts/STRANDED SHIP.yy",
+  "$GMScript":"",
+  "%Name":"UIUnlockShip",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"UIUnlockShip",
+  "parent":{
+    "name":"STRANDED SHIP",
+    "path":"folders/Scripts/STRANDED SHIP.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

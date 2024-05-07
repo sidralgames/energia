@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CheckSmokeToHide",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Bullets",
-    "path": "folders/Objetos/Bullets.yy",
+  "$GMScript":"",
+  "%Name":"CheckSmokeToHide",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CheckSmokeToHide",
+  "parent":{
+    "name":"Bullets",
+    "path":"folders/Objetos/Bullets.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

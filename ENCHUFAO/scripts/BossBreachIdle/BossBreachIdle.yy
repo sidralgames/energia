@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "BossBreachIdle",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "BOSS BREACH",
-    "path": "folders/Scripts/BOSS BREACH.yy",
+  "$GMScript":"",
+  "%Name":"BossBreachIdle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BossBreachIdle",
+  "parent":{
+    "name":"BOSS BREACH",
+    "path":"folders/Scripts/BOSS BREACH.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

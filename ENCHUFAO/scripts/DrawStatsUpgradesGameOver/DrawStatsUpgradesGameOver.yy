@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "DrawStatsUpgradesGameOver",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "GENERAL",
-    "path": "folders/Scripts/GENERAL.yy",
+  "$GMScript":"",
+  "%Name":"DrawStatsUpgradesGameOver",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"DrawStatsUpgradesGameOver",
+  "parent":{
+    "name":"GENERAL",
+    "path":"folders/Scripts/GENERAL.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

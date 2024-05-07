@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "EnemyEnchufePlugged",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "ENEMIES",
-    "path": "folders/Scripts/ENEMIES.yy",
+  "$GMScript":"",
+  "%Name":"EnemyEnchufePlugged",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"EnemyEnchufePlugged",
+  "parent":{
+    "name":"ENEMIES",
+    "path":"folders/Scripts/ENEMIES.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "SetVines",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "CREATE LEVEL",
-    "path": "folders/Scripts/GENERAL/CREATE LEVEL.yy",
+  "$GMScript":"",
+  "%Name":"SetVines",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SetVines",
+  "parent":{
+    "name":"CREATE LEVEL",
+    "path":"folders/Scripts/GENERAL/CREATE LEVEL.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

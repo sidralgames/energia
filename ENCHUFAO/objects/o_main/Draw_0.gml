@@ -3,6 +3,8 @@
 draw_set_halign(fa_left)
 
 
+//draw_text(__view_get( e__VW.XView, 0 )+50,__view_get( e__VW.YView, 0 )+150, "instancias: " + string(instance_count))
+
 
 
 

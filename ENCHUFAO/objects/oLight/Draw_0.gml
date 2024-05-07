@@ -60,7 +60,7 @@ with(o_playerShip)
 	iniOff = 7
 	
 	draw_sprite_ext(s_lightBulb4, 0, x, y, 0.5+off, 0.5+off, 0, c_white, 0.25);
-	draw_set_alpha(0.28)
+	draw_set_alpha(0.3)
 	draw_triangle_color(x-lengthdir_x(iniOff,_angle-90), y-lengthdir_y(iniOff, _angle-90), x+lengthdir_x(maxLenght,_angle+angOff), y-1+lengthdir_y(maxLenght, _angle+angOff), x+lengthdir_x(maxLenght,_angle-angOff), y-1+lengthdir_y(maxLenght, _angle-angOff), c_white, c_white, c_white, false);
 	draw_triangle_color(x-lengthdir_x(iniOff,_angle+90), y-lengthdir_y(iniOff, _angle+90), x+lengthdir_x(maxLenght,_angle+angOff), y-1+lengthdir_y(maxLenght, _angle+angOff), x+lengthdir_x(maxLenght,_angle-angOff), y-1+lengthdir_y(maxLenght, _angle-angOff), c_white, c_white, c_white, false);
 	draw_set_alpha(1)
@@ -186,6 +186,18 @@ with(o_torreta)
 	draw_sprite_ext(s_lightBulb4, 0, x, y, 0.5+off, 0.5+off, 0, c_white, 0.5 + off);
 }
 
+with(o_BombpickUp)
+{
+	off = random_range(0.02, -0.02);
+	draw_sprite_ext(s_lightBulb4, 0, x, y, 0.25+off, 0.25+off, 0, c_white, 0.5 + off);
+}
+
+with(o_BatteryPickUp_Father)
+{
+	off = random_range(0.02, -0.02);
+	draw_sprite_ext(s_lightBulb4, 0, x, y, 0.25+off, 0.25+off, 0, c_white, 0.5 + off);
+}
+
 with(o_temporaryPickUp)
 {
 	off = random_range(0.02, -0.02);
@@ -203,7 +215,16 @@ with(o_enemyP)
 	if (enemyWithLight = true)
 	{
 		off = random_range(0.05, -0.05);
-		draw_sprite_ext(sprite_index, 0, x, y, image_xscale, image_yscale, _angle, c_white, 0.2);
+		draw_sprite_ext(s_lightEnemyFront, 0, x, y, 1.5, image_yscale, _angle, c_white, 0.4);
+	}
+}
+
+with(o_enemyDisc)
+{
+	if (state != 0)
+	{
+		off = random_range(0.05, -0.05);
+		draw_sprite_ext(s_lightBulb4, 0, x, y, 0.08+off, 0.08+off, 0, c_white, 0.5 + off);
 	}
 }
 

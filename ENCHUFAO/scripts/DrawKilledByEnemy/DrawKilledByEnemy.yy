@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "DrawKilledByEnemy",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "GENERAL",
-    "path": "folders/Scripts/GENERAL.yy",
+  "$GMScript":"",
+  "%Name":"DrawKilledByEnemy",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"DrawKilledByEnemy",
+  "parent":{
+    "name":"GENERAL",
+    "path":"folders/Scripts/GENERAL.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

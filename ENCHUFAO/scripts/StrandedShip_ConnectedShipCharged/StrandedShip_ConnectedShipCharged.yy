@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "StrandedShip_ConnectedShipCharged",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "STRANDED FRIEND",
-    "path": "folders/Scripts/STRANDED SHIP/STRANDED FRIEND.yy",
+  "$GMScript":"",
+  "%Name":"StrandedShip_ConnectedShipCharged",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"StrandedShip_ConnectedShipCharged",
+  "parent":{
+    "name":"STRANDED FRIEND",
+    "path":"folders/Scripts/STRANDED SHIP/STRANDED FRIEND.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

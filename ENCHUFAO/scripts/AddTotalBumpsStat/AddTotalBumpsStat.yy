@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "AddTotalBumpsStat",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "STATS",
-    "path": "folders/Scripts/GENERAL/STATS.yy",
+  "$GMScript":"",
+  "%Name":"AddTotalBumpsStat",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddTotalBumpsStat",
+  "parent":{
+    "name":"STATS",
+    "path":"folders/Scripts/GENERAL/STATS.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

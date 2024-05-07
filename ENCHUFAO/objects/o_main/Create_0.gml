@@ -130,7 +130,7 @@ global.laserStunsEnemies = false; //fLASH AL LANZARLO
 
 
 global.shootingRecharges = false;
-global.friendIsUpgraded = true;
+global.friendIsUpgraded = false;
 
 
 

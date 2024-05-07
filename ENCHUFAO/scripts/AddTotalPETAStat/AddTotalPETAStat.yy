@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "AddTotalPETAStat",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "STATS",
-    "path": "folders/Scripts/GENERAL/STATS.yy",
+  "$GMScript":"",
+  "%Name":"AddTotalPETAStat",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddTotalPETAStat",
+  "parent":{
+    "name":"STATS",
+    "path":"folders/Scripts/GENERAL/STATS.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

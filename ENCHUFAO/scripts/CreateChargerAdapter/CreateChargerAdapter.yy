@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CreateChargerAdapter",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "ENCHUFAO",
-    "path": "ENCHUFAO.yyp",
+  "$GMScript":"",
+  "%Name":"CreateChargerAdapter",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreateChargerAdapter",
+  "parent":{
+    "name":"ENCHUFAO",
+    "path":"ENCHUFAO.yyp",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

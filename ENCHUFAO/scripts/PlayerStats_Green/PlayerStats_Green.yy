@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "PlayerStats_Green",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "STATS",
-    "path": "folders/Scripts/SHIPS/STATS.yy",
+  "$GMScript":"",
+  "%Name":"PlayerStats_Green",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"PlayerStats_Green",
+  "parent":{
+    "name":"STATS",
+    "path":"folders/Scripts/SHIPS/STATS.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

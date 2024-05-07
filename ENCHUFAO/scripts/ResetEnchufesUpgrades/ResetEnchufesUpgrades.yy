@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "ResetEnchufesUpgrades",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "ENCHUFAO",
-    "path": "ENCHUFAO.yyp",
+  "$GMScript":"",
+  "%Name":"ResetEnchufesUpgrades",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ResetEnchufesUpgrades",
+  "parent":{
+    "name":"ENCHUFAO",
+    "path":"ENCHUFAO.yyp",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

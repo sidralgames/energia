@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "AddBestiaryEnemyOVNI",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "ADD ENEMIES",
-    "path": "folders/Scripts/BESTIARY/ADD ENEMIES.yy",
+  "$GMScript":"",
+  "%Name":"AddBestiaryEnemyOVNI",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddBestiaryEnemyOVNI",
+  "parent":{
+    "name":"ADD ENEMIES",
+    "path":"folders/Scripts/BESTIARY/ADD ENEMIES.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

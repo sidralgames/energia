@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "DrawLaserBossGarbanzo",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "BOSS GARBANZO",
-    "path": "folders/Scripts/BOSS GARBANZO.yy",
+  "$GMScript":"",
+  "%Name":"DrawLaserBossGarbanzo",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"DrawLaserBossGarbanzo",
+  "parent":{
+    "name":"BOSS GARBANZO",
+    "path":"folders/Scripts/BOSS GARBANZO.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

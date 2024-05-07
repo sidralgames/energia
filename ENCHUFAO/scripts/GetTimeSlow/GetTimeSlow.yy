@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "GetTimeSlow",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "General",
-    "path": "folders/Scripts/GENERAL/General.yy",
+  "$GMScript":"",
+  "%Name":"GetTimeSlow",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GetTimeSlow",
+  "parent":{
+    "name":"General",
+    "path":"folders/Scripts/GENERAL/General.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

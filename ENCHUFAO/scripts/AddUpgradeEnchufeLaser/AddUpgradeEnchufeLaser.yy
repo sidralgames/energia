@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "AddUpgradeEnchufeLaser",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "UPGRADES ENCHUFES",
-    "path": "folders/Scripts/GENERAL/UPGRADES ENCHUFES.yy",
+  "$GMScript":"",
+  "%Name":"AddUpgradeEnchufeLaser",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddUpgradeEnchufeLaser",
+  "parent":{
+    "name":"UPGRADES ENCHUFES",
+    "path":"folders/Scripts/GENERAL/UPGRADES ENCHUFES.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

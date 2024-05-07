@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "LoadGame",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "DATA",
-    "path": "folders/Scripts/DATA.yy",
+  "$GMScript":"",
+  "%Name":"LoadGame",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"LoadGame",
+  "parent":{
+    "name":"DATA",
+    "path":"folders/Scripts/DATA.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

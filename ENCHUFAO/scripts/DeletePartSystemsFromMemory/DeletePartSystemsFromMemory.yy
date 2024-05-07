@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "DeletePartSystemsFromMemory",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "FREE MEMORY",
-    "path": "folders/Scripts/FREE MEMORY.yy",
+  "$GMScript":"",
+  "%Name":"DeletePartSystemsFromMemory",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"DeletePartSystemsFromMemory",
+  "parent":{
+    "name":"FREE MEMORY",
+    "path":"folders/Scripts/FREE MEMORY.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

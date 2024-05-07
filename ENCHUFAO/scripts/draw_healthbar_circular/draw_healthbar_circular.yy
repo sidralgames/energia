@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "draw_healthbar_circular",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "GENERAL",
-    "path": "folders/Scripts/GENERAL.yy",
+  "$GMScript":"",
+  "%Name":"draw_healthbar_circular",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_healthbar_circular",
+  "parent":{
+    "name":"GENERAL",
+    "path":"folders/Scripts/GENERAL.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

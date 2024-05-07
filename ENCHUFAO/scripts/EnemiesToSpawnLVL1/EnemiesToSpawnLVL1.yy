@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "EnemiesToSpawnLVL1",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "CREATE LEVEL",
-    "path": "folders/Scripts/GENERAL/CREATE LEVEL.yy",
+  "$GMScript":"",
+  "%Name":"EnemiesToSpawnLVL1",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"EnemiesToSpawnLVL1",
+  "parent":{
+    "name":"CREATE LEVEL",
+    "path":"folders/Scripts/GENERAL/CREATE LEVEL.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

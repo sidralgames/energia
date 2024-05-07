@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "AddTotalBulletsStat",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "STATS",
-    "path": "folders/Scripts/GENERAL/STATS.yy",
+  "$GMScript":"",
+  "%Name":"AddTotalBulletsStat",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddTotalBulletsStat",
+  "parent":{
+    "name":"STATS",
+    "path":"folders/Scripts/GENERAL/STATS.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

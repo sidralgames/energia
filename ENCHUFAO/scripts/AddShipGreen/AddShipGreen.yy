@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "AddShipGreen",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "ADD SHIP",
-    "path": "folders/Scripts/SHIPS/ADD SHIP.yy",
+  "$GMScript":"",
+  "%Name":"AddShipGreen",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddShipGreen",
+  "parent":{
+    "name":"ADD SHIP",
+    "path":"folders/Scripts/SHIPS/ADD SHIP.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

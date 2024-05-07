@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "FreeLightSurface",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+  "$GMScript":"",
+  "%Name":"FreeLightSurface",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"FreeLightSurface",
+  "parent":{
+    "name":"Sprites",
+    "path":"folders/Sprites.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

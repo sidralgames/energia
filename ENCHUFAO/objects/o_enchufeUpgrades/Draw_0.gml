@@ -17,10 +17,14 @@ if instance_exists(o_playerShip)
 		draw_sprite_ext(s_enchufeChargeHP_In,0,x-42,y-30,(charge/maxCharge),1,0,image_blend, image_alpha)
 	}
 
-	if (charge >= 200)
+	if instance_exists(o_enchufe_Final)
 	{
-		o_enchufe_Final.abierto = true;
+		if (charge >= 200) && (finalOpen = false)
+		{
+			finalOpen = true;
+			o_enchufe_Final.abierto = true;
 
+		}
 	}
 }
 

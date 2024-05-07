@@ -1,9 +1,11 @@
 {
-  "resourceType": "GMNotes",
-  "resourceVersion": "1.1",
-  "name": "LICENSE",
-  "parent": {
-    "name": "Lighting",
-    "path": "folders/Notes/Lighting.yy",
+  "$GMNotes":"",
+  "%Name":"LICENSE",
+  "name":"LICENSE",
+  "parent":{
+    "name":"Lighting",
+    "path":"folders/Notes/Lighting.yy",
   },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
 }

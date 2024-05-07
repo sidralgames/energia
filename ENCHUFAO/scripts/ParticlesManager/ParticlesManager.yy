@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "ParticlesManager",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "ENCHUFAO",
-    "path": "ENCHUFAO.yyp",
+  "$GMScript":"",
+  "%Name":"ParticlesManager",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ParticlesManager",
+  "parent":{
+    "name":"ENCHUFAO",
+    "path":"ENCHUFAO.yyp",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

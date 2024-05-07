@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CreateDiscTrapWall",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "TRAPS",
-    "path": "folders/Scripts/SPAWNERS/TRAPS.yy",
+  "$GMScript":"",
+  "%Name":"CreateDiscTrapWall",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreateDiscTrapWall",
+  "parent":{
+    "name":"TRAPS",
+    "path":"folders/Scripts/SPAWNERS/TRAPS.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

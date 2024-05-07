@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "AddChip",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "CHIPS",
-    "path": "folders/Scripts/GENERAL/CHIPS.yy",
+  "$GMScript":"",
+  "%Name":"AddChip",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddChip",
+  "parent":{
+    "name":"CHIPS",
+    "path":"folders/Scripts/GENERAL/CHIPS.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "SpawnEnemyFastBreach",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "BREACHES",
-    "path": "folders/Scripts/SPAWNERS/BREACHES.yy",
+  "$GMScript":"",
+  "%Name":"SpawnEnemyFastBreach",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SpawnEnemyFastBreach",
+  "parent":{
+    "name":"BREACHES",
+    "path":"folders/Scripts/SPAWNERS/BREACHES.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

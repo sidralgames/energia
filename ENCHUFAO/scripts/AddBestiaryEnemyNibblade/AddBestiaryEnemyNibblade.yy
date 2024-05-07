@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "AddBestiaryEnemyNibblade",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "ADD ENEMIES",
-    "path": "folders/Scripts/BESTIARY/ADD ENEMIES.yy",
+  "$GMScript":"",
+  "%Name":"AddBestiaryEnemyNibblade",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddBestiaryEnemyNibblade",
+  "parent":{
+    "name":"ADD ENEMIES",
+    "path":"folders/Scripts/BESTIARY/ADD ENEMIES.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

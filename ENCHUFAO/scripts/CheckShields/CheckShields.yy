@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "CheckShields",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Bullets",
-    "path": "folders/Objetos/Bullets.yy",
+  "$GMScript":"",
+  "%Name":"CheckShields",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CheckShields",
+  "parent":{
+    "name":"Bullets",
+    "path":"folders/Objetos/Bullets.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

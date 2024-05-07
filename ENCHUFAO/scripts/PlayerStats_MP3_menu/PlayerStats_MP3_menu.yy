@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "PlayerStats_MP3_menu",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "STATS",
-    "path": "folders/Scripts/SHIPS/STATS.yy",
+  "$GMScript":"",
+  "%Name":"PlayerStats_MP3_menu",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"PlayerStats_MP3_menu",
+  "parent":{
+    "name":"STATS",
+    "path":"folders/Scripts/SHIPS/STATS.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

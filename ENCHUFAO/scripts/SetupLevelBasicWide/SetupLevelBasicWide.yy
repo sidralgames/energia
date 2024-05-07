@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "SetupLevelBasicWide",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "CREATE LEVEL",
-    "path": "folders/Scripts/GENERAL/CREATE LEVEL.yy",
+  "$GMScript":"",
+  "%Name":"SetupLevelBasicWide",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SetupLevelBasicWide",
+  "parent":{
+    "name":"CREATE LEVEL",
+    "path":"folders/Scripts/GENERAL/CREATE LEVEL.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "AddUpgradeLaserMaxPlayer",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "UPGRADESPLAYER",
-    "path": "folders/Scripts/GENERAL/UPGRADESPLAYER.yy",
+  "$GMScript":"",
+  "%Name":"AddUpgradeLaserMaxPlayer",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddUpgradeLaserMaxPlayer",
+  "parent":{
+    "name":"UPGRADESPLAYER",
+    "path":"folders/Scripts/GENERAL/UPGRADESPLAYER.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

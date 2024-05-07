@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "AddUpgradeMoreChipDropsPlayer",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "UPGRADESPLAYER",
-    "path": "folders/Scripts/GENERAL/UPGRADESPLAYER.yy",
+  "$GMScript":"",
+  "%Name":"AddUpgradeMoreChipDropsPlayer",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddUpgradeMoreChipDropsPlayer",
+  "parent":{
+    "name":"UPGRADESPLAYER",
+    "path":"folders/Scripts/GENERAL/UPGRADESPLAYER.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

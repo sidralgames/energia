@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "AddUpgradeOverchargePlayer",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "UPGRADESPLAYER",
-    "path": "folders/Scripts/GENERAL/UPGRADESPLAYER.yy",
+  "$GMScript":"",
+  "%Name":"AddUpgradeOverchargePlayer",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddUpgradeOverchargePlayer",
+  "parent":{
+    "name":"UPGRADESPLAYER",
+    "path":"folders/Scripts/GENERAL/UPGRADESPLAYER.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "Enemy_ChasingMouthFree",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "ENEMIES",
-    "path": "folders/Scripts/ENEMIES.yy",
+  "$GMScript":"",
+  "%Name":"Enemy_ChasingMouthFree",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Enemy_ChasingMouthFree",
+  "parent":{
+    "name":"ENEMIES",
+    "path":"folders/Scripts/ENEMIES.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

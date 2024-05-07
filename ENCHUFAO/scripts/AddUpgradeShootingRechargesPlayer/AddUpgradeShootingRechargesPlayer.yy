@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "AddUpgradeShootingRechargesPlayer",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "UPGRADESPLAYER",
-    "path": "folders/Scripts/GENERAL/UPGRADESPLAYER.yy",
+  "$GMScript":"",
+  "%Name":"AddUpgradeShootingRechargesPlayer",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddUpgradeShootingRechargesPlayer",
+  "parent":{
+    "name":"UPGRADESPLAYER",
+    "path":"folders/Scripts/GENERAL/UPGRADESPLAYER.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }
