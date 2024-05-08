@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"LilCrusherLightWhite",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"LilCrusherLightWhite",
+  "parent":{
+    "name":"Objects",
+    "path":"folders/Objects.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

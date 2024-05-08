@@ -23,3 +23,6 @@ EnemiesLightWhite();
 
 //----- STRANDDED SHIP ----//
 StrandedShipLightWhite();
+
+//---- BOSS GARBANZO ----//
+LilCrusherLightWhite();

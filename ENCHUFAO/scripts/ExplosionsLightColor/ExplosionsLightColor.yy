@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"ExplosionsLightColor",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ExplosionsLightColor",
+  "parent":{
+    "name":"ENCHUFAO",
+    "path":"ENCHUFAO.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

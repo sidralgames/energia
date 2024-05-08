@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"EnemiesLightColor",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"EnemiesLightColor",
+  "parent":{
+    "name":"ENCHUFAO",
+    "path":"ENCHUFAO.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

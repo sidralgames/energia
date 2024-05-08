@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"LilCrusherLightColor",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"LilCrusherLightColor",
+  "parent":{
+    "name":"ENCHUFAO",
+    "path":"ENCHUFAO.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
