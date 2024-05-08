@@ -4,8 +4,8 @@ function DeleteGridsFromMemory()
 {
 	if instance_exists(o_gridRoom)
 	{
-		mp_grid_clear_all(gridRoom1);
-		mp_grid_destroy(gridRoom1);
+		mp_grid_clear_all(global.gridRoom1);
+		mp_grid_destroy(global.gridRoom1);
 		
 		instance_destroy(o_gridRoom);
 	}

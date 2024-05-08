@@ -76,6 +76,9 @@ if (key_select) && (ending = false)
 if (endTimer >= 0)  && (ending = true)
 {
 	endTimer --;
+	
+	FreeLightSurface();
+	
 	var lay_id = layer_get_id("Tiles");
 	var tile_id = layer_tilemap_get_id(lay_id);
 	
@@ -87,17 +90,12 @@ if (endTimer >= 0)  && (ending = true)
 
 if (endTimer <= 0) && (ending = true)
 {
-	FreeMemory();
-	
-	
+
 	instance_destroy(o_pause);
 	instance_destroy(o_gridRoom);
 	
 	instance_destroy(all);
 	
-	SaveGame();
-
-	room_goto(Sala_Inicio);
 }
 
 

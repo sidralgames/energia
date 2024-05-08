@@ -101,7 +101,7 @@ function BossWormMoveAndBreak()
 					}
 					velo = random_range(1, 2.5);
 					global.wallgrid_[# _x / 32, _y / 32] = FLOOR
-					mp_grid_clear_rectangle(gridRoom1, _x - 15, _y - 15, _x, _y)
+					mp_grid_clear_rectangle(global.gridRoom1, _x - 15, _y - 15, _x, _y)
 
 					met = instance_create_layer(_x - lengthdir_x(5, direction), _y - lengthdir_y(5, direction), "Meteors", o_meteor)
 					if instance_exists(met)
@@ -133,7 +133,7 @@ function BossWormMoveAndBreak()
 					}
 					velo = random_range(1, 2.5);
 					global.wallgrid_[# _x2 / 32, _y2 / 32] = FLOOR
-					mp_grid_clear_rectangle(gridRoom1, _x2 - 15, _y2 - 15, _x2, _y2)
+					mp_grid_clear_rectangle(global.gridRoom1, _x2 - 15, _y2 - 15, _x2, _y2)
 
 					met = instance_create_layer(_x2 - lengthdir_x(5, direction), _y2 - lengthdir_y(5, direction), "Meteors", o_meteor)
 					if instance_exists(met)
@@ -165,7 +165,7 @@ function BossWormMoveAndBreak()
 					}
 					velo = random_range(1, 2.5);
 					global.wallgrid_[# _x3 / 32, _y3 / 32] = FLOOR
-					mp_grid_clear_rectangle(gridRoom1, _x3 - 15, _y3 - 15, _x3, _y3)
+					mp_grid_clear_rectangle(global.gridRoom1, _x3 - 15, _y3 - 15, _x3, _y3)
 
 					met = instance_create_layer(_x3 - lengthdir_x(5, direction), _y3 - lengthdir_y(5, direction), "Meteors", o_meteor)
 					if instance_exists(met)

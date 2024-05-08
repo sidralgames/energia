@@ -20,7 +20,7 @@ _wall_map_id = layer_tilemap_get_id("Tiles");
 
 			if (tile_exist)
 			{
-				mp_grid_add_rectangle(gridRoom1, exW-16,eyW-16,exW,eyW)	
+				mp_grid_add_rectangle(global.gridRoom1, exW-16,eyW-16,exW,eyW)	
 			}
 		}
 	}

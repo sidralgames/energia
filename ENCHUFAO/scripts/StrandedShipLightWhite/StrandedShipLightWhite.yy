@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"StrandedShipLightWhite",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"StrandedShipLightWhite",
+  "parent":{
+    "name":"ENCHUFAO",
+    "path":"ENCHUFAO.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

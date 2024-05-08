@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"EnchufesLightWhite",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"EnchufesLightWhite",
+  "parent":{
+    "name":"ENCHUFAO",
+    "path":"ENCHUFAO.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

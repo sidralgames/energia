@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+alphaLight = 0;
 enemyBestiaryNumber = global.enemyDiscBestiaryNumber;
 enemyWithLight = false;
 slowedPeta = 0;

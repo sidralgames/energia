@@ -1,0 +1,27 @@
+// Los recursos de Script han cambiado para la v2.3.0 Consulta
+// https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
+function StrandedShipLightWhite()
+{
+	with(o_strandedShip)
+	{
+		if (!chargedInHp) || (!chargedInEnergy) || (!chargedInAmmo)
+		{
+			off = random_range(0.05, -0.05);
+			if (contLight <= 10)
+			{
+				draw_sprite_ext(s_lightBulb4, 0, x+lengthdir_x(5, _angle+90), y+lengthdir_y(5, _angle+90), 0.1+off, 0.1+off, 0, c_white, 0.5 + off);
+			}
+			else
+			{
+				draw_sprite_ext(s_lightBulb4, 0, x+lengthdir_x(5, _angle-90), y+lengthdir_y(5, _angle-90), 0.1+off, 0.1+off, 0, c_white, 0.5 + off);
+			}
+		}
+	
+		if (shipReady)
+		{
+			off = random_range(0.05, -0.05);
+			draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, _angle, c_white, 0.2);
+			draw_sprite_ext(s_lightBulb4, 0, x, y, 0.5+off, 0.5+off, 0, c_white, 0.15);
+		}
+	}
+}

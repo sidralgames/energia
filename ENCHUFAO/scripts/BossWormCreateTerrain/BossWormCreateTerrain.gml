@@ -29,7 +29,7 @@ function BossWormCreateTerrain()
 		{
 			tilemap_set_at_pixel(_tilemap_id, 0, _x, _y);
 			global.wallgrid_[# _x / 32, _y / 32] = VOID;
-			mp_grid_add_rectangle(gridRoom1, _x - 15, _y - 15, _x, _y)
+			mp_grid_add_rectangle(global.gridRoom1, _x - 15, _y - 15, _x, _y)
 
 		}
 			
@@ -38,7 +38,7 @@ function BossWormCreateTerrain()
 		{
 			tilemap_set_at_pixel(_tilemap_id, 0, _x1, _y1);
 			global.wallgrid_[# _x1 / 32, _y1 / 32] = VOID;
-			mp_grid_add_rectangle(gridRoom1, _x1 - 15, _y1 - 15, _x1, _y1)
+			mp_grid_add_rectangle(global.gridRoom1, _x1 - 15, _y1 - 15, _x1, _y1)
 		}
 	
 		if (global.wallgrid_[#(_x2 / 32), (_y2 / 32)] == FLOOR) && (_x2 > 60) && (_x2 < room_width - 60) &&
@@ -46,7 +46,7 @@ function BossWormCreateTerrain()
 		{
 			tilemap_set_at_pixel(_tilemap_id, 0, _x2, _y2);
 			global.wallgrid_[# _x2 / 32, _y2 / 32] = VOID;
-			mp_grid_add_rectangle(gridRoom1, _x2 - 15, _y2 - 15, _x2, _y2)
+			mp_grid_add_rectangle(global.gridRoom1, _x2 - 15, _y2 - 15, _x2, _y2)
 		}
 			
 		if (global.wallgrid_[#(_x3 / 32), (_y3 / 32)] == FLOOR) && (_x3 > 60) && (_x3 < room_width - 60) &&
@@ -54,7 +54,7 @@ function BossWormCreateTerrain()
 		{
 			tilemap_set_at_pixel(_tilemap_id, 0, _x3, _y3);
 			global.wallgrid_[# _x3 / 32, _y3 / 32] = VOID;
-			mp_grid_add_rectangle(gridRoom1, _x3 - 15, _y3 - 15, _x3, _y3)
+			mp_grid_add_rectangle(global.gridRoom1, _x3 - 15, _y3 - 15, _x3, _y3)
 		}
 			
 		if (global.wallgrid_[#(_x4 / 32), (_y4 / 32)] == FLOOR) && (_x4 > 60) && (_x4 < room_width - 60) &&
@@ -62,7 +62,7 @@ function BossWormCreateTerrain()
 		{
 			tilemap_set_at_pixel(_tilemap_id, 0, _x4, _y4);
 			global.wallgrid_[# _x4 / 32, _y4 / 32] = VOID;
-			mp_grid_add_rectangle(gridRoom1, _x4 - 15, _y4 - 15, _x4, _y4)
+			mp_grid_add_rectangle(global.gridRoom1, _x4 - 15, _y4 - 15, _x4, _y4)
 		}
 		
 		global.changingTiles = true;

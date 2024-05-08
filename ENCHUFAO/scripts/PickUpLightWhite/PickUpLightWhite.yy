@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"PickUpLightWhite",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"PickUpLightWhite",
+  "parent":{
+    "name":"ENCHUFAO",
+    "path":"ENCHUFAO.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

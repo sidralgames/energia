@@ -57,11 +57,31 @@ with(o_enchufePETA_Father)
 
 
 
-//----- EXPLOSIONS -----//
 with(o_exploBomb)
 {
-	offs = random_range(0.05, -0.05);
-	draw_sprite_ext(s_lightBulb6, 0, x, y, 1.25+offs, 1.25+offs, 0, global.lightBlue, 0.3+offs);
+	off = random_range(0.05, -0.05);
+	switch (isFrom)
+	{
+		case "PlayerBomb":
+		{
+			if (global.bombIsHomingBomb == false)
+			{
+				draw_sprite_ext(s_lightBulb4, 0, x, y, 1.2+off, 1.2+off, 0, global.lightBlue, 0.3 + off);
+			}
+			else
+			{
+				draw_sprite_ext(s_lightBulb4, 0, x, y, 0.3+off, 0.3+off, 0, global.lightBlue, 0.3 + off);
+			}
+			
+		}break;
+		
+		case "EnemyBomb":
+		{
+			draw_sprite_ext(s_lightBulb4, 0, x, y, 0.75+off, 0.75+off, 0, global.brightRed, 0.2 + off);
+			
+		}break;
+		
+	}
 }
 
 
@@ -69,8 +89,16 @@ with(o_enemyP)
 {
 	if (enemyWithLight = true)
 	{
-		off = random_range(0.05, -0.05);
-		draw_sprite_ext(s_lightEnemyFront, 0, x, y, 1.5, image_yscale, _angle, global.brightRed, 0.1);
+		if (enemyIsMini)
+		{
+			off = random_range(0.05, -0.05);
+			draw_sprite_ext(s_lightEnemyFront, 0, x, y, 0.75, 0.75, _angle, global.brightRed, 0.1);
+		}
+		else
+		{
+			off = random_range(0.05, -0.05);
+			draw_sprite_ext(s_lightEnemyFront, 0, x, y, 1.5, image_yscale, _angle, global.brightRed, 0.1);
+		}
 	}
 }
 
@@ -78,8 +106,23 @@ with(o_enemyDisc)
 {
 	if (state != 0)
 	{
-		off = random_range(0.05, -0.05);
-		draw_sprite_ext(s_lightBulb4, 0, x, y, 0.08+off, 0.08+off, 0,global.brightRed, 0.5 + off);
+		off = random_range(0.02, -0.02);
+		
+		if (alphaLight <= 0.5)
+		{
+			alphaLight +=0.004;
+		}
+		
+		draw_sprite_ext(s_lightBulb4, 0, x, y, 0.05+off, 0.05+off, 0, global.brightRed, alphaLight + off);
+	}
+	else
+	{
+		if (alphaLight >= 0)
+		{
+			off = random_range(0.02, -0.02);
+			alphaLight -=0.003;
+			draw_sprite_ext(s_lightBulb4, 0, x, y, 0.05+off, 0.05+off, 0, global.brightRed, alphaLight + off);
+		}
 	}
 }
 

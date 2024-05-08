@@ -65,7 +65,7 @@ function PlayerShipLaser(argument0)
 					global.changingTiles = true;
 					velo = random_range(1,1.5);
 					global.wallgrid_[# _x/32, _y/32] = FLOOR
-					mp_grid_clear_rectangle(gridRoom1, _x-15,_y-15,_x,_y)
+					mp_grid_clear_rectangle(global.gridRoom1, _x-15,_y-15,_x,_y)
 					met = instance_create_layer(_x+lengthdir_x(10, argument0),_y+lengthdir_y(10, argument0),"Meteors", o_meteor)
 					if instance_exists(met)
 					{

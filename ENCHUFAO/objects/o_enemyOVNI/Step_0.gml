@@ -13,7 +13,7 @@ if instance_exists(o_playerShip)
 {
 	
 	
-	mp_grid_path(gridRoom1, myPath, x, y, o_playerShip.x ,o_playerShip.y, true);
+	mp_grid_path(global.gridRoom1, myPath, x, y, o_playerShip.x ,o_playerShip.y, true);
 	
 	_speed = random_range(_speedMin,_speedMax)
 		

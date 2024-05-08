@@ -15,7 +15,7 @@ if (!der) && (!izq) && (!arr) && (!abj)
 		
 		global.wallgrid_[# x/32, y/32] = FLOOR;
 		
-		mp_grid_clear_rectangle(gridRoom1, x-15,y-15,x,y)
+		mp_grid_clear_rectangle(global.gridRoom1, x-15,y-15,x,y)
 		
 		instance_destroy();
 	}

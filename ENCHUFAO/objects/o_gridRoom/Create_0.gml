@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-globalvar gridRoom1;
-gridRoom1 = mp_grid_create(0, 0, room_width/CELL_WIDTH, room_height/CELL_HEIGHT, 32, 32)
+
+global.gridRoom1 = mp_grid_create(0, 0, room_width/CELL_WIDTH, room_height/CELL_HEIGHT, 32, 32)
 
 //set up grid
 width_ = room_width div CELL_WIDTH;
@@ -20,7 +20,7 @@ if (room = Sala_0) ||  (room = Sala_SecondBoss) || (room =Sala_Tutorial)
 
 			if (tile_exist)
 			{
-				mp_grid_add_rectangle(gridRoom1, exW-16,eyW-16,exW,eyW)	
+				mp_grid_add_rectangle(global.gridRoom1, exW-16,eyW-16,exW,eyW)	
 			}
 		
 		}
@@ -39,7 +39,7 @@ else if (room = Sala_Boss) ||  (room = Sala_FirstBoss)
 
 			if (tile_exist)
 			{
-				mp_grid_add_rectangle(gridRoom1, exW-16,eyW-16,exW,eyW)	
+				mp_grid_add_rectangle(global.gridRoom1, exW-16,eyW-16,exW,eyW)	
 			}
 		
 		  
@@ -61,7 +61,7 @@ else if (room = Sala_Upgade) ||  (room = Sala_MegaUpgrade) || (room =Sala_ChillR
 
 			if (tile_exist)
 			{
-				mp_grid_add_rectangle(gridRoom1, exW-16,eyW-16,exW,eyW)	
+				mp_grid_add_rectangle(global.gridRoom1, exW-16,eyW-16,exW,eyW)	
 				global.wallgrid_[# xxW, yyW] = VOID;
 			}
 		}

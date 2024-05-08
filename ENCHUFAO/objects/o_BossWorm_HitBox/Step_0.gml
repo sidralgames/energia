@@ -133,7 +133,7 @@ if (inScreen) && !instance_exists(o_gameOver)
 			}
 			velo = random_range(1,1.5);
 			global.wallgrid_[# x/32, y/32] = FLOOR
-			mp_grid_clear_rectangle(gridRoom1, x-15,y-15,x,y)
+			mp_grid_clear_rectangle(global.gridRoom1, x-15,y-15,x,y)
 			
 			met = instance_create_layer(x-lengthdir_x(5, direction),y-lengthdir_y(5, direction),"Meteors", o_meteor)
 			if instance_exists(met)

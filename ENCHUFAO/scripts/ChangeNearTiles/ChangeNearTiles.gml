@@ -28,7 +28,7 @@ function ChangeNearTiles(argument0, argument1) //(grid en X y grid en Y)
 
 				if (tile_exist)
 				{
-					mp_grid_add_rectangle(gridRoom1, exW-16,eyW-16,exW,eyW)	
+					mp_grid_add_rectangle(global.gridRoom1, exW-16,eyW-16,exW,eyW)	
 				}
 			}
 		}

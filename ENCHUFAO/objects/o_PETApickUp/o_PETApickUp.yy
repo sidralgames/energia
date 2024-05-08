@@ -13,7 +13,10 @@
     "name":"PICKUPS",
     "path":"folders/Objetos/Other objects/PICKUPS.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oPickUp_Father",
+    "path":"objects/oPickUp_Father/oPickUp_Father.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

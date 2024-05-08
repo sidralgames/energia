@@ -37,7 +37,7 @@ if (image_index > 2) && (image_index < 14)
 			if (rectangle = false)
 			{
 				rectangle = true;
-				mp_grid_add_rectangle(gridRoom1, x - 15, y, x+15, y+30)
+				mp_grid_add_rectangle(global.gridRoom1, x - 15, y, x+15, y+30)
 			}
 		}
 	}
@@ -47,7 +47,7 @@ else
 	if (rectangle = true)
 	{
 		rectangle = false;
-		mp_grid_clear_rectangle(gridRoom1, x - 15, y, x+15, y+30)
+		mp_grid_clear_rectangle(global.gridRoom1, x - 15, y, x+15, y+30)
 	}
 }
 

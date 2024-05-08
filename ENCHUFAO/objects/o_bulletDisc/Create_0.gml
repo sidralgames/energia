@@ -11,4 +11,4 @@ contPartsInitial = 3;
 contParts = contPartsInitial;
 flashAlpha = 0;
 canBeHittedByPlayerLaser = true;
-
+enemyShooter = global.enemyDiscBestiaryNumber;

@@ -32,7 +32,7 @@ if (global.haveInvisibiltyCloak && global.invisibleCloak == true) || (global.inS
 	else
 	{
 		
-		mp_grid_path(gridRoom1, myPath, x, y, o_playerShip.x ,o_playerShip.y, true);
+		mp_grid_path(global.gridRoom1, myPath, x, y, o_playerShip.x ,o_playerShip.y, true);
 	
 		if tile_meeting(x + lengthdir_x(30, 1), y+ lengthdir_y(30, 1), "Tiles") ||
 		tile_meeting(x + lengthdir_x(30, 90), y+ lengthdir_y(30, 90), "Tiles") ||

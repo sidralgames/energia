@@ -38,7 +38,7 @@ if (room != Sala_Inicio)
 		tilemap_set_at_pixel(_tilemap_id, 0, _x, _y);
 		velo = random_range(1,1.5);
 		global.wallgrid_[# _x/32, _y/32] = FLOOR
-		mp_grid_clear_rectangle(gridRoom1, _x-15,_y-15,_x,_y)
+		mp_grid_clear_rectangle(global.gridRoom1, _x-15,_y-15,_x,_y)
 		met = instance_create_layer(x+lengthdir_x(10*scale, dir),y+lengthdir_y(10*scale, dir),"Meteors", o_meteor)
 		if instance_exists(met)
 		{
@@ -57,7 +57,7 @@ if (room != Sala_Inicio)
 		tilemap_set_at_pixel(_tilemap_id, 0, _x2, _y2);
 		velo = random_range(1,1.5);
 		global.wallgrid_[# _x2/32, _y2/32] = FLOOR
-		mp_grid_clear_rectangle(gridRoom1, _x2-15,_y2-15,_x2,_y2)
+		mp_grid_clear_rectangle(global.gridRoom1, _x2-15,_y2-15,_x2,_y2)
 		met2 = instance_create_layer(x+lengthdir_x(30*scale, dir),y+lengthdir_y(30*scale, dir), "Meteors",o_meteor)
 	
 		if instance_exists(met2)
@@ -77,7 +77,7 @@ if (room != Sala_Inicio)
 		tilemap_set_at_pixel(_tilemap_id, 0, _x3, _y3);
 		velo = random_range(1,1.5);
 		global.wallgrid_[# _x3/32, _y3/32] = FLOOR
-		mp_grid_clear_rectangle(gridRoom1, _x3-15,_y3-15,_x3,_y3)
+		mp_grid_clear_rectangle(global.gridRoom1, _x3-15,_y3-15,_x3,_y3)
 		met3 = instance_create_layer(x+lengthdir_x(60*scale, dir),y+lengthdir_y(60*scale, dir),"Meteors", o_meteor)
 	
 		if instance_exists(met3)
