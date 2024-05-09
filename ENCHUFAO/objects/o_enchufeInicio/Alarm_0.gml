@@ -12,7 +12,10 @@ if (cont = true)
 	
 	instance_deactivate_object(o_main)
 	instance_deactivate_object(o_pause)
-	instance_destroy(all);
+	with(all)
+	{
+		instance_destroy();
+	}
 	instance_activate_object(o_main)
 	instance_activate_object(o_pause)
 	room_goto(Sala_0)

@@ -14,7 +14,7 @@ resH = display_get_height();
 alarm[1] = 20;
 showControls = false;
 
-font_add_enable_aa(false);
+
 
 timesToDraw = 0;
 

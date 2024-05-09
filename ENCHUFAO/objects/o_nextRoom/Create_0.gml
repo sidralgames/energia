@@ -9,14 +9,14 @@ goToChillRoom = false;
 shipSelected = false
 canSelectShip = false;
 
-font_add_enable_aa(false);
+
 
 _visible = true;
 
 width_ = room_width div CELL_WIDTH;
 height_ = room_height div CELL_HEIGHT;
 
-global.wallgrid_ = ds_grid_create(width_,height_);
+global.wallgrid_ = -1;
 
 
 t = 6;

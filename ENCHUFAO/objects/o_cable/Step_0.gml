@@ -45,11 +45,11 @@ if (global.unPlugging)
 
 //if (chipJustGrabbed)
 //{
-//	if !ds_map_empty(chipList)
+//	if !ds_map_empty(global.chipList)
 //	{
-//		for (var i=0; i<ds_map_size(chipList); i++)
+//		for (var i=0; i<ds_map_size(global.chipList); i++)
 //		{
-//			chip = ds_map_find_value(chipList, i);
+//			chip = ds_map_find_value(global.chipList, i);
 			
 //			rope1.vertexDeAttachObject(chip.vert);
 			

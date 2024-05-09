@@ -2,6 +2,7 @@
 // You can write your code in this editor
 ending = false;
 endTimer = 10;
+room_instance_clear(Sala_0);
 global.haveChargerAdapter = false;
 global.adaptersInLevel = 0;
 global.goToSecretRoom = false;
@@ -56,7 +57,7 @@ global.customFont14 = font_add("ChubbyChoo-SemiBold.ttf", 14, false, false, 32, 
 global.customFont12 = font_add("ChubbyChoo-SemiBold.ttf", 12, false, false, 32, 128);
 global.customFont11 = font_add("ChubbyChoo-SemiBold.ttf", 11, false, false, 32, 128);
 
-
+font_add_enable_aa(false);
 
 //--------------- MEGA UPGRADES -----------------//
 
@@ -174,7 +175,7 @@ global.hitsTaken = 0;
 global.bombsFired = 0;
 global.petasUsed = 0;
 
-font_add_enable_aa(false);
+
 
 
 global.screenshakeIsOn = true;

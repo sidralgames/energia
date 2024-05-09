@@ -2,6 +2,16 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function DeleteListsDataFromMemory()
 {
+	chips = ds_map_size(global.chipList);
+	
+	if (chips > 0)
+	{
+		for (var i=0; i<chips; i++)
+		{
+			ds_map_delete(global.chipList, i)	
+		}
+	}
+	
 	for (var i= 0; i<global.numberOfUpgradesPlayer; i++)
 	{
 		ds_map_delete(global.PlayerUpgradesList, i)	
@@ -77,6 +87,7 @@ function DeleteListsDataFromMemory()
 		ds_map_delete(global.explosionList, i)	
 	}
 	
+	ds_map_clear(global.chipList);
 	ds_map_clear(global.PlayerUpgradesList);
 	ds_map_clear(global.upgradesList);
 	ds_map_clear(global.megaUpgradesList);
@@ -98,6 +109,7 @@ function DeleteListsDataFromMemory()
 	ds_map_clear(global.bestiaryList)
 	ds_map_clear(global.explosionList)
 
+	ds_map_destroy(global.chipList)
 	ds_map_destroy(global.PlayerUpgradesList);
 	ds_map_destroy(global.upgradesList);
 	ds_map_destroy(global.megaUpgradesList);

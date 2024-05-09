@@ -4,4 +4,4 @@ if (verletSystemExists(verletSystem1)) {
 	delete verletSystem1;
 }
 
-ds_map_clear(chipList);
+
