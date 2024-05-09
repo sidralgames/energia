@@ -3,8 +3,6 @@
 // Create a new verlet system
 // You can create multiple systems with different physic properties
 
-global.chipList = ds_map_create();
-
 //---- CONNECTIONS ----//
 standardConnection = false;
 strandedShipConnection = false;

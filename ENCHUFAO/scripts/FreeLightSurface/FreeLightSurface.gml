@@ -6,7 +6,8 @@ function FreeLightSurface()
 	{
 		if surface_exists(oLight.light_surface)
 		{
-			surface_free(oLight.light_surface)	
+			surface_free(oLight.light_surface);
+			
 		}
 	}
 }

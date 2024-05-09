@@ -30,7 +30,7 @@ function PlayerInvisibleCloak()
 		colorCloak_fx_params.g_Intensity = fx_Cloak;	
 		fx_set_parameters(colorCloak_fx, colorCloak_fx_params);
 	
-		global.cloackReal = 4;
+		global.cloackReal = 3;
 		_alpha = lerp(_alpha, 0.3, 0.03);
 	
 		if (abs(_hpush) > 0.1 || abs(_vpush) > 0.1) && (dirH != 0 || dirV !=0)

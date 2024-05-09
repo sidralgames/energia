@@ -465,6 +465,8 @@
     {"name":"__view_get","order":12,"path":"scripts/__view_get/__view_get.yy",},
     {"name":"__view_set_internal","order":14,"path":"scripts/__view_set_internal/__view_set_internal.yy",},
     {"name":"__view_set","order":13,"path":"scripts/__view_set/__view_set.yy",},
+    {"name":"ActivateAndDestroy","order":129,"path":"scripts/ActivateAndDestroy/ActivateAndDestroy.yy",},
+    {"name":"ActivateAndDestroyBetweenLevels","order":130,"path":"scripts/ActivateAndDestroyBetweenLevels/ActivateAndDestroyBetweenLevels.yy",},
     {"name":"AddAch500Enemies","order":1,"path":"scripts/AddAch500Enemies/AddAch500Enemies.yy",},
     {"name":"AddBattery","order":33,"path":"scripts/AddBattery/AddBattery.yy",},
     {"name":"AddBestiaryEnemyBadChip","order":25,"path":"scripts/AddBestiaryEnemyBadChip/AddBestiaryEnemyBadChip.yy",},

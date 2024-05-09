@@ -143,7 +143,8 @@ if (global.shipGreenBonusUpgraded)
 
 global.amplifyPowerLaser = 0;
 global.amplifyPowerAmmo = 0;
-instance_destroy(o_partBalaP);
+
+alphaFocos = 0.3;
 instance_create_layer(-100,-100, "Part",o_partBalaP);	
 
 partChanged = false;

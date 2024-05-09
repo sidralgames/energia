@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"ActivateAndDestroyBetweenLevels",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ActivateAndDestroyBetweenLevels",
+  "parent":{
+    "name":"ENCHUFAO",
+    "path":"ENCHUFAO.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

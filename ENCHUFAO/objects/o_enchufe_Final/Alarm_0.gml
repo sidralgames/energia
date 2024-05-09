@@ -4,7 +4,7 @@
 if (cont = true)
 {
 	FreeLightSurface();
-	
+	ActivateAndDestroyBetweenLevels();
 	//---- KILL CHIPS ----//
 	if instance_exists(o_chipFather)
 	{

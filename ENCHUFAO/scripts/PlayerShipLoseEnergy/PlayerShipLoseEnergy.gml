@@ -8,11 +8,11 @@ if (!global.infiniteEnergyIsOn)
 		{
 			if (abs(o_playerShip._hpush) >= 0.1) || (abs(o_playerShip._vpush) >= 0.1)
 			{
-				global.energy-=(0.3 * global.cloackReal ) / global.DischargeTime
+				global.energy-=(0.3 * global.cloackReal ) / global.DischargeTime;
 			}
 			else
 			{
-				global.energy-= (0.1 * global.cloackReal ) / global.DischargeTime
+				global.energy-= (0.1 * global.cloackReal ) / global.DischargeTime;
 			}
 		}
 	}

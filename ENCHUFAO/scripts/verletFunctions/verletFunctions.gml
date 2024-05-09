@@ -505,6 +505,7 @@ function verletGroup() constructor {
 			}
 		}
 		
+
 		if (ds_exists(vertexList, ds_type_list)) ds_list_destroy(vertexList);
 		if (ds_exists(stickList, ds_type_list)) ds_list_destroy(stickList);
 		if (ds_exists(attachmentList, ds_type_list)) ds_list_destroy(attachmentList);

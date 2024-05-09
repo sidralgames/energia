@@ -2,14 +2,13 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function DeleteListsDataFromMemory()
 {
+
 	chips = ds_map_size(global.chipList);
 	
-	if (chips > 0)
+
+	for (var i=0; i<chips; i++)
 	{
-		for (var i=0; i<chips; i++)
-		{
-			ds_map_delete(global.chipList, i)	
-		}
+		ds_map_delete(global.chipList, i)	
 	}
 	
 	for (var i= 0; i<global.numberOfUpgradesPlayer; i++)

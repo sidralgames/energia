@@ -78,6 +78,7 @@ if (endTimer >= 0)  && (ending = true)
 	endTimer --;
 	
 	FreeLightSurface();
+	
 	instance_activate_all();
 	
 	var lay_id = layer_get_id("Tiles");
@@ -91,36 +92,7 @@ if (endTimer >= 0)  && (ending = true)
 
 if (endTimer <= 0) && (ending = true)
 {
-
-	instance_activate_all();
-	instance_destroy(o_pause);
-	
-	if instance_exists(o_gridRoom)
-	{
-		mp_grid_clear_all(global.gridRoom1);
-
-		mp_grid_destroy(global.gridRoom1);
-
-		if ds_exists(global.wallgrid_,ds_type_grid)
-		{
-			ds_grid_destroy(global.wallgrid_);
-			global.wallgrid_ = -1;
-		}
-	
-		instance_destroy(o_gridRoom);
-	}
-	
-	
-	with(all)
-	{
-		instance_destroy();	
-	}
-	
-	instance_destroy(all);
-	
-	instance_destroy();
-	
+	ActivateAndDestroy();
 }
-
 
 

@@ -514,6 +514,8 @@
     {"id":{"name":"__view_get","path":"scripts/__view_get/__view_get.yy",},},
     {"id":{"name":"__view_set_internal","path":"scripts/__view_set_internal/__view_set_internal.yy",},},
     {"id":{"name":"__view_set","path":"scripts/__view_set/__view_set.yy",},},
+    {"id":{"name":"ActivateAndDestroy","path":"scripts/ActivateAndDestroy/ActivateAndDestroy.yy",},},
+    {"id":{"name":"ActivateAndDestroyBetweenLevels","path":"scripts/ActivateAndDestroyBetweenLevels/ActivateAndDestroyBetweenLevels.yy",},},
     {"id":{"name":"ActivateSEZAR","path":"scripts/ActivateSEZAR/ActivateSEZAR.yy",},},
     {"id":{"name":"AddAch500Enemies","path":"scripts/AddAch500Enemies/AddAch500Enemies.yy",},},
     {"id":{"name":"AddAchNoBump","path":"scripts/AddAchNoBump/AddAchNoBump.yy",},},

@@ -7,6 +7,8 @@ global.haveChargerAdapter = false;
 global.adaptersInLevel = 0;
 global.goToSecretRoom = false;
 
+global.chipList = ds_map_create();
+
 global.ammoMod = 50 // 10 guapo //50 lo de siempre
 
 global.bestiaryEnemiesNum = 1;
