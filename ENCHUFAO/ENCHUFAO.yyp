@@ -844,6 +844,7 @@
     {"id":{"name":"LaserEnemyMovement","path":"scripts/LaserEnemyMovement/LaserEnemyMovement.yy",},},
     {"id":{"name":"LaserEnemyShoot","path":"scripts/LaserEnemyShoot/LaserEnemyShoot.yy",},},
     {"id":{"name":"LaserLogicPlayer","path":"scripts/LaserLogicPlayer/LaserLogicPlayer.yy",},},
+    {"id":{"name":"LaserTrapLightWhite","path":"scripts/LaserTrapLightWhite/LaserTrapLightWhite.yy",},},
     {"id":{"name":"Lights_begin","path":"scripts/Lights_begin/Lights_begin.yy",},},
     {"id":{"name":"Lights_end","path":"scripts/Lights_end/Lights_end.yy",},},
     {"id":{"name":"LilCrusherLightColor","path":"scripts/LilCrusherLightColor/LilCrusherLightColor.yy",},},

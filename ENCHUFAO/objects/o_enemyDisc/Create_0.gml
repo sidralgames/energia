@@ -3,6 +3,7 @@
 alphaLight = 0;
 enemyBestiaryNumber = global.enemyDiscBestiaryNumber;
 enemyWithLight = false;
+enemyWithLightBulb = true;
 slowedPeta = 0;
 slowed = false;
 freezing = 0;

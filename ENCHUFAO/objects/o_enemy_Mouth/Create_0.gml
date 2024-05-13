@@ -67,7 +67,7 @@ canBeMega = true;
 isMegaDraw = false;
 isOnlyDraw = false;
 setDraw = false;
-
+enemyWithLightBulb = false;
 
 
 

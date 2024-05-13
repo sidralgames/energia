@@ -2,6 +2,7 @@
 // You can write your code in this editor
 enemyBestiaryNumber = global.enemyShieldBestiaryNumber;
 enemyWithLight = false;
+enemyWithLightBulb = true;
 canStopChasing = false;
 slowedPeta = 0;
 keepChasingTime = 180;

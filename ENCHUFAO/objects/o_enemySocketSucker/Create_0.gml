@@ -3,6 +3,7 @@
 
 enemyBestiaryNumber = global.enemySocketsuckerBestiaryNumber; 
 enemyWithLight = false;
+enemyWithLightBulb = true;
 slowedPeta = 0;
 freezing = 0;
 freeze = false;

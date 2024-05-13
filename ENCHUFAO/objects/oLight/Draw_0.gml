@@ -26,3 +26,6 @@ StrandedShipLightWhite();
 
 //---- BOSS GARBANZO ----//
 LilCrusherLightWhite();
+
+//--- LASER TRAPS ---//
+LaserTrapLightWhite();

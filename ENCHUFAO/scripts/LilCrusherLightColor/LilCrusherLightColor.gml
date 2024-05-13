@@ -11,18 +11,18 @@ function LilCrusherLightColor()
 			{
 				if (image_index = 0)
 				{
-					draw_sprite_ext(s_lightBulb4, 0, x, y-50, 0.2+off, 0.2+off, 0, global.yellow, 0.6 + off);
+					draw_sprite_ext(s_lightBulb4, 0, x, y-55, 0.1+off, 0.1+off, 0, global.yellow, 0.6 + off);
 				}
 				else
 				{
-					draw_sprite_ext(s_lightBulb4, 0, x, y-50, 0.3+off, 0.3+off, 0, global.brightRed, 0.6 + off);
+					draw_sprite_ext(s_lightBulb4, 0, x, y-55, 0.2+off, 0.2+off, 0, global.brightRed, 0.6 + off);
 					
 				}
 			}break;
 			
 			case BOSS2STATE.ATTACK: 
 			{
-				draw_sprite_ext(s_lightBulb4, 0, x, y-50, 0.3+off, 0.3+off, 0, global.brightRed, 0.6 + off);
+				draw_sprite_ext(s_lightBulb4, 0, x, y-55, 0.2+off, 0.2+off, 0, global.brightRed, 0.6 + off);
 				
 			}break;
 		}
@@ -36,5 +36,17 @@ function LilCrusherLightColor()
 			off = random_range(0.02, -0.02);
 			draw_sprite_ext(s_lightBulb4, 0, x, y+8, 0.05+off, 0.05+off, 0, global.lightBlue, 0.6 + off);
 		}
+	}
+	
+	with (o_bullet_BossGarbanzo_AttackFast)
+	{
+		off = random_range(0.02, -0.02);
+		draw_sprite_ext(s_lightBulb4, 0, x, y, 0.1+off, 0.1+off, 0, global.brightRed, 0.2 + off);
+	}
+	
+	with (o_bullet_BossGarbanzo_AttackFastBomb)
+	{
+		off = random_range(0.02, -0.02);
+		draw_sprite_ext(s_lightBulb4, 0, x, y, 0.1+off, 0.1+off, 0, global.brightRed, 0.2 + off);
 	}
 }

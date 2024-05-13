@@ -1,13 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
-shipReady = (chargedInAmmo) && (chargedInEnergy) && (chargedInHp)
+
 depth = layer_get_depth("Player")+1;
 if (called)
 {
+	shipReady = true;
 	StrandedShipIsCalled()
 }
 else
 {
+	shipReady = (chargedInAmmo) && (chargedInEnergy) && (chargedInHp)
 	if (set == false)
 	{
 		SetStrandedShip();

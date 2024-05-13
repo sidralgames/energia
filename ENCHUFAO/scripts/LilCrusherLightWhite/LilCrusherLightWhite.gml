@@ -7,7 +7,19 @@ function LilCrusherLightWhite()
 		if (state != BOSS2STATE.START)
 		{
 			off = random_range(0.05, -0.05);
-			draw_sprite_ext(s_lightBulb4, 0, x, y-50, 0.5+off, 0.5+off, 0, c_white, 0.5 + off);
+			draw_sprite_ext(s_lightBulb4, 0, x, y-55, 0.5+off, 0.5+off, 0, c_white, 0.5 + off);
 		}
+	}
+	
+	with (o_bullet_BossGarbanzo_AttackFast)
+	{
+		off = random_range(0.02, -0.02);
+		draw_sprite_ext(s_lightBulb4, 0, x, y, 0.23+off, 0.23+off, 0, c_white, 0.3 + off);
+	}
+	
+	with (o_bullet_BossGarbanzo_AttackFastBomb)
+	{
+		off = random_range(0.02, -0.02);
+		draw_sprite_ext(s_lightBulb4, 0, x, y, 0.23+off, 0.23+off, 0, c_white, 0.3 + off);
 	}
 }

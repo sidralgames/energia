@@ -5,6 +5,7 @@ freezing = 0;
 freeze = false;
 slowed = false;
 enemyWithLight = false;
+enemyWithLightBulb = true;
 slowedContMax = 30;
 slowedCont = slowedContMax;
 discounted = false;

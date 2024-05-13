@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 enemyWithLight = true;
+enemyWithLightBulb = true;
 canStopChasing = false;
 discounted = false;
 keepChasingTime = 180;

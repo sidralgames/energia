@@ -26,3 +26,4 @@ state = -1;
 affectedByLaserTrap = true;
 enemyBestiaryNumber = enemyBelongs.enemyBestiaryNumber;
 enemyWithLight = false;
+enemyWithLightBulb = false;

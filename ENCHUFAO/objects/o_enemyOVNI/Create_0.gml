@@ -2,6 +2,7 @@
 // You can write your code in this editor
 enemyBestiaryNumber = global.enemyOVNIBestiaryNumber;
 enemyWithLight = false;
+enemyWithLightBulb = true;
 slowedPeta = 0;
 freezing = 0;
 freeze = false;

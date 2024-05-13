@@ -83,8 +83,14 @@ if (electrocutated = true)
 	}
 }
 
-
-if (global.BossWormHP <= 1) || (die)
+if instance_exists(o_BossWorm_Mouth)
+{
+	if (!instance_exists(o_BossWorm_Body)) || (die)
+	{
+		instance_destroy();
+	}
+}
+else
 {
 	instance_destroy();
 }

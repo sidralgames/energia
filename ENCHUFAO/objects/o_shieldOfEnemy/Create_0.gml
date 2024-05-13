@@ -20,5 +20,7 @@ thisEnemyBounce = false;
 leavesTrail = false;
 finalTrail = false;
 enemyWithLight = false;
+enemyWithLightBulb = false;
+
 
 

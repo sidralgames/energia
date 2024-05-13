@@ -775,6 +775,7 @@
     {"name":"LaserEnemyMovement","order":29,"path":"scripts/LaserEnemyMovement/LaserEnemyMovement.yy",},
     {"name":"LaserEnemyShoot","order":30,"path":"scripts/LaserEnemyShoot/LaserEnemyShoot.yy",},
     {"name":"LaserLogicPlayer","order":18,"path":"scripts/LaserLogicPlayer/LaserLogicPlayer.yy",},
+    {"name":"LaserTrapLightWhite","order":131,"path":"scripts/LaserTrapLightWhite/LaserTrapLightWhite.yy",},
     {"name":"Lights_begin","order":1,"path":"scripts/Lights_begin/Lights_begin.yy",},
     {"name":"Lights_end","order":2,"path":"scripts/Lights_end/Lights_end.yy",},
     {"name":"LilCrusherLightColor","order":128,"path":"scripts/LilCrusherLightColor/LilCrusherLightColor.yy",},

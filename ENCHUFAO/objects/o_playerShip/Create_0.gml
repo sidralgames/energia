@@ -3,6 +3,7 @@
 global.haveChargerAdapter = false;
 global.meteorsCount = 0;
 global.assistedSlowmo = false;
+//global.haveCallForHelp = true;
 contLight = 0;
 
 lightLenght = 600;

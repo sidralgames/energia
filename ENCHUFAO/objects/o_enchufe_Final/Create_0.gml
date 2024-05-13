@@ -33,3 +33,8 @@ if (room = Sala_Tutorial)
 }
 
 alarm[2] = 30;
+
+if (room = Sala_SecondBoss) || (room = Sala_BossWorm)
+{
+	abierto = true;
+}

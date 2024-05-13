@@ -1,4 +1,5 @@
 enemyBestiaryNumber = global.enemyPewPewBestiaryNumber;
+enemyWithLightBulb = false;
 
 parado=false
 type = collisionType.custom;

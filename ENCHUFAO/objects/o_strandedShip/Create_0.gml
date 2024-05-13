@@ -5,7 +5,7 @@ chargedInAmmo = true;
 chargedInHp = true;
 firstSetted = false;
 contLight = 0;
-
+shipReady = (chargedInAmmo) && (chargedInEnergy) && (chargedInHp)
 myPath = path_add();
 
 for (var i=0; i<2; i++)
