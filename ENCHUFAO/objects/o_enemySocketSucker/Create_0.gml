@@ -1,6 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+blinded = false;
+blindedCont = 0;
+contToBlind = 0;
+inBlindArea = false;
+blindFlash = 10;
 enemyBestiaryNumber = global.enemySocketsuckerBestiaryNumber; 
 enemyWithLight = false;
 enemyWithLightBulb = true;

@@ -6,10 +6,15 @@ function PlayerLightColor()
 	{
 		if (key_l3Dowm)
 		{
-			draw_set_alpha(0.05)
-			draw_triangle_color(x-lengthdir_x(iniLightOff,_angle-90), y-lengthdir_y(iniLightOff, _angle-90), x+lengthdir_x(lightLenght,_angle+angOff), y-1+lengthdir_y(lightLenght, _angle+angOff), x+lengthdir_x(lightLenght,_angle-angOff), y-1+lengthdir_y(lightLenght, _angle-angOff), global.yellow, global.yellow, global.yellow, false);
-			draw_triangle_color(x-lengthdir_x(iniLightOff,_angle+90), y-lengthdir_y(iniLightOff, _angle+90), x+lengthdir_x(lightLenght,_angle+angOff), y-1+lengthdir_y(lightLenght, _angle+angOff), x+lengthdir_x(lightLenght,_angle-angOff), y-1+lengthdir_y(lightLenght, _angle-angOff), global.yellow, global.yellow, global.yellow, false);
+			alphaFocosColor = lerp(alphaFocosColor, 0.05, 0.015);
+			draw_set_alpha(alphaFocosColor)
+			draw_triangle_color(x-lengthdir_x(iniLightOff,_angle-90), y-lengthdir_y(iniLightOff, _angle-90), x+lengthdir_x(lightLenght,_angle+angOff), y-1+lengthdir_y(lightLenght, _angle+angOff), x+lengthdir_x(lightLenght,_angle-angOff), y-1+lengthdir_y(lightLenght, _angle-angOff), colorLaser, colorLaser, colorLaser, false);
+			draw_triangle_color(x-lengthdir_x(iniLightOff,_angle+90), y-lengthdir_y(iniLightOff, _angle+90), x+lengthdir_x(lightLenght,_angle+angOff), y-1+lengthdir_y(lightLenght, _angle+angOff), x+lengthdir_x(lightLenght,_angle-angOff), y-1+lengthdir_y(lightLenght, _angle-angOff), colorLaser, colorLaser, colorLaser, false);
 			draw_set_alpha(1)
+		}
+		else
+		{
+			alphaFocosColor = 0.12;
 		}
 	
 		if (global.energy <= 0)

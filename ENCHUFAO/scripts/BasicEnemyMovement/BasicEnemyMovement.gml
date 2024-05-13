@@ -4,7 +4,21 @@
 function BasicEnemyMovement()
 {
 if (global.haveInvisibiltyCloak && global.invisibleCloak == true) || (global.inSmokeArea = true)
+|| (blinded = true)
 	{
+		
+		if (tile_meeting(x+hspeed,y,"Tiles"))
+		{
+		    hspeed = -hspeed*bnc;
+			alarm[4] = 0;
+		}
+		
+		if (tile_meeting(x,y+vspeed,"Tiles"))
+		{
+		    vspeed = -vspeed*bnc;
+			alarm[4] = 0;
+		}
+		
 		path_end()
 		var a = point_direction(x, y, x+diffX,y+diffY);
 		direction += sign(dsin(a - direction)) * (precision * global.relativeSpeed);
@@ -21,13 +35,15 @@ if (global.haveInvisibiltyCloak && global.invisibleCloak == true) || (global.inS
 		if (tile_meeting(x+hspeed,y,"Tiles"))
 		{
 		    hspeed = -hspeed*bnc;
+			alarm[4] = 0;
 		}
-		else if (tile_meeting(x,y+vspeed,"Tiles"))
+		
+		if (tile_meeting(x,y+vspeed,"Tiles"))
 		{
 		    vspeed = -vspeed*bnc;
+			alarm[4] = 0;
 		}
-				
-		
+
 	}
 	else
 	{
@@ -66,6 +82,19 @@ if (global.haveInvisibiltyCloak && global.invisibleCloak == true) || (global.inS
 			{
 				speed = enemySpeed
 			}
+			
+			if (tile_meeting(x+hspeed,y,"Tiles"))
+			{
+			    hspeed = -hspeed*bnc;
+				alarm[4] = 0;
+			}
+		
+			if (tile_meeting(x,y+vspeed,"Tiles"))
+			{
+			    vspeed = -vspeed*bnc;
+				alarm[4] = 0;
+			}
+			
 		}
 	}
 }

@@ -4,11 +4,15 @@ function LaserTrapLightWhite()
 {
 	with(o_laser)
 	{
+		off = random_range(0.02, -0.02);
+	
+		draw_sprite_ext(s_lightBulb4, 0, x, y, 0.25+off, 0.25+off, 0, c_white, 0.3 + off);
+	
 		if (laserActive) && (alarm[1] > 0)  && (colLaser)
 		{
 			if (face = 0)
 			{
-				draw_set_alpha(0.3+random(0.6))
+				draw_set_alpha(0.3+random(0.2))
 				draw_circle_colour(x-1,y-7*image_yscale,(height*2)+6,blanco, blanco, false)
 	
 				draw_circle_colour(x-1,y-16-long*image_yscale,(height*2)+6,blanco, blanco, false)
@@ -20,7 +24,7 @@ function LaserTrapLightWhite()
 			}
 			else if (face = 1)
 			{
-				draw_set_alpha(0.3+random(0.6))
+				draw_set_alpha(0.3+random(0.2))
 				draw_circle_colour(x-7, y,(height*2)+6,blanco, blanco, false)
 		
 				draw_circle_colour(x-16-long, y, (height*2)+6,blanco, blanco, false)

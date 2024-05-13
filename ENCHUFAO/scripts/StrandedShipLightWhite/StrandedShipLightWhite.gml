@@ -4,7 +4,7 @@ function StrandedShipLightWhite()
 {
 	with(o_strandedShip)
 	{
-		contLight = 0;
+		
 		angOff = 15;
 		lightLenght = 200;
 		iniLightOff = 5
@@ -28,11 +28,11 @@ function StrandedShipLightWhite()
 			draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, _angle, c_white, 0.2);
 			draw_sprite_ext(s_lightBulb4, 0, x, y, 0.5+off, 0.5+off, 0, c_white, 0.15);
 		
-			draw_set_alpha(0.2)
-			draw_triangle_color(x-lengthdir_x(iniLightOff,_angle-90), y-lengthdir_y(iniLightOff, _angle-90), x+lengthdir_x(lightLenght,_angle+angOff), y-1+lengthdir_y(lightLenght, _angle+angOff), x+lengthdir_x(lightLenght,_angle-angOff), y-1+lengthdir_y(lightLenght, _angle-angOff), c_white, c_white, c_white, false);
-			draw_triangle_color(x-lengthdir_x(iniLightOff,_angle+90), y-lengthdir_y(iniLightOff, _angle+90), x+lengthdir_x(lightLenght,_angle+angOff), y-1+lengthdir_y(lightLenght, _angle+angOff), x+lengthdir_x(lightLenght,_angle-angOff), y-1+lengthdir_y(lightLenght, _angle-angOff), c_white, c_white, c_white, false);
+			//draw_set_alpha(0.2)
+			//draw_triangle_color(x-lengthdir_x(iniLightOff,_angle-90), y-lengthdir_y(iniLightOff, _angle-90), x+lengthdir_x(lightLenght,_angle+angOff), y-1+lengthdir_y(lightLenght, _angle+angOff), x+lengthdir_x(lightLenght,_angle-angOff), y-1+lengthdir_y(lightLenght, _angle-angOff), c_white, c_white, c_white, false);
+			//draw_triangle_color(x-lengthdir_x(iniLightOff,_angle+90), y-lengthdir_y(iniLightOff, _angle+90), x+lengthdir_x(lightLenght,_angle+angOff), y-1+lengthdir_y(lightLenght, _angle+angOff), x+lengthdir_x(lightLenght,_angle-angOff), y-1+lengthdir_y(lightLenght, _angle-angOff), c_white, c_white, c_white, false);
 		
-			draw_set_alpha(1)
+			//draw_set_alpha(1)
 		
 		
 		}

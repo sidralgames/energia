@@ -4,6 +4,10 @@
 contDiscount =random_range(30,60)
 discounted = false;
 event_inherited();
+blinded = false;
+blindedCont = 0;
+inBlindArea = false;
+blindFlash = 10;
 canBeHittedByPlayerLaser = true;
 scale = 1;
 depth = layer_get_depth("Enemies")-1;

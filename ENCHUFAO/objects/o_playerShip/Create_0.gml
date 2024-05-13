@@ -5,7 +5,7 @@ global.meteorsCount = 0;
 global.assistedSlowmo = false;
 //global.haveCallForHelp = true;
 contLight = 0;
-
+alphaFocosColor = 0.12;
 lightLenght = 600;
 iniLightOff = 7
 //global.bombIsClusterBomb = true;

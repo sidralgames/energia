@@ -1,6 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 discounted = false;
+blinded = false;
+blindedCont = 0;
+contToBlind = 0;
+inBlindArea = false;
+blindFlash = 10;
 shocked = false;
 canBeHittedByPlayerLaser = true;
 finalTrail = true;

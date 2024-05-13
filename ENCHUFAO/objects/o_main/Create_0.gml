@@ -283,6 +283,7 @@ instance_create_layer(-100,-100,"Part",o_partGreen);
 instance_create_layer(-100,-100,"Pause",o_partEnemyKilledBy)
 instance_create_layer(-100,-100,"Text",o_partSmokeBomb)
 instance_create_layer(-100,-100,"Part",o_partSmokeBombBack)
+instance_create_layer(-100,-100,"Part",o_partBlinded)
 
 
 global.repairingSprite = s_repairingPart;

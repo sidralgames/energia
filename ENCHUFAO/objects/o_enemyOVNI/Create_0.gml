@@ -1,6 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 enemyBestiaryNumber = global.enemyOVNIBestiaryNumber;
+blinded = false;
+blindedCont = 0;
+contToBlind = 0;
+inBlindArea = false;
+blindFlash = 10;
 enemyWithLight = false;
 enemyWithLightBulb = true;
 slowedPeta = 0;

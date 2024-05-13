@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 slowedPeta = 0;
+contToBlind = 0;
+inBlindArea = false;
+blindFlash = 10;
 freezing = 0;
 freeze = false;
 slowed = false;

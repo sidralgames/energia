@@ -112,4 +112,9 @@ function DeletePartSystemsFromMemory()
 	part_system_destroy(global.repairingPart_sys);
 	part_type_destroy(global.repairingPart);
 	
+	part_particles_clear(global.blinded_sys);
+	part_emitter_destroy_all(global.blinded_sys);
+	part_system_destroy(global.blinded_sys);
+	part_type_destroy(global.blindedPart);
+	
 }

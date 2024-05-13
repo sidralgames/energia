@@ -4,7 +4,8 @@ function ActivateAndDestroyBetweenLevels()
 {
 	instance_activate_all();
 	instance_deactivate_object(o_main);
-	instance_destroy(o_pause);
+	instance_deactivate_object(o_pause);
+	//instance_destroy(o_pause);
 	
 	if instance_exists(o_gridRoom)
 	{
@@ -26,5 +27,6 @@ function ActivateAndDestroyBetweenLevels()
 		instance_destroy();	
 	}
 
-	instance_activate_object(o_main)
+	instance_activate_object(o_main);
+	instance_activate_object(o_pause);
 }

@@ -2,6 +2,11 @@
 // You can write your code in this editor
 alphaLight = 0;
 enemyBestiaryNumber = global.enemyDiscBestiaryNumber;
+blinded = false;
+blindedCont = 0;
+contToBlind = 0;
+inBlindArea = false;
+blindFlash = 10;
 enemyWithLight = false;
 enemyWithLightBulb = true;
 slowedPeta = 0;

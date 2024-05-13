@@ -8,7 +8,7 @@ function StrandedShipLightColor()
 		{
 			contLight --;
 		
-			off = random_range(0.05, -0.05);
+			off = random_range(0.02, -0.02);
 			if (contLight <= 10)
 			{
 				draw_sprite_ext(s_lightBulb4, 0, x+lengthdir_x(5, _angle+90), y+lengthdir_y(5, _angle+90), 0.05+off, 0.05+off, 0, global.lightBlue, 0.5 + off);
