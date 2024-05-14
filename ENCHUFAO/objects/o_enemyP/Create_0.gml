@@ -1,10 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 blinded = false;
-blindedCont = 0;
-contToBlind = 0;
+blindedTime = 0;
+contBlind = 0;
 inBlindArea = false;
-blindFlash = 20;
+initialBlindFlash = 23;
+blindFlash = initialBlindFlash;
 enemyWithLight = true;
 enemyWithLightBulb = true;
 canStopChasing = false;

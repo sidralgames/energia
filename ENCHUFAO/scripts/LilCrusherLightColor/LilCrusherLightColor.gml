@@ -49,4 +49,19 @@ function LilCrusherLightColor()
 		off = random_range(0.02, -0.02);
 		draw_sprite_ext(s_lightBulb4, 0, x, y, 0.1+off, 0.1+off, 0, global.brightRed, 0.2 + off);
 	}
+	
+	
+	with (o_bulletBossGarbanzo_Bomb)
+	{
+		off = random_range(0.02, -0.02);
+		
+		if (!exploding)
+		{
+			draw_sprite_ext(s_lightBulb4, 0, x, y, 0.1+off, 0.1+off, 0, global.yellow, 0.6 + off);
+		}
+		else
+		{
+			draw_sprite_ext(s_lightBulb4, 0, x, y, 0.2+off, 0.2+off, 0, global.brightRed, 0.6 + off);
+		}
+	}
 }

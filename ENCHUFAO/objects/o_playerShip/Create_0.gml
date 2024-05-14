@@ -5,7 +5,8 @@ global.meteorsCount = 0;
 global.assistedSlowmo = false;
 //global.haveCallForHelp = true;
 contLight = 0;
-alphaFocosColor = 0.12;
+alphaFocosColor = global.alphaFocosColor;
+alphaFocos = global.alphaFocos;
 lightLenght = 600;
 iniLightOff = 7
 //global.bombIsClusterBomb = true;
@@ -145,7 +146,6 @@ if (global.shipGreenBonusUpgraded)
 global.amplifyPowerLaser = 0;
 global.amplifyPowerAmmo = 0;
 
-alphaFocos = 0.3;
 instance_create_layer(-100,-100, "Part",o_partBalaP);	
 
 partChanged = false;

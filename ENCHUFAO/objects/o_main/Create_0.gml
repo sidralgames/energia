@@ -2,14 +2,24 @@
 // You can write your code in this editor
 ending = false;
 endTimer = 10;
+
 room_instance_clear(Sala_0);
 global.haveChargerAdapter = false;
 global.adaptersInLevel = 0;
 global.goToSecretRoom = false;
 
+// ---- FLASH LIGHT ---//
+global.alphaFocos = 0.3;
+global.alphaFocosColor = 0.13;
+global.initialBlindFlash = 20;
+global.enemyBlindTimeMin = 90;
+global.enemyBlindTimeMax = 150;
+
+
+
 global.chipList = ds_map_create();
 
-global.ammoMod = 50 // 10 guapo //50 lo de siempre
+global.ammoMod = 50; // 10 guapo //50 lo de siempre
 
 global.bestiaryEnemiesNum = 1;
 global.differentEnemiesTotal = 25;
@@ -369,8 +379,11 @@ AddUpgradeShockingPETAS();
 AddUpgradeHomingBombPlus();
 AddUpgradeLongLastingChip();
 AddUpgradeMoreChipDrops();
-AddUpgradeShieldPerRoom();
+AddUpgradeShieldPerRoom(); //30
 AddUpgradeTurretsAllies();
+AddUpgradeFrontLights();
+
+
 
 global.shieldsPerRoom = 0;
 
@@ -405,6 +418,7 @@ global.longLastingChipIsUpgraded = false;
 global.moreChipDropsIsUpgraded = false;
 global.shieldPerRoomIsUpgraded = false;
 global.turretsAlliesIsUpgraded = false;
+global.frontLightsIsUpgraded = false;
 
 
 

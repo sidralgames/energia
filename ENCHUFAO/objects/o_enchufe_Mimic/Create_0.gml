@@ -71,4 +71,9 @@ slowed = false;
 slowedContMax = 30;
 slowedCont = slowedContMax;
 
-
+blinded = false;
+blindedTime = 0;
+contBlind = 0;
+inBlindArea = false;
+initialBlindFlash = global.initialBlindFlash;
+blindFlash = initialBlindFlash;

@@ -22,4 +22,10 @@ function LilCrusherLightWhite()
 		off = random_range(0.02, -0.02);
 		draw_sprite_ext(s_lightBulb4, 0, x, y, 0.23+off, 0.23+off, 0, c_white, 0.3 + off);
 	}
+	
+	with (o_bulletBossGarbanzo_Bomb)
+	{
+		off = random_range(0.02, -0.02);
+		draw_sprite_ext(s_lightBulb4, 0, x, y, 0.23+off, 0.23+off, 0, c_white, 0.4 + off);
+	}
 }

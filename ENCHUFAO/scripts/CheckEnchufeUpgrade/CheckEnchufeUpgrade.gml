@@ -799,6 +799,40 @@ function CheckEnchufeUpgrade()
 	
 			}break;
 			
+			case "upgradeFrontLights":
+			{
+				if (!global.frontLightsIsUpgraded)
+				{
+					global.frontLightsIsUpgraded = true;
+					AddUpgradeFrontLightsPlayer();
+				}
+				
+				for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+				{
+					upg = ds_map_find_value(global.PlayerUpgradesList, i)
+					if (upg.obj = o_enchufeUpgadeFrontLights)
+					{
+						upg.times+=1;
+					}
+				}
+				
+				global.initialBlindFlash += 10;
+				global.enemyBlindTimeMin += 60;
+				global.enemyBlindTimeMax += 60;
+				
+				//-- DISCARD UPGRADE --//
+				for (var i= 0; i< global.numberOfUpgrades; i++)
+				{
+					thisUpg = ds_map_find_value(global.upgradesList, i)
+					if (thisUpg.obj = o_enchufeUpgadeMoreChipDrops)
+					{
+						thisUpg.canShowUp = false;
+					}
+				}
+	
+	
+			}break;
+			
 			
 			case "upgradeShieldPerRoom":
 			{

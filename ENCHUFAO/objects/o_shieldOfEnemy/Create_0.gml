@@ -5,7 +5,7 @@ contDiscount =random_range(30,60)
 discounted = false;
 event_inherited();
 blinded = false;
-blindedCont = 0;
+blindedTime = 0;
 inBlindArea = false;
 blindFlash = 10;
 canBeHittedByPlayerLaser = true;

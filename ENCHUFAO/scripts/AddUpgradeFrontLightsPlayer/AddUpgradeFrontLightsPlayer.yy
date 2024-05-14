@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"AddUpgradeFrontLightsPlayer",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddUpgradeFrontLightsPlayer",
+  "parent":{
+    "name":"UPGRADESPLAYER",
+    "path":"folders/Scripts/GENERAL/UPGRADESPLAYER.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

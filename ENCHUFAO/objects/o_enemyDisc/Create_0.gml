@@ -3,10 +3,11 @@
 alphaLight = 0;
 enemyBestiaryNumber = global.enemyDiscBestiaryNumber;
 blinded = false;
-blindedCont = 0;
-contToBlind = 0;
+blindedTime = 0;
+contBlind = 0;
 inBlindArea = false;
-blindFlash = 10;
+initialBlindFlash = 23;
+blindFlash = initialBlindFlash;
 enemyWithLight = false;
 enemyWithLightBulb = true;
 slowedPeta = 0;

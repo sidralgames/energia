@@ -7,6 +7,8 @@ draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,_angle,im
 
 DrawStatusConditionEnemies(_angle);
 
-//draw_text(x, y-40, string(_hp))
+//draw_text(x, y-60, "contBlind: " + string(contBlind))
+//draw_text(x, y-40, "blindFlash: " + string(blindFlash))
+//draw_text(x, y-20, "inBlindArea: " + string(inBlindArea))
 
 

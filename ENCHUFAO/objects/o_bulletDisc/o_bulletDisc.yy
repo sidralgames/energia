@@ -18,8 +18,8 @@
     "path":"folders/Objetos/Bullets.yy",
   },
   "parentObjectId":{
-    "name":"o_bulletEnemy_Father",
-    "path":"objects/o_bulletEnemy_Father/o_bulletEnemy_Father.yy",
+    "name":"o_BulletCollisionLaser",
+    "path":"objects/o_BulletCollisionLaser/o_BulletCollisionLaser.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

@@ -2,10 +2,11 @@
 // You can write your code in this editor
 discounted = false;
 blinded = false;
-blindedCont = 0;
-contToBlind = 0;
+blindedTime = 0;
+contBlind = 0;
 inBlindArea = false;
-blindFlash = 10;
+initialBlindFlash = 23;
+blindFlash = initialBlindFlash;
 shocked = false;
 canBeHittedByPlayerLaser = true;
 finalTrail = true;

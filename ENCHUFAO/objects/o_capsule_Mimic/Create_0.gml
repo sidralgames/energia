@@ -8,6 +8,14 @@
 
 // Inherit the parent event
 event_inherited();
+
+blinded = false;
+blindedTime = 0;
+contBlind = 0;
+inBlindArea = false;
+initialBlindFlash = global.initialBlindFlash;
+blindFlash = initialBlindFlash;
+
 enemyBestiaryNumber = 27;
 contDie = 5;
 canDie = false;

@@ -19,7 +19,7 @@ if (contParts <=0)
 speed = discSpeed * min(1, global.relativeSpeed+0.1)
 _angle -= discSpeed*5*global.relativeSpeed;
 
-if (hp <= 0) || (bounces >= bouncesMax)
+if (_hp <= 0) || (bounces >= bouncesMax)
 {
 	instance_destroy()
 }

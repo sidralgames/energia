@@ -10,12 +10,12 @@ function EnemiesLightColor()
 			if (enemyIsMini)
 			{
 				off = random_range(0.05, -0.05);
-				draw_sprite_ext(s_lightEnemyFront, 0, x, y, 0.75, 0.75, _angle, global.brightRed, 0.4);
+				draw_sprite_ext(s_lightEnemyFront, 0, x, y, 0.75, 0.75, _angle, global.brightRed, 0.3);
 			}
 			else
 			{
 				off = random_range(0.05, -0.05);
-				draw_sprite_ext(s_lightEnemyFront, 0, x, y, 1.5, image_yscale, _angle, global.brightRed, 0.4);
+				draw_sprite_ext(s_lightEnemyFront, 0, x, y, 1.5, image_yscale, _angle, global.brightRed, 0.3);
 			}
 		}
 	}
@@ -26,7 +26,7 @@ function EnemiesLightColor()
 		{
 			off = random_range(0.02, -0.02);
 		
-			if (alphaLight <= 0.5)
+			if (alphaLight <= 0.4)
 			{
 				alphaLight +=0.004;
 			}

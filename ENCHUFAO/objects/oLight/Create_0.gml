@@ -4,13 +4,20 @@ switch (room)
 {
 	case Sala_0:
 	{
-		num = irandom_range(40,225);
+		if (global.level <=5)
+		{
+			num = irandom_range(80,225);
+		}
+		else
+		{
+			num = irandom_range(40,170);
+		}
 	}
 	break;
 	
 	case Sala_SecondBoss:
 	{
-		num = irandom_range(40,150);
+		num = irandom_range(60,120);
 	}
 	break;
 	

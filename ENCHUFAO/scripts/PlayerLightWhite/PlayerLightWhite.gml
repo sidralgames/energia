@@ -35,29 +35,15 @@ function PlayerLightWhite()
 		}
 	
 		off = random_range(0.02, -0.02);
-
-		if (key_l3Dowm)
-		{
-			if (global.energy > 0)
-			{	
-				global.energy -= 0.1;
-				angOff = max(0, global.energy*0.05) + 5;
-			}
-			
-			alphaFocos = 1;
-		}
-		else
-		{
-			angOff = max(0, global.energy*0.05);
-			alphaFocos = 0.25;
-		}
 		
 		draw_sprite_ext(s_lightBulb4, 0, x, y, 0.5+off, 0.5+off, 0, c_white, 0.25);
 		
-		draw_set_alpha(alphaFocos)
-		draw_triangle_color(x-lengthdir_x(iniLightOff,_angle-90), y-lengthdir_y(iniLightOff, _angle-90), x+lengthdir_x(lightLenght,_angle+angOff), y-1+lengthdir_y(lightLenght, _angle+angOff), x+lengthdir_x(lightLenght,_angle-angOff), y-1+lengthdir_y(lightLenght, _angle-angOff), c_white, c_white, c_white, false);
-		draw_triangle_color(x-lengthdir_x(iniLightOff,_angle+90), y-lengthdir_y(iniLightOff, _angle+90), x+lengthdir_x(lightLenght,_angle+angOff), y-1+lengthdir_y(lightLenght, _angle+angOff), x+lengthdir_x(lightLenght,_angle-angOff), y-1+lengthdir_y(lightLenght, _angle-angOff), c_white, c_white, c_white, false);
-		
+		if (global.energy > 0)
+		{
+			draw_set_alpha(global.alphaFocos)
+			draw_triangle_color(x-lengthdir_x(iniLightOff,_angle-90), y-lengthdir_y(iniLightOff, _angle-90), x+lengthdir_x(lightLenght,_angle+angOff), y-1+lengthdir_y(lightLenght, _angle+angOff), x+lengthdir_x(lightLenght,_angle-angOff), y-1+lengthdir_y(lightLenght, _angle-angOff), c_white, c_white, c_white, false);
+			draw_triangle_color(x-lengthdir_x(iniLightOff,_angle+90), y-lengthdir_y(iniLightOff, _angle+90), x+lengthdir_x(lightLenght,_angle+angOff), y-1+lengthdir_y(lightLenght, _angle+angOff), x+lengthdir_x(lightLenght,_angle-angOff), y-1+lengthdir_y(lightLenght, _angle-angOff), c_white, c_white, c_white, false);
+		}
 		draw_set_alpha(1)
 		draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, _angle, c_white, 0.2);
 	}

@@ -5,7 +5,7 @@ function Enemy_Waiting()
 	if instance_exists(o_playerShip)
 	{
 		if ((point_distance(x,y,o_playerShip.x, o_playerShip.y) <  alertDist) && ((global.invisibleCloak == false) && (global.inSmokeArea = false)))
-		|| (waiting = false)
+		|| (waiting = false) || (inBlindArea = true)
 		{
 			alert = instance_create(x,y,o_invisibleAlert);
 			

@@ -7,13 +7,13 @@ part_system_depth(global.blinded_sys,layer_get_depth("Player"));
 global.blindedPart = part_type_create();
 part_type_scale(global.blindedPart,1,1);
 part_type_orientation(global.blindedPart,0,359,0,0,0)
-part_type_size(global.blindedPart, 0.35,0.95,-0.05,0);
+part_type_size(global.blindedPart, 0.45,0.95,-0.05,0);
 part_type_alpha2(global.blindedPart, 1,1);
 part_type_speed(global.blindedPart,0,0,0,0);
 part_type_direction(global.blindedPart,140,160,0,1);
 part_type_life(global.blindedPart, 20,30);
 part_type_sprite(global.blindedPart,s_blindedPart,true,false,false)
-part_type_blend(global.blindedPart,true)
+//part_type_blend(global.blindedPart,true)
 
 
 

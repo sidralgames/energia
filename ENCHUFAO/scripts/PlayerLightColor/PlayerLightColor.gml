@@ -4,17 +4,25 @@ function PlayerLightColor()
 {
 	with(o_playerShip)
 	{
+	
 		if (key_l3Dowm)
 		{
-			alphaFocosColor = lerp(alphaFocosColor, 0.05, 0.015);
-			draw_set_alpha(alphaFocosColor)
-			draw_triangle_color(x-lengthdir_x(iniLightOff,_angle-90), y-lengthdir_y(iniLightOff, _angle-90), x+lengthdir_x(lightLenght,_angle+angOff), y-1+lengthdir_y(lightLenght, _angle+angOff), x+lengthdir_x(lightLenght,_angle-angOff), y-1+lengthdir_y(lightLenght, _angle-angOff), colorLaser, colorLaser, colorLaser, false);
-			draw_triangle_color(x-lengthdir_x(iniLightOff,_angle+90), y-lengthdir_y(iniLightOff, _angle+90), x+lengthdir_x(lightLenght,_angle+angOff), y-1+lengthdir_y(lightLenght, _angle+angOff), x+lengthdir_x(lightLenght,_angle-angOff), y-1+lengthdir_y(lightLenght, _angle-angOff), colorLaser, colorLaser, colorLaser, false);
-			draw_set_alpha(1)
+			if (global.energy > 0)
+			{	
+				global.energy -= 0.1;
+				angOff = max(0, global.energy*0.05) + 5;
+			
+				alphaFocosColor = lerp(alphaFocosColor, 0.05, 0.04);
+				draw_set_alpha(alphaFocosColor)
+				draw_triangle_color(x-lengthdir_x(iniLightOff,_angle-90), y-lengthdir_y(iniLightOff, _angle-90), x+lengthdir_x(lightLenght,_angle+angOff), y-1+lengthdir_y(lightLenght, _angle+angOff), x+lengthdir_x(lightLenght,_angle-angOff), y-1+lengthdir_y(lightLenght, _angle-angOff), colorLaser, colorLaser, colorLaser, false);
+				draw_triangle_color(x-lengthdir_x(iniLightOff,_angle+90), y-lengthdir_y(iniLightOff, _angle+90), x+lengthdir_x(lightLenght,_angle+angOff), y-1+lengthdir_y(lightLenght, _angle+angOff), x+lengthdir_x(lightLenght,_angle-angOff), y-1+lengthdir_y(lightLenght, _angle-angOff), colorLaser, colorLaser, colorLaser, false);
+				draw_set_alpha(1)
+			}
 		}
 		else
 		{
-			alphaFocosColor = 0.12;
+			angOff = max(0, global.energy*0.05);
+			alphaFocosColor = global.alphaFocosColor;
 		}
 	
 		if (global.energy <= 0)
@@ -33,13 +41,13 @@ function PlayerLightColor()
 	
 	with(o_shield)
 	{
-		off = random_range(0.05, -0.05);
-		draw_sprite_ext(s_lightBulb4, 0, x, y, 0.15+off, 0.15+off, 0, global.lightBlue, 0.25);
+		off = random_range(0.03, -0.03);
+		draw_sprite_ext(s_lightBulb4, 0, x, y, 0.2+off, 0.2+off, 0, global.lightBlue, 0.3);
 	}
 	
 	with(o_ShieldpickUp)
 	{
-		off = random_range(0.05, -0.05);
+		off = random_range(0.03, -0.03);
 		draw_sprite_ext(s_lightBulb4, 0, x, y, 0.1+off, 0.1+off, 0, global.lightBlue, 0.25);
 	}
 
