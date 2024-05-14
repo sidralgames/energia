@@ -8,7 +8,7 @@ switch(isFrom)
 	{
 		if (global.bombIsHomingBomb)
 		{
-			screenShake(3,40);
+			screenShake(2,10);
 			shockwave1 = instance_create(x,y,o_shockwave);
 			shockwave1.scale = 0;
 
@@ -28,7 +28,7 @@ switch(isFrom)
 	
 	case "BulletBomb":
 	{
-		screenShake(2,30);
+		screenShake(2,10);
 		shockwave1 = instance_create(x,y,o_shockwave);
 		shockwave1.scale = 0.5;
 

@@ -18,6 +18,7 @@ xx = x;
 yy = y;
 
 bnc = 0.8;
+picked = false;
 
 
 

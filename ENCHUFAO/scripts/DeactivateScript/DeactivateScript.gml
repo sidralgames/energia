@@ -5,5 +5,6 @@ function DeactivateScript()
 	instance_deactivate_object(oVine_Suelo);
 	instance_deactivate_object(oVine_Techo);
 	instance_deactivate_object(oVinePadre);
-	
+	instance_deactivate_object(o_objectIntile);
+		
 }

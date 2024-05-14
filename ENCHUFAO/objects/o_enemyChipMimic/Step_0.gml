@@ -7,6 +7,14 @@ if (scale < 1.1)
 }
 
 
+StatusEnemyBlinded();
+
+if (blinded)
+{
+	_hp = 0;
+}
+
+
 if (_hp <= 0)
 {
 	explo = instance_create(x,y,o_exploPurple);

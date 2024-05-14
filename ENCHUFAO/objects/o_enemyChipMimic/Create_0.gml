@@ -15,6 +15,14 @@ bnc = 1;
 scale = 0;
 enemyBestiaryNumber = 25;
 
+blinded = false;
+blindedTime = 0;
+contBlind = 0;
+inBlindArea = false;
+initialBlindFlash = global.initialBlindFlash;
+blindFlash = initialBlindFlash;
+contElectroPart = 0;
+
 
 
 

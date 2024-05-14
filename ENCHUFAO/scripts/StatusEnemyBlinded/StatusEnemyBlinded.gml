@@ -8,19 +8,21 @@ function StatusEnemyBlinded()
 		{
 			if (key_l3Dowm)
 			{
-				if (point_distance(x,y, other.x, other.y) < 300) &&
-				(point_in_triangle(other.x, other.y,
-				x-lengthdir_x(iniLightOff,_angle-90), y-lengthdir_y(iniLightOff, _angle-90),
-				x+lengthdir_x(lightLenght,_angle+angOff), y-1+lengthdir_y(lightLenght, _angle+angOff),
-				x+lengthdir_x(lightLenght,_angle-angOff), y-1+lengthdir_y(lightLenght, _angle-angOff)))
+				if (point_distance(x,y, other.x, other.y) < 300) 
 				{
-					other.inBlindArea = true;
-					other.blindFlash = lerp(other.blindFlash, 0.7, 0.7);
-					other.contBlind += other.blindFlash;
-				}
-				else
-				{
-					other.inBlindArea = false;
+					if (point_in_triangle(other.x, other.y,
+					x-lengthdir_x(iniLightOff,_angle-90), y-lengthdir_y(iniLightOff, _angle-90),
+					x+lengthdir_x(lightLenght,_angle+angOff), y-1+lengthdir_y(lightLenght, _angle+angOff),
+					x+lengthdir_x(lightLenght,_angle-angOff), y-1+lengthdir_y(lightLenght, _angle-angOff)))
+					{
+						other.inBlindArea = true;
+						other.blindFlash = lerp(other.blindFlash, 0.7, 0.7);
+						other.contBlind += other.blindFlash;
+					}
+					else
+					{
+						other.inBlindArea = false;
+					}
 				}
 			}
 			else

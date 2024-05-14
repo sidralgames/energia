@@ -1,5 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+inScreen =  (x > __view_get( e__VW.XView, 0 )-350 && x < __view_get( e__VW.XView, 0 )+1010) &&
+(y > __view_get( e__VW.YView, 0 )-350 && y < __view_get( e__VW.YView, 0 )+710)
+
+
 if (set = false)
 {
 	set = true;
@@ -15,6 +20,13 @@ if (set = false)
 }
 if (global.bombIsHomingBomb) && (called = false)
 {
+	_hpHoming --;
+	
+	if (_hpHoming <= 0)
+	{
+		instance_destroy();
+	}
+	
 	_speed = lerp(_speed, 4.5, 0.05);
 	
 	part_particles_create(global.naveFriend_sys, x,y, global.naveFriend, 1);

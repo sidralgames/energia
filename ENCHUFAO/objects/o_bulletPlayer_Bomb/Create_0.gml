@@ -19,3 +19,8 @@ _angle = direction;
 
 set = false
 
+_hpHoming = 180;
+inScreen =  (x > __view_get( e__VW.XView, 0 )-350 && x < __view_get( e__VW.XView, 0 )+1010) &&
+(y > __view_get( e__VW.YView, 0 )-350 && y < __view_get( e__VW.YView, 0 )+710)
+
+

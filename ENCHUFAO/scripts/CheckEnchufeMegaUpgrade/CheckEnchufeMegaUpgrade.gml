@@ -129,8 +129,8 @@ function CheckEnchufeMegaUpgrade()
 					}
 				}
 
-				global.hpMax +=3;
-				global.hp += 3;
+				global.hpMax +=2;
+				global.hp += 2;
 				
 			}break;	
 		

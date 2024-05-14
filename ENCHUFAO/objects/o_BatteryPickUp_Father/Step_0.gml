@@ -24,6 +24,7 @@ if (inEnemy = false)  && (inCapsule = false)
 		{
 			if (o_playerShip.key_x) && (o_playerShip.haveBatteryUpgrade == false)
 			{
+				picked = true;
 				audio_play_sound_on(global.audioEmitter,snd_pickBattery,false, 50);
 				instance_destroy();
 				instance_create_layer(o_playerShip.x, o_playerShip.y -30, "Player", o_bannerBullet)

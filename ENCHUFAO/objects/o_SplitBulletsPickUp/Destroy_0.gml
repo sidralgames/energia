@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (inCapsule = false)
+if (inCapsule = false) && (picked)
 {
 	if instance_exists(o_playerShip)
 	{

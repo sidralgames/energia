@@ -1,5 +1,11 @@
 /// @description Draw the simulation
-if (verletSystemExists(verletSystem1)) 
+inScreen =  (x > __view_get( e__VW.XView, 0 )-150 && x < __view_get( e__VW.XView, 0 )+810) &&
+(y > __view_get( e__VW.YView, 0 )-150 && y < __view_get( e__VW.YView, 0 )+510)
+
+if (inScreen)
 {
-	verletSystem1.draw();
+	if (verletSystemExists(verletSystem1)) 
+	{
+		verletSystem1.draw();
+	}
 }
