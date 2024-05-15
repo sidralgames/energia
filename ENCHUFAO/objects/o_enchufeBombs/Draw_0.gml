@@ -35,18 +35,18 @@ if instance_exists(o_playerShip)
 
 if (bombsInEnchufe <= 5) && !(charging)
 {
-	bombsInEnchufe += 0.006;
+	bombsInEnchufe += 0.005;
 }
 
 if (bombsInEnchufe <= 5) || (charging)
 {
 	for (var i = 0; i < floor(bombsInEnchufeMax); i++)
 	{
-		draw_sprite_ext(s_bombAmmoEnchufe, 1, x-16+(8*i), y-40,  1,1.1, 0, image_blend, image_alpha)	
+		draw_sprite_ext(s_bombAmmoEnchufe, 1, x-16+(8*i), y-40,  1,1.2, 0, image_blend, image_alpha)	
 	}
 	
 	for (var i = 0; i < floor(bombsInEnchufe); i++)
 	{
-		draw_sprite_ext(s_bombAmmoEnchufe, 0, x-16+(8*i), y-40,  1,1.1, 0, image_blend, image_alpha)	
+		draw_sprite_ext(s_bombAmmoEnchufe, 0, x-16+(8*i), y-40,  1,1.2, 0, image_blend, image_alpha)	
 	}
 }

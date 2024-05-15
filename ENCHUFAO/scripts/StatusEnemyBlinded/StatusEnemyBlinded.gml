@@ -6,7 +6,7 @@ function StatusEnemyBlinded()
 	{
 		with (o_playerShip)
 		{
-			if (key_l3Dowm)
+			if (key_r3Dowm)
 			{
 				if (point_distance(x,y, other.x, other.y) < 300) 
 				{

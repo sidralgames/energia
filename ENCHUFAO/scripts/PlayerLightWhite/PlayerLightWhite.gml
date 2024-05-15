@@ -14,11 +14,27 @@ function PlayerLightWhite()
 
 			draw_set_alpha(1)
 		}
-
-		if (global.energy <= 0)
+		
+		if (global.energy <= global.energyLow)
+		{
+			if (contLight <= 10)
+			{
+				draw_sprite_ext(s_lightBulb4, 0, x+lengthdir_x(7, _angle+180), y+lengthdir_y(7, _angle+180), 0.1+off, 0.1+off, 0, c_white, 0.5 + off);
+			}
+		}
+		
+		if (global.energy <= 0) || (global.energy <= global.energyLow)
 		{
 			contLight --;
+			
+			if (contLight <= 0)
+			{
+				contLight = 20;
+			}
+		}
 		
+		if (global.energy <= 0)
+		{
 			off = random_range(0.05, -0.05);
 			if (contLight <= 10)
 			{
@@ -27,10 +43,6 @@ function PlayerLightWhite()
 			else
 			{
 				draw_sprite_ext(s_lightBulb4, 0, x+lengthdir_x(5, _angle-90), y+lengthdir_y(5, _angle-90), 0.1+off, 0.1+off, 0, c_white, 0.5 + off);
-			}
-			if (contLight <= 0)
-			{
-				contLight = 20;
 			}
 		}
 	
@@ -46,6 +58,20 @@ function PlayerLightWhite()
 		}
 		draw_set_alpha(1)
 		draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, _angle, c_white, 0.2);
+	}
+	
+	with (o_bulletPlayer_Bomb)
+	{
+		off = random_range(0.04, -0.04);
+		
+		if (global.bombIsHomingBomb)
+		{
+			draw_sprite_ext(s_lightBulb4, 0, x, y, 0.1+off, 0.1+off, 0, c_white, 0.25);
+		}
+		else
+		{
+			draw_sprite_ext(s_lightBulb4, 0, x, y, 0.3+off, 0.3+off, 0, c_white, 0.5);
+		}
 	}
 	
 	with(o_shield)

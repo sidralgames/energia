@@ -4,7 +4,17 @@ function PlayerLightColor()
 {
 	with(o_playerShip)
 	{
-		if (key_l3Dowm)
+		off = random_range(0.05, -0.05);
+		offLow = random_range(0.02, -0.02);
+		if (global.energy <= global.energyLow)
+		{
+			if (contLight <= 10)
+			{
+				draw_sprite_ext(s_lightBulb4, 0, x+lengthdir_x(10, _angle+180), y+lengthdir_y(10, _angle+180), 0.08+offLow, 0.08+offLow, 0, global.brightRed, 0.5 + offLow);
+			}
+		}
+		
+		if (key_r3Dowm)
 		{
 			if (global.energy > 0)
 			{	
@@ -13,7 +23,7 @@ function PlayerLightColor()
 				global.energy -= energyLost;
 				angOff = max(0, global.energy*0.05) + global.angExtraFocos;
 			
-				alphaFocosColor = lerp(alphaFocosColor, 0.06, 0.04);
+				alphaFocosColor = lerp(alphaFocosColor, 0.07, 0.04);
 				
 				draw_set_alpha(alphaFocosColor)
 				draw_triangle_color(x-lengthdir_x(iniLightOff,_angle-90), y-lengthdir_y(iniLightOff, _angle-90), x+lengthdir_x(lightLenght,_angle+angOff), y-1+lengthdir_y(lightLenght, _angle+angOff), x+lengthdir_x(lightLenght,_angle-angOff), y-1+lengthdir_y(lightLenght, _angle-angOff), colorLaser, colorLaser, colorLaser, false);
@@ -30,15 +40,28 @@ function PlayerLightColor()
 	
 		if (global.energy <= 0)
 		{
-			off = random_range(0.05, -0.05);
 			if (contLight <= 10)
 			{
-				draw_sprite_ext(s_lightBulb4, 0, x+lengthdir_x(5, _angle+90), y+lengthdir_y(5, _angle+90), 0.1+off, 0.1+off, 0, global.lightBlue, 0.5 + off);
+				draw_sprite_ext(s_lightBulb4, 0, x+lengthdir_x(5, _angle+90), y+lengthdir_y(5, _angle+90), 0.1+off, 0.1+off, 0, global.lightBlue, 0.55 + off);
 			}
 			else
 			{
-				draw_sprite_ext(s_lightBulb4, 0, x+lengthdir_x(5, _angle-90), y+lengthdir_y(5, _angle-90), 0.1+off, 0.1+off, 0, global.brightRed, 0.5 + off);
+				draw_sprite_ext(s_lightBulb4, 0, x+lengthdir_x(5, _angle-90), y+lengthdir_y(5, _angle-90), 0.1+off, 0.1+off, 0, global.brightRed, 0.55 + off);
 			}
+		}
+	}
+	
+	with (o_bulletPlayer_Bomb)
+	{
+		off = random_range(0.05, -0.05);
+		
+		if (global.bombIsHomingBomb)
+		{
+			draw_sprite_ext(s_lightBulb4, 0, x, y, 0.2+off, 0.2+off, 0, global.lightBlue, 0.25);
+		}
+		else
+		{
+			draw_sprite_ext(s_lightBulb4, 0, x, y, 0.1+off, 0.1+off, 0, global.lightBlue, 0.25);
 		}
 	}
 	

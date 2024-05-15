@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+contLowEnergy = 30;
+
 ending = false;
 endTimer = 10;
 endingLevel = false;
