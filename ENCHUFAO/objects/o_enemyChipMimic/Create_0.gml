@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 randomize();
+chechInScreen = 0;
 alarm[10] = 40;
 _sprite = sprite_index;
 

@@ -1,8 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+pathCont = 3;
 inScreen = false;
-
+chechInScreen = 0;
 pathStarted = false
 blinded = false;
 blindedTime = 0;
@@ -70,6 +70,7 @@ repelled = false;
 repelledTimeMax = 20;
 repelledTime = repelledTimeMax;
 myPath = path_add();
+
 contPartsInitial =4;
 contParts = contPartsInitial;
 isShield = false;

@@ -1,5 +1,5 @@
 /// @description Draw the simulation
-if (inScreen)
+if (inScreen) || instance_exists(o_menuScores)
 {
 	if (_color = global.darkPalette)
 	{	

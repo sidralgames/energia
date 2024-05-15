@@ -78,6 +78,8 @@ function EnemySniperAimAndShoot()
 			bullet.bulletSpeed = bulletVelo;
 			bullet.image_angle = _angle;
 			bullet.direction = _angle;
+			bullet.enemyShooter = enemyBestiaryNumber;
+			bullet.shooterTrail = true;
 		}
 			
 		var bullet2 = instance_create_layer(x + lengthdir_x(10, _angle), y + lengthdir_y(10, _angle),
@@ -85,12 +87,16 @@ function EnemySniperAimAndShoot()
 		bullet2.bulletSpeed = bulletVelo;
 		bullet2.image_angle = _angle-offBullet;
 		bullet2.direction = _angle-offBullet;
+		bullet2.enemyShooter = enemyBestiaryNumber;
+		bullet2.shooterTrail = true;
 	
 		var bullet3 = instance_create_layer(x + lengthdir_x(10, _angle), y + lengthdir_y(10, _angle),
 		"Bullets", o_bulletEnemy);
 		bullet3.bulletSpeed = bulletVelo;
 		bullet3.image_angle = _angle+offBullet;
 		bullet3.direction = _angle+offBullet;
+		bullet3.enemyShooter = enemyBestiaryNumber;
+		bullet3.shooterTrail = true;
 		
 		path_end();
 		playerTargeted = false;

@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 inScreen = false;
+chechInScreen = 0;
 enemyBestiaryNumber = global.enemyOVNIBestiaryNumber;
 blinded = false;
 blindedTime = 0;

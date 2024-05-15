@@ -14,11 +14,11 @@ function BossGarbanzoChooseAttack()
 			
 			if (o_playerShip.y > y)
 			{
-				attack = choose(0,0,2,3,4,5,6,7,7,9)
+				attack = 6
 			}
 			else
 			{
-				attack = choose(0,0,0,1,4,5,6,7,9)
+				attack = 6
 			}
 		}
 		else if (o_BossMecha_Inside.hp >= 50) && (o_BossMecha_Inside.hp < 100)
@@ -28,7 +28,7 @@ function BossGarbanzoChooseAttack()
 			
 			stageSpeed = 4.3;
 			numenemies = 2;
-			attack = choose(0,0,0,0,1,2,3,4,5,6,7,9);
+			attack = 6;
 		}
 		else
 		{
@@ -37,7 +37,7 @@ function BossGarbanzoChooseAttack()
 			
 			stageSpeed = 5;
 			numenemies = 3;
-			attack = choose(0,0,0,1,2,3,4,5,6,7,9);
+			attack = 6;
 		}
 		
 		

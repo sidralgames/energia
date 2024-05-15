@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 inScreen = false;
+chechInScreen = 30;
 alphaLight = 0;
 enemyBestiaryNumber = global.enemyDiscBestiaryNumber;
 blinded = false;

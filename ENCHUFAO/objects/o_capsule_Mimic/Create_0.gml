@@ -8,7 +8,7 @@
 
 // Inherit the parent event
 event_inherited();
-
+chechInScreen = 0;
 blinded = false;
 blindedTime = 0;
 contBlind = 0;

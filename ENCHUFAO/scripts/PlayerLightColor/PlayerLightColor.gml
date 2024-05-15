@@ -18,7 +18,7 @@ function PlayerLightColor()
 		{
 			if (global.energy > 0)
 			{	
-				energyLost = lerp(energyLost, 0.2, 0.05);
+				energyLost = lerp(energyLost, 0.1, 0.05);
 				
 				global.energy -= energyLost;
 				angOff = max(0, global.energy*0.05) + global.angExtraFocos;

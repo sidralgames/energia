@@ -4,6 +4,8 @@ type = collisionType.custom;
 
 precisionHole = 1;
 
+bulletSpeed = 0;
+
 //enemy = instance_nearest(x,y,o_enemyP)
 //if instance_exists(enemy)
 //{
@@ -13,4 +15,3 @@ precisionHole = 1;
 //}
 
 
-bulletSpeed = 0;

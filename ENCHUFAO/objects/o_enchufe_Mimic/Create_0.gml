@@ -8,6 +8,9 @@
 
 // Inherit the parent event
 event_inherited();
+chechInScreen = 0;
+inScreen = true;
+
 enemyBestiaryNumber = 21;
 contDie = 5;
 canDie = false;

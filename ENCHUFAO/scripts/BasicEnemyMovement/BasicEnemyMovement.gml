@@ -57,6 +57,14 @@ function BasicEnemyMovement()
 				_speed = enemySpeed;
 			}
 			
+			//pathCont --;
+			
+			//if (pathCont <= 0)
+			//{
+			//	path_start(myPath, _speed ,path_action_stop, false);
+			//	pathCont = 2;
+			//}
+			
 			path_start(myPath, _speed ,path_action_stop, false);
 			
 			_angle = lerp(_angle, direction, 1);
