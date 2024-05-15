@@ -22,6 +22,14 @@ function BossGarbanzoAttack_Laser_and_Mini()
 	}
 	
 	
+	if (clearWall = false)
+	{
+		bomb = instance_create(x+40, y+57,o_exploBomb);
+		bomb.isFrom = "BossBomb"
+		clearWall = true;
+	}
+	
+	
 	if (creatingEnemies)
 	{
 		if (alarm[2]<=0)

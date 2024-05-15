@@ -2,13 +2,23 @@
 // You can write your code in this editor
 drawflash = false;
 
+if instance_exists(o_playerShip)
+{
+	dist = point_distance(x,y,o_playerShip.x, o_playerShip.y);
+}
+		
+shakePower = (5 / dist) * 100;
+
+shakePowerFinal = min(8, shakePower)
+
+
 switch(isFrom)
 {
 	case "PlayerBomb":
 	{
 		if (global.bombIsHomingBomb)
 		{
-			screenShake(2,10);
+			screenShake(shakePowerFinal/2,10);
 			shockwave1 = instance_create(x,y,o_shockwave);
 			shockwave1.scale = 0;
 
@@ -17,7 +27,7 @@ switch(isFrom)
 		}
 		else
 		{
-			screenShake(5,60);
+			screenShake(shakePowerFinal,60);
 			shockwave1 = instance_create(x,y,o_shockwave);
 			shockwave1.scale = scaleShockwave;
 
@@ -28,7 +38,7 @@ switch(isFrom)
 	
 	case "BulletBomb":
 	{
-		screenShake(2,10);
+		screenShake(shakePowerFinal/2,10);
 		shockwave1 = instance_create(x,y,o_shockwave);
 		shockwave1.scale = 0.5;
 
@@ -38,22 +48,24 @@ switch(isFrom)
 	
 	case "EnemyBomb":
 	{
-		screenShake(3,40);
+		screenShake(shakePowerFinal,40);
 		shockwave1 = instance_create(x,y,o_shockwave);
 		shockwave1.scale = scaleShockwave;
 
 		shockwave2 = instance_create(x,y,o_shockwaveTiles2)
 		shockwave2.scale = scale-0.2;
+		
 	}break;
 	
 	case "BossBomb":
 	{
-		screenShake(4,50);
+		screenShake(shakePowerFinal,50);
 		shockwave1 = instance_create(x,y,o_shockwave);
 		shockwave1.scale = scaleShockwave;
 
 		shockwave2 = instance_create(x,y,o_shockwaveTiles2)
 		shockwave2.scale = scale-0.2;
+		
 	}break;
 }
 

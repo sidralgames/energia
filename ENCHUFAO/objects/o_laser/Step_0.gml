@@ -1,12 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (global.changingTiles)
+if instance_exists(o_playerShip)
 {
-	
+	inScreen = point_distance(x,y,o_playerShip.x, o_playerShip.y) < global.offRangeDistance_LaserTrap;
 }
-
-inScreen =  (x > __view_get( e__VW.XView, 0 )-50 && x < __view_get( e__VW.XView, 0 )+710) &&
-(y > __view_get( e__VW.YView, 0 )-50 && y < __view_get( e__VW.YView, 0 )+410)
 
 if (inScreen)
 {
@@ -18,7 +15,6 @@ if (inScreen)
 
 if (canShot)
 {
-	
 	switch(face)
 	{
 		case 0:
@@ -42,31 +38,36 @@ if (canShot)
 			{
 				if collision_line(x,y,x, y-16-long*image_yscale, o_playerShip,false, true) 
 				{
-					if o_playerShip.tocado=false
+					if (o_playerShip.tocado == false)
 					{
 						gamepad_set_vibration(0,0.3,0.3);
+						
 						o_playerShip.alarm[4] = 10;
-						o_playerShip.alarm[1] = 30
+						o_playerShip.alarm[1] = 30;
 						o_playerShip.tocado = true;
+						
 						if (global.shields > 0)
 						{
 							global.shields-=1;	
 						}
 						else
 						{
-							audio_play_sound_on(global.audioEmitter, snd_hit, false, 50)
+							audio_play_sound_on(global.audioEmitter, snd_hit, false, 50);
 							global.hp -=1 * global.damageReceived;
+							
 							if (global.hp <= 0)
 							{
 								global.numEnemyKilledBy = global.enemyLasertrapBestiaryNumber;
 							}
 						}
-						screenShake(4,30)
+						
+						screenShake(4,30);
 					}
 				}
 		
 				enemy = collision_rectangle(x-2,y,x+2, y-16-long*image_yscale, o_enemyP,false, true)
 				bullet = collision_rectangle(x-5,y,x+5, y-16-long*image_yscale, o_bulletFather,false, true)
+				
 				if (enemy)
 				{
 					if (enemy.affectedByLaserTrap = true)
@@ -74,6 +75,7 @@ if (canShot)
 						enemy._hp = 0;
 					}
 				}
+				
 				if (bullet)
 				{
 					instance_destroy(bullet)
@@ -103,12 +105,14 @@ if (canShot)
 			{
 				if collision_line(x,y,x-16-long,y, o_playerShip,false, true) 
 				{
-					if o_playerShip.tocado=false
+					if (o_playerShip.tocado == false)
 					{
 						gamepad_set_vibration(0,0.3,0.3);
+						
 						o_playerShip.alarm[4] = 10;
-						o_playerShip.alarm[1] = 30
+						o_playerShip.alarm[1] = 30;
 						o_playerShip.tocado = true;
+						
 						if (global.shields > 0)
 						{
 							global.shields-=1;	
@@ -117,17 +121,20 @@ if (canShot)
 						{
 							audio_play_sound_on(global.audioEmitter, snd_hit, false, 50)
 							global.hp -=1 * global.damageReceived;
+							
 							if (global.hp <= 0)
 							{
 								global.numEnemyKilledBy = global.enemyLasertrapBestiaryNumber;
 							}
 						}
-						screenShake(4,30)
+						
+						screenShake(4,30);
 					}
 				}
 		
 				enemy = collision_rectangle(x+2,y+2,x-16-long,y-2,o_enemyP,false,true)
 				bullet = collision_rectangle(x+2,y+2,x-16-long,y-2,o_bulletFather,false,true)
+				
 				if (enemy)
 				{
 					if (enemy.affectedByLaserTrap = true)
@@ -135,6 +142,7 @@ if (canShot)
 						enemy._hp = 0;
 					}
 				}
+				
 				if (bullet)
 				{
 					instance_destroy(bullet)
@@ -142,7 +150,6 @@ if (canShot)
 			}
 		}
 		break;
-		
 	}
 }
 

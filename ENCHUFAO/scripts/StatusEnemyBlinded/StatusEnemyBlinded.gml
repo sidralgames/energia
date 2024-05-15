@@ -38,7 +38,7 @@ function StatusEnemyBlinded()
 	{
 		contBlind -= 0.5;
 	}
-	if (contBlind >= 50)
+	if (contBlind >= global.bindedTop)
 	{
 		blinded = true;
 		blindedTime = random_range(global.enemyBlindTimeMin, global.enemyBlindTimeMax);

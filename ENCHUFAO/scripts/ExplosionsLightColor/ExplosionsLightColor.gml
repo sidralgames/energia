@@ -15,7 +15,7 @@ function ExplosionsLightColor()
 				}
 				else
 				{
-					draw_sprite_ext(s_lightBulb4, 0, x, y, 0.3+off, 0.3+off, 0, global.lightBlue, 0.3 + off);
+					draw_sprite_ext(s_lightBulb4, 0, x, y, 0.15+off, 0.15+off, 0, global.lightBlue, 0.2 + off);
 				}
 			
 			}break;

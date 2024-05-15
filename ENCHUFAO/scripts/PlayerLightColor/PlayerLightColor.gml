@@ -4,15 +4,17 @@ function PlayerLightColor()
 {
 	with(o_playerShip)
 	{
-	
 		if (key_l3Dowm)
 		{
 			if (global.energy > 0)
 			{	
-				global.energy -= 0.1;
-				angOff = max(0, global.energy*0.05) + 5;
+				energyLost = lerp(energyLost, 0.2, 0.05);
+				
+				global.energy -= energyLost;
+				angOff = max(0, global.energy*0.05) + global.angExtraFocos;
 			
-				alphaFocosColor = lerp(alphaFocosColor, 0.05, 0.04);
+				alphaFocosColor = lerp(alphaFocosColor, 0.06, 0.04);
+				
 				draw_set_alpha(alphaFocosColor)
 				draw_triangle_color(x-lengthdir_x(iniLightOff,_angle-90), y-lengthdir_y(iniLightOff, _angle-90), x+lengthdir_x(lightLenght,_angle+angOff), y-1+lengthdir_y(lightLenght, _angle+angOff), x+lengthdir_x(lightLenght,_angle-angOff), y-1+lengthdir_y(lightLenght, _angle-angOff), colorLaser, colorLaser, colorLaser, false);
 				draw_triangle_color(x-lengthdir_x(iniLightOff,_angle+90), y-lengthdir_y(iniLightOff, _angle+90), x+lengthdir_x(lightLenght,_angle+angOff), y-1+lengthdir_y(lightLenght, _angle+angOff), x+lengthdir_x(lightLenght,_angle-angOff), y-1+lengthdir_y(lightLenght, _angle-angOff), colorLaser, colorLaser, colorLaser, false);
@@ -21,6 +23,7 @@ function PlayerLightColor()
 		}
 		else
 		{
+			energyLost = global.energyLostFocos;
 			angOff = max(0, global.energy*0.05);
 			alphaFocosColor = global.alphaFocosColor;
 		}
@@ -41,8 +44,8 @@ function PlayerLightColor()
 	
 	with(o_shield)
 	{
-		off = random_range(0.03, -0.03);
-		draw_sprite_ext(s_lightBulb4, 0, x, y, 0.2+off, 0.2+off, 0, global.lightBlue, 0.3);
+		off = random_range(0.02, -0.02);
+		draw_sprite_ext(s_lightBulb4, 0, x, y, 0.2+off, 0.2+off, 0, global.lightBlue, 0.25);
 	}
 	
 	with(o_ShieldpickUp)

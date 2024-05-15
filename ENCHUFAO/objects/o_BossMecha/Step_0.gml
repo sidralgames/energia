@@ -36,12 +36,6 @@ switch(state)
 //		b4.isFrom = "BossBomb";
 //		b5.isFrom = "BossBomb";
 //		b6.isFrom = "BossBomb";
-//		b1.isExploFromBoss = true;
-//		b2.isExploFromBoss = true;
-//		b3.isExploFromBoss = true;
-//		b4.isExploFromBoss = true;
-//		b5.isExploFromBoss = true;
-//		b6.isExploFromBoss = true;
 //	}
 	
 //	alarm[5] = 30;
@@ -57,8 +51,6 @@ if (tile_meeting(x+hspeed,y,"Tiles"))
 			b2 = instance_create(x+(30*sign(hspeed)),y-(30*sign(vspeed)),o_exploBomb)
 			b1.isFrom = "BossBomb";
 			b2.isFrom = "BossBomb";
-			b1.isExploFromBoss = true;
-			b2.isExploFromBoss = true;
 			
 			alarm[7] = 20;
 		}
@@ -84,7 +76,6 @@ if (tile_meeting(x+hspeed,y,"Tiles"))
 	}
     vspeed = -vspeed*bnc;
 }
-
 
 	
 if (inside.hp < 1)

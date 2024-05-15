@@ -36,8 +36,14 @@ function EnemyMouthMoveAndBreak()
 			canBreak = true;	
 		}
 		
-		inScreen =  (x > __view_get( e__VW.XView, 0 )-50 && x < __view_get( e__VW.XView, 0 )+710) &&
-		(y > __view_get( e__VW.YView, 0 )-50 && y < __view_get( e__VW.YView, 0 )+410)
+		if instance_exists(o_playerShip)
+		{
+			inScreen = point_distance(x,y,o_playerShip.x, o_playerShip.y) < global.offRangeDistance_BreakTile;
+		}
+		else
+		{
+			inScreen = true;
+		}
 
 		if (inScreen)
 		{

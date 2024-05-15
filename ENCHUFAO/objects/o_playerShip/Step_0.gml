@@ -235,7 +235,7 @@ if (contDeactivate>=0)
 	contDeactivate--;
 }
 
-if (o_main.ending = false)
+if (o_main.ending = false) && (o_main.endingLevel = false)
 {
 	if (contDeactivate<=0)
 	{

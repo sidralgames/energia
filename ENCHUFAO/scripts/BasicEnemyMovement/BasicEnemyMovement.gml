@@ -3,26 +3,18 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function BasicEnemyMovement()
 {
-if (global.haveInvisibiltyCloak && global.invisibleCloak == true) || (global.inSmokeArea = true)
-|| (blinded = true)
+	if (global.haveInvisibiltyCloak && global.invisibleCloak == true) || (global.inSmokeArea = true)
+	|| (blinded = true)
 	{
-		
-		if (tile_meeting(x+hspeed,y,"Tiles"))
+		if (path_exists(myPath))
 		{
-		    hspeed = -hspeed*bnc;
-			alarm[4] = 0;
+			path_end();
 		}
 		
-		if (tile_meeting(x,y+vspeed,"Tiles"))
-		{
-		    vspeed = -vspeed*bnc;
-			alarm[4] = 0;
-		}
-		
-		path_end()
 		var a = point_direction(x, y, x+diffX,y+diffY);
 		direction += sign(dsin(a - direction)) * (precision * global.relativeSpeed);
 		_angle = direction;
+		
 		if (alarm[10] <= 0)
 		{
 			speed = enemySpeed * min(1, global.relativeSpeed+0.2);
@@ -64,16 +56,23 @@ if (global.haveInvisibiltyCloak && global.invisibleCloak == true) || (global.inS
 			{
 				_speed = enemySpeed;
 			}
-			path_start(myPath,_speed ,path_action_stop, false)
+			
+			path_start(myPath, _speed ,path_action_stop, false);
+			
 			_angle = lerp(_angle, direction, 1);
 
 		}
 		else
 		{
-			path_end()
+			if (path_exists(myPath))
+			{
+				path_end();
+			}
+			
 			var a = point_direction(x, y, o_playerShip.x+diffX,  o_playerShip.y+diffY);
 			direction += sign(dsin(a - direction)) * (precision * global.relativeSpeed);
 			_angle = lerp(_angle, direction, 1);
+			
 			if (alarm[10] <= 0)
 			{
 				speed = enemySpeed * min(1, global.relativeSpeed+0.2);

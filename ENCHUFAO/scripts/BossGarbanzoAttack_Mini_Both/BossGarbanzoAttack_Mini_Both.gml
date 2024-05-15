@@ -4,8 +4,10 @@ function BossGarbanzoAttack_Mini_Both()
 {
 	if (clearWall = false)
 	{
-		instance_create(x-40, y+57,o_exploBomb);
-		instance_create(x+40, y+57,o_exploBomb);
+		b1 = instance_create(x-40, y+57,o_exploBomb);
+		b2 = instance_create(x+40, y+57,o_exploBomb);
+		b1.isFrom = "BossBomb";
+		b2.isFrom = "BossBomb";
 		clearWall = true;
 	}
 	image_index = 4;

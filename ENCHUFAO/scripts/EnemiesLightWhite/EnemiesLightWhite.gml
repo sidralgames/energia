@@ -5,24 +5,26 @@ function EnemiesLightWhite()
 	//----- ENEMIES GENERAL ----//
 	with(o_enemyP)
 	{
-		off = random_range(0.02, -0.02);
-		
-		
-		if (enemyWithLight = true)
+		if (inScreen)
 		{
-			if (enemyIsMini)
-			{
-				draw_sprite_ext(s_lightEnemyFront, 0, x, y, 0.75, 0.75, _angle, c_white, 0.5);
-			}
-			else
-			{
-				draw_sprite_ext(s_lightEnemyFront, 0, x, y, 1.5, image_yscale, _angle, c_white, 0.5);
-			}
-		}
+			off = random_range(0.02, -0.02);
 		
-		if (enemyWithLightBulb = true)
-		{
-			draw_sprite_ext(s_lightBulb4, 0, x, y, 0.2+off, 0.2+off, 0, c_white, 0.25 + off);
+			if (enemyWithLight = true)
+			{
+				if (enemyIsMini)
+				{
+					draw_sprite_ext(s_lightEnemyFront, 0, x, y, 0.75, 0.75, _angle, c_white, 0.5);
+				}
+				else
+				{
+					draw_sprite_ext(s_lightEnemyFront, 0, x, y, 1.5, image_yscale, _angle, c_white, 0.5);
+				}
+			}
+		
+			if (enemyWithLightBulb = true)
+			{
+				draw_sprite_ext(s_lightBulb4, 0, x, y, 0.2+off, 0.2+off, 0, c_white, 0.25 + off);
+			}
 		}
 	}
 	
@@ -61,7 +63,6 @@ function EnemiesLightWhite()
 	with(o_torreta)
 	{
 		off = random_range(0.02, -0.02);
-	
 		draw_sprite_ext(s_lightBulb4, 0, x, y, 0.5+off, 0.5+off, 0, c_white, 0.5 + off);
 	}
 

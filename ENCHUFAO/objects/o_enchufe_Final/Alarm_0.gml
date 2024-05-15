@@ -3,6 +3,7 @@
 
 if (cont = true)
 {
+	o_main.endingLevel = true;
 	FreeLightSurface();
 	ActivateAndDestroyBetweenLevels();
 	//---- KILL CHIPS ----//

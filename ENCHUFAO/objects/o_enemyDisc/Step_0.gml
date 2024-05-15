@@ -8,7 +8,6 @@ if (flashAlpha > 0)
 	flashAlpha -= 0.09;
 }
 
-
 MoveZeroGrv_Speed();
 	
 _angle -= sign(hspeed)*spin*global.relativeSpeed;
@@ -40,8 +39,6 @@ if instance_exists(o_playerShip)
 				image_speed = 0;
 				spin = lerp(spin, spinRampage, 0.05);
 			}
-		
-			
 		
 			if (spin >= spinRampage-0.8) && (image_index >= 15)
 			{
@@ -108,11 +105,11 @@ if instance_exists(o_playerShip)
 		{
 			global.XPpoints +=30;
 		}
+		
 		explo = instance_create(x,y,o_exploPurple)
 		explo.image_xscale = 0.5;
 		explo.image_yscale = 0.5;
-	
-		discs = 4;
+		
 		for( i = 0; i < discs; i++ )
 		{
 		   inst = instance_create_layer( x, y, "Enemies", o_bulletDisc);
@@ -122,11 +119,7 @@ if instance_exists(o_playerShip)
 				inst.discSpeed = 2;
 			}
 		}
-		
-		
+
 		instance_destroy();
 	}
-
 }
-
-

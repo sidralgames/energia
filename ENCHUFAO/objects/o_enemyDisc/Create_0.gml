@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+inScreen = false;
 alphaLight = 0;
 enemyBestiaryNumber = global.enemyDiscBestiaryNumber;
 blinded = false;
@@ -98,10 +99,6 @@ contPartsInitial = 2;
 contParts = contPartsInitial;
 
 
-//tentacles.offs = 10
-//tentacles2 = instance_create_layer(x,y+5,"Tentacles",oVine)
-//tentacles2.offs =-10
-
 alarm[1] = 0;
 _speed=0;
 off = 90;
@@ -114,6 +111,7 @@ hasShield = irandom(4);
 //	CreateShieldEnemy(10, 0.65, s_shieldPurple); //hp, scale, sprite
 //}
 
+discs = 4;
 
 if tile_meeting(x,y,"Tiles")
 {

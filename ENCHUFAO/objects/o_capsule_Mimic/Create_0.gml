@@ -16,7 +16,7 @@ inBlindArea = false;
 initialBlindFlash = global.initialBlindFlash;
 blindFlash = initialBlindFlash;
 
-enemyBestiaryNumber = 27;
+enemyBestiaryNumber = global.enemyCapsuleMimicBestiaryNumber;
 contDie = 5;
 canDie = false;
 flashAlpha = 0;

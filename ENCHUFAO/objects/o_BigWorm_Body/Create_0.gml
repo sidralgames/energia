@@ -2,6 +2,8 @@
 
 // Create a new verlet system
 // You can create multiple systems with different physic properties
+inScreen = false;
+
 mega = false;
 canCollide = false;
 fric = 0.8;
@@ -20,9 +22,6 @@ rope1 = verletGroupCreateRopeTextured(verletSystem1, x, y, _sprite, _segments, 1
 
 contPlugBody = -1;
 
-// Create a new rope
-//rope1 = verletGroupCreateRope(verletSystem1, x, y, cableColor, 2, 3, _segments, 2, 100, canCollide);
-
  //Attach its first vertex to an object
 inst = instance_nearest(x,y,o_BigWorm_Mouth)
 rope1.vertexAttachTo(first, inst);
@@ -39,9 +38,7 @@ for (var i=2; i<=_segments-1; i++)
 
 plugged = false;
 
-
-//instTope = instance_create(x, y, o_coco);
-//rope1.vertexAttachObject(last, instTope, vertexAttachmentType.positionOnly);
-
 alarm[0] = random_range(10,95);
+alarm[1] = 0;
+
 

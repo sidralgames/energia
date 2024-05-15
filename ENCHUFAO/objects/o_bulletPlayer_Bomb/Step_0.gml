@@ -1,9 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-inScreen =  (x > __view_get( e__VW.XView, 0 )-350 && x < __view_get( e__VW.XView, 0 )+1010) &&
-(y > __view_get( e__VW.YView, 0 )-350 && y < __view_get( e__VW.YView, 0 )+710)
-
+if instance_exists(o_playerShip)
+{
+	inScreen = point_distance(x,y,o_playerShip.x, o_playerShip.y) < global.offRangeDistance_Explo;
+}
 
 if (set = false)
 {
@@ -18,6 +19,8 @@ if (set = false)
 		sprite_index = s_friend
 	}
 }
+
+//---- IS HOMING BOMB? ----//
 if (global.bombIsHomingBomb) && (called = false)
 {
 	_hpHoming --;
@@ -30,6 +33,7 @@ if (global.bombIsHomingBomb) && (called = false)
 	_speed = lerp(_speed, 4.5, 0.05);
 	
 	part_particles_create(global.naveFriend_sys, x,y, global.naveFriend, 1);
+	
 	if (corrected = false)
 	{
 		correctedTime--;
@@ -37,7 +41,6 @@ if (global.bombIsHomingBomb) && (called = false)
 		{
 			corrected = true;
 		}
-		
 		
 		enemyNear = instance_nearest(x,y,o_enemyP);
 		bossNear = instance_nearest(x,y,o_BossFather);
@@ -48,7 +51,7 @@ if (global.bombIsHomingBomb) && (called = false)
 			direction += sign(dsin(a - direction)) * (precision * min(1, global.relativeSpeed+0.2));
 			_angle = direction;
 		}
-		else
+		else 
 		if (instance_exists(enemyNear)) && (point_distance(x,y, enemyNear.x, enemyNear.y) <  dist/1.5)
 		{
 			var a = point_direction(x,y, enemyNear.x, enemyNear.y);
@@ -83,7 +86,6 @@ if (global.bombIsHomingBomb) && (called = false)
 		{
 			_angle = direction;
 		}
-		
 	}
 	
 	if (tile_meeting(x+hspeed,y,"Tiles"))
@@ -97,9 +99,8 @@ if (global.bombIsHomingBomb) && (called = false)
 	} 
 	
 	speed = _speed * min(1, global.relativeSpeed+0.2);
-
 }
-else
+else //----- STANDARD BOMB ----//
 {
 	_hpush = lerp(_hpush, 0, 0.05);
 	_vpush = lerp(_vpush, 0, 0.05);
@@ -107,7 +108,6 @@ else
 	_angle += max(0.5*sign(_hpush), 5*(abs(_hpush)),0.5*sign(_vpush), 5*(abs(_vpush))*global.relativeSpeed);
 
 	MoveZeroGrv_Bomb();
-
 
 	if (alarm[0] <=0) && (abs(_hpush) <= minVel && abs(_vpush) <= minVel)
 	{

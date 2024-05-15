@@ -2,16 +2,28 @@
 // You can write your code in this editor
 ending = false;
 endTimer = 10;
-
+endingLevel = false;
 room_instance_clear(Sala_0);
 global.haveChargerAdapter = false;
 global.adaptersInLevel = 0;
 global.goToSecretRoom = false;
 
+//--- ACTIVATE DISTANCES ---//
+global.offRangeDistance_WormBody = 500;
+global.offRangeDistance_BreakTile = 500;
+global.offRangeDistance_Vines = 400;
+global.offRangeDistance_Enemy = 300;
+global.offRangeDistance_Explo = 600;
+global.offRangeDistance_LaserTrap = 600;
+
+
 // ---- FLASH LIGHT ---//
+global.angExtraFocos = 10;
+global.energyLostFocos = 0.6;
 global.alphaFocos = 0.3;
 global.alphaFocosColor = 0.13;
-global.initialBlindFlash = 20;
+global.bindedTop = 50;
+global.initialBlindFlash = 26;
 global.enemyBlindTimeMin = 90;
 global.enemyBlindTimeMax = 150;
 
@@ -62,6 +74,7 @@ global.dark = make_color_rgb(38,43,68);
 global.darkPalette = make_color_rgb(38,43,68);//  make_color_rgb(28,32,49);//make_color_rgb(24,20,37);
 
 //---- FONTS ---//
+font_add_enable_aa(false);
 global.customFont20 = font_add("ChubbyChoo-SemiBold.ttf", 20, false, false, 32, 128);
 global.customFont16= font_add("ChubbyChoo-SemiBold.ttf", 16, false, false, 32, 128);
 global.customFont13= font_add("ChubbyChoo-SemiBold.ttf", 13, false, false, 32, 128);
@@ -69,7 +82,7 @@ global.customFont14 = font_add("ChubbyChoo-SemiBold.ttf", 14, false, false, 32, 
 global.customFont12 = font_add("ChubbyChoo-SemiBold.ttf", 12, false, false, 32, 128);
 global.customFont11 = font_add("ChubbyChoo-SemiBold.ttf", 11, false, false, 32, 128);
 
-font_add_enable_aa(false);
+
 
 //--------------- MEGA UPGRADES -----------------//
 

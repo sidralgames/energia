@@ -1,16 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"oVinePadre",
-  "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"Object373",
+  "eventList":[],
   "managed":true,
-  "name":"oVinePadre",
+  "name":"Object373",
   "overriddenProperties":[],
   "parent":{
-    "name":"Other objects",
-    "path":"folders/Objetos/ROPES/Other objects.yy",
+    "name":"Main",
+    "path":"folders/Objetos/Main.yy",
   },
   "parentObjectId":null,
   "persistent":false,

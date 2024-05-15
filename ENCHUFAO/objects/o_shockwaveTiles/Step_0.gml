@@ -4,30 +4,23 @@
 
 if (alarm[0] <= 0)
 {
-	//if instance_exists(lightBomb)
-	//{
-	//	instance_destroy(lightBomb)
-	//}
-
 	instance_destroy();
 }
-dir +=33
 
+dir +=33;
 
 if (room != Sala_Inicio)
 {
 	var _tilemap_id = layer_tilemap_get_id("Tiles");
 
-	_x = x+lengthdir_x(10*scale, dir)
-	_y = y+lengthdir_y(10*scale, dir)
+	_x = x+lengthdir_x(5*scale, dir)
+	_y = y+lengthdir_y(5*scale, dir)
 
-	_x2 = x+lengthdir_x(20*scale, dir)
-	_y2 = y+lengthdir_y(20*scale, dir)
+	_x2 = x+lengthdir_x(15*scale, dir)
+	_y2 = y+lengthdir_y(15*scale, dir)
 
-	_x3 = x+lengthdir_x(40*scale, dir)
-	_y3 = y+lengthdir_y(40*scale, dir)
-
-
+	_x3 = x+lengthdir_x(30*scale, dir)
+	_y3 = y+lengthdir_y(30*scale, dir)
 
 
 	if (global.wallgrid_[# _x/32, _y/32] ==VOID) && (_x > 50) && (_x < room_width-50)

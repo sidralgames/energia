@@ -4,6 +4,8 @@
 // You can also simulate individual groups
 if instance_exists(inst)
 {
+	x = inst.x;
+	y = inst.y;
 	
 	if (inst.plugging)
 	{

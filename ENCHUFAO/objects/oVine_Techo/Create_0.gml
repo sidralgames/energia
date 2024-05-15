@@ -4,6 +4,7 @@
 
 // Create a new verlet system
 // You can create multiple systems with different physic properties
+event_inherited();
 
 canCollide = true;
 inScreen = 0;

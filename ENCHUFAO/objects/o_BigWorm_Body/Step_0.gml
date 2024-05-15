@@ -2,6 +2,11 @@
 
 // Simulate the whole verlet system
 // You can also simulate individual groups
+if instance_exists(o_playerShip)
+{
+	inScreen = point_distance(x,y,o_playerShip.x, o_playerShip.y) < global.offRangeDistance_WormBody;
+}
+
 if instance_exists(inst)
 {
 	if (inst.plugging)
@@ -47,17 +52,18 @@ if instance_exists(inst)
 }
 if instance_exists(inst) //&& instance_exists(instAchor)
 {
-	//TESTING NO SIMULATE HASTA QUE NO VAYA A APARECER POR PANTALLA LA CABEZA
-	//inScreen =  (inst.x > __view_get( e__VW.XView, 0 )-250 && inst.x < __view_get( e__VW.XView, 0 )+910) &&
-	//(inst.y > __view_get( e__VW.YView, 0 )-250 && inst.y < __view_get( e__VW.YView, 0 )+610)
-	
-	//if (inScreen)
-	//{
-		if (verletSystemExists(verletSystem1))
+	if (inScreen)
+	{
+		if (alarm[1] <= 0)
 		{
-			verletSystem1.simulate();
+			if (verletSystemExists(verletSystem1))
+			{
+				verletSystem1.simulate();
+			}
+			
+			alarm[1] = 1;
 		}
-	//}
+	}
 }
 else
 {

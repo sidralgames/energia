@@ -51,7 +51,7 @@ function PlayerLightWhite()
 	with(o_shield)
 	{
 		off = random_range(0.05, -0.05);
-		draw_sprite_ext(s_lightBulb4, 0, x, y, 0.2+off, 0.2+off, 0, c_white, 0.35);
+		draw_sprite_ext(s_lightBulb4, 0, x, y, 0.4+off, 0.4+off, 0, c_white, 0.35);
 	}
 	
 	with(o_chipFather)

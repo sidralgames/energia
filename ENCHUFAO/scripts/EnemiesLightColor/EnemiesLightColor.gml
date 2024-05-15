@@ -2,20 +2,22 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function EnemiesLightColor()
 {
-
 	with(o_enemyP)
 	{
-		if (enemyWithLight = true)
+		if (inScreen)
 		{
-			if (enemyIsMini)
+			if (enemyWithLight = true)
 			{
-				off = random_range(0.05, -0.05);
-				draw_sprite_ext(s_lightEnemyFront, 0, x, y, 0.75, 0.75, _angle, global.brightRed, 0.3);
-			}
-			else
-			{
-				off = random_range(0.05, -0.05);
-				draw_sprite_ext(s_lightEnemyFront, 0, x, y, 1.5, image_yscale, _angle, global.brightRed, 0.3);
+				if (enemyIsMini)
+				{
+					off = random_range(0.05, -0.05);
+					draw_sprite_ext(s_lightEnemyFront, 0, x, y, 0.75, 0.75, _angle, global.brightRed, 0.3);
+				}
+				else
+				{
+					off = random_range(0.05, -0.05);
+					draw_sprite_ext(s_lightEnemyFront, 0, x, y, 1.5, image_yscale, _angle, global.brightRed, 0.3);
+				}
 			}
 		}
 	}

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"PlayerLightColor",
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"ENCHUFAO",
+    "path":"ENCHUFAO.yyp",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

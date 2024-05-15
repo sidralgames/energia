@@ -2,6 +2,7 @@
 // You can write your code in this editor
 randomize();
 
+o_main.endingLevel = false;
 
 contTiles = 20;
 global.Go = false;

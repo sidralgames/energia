@@ -4,10 +4,9 @@
 
 // Simulate the whole verlet system
 // You can also simulate individual groups
-inScreen =  (x > __view_get( e__VW.XView, 0 )-50 && x < __view_get( e__VW.XView, 0 )+710) &&
-(y > __view_get( e__VW.YView, 0 )-50 && y < __view_get( e__VW.YView, 0 )+410)
+event_inherited();
 
-	if alarm[3]<=0
+	if (alarm[3]<=0)
 	{
 		if (inScreen)
 		{

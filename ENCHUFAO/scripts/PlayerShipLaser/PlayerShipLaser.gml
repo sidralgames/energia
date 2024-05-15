@@ -23,7 +23,7 @@ function PlayerShipLaser(argument0)
 	_vpush += -lengthdir_y(0.13, _angle);
 	var maxLenght_ = 600;
 	
-	for(var i = 0; i < maxLenght_; i++)
+	for(var i = 0; i < maxLenght_; i+=10)
 	{
 		maxLenght = i ;
 	     var lx = x + lengthdir_x(i, argument0);

@@ -9,6 +9,8 @@ randomize();
 // Inherit the parent event
 event_inherited();
 
+inScreen = true;
+
 energy = false;
 ammo = false;
 hp = false;

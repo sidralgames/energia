@@ -469,6 +469,7 @@
     {"id":{"name":"o_waller","path":"objects/o_waller/o_waller.yy",},},
     {"id":{"name":"o_wallGameOver","path":"objects/o_wallGameOver/o_wallGameOver.yy",},},
     {"id":{"name":"o_WormBossBanner","path":"objects/o_WormBossBanner/o_WormBossBanner.yy",},},
+    {"id":{"name":"Object373","path":"objects/Object373/Object373.yy",},},
     {"id":{"name":"ochargerFake","path":"objects/ochargerFake/ochargerFake.yy",},},
     {"id":{"name":"oCollisionBox","path":"objects/oCollisionBox/oCollisionBox.yy",},},
     {"id":{"name":"oCollisionCustom","path":"objects/oCollisionCustom/oCollisionCustom.yy",},},
