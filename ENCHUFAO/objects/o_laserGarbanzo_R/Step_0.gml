@@ -109,6 +109,10 @@ if instance_exists(o_BossMecha)
 		}
 	}
 }
+else
+{
+	instance_destroy();
+}
 
 
 

@@ -14,10 +14,10 @@ function EnemiesToSpawnLVL3()
 	}
 	else if (enemyToSpawn > 7) && (enemyToSpawn<=9)
 	{
-		enemy = choose(o_enemySniper, o_enemyDisc,o_enemyMitosis)
+		enemy = choose(o_enemySniper, o_enemyDisc,o_enemyMitosis, o_enemySegment)
 	}
 	else if(enemyToSpawn >= 9)
 	{
-		enemy = choose(o_enemyMines,o_enemyBomber,o_enemyMothership, o_enemyOVNI)
+		enemy = choose(o_enemyMines,o_enemyBomber,o_enemyMothership, o_enemyOVNI, o_enemyMouth_Free)
 	}
 }

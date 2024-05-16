@@ -1,6 +1,6 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-CheckInScreen(20, 30);
+CheckInScreen(50, 20);
 
 if (alarm[3]<=0)
 {

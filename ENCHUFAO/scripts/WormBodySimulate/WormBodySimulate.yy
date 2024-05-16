@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"WormBodySimulate",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"WormBodySimulate",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -18,3 +18,4 @@ isCapsuleUpgrade = true;
 _hpMax = 8;
 _hp = _hpMax;
 inScreen = false;
+checkInScreen = 0;

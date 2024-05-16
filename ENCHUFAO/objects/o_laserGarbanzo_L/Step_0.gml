@@ -110,6 +110,11 @@ if (o_BossMecha.creatingEnemies)
 			soundCharge = audio_play_sound_on(global.audioEmitter, snd_laserActivating, false, 50);
 		}
 	}
+
+}
+else
+{
+	instance_destroy();
 }
 
 

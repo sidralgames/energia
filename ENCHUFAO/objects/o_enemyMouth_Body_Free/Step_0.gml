@@ -4,9 +4,6 @@ CheckInScreen(200, 15);
 
 if instance_exists(inst)
 {
-	x = inst.x;
-	y = inst.y;
-	
 	if (inst.plugging)
 	{
 		fixing = false;
@@ -52,31 +49,4 @@ if instance_exists(inst)
 	}
 }
 
-if instance_exists(inst)
-{
-	//TESTING NO SIMULATE HASTA QUE NO VAYA A APARECER POR PANTALLA LA CABEZA
-	
-	if (inScreen) || (alarm[2] <= 0)
-	{
-		if (alarm[1] <= 0)
-		{
-			if (verletSystemExists(verletSystem1))
-			{
-				verletSystem1.simulate();
-			}
-			
-			alarm[1] = 1;
-		}
-	}
-	
-	if (alarm[2] <= 0)
-	{
-		alarm[2] = resetPositionTime;
-	}
-}
-else
-{
-	instance_destroy(instAchor)
-	instance_destroy();	
-}
-
+WormBodySimulate();

@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited();
-
+enemyWithLight = false;
 enemyBestiaryNumber = global.enemyWormageddonBestiaryNumber;
 isOnlyDraw = false
 leavesTrail = false;

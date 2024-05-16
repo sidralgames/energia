@@ -6,6 +6,11 @@ if audio_is_playing(soundLaser)
 	audio_sound_gain(soundLaser, 0, 300);
 }
 
+if (o_BossMecha_Inside.hp <= 0)
+{
+	audio_stop_sound(soundLaser);
+	audio_stop_sound(soundCharge);
+}
 
 
 

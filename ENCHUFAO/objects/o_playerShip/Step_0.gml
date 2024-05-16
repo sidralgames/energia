@@ -128,51 +128,8 @@ if (global.bombAmmo > 0 )
 }
 
 //---------P.E.T.A--------//
-if (key_l3Down_p)
-{
-	petaI = 10;
-}
+PlayerPetaAndPito();
 
-if (key_r3Down_p)
-{
-	petaD = 10;
-}
-
-if (petaI >= 0)
-{
-	petaI --;
-}
-
-if (petaD >= 0)
-{
-	petaD --;
-}
-
-if (petaI > 0) && (petaD > 0)
-{
-	if (global.PETAAmmo > 0)
-	{
-		if (alarm[11] <= 0) 
-		{
-			PlayerShipPETA();
-		}
-	}
-}
-
-
-
-if (key_l3Down)
-{
-	if !audio_is_playing(pitoSound)
-	{
-		pitchPito = random_range(0.98,0.99)
-		audio_play_sound_on(global.pito_emitter,pitoSound,false, 50, , , pitchPito)
-	}
-}
-else
-{
-	audio_stop_sound(pitoSound);
-}
 
 //--------- PLUG -----------//
 inEnchufe = collision_circle(x,y,maxConectRad+10,o_enchufe_Father,true,true);

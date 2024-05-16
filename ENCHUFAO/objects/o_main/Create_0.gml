@@ -270,7 +270,7 @@ audio_emitter_bus(global.pito_emitter, pito_bus);
 // Delay effect
 pito_effect = audio_effect_create(AudioEffectType.Reverb1);
 pito_effect.size = 0.8;
-pito_effect.mix = 0.6;
+pito_effect.mix = 0.8;
 pito_effect.damp = 0.8;
 pito_effect.bypass = false;
 pito_bus.effects[0] = pito_effect;
