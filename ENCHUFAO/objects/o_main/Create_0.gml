@@ -3,6 +3,8 @@
 
 contLowEnergy = 30;
 
+global.checkInScreenTime = 30;
+
 ending = false;
 endTimer = 10;
 endingLevel = false;
@@ -241,9 +243,11 @@ global.pluggingStrandedShipToEnchufe = false;
 global.BossGarbanzo_Awaken = false;
 
 
+//----- AUDIO EMITTERS ----//
+
+//--- MAIN EMITTER ---//
 global.audioEmitter = audio_emitter_create();
 
-// Delay route
 delay_bus = audio_bus_create();
 
 audio_emitter_bus(global.audioEmitter, delay_bus);
@@ -256,6 +260,20 @@ _delay_effect.damp = 0.8;
 _delay_effect.bypass = true;
 delay_bus.effects[0] = _delay_effect;
 
+
+//---- PITO EMITTER ---//
+global.pito_emitter = audio_emitter_create();
+pito_bus = audio_bus_create();
+
+audio_emitter_bus(global.pito_emitter, pito_bus);
+
+// Delay effect
+pito_effect = audio_effect_create(AudioEffectType.Reverb1);
+pito_effect.size = 0.8;
+pito_effect.mix = 0.6;
+pito_effect.damp = 0.8;
+pito_effect.bypass = false;
+pito_bus.effects[0] = pito_effect;
 
 
 global.relativeSpeed = 1.0;

@@ -93,8 +93,7 @@ if (hurts = false)
 	}
 }
 
-inScreen =  (x > __view_get( e__VW.XView, 0 )-50 && x < __view_get( e__VW.XView, 0 )+710) &&
-(y > __view_get( e__VW.YView, 0 )-50 && y < __view_get( e__VW.YView, 0 )+410)
+CheckInScreen(50, 15);
 
 if (inScreen)
 {

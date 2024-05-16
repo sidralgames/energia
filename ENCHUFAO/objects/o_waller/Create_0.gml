@@ -9,7 +9,7 @@ global.Go = false;
 
 secretType = "";
 
-global.enemiesMax =  min(12, 3 + global.level) //1 + (global.level * 2);
+global.enemiesMax =  min(70, 30 + global.level) //1 + (global.level * 2);
 global.totalEnemiesOnLevel = 0;
 spawners=0;
 spawnersSecret = 0;

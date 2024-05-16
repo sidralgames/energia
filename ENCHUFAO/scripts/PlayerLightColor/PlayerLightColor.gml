@@ -14,7 +14,7 @@ function PlayerLightColor()
 			}
 		}
 		
-		if (key_r3Dowm)
+		if (key_r3Down)
 		{
 			if (global.energy > 0)
 			{	

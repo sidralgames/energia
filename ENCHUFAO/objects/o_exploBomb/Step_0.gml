@@ -1,10 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if instance_exists(o_playerShip)
-{
-	inScreen = point_distance(x,y,o_playerShip.x, o_playerShip.y) < global.offRangeDistance_Explo;
-}
+CheckInScreen(50, 2);
 
 image_speed = min(1, 1*(global.relativeSpeed+0.2));
 

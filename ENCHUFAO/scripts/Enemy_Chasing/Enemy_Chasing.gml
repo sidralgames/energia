@@ -48,12 +48,13 @@ function Enemy_Chasing()
 					if (contParts <=0)
 					{
 						part_particles_create(global.naveEnemy_Mini_sys, x-lengthdir_x(2,direction), y-lengthdir_y(2,direction), global.naveEnemy_Mini , 1)
-						contParts = contPartsInitial;
+						contParts = contPartsInitial + random_range(0,2);
 					}
 				}
 				else
 				{
 					contParts --;
+					
 					if (contParts <=0)
 					{
 						if (sprite_index = s_enemyMitosis_Mega)
@@ -71,7 +72,8 @@ function Enemy_Chasing()
 						{
 							part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(8,direction), y-lengthdir_y(8,direction), global.naveEnemy_Waiting , 1)
 						}
-						contParts = contPartsInitial;
+						
+						contParts = contPartsInitial +random_range(0,2);
 					}
 				}
 			}

@@ -1,3 +1,6 @@
+inScreen = false;
+checkInScreen = 0;
+
 enemyBestiaryNumber = global.enemyPewPewBestiaryNumber;
 enemyWithLightBulb = false;
 

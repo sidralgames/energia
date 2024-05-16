@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 inScreen = false;
+checkInScreen = 0;
 
 laserActive = false;
 face = 0;

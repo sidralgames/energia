@@ -1,8 +1,5 @@
 
-if instance_exists(o_playerShip)
-{
-	inScreen = point_distance(x,y,o_playerShip.x, o_playerShip.y) < global.offRangeDistance_Enemy;
-}
+CheckInScreen(50, 35);
 
 if !tile_meeting(x,y,"Tiles")
 {

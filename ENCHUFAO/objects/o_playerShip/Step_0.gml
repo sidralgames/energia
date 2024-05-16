@@ -2,6 +2,8 @@
 // You can write your code in this editor
 Controls_Input();
 
+
+
 if (shielded = false) && ( (room != Sala_Upgade) && (room != Sala_MegaUpgrade) )
 {
 	shielded = true;
@@ -126,12 +128,50 @@ if (global.bombAmmo > 0 )
 }
 
 //---------P.E.T.A--------//
-if (key_l3Dowm) && (key_r3Dowm) && (global.PETAAmmo > 0 )
+if (key_l3Down_p)
 {
-	if (alarm[11] <= 0) 
+	petaI = 10;
+}
+
+if (key_r3Down_p)
+{
+	petaD = 10;
+}
+
+if (petaI >= 0)
+{
+	petaI --;
+}
+
+if (petaD >= 0)
+{
+	petaD --;
+}
+
+if (petaI > 0) && (petaD > 0)
+{
+	if (global.PETAAmmo > 0)
 	{
-		PlayerShipPETA();
+		if (alarm[11] <= 0) 
+		{
+			PlayerShipPETA();
+		}
 	}
+}
+
+
+
+if (key_l3Down)
+{
+	if !audio_is_playing(pitoSound)
+	{
+		pitchPito = random_range(0.98,0.99)
+		audio_play_sound_on(global.pito_emitter,pitoSound,false, 50, , , pitchPito)
+	}
+}
+else
+{
+	audio_stop_sound(pitoSound);
 }
 
 //--------- PLUG -----------//

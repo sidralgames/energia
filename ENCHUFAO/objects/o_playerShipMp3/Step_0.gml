@@ -178,7 +178,7 @@ if (key_bomb)
 
 //---------P.E.T.A--------//
 
-if (key_l3Dowm) && (key_r3Dowm)
+if (key_l3Down) && (key_r3Down)
 {
 	if (alarm[6] <= 0) && (global.PETAAmmo > 0 )
 	{

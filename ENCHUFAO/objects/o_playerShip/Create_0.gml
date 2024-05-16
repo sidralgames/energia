@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+
 global.haveChargerAdapter = false;
 global.meteorsCount = 0;
 global.assistedSlowmo = false;
@@ -8,46 +9,11 @@ contLight = 0;
 alphaFocosColor = global.alphaFocosColor;
 alphaFocos = global.alphaFocos;
 lightLenght = 600;
-iniLightOff = 7
-//global.bombIsClusterBomb = true;
-//global.haveSmokeBomb = true;
-//global.bombIsHomingBomb = true;
+iniLightOff = 7;
 
-//tempPickUp = instance_create(x-50,y,o_temporaryPickUp)
-//tempPickUp._hpush = 0
-//		tempPickUp._vpush = 0
-//		tempPickUp.image_angle = 0;
-//tempPickUpb = instance_create(x+250,y,o_temporaryPickUp)
-//tempPickUpb._hpush = 0
-//		tempPickUpb._vpush = 0
-//		tempPickUpb.image_angle = 0;
-		
-//		tempPickUp = instance_create(x-250,y,o_temporaryPickUp)
-//tempPickUp._hpush = 0
-//		tempPickUp._vpush = 0
-//		tempPickUp.image_angle = 0;
-//tempPickUpb = instance_create(x+150,y,o_temporaryPickUp)
-//tempPickUpb._hpush = 0
-//		tempPickUpb._vpush = 0
-//		tempPickUpb.image_angle = 0;
-		
-//		tempPickUpc = instance_create(x-50,y-50,o_temporaryPickUp)
-//tempPickUpc._hpush = 0
-//		tempPickUpc._vpush = 0
-//		tempPickUpc.image_angle = 0;
-//tempPickUpbc = instance_create(x+50,y+50,o_temporaryPickUp)
-//tempPickUpbc._hpush = 0
-//		tempPickUpbc._vpush = 0
-//		tempPickUpbc.image_angle = 0;
-		
-//				tempPickUpc = instance_create(x+50,y-50,o_temporaryPickUp)
-//tempPickUpc._hpush = 0
-//		tempPickUpc._vpush = 0
-//		tempPickUpc.image_angle = 0;
-//tempPickUpbc = instance_create(x+150,y+50,o_temporaryPickUp)
-//tempPickUpbc._hpush = 0
-//		tempPickUpbc._vpush = 0
-//		tempPickUpbc.image_angle = 0;
+contToLaunchPeta = 0;
+petaI = 0;
+petaD = 0;
 		
 global.temporaryFireRate_Factor = 0;
 
@@ -274,30 +240,36 @@ switch (global.spriteShip)
 	case splayer:
 	{
 		colorLaser = green;
+		pitoSound = snd_pito1;
 	}break;
 	
 	case splayer_Blue:
 	{
 		colorLaser = blue;
+		pitoSound = snd_pito2;
 	}break;
 	
 	case splayer_Red:
 	{
 		colorLaser = oranget;
+		pitoSound = snd_pito1;
 	}break;
 	
 	case splayer_Purple:
 	{
 		colorLaser = purpleO;
+		pitoSound = snd_pito3;
 	}break;
 	
 	case splayer_Dark:
 	{
-		colorLaser = global.brightRed; 
+		colorLaser = global.brightRed;
+		pitoSound = snd_pito2;
 	}break; 
 	
 	case splayer_mp3:
 	{
 		colorLaser = blueO;
+		pitoSound = snd_pito3;
 	}break;
 }

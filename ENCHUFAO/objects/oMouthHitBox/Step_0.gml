@@ -93,10 +93,7 @@ if (hurts = false)
 	}
 }
 
-if instance_exists(o_playerShip)
-{
-	inScreen = point_distance(x,y,o_playerShip.x, o_playerShip.y) < global.offRangeDistance_BreakTile;
-}
+CheckInScreen(50, 15);
 
 if (inScreen)
 {

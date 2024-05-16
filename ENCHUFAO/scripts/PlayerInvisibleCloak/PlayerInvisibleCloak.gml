@@ -10,7 +10,7 @@ function PlayerInvisibleCloak()
 	if (global.invisibleCloak)
 	{
 		busted = (key_shoot) || (key_bomb) || (key_laser) // Shoot anythig
-		|| ((key_l3Dowm) && (key_r3Dowm)) // Launch PETA
+		|| ((key_l3Down) && (key_r3Down)) // Launch PETA
 		|| (global.energy <= global.energyLow) // Running out of energy
 		|| (plugged) // enchufado
 		|| (tocado)// hit

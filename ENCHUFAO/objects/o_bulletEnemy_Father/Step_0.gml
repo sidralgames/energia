@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+CheckInScreen(50, 2);
+
 CollisionTileDestroy();
 
 blackHoleNear = instance_nearest(x,y,o_blackHole);

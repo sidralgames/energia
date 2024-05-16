@@ -6,10 +6,7 @@ if instance_exists(inst) && instance_exists(instAchor)
 	y = inst.y;
 	
 	//TESTING NO SIMULATE HASTA QUE NO VAYA A APARECER POR PANTALLA LA CABEZA
-	if instance_exists(o_playerShip)
-	{
-		inScreen = (point_distance(x, y, o_playerShip.x, o_playerShip.y) < global.offRangeDistance_Vines);
-	}
+	CheckInScreen(200, 15);
 	
 	if (inScreen) || instance_exists(o_menuScores)
 	{

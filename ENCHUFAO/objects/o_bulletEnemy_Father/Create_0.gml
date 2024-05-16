@@ -6,6 +6,9 @@ precisionHole = 1;
 
 bulletSpeed = 0;
 
+inScreen = false;
+checkInScreen = 0;
+
 //enemy = instance_nearest(x,y,o_enemyP)
 //if instance_exists(enemy)
 //{

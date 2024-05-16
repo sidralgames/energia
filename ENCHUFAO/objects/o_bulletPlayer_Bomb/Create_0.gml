@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 inScreen = true;
+checkInScreen = 0;
+
 vibrationPowerFinal = 0.5
 vibrationPower =vibrationPowerFinal;
 hitByLaser = false;

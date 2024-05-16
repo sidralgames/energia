@@ -1,12 +1,6 @@
 /// @description Update the simulation
 
-// Simulate the whole verlet system
-// You can also simulate individual groups
-
-if instance_exists(o_playerShip)
-{
-	inScreen = point_distance(x,y,o_playerShip.x, o_playerShip.y) < global.offRangeDistance_WormBody;
-}
+CheckInScreen(200, 15);
 
 if instance_exists(inst)
 {
@@ -30,6 +24,7 @@ if instance_exists(inst)
 	if (inst.contPlugged>0) && (inst.contPlugged<=15) 
 	{
 		enchufe = inst.enchufe;
+		
 		if instance_exists(enchufe)
 		{
 			enchufe.occupied = false;
@@ -41,25 +36,27 @@ if instance_exists(inst)
 	if (counting)
 	{
 		countingN--;
+		
 		if (countingN<=0)
 		{
-			for (var i=2; i<=_segments-1; i++)
+			for (var i=1; i<=_segments; i++)
 			{
 				rope1.vertexAttachObject(i, instBody[i],vertexAttachmentType.both);
 				instBody[i].hurts = false;
 				instBody[i].contHurt = 20;
 			}
+			
 			counting=false;
 			countingN=countingNInitial;
 		}
 	}
-	
 }
-if instance_exists(inst) //&& instance_exists(instAchor)
+
+if instance_exists(inst)
 {
 	//TESTING NO SIMULATE HASTA QUE NO VAYA A APARECER POR PANTALLA LA CABEZA
-
-	if (inScreen)
+	
+	if (inScreen) || (alarm[2] <= 0)
 	{
 		if (alarm[1] <= 0)
 		{
@@ -70,6 +67,11 @@ if instance_exists(inst) //&& instance_exists(instAchor)
 			
 			alarm[1] = 1;
 		}
+	}
+	
+	if (alarm[2] <= 0)
+	{
+		alarm[2] = resetPositionTime;
 	}
 }
 else

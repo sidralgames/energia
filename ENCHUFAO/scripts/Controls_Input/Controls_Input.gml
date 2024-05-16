@@ -42,8 +42,11 @@ function Controls_Input()
 	key_objectUp = gamepad_button_check_pressed(0, gp_padu);
 	
 	//-- PRESS JOYSTICK (P.E.T.A) --//
-	key_r3Dowm = gamepad_button_check(0, gp_stickr);
-	key_l3Dowm = gamepad_button_check(0, gp_stickl);
+	key_r3Down = gamepad_button_check(0, gp_stickr);
+	key_l3Down = gamepad_button_check(0, gp_stickl);
+	
+	key_l3Down_p = gamepad_button_check_pressed(0, gp_stickl);
+	key_r3Down_p = gamepad_button_check_pressed(0, gp_stickr);
 	
 	//-- SLOWMO --//
 	key_BulletTime = gamepad_button_check(0, gp_shoulderlb);

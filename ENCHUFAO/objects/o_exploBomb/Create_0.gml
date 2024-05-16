@@ -10,6 +10,7 @@ shakePower = 0;
 shakePowerFinal = 0;
 
 inScreen = true;
+checkInScreen = 0;
 
 sounded = false;
 

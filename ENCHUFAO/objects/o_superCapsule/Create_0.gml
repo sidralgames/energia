@@ -10,6 +10,7 @@ randomize();
 event_inherited();
 
 inScreen = true;
+checkInScreen = 0;
 
 energy = false;
 ammo = false;

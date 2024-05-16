@@ -2,13 +2,14 @@
 
 // Simulate the whole verlet system
 // You can also simulate individual groups
-if instance_exists(o_playerShip)
-{
-	inScreen = point_distance(x,y,o_playerShip.x, o_playerShip.y) < global.offRangeDistance_WormBody;
-}
+
+CheckInScreen(200, 15);
 
 if instance_exists(inst)
 {
+	x = inst.x;
+	y = inst.y;
+	
 	if (inst.plugging)
 	{
 		fixing = false;

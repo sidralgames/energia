@@ -1,4 +1,9 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-inScreen = false;
-checkInScreen = 0;
+if (inScreen)
+{
+	if (verletSystemExists(verletSystem1)) 
+	{
+		verletSystem1.draw();
+	}
+}

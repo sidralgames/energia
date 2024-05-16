@@ -2,6 +2,11 @@
 
 // Create a new verlet system
 // You can create multiple systems with different physic properties
+inScreen = false;
+checkInScreen = 0;
+
+resetPositionTime = 180;
+
 mega = false;
 canCollide = false;
 fric = 0.9;
@@ -45,7 +50,7 @@ rope1.vertexAttachTo(first, inst);
 instAchor = instance_create_layer(x,y,"EnemiesHUESub3",o_chargerMouth)
 rope1.vertexAttachObject(last, instAchor,vertexAttachmentType.both);
 
-for (var i=2; i<=_segments-1; i++)
+for (var i=1; i<=_segments; i++)
 {
 	instBody[i] = instance_create_layer(x,y,"EnemiesHUESub4",oMouthHitBox)
 	rope1.vertexAttachObject(i, instBody[i],vertexAttachmentType.both);

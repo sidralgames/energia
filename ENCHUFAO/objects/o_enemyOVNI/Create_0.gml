@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 inScreen = false;
-chechInScreen = 0;
+checkInScreen = 0;
 enemyBestiaryNumber = global.enemyOVNIBestiaryNumber;
 blinded = false;
 blindedTime = 0;
@@ -48,7 +48,7 @@ repelled = false;
 repelledTimeMax = 20;
 repelledTime = repelledTimeMax;
 state =-1;
-myPath = path_add();
+
 _angle=0;
 isShield = false;
 isImmortal = false

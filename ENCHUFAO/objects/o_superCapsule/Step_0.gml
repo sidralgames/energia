@@ -1,9 +1,6 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-if instance_exists(o_playerShip)
-{
-	inScreen = point_distance(x,y,o_playerShip.x, o_playerShip.y) < global.offRangeDistance_Enemy;
-}
+CheckInScreen(50, 60);
 
 xConnectionPos= x;
 yConnectionPos = y;

@@ -26,7 +26,7 @@ function Enemy_Waiting()
 		if (contParts <=0)
 		{
 			part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(8,direction), y-lengthdir_y(8,direction), global.naveEnemy_Waiting , 1)
-			contParts = contPartsInitial;
+			contParts = contPartsInitial+random_range(3,7);
 		}
 	}
 	
