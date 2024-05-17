@@ -27,7 +27,7 @@ switch(isFrom)
 		}
 		else
 		{
-			screenShake(shakePowerFinal,60);
+			screenShake(shakePowerFinal,60,shakePowerFinal);
 			shockwave1 = instance_create(x,y,o_shockwave);
 			shockwave1.scale = scaleShockwave;
 

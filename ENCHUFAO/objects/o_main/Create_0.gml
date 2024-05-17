@@ -4,6 +4,7 @@
 contLowEnergy = 30;
 
 global.checkInScreenTime = 30;
+global.standardAngleShake = 1;
 
 ending = false;
 endTimer = 10;
@@ -25,7 +26,7 @@ global.offRangeDistance_LaserTrap = 600;
 // ---- FLASH LIGHT ---//
 global.angExtraFocos = 10;
 global.energyLostFocos = 0.6;
-global.alphaFocos = 0.3;
+global.alphaFocos = 0.35;
 global.alphaFocosColor = 0.13;
 global.bindedTop = 50;
 global.initialBlindFlash = 26;

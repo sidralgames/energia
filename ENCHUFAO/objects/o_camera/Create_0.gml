@@ -5,8 +5,8 @@ follow = o_playerShip;
 
 outRemain = 0;
 
-viewWidthHalf = camera_get_view_width(cam) * 0.5;
-viewHeightHalf = camera_get_view_height(cam) * 0.5;
+viewWidthHalf= camera_get_view_width(cam) * 0.5;
+viewHeightHalf= camera_get_view_height(cam) * 0.5;
 
 xTo = xstart;
 yTo = ystart;
@@ -14,9 +14,16 @@ yTo = ystart;
 shakeLenght = 0;
 shakeMagnitude = 0;
 shakeRemain = 0;
+angleMagnitude = 0;
+angleRemain = 0;
 
+buff = 32; 
 
 cont = -30;
+zoom = false;
+wheel = 0;
+lastX = x;
+lastY = y;
 
 
 

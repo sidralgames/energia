@@ -18,7 +18,7 @@ info = irandom(42);
 
 text = "";
 
-alarm[0] = 60;
+alarm[0] = 70;
 killedByCreated = false;
 
 //-----Check HighScore----///

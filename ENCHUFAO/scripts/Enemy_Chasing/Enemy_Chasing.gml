@@ -38,45 +38,7 @@ function Enemy_Chasing()
 		//----------------CHASING MOVENEMT------------------//
 		if (inScreen)
 		{
-			canStopChasing = true;
-			
-			if (leavesTrail)
-			{
-				if (enemyIsMini)
-				{
-					contParts --;
-					if (contParts <=0)
-					{
-						part_particles_create(global.naveEnemy_Mini_sys, x-lengthdir_x(2,direction), y-lengthdir_y(2,direction), global.naveEnemy_Mini , 1)
-						contParts = contPartsInitial + random_range(0,2);
-					}
-				}
-				else
-				{
-					contParts --;
-					
-					if (contParts <=0)
-					{
-						if (sprite_index = s_enemyMitosis_Mega)
-						{
-							part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(8,direction+30), y-lengthdir_y(8,direction+30), global.naveEnemy_Waiting , 1)
-							part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(8,direction), y-lengthdir_y(8,direction), global.naveEnemy_Waiting , 1)
-							part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(8,direction-30), y-lengthdir_y(8,direction-30), global.naveEnemy_Waiting , 1)
-						}
-						else if (sprite_index = s_enemyMitosis)
-						{
-							part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(8,direction+20), y-lengthdir_y(8,direction+20), global.naveEnemy_Waiting , 1)	
-							part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(8,direction-20), y-lengthdir_y(8,direction-20), global.naveEnemy_Waiting , 1)
-						}
-						else
-						{
-							part_particles_create(global.naveEnemy_Waiting_sys, x-lengthdir_x(8,direction), y-lengthdir_y(8,direction), global.naveEnemy_Waiting , 1)
-						}
-						
-						contParts = contPartsInitial +random_range(0,2);
-					}
-				}
-			}
+			EnemyLeaveTrail();
 		}
 		
 		if (alarm[4] <= 0)
@@ -95,8 +57,8 @@ function Enemy_Chasing()
 				}
 				else
 				{
-					diffX = choose(random_range(-50, 50));
-					diffY = choose(random_range(-50, 50));
+					diffX = choose(random_range(-70, 70));
+					diffY = choose(random_range(-70, 70));
 				}
 			}
 			
@@ -106,9 +68,8 @@ function Enemy_Chasing()
 			}
 			else
 			{
-				alarm[4] = random_range(60, 100)
+				alarm[4] = random_range(30, 100)
 			}
-			
 		}
 
 		if instance_exists(o_playerShip)

@@ -64,6 +64,5 @@ plugged = false;
 //rope1.vertexAttachObject(last, instTope, vertexAttachmentType.positionOnly);
 
 alarm[0] = random_range(10,95);
-inScreen = true;
 alarm[1] = 0;
 

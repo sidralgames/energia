@@ -254,16 +254,59 @@ CheckFilters();
 LaserLogicPlayer();
 
 //---------DIE---------//
+
 if (global.hp < 1)
 {
-	global.relativeSpeed = 1;
-	screenShake(3,60)
+	contExploDead --;
+	
+	if (contExploDead <=0)
+	{
+		for (var i= 0; i< random_range(1,2); i++)
+		{
+			explo = instance_create(x+ random_range(-12,12), y + random_range(-12,12),o_explo1)
+			explo.scale = random_range(0.05,0.15);
+			explo.image_xscale = explo.scale;
+			explo.image_yscale = explo.scale;
+		}
+		
+		contExploDead = random_range(2,10);
+	}
+	
+	contDead --;
+	global.relativeSpeed = lerp(global.relativeSpeed, 0.05, 0.1);
+	if (shakeFinal = false)
+	{
+		screenShake(0,0,0);
+		screenShake(10,60,5)
+		shakeFinal = true;
+	}
+
+
+	if (contDead >= 30)
+	{
+		vibrationExplo = random_range(0.2, 0.3)
+		gamepad_set_vibration(0, vibrationExplo, vibrationExplo);
+	}
+
+	if (contDead < 30)
+	{
+		vibrationExplo=lerp(vibrationExplo, 0, 0.1)
+		gamepad_set_vibration(0, vibrationExplo, vibrationExplo);
+	}
+}
+
+if (contDead <= 0)
+{
+	gamepad_set_vibration(0,0,0)
+	
+	gamepad_set_vibration(0, 0.8, 0.8);
+	screenShake(0,0,0);
+	screenShake(10,130,10)
 	instance_create(x,y,o_explo1)
 	audio_play_sound_on(global.audioEmitter, snd_death, false, 50)
 	audio_stop_sound(global.song)
 	audio_stop_sound(snd_battery)
 	instance_destroy();	
-	instance_destroy(o_enemy)
 	instance_destroy(o_cable)
 	instance_destroy(o_charger)
 	global.totalDeaths+=1;

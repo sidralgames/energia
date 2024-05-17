@@ -71,7 +71,7 @@ repelledTimeMax = 20;
 repelledTime = repelledTimeMax;
 myPath = path_add();
 
-contPartsInitial = 4;
+contPartsInitial = 5;
 contParts = contPartsInitial;
 isShield = false;
 bulletDamageCalculated = false;

@@ -14,9 +14,13 @@ function GameOverDrawTurretEnemy(_name, _info, _range)
 	current = dsin(timer * frequency) * amplitude + midpoint;
 	timer++;
 	rot=current;
-		
+	
+	if (wallMouth = true)
+	{
+		wall.x = __view_get( e__VW.XView, 0 )+317;
+		wall.y = __view_get( e__VW.YView, 0 )+245;
+	}
 
-		
 	draw_set_color(global.brightRed);
 	draw_text(__view_get( e__VW.XView, 0 )+319,__view_get( e__VW.YView, 0 )+256, _name);
 

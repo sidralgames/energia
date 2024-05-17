@@ -11,7 +11,7 @@ StatusEnemyBlinded();
 
 if (blinded)
 {
-	_hp = 0;
+	_hp -= 1;
 }
 
 

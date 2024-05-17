@@ -5,10 +5,16 @@ if instance_exists(o_camera)
 	{
 		if (argument0 > shakeRemain)
 		{
-			outRemain = 2+random(3);
 			shakeMagnitude = argument0;
-			shakeRemain = shakeMagnitude;
+			shakeRemain = argument0;
 			shakeLenght = argument1;
+			angleRemain = argument2;
+			angleMagnitude = argument2;
+			if argument2 = undefined
+			{
+				angleRemain = global.standardAngleShake;
+				angleMagnitude = global.standardAngleShake;
+			}
 		}
 	}
 }

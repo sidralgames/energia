@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"EnemyLeaveTrail",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"EnemyLeaveTrail",
+  "parent":{
+    "name":"ENEMIES",
+    "path":"folders/Scripts/ENEMIES.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,44 +1,54 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (global.shields<1) //&& (other.isImmortal = false)
+if (global.hp >= 1)
 {
-	if (tocado = false) && (other.hurts)
+	if (global.shields<1) //&& (other.isImmortal = false)
 	{
-		gamepad_set_vibration(0,0.5,0.5);
-		alarm[4] = 10;
-		flashAlpha = 1;
-		audio_play_sound_on(global.audioEmitter, snd_hit, false, 50)
-		alarm[1] = 30
-		tocado = true;
-		global.hp -= 1 * global.damageReceived;
-		if (global.hp <1)
+		if (tocado = false) && (other.hurts)
 		{
-			if (other.sprite_index != s_shieldPurple)
+			gamepad_set_vibration(0,0.5,0.5);
+			alarm[4] = 10;
+			flashAlpha = 1;
+			audio_play_sound_on(global.audioEmitter, snd_hit, false, 50)
+			alarm[1] = 30
+			tocado = true;
+			
+			if (other.canBeDestroyed)
 			{
-				global.numEnemyKilledBy = other.enemyBestiaryNumber;
-				
-				if (other.finalTrail)
+				if (global.hp > 1)
 				{
-					global.FinalTrail = true;
+					other._hp = 0;
 				}
 			}
-			else
+			
+			global.hp -= 1 * global.damageReceived;
+			
+		
+			if (global.hp <1)
 			{
-				global.numEnemyKilledBy = other.enemyShooter;
-				global.FinalTrail = other.shooterTrail;
+				if (other.sprite_index != s_shieldPurple)
+				{
+					global.numEnemyKilledBy = other.enemyBestiaryNumber;
 				
+					if (other.finalTrail)
+					{
+						global.FinalTrail = true;
+					}
+				}
+				else
+				{
+					global.numEnemyKilledBy = other.enemyShooter;
+					global.FinalTrail = other.shooterTrail;
+				
+				}
 			}
+			
+			screenShake(4, 30, 5);
+			
+			global.hitsTaken+=1;
 		}
-		screenShake(4,30)
-		global.hitsTaken+=1;
-	}
-	
-	if (other.canBeDestroyed)
-	{
-		other._hp = 0;
 	}
 }
-
 
 
 
