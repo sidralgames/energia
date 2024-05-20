@@ -1,9 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
+randomize();
+
 image_speed = 0.5;
+
 canCreate = false;
 canCreateBreach = false;
-randomize();
+
 global.maxWorms = 0;
 
 if (room = Sala_BossWorm)
@@ -12,8 +15,6 @@ if (room = Sala_BossWorm)
 }
 else if (room = Sala_Tutorial)
 {
-	
-	
 	if (o_tutorialText.bombCreated)
 	{
 		enemy = choose(o_enemySniper,o_enemy, o_enemyFast, o_enemy, o_enemyFast, o_enemy, o_enemyFast, o_enemy, o_enemyFast)
@@ -22,13 +23,12 @@ else if (room = Sala_Tutorial)
 	{
 		enemy = choose(o_enemy, o_enemyFast)
 	}
-	
 }
 else
 {
 	if (global.level = 1)
 	{
-		EnemiesToSpawnLVL1();
+		EnemiesToSpawnLVL3();
 	}
 	else if (global.level = 3)
 	{
@@ -43,93 +43,3 @@ else
 		EnemiesToSpawnLVL7To9();
 	}
 }
-
-
-
-
-
-
-
-
-
-
-//if (global.level =1)
-//{
-//	enemy = choose(o_enemy,
-//	o_enemy, o_enemyFast, o_enemyFastMini,
-//	o_enemy, o_enemyFast, o_enemyFastMini,
-//	o_enemy, o_enemyFast, o_enemyFastMini,
-//	o_enemy, o_enemyFast, o_enemyFastMini,
-//	o_enemy, o_enemyFast, o_enemyFastMini,
-//	o_enemy, o_enemyFast, o_enemyFastMini,
-//	o_enemy, o_enemyFast, o_enemyFastMini,
-//	o_enemy, o_enemyFast, o_enemyFastMini,
-//	o_enemy, o_enemyFast, o_enemyFastMini,
-//	o_enemy, o_enemyFast, o_enemyFastMini,
-//	o_enemy, o_enemyFast, o_enemyFastMini,
-//	o_enemy, o_enemyFast, o_enemyFastMini,
-//	o_enemy, o_enemyFast, o_enemyFastMini,
-//	o_enemy, o_enemyFast, o_enemyFastMini,
-//	o_enemy, o_enemyFast, o_enemyFastMini,
-//	o_enemy, o_enemyFast, o_enemyFastMini,
-//	o_enemyDisp,
-//	o_enemyMitosis,o_enemyMitosis,o_enemyMitosis,
-//	o_enemy_Waiting_Shield,
-//	o_enemyMothership,
-//	o_enemySniper,
-//	o_enemyBomber,
-//	o_enemyMines,
-//	o_enemyDisc,
-//	o_enemyMouth_Free)
-//}
-//else if (global.level =3)
-//{
-//	enemy = choose(
-//	o_enemy, o_enemyFast, o_enemyFastMini,
-//	o_enemy, o_enemyFast, o_enemyFastMini,
-//	o_enemy, o_enemyFast,  o_enemyFastMini,
-//	o_enemyDisp, o_enemyDisp,
-//	o_enemy_Waiting_Shield, o_enemy_Waiting_Shield,
-//	o_enemyShield_v2,
-//	o_enemyMothership,
-//	o_enemySniper,
-//	o_enemyMitosis,
-//	o_enemyBomber,
-//	o_enemyMines,
-//	o_enemyDisc,
-//	o_enemyMouth_Free)
-//}
-//else if (global.level =5)
-//{
-//	enemy = choose(
-//	o_enemy, o_enemyFast, o_enemyFastMini,
-//	o_enemy, o_enemyFast, o_enemyFastMini,
-//	o_enemyDisp, o_enemyDisp,
-//	o_enemy_Waiting_Shield,
-//	o_enemyShield_v2,
-//	o_enemyOVNI,
-//	o_enemyMothership,
-//	o_enemySniper,
-//	o_enemyMitosis,
-//	o_enemyBomber,
-//	o_enemyMines,
-//	o_enemyDisc,
-//	o_enemyMouth_Free)
-//}
-//else if (global.level >5)
-//{
-//	enemy = choose(
-//	o_enemy, o_enemyFast, o_enemyFastMini,
-//	o_enemyDisp, o_enemyDisp, 
-//	o_enemy_Waiting_Shield,
-//	o_enemyShield_v2,
-//	o_enemyOVNI,
-//	o_enemyMothership,
-//	o_enemyTurret, o_enemySniper, o_enemySniper)
-//}
-
-
-
-
-
-
