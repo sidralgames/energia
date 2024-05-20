@@ -66,7 +66,7 @@ repelled = false;
 repelledTimeMax = 20;
 repelledTime = repelledTimeMax;
 
-
+isWormHitBoxBoss = false;
 isImmortal = false;
 enemyIsMini = false;
 canBounce = false;

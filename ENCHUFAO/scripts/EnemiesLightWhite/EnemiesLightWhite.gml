@@ -23,7 +23,14 @@ function EnemiesLightWhite()
 		
 			if (enemyWithLightBulb = true)
 			{
-				draw_sprite_ext(s_lightBulb4, 0, x, y, 0.2+off, 0.2+off, 0, c_white, 0.25 + off);
+				if (isWormHitBoxBoss)
+				{
+					draw_sprite_ext(s_lightBulb4, 0, x, y, 0.4+off, 0.4+off, 0, c_white, 0.25 + off);
+				}
+				else
+				{
+					draw_sprite_ext(s_lightBulb4, 0, x, y, 0.2+off, 0.2+off, 0, c_white, 0.25 + off);
+				}
 			}
 		}
 	}

@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 killedByPlayer = false;
-
+isWormHitBoxBoss = false;
 inScreen = false;
 checkInScreen = 30;
 alphaLight = 0;

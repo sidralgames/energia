@@ -3,7 +3,7 @@
 event_inherited();
 
 enemyBestiaryNumber = global.enemyBossWormBestiaryNumber;
-
+enemyWithLight = false;
 leavesTrail = false;
 isBossWorm = true;
 thisEnemyBounce = false;

@@ -96,7 +96,13 @@ if (pause)
 						if (quit)
 						{
 							SaveGame();
-							game_restart();
+							instance_activate_all();
+							with(o_main)
+							{
+								instance_activate_all();
+								ending = true;
+								endTimer = 10;
+							}
 						}
 						else
 						{
@@ -213,8 +219,14 @@ if (pause)
 						
 						if (quit)
 						{
+							instance_activate_all();
 							SaveGame();
-							game_restart();
+							with(o_main)
+							{
+								instance_activate_all();
+								ending = true;
+								endTimer = 10;
+							}
 						}
 						else
 						{

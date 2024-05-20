@@ -20,7 +20,12 @@ if (alarm[0] <= 0)
 		{
 			//room_instance_clear(Sala_0)
 			SaveGame();
-			game_restart();
+			
+			with(o_main)
+			{
+				FreeLightSurface();
+				ActivateAndDestroy();
+			}
 		}
 	}
 }

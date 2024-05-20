@@ -37,7 +37,11 @@ if (key_x)
 		case 2: 
 		{
 			SaveGame();
-			game_restart();
+			with(o_main)
+			{
+				FreeLightSurface();
+				ActivateAndDestroy();
+			};
 		}
 		break;
 	}
