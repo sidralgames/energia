@@ -61,6 +61,7 @@ function DrawKilledByEnemy_2()
 				case ("Discs"):
 				{
 					rot+=7;
+					GameOverDrawSprite(s_enemyDiscEye, 17, 0);
 					KilledByDrawEnemy(enemy.alias, infoGameOverEnemyDisc, irandom_range(0,9), global.FinalTrail, 0);
 				}
 				break;

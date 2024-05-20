@@ -15,7 +15,9 @@ CreateTemporaryChip(3);
 // Inherit the parent event
 event_inherited();
 
-if (isMegaEnemy)
+if (killedByPlayer)
+{
+	if (isMegaEnemy)
 	{
 		global.enemySniperMegaKills += 1;
 		
@@ -39,3 +41,4 @@ if (isMegaEnemy)
 			global.enemiesInBestiary +=1;
 		}
 	}
+}

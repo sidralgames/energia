@@ -10,9 +10,9 @@ off = 0;
 cableColor = c_white;
 // Create verlet groups
 inst = instance_nearest(x,y,o_strandedShip)
-_segments = 5 * inst.strandedShipCableStat;
+_segments = 4 * inst.strandedShipCableStat+2;
 // Create a new rope
-rope1 = verletGroupCreateRope(verletSystem1, x, y, cableColor, 2, 3, _segments, 2, 100, canCollide);
+rope1 = verletGroupCreateRope(verletSystem1, x, y, cableColor, 2, 3, _segments, 1, 100, canCollide);
 //rope1 = verletGroupCreateRopeTextured(verletSystem1, x, y, s_tentacle, _segments, 1, 10);
 
  //Attach its first vertex to an object

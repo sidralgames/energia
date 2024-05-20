@@ -7,7 +7,7 @@ event_inherited();
 
 speed=1.5* global.relativeSpeed;;
 
-part_particles_create(global.balaPTorretaBig_sys, x, y, global.balaPTorretaBig , 2)
+part_particles_create(global.balaPTorretaBig_sys, x, y, global.balaPTorretaBig , 1)
 
 
 

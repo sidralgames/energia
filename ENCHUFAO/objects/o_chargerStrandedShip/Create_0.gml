@@ -6,7 +6,8 @@ _hpush =0
 _vpush = 0
 bnc = 1;
 myShip = instance_nearest(x,y,o_strandedShip)
-
+enchufe = -1;
+enchufeSet = false;
 canBeEnchufated = true;
 
 if (myShip.called = true)

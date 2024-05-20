@@ -273,7 +273,7 @@ if (global.hp < 1)
 	}
 	
 	contDead --;
-	global.relativeSpeed = lerp(global.relativeSpeed, 0.05, 0.1);
+	global.relativeSpeed = lerp(global.relativeSpeed, 0.1, 0.1);
 	if (shakeFinal = false)
 	{
 		screenShake(0,0,0);
@@ -304,11 +304,14 @@ if (contDead <= 0)
 	screenShake(10,130,10)
 	instance_create(x,y,o_explo1)
 	audio_play_sound_on(global.audioEmitter, snd_death, false, 50)
-	audio_stop_sound(global.song)
-	audio_stop_sound(snd_battery)
+	audio_stop_sound(global.song);
+	audio_stop_sound(snd_battery);
+	audio_stop_sound(snd_laserPlayerCharge);
+	audio_stop_sound(snd_laserPlayerShooting);
+	audio_stop_sound(pitoSound);
 	instance_destroy();	
-	instance_destroy(o_cable)
-	instance_destroy(o_charger)
+	instance_destroy(o_cable);
+	instance_destroy(o_charger);
 	global.totalDeaths+=1;
 	instance_create_layer(x, y, "Text", o_gameOver)
 }

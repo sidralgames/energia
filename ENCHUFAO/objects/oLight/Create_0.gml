@@ -4,7 +4,11 @@ switch (room)
 {
 	case Sala_0:
 	{
-		if (global.level <=5)
+		if (global.level <=1)
+		{
+			num = irandom_range(110,225);
+		}
+		else if (global.level > 1) && (global.level <=5)
 		{
 			num = irandom_range(50,225);
 		}

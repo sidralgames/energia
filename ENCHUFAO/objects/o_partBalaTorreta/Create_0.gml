@@ -10,7 +10,7 @@ part_system_depth(global.balaPTorreta_sys,layer_get_depth("Part"));
 global.balaPTorreta = part_type_create();
 part_type_scale(global.balaPTorreta,1,1);
 part_type_orientation(global.balaPTorreta,0,359,0,0,0)
-part_type_size(global.balaPTorreta, 1,1.75,-0.075,0);
+part_type_size(global.balaPTorreta, 1,1.75,-0.055,0);
 part_type_alpha2(global.balaPTorreta, 1,1);
 part_type_speed(global.balaPTorreta,0,0,0,0);
 part_type_direction(global.balaPTorreta,140,160,0,1);

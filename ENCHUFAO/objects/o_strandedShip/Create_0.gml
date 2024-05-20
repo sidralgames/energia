@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+enchufe = -1;
 chargedInEnergy = true;
 chargedInAmmo = true;
 chargedInHp = true;

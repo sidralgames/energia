@@ -4,7 +4,7 @@
 // You can create multiple systems with different physic properties
 inScreen = false;
 checkInScreen = 0;
-
+resetPositionTime = 180
 mega = false;
 canCollide = false;
 fric = 0.8;

@@ -9,12 +9,15 @@ CreateSlowmoParts();
 // Inherit the parent event
 event_inherited();
 
-global.enemySocketsuckerKills +=1;
-if (global.bestiaryEnemySocketsuckerUnlocked = 0)
-{
-	global.bestiaryEnemySocketsuckerUnlocked = 1;
-	enemy = ds_map_find_value(global.bestiaryList, enemyBestiaryNumber);
-	enemy.unlocked = 1;
-	global.enemiesInBestiary +=1;
-}
 
+if (killedByPlayer)
+{
+	global.enemySocketsuckerKills +=1;
+	if (global.bestiaryEnemySocketsuckerUnlocked = 0)
+	{
+		global.bestiaryEnemySocketsuckerUnlocked = 1;
+		enemy = ds_map_find_value(global.bestiaryList, enemyBestiaryNumber);
+		enemy.unlocked = 1;
+		global.enemiesInBestiary +=1;
+	}
+}

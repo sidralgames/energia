@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+killedByPlayer = false;
 pathCont = 3;
 inScreen = false;
 checkInScreen = 0;

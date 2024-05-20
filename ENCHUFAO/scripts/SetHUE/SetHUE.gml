@@ -74,7 +74,7 @@ if (room != Sala_Inicio)
 
 
 	_filter_hueL_params.g_HueShift = _filterShift;	
-	_filter_hueL_params.g_HueSaturation =1+random(0.25);
+	_filter_hueL_params.g_HueSaturation =_filter_hue_params.g_HueSaturation;
 }
 	
 

@@ -48,6 +48,7 @@ inst = instance_nearest(x,y,o_enemyMouth_Free)
 rope1.vertexAttachTo(first, inst);
 
 instAchor = instance_create_layer(x,y,"EnemiesHUESub3",o_chargerMouth)
+instAchor.worm = inst;
 rope1.vertexAttachObject(last, instAchor,vertexAttachmentType.both);
 
 for (var i=1; i<=_segments; i++)

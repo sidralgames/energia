@@ -15,25 +15,28 @@ CreateTemporaryChip(0);
 // Inherit the parent event
 event_inherited();
 
-if (isMegaEnemy)
+if (killedByPlayer)
 {
-	global.enemyMothershipMegaKills +=1;
-	if (global.bestiaryEnemyMothershipMegaUnlocked = 0)
+	if (isMegaEnemy)
 	{
-		global.bestiaryEnemyMothershipMegaUnlocked = 1;
-		enemy = ds_map_find_value(global.bestiaryList, enemyBestiaryNumber);
-		enemy.unlocked = 1;
-		global.enemiesInBestiary +=1;
+		global.enemyMothershipMegaKills +=1;
+		if (global.bestiaryEnemyMothershipMegaUnlocked = 0)
+		{
+			global.bestiaryEnemyMothershipMegaUnlocked = 1;
+			enemy = ds_map_find_value(global.bestiaryList, enemyBestiaryNumber);
+			enemy.unlocked = 1;
+			global.enemiesInBestiary +=1;
+		}
 	}
-}
-else
-{
-	global.enemyMothershipKills +=1;
-	if (global.bestiaryEnemyMothershipUnlocked = 0)
+	else
 	{
-		global.bestiaryEnemyMothershipUnlocked = 1;
-		enemy = ds_map_find_value(global.bestiaryList, enemyBestiaryNumber);
-		enemy.unlocked = 1;
-		global.enemiesInBestiary +=1;
+		global.enemyMothershipKills +=1;
+		if (global.bestiaryEnemyMothershipUnlocked = 0)
+		{
+			global.bestiaryEnemyMothershipUnlocked = 1;
+			enemy = ds_map_find_value(global.bestiaryList, enemyBestiaryNumber);
+			enemy.unlocked = 1;
+			global.enemiesInBestiary +=1;
+		}
 	}
 }

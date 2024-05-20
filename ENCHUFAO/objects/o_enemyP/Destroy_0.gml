@@ -4,6 +4,7 @@ if (discounted == false)
 {
 	global.totalEnemiesOnLevel-=1;
 }
+
 global.enemiesKilled+=1;
 global.enemiesKilledTotalAch+=1;
 

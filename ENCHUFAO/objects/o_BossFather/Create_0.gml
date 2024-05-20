@@ -4,6 +4,6 @@
 isImmortal = false;
 isBombable = true;
 
-
+killedByPlayer = false;
 
 

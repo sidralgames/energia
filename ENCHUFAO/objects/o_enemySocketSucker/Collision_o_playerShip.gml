@@ -3,6 +3,7 @@
 if (state = ENEMYSTATE.PLUGGED)
 {
 	state = ENEMYSTATE.FREE;
+	enchufe.occupied = false;
 }
 
 

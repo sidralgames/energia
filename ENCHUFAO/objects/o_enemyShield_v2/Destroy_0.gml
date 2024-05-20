@@ -10,12 +10,15 @@ if (isMegaEnemy)
 // Inherit the parent event
 event_inherited();
 
-global.enemyShielderKills +=1;
-
-if (global.bestiaryEnemyShielderUnlocked = 0)
+if (killedByPlayer)
 {
-	global.bestiaryEnemyShielderUnlocked = 1;
-	enemy = ds_map_find_value(global.bestiaryList, enemyBestiaryNumber);
-	enemy.unlocked = 1;
-	global.enemiesInBestiary +=1;
+	global.enemyShielderKills +=1;
+
+	if (global.bestiaryEnemyShielderUnlocked = 0)
+	{
+		global.bestiaryEnemyShielderUnlocked = 1;
+		enemy = ds_map_find_value(global.bestiaryList, enemyBestiaryNumber);
+		enemy.unlocked = 1;
+		global.enemiesInBestiary +=1;
+	}
 }

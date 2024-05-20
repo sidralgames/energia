@@ -9,7 +9,7 @@ cableColor = c_white;
 // Create verlet groups
 _segments = 20
 // Create a new rope
-rope1 = verletGroupCreateRope(verletSystem1, x, y, cableColor, 2, 3, _segments, 3, 100);
+rope1 = verletGroupCreateRope(verletSystem1, x, y, cableColor, 2, 3, _segments, 1, 100);
 //rope1 = verletGroupCreateRopeTextured(verletSystem1, x, y, s_tentacle, _segments, 1, 10);
 
  //Attach its first vertex to an object

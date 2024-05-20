@@ -14,3 +14,8 @@ if (global.changingTiles)
 		_hp=0;
 	}
 }
+
+if (_hp <= 0)
+{
+	killedByPlayer = true;
+}

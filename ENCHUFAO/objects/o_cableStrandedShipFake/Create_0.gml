@@ -13,9 +13,9 @@ inst = instance_nearest(x,y, o_chargerStrandedShip);
 instTope = inst.myShip; //instance_nearest(x,y,o_strandedShip)
 
 // Create verlet groups
-_segments = 5 * instTope.strandedShipCableStat;
+_segments = 4 * instTope.strandedShipCableStat;
 // Create a new rope
-rope1 = verletGroupCreateRope(verletSystem1, x, y, cableColor, 2, 3, _segments, 2, 100, canCollide);
+rope1 = verletGroupCreateRope(verletSystem1, x, y, cableColor, 2, 3, _segments, 1, 100, canCollide);
 //rope1 = verletGroupCreateRopeTextured(verletSystem1, x, y, s_tentacle, _segments, 1, 10);
 
  //Attach its first vertex to an object

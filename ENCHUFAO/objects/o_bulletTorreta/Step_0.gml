@@ -15,7 +15,7 @@ if tile_meeting(x,y,"Tiles")
 	instance_destroy()	
 }
 
-part_particles_create(global.balaPTorreta_sys, x, y, global.balaPTorreta , 5)
+part_particles_create(global.balaPTorreta_sys, x, y, global.balaPTorreta , 1)
 image_angle = direction-90;
 
 hp--;

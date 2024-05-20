@@ -17,7 +17,7 @@ shakeRemain = 0;
 angleMagnitude = 0;
 angleRemain = 0;
 
-buff = 32; 
+buff = 16; 
 
 cont = -30;
 zoom = false;

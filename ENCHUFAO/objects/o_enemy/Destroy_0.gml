@@ -8,25 +8,28 @@ event_inherited();
 
 CreateTemporaryChip(5);
 
-if (isMegaEnemy)
+if (killedByPlayer)
 {
-	global.enemyBasicMegaKills +=1;
-	if (global.bestiaryEnemyBasicMegaUnlocked = 0)
+	if (isMegaEnemy)
 	{
-		global.bestiaryEnemyBasicMegaUnlocked = 1;
-		enemy = ds_map_find_value(global.bestiaryList, enemyBestiaryNumber);
-		enemy.unlocked = 1;
-		global.enemiesInBestiary +=1;
+		global.enemyBasicMegaKills +=1;
+		if (global.bestiaryEnemyBasicMegaUnlocked = 0)
+		{
+			global.bestiaryEnemyBasicMegaUnlocked = 1;
+			enemy = ds_map_find_value(global.bestiaryList, enemyBestiaryNumber);
+			enemy.unlocked = 1;
+			global.enemiesInBestiary +=1;
+		}
 	}
-}
-else
-{
-	global.enemyBasicKills +=1;
-	if (global.bestiaryEnemyBasicUnlocked = 0)
+	else
 	{
-		global.bestiaryEnemyBasicUnlocked = 1;
-		enemy = ds_map_find_value(global.bestiaryList, enemyBestiaryNumber);
-		enemy.unlocked = 1;
-		global.enemiesInBestiary +=1;
+		global.enemyBasicKills +=1;
+		if (global.bestiaryEnemyBasicUnlocked = 0)
+		{
+			global.bestiaryEnemyBasicUnlocked = 1;
+			enemy = ds_map_find_value(global.bestiaryList, enemyBestiaryNumber);
+			enemy.unlocked = 1;
+			global.enemiesInBestiary +=1;
+		}
 	}
 }

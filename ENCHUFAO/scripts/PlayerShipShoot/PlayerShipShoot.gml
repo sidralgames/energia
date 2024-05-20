@@ -13,7 +13,7 @@ function PlayerShipShoot()
 	explo.image_yscale = 0.15;
 	explo.image_speed = 3;
 	
-	screenShake(2,20)
+	screenShake(2,20,0)
 	
 	audio_play_sound_on(global.audioEmitter,snd_shoot_2, false, 80,,,random_range(0.85,1))
 	audio_play_sound_on(global.audioEmitter,snd_shoot_5, false, 80,,,random_range(0.85,1))

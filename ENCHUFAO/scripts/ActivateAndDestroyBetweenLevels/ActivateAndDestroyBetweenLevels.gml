@@ -22,6 +22,16 @@ function ActivateAndDestroyBetweenLevels()
 		instance_destroy(o_gridRoom);
 	}
 	
+	with(o_torreta)
+	{
+		killedByPlayer = false;	
+	}
+	
+	with(o_laser)
+	{
+		killedByPlayer = false;	
+	}
+	
 	with(all)
 	{
 		instance_destroy();	

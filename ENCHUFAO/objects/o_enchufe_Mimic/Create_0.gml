@@ -8,6 +8,9 @@
 
 // Inherit the parent event
 event_inherited();
+
+killedByPlayer = false;
+
 checkInScreen = 0;
 inScreen = true;
 

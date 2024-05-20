@@ -7,7 +7,8 @@ function CheckExploHitIsUpgraded()
 		if (tocado) && (explocreated = false)
 		{
 			explocreated = true;
-			shock = instance_create(x,y,o_shockwaveTiles)
+			shock = instance_create(x,y,o_shockwaveTiles);
+			shock.scale = 0.7;
 			ebomb = instance_create(x,y,o_exploBomb);
 			ebomb.scale = 1.4;
 			ebomb.scale = 1.4;

@@ -2,7 +2,7 @@
 // You can write your code in this editor
 inScreen = false;
 checkInScreen = 0;
-
+killedByPlayer = true;
 laserActive = false;
 face = 0;
 

@@ -102,6 +102,8 @@ if instance_exists(o_playerShip)
 	
 	if (_hp<=0)
 	{
+		killedByPlayer = true;
+		
 		isPluggable = false;
 		
 		if (state = 1) && canDie = false

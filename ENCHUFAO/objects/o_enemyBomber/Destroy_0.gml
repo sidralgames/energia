@@ -13,13 +13,16 @@ if (isMegaEnemy)
 
 CreateTemporaryChip(2);
 
-global.enemyBomboKills +=1;
-if (global.bestiaryEnemyBomboUnlocked = 0)
+if (killedByPlayer)
 {
-	global.bestiaryEnemyBomboUnlocked = 1;
-	enemy = ds_map_find_value(global.bestiaryList, enemyBestiaryNumber);
-	enemy.unlocked = 1;
-	global.enemiesInBestiary +=1;
+	global.enemyBomboKills +=1;
+	if (global.bestiaryEnemyBomboUnlocked = 0)
+	{
+		global.bestiaryEnemyBomboUnlocked = 1;
+		enemy = ds_map_find_value(global.bestiaryList, enemyBestiaryNumber);
+		enemy.unlocked = 1;
+		global.enemiesInBestiary +=1;
+	}
 }
 
 // Inherit the parent event

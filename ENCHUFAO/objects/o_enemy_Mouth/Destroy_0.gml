@@ -8,34 +8,38 @@ if (room != Sala_Inicio)
 		global.enemiesKilled+=1;
 		global.enemiesKilledTotalAch+=1;
 	}
+	
 	global.totalEnemiesOnLevel-=1;
 }
+
 instance_destroy(cable);
-if (isOnlyDraw = false)
+
+if (killedByPlayer)
 {
-	if (isMegaEnemy)
+	if (isOnlyDraw = false)
 	{
-		global.enemyNibbladeKills +=1;
-		if (global.bestiaryEnemyNibbladeUnlocked = 0)
+		if (isMegaEnemy)
 		{
-			global.bestiaryEnemyNibbladeUnlocked = 1;
-			enemy = ds_map_find_value(global.bestiaryList, enemyBestiaryNumber);
-			enemy.unlocked = 1;
-			global.enemiesInBestiary +=1;
+			global.enemyNibbladeKills +=1;
+			if (global.bestiaryEnemyNibbladeUnlocked = 0)
+			{
+				global.bestiaryEnemyNibbladeUnlocked = 1;
+				enemy = ds_map_find_value(global.bestiaryList, enemyBestiaryNumber);
+				enemy.unlocked = 1;
+				global.enemiesInBestiary +=1;
+			}
 		}
-	}
-	else
-	{
-		global.enemyPincherKills +=1;
-		if (global.bestiaryEnemyPincherUnlocked = 0)
+		else
 		{
-			global.bestiaryEnemyPincherUnlocked = 1;
-			enemy = ds_map_find_value(global.bestiaryList, enemyBestiaryNumber);
-			enemy.unlocked = 1;
-			global.enemiesInBestiary +=1;
+			global.enemyPincherKills +=1;
+			if (global.bestiaryEnemyPincherUnlocked = 0)
+			{
+				global.bestiaryEnemyPincherUnlocked = 1;
+				enemy = ds_map_find_value(global.bestiaryList, enemyBestiaryNumber);
+				enemy.unlocked = 1;
+				global.enemiesInBestiary +=1;
+			}
 		}
 	}
 }
-
-// Inherit the parent event
 

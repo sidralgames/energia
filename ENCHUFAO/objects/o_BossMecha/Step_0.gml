@@ -80,12 +80,13 @@ if (tile_meeting(x+hspeed,y,"Tiles"))
 	
 if (inside.hp < 1)
 {
+	killedByPlayer = true;
 	instance_destroy();
 	instance_destroy(inside);
 	instance_create(x-10,y,o_exploBomb);
 	instance_create(x,y-20,o_exploBomb);
 	instance_create(x+10,y,o_exploBomb);
-	instance_create_layer(x,y,"Enemies", o_enemyMini_PostBoss);
+	//instance_create_layer(x,y,"Enemies", o_enemyMini_PostBoss);
 	enchufeFinal = instance_create_layer(x,y,"Enchufes", o_enchufe_Final)
 	enchufeFinal.abierto = true;
 }

@@ -2,6 +2,8 @@
 // You can write your code in this editor
 event_inherited();
 
+
+
 enemyBestiaryNumber = global.enemyBossCrusherBestiaryNumber;
 
 isBombable = false;

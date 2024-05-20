@@ -31,6 +31,8 @@ if (onlyHead)
 {
 	if (_hp <= 0)
 	{
+		killedByPlayer = true;
+		
 		if (plugged)
 		{
 			enchufe.occupied = false;

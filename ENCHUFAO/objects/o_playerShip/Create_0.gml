@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 canHonk = false;
-
+//instance_create(x,y,o_radio)
 contDead = 60;
 shakeFinal = false;
 contExploDead = 0;

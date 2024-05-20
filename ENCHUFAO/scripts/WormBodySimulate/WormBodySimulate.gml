@@ -28,7 +28,7 @@ function WormBodySimulate()
 	}
 	else
 	{
-		instance_destroy(instAchor)
+		instance_destroy(instAchor);
 		instance_destroy();	
 	}
 }

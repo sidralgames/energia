@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+killedByPlayer = false;
+
 inScreen = false;
 checkInScreen = 30;
 alphaLight = 0;

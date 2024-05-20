@@ -117,6 +117,7 @@ function PlayerShipSlowMo()
 		global.relativeSpeed = lerp(global.relativeSpeed,0.3+slowFactor, 0.05+assistFactor);
 		pitch = min(1,global.relativeSpeed+0.5);
 		audio_emitter_pitch(global.audioEmitter, pitch);
+		audio_emitter_pitch(global.pito_emitter, pitch);
 		
 		layer_set_visible("EffectColorBulletTime", true);
 		
@@ -146,12 +147,17 @@ function PlayerShipSlowMo()
 			{
 				pitch = 1;
 				audio_emitter_pitch(global.audioEmitter, pitch);
+				audio_emitter_pitch(global.pito_emitter, pitch);
 				global.relativeSpeed = 1.0;	
 			}
 			else
 			{
-				global.relativeSpeed = lerp(global.relativeSpeed,1.0, 0.05 + recoverSlowFactor);
-				pitch = lerp(pitch,1.0, 0.05);
+				if (global.hp >= 1)
+				{
+					global.relativeSpeed = lerp(global.relativeSpeed,1.0, 0.05 + recoverSlowFactor);
+					pitch = lerp(pitch,1.0, 0.05);
+				}
+				
 			}
 		}
 	}

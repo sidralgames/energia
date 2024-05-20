@@ -1,5 +1,6 @@
 inScreen = false;
 checkInScreen = 0;
+killedByPlayer = true;
 
 enemyBestiaryNumber = global.enemyPewPewBestiaryNumber;
 enemyWithLightBulb = false;

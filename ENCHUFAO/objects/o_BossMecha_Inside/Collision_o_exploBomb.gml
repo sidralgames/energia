@@ -6,7 +6,9 @@ if instance_exists(o_BossMecha)
 	{
 		if (other.isFrom = "PlayerBomb")
 		{
-			if (hittedByBomb = false) && ((o_BossMecha.state = BOSS2STATE.ATTACK) || (o_BossMecha.recoverTime >=0))
+			if (hittedByBomb = false) &&
+			(o_BossMecha.state = BOSS2STATE.ATTACK) ||
+			((o_BossMecha.recoverTime >=0) && (o_BossMecha.image_index != 0))
 			{
 				hittedByBomb = true;
 				hp-=20 * global.damageDealt;

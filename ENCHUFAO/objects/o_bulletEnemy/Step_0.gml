@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-part_particles_create(global.balaPTorreta_sys, x, y, global.balaPTorreta , 2)
+part_particles_create(global.balaPTorreta_sys, x, y, global.balaPTorreta , 1)
 
 
 hp--;
