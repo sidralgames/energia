@@ -1,6 +1,6 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-if instance_exists(worm) && (worm =! -1)
+if instance_exists(worm) && (worm != -1)
 {
 	if (worm.plugged)
 	{
