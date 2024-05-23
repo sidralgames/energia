@@ -7,8 +7,8 @@ if (alarm[0] <= 0) && (killedby != -1)
 {
 	if (killedByCreated = false)
 	{
-		killedByCreated = true
 		killedByText = instance_create_layer(x,y,"Pause", o_killedBy);
+		killedByCreated = true;
 	}
 	image_alpha+=0.05;
 

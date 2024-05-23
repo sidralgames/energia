@@ -2,6 +2,8 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function DrawKilledByEnemy_2()
 {
+	enemyBestiaryNumber = o_gameOver.killedby;
+	
 	for (var i=0; i<global.totalNumberOfEnemiesBestiary; i++)
 	{
 		enemy = ds_map_find_value(global.bestiaryList, i);
@@ -14,7 +16,7 @@ function DrawKilledByEnemy_2()
 				{
 					KilledByDrawEnemy(enemy.alias, infoGameOverEnemyBasic, irandom_range(0,11), global.FinalTrail, 0);
 				}
-				break
+				break;
 		
 				case ("Basic"):
 				{
