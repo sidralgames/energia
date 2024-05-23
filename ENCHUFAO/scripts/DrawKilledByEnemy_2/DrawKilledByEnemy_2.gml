@@ -122,6 +122,8 @@ function DrawKilledByEnemy_2()
 				}
 				break;
 			}
+			
+			break;
 		}
 	}
 }
