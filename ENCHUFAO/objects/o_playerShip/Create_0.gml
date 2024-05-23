@@ -6,6 +6,7 @@ contDead = 60;
 shakeFinal = false;
 contExploDead = 0;
 vibrationExplo = 0;
+//global.bombIsClusterBomb = true;
 
 global.haveChargerAdapter = false;
 global.meteorsCount = 0;

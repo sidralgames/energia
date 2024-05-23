@@ -21,6 +21,7 @@ text = "";
 alarm[0] = 70;
 killedByCreated = false;
 
+
 //-----Check HighScore----///
 if (global.HighScore < global.XPpoints)
 {

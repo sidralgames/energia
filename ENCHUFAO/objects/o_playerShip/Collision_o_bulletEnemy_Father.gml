@@ -12,7 +12,7 @@ if (global.shields<1)
 		alarm[1] = 30
 		tocado = true;
 		global.hp -= 1 * global.damageReceived;
-		if (global.hp <1)
+		if (global.hp - (1 * global.damageReceived) <1)
 		{
 			global.numEnemyKilledBy = other.enemyShooter;
 			global.FinalTrail = other.shooterTrail;

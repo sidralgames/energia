@@ -24,7 +24,7 @@ if (global.hp >= 1)
 			global.hp -= 1 * global.damageReceived;
 			
 		
-			if (global.hp <1)
+			if (global.hp - (1 * global.damageReceived) < 1)
 			{
 				if (other.sprite_index != s_shieldPurple)
 				{

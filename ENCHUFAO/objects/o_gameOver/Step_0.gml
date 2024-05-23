@@ -3,7 +3,7 @@
 // You can write your code in this editor
 Controls_Input();
 
-if (alarm[0] <= 0)
+if (alarm[0] <= 0) && (killedby != -1)
 {
 	if (killedByCreated = false)
 	{
@@ -25,6 +25,7 @@ if (alarm[0] <= 0)
 			{
 				FreeLightSurface();
 				ActivateAndDestroy();
+				instance_destroy();
 			}
 		}
 	}

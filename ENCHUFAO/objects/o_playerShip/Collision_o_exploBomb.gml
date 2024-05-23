@@ -14,7 +14,7 @@ if (other.damagePlayer == true)
 			tocado = true;
 			global.hp -= 1 * global.damageReceived;
 			
-			if (global.hp < 1)
+			if (global.hp - (1 * global.damageReceived) < 1)
 			{
 				global.killedByExplosion = true;
 				global.numEnemyKilledBy = other.numBombKilledBy;

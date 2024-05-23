@@ -20,7 +20,7 @@ tip = irandom_range(0,3)
 image_speed = 0;
 
 //sprite_index = global.numEnemyKilledBy;
-enemyBestiaryNumber = global.numEnemyKilledBy;
+enemyBestiaryNumber = o_gameOver.killedby;
 part_type_direction(global.EnemyKilledBy_part,175,185,0,1);
 off = 0;
 

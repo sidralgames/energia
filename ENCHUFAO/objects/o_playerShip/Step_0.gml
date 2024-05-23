@@ -313,5 +313,6 @@ if (contDead <= 0)
 	instance_destroy(o_cable);
 	instance_destroy(o_charger);
 	global.totalDeaths+=1;
-	instance_create_layer(x, y, "Text", o_gameOver)
+	gameOver = instance_create_layer(x, y, "Text", o_gameOver);
+	gameOver.killedby = global.numEnemyKilledBy;
 }
