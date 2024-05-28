@@ -6,7 +6,7 @@ draw_sprite_ext(sprite_index,image_index, x,y, scale, scale, _angle, image_blend
 
 if (blinded)
 {
-	draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,argument0,global.yellow,0.65)
+	draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,0,global.yellow,0.65)
 }
 
 

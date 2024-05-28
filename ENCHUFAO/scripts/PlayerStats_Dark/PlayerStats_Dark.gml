@@ -8,7 +8,7 @@ function PlayerStats_Dark()
 	
 	global.textBonus = "All Enemies Have -3 HP";
 	
-	global.energyMax = 450;
+	global.energyMax = 400;
 	global.energy = global.energyMax;
 	
 	global.hpMax = 3;

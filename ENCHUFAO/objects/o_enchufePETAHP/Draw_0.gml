@@ -12,7 +12,7 @@ if instance_exists(o_playerShip)
 {
 if (petaActive) //&& (o_playerShip.pluggedTimer < 200)
 {
-	if (charge <= 300)
+	if (charge <= maxCharge+10)
 	{
 		charge+=1;
 	}

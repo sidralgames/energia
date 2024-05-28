@@ -11,7 +11,7 @@ if instance_exists(o_BossMecha)
 			((o_BossMecha.recoverTime >=0) && (o_BossMecha.image_index != 0))
 			{
 				hittedByBomb = true;
-				hp-=20 * global.damageDealt;
+				hp-=10 * global.damageDealt;
 				alarm[0] = 20;
 				flashAlpha = 1;
 			}

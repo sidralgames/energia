@@ -9,6 +9,7 @@ event_inherited();
 fromFriend = false;
 soundDie = false;
 bnc = 1;
+
 //if room = Sala_0
 //{
 //	if (global.PETAsActive >= 3) && (bornFromBreach)
@@ -35,3 +36,13 @@ bnc = 1;
 
 _hpush = choose(random_range(0.05, 0.1),-random_range(0.05, 0.1))
 _vpush = choose(random_range(0.05, 0.1), -random_range(0.05, 0.1))
+
+if (global.biggerPetasIsUpgraded)
+{
+	maxCharge = global.PETACharge + 150;
+	scale = 1.17;
+}
+else
+{
+	maxCharge = global.PETACharge;
+}

@@ -45,5 +45,11 @@ function EnemiesLightColor()
 			}
 		}
 	}
+	
+	with (o_bulletEnemy_Father)
+	{
+		off = random_range(0.02, -0.02);
+		draw_sprite_ext(s_lightBulb4, 0, x, y, 0.08+off, 0.08+off, 0, global.brightRed, 0.1 + off);
+	}
 
 }

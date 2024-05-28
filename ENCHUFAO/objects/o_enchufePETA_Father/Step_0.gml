@@ -4,7 +4,7 @@
 xConnectionPos = x;
 yConnectionPos = y;
 
-if (charge < 300)
+if (charge < maxCharge +10)
 {
 	if (image_index >= 18)
 	{
@@ -28,7 +28,7 @@ Move();
 image_angle += max(0.05*sign(_hpush), 2*(abs(_hpush)),0.05*sign(_vpush), 2*(abs(_vpush))*global.relativeSpeed);
 _angle = image_angle;
 
-if (charge >= 295)
+if (charge >= maxCharge)
 {
 	if (soundDie = false)
 	{

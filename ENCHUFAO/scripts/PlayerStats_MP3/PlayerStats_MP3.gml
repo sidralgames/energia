@@ -14,10 +14,10 @@ function PlayerStats_MP3()
 	global.hpMax = 3;
 	global.hp = 3;
 	
-	global.laserMax = 5;
-	global.laser = 5;
+	global.laserMax = 3;
+	global.laser = 3;
 	
-	global.ammoMax = 50;
+	global.ammoMax = 100;
 	global.ammo = global.ammoMax;
 	
 	global.bombAmmo = 2;

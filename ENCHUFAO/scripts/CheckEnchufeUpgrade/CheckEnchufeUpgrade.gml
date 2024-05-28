@@ -910,6 +910,35 @@ function CheckEnchufeUpgrade()
 			}
 			break;
 			
+			case "upgradeBiggerPetas":
+			{
+				if (!global.biggerPetasIsUpgraded)
+				{
+					global.biggerPetasIsUpgraded = true;
+					
+					AddUpgradeBiggerPetasPlayer();
+				}
+				
+				for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
+				{
+					upg = ds_map_find_value(global.PlayerUpgradesList, i)
+					if (upg.obj = o_enchufeUpgadeBiggerPetas)
+					{
+						upg.times+=1;
+					}
+				}
+				
+				//-- DISCARD UPGRADE --//
+				for (var i= 0; i< global.numberOfUpgrades; i++)
+				{
+					thisUpg = ds_map_find_value(global.upgradesList, i)
+					if (thisUpg.obj = o_enchufeUpgadeBiggerPetas)
+					{
+						thisUpg.canShowUp = false;
+					}
+				}
+				
+			}break;
 		
 			case "upgradeBonus":
 			{

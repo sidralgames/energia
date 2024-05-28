@@ -17,7 +17,7 @@ function EnemiesToSpawnLVL1()
 		else
 		if (enemyToSpawn > 13) && (enemyToSpawn<15)
 		{
-			enemy = choose(o_enemySniper, o_enemyDisc,o_enemyMitosis, o_enemyMouth_Free)
+			enemy = choose(o_enemySniper, o_enemyDisc,o_enemyMitosis, o_enemySegment)
 		}
 		else
 		if(enemyToSpawn >= 15)

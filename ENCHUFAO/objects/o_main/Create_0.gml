@@ -29,7 +29,7 @@ global.offRangeDistance_LaserTrap = 600;
 global.angExtraFocos = 10;
 global.energyLostFocos = 0.6;
 global.alphaFocos = 0.35;
-global.alphaFocosColor = 0.12;
+global.alphaFocosColor = 0.11;
 global.bindedTop = 50;
 global.initialBlindFlash = 26;
 global.enemyBlindTimeMin = 90;
@@ -419,6 +419,7 @@ AddUpgradeMoreChipDrops();
 AddUpgradeShieldPerRoom(); //30
 AddUpgradeTurretsAllies();
 AddUpgradeFrontLights();
+AddUpgradeBiggerPetas();
 
 
 
@@ -456,7 +457,7 @@ global.moreChipDropsIsUpgraded = false;
 global.shieldPerRoomIsUpgraded = false;
 global.turretsAlliesIsUpgraded = false;
 global.frontLightsIsUpgraded = false;
-
+global.biggerPetasIsUpgraded = false;
 
 
 
@@ -484,6 +485,8 @@ global.homingMissilesExtra = 0;
 global.chargerShoots = false;
 global.damageDealt = 1;
 global.damageReceived = 1;
+global.PETACharge = 295;
+
 
 
 

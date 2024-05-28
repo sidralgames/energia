@@ -79,4 +79,10 @@ function EnemiesLightWhite()
 		off = random_range(0.02, -0.02);
 		draw_sprite_ext(s_lightBulb4, 0, x, y, 0.25+off, 0.25+off, 0, c_white, 0.5 + off);
 	}
+	
+	with (o_bulletEnemy_Father)
+	{
+		off = random_range(0.02, -0.02);
+		draw_sprite_ext(s_lightBulb4, 0, x, y, 0.2+off, 0.2+off, 0, c_white, 0.15 + off);
+	}
 }
