@@ -28,7 +28,7 @@ else
 {
 	if (global.level = 1)
 	{
-		EnemiesToSpawnLVL3();
+		EnemiesToSpawnLVL1();
 	}
 	else if (global.level = 3)
 	{

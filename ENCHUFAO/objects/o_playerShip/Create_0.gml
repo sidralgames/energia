@@ -15,7 +15,7 @@ global.assistedSlowmo = false;
 contLight = 0;
 alphaFocosColor = global.alphaFocosColor;
 alphaFocos = global.alphaFocos;
-lightLenght = 600;
+lightLenght = 680;
 iniLightOff = 7;
 
 contToLaunchPeta = 0;

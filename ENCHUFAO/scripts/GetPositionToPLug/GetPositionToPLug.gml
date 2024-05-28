@@ -38,8 +38,8 @@ function GetPositionToPLug()
 		if (enchufe.IsEnchufeBoss)
 		{
 			o_charger.scale = 1.4;
-			global.xToPlug = enchufe.x+lengthdir_x(30,enchufe.image_angle)
-			global.yToPlug = enchufe.y+lengthdir_y(30,enchufe.image_angle)
+			global.xToPlug = enchufe.x-lengthdir_x(30,enchufe.image_angle)
+			global.yToPlug = enchufe.y-lengthdir_y(30,enchufe.image_angle)
 		}
 		else if (enchufe.IsEnchufeCapsule)
 		{
