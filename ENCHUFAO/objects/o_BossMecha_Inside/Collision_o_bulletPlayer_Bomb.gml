@@ -4,10 +4,10 @@ if instance_exists(o_BossMecha)
 {
 	if (o_BossMecha.state != BOSS2STATE.START)
 	{
-		hp -= 20*global.damageDealt;
-
 		instance_destroy(other);
-
+		
+		hp -= 20*global.damageDealt;
+		
 		flashAlpha = 1;
 	}
 }

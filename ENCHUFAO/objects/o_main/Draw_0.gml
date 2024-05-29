@@ -42,3 +42,8 @@ if (!isPaused) && (room != Sala_Splash)
 
 	UIPlayerDamage();
 }
+
+if instance_exists(o_menuScores)
+{
+	draw_sprite_ext(s_workin, 0,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+180, 1,1,image_angle, image_blend, image_alpha);
+}

@@ -12,7 +12,7 @@ if (other.damagePlayer == true)
 			audio_play_sound_on(global.audioEmitter, snd_hit, false, 50)
 			alarm[1] = 30
 			tocado = true;
-			global.hp -= 1 * global.damageReceived;
+			
 			
 			if (global.hp - (1 * global.damageReceived) < 1)
 			{
@@ -20,6 +20,8 @@ if (other.damagePlayer == true)
 				global.numEnemyKilledBy = other.numBombKilledBy;
 				global.FinalTrail = false;
 			}
+			
+			global.hp -= 1 * global.damageReceived;
 			
 			screenShake(4,30);
 			global.hitsTaken+=1;

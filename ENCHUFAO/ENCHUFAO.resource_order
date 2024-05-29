@@ -1434,6 +1434,7 @@
     {"name":"s_vine2","order":5,"path":"sprites/s_vine2/s_vine2.yy",},
     {"name":"s_wallBestiary","order":2,"path":"sprites/s_wallBestiary/s_wallBestiary.yy",},
     {"name":"s_wallGameOver","order":1,"path":"sprites/s_wallGameOver/s_wallGameOver.yy",},
+    {"name":"s_workin","order":1,"path":"sprites/s_workin/s_workin.yy",},
     {"name":"s_wormBossBanner","order":96,"path":"sprites/s_wormBossBanner/s_wormBossBanner.yy",},
     {"name":"sCircle","order":4,"path":"sprites/sCircle/sCircle.yy",},
     {"name":"sCollisionCustom","order":5,"path":"sprites/sCollisionCustom/sCollisionCustom.yy",},

@@ -59,12 +59,12 @@ switch(selected)
 		initialAlpha = lerp(initialAlpha, 1,0.1);
 		draw_sprite_ext(s_statsHome, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialStat,0.9,0.9,0,image_blend, 0.7)	
 		
-		if (initialAch <140)
-		{
-			draw_sprite_ext(achievement.imageSprite, achievement.unlocked,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+110,1,1,0,image_blend, initialAlpha)	
-			draw_sprite_ext(s_arrows,0, __view_get( e__VW.XView, 0 )+ 255,__view_get( e__VW.YView, 0 )+140,1+scaleArrowsL,1+scaleArrowsL,0,image_blend, initialAlpha)
-			draw_sprite_ext(s_arrows,1, __view_get( e__VW.XView, 0 )+ 389,__view_get( e__VW.YView, 0 )+140,1+scaleArrowsR,1+scaleArrowsR,0,image_blend, initialAlpha)
-		}
+		//if (initialAch <140)
+		//{
+		//	draw_sprite_ext(achievement.imageSprite, achievement.unlocked,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+110,1,1,0,image_blend, initialAlpha)	
+		//	draw_sprite_ext(s_arrows,0, __view_get( e__VW.XView, 0 )+ 255,__view_get( e__VW.YView, 0 )+140,1+scaleArrowsL,1+scaleArrowsL,0,image_blend, initialAlpha)
+		//	draw_sprite_ext(s_arrows,1, __view_get( e__VW.XView, 0 )+ 389,__view_get( e__VW.YView, 0 )+140,1+scaleArrowsR,1+scaleArrowsR,0,image_blend, initialAlpha)
+		//}
 		draw_sprite_ext(s_achievementsHome, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialAch,1.1,1.1,0,image_blend, image_alpha)	
 		draw_sprite_ext(s_highscoresMenu,1, __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialScores,0.9,0.9,0,image_blend, 0.7)
 		draw_sprite_ext(s_bestiaryMenu,0, __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialBestiary,0.8,0.8,0,image_blend, 0.7)

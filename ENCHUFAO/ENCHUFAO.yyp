@@ -1527,6 +1527,7 @@
     {"id":{"name":"s_wall_tilesConespacio","path":"sprites/s_wall_tilesConespacio/s_wall_tilesConespacio.yy",},},
     {"id":{"name":"s_wallBestiary","path":"sprites/s_wallBestiary/s_wallBestiary.yy",},},
     {"id":{"name":"s_wallGameOver","path":"sprites/s_wallGameOver/s_wallGameOver.yy",},},
+    {"id":{"name":"s_workin","path":"sprites/s_workin/s_workin.yy",},},
     {"id":{"name":"s_wormBossBanner","path":"sprites/s_wormBossBanner/s_wormBossBanner.yy",},},
     {"id":{"name":"sCircle","path":"sprites/sCircle/sCircle.yy",},},
     {"id":{"name":"sCollisionBox","path":"sprites/sCollisionBox/sCollisionBox.yy",},},

@@ -20,9 +20,6 @@ if (global.hp >= 1)
 					other._hp = 0;
 				}
 			}
-			
-			global.hp -= 1 * global.damageReceived;
-			
 		
 			if (global.hp - (1 * global.damageReceived) < 1)
 			{
@@ -42,6 +39,8 @@ if (global.hp >= 1)
 				
 				}
 			}
+			
+			global.hp -= 1 * global.damageReceived;
 			
 			screenShake(4, 30, 5);
 			
