@@ -14,7 +14,7 @@ function GangSecret(_spawner)
 				 exM = cx * CELL_WIDTH+CELL_WIDTH/2;
 				 eyM = cy * CELL_HEIGHT+CELL_HEIGHT/2;
 			
-				if (point_distance(exM, eyM, o_playerShip.x, o_playerShip.y) > 80)
+				if (point_distance(exM, eyM, o_playerShip.x, o_playerShip.y) > 100)
 				{
 					if (global.wallgrid_[# cx, cy] == FLOOR) &&
 					(global.wallgrid_[# cx+1, cy] == FLOOR) &&

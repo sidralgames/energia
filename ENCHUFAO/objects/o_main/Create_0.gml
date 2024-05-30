@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 contLowEnergy = 30;
+imageWorkin = 0;
 
 global.checkInScreenTime = 30;
 global.standardAngleShake = 0.5;

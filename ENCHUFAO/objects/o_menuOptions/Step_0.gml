@@ -53,11 +53,11 @@ if (alarm[0] <= 0)
 				
 				case 2:
 				{
-					o_nextRoom.alarm[0] = 60;
-					o_nextRoom.canSelectShip = true;
-					o_nextRoom.goToChillRoom = true;
-					Stats._visible = true;
-					_visible = false;
+					//o_nextRoom.alarm[0] = 60;
+					//o_nextRoom.canSelectShip = true;
+					//o_nextRoom.goToChillRoom = true;
+					//Stats._visible = true;
+					//_visible = false;
 				}break;
 				
 				case 3:

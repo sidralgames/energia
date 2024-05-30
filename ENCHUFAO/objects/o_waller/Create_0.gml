@@ -108,7 +108,7 @@ if (room = Sala_0) //(levelType = 0)
 				case "Worms":
 				{
 					secretType = "Worms";
-					timesSpawner = irandom_range(3,5);
+					timesSpawner = irandom_range(2,4);
 					SetupLevelSecret(800, 40, irandom_range(45,28), irandom_range(24,15), 2000, 2, DrawLevelMejora);
 				}
 				break;

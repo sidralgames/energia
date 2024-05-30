@@ -8,7 +8,7 @@ function WormBodySimulate()
 		y = inst.y;
 	
 		//TESTING NO SIMULATE HASTA QUE NO VAYA A APARECER POR PANTALLA LA CABEZA
-		if (inScreen) || (alarm[2] <= 0)
+		if (inScreen) || (alarm[2] <= 10)
 		{
 			if (alarm[1] <= 0)
 			{

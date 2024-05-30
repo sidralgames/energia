@@ -43,7 +43,9 @@ if (!isPaused) && (room != Sala_Splash)
 	UIPlayerDamage();
 }
 
-if instance_exists(o_menuScores)
+if instance_exists(o_menuScores) || instance_exists(o_menuGameSettings)
+|| instance_exists(o_menuOptions) || instance_exists(o_menuGodModeOptions)
 {
-	draw_sprite_ext(s_workin, 0,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+180, 1,1,image_angle, image_blend, image_alpha);
+	imageWorkin+=0.2;
+	draw_sprite_ext(s_workin, imageWorkin,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+180, 1,1,image_angle, image_blend, image_alpha);
 }

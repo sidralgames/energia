@@ -6,7 +6,7 @@
 inScreen = false;
 checkInScreen = 0;
 
-resetPositionTime = 180;
+resetPositionTime = 100;
 
 mega = false;
 canCollide = false;

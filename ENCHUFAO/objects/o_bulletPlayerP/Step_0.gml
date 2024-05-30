@@ -3,6 +3,37 @@
 
 hpBullet--;
 
+
+if (bifurcate = true) && (alarm[1] <= 0)
+{
+	dyingBif = true;
+	instance_destroy();
+	bullet1 = instance_create_layer(x,y, "Bullets", o_bulletPlayer);
+	bullet2 = instance_create_layer(x,y, "Bullets", o_bulletPlayer);
+	if instance_exists(bullet1) && instance_exists(bullet2)
+	{
+		bullet1.isFrom = "Player";
+		bullet2.isFrom = "Player";
+		if (global.bouncingBulletsIsOn)
+		{
+			bullet1.hpBounce = 1;
+			bullet2.hpBounce = 1;
+		}
+		else
+		{
+			bullet1.hpBounce = 0;
+			bullet2.hpBounce = 0;		
+		}
+		bullet1.bifurcate = false;
+		bullet2.bifurcate = false;
+		bullet1.bulletSpeed = 9;
+		bullet2.bulletSpeed = 9;
+		bullet1.direction = direction+6;
+		bullet2.direction = direction-6;
+	}
+}
+
+
 if (global.bulletsGhostIsOn == false)
 {
 	if (hpBounce > 0) && (isFrom = "Player")
