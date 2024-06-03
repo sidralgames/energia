@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 canHonk = false;
-
+angOff = 0;
 contDead = 60;
 shakeFinal = false;
 contExploDead = 0;

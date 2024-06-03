@@ -35,4 +35,12 @@ function ActivateAndDestroy()
 	{
 		instance_destroy();	
 	}
+	
+	var lay_id = layer_get_id("Tiles");
+	var tile_id = layer_tilemap_get_id(lay_id);
+	
+	if (layer_tilemap_exists(lay_id, tile_id))
+	{
+	    layer_tilemap_destroy(tile_id);
+	}
 }

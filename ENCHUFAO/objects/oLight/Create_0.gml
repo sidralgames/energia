@@ -30,6 +30,12 @@ switch (room)
 		num = irandom_range(40,100);
 	}
 	break;
+	
+	case Sala_Tutorial:
+	{
+		num = irandom_range(190,225);
+	}
+	break;
 }
 
 black = make_color_rgb(num,num,num)
