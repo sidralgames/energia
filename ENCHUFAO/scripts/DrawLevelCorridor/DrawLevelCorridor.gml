@@ -228,9 +228,17 @@ function DrawLevelCorridor()
 						}
 					}
 					
-					if (irandom(oddsEnchufePETA) == oddsEnchufePETA) && (PETAs <= PETAsMax)
+					if (irandom(oddsEnchufePETA) == oddsEnchufePETA) && (PETAs < PETAsMax)
 					{
-						peta = choose(o_enchufePETA, o_enchufePETAAmmo, o_enchufePETAHP, o_enchufePETALaser)
+						if (global.allPETAisMulti)
+						{
+							peta = choose(o_enchufePETAAll)
+						}
+						else
+						{
+							peta = choose(o_enchufePETA, o_enchufePETAAmmo, o_enchufePETAHP, o_enchufePETALaser)
+						}
+						
 						instance_create_layer(exM,eyM,"Enchufes",peta); 
 						PETAs += 1;
 					}

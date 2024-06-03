@@ -191,6 +191,18 @@ function CheckEnchufeUpgrade()
 				instance_destroy(o_cable);
 				instance_destroy(o_charger);
 				instance_create_layer(x, y, "Cable", o_cable);
+				
+				if (global.cableStat = 7)
+				{
+					for (var i= 0; i< global.numberOfUpgrades; i++)
+					{
+						thisUpg = ds_map_find_value(global.upgradesList, i)
+						if (thisUpg.obj = o_enchufeUpgadeCable)
+						{
+							thisUpg.canShowUp = false;
+						}
+					}
+				}
 		
 			}break;
 			
