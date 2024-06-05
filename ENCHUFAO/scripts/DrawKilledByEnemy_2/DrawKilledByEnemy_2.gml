@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function DrawKilledByEnemy_2()
 {
-	enemyBestiaryNumber = o_gameOver.killedby;
+	enemyBestiaryNumber = global.lastTouched;
 	
 	for (var i=0; i<global.totalNumberOfEnemiesBestiary; i++)
 	{

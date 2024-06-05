@@ -708,3 +708,7 @@ global.temporaryFireRate_Factor = 0;
 global.superShotInitial = global.superShot;
 global.laserDamageInitial = global.laserDamage;
 global.laserWidthInitial = global.laserWidth;
+
+
+
+global.lastTouched = global.enemyBasicBestiaryNumber;

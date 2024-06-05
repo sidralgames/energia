@@ -50,12 +50,13 @@ if (canShot)
 						else
 						{
 							audio_play_sound_on(global.audioEmitter, snd_hit, false, 50);
-							global.hp -=1 * global.damageReceived;
 							
-							if (global.hp <= 0)
+							if (global.hp - (1 * global.damageReceived) < 1)
 							{
 								global.numEnemyKilledBy = global.enemyLasertrapBestiaryNumber;
 							}
+							
+							global.hp -= 1 * global.damageReceived;
 						}
 						
 						screenShake(4,30);
@@ -117,12 +118,12 @@ if (canShot)
 						else
 						{
 							audio_play_sound_on(global.audioEmitter, snd_hit, false, 50)
-							global.hp -=1 * global.damageReceived;
-							
-							if (global.hp <= 0)
+							if (global.hp - (1 * global.damageReceived) < 1)
 							{
 								global.numEnemyKilledBy = global.enemyLasertrapBestiaryNumber;
 							}
+							
+							global.hp -= 1 * global.damageReceived;
 						}
 						
 						screenShake(4,30);

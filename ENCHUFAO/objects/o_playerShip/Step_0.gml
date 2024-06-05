@@ -255,6 +255,8 @@ LaserLogicPlayer();
 
 //---------DIE---------//
 
+global.lastTouched = global.numEnemyKilledBy;
+
 if (global.hp < 1)
 {
 	contExploDead --;
