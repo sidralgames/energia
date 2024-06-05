@@ -115,15 +115,15 @@ if instance_exists(o_playerShip)
 			}
 			if (capsuleConnection = true)
 			{
-				rope1.vertexChangeData(last,enchufe.x+lengthdir_x(10,enchufe.image_angle-90),enchufe.y+lengthdir_y(10,enchufe.image_angle-90))
+				rope1.vertexChangeData(last,enchufe.xConnectionPos,enchufe.yConnectionPos);
 			}
 			if (superCapsuleConnection = true)
 			{
-				rope1.vertexChangeData(last,enchufe.x+lengthdir_x(25,enchufe.image_angle-90),enchufe.y+lengthdir_y(25,enchufe.image_angle-90))
+				rope1.vertexChangeData(last,enchufe.xConnectionPos,enchufe.yConnectionPos);
 			}
 			if (standardConnection = true)
 			{
-				rope1.vertexChangeData(last,enchufe.xConnectionPos,enchufe.yConnectionPos)
+				rope1.vertexChangeData(last,enchufe.xConnectionPos,enchufe.yConnectionPos);
 			}
 		}
 	}

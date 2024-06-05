@@ -8,8 +8,8 @@
 
 StatusConditionEnemy();
 
-xConnectionPos= x + lengthdir_x(5, _angle+270);
-yConnectionPos = y + lengthdir_y(5, _angle+270);
+xConnectionPos = x;
+yConnectionPos = y;
 
 if (place_meeting(x+_hpush*1.5,y,o_enchufe_Father))
 {

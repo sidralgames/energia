@@ -34,33 +34,25 @@ function PluggedToEnchufe()
 		GetPositionToPLug();
 	}
 	
-	if (enchufe.isMimic == false) && (enchufe.isBroken == false)
+	if instance_exists(enchufe)
 	{
-		part_particles_create(global.enchufe_sys, global.xToPlug+random_range(-18,18), global.yToPlug+random_range(-18,18), global.enchufePart , 10)
-	}
+		if (enchufe.isMimic == false) && (enchufe.isBroken == false)
+		{
+			part_particles_create(global.enchufe_sys, enchufe.xConnectionPos+random_range(-18,18), enchufe.yConnectionPos+random_range(-18,18), global.enchufePart , 10)
+		}
 	
-	if (point_distance(x,y,global.xToPlug,global.yToPlug) <= global.cableStat*38)
-	{
-		if (global.energy > 0)
+		if (point_distance(x,y,enchufe.xConnectionPos,enchufe.yConnectionPos) <= global.cableStat*38)
 		{
-			MoveShip()
+			if (global.energy > 0)
+			{
+				MoveShip()
+			}
 		}
-	}
-	else
-	{
-		dir = point_direction(x,y,global.xToPlug,global.yToPlug)
-		
-		if (enchufe.isPETA_F)
+		else
 		{
-			_hpush = lengthdir_x(1,dir)
-			_vpush = lengthdir_y(1,dir)
+			dir = point_direction(x,y,global.xToPlug,global.yToPlug)
 		
-			enchufe._hpush -= lengthdir_x(0.18,dir)
-			enchufe._vpush -= lengthdir_y(0.18,dir)
-		}
-		else if (enchufe.isMimic)
-		{
-			if (enchufe.isMimicCapsule)
+			if (enchufe.isPETA_F)
 			{
 				_hpush = lengthdir_x(1,dir)
 				_vpush = lengthdir_y(1,dir)
@@ -68,59 +60,69 @@ function PluggedToEnchufe()
 				enchufe._hpush -= lengthdir_x(0.18,dir)
 				enchufe._vpush -= lengthdir_y(0.18,dir)
 			}
-			else
+			else if (enchufe.isMimic)
+			{
+				if (enchufe.isMimicCapsule)
+				{
+					_hpush = lengthdir_x(1,dir)
+					_vpush = lengthdir_y(1,dir)
+		
+					enchufe._hpush -= lengthdir_x(0.18,dir)
+					enchufe._vpush -= lengthdir_y(0.18,dir)
+				}
+				else
+				{
+					_hpush = lengthdir_x(2,dir)
+					_vpush = lengthdir_y(2,dir)
+		
+					enchufe._hpush -= lengthdir_x(0.05,dir)
+					enchufe._vpush -= lengthdir_y(0.05,dir)
+				}
+			}
+			else if (enchufe.IsEnchufeBoss)
+			{
+				_hpush = lengthdir_x(3.25,dir)
+				_vpush = lengthdir_y(3.25,dir)
+		
+			}
+			else if (enchufe.IsEnchufeMP3CHILL)
 			{
 				_hpush = lengthdir_x(2,dir)
 				_vpush = lengthdir_y(2,dir)
 		
 				enchufe._hpush -= lengthdir_x(0.05,dir)
 				enchufe._vpush -= lengthdir_y(0.05,dir)
+		
 			}
-		}
-		else if (enchufe.IsEnchufeBoss)
-		{
-			_hpush = lengthdir_x(3.25,dir)
-			_vpush = lengthdir_y(3.25,dir)
-		
-		}
-		else if (enchufe.IsEnchufeMP3CHILL)
-		{
-			_hpush = lengthdir_x(2,dir)
-			_vpush = lengthdir_y(2,dir)
-		
-			enchufe._hpush -= lengthdir_x(0.05,dir)
-			enchufe._vpush -= lengthdir_y(0.05,dir)
-		
-		}
-		else if (enchufe.IsEnchufeCapsuleSuper)
-		{
-			_hpush = lengthdir_x(2.25,dir)
-			_vpush = lengthdir_y(2.25,dir)
+			else if (enchufe.IsEnchufeCapsuleSuper)
+			{
+				_hpush = lengthdir_x(2.25,dir)
+				_vpush = lengthdir_y(2.25,dir)
 			
-			enchufe._hpush -= lengthdir_x(0.05,dir)
-			enchufe._vpush -= lengthdir_y(0.05,dir)
+				enchufe._hpush -= lengthdir_x(0.05,dir)
+				enchufe._vpush -= lengthdir_y(0.05,dir)
 		
-		}
-		else if (enchufe.isBroken)
-		{
-			_hpush = lengthdir_x(1.2,dir)
-			_vpush = lengthdir_y(1.2,dir)
+			}
+			else if (enchufe.isBroken)
+			{
+				_hpush = lengthdir_x(1.2,dir)
+				_vpush = lengthdir_y(1.2,dir)
 			
-			enchufe._hpush -= lengthdir_x(0.15,dir)
-			enchufe._vpush -= lengthdir_y(0.15,dir)
+				enchufe._hpush -= lengthdir_x(0.15,dir)
+				enchufe._vpush -= lengthdir_y(0.15,dir)
 		
+			}
+			else
+			{
+				_hpush = lengthdir_x(2,dir)
+				_vpush = lengthdir_y(2,dir)
+		
+				enchufe._hpush -= lengthdir_x(0.1,dir)
+				enchufe._vpush -= lengthdir_y(0.1,dir)
+			}
+		
+			alarm[5] = 20;
 		}
-		else
-		{
-			_hpush = lengthdir_x(2,dir)
-			_vpush = lengthdir_y(2,dir)
-		
-			enchufe._hpush -= lengthdir_x(0.1,dir)
-			enchufe._vpush -= lengthdir_y(0.1,dir)
-		}
-		
-		
-		alarm[5] = 20;
 	}
 
 	

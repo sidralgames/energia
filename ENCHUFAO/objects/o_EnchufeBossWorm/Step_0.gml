@@ -5,8 +5,8 @@
 
 // Inherit the parent event
 event_inherited();
-xConnectionPos= x;
-yConnectionPos = y;
+xConnectionPos = x-lengthdir_x(30,image_angle);
+yConnectionPos = y-lengthdir_y(30,image_angle);
 if (charge>=200) && (changedMetal = false)
 {
 	changedMetal = true;

@@ -46,14 +46,14 @@ function GetPositionToPLug()
 			if (enchufe.IsEnchufeCapsuleSuper)
 			{
 				o_charger.scale = 1.5;
-				global.xToPlug = enchufe.x+lengthdir_y(25,enchufe.image_angle)
-				global.yToPlug = enchufe.y+lengthdir_y(25,enchufe.image_angle)
+				global.xToPlug = enchufe.x+lengthdir_y(25,enchufe.image_angle-90)
+				global.yToPlug = enchufe.y+lengthdir_y(25,enchufe.image_angle-90)
 			}
 			else
 			{
 				o_charger.scale = 0.8;
-				global.xToPlug = enchufe.x+lengthdir_y(15,enchufe.image_angle)
-				global.yToPlug = enchufe.y+lengthdir_y(15,enchufe.image_angle)
+				global.xToPlug = enchufe.x+lengthdir_y(15,enchufe.image_angle-90)
+				global.yToPlug = enchufe.y+lengthdir_y(15,enchufe.image_angle-90)
 			}
 		}
 	}

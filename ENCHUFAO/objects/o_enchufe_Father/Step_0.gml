@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-xConnectionPos= x;
+xConnectionPos = x;
 yConnectionPos = y;
 
 if (place_meeting(x+_hpush*1.5,y,o_enchufe_Father))

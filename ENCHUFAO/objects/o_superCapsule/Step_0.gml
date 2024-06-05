@@ -2,8 +2,8 @@
 // Puede escribir su código en este editor
 CheckInScreen(50, 60);
 
-xConnectionPos= x;
-yConnectionPos = y;
+xConnectionPos = x+lengthdir_x(25,image_angle-90);
+yConnectionPos = y+lengthdir_y(25,image_angle-90);
 
 	
 if (charge >= maxCharge) && (capsulesMax >=1)
