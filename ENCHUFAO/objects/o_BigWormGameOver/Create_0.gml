@@ -15,4 +15,5 @@ xx = x;
 yy = y;
 alarm[2] = 2;
 cable = -1;
+xscale = 1;
 
