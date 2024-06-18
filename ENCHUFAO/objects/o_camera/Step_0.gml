@@ -44,6 +44,9 @@ if (global.screenshakeIsOn)
 	}
 	else
 	{
+		x = clamp(x, viewWidthHalf + buff, room_width - viewWidthHalf - buff);
+		y = clamp(y, viewHeightHalf + buff, room_height - viewHeightHalf - buff);
+		
 		camera_set_view_pos(cam,x-viewWidthHalf,y-viewHeightHalf)	
 	}
 

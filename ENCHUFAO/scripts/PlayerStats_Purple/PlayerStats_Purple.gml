@@ -6,21 +6,22 @@ function PlayerStats_Purple()
 	global.spritePart = s_playerShip_purple_part;
 	global.bulletPart_sprite = s_bullet_part_Purple;
 		
-	global.energyMax = 400;
+	global.energyMax = 300;
 	global.energy = global.energyMax;
 	
 	global.textBonus = "Even Faster During SlowMo";
 	
 	global.hpMax = 4;
-	global.hp = 4;
+	global.hp = global.hpMax;
 	
-	global.laserMax = 3;
-	global.laser = 3;
+	global.laserMax = 2;
+	global.laser = global.laserMax ;
 	
 	global.bombAmmo = 2;
 	
-	global.ammo = 250;
-	global.ammoMax = 250;
+	
+	global.ammoMax = 300;
+	global.ammo = global.ammoMax;
 	
 	global._speed = 3.15;
 	global.walkAcceleration = 0.2;

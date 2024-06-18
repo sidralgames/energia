@@ -12,13 +12,13 @@ function PlayerStats_Blue()
 	global.energy = global.energyMax;
 	
 	global.hpMax = 2;
-	global.hp = 2;
+	global.hp = global.hpMax;
 	
 	global.laserMax = 4;
-	global.laser = 4;
+	global.laser = global.laserMax;
 	
-	global.ammo = 150;
-	global.ammoMax = 150;
+	global.ammoMax = 200;
+	global.ammo = global.ammoMax;
 	
 	global.bombAmmo = 2;
 	
@@ -34,7 +34,7 @@ function PlayerStats_Blue()
 	global.cableStat = 2.25;
 	
 	//shields
-	global.shields = 1;
+	global.shields = 2;
 	
 	//Experimental
 	global.accuracy =-1.5;
