@@ -14,3 +14,5 @@ if tile_meeting(x,y,"Tiles")
 precisionHole = 1;
 enemyShooter = global.enemyPincherBestiaryNumber;
 shooterTrail = false;
+
+_hp = 3;

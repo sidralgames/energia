@@ -19,6 +19,7 @@ if (spriteSet = false)
 		s_temporary_Smart, s_temporary_Smart, 
 		s_temporary_Repair,
 		s_temporary_shootUp,
+		s_temporary_EmergencySlowMo,
 		s_chipMimic)
 	}
 	

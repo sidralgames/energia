@@ -64,6 +64,16 @@ if instance_exists(o_chipShootUp)
 }
 
 
+if instance_exists(o_chipSlowMo)
+{
+	with(o_chipSlowMo)
+	{
+		alarm[0] = 2;
+		changeVertex = true;
+	}
+}
+
+
 global.chipsVertex -= 2;
 
 

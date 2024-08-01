@@ -9,6 +9,7 @@
 // Inherit the parent event
 event_inherited();
 isPETAHP = true;
+PETAType = isPETAHP;
 isPETA_F = true;
 energy = true;
 imageSpeed = 0.5;

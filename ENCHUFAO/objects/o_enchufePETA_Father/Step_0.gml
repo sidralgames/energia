@@ -74,5 +74,72 @@ _hpush = clamp(_hpush, -1.5, 1.5)
 _vpush = clamp(_vpush, -1.5, 1.5)
 
 
+if tile_meeting(x,y,"Tiles") && (backToTile == true)
+{
+	contToBeInside ++;
+	
+	if (contToBeInside > 15)
+	{
+		
+		xToCreate = (x div 32) * CELL_WIDTH + CELL_WIDTH/2;
+		yTocreate = (y div 32) * CELL_HEIGHT + CELL_HEIGHT/2;
+		
+		if (global.wallgrid_[# xToCreate, yTocreate] != FLOOR)
+		{
+			
+			if (enchufeActive) && (playerUnplugged == false)
+			{
+				UnplugPETA();
+				playerUnplugged = true;
+			}
+			
+			switch (PETAType)
+			{
+				case isPETA:
+				{
+					petaTile = instance_create_layer(xToCreate,yTocreate,"ObjectsTiles", o_PETAinTile);
+					petaTile.sprite_index = s_petaInTile;
+		
+				}break;
+		
+				case isPETAHP:
+				{
+					petaTile = instance_create_layer(xToCreate,yTocreate,"ObjectsTiles", o_PETAinTile);
+					petaTile.sprite_index = s_petaInTileHP;
+			
+				}break;
+		
+				case isPETAAmmo:
+				{
+					petaTile = instance_create_layer(xToCreate,yTocreate,"ObjectsTiles", o_PETAinTile);
+					petaTile.sprite_index = s_petaInTileAmmo;
+			
+				}break;
+		
+				case isPETALaser:
+				{
+					petaTile = instance_create_layer(xToCreate,yTocreate,"ObjectsTiles", o_PETAinTile);
+					petaTile.wasOutBefore = true;
+					petaTile.sprite_index = s_petaInTileLaser;
+			
+				}break;
+		
+				case isPETAAll:
+				{
+					petaTile = instance_create_layer(xToCreate,yTocreate,"ObjectsTiles", o_PETAinTile);
+					petaTile.sprite_index = s_petaALLInTile;
+				}break;
+			}
+	
+			instance_destroy();
+		}
+	}
+}
+else
+{
+	contToBeInside = 0;	
+}
+
+
 
 

@@ -15,5 +15,6 @@ image_speed = imageSpeed;
 alarm[2] = 60;
 maxCharge = 300;
 playerUnplugged = false;
-isPETAShield = true;
+isPETALaser = true;
+PETAType = isPETALaser;
 dying = false;

@@ -45,26 +45,138 @@ contPlugBody = -1;
 inst = instance_nearest(x,y,o_BossWorm_Mouth)
 rope1.vertexAttachTo(first, inst);
 
-instAchor = instance_create_layer(x,y,"EnemiesHUE",o_chargerBossWorm)
-rope1.vertexAttachObject(last, instAchor,vertexAttachmentType.both);
+
+//for (var i=1; i<=_segments; i++)
+//{
+//	instMetal[i] = instance_create_layer(x,y,"EnemiesHUESub",o_BossWorm_HitBox_Metal)
+//	rope1.vertexAttachObject(i, instMetal[i],vertexAttachmentType.both);
+//	instMetal[i].worm = inst;
+//}
+
+instMetal[1] = instance_create_layer(x,y,"EnemiesHUESub_1",o_BossWorm_HitBox_Metal)
+rope1.vertexAttachObject(1, instMetal[1],vertexAttachmentType.both);
+instMetal[1].worm = inst;
+
+instMetal[2] = instance_create_layer(x,y,"EnemiesHUESub",o_BossWorm_HitBox_Metal)
+rope1.vertexAttachObject(2, instMetal[2],vertexAttachmentType.both);
+instMetal[2].worm = inst;
+
+instMetal[3] = instance_create_layer(x,y,"EnemiesHUESub2",o_BossWorm_HitBox_Metal)
+rope1.vertexAttachObject(3, instMetal[3],vertexAttachmentType.both);
+instMetal[3].worm = inst;
+
+instMetal[4] = instance_create_layer(x,y,"EnemiesHUESub2",o_BossWorm_HitBox_Metal)
+rope1.vertexAttachObject(4, instMetal[4],vertexAttachmentType.both);
+instMetal[4].worm = inst;
+
+instMetal[5] = instance_create_layer(x,y,"EnemiesHUESub3",o_BossWorm_HitBox_Metal)
+rope1.vertexAttachObject(5, instMetal[5],vertexAttachmentType.both);
+instMetal[5].worm = inst;
+
+instMetal[6] = instance_create_layer(x,y,"EnemiesHUESub3",o_BossWorm_HitBox_Metal)
+rope1.vertexAttachObject(6, instMetal[6],vertexAttachmentType.both);
+instMetal[6].worm = inst;
+
+instMetal[7] = instance_create_layer(x,y,"EnemiesHUESub4",o_BossWorm_HitBox_Metal)
+rope1.vertexAttachObject(7, instMetal[7],vertexAttachmentType.both);
+instMetal[7].worm = inst;
+
+instMetal[8] = instance_create_layer(x,y,"EnemiesHUESub4",o_BossWorm_HitBox_Metal)
+rope1.vertexAttachObject(8, instMetal[8],vertexAttachmentType.both);
+instMetal[8].worm = inst;
+
+instMetal[9] = instance_create_layer(x,y,"EnemiesHUESub5",o_BossWorm_HitBox_Metal)
+rope1.vertexAttachObject(9, instMetal[9],vertexAttachmentType.both);
+instMetal[9].worm = inst;
+
+instMetal[10] = instance_create_layer(x,y,"EnemiesHUESub5",o_BossWorm_HitBox_Metal)
+rope1.vertexAttachObject(10, instMetal[10],vertexAttachmentType.both);
+instMetal[10].worm = inst;
+
+instMetal[11] = instance_create_layer(x,y,"EnemiesHUESub6",o_BossWorm_HitBox_Metal)
+rope1.vertexAttachObject(11, instMetal[11],vertexAttachmentType.both);
+instMetal[11].worm = inst;
+
+instMetal[12] = instance_create_layer(x,y,"EnemiesHUESub6",o_BossWorm_HitBox_Metal)
+rope1.vertexAttachObject(12, instMetal[12],vertexAttachmentType.both);
+instMetal[12].worm = inst;
 
 
 
-for (var i=1; i<=_segments; i++)
-{
-	instMetal[i] = instance_create_layer(x,y,"EnemiesHUEsub",o_BossWorm_HitBox_Metal)
-	rope1.vertexAttachObject(i, instMetal[i],vertexAttachmentType.both);
-	instMetal[i].worm = inst;
-}
+//for (var i=1; i<=_segments; i++)
+//{
+//	instBody[i] = instance_create_layer(x,y,"EnemiesHUESub",o_BossWorm_HitBox)
+//	rope1.vertexAttachObject(i, instBody[i],vertexAttachmentType.both);
+//	instBody[i].worm = inst;
+//	instBody[i].Metal = instMetal[i];
 
-for (var i=1; i<=_segments; i++)
-{
-	instBody[i] = instance_create_layer(x,y,"EnemiesHUEsub",o_BossWorm_HitBox)
-	rope1.vertexAttachObject(i, instBody[i],vertexAttachmentType.both);
-	instBody[i].worm = inst;
-	instBody[i].Metal = instMetal[i];
+//}
 
-}
+
+instBody[1] = instance_create_layer(x,y,"EnemiesHUESub_1",o_BossWorm_HitBox)
+rope1.vertexAttachObject(1, instBody[1],vertexAttachmentType.both);
+instBody[1].worm = inst;
+instBody[1].Metal = instMetal[1];
+
+instBody[2] = instance_create_layer(x,y,"EnemiesHUESub",o_BossWorm_HitBox)
+rope1.vertexAttachObject(2, instBody[2],vertexAttachmentType.both);
+instBody[2].worm = inst;
+instBody[2].Metal = instMetal[2];
+
+instBody[3] = instance_create_layer(x,y,"EnemiesHUESub2",o_BossWorm_HitBox)
+rope1.vertexAttachObject(3, instBody[3],vertexAttachmentType.both);
+instBody[3].worm = inst;
+instBody[3].Metal = instMetal[3];
+
+instBody[4] = instance_create_layer(x,y,"EnemiesHUESub2",o_BossWorm_HitBox)
+rope1.vertexAttachObject(4, instBody[4],vertexAttachmentType.both);
+instBody[4].worm = inst;
+instBody[4].Metal = instMetal[4];
+
+instBody[5] = instance_create_layer(x,y,"EnemiesHUESub3",o_BossWorm_HitBox)
+rope1.vertexAttachObject(5, instBody[5],vertexAttachmentType.both);
+instBody[5].worm = inst;
+instBody[5].Metal = instMetal[5];
+
+instBody[6] = instance_create_layer(x,y,"EnemiesHUESub3",o_BossWorm_HitBox)
+rope1.vertexAttachObject(6, instBody[6],vertexAttachmentType.both);
+instBody[6].worm = inst;
+instBody[6].Metal = instMetal[6];
+
+instBody[7] = instance_create_layer(x,y,"EnemiesHUESub4",o_BossWorm_HitBox)
+rope1.vertexAttachObject(7, instBody[7],vertexAttachmentType.both);
+instBody[7].worm = inst;
+instBody[7].Metal = instMetal[7];
+
+instBody[8] = instance_create_layer(x,y,"EnemiesHUESub4",o_BossWorm_HitBox)
+rope1.vertexAttachObject(8, instBody[8],vertexAttachmentType.both);
+instBody[8].worm = inst;
+instBody[8].Metal = instMetal[8];
+
+instBody[9] = instance_create_layer(x,y,"EnemiesHUESub5",o_BossWorm_HitBox)
+rope1.vertexAttachObject(9, instBody[9],vertexAttachmentType.both);
+instBody[9].worm = inst;
+instBody[9].Metal = instMetal[9];
+
+instBody[10] = instance_create_layer(x,y,"EnemiesHUESub5",o_BossWorm_HitBox)
+rope1.vertexAttachObject(10, instBody[10],vertexAttachmentType.both);
+instBody[10].worm = inst;
+instBody[10].Metal = instMetal[10];
+
+instBody[11] = instance_create_layer(x,y,"EnemiesHUESub6",o_BossWorm_HitBox)
+rope1.vertexAttachObject(11, instBody[11],vertexAttachmentType.both);
+instBody[11].worm = inst;
+instBody[11].Metal = instMetal[11];
+
+instBody[12] = instance_create_layer(x,y,"EnemiesHUESub6",o_BossWorm_HitBox)
+rope1.vertexAttachObject(12, instBody[12],vertexAttachmentType.both);
+instBody[12].worm = inst;
+instBody[12].Metal = instMetal[12];
+
+
+
+
+
 
 instBody[2].image_index = 1;
 instBody[5].image_index = 1;
@@ -72,12 +184,35 @@ instBody[8].image_index = 1;
 instBody[11].image_index = 1;
 
 
-for (var i=0; i<4; i++)
-{
-	instEnchufe[i] = instance_create_layer(x,y,"EnemiesNoHUE",o_EnchufeBossWorm)
-	instEnchufe[i].enchufeNum = i;
-	instEnchufe[i].worm = inst;
-}
+//for (var i=0; i<4; i++)
+//{
+//	instEnchufe[i] = instance_create_layer(x,y,"EnemiesNoHUE",o_EnchufeBossWorm)
+//	instEnchufe[i].enchufeNum = i;
+//	instEnchufe[i].worm = inst;
+	
+//}
+
+instEnchufe[0] = instance_create_layer(x,y,"EnemiesNoHUE",o_EnchufeBossWorm)
+instEnchufe[0].enchufeNum = 0;
+instEnchufe[0].worm = inst;
+
+
+instEnchufe[1] = instance_create_layer(x,y,"EnemiesNoHUE2",o_EnchufeBossWorm)
+instEnchufe[1].enchufeNum = 1;
+instEnchufe[1].worm = inst;
+
+
+instEnchufe[2] = instance_create_layer(x,y,"EnemiesNoHUE3",o_EnchufeBossWorm)
+instEnchufe[2].enchufeNum = 2;
+instEnchufe[2].worm = inst;
+
+
+instEnchufe[3] = instance_create_layer(x,y,"EnemiesNoHUE4",o_EnchufeBossWorm)
+instEnchufe[3].enchufeNum = 3;
+instEnchufe[3].worm = inst;
+
+
+
 
 instEnchufe[0].Metal1 = instMetal[1]
 instEnchufe[0].Metal2 = instMetal[3]
@@ -85,6 +220,7 @@ instEnchufe[0].MyMetal = instMetal[2]
 instEnchufe[0].MyHitBox = instBody[2]
 instEnchufe[0].hp = true;
 instEnchufe[0].image_index = 0;
+
 
 
 instEnchufe[1].Metal1 = instMetal[4]
@@ -96,12 +232,14 @@ instEnchufe[1].image_index = 1;
 
 
 
+
 instEnchufe[2].Metal1 = instMetal[7]
 instEnchufe[2].Metal2 = instMetal[9]
 instEnchufe[2].MyMetal = instMetal[8]
 instEnchufe[2].MyHitBox = instBody[8]
 instEnchufe[2].laser = true;
 instEnchufe[2].image_index = 2;
+
 
 
 instEnchufe[3].Metal1 = instMetal[10]
@@ -112,12 +250,18 @@ instEnchufe[3].energy = true;
 instEnchufe[3].image_index = 3;
 
 
+
 rope1.vertexAttachObject(2, instEnchufe[0],vertexAttachmentType.both);
 rope1.vertexAttachObject(5, instEnchufe[1],vertexAttachmentType.both);
 rope1.vertexAttachObject(8, instEnchufe[2],vertexAttachmentType.both);
 rope1.vertexAttachObject(11, instEnchufe[3],vertexAttachmentType.both);
 
 plugged = false;
+
+
+instAchor = instance_create_layer(x,y,"EnemiesHUESub6",o_chargerBossWorm)
+rope1.vertexAttachObject(last, instAchor,vertexAttachmentType.both);
+
 
 
 //instTope = instance_create(x, y, o_coco);

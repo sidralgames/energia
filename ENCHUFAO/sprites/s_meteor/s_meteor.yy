@@ -21,7 +21,7 @@
   "height":20,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"6a65afac-5ac6-460d-b6ed-ae2faf96080c","blendMode":0,"displayName":"default","isLocked":false,"name":"6a65afac-5ac6-460d-b6ed-ae2faf96080c","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"e9b485b7-7d9c-442b-a1a5-05585faf5d16","blendMode":0,"displayName":"default","isLocked":false,"name":"e9b485b7-7d9c-442b-a1a5-05585faf5d16","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"s_meteor",
   "nineSlice":null,

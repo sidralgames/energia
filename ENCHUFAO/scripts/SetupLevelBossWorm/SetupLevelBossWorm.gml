@@ -111,7 +111,8 @@ function SetupLevelBossWorm()
 			    var eyM = yy * CELL_HEIGHT+CELL_HEIGHT/2;
 				
 				if (irandom(oddsBoss) == oddsBoss) && (hasBoss = false) &&
-				(point_distance(exM, eyM, o_playerShip.x, o_playerShip.y) > 400)
+				(point_distance(exM, eyM, o_playerShip.x, o_playerShip.y) > 400) &&
+				(point_distance(exM, eyM, o_playerShip.x, eyM) > 200)
 				{
 					instance_create_layer(exM,eyM,"EnemiesHUE",o_BossWorm_Mouth); 
 					hasBoss = true;

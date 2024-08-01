@@ -18,6 +18,9 @@ if (room != Sala_Inicio)
 	_filter_Enemyhue = layer_get_fx("EnemiesHUE");
 	_filter_Enemyhue_params = fx_get_parameters(_filter_Enemyhue);
 	
+	_filter_EnemyhueSub_1 = layer_get_fx("EnemiesHUESub_1");
+	_filter_EnemyhueSub_1_params = fx_get_parameters(_filter_EnemyhueSub_1);
+	
 	_filter_EnemyhueSub = layer_get_fx("EnemiesHUESub");
 	_filter_EnemyhueSub_params = fx_get_parameters(_filter_EnemyhueSub);
 	
@@ -32,6 +35,9 @@ if (room != Sala_Inicio)
 	
 	_filter_EnemyhueSub5 = layer_get_fx("EnemiesHUESub5");
 	_filter_EnemyhueSub5_params = fx_get_parameters(_filter_EnemyhueSub5);
+	
+	_filter_EnemyhueSub6 = layer_get_fx("EnemiesHUESub6");
+	_filter_EnemyhueSub6_params = fx_get_parameters(_filter_EnemyhueSub6);
 
 
 
@@ -71,6 +77,12 @@ if (room != Sala_Inicio)
 	
 	_filter_EnemyhueSub5_params.g_HueShift = _filterShift;	
 	_filter_EnemyhueSub5_params.g_HueSaturation = 0.75
+	
+	_filter_EnemyhueSub6_params.g_HueShift = _filterShift;	
+	_filter_EnemyhueSub6_params.g_HueSaturation = 0.75
+	
+	_filter_EnemyhueSub_1_params.g_HueShift = _filterShift;	
+	_filter_EnemyhueSub_1_params.g_HueSaturation = 0.75
 
 
 	_filter_hueL_params.g_HueShift = _filterShift;	
@@ -91,6 +103,8 @@ if (room != Sala_Inicio)
 	fx_set_parameters(_filter_EnemyhueSub3, _filter_EnemyhueSub3_params);
 	fx_set_parameters(_filter_EnemyhueSub4, _filter_EnemyhueSub4_params);
 	fx_set_parameters(_filter_EnemyhueSub5, _filter_EnemyhueSub5_params);
+	fx_set_parameters(_filter_EnemyhueSub6, _filter_EnemyhueSub6_params);
+	fx_set_parameters(_filter_EnemyhueSub_1, _filter_EnemyhueSub_1_params);
 	
 	fx_set_parameters(_filter_hueL, _filter_hueL_params);
 }

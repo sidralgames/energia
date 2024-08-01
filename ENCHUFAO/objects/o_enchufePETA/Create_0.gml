@@ -16,4 +16,5 @@ alarm[2] = 60;
 
 playerUnplugged = false;
 isPETA = true;
+PETAType = isPETA;
 dying = false;

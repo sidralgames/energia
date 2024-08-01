@@ -4,6 +4,7 @@
 
 
 // Inherit the parent event
+
 event_inherited();
 open = false;
 flashAlpha = 1;

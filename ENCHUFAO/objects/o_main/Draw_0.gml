@@ -17,8 +17,7 @@ if instance_exists(o_playerShip)
 	}
 	
 	//draw_text(o_playerShip.x, o_playerShip.y-100, string(global.ammo))
-//draw_text(o_playerShip.x, o_playerShip.y-120, string(global.chipDuration))
-
+	//draw_text(o_playerShip.x, o_playerShip.y-120, string(global.chipDuration))
 }
 
 if (!isPaused) && (room != Sala_Splash)

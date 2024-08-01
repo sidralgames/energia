@@ -11,8 +11,8 @@
   "name":"o_circleTile",
   "overriddenProperties":[],
   "parent":{
-    "name":"Other objects",
-    "path":"folders/Objetos/Other objects.yy",
+    "name":"ENCHUFAO",
+    "path":"ENCHUFAO.yyp",
   },
   "parentObjectId":null,
   "persistent":false,

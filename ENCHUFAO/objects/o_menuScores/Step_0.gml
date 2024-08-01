@@ -70,7 +70,7 @@ if (selected < 0)
 
 if (selected = 3)
 {
-	if (key_rightP)
+	if (key_rightP) 
 	{
 		gripperCreated = false;
 		freewormCreated = false;

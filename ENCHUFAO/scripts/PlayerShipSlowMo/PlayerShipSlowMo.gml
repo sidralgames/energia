@@ -3,6 +3,12 @@
 function PlayerShipSlowMo()
 {
 	
+	if !instance_exists(o_chipSlowMo)
+	{
+		haveSlowMoChip = false;
+	}
+	
+
 	//---- AFTER HIT SLOWMO ----//
 	if (tocado == true) && (slowmoAssistedTrue = false)
 	{
@@ -32,7 +38,7 @@ function PlayerShipSlowMo()
 	}
 		
 	//------- AVOID HIT ASSISTED SLOWMO (OPTIONAL IN OPTIONS)------//
-	if ((global.assistSlowmoIsOn) && (global.hp <= 1))
+	if ( (global.assistSlowmoIsOn) && (global.hp <= 1) ) || ( (haveSlowMoChip) && (global.hp <= 1) )
 	{
 		recoverSlowFactor = 0
 		nextBullet = instance_nearest(x,y,o_bulletEnemy_Father) 

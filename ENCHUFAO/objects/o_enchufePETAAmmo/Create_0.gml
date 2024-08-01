@@ -16,4 +16,5 @@ alarm[2] = 60;
 
 playerUnplugged = false;
 isPETAAmmo = true;
+PETAType = isPETAAmmo;
 dying = false;

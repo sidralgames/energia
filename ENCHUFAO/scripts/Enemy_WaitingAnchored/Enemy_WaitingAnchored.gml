@@ -2,6 +2,50 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Enemy_WaitingAnchored()
 {
+	if (bouncesWaiting > 0)
+	{
+		contTimeBounces +=1;
+		
+		if (contTimeBounces >= 60)
+		{
+			bouncesWaiting = 0;
+		}
+	}
+	
+	
+	
+	if (bouncesWaiting >= 5)
+	{
+		mp_grid_path(global.gridRoom1, myPath, x, y, xStart ,yStart, true);
+		
+		path_start(myPath, 1* global.relativeSpeed ,path_action_stop, false);
+		_angle = direction;
+		
+		if (point_distance(x, y, xStart, yStart) < 10) 
+		{
+			bouncesWaiting = 0;
+			path_end();
+		}
+		
+		if instance_exists(o_playerShip)
+		{
+			if (point_distance(x, y, o_playerShip.x, o_playerShip.y) <= activeDistance) 
+			{
+				if !grid_line_collision(x, y, o_playerShip.x, o_playerShip.y, 10)
+				{
+					bouncesWaiting = 0;
+					path_end();
+			
+					contBounce = 0;
+					state = ENEMYSTATE.CHASING;	
+				}
+			}
+		}
+		
+	}
+	else
+	{
+		
 	contBounce--;
 	
 	enemySpeed = lerp(enemySpeed, enemySpeedInitialFar, 0.5)
@@ -53,6 +97,8 @@ function Enemy_WaitingAnchored()
 				direction = (direction + random_range(140,220)) mod 360
 				_angle = direction
 				alarm[0] = random_range(50,60);
+				bouncesWaiting +=1;
+				contTimeBounces = 0;
 			}
 		}
 		else
@@ -72,8 +118,14 @@ function Enemy_WaitingAnchored()
 			if !grid_line_collision(x, y, o_playerShip.x, o_playerShip.y, 10)
 			{
 				contBounce = 0;
+				bouncesWaiting = 0;
 				state = ENEMYSTATE.CHASING;	
 			}
 		}
 	}
+	
+	}
+	
+	
+	
 }

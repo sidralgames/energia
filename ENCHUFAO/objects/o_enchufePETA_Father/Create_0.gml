@@ -6,9 +6,12 @@
 
 // Inherit the parent event
 event_inherited();
+PETAType = isPETA;
 fromFriend = false;
 soundDie = false;
 bnc = 1;
+contToBeInside = 0;
+backToTile = false;
 
 //if room = Sala_0
 //{

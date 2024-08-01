@@ -8,6 +8,7 @@ if instance_exists(o_playerShip) && (alarm[10] <= 0)
 		{
 			global.chipPosition+=1;
 			global.chipsVertex+=2;
+			
 			switch(_sprite)
 			{
 				case s_temporary_fireRate:
@@ -28,7 +29,8 @@ if instance_exists(o_playerShip) && (alarm[10] <= 0)
 				
 					}
 		
-				}break;
+				}
+				break;
 	
 				case s_temporary_superShot:
 				{
@@ -119,7 +121,27 @@ if instance_exists(o_playerShip) && (alarm[10] <= 0)
 						chipShootUp.chipPos = global.chipPosition;
 					}
 		
-				}break;
+				}
+				break;
+				
+				case s_temporary_EmergencySlowMo:
+				{
+		
+					with(o_cable)
+					{
+						chipSlowMo = instance_create_layer(x,y,"Player",o_chipSlowMo);
+				
+						AddChip(initialChipIndex+global.chipsVertex, chipSlowMo);
+				
+						rope1.vertexAttachObject(initialChipIndex+global.chipsVertex, chipSlowMo, vertexAttachmentType.both);
+						chipSlowMo.chipVertex = initialChipIndex+global.chipsVertex;
+						chipSlowMo.chipPos = global.chipPosition;
+						chipSlowMo.tipo = "SlowMo";
+				
+					}
+		
+				}
+				break;
 			}
 			
 			instance_destroy();

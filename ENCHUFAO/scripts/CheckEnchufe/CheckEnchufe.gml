@@ -58,7 +58,7 @@ function CheckEnchufe()
 			//global.chargingEnergy = true;
 			global.chargingHp = true;	
 		}
-		if (inEnchufe.isPETAShield = true)
+		if (inEnchufe.isPETALaser = true)
 		{
 			global.chargingEnergy = true;
 			global.chargingLaser = true;	

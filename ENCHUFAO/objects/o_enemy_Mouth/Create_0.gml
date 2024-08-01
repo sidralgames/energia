@@ -40,7 +40,9 @@ alarm[1] = 0;
 _speed=0;
 off = 90;
 len = 0;
-
+bouncesWaiting = 0;
+contTimeBounces = 0;
+myPath = path_add();
 xStart = x;
 yStart = y;
 maxDistance = 100;

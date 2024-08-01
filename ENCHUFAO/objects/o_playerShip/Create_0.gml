@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+haveSlowMoChip = false;
 canHonk = false;
 angOff = 0;
 contDead = 60;

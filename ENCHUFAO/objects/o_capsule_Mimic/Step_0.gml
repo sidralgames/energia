@@ -183,6 +183,9 @@ if instance_exists(o_playerShip)
 				    inst.direction = i * (360 / bullets ) + offset;
 					inst.hp = 25;
 					inst.isEnemyBomb = true;
+					inst.enemyShooter = enemyBestiaryNumber;
+					inst.enemy = self;
+					inst.shooterTrail = true;
 					//inst.dire = choose(1, -1);
 				}
 			}

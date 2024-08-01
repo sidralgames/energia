@@ -61,3 +61,8 @@ if (x < 0) || (x > room_width)
 {
 	instance_destroy();
 }
+
+if (_hp <= 0)
+{
+	instance_destroy();	
+}

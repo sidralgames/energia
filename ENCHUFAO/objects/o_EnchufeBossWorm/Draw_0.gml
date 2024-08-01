@@ -76,5 +76,5 @@ if instance_exists(o_playerShip)
 	
 }
 
-//draw_text(x,y-30, string(Metal1))
+//draw_text(x,y-30, string(depth))
 //draw_text(x,y+30, string(Metal2))
