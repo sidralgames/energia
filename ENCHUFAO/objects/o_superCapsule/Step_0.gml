@@ -125,12 +125,14 @@ if (_hp <= 0) && (capsuleHaveSomething)
 		instance_destroy(capsule[i])
 		
 	}
-	
-	if (o_playerShip.plugged) && (charging)
+	if instance_exists(o_playerShip)
 	{
-		with (o_playerShip)
+		if (o_playerShip.plugged) && (charging)
 		{
-			Unplug();
+			with (o_playerShip)
+			{
+				Unplug();
+			}
 		}
 	}
 	instance_destroy();

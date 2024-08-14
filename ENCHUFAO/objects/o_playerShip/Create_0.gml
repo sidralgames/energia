@@ -47,12 +47,12 @@ naveP_maxLife=0;
 if (room = Sala_Tutorial)
 {
 	global.hp = 1;
-	global.ammo = 0;
-	global.energy = 180;
-	global.laser = 0;
-	global.bombAmmo = 0;
+	//global.ammo = 0;
+	//global.energy = 180;
+	//global.laser = 0;
+	//global.bombAmmo = 0;
 	global.PETAAmmo = 3;
-	global.slowMoTime = 0;
+	//global.slowMoTime = 0;
 }
 else
 {

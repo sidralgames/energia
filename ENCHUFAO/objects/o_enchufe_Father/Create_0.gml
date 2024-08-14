@@ -83,3 +83,4 @@ enchufeOvercharged = false;
 contOvercharged = 0;
 
 isBroken = false;
+spinDir = choose(-1,1);

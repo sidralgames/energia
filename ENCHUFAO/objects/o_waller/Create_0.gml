@@ -131,7 +131,7 @@ if (room = Sala_0) //(levelType = 0)
 }
 else if (room = Sala_Tutorial)
 {
-	SetupLevelTutorial();
+	SetupLevelTutorial(1000, 100);
 	levelType="Tutorial"
 }
 else if (room = Sala_ChillRoom)

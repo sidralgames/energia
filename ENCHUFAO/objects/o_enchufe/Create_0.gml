@@ -28,3 +28,6 @@ for (i=0; i< global.batteryEnchufeListEnergynum; i++)
 	}
 	
 isMainEnchufe = true;
+
+_hpush = choose(random_range(0.05, 0.1),-random_range(0.05, 0.1))
+_vpush = choose(random_range(0.05, 0.1), -random_range(0.05, 0.1))

@@ -1,9 +1,19 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function SetupLevelTutorial()
+function SetupLevelTutorial(_maxFloor, _minFloor)
 {
-	instance_create_layer(x,y,"Banners",o_tutorialText);
 	
+	totalFloor = 0;
+	maxFloor = _maxFloor;
+	minFloor = _minFloor;
+	realSteps = 0;
+	instance_create_layer(x,y,"Banners",o_tutorialManager);
+	
+	global.infiniteEnergyIsOn = true;
+	global.infiniteAmmoIsOn = true;
+	global.infiniteLaserIsOn = true;
+	//global.infiniteHPIsOn = true;
+	global.inTutorial = true;
 	global.newChargerX = 0;
 	global.newChargerY = 0;
 	
@@ -36,8 +46,8 @@ function SetupLevelTutorial()
 	__background_set( e__BG.Y, 0, irandom(1000) );
 
 
-	room_width = (CELL_WIDTH *35); //
-	room_height = (CELL_HEIGHT * 23);
+	room_width = (CELL_WIDTH *30); //
+	room_height = (CELL_HEIGHT * 20);
 
 
 	__view_set( e__VW.HView, 0, __view_get( e__VW.HPort, 0 ) );
@@ -89,6 +99,19 @@ function SetupLevelTutorial()
 
 	repeat (_steps)
 	{
+		
+		realSteps +=1;
+		
+		if (global.wallgrid_[# _controller_x, _controller_y] != FLOOR)
+		{
+			totalFloor +=1;;	
+		}
+		
+		if (totalFloor > maxFloor)
+		{
+			break;
+		}
+		
 		global.wallgrid_[# _controller_x, _controller_y] = FLOOR;
 	
 		//Randomize the direction
@@ -119,7 +142,7 @@ function SetupLevelTutorial()
 	//Draw the level
 	DrawLevelTutorial();
 	
-	if (!enchufe0) || (!enchufeFinal)
+	if (!enchufe0) || (!enchufeFinal) || (totalFloor < minFloor)
 	{
 		room_restart();
 	}

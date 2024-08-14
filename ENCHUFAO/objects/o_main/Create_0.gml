@@ -4,6 +4,10 @@
 contLowEnergy = 30;
 imageWorkin = 0;
 
+imageTut = 0;
+
+global.inTutorial = false;
+
 global.checkInScreenTime = 30;
 global.standardAngleShake = 0.5;
 

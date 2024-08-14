@@ -5,10 +5,6 @@ function PlayerShipLaser(argument0)
 	alarm[4] = 10;
 	if (global.laser > 0)
 	{
-		if (room = Sala_Tutorial)
-		{
-			global.laserTutorial+=1;
-		}
 		screenShake(2,10)
 		gamepad_set_vibration(0,random_range(0.25, 0.35),random_range(0.25, 0.35));
 		

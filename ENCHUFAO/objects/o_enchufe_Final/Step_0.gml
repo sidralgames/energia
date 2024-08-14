@@ -141,6 +141,17 @@ if (haveHPnow)
 {
 	if (_hp <= 0)
 	{
+		if instance_exists(o_playerShip)
+		{
+			if (o_playerShip.plugged) && (enchufeActive)
+			{
+				with (o_playerShip)
+				{
+					Unplug();
+				}
+			}
+		}
+		
 		explo = instance_create(x,y,o_exploPurple)
 		
 		brokenL = instance_create_layer(x+lengthdir_x(20, _angle+180),y+lengthdir_y(20, _angle+180), "Enchufes", o_enchufeFinal_Broken_L);
@@ -157,5 +168,6 @@ if (haveHPnow)
 		brokenR._vpush = lengthdir_y(0.75, _angle)
 		
 		instance_destroy();
+		
 	}
 }

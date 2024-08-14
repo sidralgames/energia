@@ -17,7 +17,7 @@ if (place_meeting(x,y+_vpush*1.5,o_enchufe_Father))
 
 Move();
 
-_angle += max(0.05*sign(_hpush), 2*(abs(_hpush)),0.05*sign(_vpush), 2*(abs(_vpush)))*global.relativeSpeed;
+_angle += spinDir * max(0.05, (abs(_hpush) + abs(_vpush)))*global.relativeSpeed;
 
 
 if (charge >= 200)

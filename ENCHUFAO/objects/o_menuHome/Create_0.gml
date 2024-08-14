@@ -11,3 +11,4 @@ initialTut = 200;
 initialOption = 240;
 initialStat = 280;
 initialQuit = 310;
+global.mandatoryTutorial = 1;
