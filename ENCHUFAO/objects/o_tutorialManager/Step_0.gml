@@ -12,8 +12,11 @@ if (pluggedInEnergyTut = true) && (ammoCreated = false)
 		if (irandom(oddsEnchufeAmmo) == oddsEnchufeAmmo) && (ammoCreated = false)
 		{
 			nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
+			controls = instance_nearest(exM, eyM, o_controlsMap)
+			
 			if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 50) &&
-			(point_distance(exM, eyM, o_playerShip.x, o_playerShip.y) < 500)
+			(point_distance(exM, eyM, o_playerShip.x, o_playerShip.y) < 500) &&
+			(point_distance(exM, eyM, controls.x, controls.y) > 100)
 			{
 				instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Ammo); 
 				ammoCreated = true;
@@ -34,9 +37,11 @@ if (pluggedInAmmoTut = true) && (HPcreated = false)
 		
 		if (irandom(oddsEnchufeHP) == oddsEnchufeHP) && (HPcreated = false)
 		{
-			nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
+			nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father);
+				controls = instance_nearest(exM, eyM, o_controlsMap)
 			if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 50) &&
-			(point_distance(exM, eyM, o_playerShip.x, o_playerShip.y) < 500)
+			(point_distance(exM, eyM, o_playerShip.x, o_playerShip.y) < 500) &&
+			(point_distance(exM, eyM, controls.x, controls.y) > 100)
 			{
 				instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Hp); 
 				HPcreated = true;
@@ -57,9 +62,11 @@ if (pluggedInHPTut = true) && (laserCreated = false)
 		
 		if (irandom(oddsEnchufeLaser) == oddsEnchufeLaser) && (laserCreated = false)
 		{
-			nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
+			nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father);
+				controls = instance_nearest(exM, eyM, o_controlsMap)
 			if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 50) &&
-			(point_distance(exM, eyM, o_playerShip.x, o_playerShip.y) < 500)
+			(point_distance(exM, eyM, o_playerShip.x, o_playerShip.y) < 500) &&
+			(point_distance(exM, eyM, controls.x, controls.y) > 100)
 			{
 				instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Laser); 
 				laserCreated = true;

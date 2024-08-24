@@ -5,7 +5,7 @@ function Unplug()
 	
 	thisEnchufe = enchufe;
 	thisEnchufe.canBeEnchufated = false;
-	thisEnchufe.canBeEnchufatedCont = 20;
+	thisEnchufe.canBeEnchufatedCont = 10;
 	o_enchufe_Father.enchufeActive = false;
 	
 	if (thisEnchufe.isPETA_F == true)

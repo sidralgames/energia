@@ -1,15 +1,27 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
 
-if (pluggedInAmmoTut = false)
-{
-		draw_sprite_ext(s_moveTutorial, 0, __view_get( e__VW.XView, 0 )+265,__view_get( e__VW.YView, 0 )+325,0.6,0.6,0,image_blend, image_alpha)
-		draw_sprite_ext(s_moveTutorial, 1, __view_get( e__VW.XView, 0 )+375,__view_get( e__VW.YView, 0 )+325,0.6,0.6,0,image_blend, image_alpha)		
-}
+//if (pluggedInAmmoTut = false)
+//{
+//		draw_sprite_ext(s_moveTutorial, 0, __view_get( e__VW.XView, 0 )+265,__view_get( e__VW.YView, 0 )+325,0.6,0.6,0,image_blend, image_alpha)
+//		draw_sprite_ext(s_moveTutorial, 1, __view_get( e__VW.XView, 0 )+375,__view_get( e__VW.YView, 0 )+325,0.6,0.6,0,image_blend, image_alpha)		
+//}
 
-if (pluggedInAmmoTut = true) && (pluggedInHPTut = false)
+//if (pluggedInAmmoTut = true) && (pluggedInHPTut = false)
+//{
+//	draw_sprite_ext(s_moveTutorial, 2, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+330,0.6,0.6,0,image_blend, image_alpha)
+//}
+if instance_exists(o_enchufe_Final)
 {
-	draw_sprite_ext(s_moveTutorial, 2, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+330,0.6,0.6,0,image_blend, image_alpha)
+	if o_enchufe_Final.abierto = false
+	{
+		draw_sprite_ext(s_tutorialText, 4, o_enchufe_Final.x,o_enchufe_Final.y-50,0.6,0.6,0,image_blend, image_alpha)
+	}
+	else
+	{
+		draw_sprite_ext(s_tutorialText, 2, o_enchufe_Final.x,o_enchufe_Final.y-50,0.6,0.6,0,image_blend, image_alpha)
+	}
+		
 }
 
 if instance_exists(o_enchufe)
@@ -22,7 +34,6 @@ if instance_exists(o_enchufe)
 		if (energyFirstTime = false)
 		{
 			global.infiniteEnergyIsOn = false;
-			
 			global.energy = 50;
 			energyFirstTime = true;
 		}

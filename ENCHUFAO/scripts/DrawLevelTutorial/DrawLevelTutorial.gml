@@ -5,6 +5,8 @@ function DrawLevelTutorial()
 	mimics = 0;
 	mimicsMax = 2;
 	
+	controls = false;
+	
 	PETAs = 0;
 	PETAsMax = 1;
 	
@@ -21,6 +23,7 @@ function DrawLevelTutorial()
 				var oddsEnchufeHP = 300;
 				var oddsEnchufeAmmo = 300;
 				var oddsEnchufeLaser = 300;
+				var oddsControls = 50;
 				
 				var oddsEnchufeBomb = 300;
 				var oddsEnchufePETA = 1000;
@@ -89,15 +92,37 @@ function DrawLevelTutorial()
 				{
 					nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 					nextwall = instance_nearest(exM, eyM, o_wall)
-					if instance_exists(nextEnchufe)
+					controls = instance_nearest(exM, eyM, o_controlsMap)
+					if instance_exists(nextEnchufe) && instance_exists(controls)
 					{
 						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 100)
 						{
 							if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 80)
 							{
-								finalE = instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Final); 
-								finalE.depth = layer_get_depth("Enchufes")+20;
-								enchufeFinal = true;
+								if (point_distance(exM, eyM, controls.x, controls.y) > 100)
+								{
+									finalE = instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Final); 
+									finalE.depth = layer_get_depth("Enchufes")+20;
+									enchufeFinal = true;
+								}
+							}
+						}
+					}
+				}
+				
+				if (irandom(oddsControls) == oddsControls) && (controls = false)
+				{
+					nextPlayer = instance_nearest(exM, eyM, o_playerShip)
+					nextwall = instance_nearest(exM, eyM, o_wall)
+					if instance_exists(nextPlayer)
+					{
+						if (point_distance(exM, eyM, nextPlayer.x, nextPlayer.y) <200)
+						{
+							if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 150)
+							{
+								finalE = instance_create_layer(exM,eyM,"Tiles",o_controlsMap); 
+								finalE.depth = layer_get_depth("Tiles")+20;
+								controls = true;
 							}
 						}
 					}

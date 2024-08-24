@@ -217,6 +217,7 @@
     {"id":{"name":"o_chipSmart","path":"objects/o_chipSmart/o_chipSmart.yy",},},
     {"id":{"name":"o_circleTile","path":"objects/o_circleTile/o_circleTile.yy",},},
     {"id":{"name":"o_coco","path":"objects/o_coco/o_coco.yy",},},
+    {"id":{"name":"o_controlsMap","path":"objects/o_controlsMap/o_controlsMap.yy",},},
     {"id":{"name":"o_controlsMenu","path":"objects/o_controlsMenu/o_controlsMenu.yy",},},
     {"id":{"name":"o_creditsMenu","path":"objects/o_creditsMenu/o_creditsMenu.yy",},},
     {"id":{"name":"o_crosshair","path":"objects/o_crosshair/o_crosshair.yy",},},

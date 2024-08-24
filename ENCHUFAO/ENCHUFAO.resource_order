@@ -178,6 +178,7 @@
     {"name":"o_chipSmart","order":50,"path":"objects/o_chipSmart/o_chipSmart.yy",},
     {"name":"o_circleTile","order":115,"path":"objects/o_circleTile/o_circleTile.yy",},
     {"name":"o_coco","order":9,"path":"objects/o_coco/o_coco.yy",},
+    {"name":"o_controlsMap","order":24,"path":"objects/o_controlsMap/o_controlsMap.yy",},
     {"name":"o_controlsMenu","order":16,"path":"objects/o_controlsMenu/o_controlsMenu.yy",},
     {"name":"o_creditsMenu","order":13,"path":"objects/o_creditsMenu/o_creditsMenu.yy",},
     {"name":"o_crosshair","order":2,"path":"objects/o_crosshair/o_crosshair.yy",},

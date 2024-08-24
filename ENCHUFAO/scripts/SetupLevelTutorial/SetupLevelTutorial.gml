@@ -142,7 +142,7 @@ function SetupLevelTutorial(_maxFloor, _minFloor)
 	//Draw the level
 	DrawLevelTutorial();
 	
-	if (!enchufe0) || (!enchufeFinal) || (totalFloor < minFloor)
+	if (!enchufe0) || (!enchufeFinal) || (totalFloor < minFloor) || (!controls)
 	{
 		room_restart();
 	}
