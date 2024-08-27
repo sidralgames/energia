@@ -12,10 +12,17 @@ function CreateSecretEnchufe(oddsSecretEnchufeInTile, _place)
 			if (global.wallgrid_[# xxW, yyW] == _place) && (exW > 90) && (exW < room_width-90)
 			&& (eyW > 90) && (eyW < room_height-90)
 			{
-				if (oddsSecretEnchufeInTile = irandom(oddsSecretEnchufeInTile)) && (enchufesSecret < enchufesSecretMax)
+				nextEnchufe = instance_nearest(exW, eyW, o_enchufe_Father)
+				if instance_exists(nextEnchufe)
 				{
-					instance_create_layer(exW,eyW, "ObjectsTiles", o_enchufe_Secret);
-					enchufesSecret+=1;
+					if (point_distance(exW, eyW, nextEnchufe.x, nextEnchufe.y) > 50)
+					{
+						if (oddsSecretEnchufeInTile = irandom(oddsSecretEnchufeInTile)) && (enchufesSecret < enchufesSecretMax)
+						{
+							instance_create_layer(exW,eyW, "ObjectsTiles", o_enchufe_Secret);
+							enchufesSecret+=1;
+						}
+					}
 				}
 			}
 		}

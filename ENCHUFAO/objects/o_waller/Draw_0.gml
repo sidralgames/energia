@@ -10,3 +10,7 @@ draw_set_font(global.customFont11)
 //draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+140, "BREACH: " + string(spawningBreach))
 
 
+//if instance_exists(o_playerShip) && (room = Sala_Tutorial)
+//{
+//	draw_text(o_playerShip.x,o_playerShip.y+40, "enchufeFireRate " + string(enchufeFireRate))
+//}	

@@ -2,15 +2,42 @@
 // Puede escribir su código en este editor
 CheckInScreen(50, 20);
 
-if (alarm[3]<=0)
+
+
+if (checkOk = true)
 {
-	if (inScreen)
+	
+	if (contCheck >= 0)
 	{
+		contCheck--
 		if (!tile_meeting(x,y,"Tiles"))
 		{
 			instance_destroy();	
 		}
-			
+	}
+}
+if (global.changingTiles) && (checkTile = false)
+{
+	checkTile = true;
+	alarm[4] = 10;
+}
+
+if (alarm[4] > 0)
+{
+	if (!tile_meeting(x,y,"Tiles"))
+	{
+		instance_destroy();	
+	}
+}
+
+
+
+if (alarm[3]<=0)
+{
+	if (inScreen)
+	{
+		checkOk = true;
+		
 		collision = instance_nearest(x,y,parCollision);
 		if instance_exists(collision)
 		{

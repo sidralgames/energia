@@ -3,7 +3,10 @@
 draw_set_halign(fa_left)
 
 
-//draw_text(__view_get( e__VW.XView, 0 )+50,__view_get( e__VW.YView, 0 )+150, "instancias: " + string(instance_count))
+//draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+120, "enchufes: " + string(global.enchufesexistentes))
+//draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+130, "level: " + string(global.level))
+
+
 
 
 
@@ -47,4 +50,15 @@ if instance_exists(o_menuScores) || instance_exists(o_menuGameSettings)
 {
 	imageWorkin+=0.2;
 	draw_sprite_ext(s_workin, imageWorkin,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+180, 1,1,image_angle, image_blend, image_alpha);
+}
+if (global.level = -2)
+{
+	if (global.energy <= 0) && instance_exists(o_enchufePETA)
+	{
+		draw_sprite_ext(s_controlsAll_Map,0,o_playerShip.x, o_playerShip.y+30, 0.4, 0.4, 0, image_blend, image_alpha)
+	}
+	else if (global.energy > 0)
+	{
+		draw_sprite_ext(s_controlsAll_Map,1,o_playerShip.x, o_playerShip.y+30, 0.4, 0.4, 0, image_blend, image_alpha)
+	}
 }

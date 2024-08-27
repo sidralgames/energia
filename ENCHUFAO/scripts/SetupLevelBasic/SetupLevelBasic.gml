@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function SetupLevelBasic(_maxFloor, _minFloor, _hCells, _vCells)
+function SetupLevelBasic(_maxFloor, _minFloor, _hCells, _vCells, _stepsTotal)
 {
 	totalFloor = 0;
 	maxFloor = _maxFloor;
@@ -77,7 +77,7 @@ function SetupLevelBasic(_maxFloor, _minFloor, _hCells, _vCells)
 	var _controller_y = height_ div 2
 	var _controller_direction = irandom(3);
 
-	var _steps = 4000;
+	var _steps = _stepsTotal;
 
 	var _direction_change_odds = 0;
 	
@@ -130,7 +130,7 @@ function SetupLevelBasic(_maxFloor, _minFloor, _hCells, _vCells)
 	
 	haveEnchufeFinal = (enchufeFinal = true) || (enchufeFinal_Broken_L = true && enchufeFinal_Broken_R = true)
 	
-	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo) || (!enchufeShield)
+	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo) || (!enchufeLaser)
 	|| (!haveEnchufeFinal)
 	|| (!strandedShipOK)
 	|| (totalFloor < minFloor)

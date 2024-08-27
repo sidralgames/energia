@@ -430,7 +430,7 @@ function CheckEnchufeUpgrade()
 						thisUpg.canShowUp = false;
 					}
 				}
-
+				global.bombAmmo = 4;
 				global.bombIsClusterBomb=true;
 				
 			}break;
@@ -440,6 +440,7 @@ function CheckEnchufeUpgrade()
 				if (!global.homingIsUpgraded)
 				{
 					global.homingIsUpgraded = true;
+					global.bombAmmo = 4;
 					AddUpgradeHomingBombPlayer();
 				}
 				for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
@@ -1011,6 +1012,5 @@ function CheckEnchufeUpgrade()
 	
 	inEnchufe.charging = true;
 	upgraded = true;
-
 	}
 }

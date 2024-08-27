@@ -33,7 +33,7 @@ switch (room)
 	
 	case Sala_Tutorial:
 	{
-		num = irandom_range(190,225);
+		num = irandom_range(220,225);
 	}
 	break;
 }

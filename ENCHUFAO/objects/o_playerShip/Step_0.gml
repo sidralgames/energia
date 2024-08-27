@@ -182,7 +182,7 @@ if (inEnchufe)
 							
 							if (inEnchufe.isEnchufeUpgrade)
 							{
-								if (room == Sala_Upgade) || (room == Sala_0)
+								if (room == Sala_Upgade) || (room == Sala_Tutorial) || (room == Sala_0)
 								{
 									CheckEnchufeUpgrade()
 								}

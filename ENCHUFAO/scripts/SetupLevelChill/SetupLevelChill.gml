@@ -19,7 +19,7 @@ function SetupLevelChill()
 	
 	enchufe0 = false;
 	enchufeHP = false;
-	enchufeShield = false;
+	enchufeLaser = false;
 	enchufeAmmo = false;
 	enchufeBomb = false;
 	enchufeFinal = false;
@@ -150,7 +150,7 @@ function SetupLevelChill()
 	DrawLevelBig();
 	
 	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo)
-	|| (!enchufeShield) || (!enchufeFinal) || (!strandedShipOK) || (totalFloor < minFloor)
+	|| (!enchufeLaser) || (!enchufeFinal) || (!strandedShipOK) || (totalFloor < minFloor)
 	//|| (UpgradesEnchufesInLevel < 1)
 
 	{

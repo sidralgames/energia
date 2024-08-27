@@ -3,8 +3,17 @@
 
 alarm[1] = 70;
 alarm[2] = 20;
-oddsLaserV = max(10, 65 - global.level);
-oddsLaserH = max(10, 65 - global.level);
+
+if (room = Sala_Tutorial)
+{
+	oddsLaserV = 150;
+	oddsLaserH = 150;
+}
+else
+{
+	oddsLaserV = max(10, 65 - global.level);
+	oddsLaserH = max(10, 65 - global.level);
+}
 
 oddsDisc = max(20, 200 - global.level);
 

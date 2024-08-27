@@ -1,17 +1,21 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function SetupLevelTutorial(_maxFloor, _minFloor)
+function SetupLevelTutorial(_xTiles, _yTiles, _maxFloor, _minFloor, _stepsTotal)
 {
 	
 	totalFloor = 0;
 	maxFloor = _maxFloor;
 	minFloor = _minFloor;
 	realSteps = 0;
-	instance_create_layer(x,y,"Banners",o_tutorialManager);
 	
-	global.infiniteEnergyIsOn = true;
-	global.infiniteAmmoIsOn = true;
-	global.infiniteLaserIsOn = true;
+	if (global.level <= -1)
+	{
+		instance_create_layer(x,y,"Banners",o_tutorialManager);
+		
+		//global.infiniteEnergyIsOn = true;
+		global.infiniteAmmoIsOn = true;
+		global.infiniteLaserIsOn = true;
+	}
 	//global.infiniteHPIsOn = true;
 	global.inTutorial = true;
 	global.newChargerX = 0;
@@ -25,10 +29,12 @@ function SetupLevelTutorial(_maxFloor, _minFloor)
 	
 	enchufe0 = false;
 	enchufeHP = false;
-	enchufeShield = false;
+	enchufeLaser = false;
 	enchufeAmmo = false;
 	enchufeBomb = false;
 	enchufeFinal = false;
+	enchufeFireRate = false;
+	enchufeCluster = false;
 	
 	ShieldsInLevel = 0;
 	ShieldsInLevelMax = 2;
@@ -39,15 +45,18 @@ function SetupLevelTutorial(_maxFloor, _minFloor)
 	PetasInLevelMax = 2;
 	PetasInLevel = 0;
 	
-	UpgradesEnchufesInLevelMax = 7;
-	UpgradesEnchufesInLevel = 0;
+	pilasInLevelMax = 8;
+	pilasInLevel = 0;
+	
+	petasLevel = 0;
+	petasMAx = 4;
 
 	__background_set( e__BG.X, 0, irandom(2000) );
 	__background_set( e__BG.Y, 0, irandom(1000) );
 
 
-	room_width = (CELL_WIDTH *30); //
-	room_height = (CELL_HEIGHT * 20);
+	room_width = (CELL_WIDTH *_xTiles); //
+	room_height = (CELL_HEIGHT * _yTiles);
 
 
 	__view_set( e__VW.HView, 0, __view_get( e__VW.HPort, 0 ) );
@@ -93,7 +102,7 @@ function SetupLevelTutorial(_maxFloor, _minFloor)
 	var _controller_y = height_ div 2
 	var _controller_direction = irandom(3);
 
-	var _steps = 2500;
+	var _steps = _stepsTotal;
 
 	var _direction_change_odds = 0;
 
@@ -135,16 +144,58 @@ function SetupLevelTutorial(_maxFloor, _minFloor)
 	}
 
 	SetTiles();
-	SetVines(4);
+	SetVines(2);
 	
 	SetTemporaryWalls();
 	
 	//Draw the level
 	DrawLevelTutorial();
-	
-	if (!enchufe0) || (!enchufeFinal) || (totalFloor < minFloor) || (!controls)
+
+	if (global.level = -2)
 	{
-		room_restart();
+		if (!enchufeFinal)
+		|| (totalFloor < minFloor) 
+		{
+			instance_destroy();
+			room_restart();
+		}
+	}
+	else if (global.level = -1)
+	{
+		if (!enchufe0) || (!enchufeFinal)
+		|| (totalFloor < minFloor) 
+		|| (!controls)
+		{
+			instance_destroy();
+			room_restart();
+		}
+	}
+	else if (global.level = 0)
+	{
+		if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo) || (!enchufeLaser)
+		|| (!enchufeFireRate)
+		|| (!enchufeCluster)
+		|| (!enchufeFinal)
+		|| (totalFloor < minFloor) 
+		|| (!controls)
+		{
+			instance_destroy();
+			room_restart();
+		}
+	}
+	else if (global.level = 1)
+	{
+		if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo) || (!enchufeLaser)
+		|| (!enchufeFireRate)
+		|| (!enchufeCluster)
+		|| (!enchufeFinal)
+		|| (totalFloor < minFloor) 
+		|| (!controls)
+		|| (pilasInLevel < 4)
+		{
+			instance_destroy();
+			room_restart();
+		}
 	}
 	
 	PlacePetasInTiles(60);

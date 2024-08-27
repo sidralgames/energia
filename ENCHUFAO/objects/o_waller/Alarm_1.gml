@@ -21,3 +21,4 @@ if (room != Sala_Tutorial) && (room != Sala_ChillRoom) && (levelType != "Secret"
 	}
 }
 
+

@@ -22,7 +22,7 @@ function SetupLevelCorridor()
 	
 	enchufe0 = false;
 	enchufeHP = false;
-	enchufeShield = false;
+	enchufeLaser = false;
 	enchufeAmmo = false;
 	enchufeBomb = false;
 	enchufeFinal = false;
@@ -148,7 +148,7 @@ function SetupLevelCorridor()
 	PlaceSecretEnchufe(250);
 	PlaceChargerAdapter(50);
 	
-	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo) || (!enchufeShield) 
+	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo) || (!enchufeLaser) 
 	|| (!enchufeFinal) 
 	|| (!strandedShipOK) 
 	|| (totalFloor < minFloor)

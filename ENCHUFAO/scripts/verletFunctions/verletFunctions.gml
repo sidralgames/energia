@@ -406,49 +406,51 @@ function verletGroup() constructor {
 			#region Constrain vertices
 			var vertexAmount = ds_list_size(vertexList);
 			var currentVertex, vx, vy;
-			
-			for (var i = 0; i < vertexAmount; i++) {
-				currentVertex = vertexList[| i];
+			if (canCollide)
+			{
+				for (var i = 0; i < vertexAmount; i++) {
+					currentVertex = vertexList[| i];
 				
-				if (!currentVertex.fixed) && canCollide{
-					vx = (currentVertex.x - currentVertex.xLast) * frict;
-					vy = (currentVertex.y - currentVertex.yLast) * frict;
+					if (!currentVertex.fixed) {
+						vx = (currentVertex.x - currentVertex.xLast) * frict;
+						vy = (currentVertex.y - currentVertex.yLast) * frict;
 					
-					var inst = collide(currentVertex.x, currentVertex.y, currentVertex.radius);
+						var inst = collide(currentVertex.x, currentVertex.y, currentVertex.radius);
 					
-					if (inst != noone) {
-						if (inst.type == collisionType.box) {
-							// The box collision type avoids vertices moving around on the floor
-							var dir = 0;
-							if (currentVertex.yLast < inst.bbox_top) {
-								dir = 90;
-							} else if (currentVertex.yLast > inst.bbox_bottom) {
-								dir = 270;
-							} else if (currentVertex.xLast < inst.bbox_left) {
-								dir = 180;
-							} else if (currentVertex.xLast > inst.bbox_right) {
-								dir = 0;
+						if (inst != noone) {
+							if (inst.type == collisionType.box) {
+								// The box collision type avoids vertices moving around on the floor
+								var dir = 0;
+								if (currentVertex.yLast < inst.bbox_top) {
+									dir = 90;
+								} else if (currentVertex.yLast > inst.bbox_bottom) {
+									dir = 270;
+								} else if (currentVertex.xLast < inst.bbox_left) {
+									dir = 180;
+								} else if (currentVertex.xLast > inst.bbox_right) {
+									dir = 0;
+								}
+							} else {
+								// Works for custom collision masks
+								var dir = point_direction(inst.x, inst.y, currentVertex.x, currentVertex.y);
 							}
-						} else {
-							// Works for custom collision masks
-							var dir = point_direction(inst.x, inst.y, currentVertex.x, currentVertex.y);
-						}
 						
-						// Move outside wall
-						while (collide(currentVertex.x, currentVertex.y, currentVertex.radius)) {
-							currentVertex.x += lengthdir_x(1, dir);
-							currentVertex.y += lengthdir_y(1, dir);
-						}
+							// Move outside wall
+							while (collide(currentVertex.x, currentVertex.y, currentVertex.radius)) {
+								currentVertex.x += lengthdir_x(1, dir);
+								currentVertex.y += lengthdir_y(1, dir);
+							}
 						
-						// Move as close back to the wall as possible to stabilize vertices
-						var prec = 0.1;
-						while (!collide(currentVertex.x + lengthdir_x(prec, dir + 180), currentVertex.y + lengthdir_y(prec, dir + 180), currentVertex.radius)) {
-							currentVertex.x += lengthdir_x(prec, dir + 180);
-							currentVertex.y += lengthdir_y(prec, dir + 180);
-						}
+							// Move as close back to the wall as possible to stabilize vertices
+							var prec = 0.1;
+							while (!collide(currentVertex.x + lengthdir_x(prec, dir + 180), currentVertex.y + lengthdir_y(prec, dir + 180), currentVertex.radius)) {
+								currentVertex.x += lengthdir_x(prec, dir + 180);
+								currentVertex.y += lengthdir_y(prec, dir + 180);
+							}
 						
-						currentVertex.xLast = currentVertex.x;
-						currentVertex.yLast = currentVertex.y;
+							currentVertex.xLast = currentVertex.x;
+							currentVertex.yLast = currentVertex.y;
+						}
 					}
 				}
 			}

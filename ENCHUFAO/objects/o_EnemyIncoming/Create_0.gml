@@ -26,6 +26,11 @@ else if (room = Sala_Tutorial)
 }
 else
 {
+	if (global.inTutorial)
+	{
+		EnemiesToSpawnLVL1();
+	}
+	
 	if (global.level = 1)
 	{
 		EnemiesToSpawnLVL1();

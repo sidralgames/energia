@@ -2,25 +2,32 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function LowEnergyWarning()
 {
-	if (room != Sala_Inicio) && (room != Sala_Tutorial) && !instance_exists(o_gameOver)
+	if (room != Sala_Inicio)  && !instance_exists(o_gameOver)
 	{
 		draw_set_font(global.customFont16);
 		
 		if (global.energy <= global.energyLow)
 		{
-			if (global.PETAAmmo > 0)
+			imagePetaUI += 0.2;
+			
+			if (global.level = -2)
 			{
-				if (alarm[0] <30)
+				if !instance_exists(o_enchufePETA)
 				{
-					draw_sprite_ext(s_throwPeta, 0,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+310, 0.9, 0.9,image_angle, image_blend, 0.8);
+					draw_sprite_ext(s_trowPetaUI, imagePetaUI,o_playerShip.x,o_playerShip.y+45, 0.6, 0.6,image_angle, image_blend, 1);
 				}
-	
-				if (alarm[0] <= 0)
+				else
 				{
-					alarm[0] = 40;	
+					draw_sprite_ext(s_trowPetaUI, imagePetaUI,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+320, 0.9, 0.9,image_angle, image_blend, 1);
 				}
 			}
-			
+			else
+			{
+				if (global.PETAAmmo > 0)
+				{
+					draw_sprite_ext(s_trowPetaUI, imagePetaUI,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+320, 0.9, 0.9,image_angle, image_blend, 1);
+				}
+			}
 			contLowEnergy --;
 			
 			if (contLowEnergy <= 10)

@@ -12,7 +12,7 @@ soundDie = false;
 bnc = 1;
 contToBeInside = 0;
 backToTile = false;
-
+spinDir = choose(-1,1);
 //if room = Sala_0
 //{
 //	if (global.PETAsActive >= 3) && (bornFromBreach)

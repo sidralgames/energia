@@ -7,7 +7,9 @@
 
 
 // Inherit the parent event
+
 event_inherited();
+
 if instance_exists(o_waller)
 {
 	if (o_waller.levelType != "Secret")

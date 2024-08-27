@@ -9,6 +9,7 @@ if (!der) && (!izq) && (!arr) && (!abj)
 {
 	if collision_circle(x,y,40, o_wall, false, true)	
 	{
+		
 		var _tilemap_id = layer_tilemap_get_id("Tiles");
 		
 		tilemap_set_at_pixel(_tilemap_id, 0, x, y);

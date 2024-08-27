@@ -136,7 +136,7 @@ function DrawLevelCorridor()
 						}
 					}
 			
-					if (irandom(oddsEnchufeLaser) == oddsEnchufeLaser) && (enchufeShield = false)
+					if (irandom(oddsEnchufeLaser) == oddsEnchufeLaser) && (enchufeLaser = false)
 					{
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 						nextwall = instance_nearest(exM, eyM, o_wall)
@@ -145,7 +145,7 @@ function DrawLevelCorridor()
 							if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 250)
 							{
 								instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Laser); 
-								enchufeShield = true;
+								enchufeLaser = true;
 							}
 						}
 					}

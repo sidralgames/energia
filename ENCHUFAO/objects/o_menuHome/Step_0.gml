@@ -38,9 +38,9 @@ if (alarm[0] <= 0)
 				{
 					case 0:
 					{
+						global.level = -2;
 						audio_play_sound_on(global.audioEmitter,snd_playMenu,false, 50);
 						room_goto(Sala_Tutorial);
-		
 					}
 					break;
 					case 1:
@@ -95,6 +95,7 @@ if (alarm[0] <= 0)
 					
 					case 1:
 					{
+						global.level = -2;
 						audio_play_sound_on(global.audioEmitter,snd_playMenu,false, 50);
 						room_goto(Sala_Tutorial);
 		

@@ -46,7 +46,11 @@ naveP_maxLife=0;
 
 if (room = Sala_Tutorial)
 {
-	global.hp = 1;
+	if (global.level < 0)
+	{
+		global.hp = 1;
+	}
+	
 	//global.ammo = 0;
 	//global.energy = 180;
 	//global.laser = 0;
@@ -228,6 +232,8 @@ instance_create_layer(x,y,"Cable", o_cable)
 instance_create_layer(x,y,"Shield", o_crosshair)
 _angle = point_direction(x,y,o_crosshair.x, o_crosshair.y)
 
+dirH = 0;
+dirV = 0;
 
 _colorWhite = c_white;
 greenO = make_color_rgb(99,199,77)
@@ -281,4 +287,20 @@ switch (global.spriteShip)
 		colorLaser = blueO;
 		pitoSound = snd_pito3;
 	}break;
+}
+
+if (global.level = -2)
+{
+	bnc = 0.95;
+	global.infiniteEnergyIsOn = false;
+	global.energy = 0;
+	
+	_hpush = (1 + random_range(0,2)) * choose (1, -1);
+	_vpush = (1 + random_range(0,2)) * choose (1, -1);
+	global.PETAAmmo = 1000;
+}
+
+if (global.level = -1)
+{
+	global.energy = global.energyMax;
 }

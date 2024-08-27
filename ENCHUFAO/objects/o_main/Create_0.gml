@@ -2,10 +2,11 @@
 // You can write your code in this editor
 
 contLowEnergy = 30;
+imagePetaUI = 0;
 imageWorkin = 0;
-
+global.loading = false;
 imageTut = 0;
-
+global.enchufesexistentes=0;
 global.inTutorial = false;
 
 global.checkInScreenTime = 30;

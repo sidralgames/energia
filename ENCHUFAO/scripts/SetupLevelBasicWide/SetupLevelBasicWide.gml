@@ -6,7 +6,7 @@ function SetupLevelBasicWide()
 
 	enchufe0 = false;
 	enchufeHP = false;
-	enchufeShield = false;
+	enchufeLaser = false;
 	enchufeAmmo = false;
 	enchufeFinal = false;
 
@@ -293,14 +293,14 @@ function SetupLevelBasicWide()
 						}
 					}
 			
-					if (irandom(oddsESH) == oddsESH) && (enchufeShield = false)
+					if (irandom(oddsESH) == oddsESH) && (enchufeLaser = false)
 					{
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 					
 						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 250)
 						{
 							instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Laser); 
-							enchufeShield = true;
+							enchufeLaser = true;
 						}
 					}
 			
@@ -337,7 +337,7 @@ function SetupLevelBasicWide()
 
 
 
-	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo) || (!enchufeShield) || (!enchufeFinal) 
+	if (!enchufe0) || (!enchufeHP) || (!enchufeAmmo) || (!enchufeLaser) || (!enchufeFinal) 
 	{
 		room_restart();
 	}

@@ -6,7 +6,7 @@ function SetupLevelBoss2()
 	enchufe0 = false;
 	enchufeHP1 = false;
 	enchufeHP2 = false;
-	enchufeShield = false;
+	enchufeLaser = false;
 	enchufeAmmo = false;
 	enchufeFinal = false;
 	hasBoss = false;
@@ -159,14 +159,14 @@ function SetupLevelBoss2()
 					}
 					
 			
-					if (irandom(oddsESH) == oddsESH) && (enchufeShield = false)
+					if (irandom(oddsESH) == oddsESH) && (enchufeLaser = false)
 					{
 						nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 					
 						if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 100)
 						{
 							instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Laser); 
-							enchufeShield = true;
+							enchufeLaser = true;
 						}
 					}
 			
@@ -200,7 +200,7 @@ function SetupLevelBoss2()
 	    }
 	}
 
-	if (!enchufeAmmo) || (hasBoss = false)  || (hasBossPeque = false) || (!enchufeShield)
+	if (!enchufeAmmo) || (hasBoss = false)  || (hasBossPeque = false) || (!enchufeLaser)
 		|| (!enchufeHP1) || (!enchufeHP2)
 	{
 		room_restart();

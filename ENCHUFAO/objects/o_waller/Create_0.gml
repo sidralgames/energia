@@ -2,6 +2,8 @@
 // You can write your code in this editor
 randomize();
 
+global.enchufesexistentes=0;
+
 o_main.endingLevel = false;
 
 contTiles = 20;
@@ -14,11 +16,20 @@ global.totalEnemiesOnLevel = 0;
 spawners=0;
 spawnersSecret = 0;
 
-enemiesMin = min(3,global.level+1);
-enemiesMax = min(7,global.level+2);
 
 
-timesSpawner = min(5, choose(0,1,2,3,4)+global.level-1)
+if (global.inTutorial)
+{
+	timesSpawner = choose(1, 2);
+	enemiesMin = 2;
+	enemiesMax = 4;
+}
+else
+{
+	timesSpawner = min(5, choose(0,1,2,3,4)+global.level-1)
+	enemiesMin = min(3,global.level+1);
+	enemiesMax = min(7,global.level+2);
+}
 
 
 timesTotal = 500;
@@ -66,7 +77,7 @@ if (room = Sala_0) //(levelType = 0)
 	{
 		case "Basic":
 		{
-			SetupLevelBasic(1000, 600, irandom_range(40,44), irandom_range(38,42));
+			SetupLevelBasic(1000, 600, irandom_range(40,44), irandom_range(38,42), 4000);
 		}
 		break;
 		
@@ -131,7 +142,23 @@ if (room = Sala_0) //(levelType = 0)
 }
 else if (room = Sala_Tutorial)
 {
-	SetupLevelTutorial(1000, 100);
+	if (global.level = -2)
+	{
+		SetupLevelTutorial(22, 17, 700, 120, 1500);
+	}
+	else if (global.level = -1)
+	{
+		SetupLevelTutorial(32, 22, 900, 120, 2500);
+	}
+	else if (global.level = 0)
+	{
+		SetupLevelTutorial(36, 28, 1000, 120, 3000);
+	}
+	else if (global.level = 1)
+	{
+		SetupLevelTutorial(41, 36, 1000, 120, 3000);
+	}
+	
 	levelType="Tutorial"
 }
 else if (room = Sala_ChillRoom)

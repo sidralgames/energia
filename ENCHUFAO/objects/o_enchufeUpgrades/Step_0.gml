@@ -20,14 +20,34 @@
 
 
 
-
-if instance_exists(o_playerShip)
+if (room != Sala_Tutorial)
 {
-	if (o_playerShip.plugged) && (!o_playerShip.enchufe.isPETA_F)
+	if instance_exists(o_playerShip)
 	{
-		if (charging == false)
+		if (o_playerShip.plugged) && (!o_playerShip.enchufe.isPETA_F)
 		{
-			instance_destroy()	
+			if (charging == false)
+			{
+				instance_destroy()	
+			}
+		}
+	}
+}
+else
+{
+	if instance_exists(o_playerShip)
+	{
+		if (o_playerShip.plugged) && (enchufeActive)
+		{
+			if (charge >= 200)
+			{
+				with(o_playerShip)
+				{
+					Unplug();
+				}
+				
+				instance_destroy(o_enchufeUpgrades)	
+			}
 		}
 	}
 }

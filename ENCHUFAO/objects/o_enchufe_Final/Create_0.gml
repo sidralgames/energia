@@ -27,11 +27,6 @@ else
 bnc = 1;
 _angle = 0;
 
-if (room = Sala_Tutorial)
-{
-	global.level = -1;
-}
-
 alarm[2] = 30;
 
 if (room = Sala_SecondBoss) || (room = Sala_BossWorm)

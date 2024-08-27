@@ -28,9 +28,6 @@ function PlayerPluggedMainEnchufes()
 			{
 				global.energy+=0.75*global.chargeTime;
 			}
-		
-			
-			
 			//------------ENERGY----------//
 			if (global.chargingEnergy = true)
 			{
