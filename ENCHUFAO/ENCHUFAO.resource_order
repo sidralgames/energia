@@ -1430,6 +1430,7 @@
     {"name":"s_temporary_shootUp","order":22,"path":"sprites/s_temporary_shootUp/s_temporary_shootUp.yy",},
     {"name":"s_temporary_Smart","order":20,"path":"sprites/s_temporary_Smart/s_temporary_Smart.yy",},
     {"name":"s_temporary_superShot","order":18,"path":"sprites/s_temporary_superShot/s_temporary_superShot.yy",},
+    {"name":"s_textTuto","order":81,"path":"sprites/s_textTuto/s_textTuto.yy",},
     {"name":"s_throwPeta","order":65,"path":"sprites/s_throwPeta/s_throwPeta.yy",},
     {"name":"s_title_1","order":23,"path":"sprites/s_title_1/s_title_1.yy",},
     {"name":"s_title","order":3,"path":"sprites/s_title/s_title.yy",},

@@ -20,9 +20,18 @@ spawnersSecret = 0;
 
 if (global.inTutorial)
 {
-	timesSpawner = choose(1, 2);
-	enemiesMin = 2;
-	enemiesMax = 4;
+	if (global.level = 0)
+	{
+		timesSpawner = 1;
+		enemiesMin = 2;
+		enemiesMax = 3;
+	}
+	else
+	{
+		timesSpawner = choose(1, 2);
+		enemiesMin = 2;
+		enemiesMax = 4;
+	}
 }
 else
 {
@@ -144,7 +153,7 @@ else if (room = Sala_Tutorial)
 {
 	if (global.level = -2)
 	{
-		SetupLevelTutorial(22, 17, 700, 120, 1500);
+		SetupLevelTutorial(25, 17, 600, 120, 1500);
 	}
 	else if (global.level = -1)
 	{
@@ -156,7 +165,7 @@ else if (room = Sala_Tutorial)
 	}
 	else if (global.level = 1)
 	{
-		SetupLevelTutorial(41, 36, 1000, 120, 3000);
+		SetupLevelTutorial(41, 38, 1000, 200, 3000);
 	}
 	
 	levelType="Tutorial"

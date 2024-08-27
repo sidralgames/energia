@@ -69,9 +69,23 @@ if (cont = true)
 	{
 		if (room = Sala_Tutorial)
 		{
-			global.level+=1;
+			if (global.level = 1)
+			{
+				global.inTutorial = false;
+					SaveGame();
 			
-			room_goto(Sala_Tutorial);	
+					with(o_main)
+					{
+						FreeLightSurface();
+						ActivateAndDestroy();
+						instance_destroy();
+					}
+			}
+			else
+			{
+				global.level+=1;
+				room_goto(Sala_Tutorial);	
+			}
 		}
 	}
 }

@@ -8,31 +8,38 @@ function TutorialSecondPart()
 		{
 			nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 			nextwall = instance_nearest(exM, eyM, o_wall)
+			controles = instance_nearest(exM, eyM, o_controlsMap)
 			if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 100)
 			{
 				if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 80)
 				{
-					upg = choose(o_enchufeUpgadeFireRate, o_enchufeUpgadeHP, o_enchufeUpgadeLaser)
-					instance_create_layer(exM,eyM,"Enchufes",upg); 
-					enchufeFireRate = true;
+					if instance_exists(controles)
+					{
+						if (point_distance(exM, eyM, controles.x, controles.y) > 200)
+						{
+							upg = choose(o_enchufeUpgadeFireRate, o_enchufeUpgadeHP, o_enchufeUpgadeLaser)
+							instance_create_layer(exM,eyM,"Enchufes",upg); 
+							enchufeFireRate = true;
+						}
+					}
 				}
 			}
 		}
 		
-		if (irandom(oddsEnchufeCluster) == oddsEnchufeCluster) && (enchufeCluster = false)
-		{
-			nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
-			nextwall = instance_nearest(exM, eyM, o_wall)
-			if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 100)
-			{
-				if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 80)
-				{
-					upg = choose(o_enchufeUpgadeSuperShot, o_enchufeUpgadeClusterBomb, o_enchufeUpgadeAmmo)
-					instance_create_layer(exM,eyM,"Enchufes",upg); 
-					enchufeCluster = true;
-				}
-			}
-		}
+		//if (irandom(oddsEnchufeCluster) == oddsEnchufeCluster) && (enchufeCluster = false)
+		//{
+		//	nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
+		//	nextwall = instance_nearest(exM, eyM, o_wall)
+		//	if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 100)
+		//	{
+		//		if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 80)
+		//		{
+		//			upg = choose(o_enchufeUpgadeSuperShot, o_enchufeUpgadeClusterBomb, o_enchufeUpgadeAmmo)
+		//			instance_create_layer(exM,eyM,"Enchufes",upg); 
+		//			enchufeCluster = true;
+		//		}
+		//	}
+		//}
 		
 		
 		if (irandom(oddsEnchufeHP) == oddsEnchufeHP) && (enchufeHP = false)

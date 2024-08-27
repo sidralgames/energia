@@ -19,10 +19,10 @@ function DrawLevelTutorial()
 		{
 		    if (global.wallgrid_[# xx, yy] == FLOOR) 
 			{
-			     oddsEnchufeEnergy = 100;
-				 oddsEnchufeHP = 100;
-				 oddsEnchufeAmmo = 100;
-				 oddsEnchufeLaser = 100;
+			     oddsEnchufeEnergy = 250;
+				 oddsEnchufeHP = 250;
+				 oddsEnchufeAmmo = 250;
+				 oddsEnchufeLaser = 250;
 				 oddsEnchufeFireRate = 100;
 				 oddsEnchufeCluster = 100;
 				 oddsPeta = 20;
@@ -40,7 +40,7 @@ function DrawLevelTutorial()
 				 oddsShieldPickUp = 300;
 				
 				 oddsBomb = 300;
-				 oddsPila = 10;
+				 oddsPila = 1;
 				
 				
 			
@@ -48,7 +48,7 @@ function DrawLevelTutorial()
 			     eyM = yy * CELL_HEIGHT+CELL_HEIGHT/2;
 				
 				
-				
+		
 					if (global.level = -2)
 					{
 						TutorialZeroPart();

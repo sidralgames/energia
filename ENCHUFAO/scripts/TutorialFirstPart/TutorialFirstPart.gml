@@ -2,14 +2,13 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function TutorialFirstPart()
 {
-	
 	if (irandom(oddsControls) == oddsControls) && (controls = false)
 	{
 		nextPlayer = instance_nearest(exM, eyM, o_playerShip)
 		nextwall = instance_nearest(exM, eyM, o_wall)
 		if instance_exists(nextPlayer)
 		{
-			if (point_distance(exM, eyM, nextPlayer.x, nextPlayer.y) <100)
+			if (point_distance(exM, eyM, nextPlayer.x, nextPlayer.y) <200)
 			{
 				if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 150)
 				{
@@ -32,8 +31,7 @@ function TutorialFirstPart()
 		enchufe0 = true;
 	}
 	
-	if (global.level < 0)
-	{
+	
 		if (irandom(oddsEnchufeFinal) == oddsEnchufeFinal) && (enchufeFinal = false)
 		{
 			nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
@@ -55,25 +53,6 @@ function TutorialFirstPart()
 				}
 			}
 		}
-	}
-	else
-	{
-		if (irandom(oddsEnchufeFinal) == oddsEnchufeFinal) && (enchufeFinal = false)
-		{
-			nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
-			nextwall = instance_nearest(exM, eyM, o_wall)
-			if instance_exists(nextEnchufe) && instance_exists(controls)
-			{
-				if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 100)
-				{
-					if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 80)
-					{
-						finalE = instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Final); 
-						finalE.depth = layer_get_depth("Enchufes")+20;
-						enchufeFinal = true;
-					}
-				}
-			}
-		}
-	}
+	
+
 }
