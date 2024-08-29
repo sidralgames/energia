@@ -295,8 +295,8 @@ if (global.level = -2)
 	global.infiniteEnergyIsOn = false;
 	global.energy = 0;
 	
-	_hpush = (1 + random_range(0,2)) * choose (1, -1);
-	_vpush = (1 + random_range(0,2)) * choose (1, -1);
+	_hpush = (1 + random_range(0,1)) * choose (1, -1);
+	_vpush = (1 + random_range(0,1)) * choose (1, -1);
 	global.PETAAmmo = 1000;
 }
 

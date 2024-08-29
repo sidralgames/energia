@@ -19,10 +19,10 @@ function DrawLevelTutorial()
 		{
 		    if (global.wallgrid_[# xx, yy] == FLOOR) 
 			{
-			     oddsEnchufeEnergy = 250;
-				 oddsEnchufeHP = 250;
-				 oddsEnchufeAmmo = 250;
-				 oddsEnchufeLaser = 250;
+			     oddsEnchufeEnergy = 300;
+				 oddsEnchufeHP = 300;
+				 oddsEnchufeAmmo = 300;
+				 oddsEnchufeLaser = 300;
 				 oddsEnchufeFireRate = 100;
 				 oddsEnchufeCluster = 100;
 				 oddsPeta = 20;

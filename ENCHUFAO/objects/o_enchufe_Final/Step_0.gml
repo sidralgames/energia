@@ -22,19 +22,7 @@ if (place_meeting(x,y+_vpush*1.2,o_enchufeStandard_Father))
     _vpush = -_vpush*bnc;
 	
 }
-if instance_exists(o_controlsMap)
-{
-	if (place_meeting(x+_hpush*1.2,y,o_controlsMap))
-	{
-	    _hpush = -_hpush*bnc;
 
-	}
-	if (place_meeting(x,y+_vpush*1.2,o_controlsMap))
-	{
-	    _vpush = -_vpush*bnc;
-	
-	}
-}
 
 Move();
 

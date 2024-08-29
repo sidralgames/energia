@@ -3,7 +3,7 @@
 function ActivateAndDestroy()
 {
 	instance_activate_all();
-	
+	gamepad_set_vibration(0,0,0);
 	instance_destroy(o_pause);
 	
 	if instance_exists(o_gridRoom)

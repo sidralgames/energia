@@ -72,14 +72,15 @@ if (cont = true)
 			if (global.level = 1)
 			{
 				global.inTutorial = false;
-					SaveGame();
-			
-					with(o_main)
-					{
-						FreeLightSurface();
-						ActivateAndDestroy();
-						instance_destroy();
-					}
+				
+				SaveGame();
+				gamepad_set_vibration(0,0,0);
+				with(o_main)
+				{
+					FreeLightSurface();
+					ActivateAndDestroy();
+					instance_destroy();
+				}
 			}
 			else
 			{

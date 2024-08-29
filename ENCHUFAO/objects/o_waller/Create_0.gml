@@ -161,7 +161,7 @@ else if (room = Sala_Tutorial)
 	}
 	else if (global.level = 0)
 	{
-		SetupLevelTutorial(36, 28, 1000, 120, 3000);
+		SetupLevelTutorial(36, 30, 1000, 120, 3000);
 	}
 	else if (global.level = 1)
 	{

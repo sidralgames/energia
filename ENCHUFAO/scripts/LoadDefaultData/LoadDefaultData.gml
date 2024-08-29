@@ -12,7 +12,7 @@ function LoadDefaultData()
 	
 	//------- PLAYTIMES - MANDATORY TURORIAL? -----//
 	global.playTimes = 0;
-	global.mandatoryTutorial = 0;
+	global.mandatoryTutorial = 1;
 	
 	//-------- ACHIEVEMENTS --------//
 	global.achNoBump = 0;

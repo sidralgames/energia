@@ -16,7 +16,7 @@ if instance_exists(o_playerShip)
 	if instance_exists(o_enchufe_Final) && instance_exists(o_playerShip)
 	{
 	
-		if (point_distance(o_playerShip.x, o_playerShip.y, o_enchufe_Final.x, o_enchufe_Final.y) < 360)
+		if (point_distance(o_playerShip.x, o_playerShip.y, o_enchufe_Final.x, o_enchufe_Final.y) < 200)
 		{
 			if (o_enchufe_Final.abierto = false) && (global.level > -2)
 			{

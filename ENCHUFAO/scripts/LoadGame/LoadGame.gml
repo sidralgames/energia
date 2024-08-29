@@ -32,7 +32,7 @@ function LoadGame()
 	
 	//------- PLAY TIMES - MANDATORY TUTORIAL?--------//
 	global.playTimes = ini_read_real("main","playTimes", 0);
-	global.mandatoryTutorial = ini_read_real("main","mandatoryTutorial", 0);
+	global.mandatoryTutorial = 1;
 	
 	//--------  ---------//
 	global.enemiesInBestiary = ini_read_real("bestiary","number", 0);

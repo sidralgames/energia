@@ -12,7 +12,7 @@ function LowEnergyWarning()
 			
 			if (global.level = -2)
 			{
-				if !instance_exists(o_enchufePETA)
+				if !instance_exists(o_enchufePETA) && (global.energy <= 0)
 				{
 					draw_sprite_ext(s_trowPetaUI, imagePetaUI,o_playerShip.x,o_playerShip.y+45, 0.6, 0.6,image_angle, image_blend, 1);
 				}

@@ -138,36 +138,32 @@ if (room = Sala_Tutorial) && (global.level >= 1)
 			
 				if (point_distance(exM, eyM, o_playerShip.x, o_playerShip.y) > 400)
 				{
-					if (point_distance(exM, eyM, o_bulletExplic.x, o_bulletExplic.y) > 500)
-					{
 					
-						if (global.wallgrid_[# cx, cy] == FLOOR) &&
-						(global.wallgrid_[# cx+1, cy] == FLOOR) &&
-						(global.wallgrid_[# cx-1, cy] == FLOOR) //&&
+					if (global.wallgrid_[# cx, cy] == FLOOR) &&
+					(global.wallgrid_[# cx+1, cy] == FLOOR) &&
+					(global.wallgrid_[# cx-1, cy] == FLOOR) //&&
 						//(global.wallgrid_[# cx, cy-1] == FLOOR) &&
 						//(global.wallgrid_[# cx, cy+1] == FLOOR) 
+					{
+						if (spawners >= 1) 
 						{
-	
-							if (spawners >= 1) 
+							padreNear = instance_nearest(exM, eyM,o_enemySpawnerIndicator_F)
+							if point_distance(exM,eyM,padreNear.x, padreNear.y) < 200
 							{
-								padreNear = instance_nearest(exM, eyM,o_enemySpawnerIndicator_F)
-								if point_distance(exM,eyM,padreNear.x, padreNear.y) < 200
-								{
-							
-									instance_create(exM,eyM,o_enemySpawnerIndicator);
-									spawners+=1;
-									SpawnEnemyBasic(); 
-				
-									timesSpawner-=1;
-								}
-							}
-							else
-							{
+						
 								instance_create(exM,eyM,o_enemySpawnerIndicator);
-								SpawnEnemyFast();
-								timesSpawner-=1;
 								spawners+=1;
+								SpawnEnemyBasic(); 
+			
+								timesSpawner-=1;
 							}
+						}
+						else
+						{
+							instance_create(exM,eyM,o_enemySpawnerIndicator);
+							SpawnEnemyFast();
+							timesSpawner-=1;
+							spawners+=1;
 						}
 					}
 				}
