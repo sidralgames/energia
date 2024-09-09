@@ -26,62 +26,7 @@ function TutorialSecondPart()
 		//	}
 		//}
 
-		if (irandom(oddsEnchufeHP) == oddsEnchufeHP) && (enchufeHP = false)
-		{
-			nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
-			nextwall = instance_nearest(exM, eyM, o_wall)
-			if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 20)
-			{
-				if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 120)
-				{
-					instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Hp); 
-					enchufeHP = true;
-				}
-			}
-		}
-			
-		if (irandom(oddsEnchufeLaser) == oddsEnchufeLaser) && (enchufeLaser = false)
-		{
-			nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
-			nextwall = instance_nearest(exM, eyM, o_wall)
-			if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 20)
-			{
-				if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 120)
-				{
-					instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Laser); 
-					enchufeLaser = true;
-				}
-			}
-		}
-			
-		if (irandom(oddsEnchufeAmmo) == oddsEnchufeAmmo) && (enchufeAmmo = false)
-		{
-			nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
-			nextwall = instance_nearest(exM, eyM, o_wall)
-			if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 20)
-			{
-				if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 120)
-				{
-					instance_create_layer(exM,eyM,"Enchufes",o_enchufe_Ammo); 
-					enchufeAmmo = true;
-				}
-			}
-		}
-					
-		if (irandom(oddsEnchufeBomb) == oddsEnchufeBomb) && (enchufeBomb = false)
-		{
-			nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
-			nextwall = instance_nearest(exM, eyM, o_wall)
-						
-			if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 20)
-			{
-				if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 100)
-				{
-					instance_create_layer(exM,eyM,"Enchufes",o_enchufeBombs); 
-					enchufeBomb = true;
-				}
-			}
-		}
+		
 	}
 
 	

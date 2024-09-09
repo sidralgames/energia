@@ -2,6 +2,13 @@
 // You can write your code in this editor
 Controls_Input();
 
+if (global.inTutorial)
+{
+	if (key_buttonUP)
+	{
+		o_main.showControlsTut = !o_main.showControlsTut;
+	}
+}
 
 
 if (shielded = false) && ( (room != Sala_Upgade) && (room != Sala_MegaUpgrade) )

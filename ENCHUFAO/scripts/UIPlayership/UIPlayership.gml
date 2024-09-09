@@ -5,7 +5,7 @@ function UIPlayership()
 	if (room != Sala_Inicio)
 	{
 		
-		if (global.inTutorial = true) && instance_exists(o_tutorialManager)
+		if (global.inTutorial = true) && instance_exists(o_tutorialManager) && (global.level <=-1)
 		{
 			if (o_tutorialManager.pluggedInEnergyTut)
 			{
@@ -73,6 +73,18 @@ function UIPlayership()
 			else
 			{
 				imagePeta = 0;
+			}
+			
+			for (var a=0; a< floor(global.bombAmmo); a++)
+			{
+				if (global.bombIsClusterBomb)
+				{
+					draw_sprite_ext(s_bombUICluster, 0, __view_get( e__VW.XView, 0 )+16+ (a*19),__view_get( e__VW.YView, 0 )+62, 1,1,0,image_blend, image_alpha);
+				}
+				else
+				{
+					draw_sprite_ext(s_bombUI, 0, __view_get( e__VW.XView, 0 )+16+ (a*19),__view_get( e__VW.YView, 0 )+62, 1,1,0,image_blend, image_alpha);
+				}
 			}
 		
 			//for (var t=0; t< global.PETAAmmo; t++)

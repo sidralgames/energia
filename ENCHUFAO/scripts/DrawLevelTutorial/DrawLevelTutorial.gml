@@ -53,19 +53,16 @@ function DrawLevelTutorial()
 					{
 						TutorialZeroPart();
 					}
-					if (global.level = -1)
-					{
-						TutorialFirstPart();
-					}
-					else if (global.level = 0)
+					else if (global.level = -1)
 					{
 						TutorialFirstPart();
 						TutorialSecondPart();
 					}
-					else if (global.level = 1)
+					else if (global.level = 0)
 					{
 						TutorialFirstPart();
 						TutorialThirdPart();
+						
 					}
 		    } 
 	    }

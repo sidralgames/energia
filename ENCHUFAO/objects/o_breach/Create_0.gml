@@ -10,7 +10,7 @@
 	alarm[1] = hp;
 	image_speed = 0.75;
 	
-	if (room = Sala_0)
+	if (room = Sala_0) || (room = Sala_Tutorial)
 	{
 		instance_create_layer(x,y,"Banners",o_breachBanner)
 	}

@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+breachTutorial = false;
+showControlsTut = false;
 contLowEnergy = 30;
 imagePetaUI = 0;
 imageWorkin = 0;

@@ -4,7 +4,7 @@ function SlowMoIndicator()
 {
 	if instance_exists(o_playerShip) && (room != Sala_Inicio) && (global.assistedSlowmo == false)
 	{
-		if (room = Sala_0) || (room = Sala_SecondBoss) || (room = Sala_BossWorm) || (room = Sala_Upgade) || (room = Sala_MegaUpgrade) 
+		if (room = Sala_0) || (room = Sala_SecondBoss) || (room = Sala_BossWorm) || (room = Sala_Upgade) || (room = Sala_MegaUpgrade)  || (room = Sala_Tutorial) 
 		{
 			if (o_playerShip.key_BulletTime) && (o_playerShip.canSlowMotion) && (o_playerShip.slowmoAssistedTrue = false)
 			{

@@ -4,16 +4,7 @@
 alarm[1] = 70;
 alarm[2] = 20;
 
-if (room = Sala_Tutorial)
-{
-	oddsLaserV = 150;
-	oddsLaserH = 150;
-}
-else
-{
-	oddsLaserV = max(10, 65 - global.level);
-	oddsLaserH = max(10, 65 - global.level);
-}
+
 
 oddsDisc = max(20, 200 - global.level);
 
@@ -57,6 +48,19 @@ if (room = Sala_0)
 		oddsEnemyMouth = 3;
 		oddsTurret = 2
 	}
+}
+
+if (room = Sala_Tutorial)
+{
+	oddsLaserV = 150;
+	oddsLaserH = 150;
+	oddsEnemyMouth = 10
+	oddsTurret = 15
+}
+else
+{
+	oddsLaserV = max(10, 65 - global.level);
+	oddsLaserH = max(10, 65 - global.level);
 }
 // Inherit the parent event
 event_inherited();

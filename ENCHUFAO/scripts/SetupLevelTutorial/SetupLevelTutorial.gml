@@ -8,9 +8,9 @@ function SetupLevelTutorial(_xTiles, _yTiles, _maxFloor, _minFloor, _stepsTotal)
 	minFloor = _minFloor;
 	realSteps = 0;
 	
-	if (global.level <= -1)
+	if (global.level <= 0)
 	{
-		instance_create_layer(x,y,"Banners",o_tutorialManager);
+		instance_create_layer(x,y,"Main",o_tutorialManager);
 		
 		//global.infiniteEnergyIsOn = true;
 		global.infiniteAmmoIsOn = true;
@@ -45,11 +45,11 @@ function SetupLevelTutorial(_xTiles, _yTiles, _maxFloor, _minFloor, _stepsTotal)
 	PetasInLevelMax = 2;
 	PetasInLevel = 0;
 	
-	pilasInLevelMax = 4;
+	pilasInLevelMax = 3;
 	pilasInLevel = 0;
 	
 	petasLevel = 0;
-	petasMAx = 4;
+	petasMAx = 3;
 
 	__background_set( e__BG.X, 0, irandom(2000) );
 	__background_set( e__BG.Y, 0, irandom(1000) );
@@ -155,6 +155,7 @@ function SetupLevelTutorial(_xTiles, _yTiles, _maxFloor, _minFloor, _stepsTotal)
 	{
 		if (!enchufeFinal)
 		|| (totalFloor < minFloor) 
+		|| (petasLevel < 2)
 		{
 			instance_destroy();
 			room_restart();
@@ -164,7 +165,6 @@ function SetupLevelTutorial(_xTiles, _yTiles, _maxFloor, _minFloor, _stepsTotal)
 	{
 		if (!enchufe0) || (!enchufeFinal)
 		|| (totalFloor < minFloor) 
-		|| (!controls)
 		{
 			instance_destroy();
 			room_restart();
@@ -177,7 +177,6 @@ function SetupLevelTutorial(_xTiles, _yTiles, _maxFloor, _minFloor, _stepsTotal)
 		//|| (!enchufeCluster)
 		|| (!enchufeFinal)
 		|| (totalFloor < minFloor) 
-		|| (!controls)
 		{
 			instance_destroy();
 			room_restart();
@@ -190,7 +189,6 @@ function SetupLevelTutorial(_xTiles, _yTiles, _maxFloor, _minFloor, _stepsTotal)
 		//|| (!enchufeCluster)
 		|| (!enchufeFinal)
 		|| (totalFloor < minFloor) 
-		|| (!controls)
 		|| (pilasInLevel < 3)
 		{
 			instance_destroy();

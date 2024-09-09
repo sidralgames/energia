@@ -48,7 +48,7 @@ if (room = Sala_Tutorial)
 {
 	if (global.level < 0)
 	{
-		global.hp = 1;
+		global.hp = 2;
 	}
 	
 	//global.ammo = 0;
@@ -291,12 +291,12 @@ switch (global.spriteShip)
 
 if (global.level = -2)
 {
-	bnc = 0.95;
+	//bnc = 0.95;
 	global.infiniteEnergyIsOn = false;
-	global.energy = 0;
+	global.energy = 250;
 	
-	_hpush = (1 + random_range(0,1)) * choose (1, -1);
-	_vpush = (1 + random_range(0,1)) * choose (1, -1);
+	//_hpush = (1 + random_range(0,1)) * choose (1, -1);
+	//_vpush = (1 + random_range(0,1)) * choose (1, -1);
 	global.PETAAmmo = 1000;
 }
 

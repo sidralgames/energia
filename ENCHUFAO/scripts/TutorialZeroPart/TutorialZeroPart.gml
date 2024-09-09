@@ -20,16 +20,16 @@ function TutorialZeroPart()
 		}
 	}
 	
-	//if (irandom(oddsPeta) == oddsPeta) && (petasLevel <= petasMAx)
-	//{
-	//	nearEnchufe = instance_nearest(exM, eyM, o_enchufe_Final)
-	//	if instance_exists(nearEnchufe)
-	//	{
-	//		if (point_distance(exM, eyM, nearEnchufe.x, nearEnchufe.y) > 80)
-	//		{
-	//			instance_create_layer(exM,eyM,"Enchufes",o_enchufePETA); 
-	//			petasLevel += 1;
-	//		}
-	//	}
-	//}
+	if (irandom(oddsPeta) == oddsPeta) && (petasLevel <= petasMAx)
+	{
+		nearEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
+		if instance_exists(nearEnchufe)
+		{
+			if (point_distance(exM, eyM, nearEnchufe.x, nearEnchufe.y) > 120) && (petasLevel < petasMAx)
+			{
+				instance_create_layer(exM,eyM,"Enchufes",o_enchufePETA); 
+				petasLevel += 1;
+			}
+		}
+	}
 }

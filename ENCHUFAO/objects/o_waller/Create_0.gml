@@ -153,15 +153,15 @@ else if (room = Sala_Tutorial)
 {
 	if (global.level = -2)
 	{
-		SetupLevelTutorial(25, 17, 600, 120, 1500);
+		SetupLevelTutorial(29, 22, 600, 150, 2000);
 	}
 	else if (global.level = -1)
 	{
-		SetupLevelTutorial(32, 22, 900, 120, 2500);
+		SetupLevelTutorial(33, 25, 900, 150, 2500);
 	}
 	else if (global.level = 0)
 	{
-		SetupLevelTutorial(36, 30, 1000, 120, 3000);
+		SetupLevelTutorial(36, 30, 1000, 150, 3000);
 	}
 	else if (global.level = 1)
 	{

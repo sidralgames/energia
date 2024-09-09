@@ -39,22 +39,19 @@ if(room = Sala_0) || (room = Sala_SecondBoss) || (room = Sala_BossWorm)
 
 if (room = Sala_Tutorial)
 {
-	if (global.level >= 0)
+	//--- TURRET ---//
+	if !collision_circle(x,y,18,o_wall,false,true)
 	{
-		//--- TURRET ---//
-		if !collision_circle(x,y,18,o_wall,false,true)
+		if  point_distance(x,y,o_playerShip.x,o_playerShip.y)>100 && irandom(oddsTurret) == oddsTurret
 		{
-			if  point_distance(x,y,o_playerShip.x,o_playerShip.y)>100 && irandom(oddsTurret) == oddsTurret
-			{
-				instance_create_layer(x,y,"EnemiesHUE",o_torreta)
-			}
+			instance_create_layer(x,y,"EnemiesHUE",o_torreta)
 		}
-	
-		//--- ENEMY ANCHOR ---//
-		CreateEnemyAnchorWall();
-	
-		//--- LASER TRAP ---//
-		CreateLaserTrapWall();
 	}
+	
+	//--- ENEMY ANCHOR ---//
+	CreateEnemyAnchorWall();
+
+	//--- LASER TRAP ---//
+	CreateLaserTrapWall();
 }
 

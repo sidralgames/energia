@@ -6,11 +6,11 @@ switch (room)
 	{
 		if (global.level <=1)
 		{
-			num = irandom_range(110,225);
+			num = irandom_range(130,225);
 		}
 		else if (global.level > 1) && (global.level <=5)
 		{
-			num = irandom_range(50,225);
+			num = irandom_range(80,225);
 		}
 		else
 		{

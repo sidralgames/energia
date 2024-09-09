@@ -65,7 +65,7 @@ if instance_exists(o_playerShip)
 			if (ammoFirstTime = false)
 			{
 				global.infiniteAmmoIsOn = false;
-				global.ammo = 0;
+				global.ammo = 50;
 				ammoFirstTime = true;
 			}
 		}
@@ -97,11 +97,35 @@ if instance_exists(o_playerShip)
 			if (laserFirstTime = false)
 			{
 				global.infiniteLaserIsOn = false;
-				global.laser = 0;
+				global.laser = 50;
 				laserFirstTime = true;
 			}
 			pluggedInLaserTut = true
-	
 		}
 	}
+}
+
+if (canAssist)
+{
+	draw_sprite_ext(s_moveTutorial, 5, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+310,0.7,0.7,0,image_blend, image_alpha)	
+	
+	contToAssist--;
+	if (contToAssist <= 0)
+	{
+		global.assistedSlowmo = true;
+	}
+		
+	if (global.assistedSlowmo)
+	{	
+		if (o_playerShip.key_BulletTime)
+		{
+			global.assistedSlowmo = false;
+			canAssist = false;
+		}
+	}
+}
+
+if (alarm[2] <= 0)
+{
+	alarm[2] = 60;
 }

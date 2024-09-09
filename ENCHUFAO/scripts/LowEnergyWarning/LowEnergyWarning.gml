@@ -12,14 +12,9 @@ function LowEnergyWarning()
 			
 			if (global.level = -2)
 			{
-				if !instance_exists(o_enchufePETA) && (global.energy <= 0)
-				{
-					draw_sprite_ext(s_trowPetaUI, imagePetaUI,o_playerShip.x,o_playerShip.y+45, 0.6, 0.6,image_angle, image_blend, 1);
-				}
-				else
-				{
-					draw_sprite_ext(s_trowPetaUI, imagePetaUI,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+320, 0.9, 0.9,image_angle, image_blend, 1);
-				}
+			
+				draw_sprite_ext(s_trowPetaUI, imagePetaUI,o_playerShip.x,o_playerShip.y+45, 0.6, 0.6,image_angle, image_blend, 1);
+		
 			}
 			else
 			{
