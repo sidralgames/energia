@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"StatusConditionEnemy",
   "isCompatibility":false,
   "isDnD":false,

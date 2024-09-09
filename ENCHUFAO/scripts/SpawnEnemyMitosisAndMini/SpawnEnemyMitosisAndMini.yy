@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"SpawnEnemyMitosisAndMini",
   "isCompatibility":false,
   "isDnD":false,

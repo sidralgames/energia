@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeFireRatePlayer",
   "isCompatibility":false,
   "isDnD":false,

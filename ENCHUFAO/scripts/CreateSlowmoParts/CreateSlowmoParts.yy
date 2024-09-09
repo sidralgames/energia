@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateSlowmoParts",
   "isCompatibility":false,
   "isDnD":false,

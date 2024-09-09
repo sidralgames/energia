@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"UnplugPETA",
   "isCompatibility":false,
   "isDnD":false,

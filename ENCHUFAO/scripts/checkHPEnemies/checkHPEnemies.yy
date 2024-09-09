@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"checkHPEnemies",
   "isCompatibility":false,
   "isDnD":false,

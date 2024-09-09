@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddBestiaryEnemyLaserTrap",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMRoom":"",
+  "$GMRoom":"v1",
   "%Name":"Sala_SecondBoss",
   "creationCodeFile":"rooms/Sala_SecondBoss/RoomCreationCode.gml",
   "inheritCode":false,
@@ -104,10 +104,10 @@
         {"name":"g_HueShift","type":0,"value":"0.5",},
         {"name":"g_HueSaturation","type":0,"value":"1",},
       ],"resourceType":"GMREffectLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
-    {"$GMRTileLayer":"","%Name":"Tiles","depth":3400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":180,"SerialiseWidth":250,"TileCompressedData":[
-          -23,0,-227,-2147483648,-23,0,-227,-2147483648,-23,0,-227,-2147483648,-23,0,-227,-2147483648,-23,0,-227,
-          -2147483648,-23,0,-227,-2147483648,-23,0,-227,-2147483648,-23,0,-227,-2147483648,-23,0,-227,-2147483648,
-          -23,0,-227,-2147483648,-23,0,-227,-2147483648,-23,0,-227,-2147483648,-23,0,-41977,-2147483648,
+    {"$GMRTileLayer":"","%Name":"Tiles","depth":3400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":63,"SerialiseWidth":63,"TileCompressedData":[
+          -23,0,-40,-2147483648,-23,0,-40,-2147483648,-23,0,-40,-2147483648,-23,0,-40,-2147483648,-23,0,-40,-2147483648,
+          -23,0,-40,-2147483648,-23,0,-40,-2147483648,-23,0,-40,-2147483648,-23,0,-40,-2147483648,-23,0,-40,-2147483648,
+          -23,0,-40,-2147483648,-23,0,-40,-2147483648,-23,0,-3190,-2147483648,
         ],"TileDataFormat":1,},"tilesetId":{"name":"tileset2","path":"tilesets/tileset2/tileset2.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRInstanceLayer":"","%Name":"LightPlayer","depth":3500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"LightPlayer","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Meteors","depth":3600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Meteors","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
@@ -142,10 +142,10 @@
   "resourceType":"GMRoom",
   "resourceVersion":"2.0",
   "roomSettings":{
-    "Height":5760,
+    "Height":2000,
     "inheritRoomSettings":false,
     "persistent":false,
-    "Width":8000,
+    "Width":2000,
   },
   "sequenceId":null,
   "views":[

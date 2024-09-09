@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"EnemiesToSpawn_WormBossRoom",
   "isCompatibility":false,
   "isDnD":false,

@@ -17,7 +17,7 @@ if (image_index >= 30)
 if (image_index >=34)
 {
 
-	instance_deactivate_object(o_pauseMenu);
+	//instance_deactivate_object(o_pauseMenu);
 	instance_destroy();
 }
 

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"PlacePetasInTiles",
   "isCompatibility":false,
   "isDnD":false,

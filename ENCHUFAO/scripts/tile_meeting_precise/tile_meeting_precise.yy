@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"tile_meeting_precise",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"BestiaryDrawPaginator",
   "isCompatibility":false,
   "isDnD":false,

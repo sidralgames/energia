@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeClusterBombPlayer",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,7 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 randomize();
-
+height_= 0;
+width_ = 0;
 global.enchufesexistentes=0;
 
 o_main.endingLevel = false;

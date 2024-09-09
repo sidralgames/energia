@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"EnemyLeaveTrail",
   "isCompatibility":false,
   "isDnD":false,

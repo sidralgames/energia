@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"LaserLogicPlayer",
   "isCompatibility":false,
   "isDnD":false,

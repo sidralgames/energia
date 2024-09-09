@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CollisionTileBounce",
   "isCompatibility":false,
   "isDnD":false,

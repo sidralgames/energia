@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"StrandedShipLightColor",
   "isCompatibility":false,
   "isDnD":false,

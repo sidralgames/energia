@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddBestiaryEnemyBadChip",
   "isCompatibility":false,
   "isDnD":false,

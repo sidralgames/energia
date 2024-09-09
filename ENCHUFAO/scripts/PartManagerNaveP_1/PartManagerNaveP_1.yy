@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"PartManagerNaveP_1",
   "isCompatibility":false,
   "isDnD":false,

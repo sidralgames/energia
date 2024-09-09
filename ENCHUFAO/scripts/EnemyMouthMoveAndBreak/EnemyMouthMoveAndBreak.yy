@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"EnemyMouthMoveAndBreak",
   "isCompatibility":false,
   "isDnD":false,

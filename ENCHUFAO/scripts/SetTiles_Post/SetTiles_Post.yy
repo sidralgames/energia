@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"SetTiles_Post",
   "isCompatibility":false,
   "isDnD":false,

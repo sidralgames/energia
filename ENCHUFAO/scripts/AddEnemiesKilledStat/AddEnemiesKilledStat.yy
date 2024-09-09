@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddEnemiesKilledStat",
   "isCompatibility":false,
   "isDnD":false,

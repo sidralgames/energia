@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"infoBestiaryEnemyBasic",
   "isCompatibility":false,
   "isDnD":false,

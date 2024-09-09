@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddBestiaryEnemyCapsuleMimic",
   "isCompatibility":false,
   "isDnD":false,

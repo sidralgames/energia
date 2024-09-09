@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"EnemyBasicChasingIA_Boss",
   "isCompatibility":false,
   "isDnD":false,

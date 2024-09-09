@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"ResetEnchufesUpgrades",
   "isCompatibility":false,
   "isDnD":false,

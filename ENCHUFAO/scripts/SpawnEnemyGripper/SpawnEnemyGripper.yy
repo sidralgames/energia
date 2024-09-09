@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"SpawnEnemyGripper",
   "isCompatibility":false,
   "isDnD":false,

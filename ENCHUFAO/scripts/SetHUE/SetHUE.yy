@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"SetHUE",
   "isCompatibility":false,
   "isDnD":false,

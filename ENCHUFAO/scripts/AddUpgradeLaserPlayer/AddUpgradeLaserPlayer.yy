@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeLaserPlayer",
   "isCompatibility":false,
   "isDnD":false,

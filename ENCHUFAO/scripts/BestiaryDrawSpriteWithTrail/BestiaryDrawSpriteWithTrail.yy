@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"BestiaryDrawSpriteWithTrail",
   "isCompatibility":false,
   "isDnD":false,

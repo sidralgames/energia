@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddKillAndUnlock",
   "isCompatibility":false,
   "isDnD":false,

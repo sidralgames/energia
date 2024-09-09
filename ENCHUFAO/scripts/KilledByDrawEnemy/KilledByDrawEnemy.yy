@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"KilledByDrawEnemy",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateDiscTrapWall",
   "isCompatibility":false,
   "isDnD":false,

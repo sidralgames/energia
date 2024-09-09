@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"TemporaryChips",
   "isCompatibility":false,
   "isDnD":false,

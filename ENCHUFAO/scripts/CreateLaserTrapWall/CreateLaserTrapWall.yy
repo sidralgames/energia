@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateLaserTrapWall",
   "isCompatibility":false,
   "isDnD":false,

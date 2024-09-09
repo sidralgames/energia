@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"SetTimeSlow",
   "isCompatibility":false,
   "isDnD":false,

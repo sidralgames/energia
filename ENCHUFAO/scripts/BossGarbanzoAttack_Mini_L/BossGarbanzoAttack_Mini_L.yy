@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"BossGarbanzoAttack_Mini_L",
   "isCompatibility":false,
   "isDnD":false,

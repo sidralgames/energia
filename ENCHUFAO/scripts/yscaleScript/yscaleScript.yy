@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"yscaleScript",
   "isCompatibility":false,
   "isDnD":false,

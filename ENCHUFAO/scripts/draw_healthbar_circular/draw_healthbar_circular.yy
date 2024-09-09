@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"draw_healthbar_circular",
   "isCompatibility":false,
   "isDnD":false,

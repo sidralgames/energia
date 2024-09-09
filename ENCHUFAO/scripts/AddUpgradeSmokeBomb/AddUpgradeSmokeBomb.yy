@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeSmokeBomb",
   "isCompatibility":false,
   "isDnD":false,

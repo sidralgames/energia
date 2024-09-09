@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddBestiaryEnemyWormageddon_",
   "isCompatibility":false,
   "isDnD":false,

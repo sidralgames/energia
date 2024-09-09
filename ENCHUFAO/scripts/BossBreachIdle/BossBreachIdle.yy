@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"BossBreachIdle",
   "isCompatibility":false,
   "isDnD":false,

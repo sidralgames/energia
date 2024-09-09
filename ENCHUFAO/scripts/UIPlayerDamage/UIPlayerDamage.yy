@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"UIPlayerDamage",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeHP",
   "isCompatibility":false,
   "isDnD":false,

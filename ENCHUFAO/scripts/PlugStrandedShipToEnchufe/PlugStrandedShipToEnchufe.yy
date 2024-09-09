@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"PlugStrandedShipToEnchufe",
   "isCompatibility":false,
   "isDnD":false,

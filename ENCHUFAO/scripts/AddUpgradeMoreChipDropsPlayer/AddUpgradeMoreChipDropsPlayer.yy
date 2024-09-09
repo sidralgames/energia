@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeMoreChipDropsPlayer",
   "isCompatibility":false,
   "isDnD":false,

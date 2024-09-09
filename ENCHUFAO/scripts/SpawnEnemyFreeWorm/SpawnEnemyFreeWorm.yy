@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"SpawnEnemyFreeWorm",
   "isCompatibility":false,
   "isDnD":false,

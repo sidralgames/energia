@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CheckUpgradesOfEnchufe",
   "isCompatibility":false,
   "isDnD":false,

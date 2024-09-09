@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddBestiaryEnemySniper",
   "isCompatibility":false,
   "isDnD":false,

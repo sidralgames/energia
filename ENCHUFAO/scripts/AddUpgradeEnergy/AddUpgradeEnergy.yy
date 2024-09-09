@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeEnergy",
   "isCompatibility":false,
   "isDnD":false,

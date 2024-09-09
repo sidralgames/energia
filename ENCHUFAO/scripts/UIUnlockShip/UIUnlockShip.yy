@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"UIUnlockShip",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeBonusPlayer",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"LaserEnemyShoot",
   "isCompatibility":false,
   "isDnD":false,

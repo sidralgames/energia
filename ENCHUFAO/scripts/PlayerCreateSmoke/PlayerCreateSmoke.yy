@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"PlayerCreateSmoke",
   "isCompatibility":false,
   "isDnD":false,

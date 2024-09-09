@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeOvercharge",
   "isCompatibility":false,
   "isDnD":false,

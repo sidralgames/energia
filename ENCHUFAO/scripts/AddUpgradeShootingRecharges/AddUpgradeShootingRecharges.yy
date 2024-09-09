@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeShootingRecharges",
   "isCompatibility":false,
   "isDnD":false,

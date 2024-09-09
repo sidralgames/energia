@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"DrawStatsUpgrades",
   "isCompatibility":false,
   "isDnD":false,

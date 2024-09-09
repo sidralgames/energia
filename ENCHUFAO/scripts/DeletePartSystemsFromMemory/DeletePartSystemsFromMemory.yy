@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"DeletePartSystemsFromMemory",
   "isCompatibility":false,
   "isDnD":false,

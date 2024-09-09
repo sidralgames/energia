@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"UIBossWorm",
   "isCompatibility":false,
   "isDnD":false,

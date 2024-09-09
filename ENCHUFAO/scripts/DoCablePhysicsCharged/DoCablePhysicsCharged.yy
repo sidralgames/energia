@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"DoCablePhysicsCharged",
   "isCompatibility":false,
   "isDnD":false,

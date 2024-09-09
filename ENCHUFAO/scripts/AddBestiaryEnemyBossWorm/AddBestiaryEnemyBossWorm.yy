@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddBestiaryEnemyBossWorm",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"verletFunctions",
   "isCompatibility":false,
   "isDnD":false,

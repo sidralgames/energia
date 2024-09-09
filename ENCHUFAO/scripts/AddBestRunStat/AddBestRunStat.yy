@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddBestRunStat",
   "isCompatibility":false,
   "isDnD":false,

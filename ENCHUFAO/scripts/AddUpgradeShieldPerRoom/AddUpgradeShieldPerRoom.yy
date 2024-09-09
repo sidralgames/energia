@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeShieldPerRoom",
   "isCompatibility":false,
   "isDnD":false,

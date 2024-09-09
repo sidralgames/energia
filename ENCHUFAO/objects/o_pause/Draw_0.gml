@@ -2,7 +2,7 @@
 // You can write your code in this editor
 if (pause)
 {
-	instance_activate_object(o_pauseMenu);
+	//instance_activate_object(o_pauseMenu);
 	surface_set_target(application_surface);
 	if (surface_exists(pauseSurf)) 
 	{
@@ -21,7 +21,7 @@ if (key_start)
 {
 	//addInfoEnemiesKilled();
 
-	instance_activate_object(o_pauseMenu);
+	//instance_activate_object(o_pauseMenu);
 	if instance_exists(o_main)
 	{
 		o_main.isPaused = true;

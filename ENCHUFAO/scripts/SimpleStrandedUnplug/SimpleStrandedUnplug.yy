@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"SimpleStrandedUnplug",
   "isCompatibility":false,
   "isDnD":false,

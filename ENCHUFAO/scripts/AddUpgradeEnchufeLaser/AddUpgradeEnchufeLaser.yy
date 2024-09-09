@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeEnchufeLaser",
   "isCompatibility":false,
   "isDnD":false,

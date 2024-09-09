@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeRecoverBullet",
   "isCompatibility":false,
   "isDnD":false,

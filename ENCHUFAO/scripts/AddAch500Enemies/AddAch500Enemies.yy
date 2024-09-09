@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddAch500Enemies",
   "isCompatibility":false,
   "isDnD":false,

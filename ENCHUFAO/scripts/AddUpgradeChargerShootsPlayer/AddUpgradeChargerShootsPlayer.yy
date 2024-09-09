@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeChargerShootsPlayer",
   "isCompatibility":false,
   "isDnD":false,

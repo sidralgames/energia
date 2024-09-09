@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddBestiaryEnemyMitothree",
   "isCompatibility":false,
   "isDnD":false,

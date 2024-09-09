@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateSecretEnchufe",
   "isCompatibility":false,
   "isDnD":false,

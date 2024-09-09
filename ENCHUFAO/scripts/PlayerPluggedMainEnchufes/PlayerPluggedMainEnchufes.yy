@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"PlayerPluggedMainEnchufes",
   "isCompatibility":false,
   "isDnD":false,

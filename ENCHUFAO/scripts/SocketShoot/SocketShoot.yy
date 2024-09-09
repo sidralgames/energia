@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"SocketShoot",
   "isCompatibility":false,
   "isDnD":false,

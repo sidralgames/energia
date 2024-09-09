@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeDobleDoblePlayer",
   "isCompatibility":false,
   "isDnD":false,

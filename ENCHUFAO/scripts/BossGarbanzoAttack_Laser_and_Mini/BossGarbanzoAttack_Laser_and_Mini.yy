@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"BossGarbanzoAttack_Laser_and_Mini",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"GetTimeConnected",
   "isCompatibility":false,
   "isDnD":false,

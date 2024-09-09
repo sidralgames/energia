@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"DrawStatusConditionEnemies",
   "isCompatibility":false,
   "isDnD":false,

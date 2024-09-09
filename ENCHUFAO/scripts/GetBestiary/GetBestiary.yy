@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"GetBestiary",
   "isCompatibility":false,
   "isDnD":false,

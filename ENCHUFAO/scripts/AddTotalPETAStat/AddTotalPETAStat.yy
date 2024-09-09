@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddTotalPETAStat",
   "isCompatibility":false,
   "isDnD":false,

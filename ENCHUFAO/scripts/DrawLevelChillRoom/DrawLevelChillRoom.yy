@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"DrawLevelChillRoom",
   "isCompatibility":false,
   "isDnD":false,

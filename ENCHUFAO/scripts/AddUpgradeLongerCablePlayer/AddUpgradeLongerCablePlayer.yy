@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeLongerCablePlayer",
   "isCompatibility":false,
   "isDnD":false,

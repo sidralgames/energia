@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"ChangeNearTiles",
   "isCompatibility":false,
   "isDnD":false,

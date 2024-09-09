@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"SpawnEnemyMiniBreach",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddExplosionPurple",
   "isCompatibility":false,
   "isDnD":false,

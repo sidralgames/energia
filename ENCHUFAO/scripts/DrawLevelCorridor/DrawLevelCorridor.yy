@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"DrawLevelCorridor",
   "isCompatibility":false,
   "isDnD":false,

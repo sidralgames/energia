@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"GameOverDrawTurretEnemy",
   "isCompatibility":false,
   "isDnD":false,

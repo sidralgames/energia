@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeSlowerDischarge",
   "isCompatibility":false,
   "isDnD":false,

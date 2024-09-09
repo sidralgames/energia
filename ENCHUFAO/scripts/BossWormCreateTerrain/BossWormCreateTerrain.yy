@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"BossWormCreateTerrain",
   "isCompatibility":false,
   "isDnD":false,

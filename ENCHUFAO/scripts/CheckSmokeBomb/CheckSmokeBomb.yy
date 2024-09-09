@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CheckSmokeBomb",
   "isCompatibility":false,
   "isDnD":false,

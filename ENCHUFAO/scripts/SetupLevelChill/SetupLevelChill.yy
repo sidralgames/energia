@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"SetupLevelChill",
   "isCompatibility":false,
   "isDnD":false,

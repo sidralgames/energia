@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeAmmoPlayer",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddMegaUpgradeCavalry",
   "isCompatibility":false,
   "isDnD":false,

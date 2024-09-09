@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddBestiaryEnemyNibblade",
   "isCompatibility":false,
   "isDnD":false,

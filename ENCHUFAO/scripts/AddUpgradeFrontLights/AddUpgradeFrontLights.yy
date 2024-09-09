@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeFrontLights",
   "isCompatibility":false,
   "isDnD":false,

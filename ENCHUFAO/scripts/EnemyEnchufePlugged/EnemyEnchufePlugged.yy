@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"EnemyEnchufePlugged",
   "isCompatibility":false,
   "isDnD":false,

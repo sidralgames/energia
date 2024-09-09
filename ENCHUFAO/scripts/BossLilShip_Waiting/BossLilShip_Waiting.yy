@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"BossLilShip_Waiting",
   "isCompatibility":false,
   "isDnD":false,

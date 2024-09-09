@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"BossBreachFading",
   "isCompatibility":false,
   "isDnD":false,

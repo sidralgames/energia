@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"ActivateAndDestroy",
   "isCompatibility":false,
   "isDnD":false,

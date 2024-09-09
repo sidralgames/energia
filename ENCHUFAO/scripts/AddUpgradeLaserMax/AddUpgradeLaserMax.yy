@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeLaserMax",
   "isCompatibility":false,
   "isDnD":false,

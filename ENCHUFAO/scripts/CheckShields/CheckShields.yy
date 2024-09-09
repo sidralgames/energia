@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CheckShields",
   "isCompatibility":false,
   "isDnD":false,

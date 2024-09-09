@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"DoCablePhysics",
   "isCompatibility":false,
   "isDnD":false,

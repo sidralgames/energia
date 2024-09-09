@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"BestiaryDrawEnemyInfo",
   "isCompatibility":false,
   "isDnD":false,

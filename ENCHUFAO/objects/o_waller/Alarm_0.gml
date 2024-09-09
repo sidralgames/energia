@@ -1,4 +1,6 @@
 /// @description GRID
+ 
+
 instance_create(x,y,o_gridRoom)
 
 if !audio_is_playing(global.song) && (room != Sala_ChillRoom)

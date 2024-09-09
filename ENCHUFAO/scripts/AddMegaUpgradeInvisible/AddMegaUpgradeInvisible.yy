@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddMegaUpgradeInvisible",
   "isCompatibility":false,
   "isDnD":false,

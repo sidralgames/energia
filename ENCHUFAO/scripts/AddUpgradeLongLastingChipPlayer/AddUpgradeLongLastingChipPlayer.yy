@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeLongLastingChipPlayer",
   "isCompatibility":false,
   "isDnD":false,

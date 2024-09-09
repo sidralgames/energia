@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"SetTemporaryWalls",
   "isCompatibility":false,
   "isDnD":false,

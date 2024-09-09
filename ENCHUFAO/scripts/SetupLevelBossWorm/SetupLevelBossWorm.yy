@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"SetupLevelBossWorm",
   "isCompatibility":false,
   "isDnD":false,

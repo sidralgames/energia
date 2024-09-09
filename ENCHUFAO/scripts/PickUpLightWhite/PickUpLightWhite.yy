@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"PickUpLightWhite",
   "isCompatibility":false,
   "isDnD":false,

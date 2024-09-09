@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"PluggedToEnchufe",
   "isCompatibility":false,
   "isDnD":false,

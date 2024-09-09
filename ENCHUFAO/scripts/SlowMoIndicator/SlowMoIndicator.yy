@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"SlowMoIndicator",
   "isCompatibility":false,
   "isDnD":false,

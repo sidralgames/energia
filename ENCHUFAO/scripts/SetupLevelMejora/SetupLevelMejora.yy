@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"SetupLevelMejora",
   "isCompatibility":false,
   "isDnD":false,

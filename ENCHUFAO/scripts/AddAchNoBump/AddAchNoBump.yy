@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddAchNoBump",
   "isCompatibility":false,
   "isDnD":false,

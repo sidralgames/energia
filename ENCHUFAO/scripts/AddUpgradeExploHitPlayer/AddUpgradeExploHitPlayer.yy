@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeExploHitPlayer",
   "isCompatibility":false,
   "isDnD":false,

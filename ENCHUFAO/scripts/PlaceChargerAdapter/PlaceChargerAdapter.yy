@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"PlaceChargerAdapter",
   "isCompatibility":false,
   "isDnD":false,

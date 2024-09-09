@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CheckBossFading",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CheckExternalBattery",
   "isCompatibility":false,
   "isDnD":false,

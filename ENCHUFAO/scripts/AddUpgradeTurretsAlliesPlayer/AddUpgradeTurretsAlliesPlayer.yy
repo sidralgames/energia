@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeTurretsAlliesPlayer",
   "isCompatibility":false,
   "isDnD":false,

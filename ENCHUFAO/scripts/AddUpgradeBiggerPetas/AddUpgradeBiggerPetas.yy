@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeBiggerPetas",
   "isCompatibility":false,
   "isDnD":false,

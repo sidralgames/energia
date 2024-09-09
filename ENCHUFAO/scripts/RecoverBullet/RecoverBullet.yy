@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"RecoverBullet",
   "isCompatibility":false,
   "isDnD":false,

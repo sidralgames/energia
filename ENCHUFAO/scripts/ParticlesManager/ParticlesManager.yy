@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"ParticlesManager",
   "isCompatibility":false,
   "isDnD":false,

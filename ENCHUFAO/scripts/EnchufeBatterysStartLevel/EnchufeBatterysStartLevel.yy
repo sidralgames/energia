@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"EnchufeBatterysStartLevel",
   "isCompatibility":false,
   "isDnD":false,

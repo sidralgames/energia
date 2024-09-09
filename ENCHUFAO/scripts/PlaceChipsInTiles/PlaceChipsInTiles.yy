@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"PlaceChipsInTiles",
   "isCompatibility":false,
   "isDnD":false,

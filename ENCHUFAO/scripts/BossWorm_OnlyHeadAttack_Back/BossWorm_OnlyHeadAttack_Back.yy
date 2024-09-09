@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"BossWorm_OnlyHeadAttack_Back",
   "isCompatibility":false,
   "isDnD":false,

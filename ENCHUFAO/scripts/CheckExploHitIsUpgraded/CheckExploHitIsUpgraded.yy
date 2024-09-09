@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CheckExploHitIsUpgraded",
   "isCompatibility":false,
   "isDnD":false,

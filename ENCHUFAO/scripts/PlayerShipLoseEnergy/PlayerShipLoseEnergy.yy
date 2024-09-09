@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"PlayerShipLoseEnergy",
   "isCompatibility":false,
   "isDnD":false,

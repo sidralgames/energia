@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"ActivateSEZAR",
   "isCompatibility":false,
   "isDnD":false,

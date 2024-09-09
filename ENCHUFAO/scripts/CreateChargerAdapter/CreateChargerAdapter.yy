@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateChargerAdapter",
   "isCompatibility":false,
   "isDnD":false,

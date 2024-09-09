@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"DeleteFontsFromMemory",
   "isCompatibility":false,
   "isDnD":false,

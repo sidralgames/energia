@@ -93,3 +93,5 @@ if (global.changingTiles)
 	}
 }
 
+room_set_height(Sala_0, room_height);
+room_set_width(Sala_0, room_width);

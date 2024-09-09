@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddShipRed",
   "isCompatibility":false,
   "isDnD":false,

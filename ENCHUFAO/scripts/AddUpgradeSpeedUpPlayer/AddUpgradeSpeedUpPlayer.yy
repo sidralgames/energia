@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeSpeedUpPlayer",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"DeleteGridsFromMemory",
   "isCompatibility":false,
   "isDnD":false,

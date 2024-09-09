@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"LowEnergyWarning",
   "isCompatibility":false,
   "isDnD":false,

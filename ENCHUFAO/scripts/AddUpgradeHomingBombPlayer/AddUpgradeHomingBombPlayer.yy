@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeHomingBombPlayer",
   "isCompatibility":false,
   "isDnD":false,

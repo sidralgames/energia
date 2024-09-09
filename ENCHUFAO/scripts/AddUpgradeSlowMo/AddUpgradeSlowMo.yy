@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeSlowMo",
   "isCompatibility":false,
   "isDnD":false,

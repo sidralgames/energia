@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"EnemyMouthFree_PluggedAttack",
   "isCompatibility":false,
   "isDnD":false,

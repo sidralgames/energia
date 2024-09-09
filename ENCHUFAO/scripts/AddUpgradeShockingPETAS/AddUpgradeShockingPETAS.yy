@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeShockingPETAS",
   "isCompatibility":false,
   "isDnD":false,

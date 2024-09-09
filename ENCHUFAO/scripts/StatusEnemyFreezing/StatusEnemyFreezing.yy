@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"StatusEnemyFreezing",
   "isCompatibility":false,
   "isDnD":false,

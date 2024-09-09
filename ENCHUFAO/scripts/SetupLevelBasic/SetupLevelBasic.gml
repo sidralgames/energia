@@ -23,10 +23,13 @@ function SetupLevelBasic(_maxFloor, _minFloor, _hCells, _vCells, _stepsTotal)
 	__background_set( e__BG.X, 0, irandom(2000) );
 	__background_set( e__BG.Y, 0, irandom(1000) );
 
+	//room_set_width(Sala_0, (32 * _hCells)); // = 42 celdas
+	//room_set_height(Sala_0, (32 * _vCells));// = 1280 = 40 celdas
+	room_width = (32 * _hCells); // = 42 celdas
+	room_height = (32 * _vCells); // = 1280 = 40 celdas
 
-	room_width = (CELL_WIDTH/32) * (32 * _hCells); // = 42 celdas
-	room_height = (CELL_HEIGHT/32) *(32 * _vCells); // = 1280 = 40 celdas
-
+	rW = room_width;
+	rH = room_height;
 
 	__view_set( e__VW.HView, 0, __view_get( e__VW.HPort, 0 ) );
 	__view_set( e__VW.WView, 0, __view_get( e__VW.WPort, 0 ) );
@@ -40,8 +43,9 @@ function SetupLevelBasic(_maxFloor, _minFloor, _hCells, _vCells, _stepsTotal)
 	 _wall_map_id = layer_tilemap_get_id("Tiles");
 
 	//set up grid
-	width_ = room_width div CELL_WIDTH;
-	height_ = room_height div CELL_HEIGHT;
+	width_ = rW div CELL_WIDTH;
+	height_ = rH div CELL_HEIGHT;
+	
 	global.wallgrid_ = ds_grid_create(width_+1,height_+1);
 	ds_grid_set_region(global.wallgrid_, 0, 0, width_-1, height_-1, VOID);
 

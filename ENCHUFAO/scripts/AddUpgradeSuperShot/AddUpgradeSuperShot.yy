@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeSuperShot",
   "isCompatibility":false,
   "isDnD":false,

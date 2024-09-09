@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"tilemap_set_rectangle",
   "isCompatibility":false,
   "isDnD":false,

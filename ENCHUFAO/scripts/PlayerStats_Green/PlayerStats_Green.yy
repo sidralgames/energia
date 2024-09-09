@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"PlayerStats_Green",
   "isCompatibility":false,
   "isDnD":false,

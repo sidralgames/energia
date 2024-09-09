@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateEnemyAnchorWall",
   "isCompatibility":false,
   "isDnD":false,

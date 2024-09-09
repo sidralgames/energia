@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"DrawUpgradeNames",
   "isCompatibility":false,
   "isDnD":false,

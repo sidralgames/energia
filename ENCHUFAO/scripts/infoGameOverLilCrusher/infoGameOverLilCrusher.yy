@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"infoGameOverLilCrusher",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"DeleteAudioEmittersFromMemory",
   "isCompatibility":false,
   "isDnD":false,

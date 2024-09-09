@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"EnemySniperIA",
   "isCompatibility":false,
   "isDnD":false,

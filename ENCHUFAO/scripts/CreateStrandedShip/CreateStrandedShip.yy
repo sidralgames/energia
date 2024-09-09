@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateStrandedShip",
   "isCompatibility":false,
   "isDnD":false,

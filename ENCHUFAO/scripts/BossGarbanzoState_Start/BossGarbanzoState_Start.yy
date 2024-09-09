@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"BossGarbanzoState_Start",
   "isCompatibility":false,
   "isDnD":false,

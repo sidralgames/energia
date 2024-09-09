@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeEnchufeAmmo",
   "isCompatibility":false,
   "isDnD":false,

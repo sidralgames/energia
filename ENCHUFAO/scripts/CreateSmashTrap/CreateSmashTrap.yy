@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateSmashTrap",
   "isCompatibility":false,
   "isDnD":false,

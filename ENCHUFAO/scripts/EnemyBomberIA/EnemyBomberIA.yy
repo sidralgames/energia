@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"EnemyBomberIA",
   "isCompatibility":false,
   "isDnD":false,

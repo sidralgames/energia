@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"FreeMemory",
   "isCompatibility":false,
   "isDnD":false,

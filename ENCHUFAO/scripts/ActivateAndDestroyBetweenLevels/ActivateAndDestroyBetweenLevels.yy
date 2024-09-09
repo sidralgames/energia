@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"ActivateAndDestroyBetweenLevels",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"EnemiesToSpawnLVL7To9",
   "isCompatibility":false,
   "isDnD":false,

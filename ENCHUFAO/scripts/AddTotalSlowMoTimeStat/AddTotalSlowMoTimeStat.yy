@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddTotalSlowMoTimeStat",
   "isCompatibility":false,
   "isDnD":false,

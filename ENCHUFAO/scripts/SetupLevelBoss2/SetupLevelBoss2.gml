@@ -25,8 +25,8 @@ function SetupLevelBoss2()
 
 	//Set de grid height and width
 	
-	room_width = (CELL_WIDTH/32) *800; //
-	room_height = (CELL_HEIGHT/32) *(320*4);
+	room_width = (CELL_WIDTH/32) * (25 * 32); //
+	room_height = (CELL_HEIGHT/32) *(40 * 32);
 	
 
 	

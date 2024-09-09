@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"PlayerStats_MP3_menu",
   "isCompatibility":false,
   "isDnD":false,

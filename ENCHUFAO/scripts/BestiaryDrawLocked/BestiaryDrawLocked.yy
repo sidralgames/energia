@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"BestiaryDrawLocked",
   "isCompatibility":false,
   "isDnD":false,

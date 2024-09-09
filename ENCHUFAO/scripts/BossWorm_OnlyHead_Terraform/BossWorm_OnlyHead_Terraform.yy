@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"BossWorm_OnlyHead_Terraform",
   "isCompatibility":false,
   "isDnD":false,

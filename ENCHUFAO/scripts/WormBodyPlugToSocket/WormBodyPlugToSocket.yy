@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"WormBodyPlugToSocket",
   "isCompatibility":false,
   "isDnD":false,

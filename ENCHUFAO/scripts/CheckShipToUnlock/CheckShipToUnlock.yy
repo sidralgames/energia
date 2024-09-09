@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CheckShipToUnlock",
   "isCompatibility":false,
   "isDnD":false,

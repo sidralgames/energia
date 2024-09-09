@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"EnchufesLightWhite",
   "isCompatibility":false,
   "isDnD":false,

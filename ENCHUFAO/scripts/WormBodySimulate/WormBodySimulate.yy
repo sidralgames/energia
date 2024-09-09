@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"WormBodySimulate",
   "isCompatibility":false,
   "isDnD":false,

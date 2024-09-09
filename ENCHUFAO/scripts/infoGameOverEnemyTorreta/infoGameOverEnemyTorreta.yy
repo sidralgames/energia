@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"infoGameOverEnemyTorreta",
   "isCompatibility":false,
   "isDnD":false,

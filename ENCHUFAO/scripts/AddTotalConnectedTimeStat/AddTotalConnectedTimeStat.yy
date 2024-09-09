@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddTotalConnectedTimeStat",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"UnplugStrandedShipReady",
   "isCompatibility":false,
   "isDnD":false,

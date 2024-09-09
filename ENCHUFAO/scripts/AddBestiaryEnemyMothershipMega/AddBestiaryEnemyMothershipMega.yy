@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddBestiaryEnemyMothershipMega",
   "isCompatibility":false,
   "isDnD":false,

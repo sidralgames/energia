@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddUpgradeChargerElectro",
   "isCompatibility":false,
   "isDnD":false,

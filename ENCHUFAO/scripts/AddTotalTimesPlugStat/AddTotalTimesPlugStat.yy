@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"AddTotalTimesPlugStat",
   "isCompatibility":false,
   "isDnD":false,

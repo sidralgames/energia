@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"GetStrandedShipHP",
   "isCompatibility":false,
   "isDnD":false,
