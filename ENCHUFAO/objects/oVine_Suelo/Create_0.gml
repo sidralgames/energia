@@ -8,7 +8,7 @@ event_inherited();
 
 canCollide = true;
 inScreen = 0;
-verletSystem1 = new verletSystem(random_range(0.3,0.5), -random_range(0.6,0.8));
+verletSystem1 = new verletSystem(-random_range(0.3,0.7), -random_range(0.6,0.8));
 
 var _wall_map_id = layer_tilemap_get_id("Tiles");
 
