@@ -6,8 +6,8 @@ if (room != Sala_Tutorial) && (room != Sala_ChillRoom) && (levelType != "Secret"
 	{
 		if instance_exists(o_playerShip)
 		{
-			var cx = 1*(irandom(38)+1)//width div 2;
-			var cy = 1*(irandom(38)+1);//height div 2;
+			var cx = 1*(irandom(width_)+1)//width div 2;
+			var cy = 1*(irandom(height_)+1);//height div 2;
 
 			if (global.wallgrid_[# cx, cy] == FLOOR) 
 			{

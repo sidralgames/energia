@@ -1,6 +1,6 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-CheckInScreen(80, 20);
+CheckInScreen(90, 20);
 
 
 

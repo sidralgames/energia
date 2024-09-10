@@ -152,6 +152,8 @@ if (room = Sala_0) //(levelType = 0)
 }
 else if (room = Sala_Tutorial)
 {
+	levelType="Tutorial";
+	
 	if (global.level = -2)
 	{
 		SetupLevelTutorial(29, 22, 600, 150, 2000);
@@ -169,7 +171,7 @@ else if (room = Sala_Tutorial)
 		SetupLevelTutorial(41, 38, 1000, 200, 3000);
 	}
 	
-	levelType="Tutorial"
+	
 }
 else if (room = Sala_ChillRoom)
 {

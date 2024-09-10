@@ -1,5 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+
+
+
 haveSlowMoChip = false;
 canHonk = false;
 angOff = 0;
@@ -293,7 +297,7 @@ if (global.level = -2)
 {
 	//bnc = 0.95;
 	global.infiniteEnergyIsOn = false;
-	global.energy = 250;
+	global.energy = global.energyMax;
 	
 	//_hpush = (1 + random_range(0,1)) * choose (1, -1);
 	//_vpush = (1 + random_range(0,1)) * choose (1, -1);

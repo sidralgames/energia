@@ -1,5 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+show_debug_log(true)
+resized = true;
+changeSize = false
+graphics = "none"
+
 breachTutorial = false;
 showControlsTut = false;
 contLowEnergy = 30;

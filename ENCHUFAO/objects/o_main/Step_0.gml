@@ -66,6 +66,42 @@ if instance_exists(o_playerShip) //&& (room != Sala_Inicio)
 part_type_sprite(global.balaP,global.bulletPart_sprite,true,1,false)
 
 
+
+if window_get_fullscreen() && (keyboard_check_pressed(ord("K")))
+{
+	graphics = "4K"
+	surface_set_target(application_surface)
+    surface_resize(application_surface, display_get_width(),display_get_height());
+	surface_reset_target();
+}
+
+if window_get_fullscreen() && (keyboard_check_pressed(ord("H")))
+{
+	graphics = "HD"
+	surface_set_target(application_surface)
+    surface_resize(application_surface, 1280,720);
+	surface_reset_target();
+}
+if window_get_fullscreen() && (keyboard_check_pressed(ord("L")))
+{
+	graphics = "low"
+	surface_set_target(application_surface)
+    surface_resize(application_surface, 640,360);
+	surface_reset_target();
+}
+
+if !window_get_fullscreen() && (resized = true)
+{
+	resized = false;
+	surface_set_target(application_surface)
+    surface_resize(application_surface, 640,360);
+	surface_reset_target();
+}
+
+
+
+
+
 if (key_select) && (ending = false)
 {
 	instance_activate_all();
