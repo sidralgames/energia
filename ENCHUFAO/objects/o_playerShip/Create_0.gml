@@ -189,7 +189,7 @@ global.pitch = 1;
 upgraded = false;
 if (room != Sala_Inicio)
 {
-	instance_create_layer(x,y,"Main",o_camera)
+	instance_create_layer(x,y,"Pause",o_camera)
 }
 canSuperShot = true;
 global.pluggedInEnergy = false;

@@ -14,7 +14,7 @@ resH = display_get_height();
 alarm[1] = 20;
 showControls = false;
 
-
+const = 640 / 1920;
 
 timesToDraw = 0;
 
@@ -23,3 +23,6 @@ quit = false;
 selected = 0;
 selectedCross = 0;
 spriteBack = 0;
+
+firstSized = false;
+graphicsResized = false;

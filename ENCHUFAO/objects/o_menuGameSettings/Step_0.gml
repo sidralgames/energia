@@ -18,13 +18,13 @@ if (alarm[0] <= 0)
 			selected -=1;	
 		}
 
-		if (selected > 4)
+		if (selected > 5)
 		{
 			selected = 0;	
 		}
 		if (selected < 0)
 		{
-			selected = 4;	
+			selected = 5;	
 		}
 		
 		if (selectedCross > global.crosshairSpritesMax)
@@ -36,6 +36,32 @@ if (alarm[0] <= 0)
 			selectedCross = global.crosshairSpritesMax;	
 		}
 		
+		if (graphics > 2)
+		{
+			graphics = 0;	
+		}
+		if (graphics < 0)
+		{
+			graphics = 2;	
+		}
+		
+		if (graphicsResized)
+		{
+			graphicsResized = false;
+			
+			if (graphics = 0)
+			{
+				surface_resize(application_surface, 640,360);
+			}
+			if (graphics = 1)
+			{
+				surface_resize(application_surface, 1280,720);
+			}
+			if (graphics = 2)
+			{
+				surface_resize(application_surface, display_get_width(),display_get_height());
+			}
+		}
 		
 		switch(selected)
 		{
@@ -97,6 +123,28 @@ if (alarm[0] <= 0)
 			break;
 			
 			case 4:
+			{
+				
+				if (key_leftP)
+					{
+						
+						graphics -=1;
+						audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+						graphicsResized = true
+						
+					}
+				
+					if (key_rightP)
+					{
+						graphics +=1;
+						audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+						
+						graphicsResized = true
+					}
+			}
+			break;
+			
+			case 5:
 			{
 				if (key_x)
 				{

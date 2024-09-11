@@ -1,19 +1,19 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (pause)
+if (pause) 
 {
 	//instance_activate_object(o_pauseMenu);
 	surface_set_target(application_surface);
+
 	if (surface_exists(pauseSurf)) 
 	{
-		draw_surface_ext(pauseSurf, __view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0,0.5,0.5,0,image_blend,image_alpha)	
+		draw_surface_ext(pauseSurf, __view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0,const*_scale,const*_scale,0,image_blend,image_alpha)
 	}
 	else
 	{
-		pauseSurf = surface_create(resW*10, resH*10);
+		pauseSurf = surface_create(resW, resH);
 	}
 	surface_reset_target();
-	
 	
 }
 

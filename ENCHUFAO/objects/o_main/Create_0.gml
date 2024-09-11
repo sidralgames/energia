@@ -1,10 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
+camW = 640;
+camH = 360;
 
-show_debug_log(true)
+surface_resize(application_surface, camW, camH)
+//application_surface_draw_enable(false)
+
+//show_debug_log(true)
 resized = true;
+resizedWindow = false;
 changeSize = false
-
+graphics = ""
 
 lowfirstTime = false;
 

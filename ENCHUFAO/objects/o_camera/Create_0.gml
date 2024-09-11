@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+camW = 640;
+camH = 360;
 cam = view_camera[0];
 follow = o_playerShip;
 
