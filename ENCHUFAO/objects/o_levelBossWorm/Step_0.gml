@@ -3,7 +3,13 @@
 if (global.changingTiles)
 {
 	contTiles--;
+	
 	SetTiles();
+	
+	width_ = room_width div CELL_WIDTH;
+	height_ = room_height div CELL_HEIGHT;
+
+	_wall_map_id = layer_tilemap_get_id("Tiles");
 
 	for ( var yyW = 0; yyW < height_; yyW++) 
 	{
@@ -23,7 +29,7 @@ if (global.changingTiles)
 	if (contTiles <=0)
 	{
 		global.changingTiles = false;
-		contTiles = 1;
+		contTiles = 1.5;
 	}
 }
 

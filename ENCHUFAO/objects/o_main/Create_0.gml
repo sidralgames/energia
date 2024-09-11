@@ -4,7 +4,9 @@
 show_debug_log(true)
 resized = true;
 changeSize = false
-graphics = "none"
+
+
+lowfirstTime = false;
 
 breachTutorial = false;
 showControlsTut = false;

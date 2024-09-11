@@ -1,6 +1,6 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-CheckInScreen(90, 20);
+CheckInScreen(50, 10);
 
 
 
@@ -19,7 +19,7 @@ if (checkOk = true)
 if (global.changingTiles) && (checkTile = false)
 {
 	checkTile = true;
-	alarm[4] = 10;
+	alarm[4] = 60;
 }
 
 if (alarm[4] > 0)

@@ -2,13 +2,14 @@
 // You can write your code in this editor
 if (global.changingTiles)
 {
-	_wall_map_id = layer_tilemap_get_id("Tiles");
+	contTiles--;
+	
 	SetTiles();
 	
 	width_ = room_width div CELL_WIDTH;
 	height_ = room_height div CELL_HEIGHT;
 
-_wall_map_id = layer_tilemap_get_id("Tiles");
+	_wall_map_id = layer_tilemap_get_id("Tiles");
 
 	for ( var yyW = 0; yyW < height_; yyW++) 
 	{
@@ -25,8 +26,11 @@ _wall_map_id = layer_tilemap_get_id("Tiles");
 		}
 	}
 
-	
-	global.changingTiles = false;
+	if (contTiles <=0)
+	{
+		global.changingTiles = false;
+		contTiles = 1.5;
+	}
 }
 
 
