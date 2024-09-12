@@ -69,7 +69,7 @@ if (cont = true)
 	{
 		if (room = Sala_Tutorial)
 		{
-			if (global.level = 1)
+			if (global.level = 0)
 			{
 				global.inTutorial = false;
 				

@@ -72,28 +72,23 @@ part_type_sprite(global.balaP,global.bulletPart_sprite,true,1,false)
 //	resizedWindow = false;
 //}
 
-//if window_get_fullscreen() && (keyboard_check_pressed(ord("K")))
+//if (keyboard_check_pressed(ord("K"))) 
 //{
 //	resizedWindow = false;
 //    surface_resize(application_surface, display_get_width(),display_get_height());
 //}
 
-//if window_get_fullscreen() && (keyboard_check_pressed(ord("H")))
+//if (keyboard_check_pressed(ord("H")))
 //{
 //	resizedWindow = false;
 //    surface_resize(application_surface, 1280,720);
 //}
-//if window_get_fullscreen() && (keyboard_check_pressed(ord("L")))
+//if (keyboard_check_pressed(ord("L")))
 //{
 //	resizedWindow = false;
 //    surface_resize(application_surface, 640,360);
 //}
 
-//if !window_get_fullscreen() && (resizedWindow = false)
-//{
-//	resizedWindow = true;
-//    surface_resize(application_surface, 1280,720);
-//}
 
 if surface_get_width(application_surface) = 1920
 {
