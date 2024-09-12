@@ -1,8 +1,20 @@
 /// @description Insert description here
 // You can write your code in this editor
-camW = 640;
-camH = 360;
 
+//----FULL 4K DISPLAY RES ---//
+//camW = display_get_width();
+//camH = display_get_height();
+
+//---HD----//
+camW = 1280;
+camH = 720;
+
+
+//--- LOW ----//
+//camW = 640;
+//camH = 360;
+
+display_reset(0, false)
 surface_resize(application_surface, camW, camH)
 //application_surface_draw_enable(false)
 

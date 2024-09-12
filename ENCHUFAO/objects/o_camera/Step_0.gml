@@ -37,18 +37,46 @@ if (global.screenshakeIsOn)
 	shakeRemain = max(0, lerp(shakeRemain, 0, 0.01) - ( (1/shakeLenght) * shakeMagnitude));
 	angleRemain = max(0, lerp(angleRemain, 0, 0.01) - ( (1/shakeLenght) * angleMagnitude));
 	
-	
 	camera_set_view_angle(cam, random_range(angleRemain, -angleRemain));
 	
-	camera_set_view_pos(cam,x-viewWidthHalf,y-viewHeightHalf);	
+	if  instance_exists(follow)
+	{
+		if abs(follow._hpush > 0.2)	|| abs(follow._vpush > 0.2)
+		{
+			camera_set_view_pos(cam,x-viewWidthHalf,y-viewHeightHalf);		
+		}
+		else
+		{
+			camera_set_view_pos(cam,floor(x-viewWidthHalf),floor(y-viewHeightHalf));
+		}
 	}
 	else
 	{
-		x = clamp(x, viewWidthHalf + buff, room_width - viewWidthHalf - buff);
-		y = clamp(y, viewHeightHalf + buff, room_height - viewHeightHalf - buff);
-		
-		camera_set_view_pos(cam,x-viewWidthHalf,y-viewHeightHalf)	
+		camera_set_view_pos(cam,floor(x-viewWidthHalf),floor(y-viewHeightHalf));
 	}
+
+}
+else
+{
+	x = clamp(x, viewWidthHalf + buff, room_width - viewWidthHalf - buff);
+	y = clamp(y, viewHeightHalf + buff, room_height - viewHeightHalf - buff);
+	
+	if  instance_exists(follow)
+	{
+		if abs(follow._hpush > 0.2)	|| abs(follow._vpush > 0.2)
+		{
+			camera_set_view_pos(cam,x-viewWidthHalf,y-viewHeightHalf);		
+		}
+		else
+		{
+			camera_set_view_pos(cam,floor(x-viewWidthHalf),floor(y-viewHeightHalf));
+		}
+	}
+	else
+	{
+		camera_set_view_pos(cam,floor(x-viewWidthHalf),floor(y-viewHeightHalf));
+	}
+}
 
 
 

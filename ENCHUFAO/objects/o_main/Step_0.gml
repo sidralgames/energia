@@ -67,33 +67,33 @@ if instance_exists(o_playerShip) //&& (room != Sala_Inicio)
 
 part_type_sprite(global.balaP,global.bulletPart_sprite,true,1,false)
 
-if !window_get_fullscreen()
-{
-	resizedWindow = false;
-}
+//if !window_get_fullscreen()
+//{
+//	resizedWindow = false;
+//}
 
-if window_get_fullscreen() && (keyboard_check_pressed(ord("K")))
-{
-	resizedWindow = false;
-    surface_resize(application_surface, display_get_width(),display_get_height());
-}
+//if window_get_fullscreen() && (keyboard_check_pressed(ord("K")))
+//{
+//	resizedWindow = false;
+//    surface_resize(application_surface, display_get_width(),display_get_height());
+//}
 
-if window_get_fullscreen() && (keyboard_check_pressed(ord("H")))
-{
-	resizedWindow = false;
-    surface_resize(application_surface, 1280,720);
-}
-if window_get_fullscreen() && (keyboard_check_pressed(ord("L")))
-{
-	resizedWindow = false;
-    surface_resize(application_surface, 640,360);
-}
+//if window_get_fullscreen() && (keyboard_check_pressed(ord("H")))
+//{
+//	resizedWindow = false;
+//    surface_resize(application_surface, 1280,720);
+//}
+//if window_get_fullscreen() && (keyboard_check_pressed(ord("L")))
+//{
+//	resizedWindow = false;
+//    surface_resize(application_surface, 640,360);
+//}
 
-if !window_get_fullscreen() && (resizedWindow = false)
-{
-	resizedWindow = true;
-    surface_resize(application_surface, 1280,720);
-}
+//if !window_get_fullscreen() && (resizedWindow = false)
+//{
+//	resizedWindow = true;
+//    surface_resize(application_surface, 1280,720);
+//}
 
 if surface_get_width(application_surface) = 1920
 {
@@ -108,7 +108,8 @@ else
 	graphics = "LOW"
 }
 
-
+//w = 640
+//_scale = window_get_width() / window_get_height();
 
 if (key_select) && (ending = false)
 {

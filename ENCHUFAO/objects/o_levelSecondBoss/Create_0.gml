@@ -4,6 +4,7 @@
 //global.BossBreach_HPMax = 150;
 //global.BossBreach_HP = global.BossBreach_HPMax ;
 alarm[2] = 10;
+contTiles = 2;
 SetupLevelBoss2();
 _wall_map_id = layer_tilemap_get_id("Tiles");
 

@@ -5,7 +5,6 @@ if !instance_exists(o_partBulletMouth)
 	instance_create_layer(-100,-100,"EnemiesHUE",o_partBulletMouth)
 }
 
-
 if (levelType = "Secret")
 {
 	if (alarm[7] <= 0) && timesSpawner>0 //Try spawner 

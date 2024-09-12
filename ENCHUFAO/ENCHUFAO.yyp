@@ -506,7 +506,6 @@
     {"id":{"name":"Sala_Inicio","path":"rooms/Sala_Inicio/Sala_Inicio.yy",},},
     {"id":{"name":"Sala_Inicio13","path":"rooms/Sala_Inicio13/Sala_Inicio13.yy",},},
     {"id":{"name":"Sala_MegaUpgrade","path":"rooms/Sala_MegaUpgrade/Sala_MegaUpgrade.yy",},},
-    {"id":{"name":"Sala_Pre","path":"rooms/Sala_Pre/Sala_Pre.yy",},},
     {"id":{"name":"Sala_SecondBoss","path":"rooms/Sala_SecondBoss/Sala_SecondBoss.yy",},},
     {"id":{"name":"Sala_Splash","path":"rooms/Sala_Splash/Sala_Splash.yy",},},
     {"id":{"name":"Sala_Tutorial","path":"rooms/Sala_Tutorial/Sala_Tutorial.yy",},},
@@ -1595,7 +1594,6 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"Sala_Inicio","path":"rooms/Sala_Inicio/Sala_Inicio.yy",},},
-    {"roomId":{"name":"Sala_Pre","path":"rooms/Sala_Pre/Sala_Pre.yy",},},
     {"roomId":{"name":"Sala_Inicio_1","path":"rooms/Sala_Inicio_1/Sala_Inicio_1.yy",},},
     {"roomId":{"name":"SalaCheckMeme","path":"rooms/SalaCheckMeme/SalaCheckMeme.yy",},},
     {"roomId":{"name":"Sala_Splash","path":"rooms/Sala_Splash/Sala_Splash.yy",},},

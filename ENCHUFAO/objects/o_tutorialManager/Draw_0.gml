@@ -97,7 +97,7 @@ if instance_exists(o_playerShip)
 			if (laserFirstTime = false)
 			{
 				global.infiniteLaserIsOn = false;
-				global.laser = 50;
+				global.laser = global.laserMax/2;
 				laserFirstTime = true;
 			}
 			pluggedInLaserTut = true
