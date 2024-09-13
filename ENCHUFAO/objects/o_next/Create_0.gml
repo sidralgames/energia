@@ -12,7 +12,7 @@ var VIEW_HEIGHT = VIEW_WIDTH / aspect;
 camera_set_view_size(view_camera[0], floor(VIEW_WIDTH), floor(VIEW_HEIGHT))
 view_wport[0] = max_w;
 view_hport[0] = max_h;
-surface_resize(application_surface, view_wport[0], view_hport[0]);
+surface_resize(global.mainSurf, view_wport[0], view_hport[0]);
 
 var _check = true;
 var _rm = room_next(room);

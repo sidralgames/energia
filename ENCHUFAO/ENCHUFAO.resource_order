@@ -448,6 +448,7 @@
     {"name":"parCollision","order":1,"path":"objects/parCollision/parCollision.yy",},
     {"name":"rest","order":94,"path":"objects/rest/rest.yy",},
     {"name":"Stats","order":11,"path":"objects/Stats/Stats.yy",},
+    {"name":"surfs","order":127,"path":"objects/surfs/surfs.yy",},
     {"name":"Sala_0","order":1,"path":"rooms/Sala_0/Sala_0.yy",},
     {"name":"Sala_Boss","order":5,"path":"rooms/Sala_Boss/Sala_Boss.yy",},
     {"name":"Sala_BossWorm_COPY","order":22,"path":"rooms/Sala_BossWorm_COPY/Sala_BossWorm_COPY.yy",},

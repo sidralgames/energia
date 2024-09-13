@@ -8,7 +8,7 @@ if instance_exists(o_playerShip)
 
 Controls_Input();
 
-w = surface_get_width(application_surface)
+w = surface_get_width(global.mainSurf)
 _scale = display_get_width() / w;
 
 if (goToMenu)

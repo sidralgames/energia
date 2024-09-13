@@ -51,15 +51,15 @@ if (alarm[0] <= 0)
 			
 			if (graphics = 0)
 			{
-				surface_resize(application_surface, 640,360);
+				surface_resize(global.mainSurf, 640,360);
 			}
 			if (graphics = 1)
 			{
-				surface_resize(application_surface, 1280,720);
+				surface_resize(global.mainSurf, 1280,720);
 			}
 			if (graphics = 2)
 			{
-				surface_resize(application_surface, display_get_width(),display_get_height());
+				surface_resize(global.mainSurf, display_get_width(),display_get_height());
 			}
 		}
 		
