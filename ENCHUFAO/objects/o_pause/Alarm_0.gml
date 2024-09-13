@@ -13,7 +13,7 @@ if (!pause)
 		//instance_activate_object(o_pauseMenu);
 		pauseSurf = surface_create(resW, resH);
 		surface_set_target(pauseSurf);
-		draw_surface(global.mainSurf,0,0);
+		draw_surface(application_surface,0,0);
 		surface_reset_target();
 	}
 	else

@@ -3,17 +3,16 @@
 draw_set_halign(fa_left)
 
 
-
-
-
-if surface_exists(application_surface)
-{
-	draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+210, "Appw: " + string(surface_get_width(application_surface)))
-draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+230, "Apph: " + string(surface_get_height(application_surface)))
-
-}
-
+//draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+150, "Graphics: " + string(graphics))
 //draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+130, "level: " + string(global.level))
+
+//if surface_exists(application_surface)
+//{
+//	draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+170, "w: " + string(surface_get_width(application_surface)))
+//draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+190, "h: " + string(surface_get_height(application_surface)))
+
+//}
+
 
 
 

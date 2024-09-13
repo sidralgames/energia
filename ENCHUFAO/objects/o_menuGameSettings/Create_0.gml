@@ -5,11 +5,11 @@ selected = 0;
 selectedCross = 0;
 _visible = true;
 
-if surface_get_width(global.mainSurf) = 1920
+if surface_get_width(application_surface) = 1920
 {
 	graphics = 2
 }
-else if surface_get_width(global.mainSurf) = 1280
+else if surface_get_width(application_surface) = 1280
 {
 	graphics = 1
 }

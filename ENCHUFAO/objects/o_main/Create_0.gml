@@ -14,7 +14,9 @@
 camW = 640;
 camH = 360;
 
-
+display_reset(0, false)
+surface_resize(application_surface, camW, camH)
+//application_surface_draw_enable(false)
 
 //show_debug_log(true)
 resized = true;

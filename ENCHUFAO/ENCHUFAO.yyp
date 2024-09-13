@@ -496,7 +496,6 @@
     {"id":{"name":"parCollision","path":"objects/parCollision/parCollision.yy",},},
     {"id":{"name":"rest","path":"objects/rest/rest.yy",},},
     {"id":{"name":"Stats","path":"objects/Stats/Stats.yy",},},
-    {"id":{"name":"surfs","path":"objects/surfs/surfs.yy",},},
     {"id":{"name":"Sala_0","path":"rooms/Sala_0/Sala_0.yy",},},
     {"id":{"name":"Sala_Boss","path":"rooms/Sala_Boss/Sala_Boss.yy",},},
     {"id":{"name":"Sala_BossWorm_COPY","path":"rooms/Sala_BossWorm_COPY/Sala_BossWorm_COPY.yy",},},

@@ -3,7 +3,7 @@
 if (pause) 
 {
 	//instance_activate_object(o_pauseMenu);
-	surface_set_target(global.mainSurf);
+	surface_set_target(application_surface);
 
 	if (surface_exists(pauseSurf)) 
 	{
