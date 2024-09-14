@@ -9,7 +9,9 @@ function Lights_end()
 			surface_reset_target();
 		
 			gpu_set_blendmode(bm_normal);
-			surface_set_target(application_surface)
+			
+			//QUITAO PORQUESI ???
+			//surface_set_target(application_surface)
 		
 				gpu_set_blendmode_ext(bm_dest_color, bm_zero);
 				
@@ -18,8 +20,9 @@ function Lights_end()
 		
 				draw_surface(oLight.light_surface, 0, 0)
 				gpu_set_blendmode(bm_normal);
-		
-			surface_reset_target();
+				
+		//QUITAO PORQUESI ???
+			//surface_reset_target();
 			
 		}
 	}

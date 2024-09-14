@@ -76,3 +76,4 @@ canBreak = false;
 canBeDestroyed = false;
 hurts = true;
 onlyHead=false;
+movementDistancePlugged = cable._segments*7

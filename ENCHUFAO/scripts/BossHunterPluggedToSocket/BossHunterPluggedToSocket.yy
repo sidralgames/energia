@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"BossHunterPluggedToSocket",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BossHunterPluggedToSocket",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

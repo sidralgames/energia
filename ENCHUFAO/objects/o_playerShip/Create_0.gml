@@ -3,7 +3,7 @@
 
 
 
-
+laserSpread = true
 haveSlowMoChip = false;
 canHonk = false;
 angOff = 0;

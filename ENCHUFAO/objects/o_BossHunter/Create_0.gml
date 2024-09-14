@@ -8,7 +8,7 @@ isBossWorm = false;
 enemyIsWorm = true;
 thisEnemyBounce = false;
 slowMoPickUps = choose(3,4);
-leavesTrail = false;
+
 alarm[10] = 30;
 //lightEnemy= instance_create_layer(x,y,"LightEnemy",o_Light_Enemy);
 isCounted=false;
@@ -60,12 +60,14 @@ isMega = irandom(5);
 megaStated = false;
 oddsBattery = 5;
 depth = layer_get_depth("EnemiesHUESub3")
-cable = instance_create_layer(x,y,"EnemiesHUESub5", o_enemySegments_Body);
+cable = instance_create_layer(x,y,"EnemiesHUESub5", o_CableBossHunter);
 _hp = cable._segments*3;
 enemySpeedInitial = random_range(1.25,2)
 enemySpeed = enemySpeedInitial;
 
 
 hasShield = irandom(10);
-movementDistancePlugged = cable._segments*7
+
+movementDistancePlugged = cable._segments*10
+
 

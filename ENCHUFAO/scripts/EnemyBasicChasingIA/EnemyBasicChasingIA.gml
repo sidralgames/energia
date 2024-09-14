@@ -43,7 +43,7 @@ function EnemyBasicChasingIA()
 				contPlugged = random_range(contPluggedMin, contPluggedMax)
 			}
 			
-			if (point_distance(x,y,enchufe.x,enchufe.y) <= cable._segments*7)
+			if (point_distance(x,y,enchufe.x,enchufe.y) <= movementDistancePlugged)
 			{
 				if (_hp <= 0)
 				{
@@ -77,14 +77,17 @@ function EnemyBasicChasingIA()
 			contCanPlug--;
 		}
 		
-		if (inEnchufe) && (contCanPlug<=0) && (!plugged)
+		if (inEnchufe) && (contCanPlug<=0) && (!plugged) && (inEnchufe.enchufeOvercharged = false)
 		{	
 			enchufe = inEnchufe;
 			if (!enchufe.occupied) && (!plugged) && (!enchufe.enchufeBomb)
 			{
-				enchufe.occupied = true;
-				plugging = true;
-				contPlugged = random_range(contPluggedMin, contPluggedMax)
+				if (enchufe.occupied = false)
+				{
+					enchufe.occupied = true;
+					plugging = true;
+					contPlugged = random_range(contPluggedMin, contPluggedMax)
+				}
 			}
 		}
 		

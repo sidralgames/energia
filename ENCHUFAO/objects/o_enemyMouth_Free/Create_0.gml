@@ -72,3 +72,6 @@ hasShield = irandom(10);
 contBreak = 0;
 canBreak = false;
 canBeDestroyed = false;
+
+
+movementDistancePlugged = cable._segments*7

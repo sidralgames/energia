@@ -1,8 +1,7 @@
 // Los recursos de Script han cambiado para la v2.3.0 Consulta
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
-function WormBodyPlugToSocket()
-{
-	if instance_exists(inst)
+function BossHunterPluggedToSocket(){
+if instance_exists(inst)
 	{
 		if (inst.plugging)
 		{
@@ -32,7 +31,6 @@ function WormBodyPlugToSocket()
 		if (counting)
 		{
 			countingN--;
-			
 			if (countingN<=0)
 			{
 				for (var i=1; i<=_segments; i++)
