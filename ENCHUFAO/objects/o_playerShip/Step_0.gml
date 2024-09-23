@@ -262,10 +262,13 @@ LaserLogicPlayer();
 
 //---------DIE---------//
 
-global.lastTouched = global.numEnemyKilledBy;
+
 
 if (global.hp < 1)
 {
+	global.lastTouched = global.numEnemyKilledBy;
+	
+	
 	contExploDead --;
 	
 	if (contExploDead <=0)
@@ -323,5 +326,6 @@ if (contDead <= 0)
 	instance_destroy(o_charger);
 	global.totalDeaths+=1;
 	gameOver = instance_create_layer(x, y, "Text", o_gameOver);
+	global.lastTouched = global.numEnemyKilledBy;
 	gameOver.killedby = global.numEnemyKilledBy;
 }

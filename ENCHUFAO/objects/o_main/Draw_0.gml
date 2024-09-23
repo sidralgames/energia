@@ -3,15 +3,15 @@
 draw_set_halign(fa_right)
 draw_set_font(global.customFont12)
 
-draw_text(__view_get( e__VW.XView, 0 )+635,__view_get( e__VW.YView, 0 )+50, string(graphics))
+//draw_text(__view_get( e__VW.XView, 0 )+635,__view_get( e__VW.YView, 0 )+50, string(graphics))
 
 
-if surface_exists(application_surface)
-{
-	draw_text(__view_get( e__VW.XView, 0 )+635,__view_get( e__VW.YView, 0 )+70, "w: " + string(surface_get_width(application_surface)))
-draw_text(__view_get( e__VW.XView, 0 )+635,__view_get( e__VW.YView, 0 )+90, "h: " + string(surface_get_height(application_surface)))
+//if surface_exists(application_surface)
+//{
+//	draw_text(__view_get( e__VW.XView, 0 )+635,__view_get( e__VW.YView, 0 )+70, "w: " + string(surface_get_width(application_surface)))
+//draw_text(__view_get( e__VW.XView, 0 )+635,__view_get( e__VW.YView, 0 )+90, "h: " + string(surface_get_height(application_surface)))
 
-}
+//}
 
 //draw_text(__view_get( e__VW.XView, 0 )+20,__view_get( e__VW.YView, 0 )+130, "level: " + string(global.level))
 
