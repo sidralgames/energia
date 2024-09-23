@@ -56,7 +56,14 @@ if instance_exists(o_playerShip)
 			}
 			else
 			{
-				draw_sprite_ext(s_chargerPlugged, 0, enchufe.xConnectionPos, enchufe.yConnectionPos, o_charger.scale, o_charger.scale, enchufe._angle-90, image_blend, image_alpha)
+				if (enchufe.isSteam)
+				{
+					draw_sprite_ext(s_chargerPlugged, 0, enchufe.xConnectionPos, enchufe.yConnectionPos,  0.9, 0.9, enchufe._angle-45, image_blend, image_alpha)
+				}
+				else
+				{
+					draw_sprite_ext(s_chargerPlugged, 0, enchufe.xConnectionPos, enchufe.yConnectionPos, o_charger.scale, o_charger.scale, enchufe._angle-90, image_blend, image_alpha)
+				}
 			}
 		}
 	}

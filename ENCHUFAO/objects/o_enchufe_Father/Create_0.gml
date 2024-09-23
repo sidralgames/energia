@@ -4,6 +4,7 @@
 //{
 //	lightEnchufe= instance_create_layer(x,y,"LightPlayer",o_Light_Enchufe);
 //type = collisionType.custom;
+isSteam = false;
 randomize();
 IsEnchufeMP3CHILL = false;
 isMainEnchufe = false;

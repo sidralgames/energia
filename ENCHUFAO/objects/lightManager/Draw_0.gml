@@ -21,3 +21,13 @@ StrandedShipLightColor();
 LilCrusherLightColor();
 
 
+with(o_steamPage)
+	{
+		off = random_range(0,0.2);
+		if (isVisible)
+		{
+			
+			draw_sprite_ext(s_steamPage, 0, x, y, 1, 1, 0, c_white, 0.70 + off);
+		}
+		
+	}
