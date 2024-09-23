@@ -3,5 +3,5 @@
 if instance_exists(o_enchufe_Steam)
 {
 	x = o_enchufe_Steam.x;
-	y = o_enchufe_Steam.y-100;
+	y = o_enchufe_Steam.y-110;
 }

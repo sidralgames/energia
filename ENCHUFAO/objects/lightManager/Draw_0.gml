@@ -27,7 +27,7 @@ with(o_steamPage)
 		if (isVisible)
 		{
 			
-			draw_sprite_ext(s_steamPage, 0, x, y, 1, 1, 0, c_white, 0.70 + off);
+			draw_sprite_ext(s_steamPage, 0, x, y, 1, 1, 0, c_white, 0.90 + off);
 		}
 		
 	}

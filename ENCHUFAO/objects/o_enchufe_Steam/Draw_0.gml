@@ -14,12 +14,30 @@ if (charging)
 	//&& (o_playerShip.pluggedTimer < 200)
 {
 	
-o_steamPage.isVisible = true
+
+
+if (image_index <= 27)
+{
+	image_speed = 0.6;
+}
+else
+{
+	image_speed = 0;
+}
 	
 }
 else{
-	o_steamPage.isVisible = false
+	if (image_index > 2)
+{
+	image_speed = -0.7;
 }
+else
+{
+	image_speed = 0;
+}
+	
+}
+
 
 if (charge >= 200)
 {
