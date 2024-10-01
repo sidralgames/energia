@@ -109,18 +109,27 @@ function TutorialThirdPart()
 		if (pilasInLevel <1)
 		{
 			nextwall = instance_nearest(exM, eyM, o_wall);		
-			if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 100)
+			nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
+			if instance_exists(nextEnchufe)
 			{
-				instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",_upgrade);
-				_upgrade.speed = random_range(0.15, -0.15);
-				_upgrade.direction = irandom(359);
-				_upgrade._angle = irandom(359);
+				if (point_distance(exM, eyM, nextwall.x, nextwall.y) > 100) 
+				{
+					if (point_distance(exM, eyM, nextEnchufe.x, nextEnchufe.y) > 100)
 				
-				pilasInLevel +=1;
+					{
+						instance_create_layer(exM+random_range(-3,3),eyM+random_range(-3,3),"Enchufes",_upgrade);
+						_upgrade.speed = random_range(0.15, -0.15);
+						_upgrade.direction = irandom(359);
+						_upgrade._angle = irandom(359);
+				
+						pilasInLevel +=1;
+					}
+				}
 			}
 		}
 		else
 		{
+			nextEnchufe = instance_nearest(exM, eyM, o_enchufe_Father)
 			nearPila = instance_nearest(exM, eyM, o_BatteryPickUp_Father);
 			if (point_distance(exM, eyM, nearPila.x, nearPila.y) > 40)
 			{

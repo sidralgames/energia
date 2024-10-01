@@ -6,13 +6,13 @@
 //camH = display_get_height();
 
 //---HD----//
-camW = 1280;
-camH = 720;
+//camW = 1280;
+//camH = 720;
 
 
 //--- LOW ----//
-//camW = 640;
-//camH = 360;
+camW = 640;
+camH = 360;
 
 display_reset(0, false)
 surface_resize(application_surface, camW, camH)
@@ -27,7 +27,9 @@ graphics = ""
 lowfirstTime = false;
 
 breachTutorial = false;
-showControlsTut = false;
+showControlsTut = true;
+showControlsTutCont = 250;
+showControlsFirst = false
 contLowEnergy = 30;
 imagePetaUI = 0;
 imageWorkin = 0;

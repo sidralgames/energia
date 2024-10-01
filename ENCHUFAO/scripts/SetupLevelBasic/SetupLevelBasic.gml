@@ -146,8 +146,8 @@ function SetupLevelBasic(_maxFloor, _minFloor, _hCells, _vCells, _stepsTotal)
 	
 	
 	
-	//PlacePetasInTiles(60);
-	//PlaceChipsInTiles(60);
+	PlacePetasInTiles(60);
+	PlaceChipsInTiles(60);
 
 	
 }

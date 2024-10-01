@@ -19,7 +19,7 @@ if (checkOk = true)
 if (global.changingTiles) && (checkTile = false)
 {
 	checkTile = true;
-	alarm[4] = 60;
+	alarm[4] = 90;
 }
 
 if (alarm[4] > 0)

@@ -56,8 +56,19 @@ if instance_exists(o_menuScores) || instance_exists(o_menuGameSettings)
 	draw_sprite_ext(s_workin, imageWorkin,__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+180, 1,1,image_angle, image_blend, image_alpha);
 }
 
+if instance_exists(o_playerShip)
+{
 if (global.inTutorial)
 {
+	if (showControlsTutCont >= 0) && (showControlsFirst = false)
+	{
+		showControlsTutCont --;
+	}
+	if (showControlsTutCont <=0 ) && (showControlsFirst = false)
+	{
+		showControlsTut = false
+		showControlsFirst = true
+	}
 	
 	if (showControlsTut = false)
 	{
@@ -70,32 +81,57 @@ if (global.inTutorial)
 	
 	if (global.level = -2)
 	{
-		draw_sprite_ext(s_textotutorial, 0,__view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0, 1,1,image_angle, image_blend, image_alpha);
-	
-		if (global.energy > global.energyLow) 
+		petanear = instance_nearest(o_playerShip.x, o_playerShip.y, o_enchufePETA)
+		if (showControlsTut)
 		{
-			draw_sprite_ext(s_controlsAll_Map,1,o_playerShip.x, o_playerShip.y+30, 0.4, 0.4, 0, image_blend, image_alpha)
+			draw_sprite_ext(s_textotutorial, 0,__view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0, 1,1,image_angle, image_blend, image_alpha);
 		}
+		if(global.energy > global.energyLow) && instance_exists(petanear)
+		{
+			if (point_distance(o_playerShip.x, o_playerShip.y, petanear.x, petanear.y) < 100) || (o_playerShip.plugged)
+			{
+				draw_sprite_ext(s_controlsAll_Map,1,o_playerShip.x, o_playerShip.y+30, 0.4, 0.4, 0, image_blend, image_alpha)
+			}
+			else
+			{
+				draw_sprite_ext(s_controlsAll_Map,2,o_playerShip.x, o_playerShip.y+30, 0.4, 0.4, 0, image_blend, image_alpha)
+			}
+		}
+		
+		if(global.energy > global.energyLow) && !instance_exists(petanear)
+		{
+			draw_sprite_ext(s_controlsAll_Map,2,o_playerShip.x, o_playerShip.y+30, 0.4, 0.4, 0, image_blend, image_alpha)
+		}
+		
 	}
 	
 	if (global.level = -1)
 	{
-		if (breachTutorial = false)
-		{
-			draw_sprite_ext(s_textotutorial, 1,__view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0, 1,1,image_angle, image_blend, image_alpha);
-		}
-		else
-		{
-			if !instance_exists(o_breach)
+		
+			if (breachTutorial = false)
 			{
-				draw_sprite_ext(s_textotutorial, 3,__view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0, 1,1,image_angle, image_blend, image_alpha);
+				if (showControlsTut)
+				{
+						draw_sprite_ext(s_textotutorial, 1,__view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0, 1,1,image_angle, image_blend, image_alpha);
+				}
 			}
 			else
 			{
-				draw_sprite_ext(s_textotutorial, 2,__view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0, 1,1,image_angle, image_blend, image_alpha);
-			}
+				if !instance_exists(o_breach)
+				{
+					if (showControlsTut)
+					{
+						draw_sprite_ext(s_textotutorial, 3,__view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0, 1,1,image_angle, image_blend, image_alpha);
+					}
+				
+				}
+				else
+				{
+					draw_sprite_ext(s_textotutorial, 2,__view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0, 1,1,image_angle, image_blend, image_alpha);
+				}
 			
-		}
+			}
+		
 	}
 	
 	if (global.level = 0)
@@ -106,12 +142,16 @@ if (global.inTutorial)
 			
 			if (point_distance(o_playerShip.x, o_playerShip.y, nearBattery.x, nearBattery.y) < 100)
 			{
-			draw_sprite_ext(s_textotutorial, 4,__view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0, 1,1,image_angle, image_blend, image_alpha);
+				draw_sprite_ext(s_textotutorial, 4,__view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0, 1,1,image_angle, image_blend, image_alpha);
 			}
 		}
 		else
 		{
-			draw_sprite_ext(s_textotutorial, 3,__view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0, 1,1,image_angle, image_blend, image_alpha);
+			if (showControlsTut)
+			{
+				draw_sprite_ext(s_textotutorial, 3,__view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0, 1,1,image_angle, image_blend, image_alpha);
+		
+			}
 		}
 
 	}
@@ -120,4 +160,5 @@ if (global.inTutorial)
 	{
 		
 	}
+}
 }

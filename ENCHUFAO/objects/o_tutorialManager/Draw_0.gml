@@ -107,7 +107,7 @@ if instance_exists(o_playerShip)
 
 if (canAssist)
 {
-	draw_sprite_ext(s_moveTutorial, 5, __view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+310,0.7,0.7,0,image_blend, image_alpha)	
+	draw_sprite_ext(s_moveTutorial, 5, o_playerShip.x,o_playerShip.y+40,0.5,0.5,0,image_blend, image_alpha)	
 	
 	contToAssist--;
 	if (contToAssist <= 0)

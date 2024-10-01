@@ -85,6 +85,12 @@ if (cont = true)
 			else
 			{
 				global.level+=1;
+				with (o_main)
+				{
+					showControlsTut = true;
+					showControlsTutCont = 250;
+					showControlsFirst = false
+				}
 				room_goto(Sala_Tutorial);	
 			}
 		}

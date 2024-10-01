@@ -88,7 +88,7 @@ if (global.changingTiles)
 	if (contTiles <=0)
 	{
 		global.changingTiles = false;
-		contTiles = 1.5;
+		contTiles = 2;
 	}
 }
 

@@ -23,7 +23,7 @@
   "height":110,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"6d3903d7-42c1-4b22-b6f6-5d40fb5057b7","blendMode":0,"displayName":"default","isLocked":false,"name":"6d3903d7-42c1-4b22-b6f6-5d40fb5057b7","opacity":20.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"6d3903d7-42c1-4b22-b6f6-5d40fb5057b7","blendMode":0,"displayName":"default","isLocked":false,"name":"6d3903d7-42c1-4b22-b6f6-5d40fb5057b7","opacity":30.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"s_breachBanner",
   "nineSlice":null,
