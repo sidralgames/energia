@@ -17,6 +17,7 @@ image_speed = 0.5;
 image_alpha = 0.5;
 _hp = 10;
 enemy = instance_nearest(x,y,o_enemyP)
+enemyShooter =  instance_nearest(x,y,o_enemyP);
 isWormHitBox = false;
 hurts = true;
 canBeDestroyed = true;

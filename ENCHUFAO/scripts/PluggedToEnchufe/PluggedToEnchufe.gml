@@ -57,8 +57,8 @@ function PluggedToEnchufe()
 				_hpush = lengthdir_x(1,dir)
 				_vpush = lengthdir_y(1,dir)
 		
-				enchufe._hpush -= lengthdir_x(0.18,dir)
-				enchufe._vpush -= lengthdir_y(0.18,dir)
+				enchufe._hpush -= lengthdir_x(0.28,dir)
+				enchufe._vpush -= lengthdir_y(0.28,dir)
 			}
 			else if (enchufe.isMimic)
 			{

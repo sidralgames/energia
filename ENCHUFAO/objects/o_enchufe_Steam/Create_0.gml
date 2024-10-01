@@ -28,7 +28,10 @@ for (i=0; i< global.batteryEnchufeListEnergynum; i++)
 	}
 	
 isMainEnchufe = true;
-image_speed = 0;
+image_speed = 0.4;
 
-_hpush = 0
-_vpush = 0
+_angle = 50;
+
+rot = 0;
+
+abierto = false;

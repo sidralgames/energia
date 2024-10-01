@@ -38,9 +38,6 @@
     "name":"s_steamPage",
     "path":"sprites/s_steamPage/s_steamPage.yy",
   },
-  "spriteMaskId":{
-    "name":"s_EnchufeEnergy",
-    "path":"sprites/s_EnchufeEnergy/s_EnchufeEnergy.yy",
-  },
+  "spriteMaskId":null,
   "visible":true,
 }

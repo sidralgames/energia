@@ -1,7 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-//instance_create_layer(x,y,"Shield", o_steamPage);
-//instance_create_layer(x,y,"Enchufes", o_enchufe_Steam);
+
 
 laserSpread = true
 haveSlowMoChip = false;
