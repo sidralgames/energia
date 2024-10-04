@@ -6,6 +6,11 @@
 CheckInScreen(200, 15);
 if instance_exists(inst)
 	{
+		
+		rope1.vertexChangeData(first,inst.cableXPos,inst.cableYPos);
+			
+		
+		
 		if (inst.plugging)
 		{
 			fixing = false;

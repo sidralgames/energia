@@ -121,7 +121,7 @@ function PluggedToEnchufe()
 				enchufe._vpush -= lengthdir_y(0.1,dir)
 			}
 		
-			alarm[5] = 20;
+			alarm[5] = 15;
 		}
 	}
 

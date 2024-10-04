@@ -21,6 +21,7 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"o_meteor","path":"objects/o_meteor/o_meteor.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"o_bulletDisc","path":"objects/o_bulletDisc/o_bulletDisc.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"o_enemyDisc","path":"objects/o_enemyDisc/o_enemyDisc.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"o_BossHunter",
@@ -51,9 +52,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_enemyLaserGreen",
-    "path":"sprites/s_enemyLaserGreen/s_enemyLaserGreen.yy",
+    "name":"s_bossHunter",
+    "path":"sprites/s_bossHunter/s_bossHunter.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"s_bossHunter",
+    "path":"sprites/s_bossHunter/s_bossHunter.yy",
+  },
   "visible":true,
 }

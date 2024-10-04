@@ -31,9 +31,9 @@ function PluggedToShip()
 	else
 	{
 		dir = point_direction(x,y,global.xToPlug,global.yToPlug)
-		_hpush = lengthdir_x(1,dir)
-		_vpush = lengthdir_y(1,dir)
-		alarm[5] = 20;
+		_hpush = lengthdir_x(0.7,dir)
+		_vpush = lengthdir_y(0.7,dir)
+		alarm[5] = 15;
 		chargerStrandedShip._hpush -= lengthdir_x(1.5,dir)
 		chargerStrandedShip._vpush -= lengthdir_y(1.5,dir)
 	}

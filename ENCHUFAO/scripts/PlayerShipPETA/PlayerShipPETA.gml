@@ -51,26 +51,26 @@ function PlayerShipPETA()
 	audio_play_sound_on(global.audioEmitter,snd_launchPeta, false, 50)
 		
 	
-		var peta = instance_create_layer(x + _hpush*3 + lengthdir_x(5, _angle), y +_vpush*5 + lengthdir_y(5, _angle),
-		"Enchufes", petaToLaunch);
-		global.petasUsed+=1;
-		global.PETAAmmo-=1;
+	var peta = instance_create_layer(x + _hpush*3 + lengthdir_x(5, _angle), y +_vpush*5 + lengthdir_y(5, _angle),
+	"Enchufes", petaToLaunch);
+	
+	global.petasUsed+=1;
+	global.PETAAmmo-=1;
 		
-		off =  random_range(offRange,-offRange)
-		if instance_exists(peta)
-		{
-			peta._hpush = lengthdir_x(2.5, _angle + off);
-			peta._vpush = lengthdir_y(2.5, _angle + off);
-			//peta._angle = dire+off;
-			peta.direction = dire+off;
-			//_hpush += -lengthdir_x(recoil_standard, _angle+off);
-			//_vpush += -lengthdir_y(recoil_standard, _angle+off);
-			_angle +=off
-			alarm[11]=petaFireRate;
-			global.totalPETAS+=1;
-		}
-	
-	
+	off =  random_range(offRange,-offRange)
+	if instance_exists(peta)
+	{
+		peta._hpush = lengthdir_x(2.5, _angle + off);
+		peta._vpush = lengthdir_y(2.5, _angle + off);
+		//peta._angle = dire+off;
+		peta.direction = dire+off;
+		//_hpush += -lengthdir_x(recoil_standard, _angle+off);
+		//_vpush += -lengthdir_y(recoil_standard, _angle+off);
+		_angle +=off
+		alarm[11]=petaFireRate;
+		global.totalPETAS+=1;
+		key_x = true;
+	}
 	
 	//if (global.energy <=0) 
 	//{

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"BossHunterAttack",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BossHunterAttack",
+  "parent":{
+    "name":"ENCHUFAO",
+    "path":"ENCHUFAO.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

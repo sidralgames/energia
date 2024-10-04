@@ -1,6 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited();
+haveShoot = false;
+timeShootingLaser = 0;
+isShootingLaser = false;
+repeatAnimation = false;
+laserAttackSprite = s_bossHunter_laser;
+bouncerAttackSprite = s_bossHunter_bouncer;
+idleSprite = s_bossHunter;
 
 enemyBestiaryNumber = global.enemyGripperBestiaryNumber;
 
@@ -13,14 +20,21 @@ alarm[10] = 30;
 //lightEnemy= instance_create_layer(x,y,"LightEnemy",o_Light_Enemy);
 isCounted=false;
 bnc = 0.5;
-_hp = 3;
+_hp = 200;
 cont = 500;
 image_speed = 0.5;
 
+attackMode = false;
+enterAttackModeCont  = 50;
+
 enemySpeedInitial = random_range(1.25,2)
+enemySpeedInitialAux = enemySpeedInitial;
+enemySpeedLaserAttack = 0.2
 enemySpeed = enemySpeedInitial;
 
-precision= random_range(2,4);
+precisionInitial = random_range(2,4)
+precisionLaserAttack = 0.45;
+precision= precisionInitial;
 speed=random(1)+2;
 
 state = ENEMYSTATE.CHASING;
@@ -59,11 +73,19 @@ isMegaEnemy = false;
 isMega = irandom(5);
 megaStated = false;
 oddsBattery = 5;
+
+timeAttackingBounce = random_range(300,500)
+attackBouncerCont = 0;
+isAttackingBouncer = false;
+bouncerCreated = false;
+changeCable = false;
+cableOff = 5;
+cableXPos = x;
+cableYPos = y;
 depth = layer_get_depth("EnemiesHUESub3")
-cable = instance_create_layer(x,y,"EnemiesHUESub5", o_CableBossHunter);
-_hp = cable._segments*3;
-enemySpeedInitial = random_range(1.25,2)
-enemySpeed = enemySpeedInitial;
+cable = instance_create_layer(cableXPos,cableYPos,"EnemiesHUESub5", o_CableBossHunter);
+
+
 
 
 hasShield = irandom(10);

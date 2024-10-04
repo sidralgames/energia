@@ -11,6 +11,14 @@ if (global.inTutorial)
 }
 
 
+if key_buttonL
+{
+if room = Sala_0
+{
+	instance_create_layer(x,y-100,"Enemies", o_BossHunter)
+}
+}
+
 if (shielded = false) && ( (room != Sala_Upgade) && (room != Sala_MegaUpgrade) )
 {
 	shielded = true;
@@ -78,6 +86,11 @@ else
 }
 
 
+if (contWallBump >= 0)
+{
+	contWallBump --;
+}
+
 if (alarm[5] <= 0)
 {
 	if instance_exists(o_crosshair) 
@@ -88,9 +101,12 @@ if (alarm[5] <= 0)
 		}
 		else
 		{	
-			if (dirH != 0) || (dirV != 0)
+			if (contWallBump <= 0) || (global.energy <= 0)
 			{
-				_angle = point_direction(o_crosshair.x, o_crosshair.y,x,y)
+				if (dirH != 0) || (dirV != 0)
+				{
+					_angle = point_direction(o_crosshair.x, o_crosshair.y,x,y)
+				}
 			}
 		}
 	}

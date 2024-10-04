@@ -32,11 +32,11 @@ rope1 = verletGroupCreateRope(verletSystem1, x, y, c_white, 3, 3, _segments, 2, 
 
  //Attach its first vertex to an object
 inst = instance_nearest(x,y,o_BossHunter)
-rope1.vertexAttachTo(first, inst);
+//rope1.vertexAttachTo(first, inst);
 
 instAchor = instance_create_layer(x,y,"EnemiesHUESub3",o_chargerEnemyConect)
 rope1.vertexAttachObject(last, instAchor,vertexAttachmentType.both);
-
+rope1.vertexChangeData(first,inst.cableXPos,inst.cableYPos);
 
 plugged = false;
 

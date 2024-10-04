@@ -38,7 +38,7 @@ function PlayerState_Free()
 	var direIm = point_direction(x, y, o_crosshair.x, o_crosshair.y);
 	dire = direIm;
 	
-	if (abs(axisrh) > 0.4) || (abs(axisrv) > 0.4)
+	if (abs(axisrh) > 0.4) || (abs(axisrv) > 0.4) 
 	{
 		_angle = direIm;
 		dire = direIm;

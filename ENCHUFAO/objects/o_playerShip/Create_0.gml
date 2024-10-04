@@ -207,8 +207,10 @@ pluggedSecret = false;
 soundEnergy = false
 _hpush = 0;
 _vpush = 0;
-bnc = 0.6;
-
+normalBnc = 0.35;
+strandedBnc = 0.6;
+bnc = normalBnc;
+contWallBump = 10;
 walkSpeed = global._speed;
 
 plugged = false

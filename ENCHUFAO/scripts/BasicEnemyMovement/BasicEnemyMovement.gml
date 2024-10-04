@@ -67,7 +67,7 @@ function BasicEnemyMovement()
 			
 			path_start(myPath, _speed ,path_action_stop, false);
 			
-			_angle = lerp(_angle, direction, 1);
+			_angle = lerp(_angle, direction, 0.5);
 
 		}
 		else
