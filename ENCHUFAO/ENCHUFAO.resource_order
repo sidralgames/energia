@@ -782,6 +782,8 @@
     {"name":"GetTimeConnected","order":4,"path":"scripts/GetTimeConnected/GetTimeConnected.yy",},
     {"name":"GetTimeSlow","order":3,"path":"scripts/GetTimeSlow/GetTimeSlow.yy",},
     {"name":"grid_line_collision","order":7,"path":"scripts/grid_line_collision/grid_line_collision.yy",},
+    {"name":"Hunter_Chasing","order":132,"path":"scripts/Hunter_Chasing/Hunter_Chasing.yy",},
+    {"name":"Hunter_LaserIA","order":133,"path":"scripts/Hunter_LaserIA/Hunter_LaserIA.yy",},
     {"name":"infoBestiaryEnemyBasic","order":52,"path":"scripts/infoBestiaryEnemyBasic/infoBestiaryEnemyBasic.yy",},
     {"name":"infoGameOver","order":29,"path":"scripts/infoGameOver/infoGameOver.yy",},
     {"name":"infoGameOverEnemyBasic","order":30,"path":"scripts/infoGameOverEnemyBasic/infoGameOverEnemyBasic.yy",},

@@ -7,7 +7,7 @@ function BossHunterAttack()
 	{
 		case "Laser": 
 		{
-			Enemy_Chasing();
+			Hunter_Chasing();
 			//path_end();
 	
 			image_speed = 0.5;
@@ -39,7 +39,7 @@ function BossHunterAttack()
 				}
 			}
 	
-			_angle = lerp(_angle, direction, 0.05);
+			
 	
 			if (timeShootingLaser <= 0) && (isShootingLaser)
 			{
@@ -89,12 +89,12 @@ function BossHunterAttack()
 				
 				if (image_index >= 20) && (bouncerCreated = false)
 				{
-					bouncerXPos = x + lengthdir_x(10, _angle);
-					bouncerYPos = y + lengthdir_y(10, _angle);
+					bouncerXPos = x + lengthdir_x(18, _angle);
+					bouncerYPos = y + lengthdir_y(18, _angle);
 					_angleShoot = _angle
 					bouncerCreated = true
 					bouncer = instance_create_layer(bouncerXPos,bouncerYPos,"Bullets",o_bouncerHunter)
-					bouncer.discSpeed = random_range(2,2.75);
+					bouncer.discSpeed = random_range(2.5,2.75);
 					bouncer.direction = _angle;
 					hspeed += -lengthdir_x(1, _angle);
 					vspeed += -lengthdir_y(1, _angle);
@@ -124,7 +124,6 @@ function BossHunterAttack()
 			{
 				if (image_index <= 2)
 				{
-					
 					state = ENEMYSTATE.CHASING;	
 					sprite_index = idleSprite;
 					enemySpeed = enemySpeedInitialAux;
@@ -135,6 +134,36 @@ function BossHunterAttack()
 					enterAttackModeCont = random_range(300,500)
 					image_index = 0;
 					isAttackingBouncer = false;
+				}
+				else
+				{
+					if (image_index >= 20) && (bouncerCreated = false)
+					{
+						bouncerXPos = x + lengthdir_x(10, _angle);
+						bouncerYPos = y + lengthdir_y(10, _angle);
+						_angleShoot = _angle
+						bouncerCreated = true
+						bouncer = instance_create_layer(bouncerXPos,bouncerYPos,"Bullets",o_bouncerHunter)
+						bouncer.discSpeed = random_range(2,2.75);
+						bouncer.direction = _angle;
+						hspeed += -lengthdir_x(1, _angle);
+						vspeed += -lengthdir_y(1, _angle);
+						haveShoot = true;
+					}
+					
+					if (image_index >= 25)
+					{
+						haveShoot = false;
+					}
+				
+					if (image_index >= 32)
+					{
+						bouncerCreated = false;
+						//isAttackingBouncer = false;
+						attackBouncerCont = random_range(60,120)
+						image_speed = 0;
+						image_index = 0;
+					}
 				}
 			}
 		}

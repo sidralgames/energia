@@ -850,6 +850,8 @@
     {"id":{"name":"GetTimeConnected","path":"scripts/GetTimeConnected/GetTimeConnected.yy",},},
     {"id":{"name":"GetTimeSlow","path":"scripts/GetTimeSlow/GetTimeSlow.yy",},},
     {"id":{"name":"grid_line_collision","path":"scripts/grid_line_collision/grid_line_collision.yy",},},
+    {"id":{"name":"Hunter_Chasing","path":"scripts/Hunter_Chasing/Hunter_Chasing.yy",},},
+    {"id":{"name":"Hunter_LaserIA","path":"scripts/Hunter_LaserIA/Hunter_LaserIA.yy",},},
     {"id":{"name":"infoBestiaryEnemyBasic","path":"scripts/infoBestiaryEnemyBasic/infoBestiaryEnemyBasic.yy",},},
     {"id":{"name":"infoGameOver","path":"scripts/infoGameOver/infoGameOver.yy",},},
     {"id":{"name":"infoGameOverEnemyBasic","path":"scripts/infoGameOverEnemyBasic/infoGameOverEnemyBasic.yy",},},

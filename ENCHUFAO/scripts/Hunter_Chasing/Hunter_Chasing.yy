@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Hunter_Chasing",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Hunter_Chasing",
+  "parent":{
+    "name":"ENCHUFAO",
+    "path":"ENCHUFAO.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

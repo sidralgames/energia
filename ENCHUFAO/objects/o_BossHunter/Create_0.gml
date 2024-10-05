@@ -86,7 +86,7 @@ depth = layer_get_depth("EnemiesHUESub3")
 cable = instance_create_layer(cableXPos,cableYPos,"EnemiesHUESub5", o_CableBossHunter);
 
 
-
+dir = choose(-1,1)
 
 hasShield = irandom(10);
 
