@@ -24,6 +24,7 @@ if instance_exists(o_playerShip)
 	if (charge >= 200)
 	{
 		global.pluggedInAmmo = true;
+		global.activatedAmmoRadar = true;
 	}
 }
 

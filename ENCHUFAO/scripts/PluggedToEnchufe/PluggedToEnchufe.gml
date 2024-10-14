@@ -157,6 +157,16 @@ function PluggedToEnchufe()
 			
 	if (key_x) && (trapped == false)
 	{
-		Unplug();
+		if (enchufe.isPETA_F)
+		{
+			if (enchufe.image_index >= 8)
+			{
+				Unplug();
+			}
+		}
+		else
+		{
+			Unplug();
+		}
 	}
 }

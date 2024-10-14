@@ -26,6 +26,7 @@ if (global.chargingLaser) && (!global.pluggedInLaser) && (charging)
 if (charge >= 200)
 {
 	global.pluggedInLaser = true;
+	global.activatedLaserRadar = true;
 }
 }
 

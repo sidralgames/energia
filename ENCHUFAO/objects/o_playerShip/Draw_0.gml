@@ -20,7 +20,9 @@ if (global.externalBatteryOn)
 
 DrawPotentialConnection();
 
-if (global.radarIsOn = true)
+if (global.radarIsOn) || (global.activatedAmmoRadar)
+|| (global.activatedEnergyRadar) || (global.activatedHPRadar)
+|| (global.activatedLaserRadar)
 {
 	DrawRadar();
 }

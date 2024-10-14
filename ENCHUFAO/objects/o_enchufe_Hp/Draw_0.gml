@@ -27,6 +27,7 @@ if (global.chargingHp) && (!global.pluggedInHp) && (charging)
 if (charge >= 200)
 {
 	global.pluggedInHp = true;
+	global.activatedHPRadar = true;
 }
 }
 //CheckBatteryToDraw(global.enchufeHPUpgradesList, global.enchufeHPUpgradesNum)

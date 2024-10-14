@@ -9,8 +9,8 @@ contLight = 0;
 shipReady = (chargedInAmmo) && (chargedInEnergy) && (chargedInHp)
 myPath = path_add();
 
-for (var i=0; i<2; i++)
-{
+//for (var i=0; i<2; i++)
+//{
 	chooseAttribute = choose(0,1,2)
 
 	switch (chooseAttribute)
@@ -30,7 +30,7 @@ for (var i=0; i<2; i++)
 			chargedInEnergy = false;
 		}break;
 	}
-}
+//}
 called = false
 sprite = -1;
 strtandedPrecision = 2;

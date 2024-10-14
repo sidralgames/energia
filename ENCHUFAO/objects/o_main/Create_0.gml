@@ -104,6 +104,11 @@ global.laserRadar = false;
 global.hpRadar = false;
 global.ammoRadar = false;
 
+global.activatedLaserRadar = false;
+global.activatedAmmoRadar = false;
+global.activatedEnergyRadar = false;
+global.activatedHPRadar = false;
+
 global.assistedAim = false;
 
 

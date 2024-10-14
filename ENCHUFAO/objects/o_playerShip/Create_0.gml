@@ -1,6 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+global.activatedLaserRadar = false;
+global.activatedAmmoRadar = false;
+global.activatedEnergyRadar = false;
+global.activatedHPRadar = false;
+
 
 laserSpread = true
 haveSlowMoChip = false;

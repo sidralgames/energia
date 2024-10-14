@@ -17,6 +17,8 @@ function StrandedShip_ConnectedShip()
 	    _vpush = -_vpush*bnc;
 	}
 	
+	
+	
 	//----- GO TO CONNECTED ENCHUFE STATE----//
 	if (connectedToEnchufe)
 	{

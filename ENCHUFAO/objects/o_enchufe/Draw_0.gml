@@ -24,6 +24,7 @@ if (global.chargingEnergy) && (!global.pluggedInEnergy) && (charging)
 if (charge >= 200)
 {
 	global.pluggedInEnergy = true;
+	global.activatedEnergyRadar = true;
 }
 }
 
