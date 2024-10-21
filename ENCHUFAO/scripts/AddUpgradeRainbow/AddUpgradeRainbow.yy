@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"AddUpgradeRainbow",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddUpgradeRainbow",
+  "parent":{
+    "name":"UPGRADES",
+    "path":"folders/Scripts/GENERAL/UPGRADESLIST/UPGRADES.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

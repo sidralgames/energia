@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"FalseUpgrades",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"FalseUpgrades",
+  "parent":{
+    "name":"UPGRADESLIST",
+    "path":"folders/Scripts/GENERAL/UPGRADESLIST.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

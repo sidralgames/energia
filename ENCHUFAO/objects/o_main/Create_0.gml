@@ -41,6 +41,9 @@ global.inTutorial = false;
 global.checkInScreenTime = 30;
 global.standardAngleShake = 0.5;
 
+
+global.rainbowRun = false;
+
 ending = false;
 endTimer = 10;
 endingLevel = false;
@@ -461,6 +464,7 @@ AddUpgradeShieldPerRoom(); //30
 AddUpgradeTurretsAllies();
 AddUpgradeFrontLights();
 AddUpgradeBiggerPetas();
+//AddUpgradeRainbow();
 
 
 
@@ -499,6 +503,7 @@ global.shieldPerRoomIsUpgraded = false;
 global.turretsAlliesIsUpgraded = false;
 global.frontLightsIsUpgraded = false;
 global.biggerPetasIsUpgraded = false;
+global.rainbowIsUpgraded = false;
 
 
 

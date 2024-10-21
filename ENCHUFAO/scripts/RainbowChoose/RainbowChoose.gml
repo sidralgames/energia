@@ -1,10 +1,9 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function CheckEnchufeUpgrade()
+function RainbowChoose()
 {
-	if (upgraded = false)
-	{
-		switch(inEnchufe.thisUpgrade)
+	upgradeToChoose = choose("upgradeAmmo", "upgradeEnergy", "upgradeHP")
+	switch(upgradeToChoose)
 		{
 			
 			case "upgradeAmmo":
@@ -953,53 +952,6 @@ function CheckEnchufeUpgrade()
 				}
 				
 			}break;
-			
-			
-			case "upgradeRainbow":
-			{
-				
-				global.rainbowRun = true;
-				
-				if (!global.rainbowIsUpgraded)
-				{
-					global.rainbowIsUpgraded = true;
-					
-					AddUpgradeRainbowPlayer();
-				}
-				for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
-				{
-					upg = ds_map_find_value(global.PlayerUpgradesList, i)
-					if (upg.obj = o_enchufeUpgadeRainbow)
-					{
-						upg.times+=1;
-					}
-				}
-				
-				
-				FalseUpgrades();
-				
-				
-				//for (var i= 0; i< global.numberOfUpgrades; i++)
-				//{
-				//	ds_map_delete(global.PlayerUpgradesList, i);
-				//	ds_map_delete(global.upgradesList, i);
-				//}
-				
-				for (var i= 0; i< global.numberOfUpgradesPlayer; i++)
-				{
-					RainbowChoose();
-				}
-
-					//-- DISCARD UPGRADE --//
-				for (var i= 0; i< global.numberOfUpgrades; i++)
-				{
-					thisUpg = ds_map_find_value(global.upgradesList, i)
-					if (thisUpg.obj = o_enchufeUpgadeRainbow)
-					{
-						thisUpg.canShowUp = false;
-					}
-				}
-			}break;
 		
 			case "upgradeBonus":
 			{
@@ -1055,10 +1007,7 @@ function CheckEnchufeUpgrade()
 				}
 
 			}break;
-		
 		}
-	
-	inEnchufe.charging = true;
-	upgraded = true;
-	}
+		
+	global.numberOfUpgradesPlayer -=1; 
 }
