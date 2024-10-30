@@ -35,7 +35,7 @@ if instance_exists(o_playerShip)
 
 if (bombsInEnchufe <= 5) && !(charging)
 {
-	bombsInEnchufe += 0.005;
+	bombsInEnchufe += 0.005/max(bombsInEnchufe,1);
 }
 
 if (bombsInEnchufe <= 5) || (charging)

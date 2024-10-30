@@ -105,22 +105,25 @@ if instance_exists(o_playerShip)
 	}
 }
 
-if (canAssist)
+if instance_exists(o_playerShip)
 {
-	draw_sprite_ext(s_moveTutorial, 5, o_playerShip.x,o_playerShip.y+40,0.5,0.5,0,image_blend, image_alpha)	
-	
-	contToAssist--;
-	if (contToAssist <= 0)
+	if (canAssist)
 	{
-		global.assistedSlowmo = true;
-	}
-		
-	if (global.assistedSlowmo)
-	{	
-		if (o_playerShip.key_BulletTime)
+		draw_sprite_ext(s_moveTutorial, 5, o_playerShip.x,o_playerShip.y+40,0.5,0.5,0,image_blend, image_alpha)	
+	
+		contToAssist--;
+		if (contToAssist <= 0)
 		{
-			global.assistedSlowmo = false;
-			canAssist = false;
+			global.assistedSlowmo = true;
+		}
+		
+		if (global.assistedSlowmo)
+		{	
+			if (o_playerShip.key_BulletTime)
+			{
+				global.assistedSlowmo = false;
+				canAssist = false;
+			}
 		}
 	}
 }
