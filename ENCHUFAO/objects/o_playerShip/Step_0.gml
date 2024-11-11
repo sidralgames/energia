@@ -11,13 +11,13 @@ if (global.inTutorial)
 }
 
 
-if key_buttonL
-{
-if room = Sala_0
-{
-	instance_create_layer(x,y-100,"Enemies", o_BossHunter)
-}
-}
+//if key_buttonL
+//{
+//if room = Sala_0
+//{
+//	instance_create_layer(x,y-100,"Enemies", o_BossHunter)
+//}
+//}
 
 if (shielded = false) && ( (room != Sala_Upgade) && (room != Sala_MegaUpgrade) )
 {

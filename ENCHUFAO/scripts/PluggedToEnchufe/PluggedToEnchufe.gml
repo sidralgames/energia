@@ -54,11 +54,11 @@ function PluggedToEnchufe()
 		
 			if (enchufe.isPETA_F)
 			{
-				_hpush = lengthdir_x(1,dir)
-				_vpush = lengthdir_y(1,dir)
+				_hpush = lengthdir_x(0.75,dir)
+				_vpush = lengthdir_y(0.75,dir)
 		
-				enchufe._hpush -= lengthdir_x(0.28,dir)
-				enchufe._vpush -= lengthdir_y(0.28,dir)
+				enchufe._hpush -= lengthdir_x(0.3,dir)
+				enchufe._vpush -= lengthdir_y(0.3,dir)
 			}
 			else if (enchufe.isMimic)
 			{

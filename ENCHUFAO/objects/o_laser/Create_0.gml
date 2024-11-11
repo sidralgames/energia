@@ -11,5 +11,5 @@ soundLaser = -1;
 sndActivating = -1
 
 enemyBestiaryNumber = global.enemyLasertrapBestiaryNumber;
-
+colLaser = -1;
 

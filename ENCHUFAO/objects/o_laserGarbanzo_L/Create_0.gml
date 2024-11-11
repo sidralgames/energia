@@ -14,4 +14,5 @@ soundLaser = -1;
 soundCharge = -1;
 lasersounding = false;
 chargingLaser = false;
+warning = 30;
 

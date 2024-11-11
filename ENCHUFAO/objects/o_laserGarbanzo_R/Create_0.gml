@@ -13,5 +13,7 @@ soundCharge = -1
 soundLaser = -1;
 angleLaser = 265;
 chargingLaser = false;
+warning = 30;
+
 
 
