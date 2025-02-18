@@ -6,9 +6,9 @@ _visible = true;
 
 factor = 0.08;
 
-initialPlay =160;
-initialTut = 200;
-initialOption = 240;
-initialStat = 280;
-initialQuit = 310;
+initialPlay =420;
+initialTut = 440;
+initialOption = 460;
+initialStat = 480;
+initialQuit = 500;
 global.mandatoryTutorial = 1;

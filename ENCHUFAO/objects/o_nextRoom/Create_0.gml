@@ -18,7 +18,7 @@ height_ = room_height div CELL_HEIGHT;
 
 global.wallgrid_ = -1;
 
-
+set = false;
 t = 6;
 increment = 2; //degrees -- freq = 1 oscillation per second (1Hz)
 amplitude = 3;

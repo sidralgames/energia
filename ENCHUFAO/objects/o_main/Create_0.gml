@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+global.soundOn = true
 //----FULL 4K DISPLAY RES ---//
 //camW = display_get_width();
 //camH = display_get_height();
@@ -9,7 +9,8 @@
 //camW = 1280;
 //camH = 720;
 
-
+contSplash = 240;
+alphasplash=0;
 //--- LOW ----//
 camW = 640;
 camH = 360;

@@ -20,7 +20,7 @@ if (key_back)
 }
 //if (!instance_exists(o_menuAchievements))
 //{
-if (_visible = true)
+if (_visible = true) 
 {
 	draw_self();
 	

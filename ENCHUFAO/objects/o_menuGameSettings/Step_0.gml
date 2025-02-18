@@ -18,13 +18,13 @@ if (alarm[0] <= 0)
 			selected -=1;	
 		}
 
-		if (selected > 5)
+		if (selected > 6)
 		{
 			selected = 0;	
 		}
 		if (selected < 0)
 		{
-			selected = 5;	
+			selected = 6;	
 		}
 		
 		if (selectedCross > global.crosshairSpritesMax)
@@ -71,6 +71,7 @@ if (alarm[0] <= 0)
 				{
 					audio_play_sound_on(global.audioEmitter,snd_acceptMenu,false, 50);
 					global.screenshakeIsOn = !global.screenshakeIsOn;
+					//screenShake(40,40,0.5)
 				}
 			}
 			break;
@@ -145,6 +146,22 @@ if (alarm[0] <= 0)
 			break;
 			
 			case 5:
+			{
+				if (key_x)
+				{
+					global.soundOn = !global.soundOn;
+					if (global.soundOn = false)
+					{
+						audio_sound_gain(global.song,0,0)	
+					}
+					else
+					{
+						audio_sound_gain(global.song,1,1)
+					}
+				}
+			}
+			break;
+			case 6:
 			{
 				if (key_x)
 				{
